@@ -60,13 +60,15 @@ Repository** та виберіть `Belvider/--------------2.0`. Для цьог
 | Змінна | Значення для Production |
 | --- | --- |
 | `DATABASE_URL` | Pooled URL онлайн PostgreSQL для запитів сайту |
-| `DIRECT_URL` | Direct URL тієї ж бази для міграцій Prisma |
-| `JWT_SECRET` | Власний випадковий секрет, однаковий для всіх production deployments |
+| `DIRECT_URL` | Direct URL тієї ж бази; збірка також приймає `DATABASE_URL_UNPOOLED` або `POSTGRES_URL_NON_POOLING` |
+| `JWT_SECRET` | Власний випадковий секрет мінімум 32 символи, однаковий для всіх production deployments |
+| `PORTAL_RUN_MIGRATIONS` | `true` лише у Production проєкту `2pine` для застосування міграцій під час збірки |
 | `NEXT_PUBLIC_APP_URL` | Повна HTTPS-адреса основного сайту без кінцевого `/` |
 | `NEXT_PUBLIC_APP_NAME` | Назва навчального порталу |
 
 Назви змінних, які додає інтеграція бази, можуть відрізнятися: перевірте,
-що задані саме `DATABASE_URL` і `DIRECT_URL`. Для Neon беріть обидва URL
+що заданий `DATABASE_URL` і один із direct URL: `DIRECT_URL`,
+`DATABASE_URL_UNPOOLED` або `POSTGRES_URL_NON_POOLING`. Для Neon беріть URL
 з панелі Connect і зберігайте параметри SSL, які надає сервіс.
 `localhost` на Vercel не посилається на ваш комп'ютер.
 
@@ -83,7 +85,25 @@ node -e "console.log(require('node:crypto').randomBytes(32).toString('hex'))"
 ## 3. Створити таблиці
 
 У `prisma/migrations/0_init/migration.sql` підготовлена початкова схема.
-Сама збірка сайту не змінює базу і не запускає seed.
+Для нової порожньої Neon-бази створення таблиць виконується у Vercel:
+
+1. У `2pine → Settings → Environment Variables` перевірте `DATABASE_URL`
+   та `DATABASE_URL_UNPOOLED` (або задайте `DIRECT_URL`).
+2. Додайте власний `JWT_SECRET` і `PORTAL_RUN_MIGRATIONS=true` у **Production**.
+3. Запустіть Redeploy останнього коміту. `vercel.json` задає команду
+   `npm run vercel-build`: вона генерує Prisma Client, застосовує лише ще не
+   виконані міграції через `prisma migrate deploy` і збирає Next.js.
+
+Міграції запускаються тільки коли одночасно задані
+`VERCEL_ENV=production` і `PORTAL_RUN_MIGRATIONS=true`. На Preview та в інших
+Vercel-проєктах без цієї змінної збірка базу не змінює. До першої зміни бази
+перевіряються наявність URL і секрет сесій; неправильні налаштування або
+помилка міграції зупиняють збірку. Seed і reset не запускаються.
+
+Для наявної бази з таблицями спочатку перевірте історію міграцій або виконайте
+описаний нижче baseline; лише потім вмикайте автоматичні міграції.
+
+Альтернатива — застосувати міграції вручну, наприклад для іншого хостингу:
 
 Для **нової порожньої онлайн-бази** відкрийте окремий PowerShell у цій папці.
 Введіть URL інтерактивно, щоб не записувати їх у текст команд:
@@ -113,8 +133,9 @@ npm run prisma:deploy
 міграцію; не використовуйте reset.
 
 Подальші зміни схеми готуйте через `npm run prisma:migrate` на локальній
-розробницькій базі, перевіряйте SQL і застосовуйте до production через
-`npm run prisma:deploy` перед випуском коду, якому потрібні нові таблиці.
+розробницькій базі, перевіряйте SQL і додавайте міграції до Git.
+Production-збірка `2pine` застосує їх перед випуском коду; для інших
+хостингів використовуйте `npm run prisma:deploy`.
 Чинна локальна база також могла створюватися без історії міграцій: перед
 першим `prisma:migrate` зробіть її backup, перевірте збіг схеми та виконайте
 описаний baseline з локальними URL. Або створіть окрему порожню базу для
@@ -128,10 +149,11 @@ npm run prisma:deploy
 
 ## 4. Збірка та перший вхід
 
-У Vercel залиште Framework Preset **Next.js**, Build Command
-**`npm run build`**, стандартний Output Directory і Node.js **22.x**.
-Збірка спочатку виконує `prisma generate`, потім `next build`.
-Запустіть Redeploy після налаштування змінних і таблиць.
+У Vercel залиште Framework Preset **Next.js**, стандартний Output Directory
+і Node.js **22.x**. `vercel.json` задає Build Command **`npm run vercel-build`**.
+Локальна команда `npm run build` генерує Prisma Client і збирає Next.js;
+локальну базу вона не змінює.
+Запустіть Redeploy після налаштування змінних.
 
 Перевірте `/register`: створіть власний акаунт, вийдіть через меню та знову
 увійдіть через `/login`. Новий користувач отримує роль `SELLER`.
