@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none"
+     xmlns="http://www.w3.org/2000/svg">
+  <!-- Transparent background -->
+  <!-- Watch straps -->
+  <rect x="206" y="24" width="100" height="84" rx="28"
+        stroke="white" stroke-width="20"/>
+  <rect x="206" y="404" width="100" height="84" rx="28"
+        stroke="white" stroke-width="20"/>
+  <!-- Watch body -->
+  <rect x="128" y="108" width="256" height="296" rx="64"
+        stroke="white" stroke-width="20"/>
+  <!-- Screen -->
+  <rect x="168" y="148" width="176" height="216" rx="40"
+        stroke="white" stroke-width="14" opacity="0.9"/>
+
+  <!-- Fitness motif: heart + pulse + steps -->
+  <path d="M256 248
+           C241 220 206 220 196 244
+           C187 267 205 292 256 320
+           C307 292 325 267 316 244
+           C306 220 271 220 256 248Z"
+        stroke="white" stroke-width="14" fill="none" stroke-linejoin="round"/>
+  <path d="M188 276 H220 L234 252 L252 300 L270 268 L284 284 H324"
+        stroke="white" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Simple step dots -->
+  <circle cx="214" cy="340" r="8" fill="white" opacity="0.9"/>
+  <circle cx="256" cy="352" r="8" fill="white" opacity="0.9"/>
+  <circle cx="298" cy="340" r="8" fill="white" opacity="0.9"/>
+</svg>

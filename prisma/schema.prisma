@@ -1,0 +1,304 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "windows"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+enum Role {
+  ADMIN
+  MANAGER
+  SELLER
+}
+
+enum ProgressStatus {
+  NOT_STARTED
+  IN_PROGRESS
+  COMPLETED
+}
+
+enum QuestionType {
+  SINGLE
+  MULTIPLE
+  TRUE_FALSE
+  MATCHING
+}
+
+enum AssignmentTargetType {
+  USER
+  DEPARTMENT
+}
+
+model User {
+  id           String               @id @default(cuid())
+  name         String
+  firstName    String?              @map("first_name")
+  lastName     String?              @map("last_name")
+  middleName   String?              @map("middle_name")
+  email        String               @unique
+  phone        String?
+  birthday     DateTime?
+  avatarUrl    String?              @map("avatar_url")
+  passwordHash String               @map("password_hash")
+  role         Role                 @default(SELLER)
+  position     String               @default("Продавець")
+  department   String
+  store        String?
+  city         String?
+  hireDate     DateTime?            @map("hire_date")
+  notes        String?
+  isActive     Boolean              @default(true) @map("is_active")
+  createdAt    DateTime             @default(now()) @map("created_at")
+  updatedAt    DateTime             @updatedAt @map("updated_at")
+
+  progresses   UserProgress[]
+  learningActivity LearningActivity[]
+  attempts     QuizAttempt[]
+  certificates Certificate[]
+  userBadges   UserBadge[]
+  adminAuditLogs AdminAuditLog[]
+  createdAssignments LearningAssignment[] @relation("AssignmentActor")
+  assignedLearning  LearningAssignment[] @relation("AssignmentTarget")
+
+  @@map("users")
+}
+
+model LearningActivity {
+  id        Int      @id @default(autoincrement())
+  userId    String   @map("user_id")
+  moduleId  Int      @map("module_id")
+  day       String
+  viewedAt  DateTime @default(now()) @map("viewed_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, moduleId, day])
+  @@index([userId, day])
+  @@map("learning_activity")
+}
+
+model Brand {
+  id          Int        @id @default(autoincrement())
+  name        String
+  slug        String     @unique
+  logoUrl     String     @map("logo_url")
+  description String
+  sortOrder   Int        @default(0) @map("sort_order")
+  categories  Category[]
+
+  createdAt   DateTime   @default(now()) @map("created_at")
+  updatedAt   DateTime   @updatedAt @map("updated_at")
+
+  @@map("brands")
+}
+
+model Category {
+  id          Int      @id @default(autoincrement())
+  brandId     Int      @map("brand_id")
+  name        String
+  slug        String
+  description String
+  sortOrder   Int      @default(0) @map("sort_order")
+
+  brand       Brand    @relation(fields: [brandId], references: [id], onDelete: Cascade)
+  modules     Module[]
+
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  @@unique([brandId, slug])
+  @@map("categories")
+}
+
+model Module {
+  id            Int            @id @default(autoincrement())
+  categoryId    Int            @map("category_id")
+  title         String
+  description   String
+  contentBlocks Json           @map("content_blocks")
+  durationMin   Int            @default(10) @map("duration_min")
+  sortOrder     Int            @default(0) @map("sort_order")
+  isPublished   Boolean        @default(true) @map("is_published")
+
+  category      Category       @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  questions     QuizQuestion[]
+  progresses    UserProgress[]
+  attempts      QuizAttempt[]
+  certificates  Certificate[]
+  assignments   LearningAssignment[]
+
+  createdAt     DateTime       @default(now()) @map("created_at")
+  updatedAt     DateTime       @updatedAt @map("updated_at")
+
+  @@map("modules")
+}
+
+model QuizQuestion {
+  id            Int          @id @default(autoincrement())
+  moduleId       Int         @map("module_id")
+  question       String
+  type           QuestionType
+  options        Json
+  correctAnswer  Json        @map("correct_answer")
+  sortOrder      Int         @default(0) @map("sort_order")
+
+  module         Module      @relation(fields: [moduleId], references: [id], onDelete: Cascade)
+
+  createdAt      DateTime    @default(now()) @map("created_at")
+  updatedAt      DateTime    @updatedAt @map("updated_at")
+
+  @@map("quiz_questions")
+}
+
+model UserProgress {
+  id           Int            @id @default(autoincrement())
+  userId       String         @map("user_id")
+  moduleId     Int            @map("module_id")
+  status       ProgressStatus @default(NOT_STARTED)
+  progressPct  Int            @default(0) @map("progress_pct")
+  completedAt  DateTime?      @map("completed_at")
+  lastSeenAt   DateTime       @default(now()) @map("last_seen_at")
+
+  user         User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  module       Module         @relation(fields: [moduleId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, moduleId])
+  @@map("user_progress")
+}
+
+model QuizAttempt {
+  id           Int       @id @default(autoincrement())
+  userId       String    @map("user_id")
+  moduleId     Int       @map("module_id")
+  score        Float
+  passed       Boolean
+  answers      Json
+  attemptedAt  DateTime  @default(now()) @map("attempted_at")
+
+  user         User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  module       Module    @relation(fields: [moduleId], references: [id], onDelete: Cascade)
+
+  @@map("quiz_attempts")
+}
+
+model Certificate {
+  id           Int       @id @default(autoincrement())
+  userId       String    @map("user_id")
+  moduleId     Int       @map("module_id")
+  issuedAt     DateTime  @default(now()) @map("issued_at")
+  pdfUrl       String?   @map("pdf_url")
+
+  user         User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  module       Module    @relation(fields: [moduleId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, moduleId])
+  @@map("certificates")
+}
+
+model Badge {
+  id          Int        @id @default(autoincrement())
+  code        String     @unique
+  name        String
+  description String
+  icon        String
+  createdAt   DateTime   @default(now()) @map("created_at")
+
+  users       UserBadge[]
+
+  @@map("badges")
+}
+
+model UserBadge {
+  id         Int      @id @default(autoincrement())
+  userId     String   @map("user_id")
+  badgeId    Int      @map("badge_id")
+  issuedAt   DateTime @default(now()) @map("issued_at")
+
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  badge      Badge    @relation(fields: [badgeId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, badgeId])
+  @@map("user_badges")
+}
+
+model AppSetting {
+  id         Int      @id @default(autoincrement())
+  key        String   @unique
+  value      Json
+  updatedAt  DateTime @updatedAt @map("updated_at")
+
+  @@map("app_settings")
+}
+
+model PasswordResetToken {
+  id          String   @id @default(cuid())
+  userId      String   @map("user_id")
+  token       String   @unique
+  expiresAt   DateTime @map("expires_at")
+  usedAt      DateTime? @map("used_at")
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  @@index([userId])
+  @@map("password_reset_tokens")
+}
+
+model LoginAttempt {
+  id          Int      @id @default(autoincrement())
+  email       String
+  ipAddress   String?  @map("ip_address")
+  successful  Boolean
+  attemptedAt DateTime @default(now()) @map("attempted_at")
+
+  @@index([email, attemptedAt])
+  @@map("login_attempts")
+}
+
+model AdminAuditLog {
+  id          Int      @id @default(autoincrement())
+  actorId     String?  @map("actor_id")
+  action      String
+  targetType  String   @map("target_type")
+  targetId    String?  @map("target_id")
+  targetLabel String?  @map("target_label")
+  summary     String
+  details     Json?
+  ipAddress   String?  @map("ip_address")
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  actor       User?    @relation(fields: [actorId], references: [id], onDelete: SetNull)
+
+  @@index([createdAt])
+  @@index([actorId, createdAt])
+  @@index([targetType, createdAt])
+  @@map("admin_audit_logs")
+}
+
+model LearningAssignment {
+  id           Int                  @id @default(autoincrement())
+  moduleId     Int                  @map("module_id")
+  assignedById String               @map("assigned_by_id")
+  targetType   AssignmentTargetType @map("target_type")
+  userId       String?              @map("user_id")
+  department   String?
+  dueAt        DateTime?            @map("due_at")
+  required     Boolean              @default(true)
+  note         String?
+  isActive     Boolean              @default(true) @map("is_active")
+  createdAt    DateTime             @default(now()) @map("created_at")
+  updatedAt    DateTime             @updatedAt @map("updated_at")
+
+  module       Module               @relation(fields: [moduleId], references: [id], onDelete: Cascade)
+  assignedBy   User                 @relation("AssignmentActor", fields: [assignedById], references: [id], onDelete: Cascade)
+  user         User?                @relation("AssignmentTarget", fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([moduleId, isActive])
+  @@index([userId, isActive])
+  @@index([department, isActive])
+  @@index([targetType, isActive])
+  @@index([dueAt])
+  @@map("learning_assignments")
+}

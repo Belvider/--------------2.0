@@ -1,0 +1,16 @@
+node_modules
+.next
+.env*
+!.env.example
+/dist
+coverage
+*.log
+prisma/dev.db*
+.vercel/
+.claude/
+.DS_Store
+*.tsbuildinfo
+*.dump
+/reports/
+/public/uploads/
+/scripts/TVRN/

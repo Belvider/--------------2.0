@@ -1,0 +1,13 @@
+reports/
+.claude/
+.git/
+.env
+.env.*
+!.env.example
+*.dump
+*.log
+*.tsbuildinfo
+**/.DS_Store
+prisma/dev.db*
+public/uploads/
+scripts/TVRN/
