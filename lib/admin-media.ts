@@ -9,7 +9,7 @@ import {
 import {
   buildUploadUrl,
   deleteUploadByUrl,
-  isNetlifyBlobStorageEnabled,
+  isLocalUploadStorageEnabled,
   listBlobUploads,
   saveUploadFile
 } from "@/lib/upload-storage";
@@ -56,6 +56,8 @@ function toItem(folder: AdminMediaFolder, fileName: string, fileStat: Awaited<Re
 }
 
 export async function ensureAdminMediaDirectories() {
+  if (!isLocalUploadStorageEnabled()) return;
+
   await mkdir(ADMIN_MEDIA_ROOT, { recursive: true });
 
   await Promise.all(
@@ -68,7 +70,7 @@ export async function ensureAdminMediaDirectories() {
 }
 
 export async function listAdminMedia(folder: AdminMediaFolder | "all" = "all") {
-  if (isNetlifyBlobStorageEnabled()) {
+  if (!isLocalUploadStorageEnabled()) {
     const prefix = folder === "all" ? "media" : `media/${folder}`;
     const items = await listBlobUploads(prefix);
 
