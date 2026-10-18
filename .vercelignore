@@ -1,4 +1,4 @@
-reports/
+/reports/
 .claude/
 .git/
 .env
