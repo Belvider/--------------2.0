@@ -609,7 +609,12 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
       "Відтворення відео: Pro — до 36 год; Pro Max — до 45 год за методикою Apple",
       "USB-C, MagSafe; формат SIM перевіряйте за регіональною версією"
     ],
-    colors: []
+    colors: [
+      { label: "Black", imageUrl: "/materials/iphone/2026/18-pro/black.png", caption: "Чорний. На фото — iPhone 18 Pro", default: true },
+      { label: "Silver", imageUrl: "/materials/iphone/2026/18-pro/silver.png", caption: "Сріблястий. На фото — iPhone 18 Pro" },
+      { label: "Glacier", imageUrl: "/materials/iphone/2026/18-pro/glacier.png", caption: "Льодовиковий. На фото — iPhone 18 Pro" },
+      { label: "Burgundy", imageUrl: "/materials/iphone/2026/18-pro/burgundy.png", caption: "Бордовий. На фото — iPhone 18 Pro" }
+    ]
   },
   {
     slug: "iphone-23",
@@ -630,7 +635,10 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
       "Відтворення відео: до 31 год на внутрішньому або до 44 год на зовнішньому екрані за методикою Apple",
       "USB-C і MagSafe; окремого телефото, як у Pro, немає"
     ],
-    colors: []
+    colors: [
+      { label: "Night Sky", imageUrl: "/materials/iphone/2026/duo/iphone-duo-night-sky.png", caption: "Темно-синій", default: true },
+      { label: "Star White", imageUrl: "/materials/iphone/2026/duo/iphone-duo-star-white.png", caption: "Зоряний білий" }
+    ]
   },
   {
     slug: "iphone-24",
@@ -651,7 +659,11 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
       "До 26 год відтворення відео за методикою Apple",
       "Формат SIM перевіряйте за регіональною версією"
     ],
-    colors: []
+    colors: [
+      { label: "Black", imageUrl: "/materials/iphone/2026/17e/black.png", caption: "Чорний", default: true },
+      { label: "White", imageUrl: "/materials/iphone/2026/17e/white.png", caption: "Білий" },
+      { label: "Soft Pink", imageUrl: "/materials/iphone/2026/17e/soft-pink.png", caption: "Ніжно-рожевий" }
+    ]
   }
 ];
 

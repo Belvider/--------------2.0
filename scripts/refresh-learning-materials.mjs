@@ -10,8 +10,13 @@ import { PrismaClient } from '@prisma/client';
 // A targeted content update, never a seed/reset. Load credentials explicitly:
 // node --env-file=.env.transfer.local scripts/refresh-learning-materials.mjs
 // Review reports/learning-refresh-2026-10-18/plan.json, then add --apply.
-const BASELINE = '25cc7eb';
-const REPORT_DIR = 'reports/learning-refresh-2026-10-18';
+// Later targeted refreshes may use the commit preceding those source changes.
+const BASELINE = process.env.LEARNING_CONTENT_BASELINE || '25cc7eb';
+const REPORT_DIR = process.env.LEARNING_CONTENT_REPORT_DIR || 'reports/learning-refresh-2026-10-18';
+if (!/^[a-f0-9]{7,40}$/i.test(BASELINE)) throw new Error('Expected a commit hash for the content baseline.');
+if (!path.resolve(REPORT_DIR).toLowerCase().startsWith(`${path.resolve('reports')}${path.sep}`.toLowerCase())) {
+  throw new Error('Content reports must stay inside the private reports directory.');
+}
 const clone = value => structuredClone(value);
 const canonical = value => Array.isArray(value) ? value.map(canonical) : record(value)
   ? Object.fromEntries(Object.keys(value).sort().map(key => [key, canonical(value[key])])) : value;
