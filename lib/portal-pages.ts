@@ -71,13 +71,13 @@ const DEFAULT_PORTAL_PAGES: Record<PortalPageSlug, PortalPageContent> = {
       "Практичний блок для консультацій у магазині: гарантія, ремонт, сервісні сценарії та якісна підтримка клієнта після продажу.",
     sideLabel: "Фокус розділу",
     sideText:
-      "Не просто правила, а готові алгоритми для впевненої комунікації з клієнтом у складних сервісних кейсах.",
+      "Послідовні дії для приймання техніки, пояснення умов і підтримки клієнта після покупки.",
     cards: [
       {
         id: "services-trade-in",
         title: "Trade-In",
         icon: "scale",
-        text: "Повний сервісний гайд по прийому техніки: оцінка вартості, перевірка стану пристрою та покрокові чек-листи по ключових категоріях.",
+        text: "Оцінка вартості, перевірка стану та покрокові списки дій для приймання різних категорій техніки.",
         items: [
           "Формування вартості та перевірка “нового” пристрою",
           "Чек-листи для iPhone, iPad, Apple Watch",
@@ -91,11 +91,11 @@ const DEFAULT_PORTAL_PAGES: Record<PortalPageSlug, PortalPageContent> = {
         id: "services-sale",
         title: "Продаж",
         icon: "messages-square",
-        text: "Повний матеріал по продажу: виявлення потреб, активне слухання, техніки консультації та приклади роботи із захисними аксесуарами.",
+        text: "Виявлення потреб, активне слухання, побудова консультації та рекомендація захисних аксесуарів.",
         items: [
           "Підготовка, SPIN і виявлення потреб",
           "Поглиблений продаж Apple-екосистеми",
-          "Сценарії по чохлах, зарядці та захисному склу"
+          "Консультації щодо чохлів, зарядних пристроїв і захисного скла"
         ],
         imageUrl: "",
         imageAlt: "",
@@ -105,7 +105,7 @@ const DEFAULT_PORTAL_PAGES: Record<PortalPageSlug, PortalPageContent> = {
         id: "services-warranty",
         title: "Умови гарантії",
         icon: "shield-check",
-        text: "Повний матеріал по гарантійних програмах PineApple: безпечний період, гарантія на розбиття, повне знищення та умови для ключових категорій техніки.",
+        text: "Гарантійні програми PineApple: безпечний період, захист у разі розбиття чи повного знищення та умови для різних категорій техніки.",
         items: [
           "iPhone, iPad, Apple Watch, AirPods",
           "MacBook, Dyson, PlayStation 5, EcoFlow",
@@ -119,7 +119,7 @@ const DEFAULT_PORTAL_PAGES: Record<PortalPageSlug, PortalPageContent> = {
         id: "services-base",
         title: "База знань",
         icon: "wrench",
-        text: "Внутрішня база по ремонтах і сервісних процесах: прийом техніки, виконання ремонту, розрахунок, відкладені чеки, залишки та робота з картами лояльності.",
+        text: "Приймання техніки, виконання ремонту, розрахунок, відкладені чеки, товарні залишки та карти лояльності.",
         items: [
           "Порядок прийняття та виконання ремонтів",
           "Ремонт запасів, відкладені чеки, залишки",
@@ -145,7 +145,7 @@ const DEFAULT_PORTAL_PAGES: Record<PortalPageSlug, PortalPageContent> = {
         id: "credits-privat24",
         title: "ПриватБанк",
         icon: "badge-percent",
-        text: "Повний матеріал по «Оплаті частинами» та «Миттєвій розстрочці» ПриватБанку: різниця між сервісами, оформлення на POS-терміналі та повернення товару.",
+        text: "«Оплата частинами» та «Миттєва розстрочка» ПриватБанку: відмінності, оформлення на POS-терміналі та повернення товару.",
         items: [
           "POS-кредитування і різниця між сервісами",
           "Покрокове оформлення на касі",
@@ -159,7 +159,7 @@ const DEFAULT_PORTAL_PAGES: Record<PortalPageSlug, PortalPageContent> = {
         id: "credits-monobank",
         title: "Monobank",
         icon: "messages-square",
-        text: "Повний матеріал по «Покупці частинами» Monobank: подання заявки, статуси, історія звернень, підтвердження видачі товару та скасування покупки.",
+        text: "«Покупка частинами» monobank: подання заявки, перевірка статусів, підтвердження видачі та скасування покупки.",
         items: [
           "Умови для 3 платежів і довших термінів",
           "Статуси заявок і логіка підтвердження",
@@ -173,7 +173,7 @@ const DEFAULT_PORTAL_PAGES: Record<PortalPageSlug, PortalPageContent> = {
         id: "credits-ukrsib",
         title: "УКРСИББАНК",
         icon: "scale",
-        text: "Повний гайд по оформленню кредитної заявки в УКРСИББАНК: підготовка документів, створення заявки, анкета клієнта, робота з адресами, доходами та фінальна відправка.",
+        text: "Оформлення кредитної заявки в УКРСИББАНК: документи, анкета клієнта, адреси, доходи та перевірка перед надсиланням.",
         items: [
           "Підготовка клієнтських даних і товару",
           "Основна заявка, анкета та контактні дані",
@@ -187,11 +187,11 @@ const DEFAULT_PORTAL_PAGES: Record<PortalPageSlug, PortalPageContent> = {
         id: "credits-idea-bank",
         title: "Ідея Банк",
         icon: "sparkles",
-        text: "Повний матеріал по короткій і повній заявці в Ідея Банк: попереднє рішення, перехід до повної анкети та покрокове оформлення без дублювання заявок.",
+        text: "Коротка й повна заявки в Ідея Банку: попереднє рішення, перехід до повної анкети та оформлення без дублювання заявок.",
         items: [
           "Коротка заявка і усна згода клієнта",
           "Перехід до повної анкети",
-          "Адреси, доходи, контактна особа та відправка"
+          "Адреси, доходи, контактна особа та надсилання заявки"
         ],
         imageUrl: "",
         imageAlt: "",
@@ -201,7 +201,7 @@ const DEFAULT_PORTAL_PAGES: Record<PortalPageSlug, PortalPageContent> = {
         id: "credits-sense-bank",
         title: "СЕНС Банк",
         icon: "shield-check",
-        text: "Повний матеріал по оформленню кредиту в СЕНС Банку: створення заявки, фото клієнта, середня анкета, контактна інформація, доходи та відправлення в банк.",
+        text: "Оформлення кредиту в СЕНС Банку: заявка, фото клієнта, анкета, контакти, доходи та надсилання в банк.",
         items: [
           "Створення нової заявки і блок товару",
           "Середня анкета та паспортні дані",
@@ -227,7 +227,7 @@ const DEFAULT_PORTAL_PAGES: Record<PortalPageSlug, PortalPageContent> = {
         id: "accessories-compatibility",
         title: "Чохли та MagSafe-кейси",
         icon: "shield-check",
-        text: "Перший повний аксесуарний блок: офіційні Apple Case з MagSafe, логіка продажу Pitaka / Spigen / UAG та сценарії підбору під реальні потреби клієнта.",
+        text: "Чохли Apple, Pitaka, Spigen і UAG: матеріали, захист, MagSafe та підбір для конкретного пристрою й потреб клієнта.",
         items: [
           "Офіційні Apple Case: Clear, Silicone, Leather, FineWoven, TechWoven",
           "Pitaka, Spigen, UAG: матеріали, серії та позиціонування",
@@ -241,11 +241,11 @@ const DEFAULT_PORTAL_PAGES: Record<PortalPageSlug, PortalPageContent> = {
         id: "accessories-upsell",
         title: "Захисне скло",
         icon: "sparkles",
-        text: "Повний блок по захисному склу: типи, покриття, privacy / matte / blue-light, наші лінійки та чесна логіка рекомендації під чохол і сценарій використання.",
+        text: "Типи захисного скла, покриття, затемнення під кутом, матова поверхня та сумісність із чохлом. Підбір за потребами клієнта.",
         items: [
           "Що таке tempered glass, 9H, олеофобне покриття і full adhesive",
           "PineApple Titanium, Monblan, Ilera, NeuChatel",
-          "Сумісність із чохлами, установка, FAQ і чек-лист перед видачею"
+          "Сумісність із чохлами, встановлення та перевірка перед видачею"
         ],
         imageUrl: "",
         imageAlt: "",
@@ -255,7 +255,7 @@ const DEFAULT_PORTAL_PAGES: Record<PortalPageSlug, PortalPageContent> = {
         id: "accessories-bundles",
         title: "Живлення та кабелі",
         icon: "cable",
-        text: "Повний блок по адаптерах живлення Apple та кабелях: підбір потужності для MacBook, fast charge, USB-C / MagSafe / Thunderbolt і готові сценарії швидкої консультації.",
+        text: "Адаптери живлення й кабелі Apple: вибір потужності, швидке заряджання MacBook, USB-C, MagSafe та Thunderbolt.",
         items: [
           "Адаптери 20W, 35W, 67W, 70W, 96W, 140W і логіка їх добору",
           "Fast charge для MacBook Pro та Air",
@@ -269,11 +269,11 @@ const DEFAULT_PORTAL_PAGES: Record<PortalPageSlug, PortalPageContent> = {
         id: "accessories-belkin",
         title: "Belkin",
         icon: "headphones",
-        text: "Повний бренд-блок Belkin: BoostCharge, Connect, SoundForm, recall по BPD005 і вся базова логіка продажу зарядок, хабів, кабелів та аудіо.",
+        text: "Лінійки Belkin BoostCharge, Connect і SoundForm: зарядні пристрої, хаби, кабелі та навушники. Окремо — відкликання BPD005.",
         items: [
           "MagSafe/Qi2-станції, магнітні павербанки, GaN-зарядки й автоадаптери",
           "Кабелі 240W, TB4-доки та компактні USB-C хаби",
-          "SoundForm ANC-моделі та важливий recall для сервісної комунікації"
+          "Навушники SoundForm з ANC та порядок дій у разі відкликання товару"
         ],
         imageUrl: "",
         imageAlt: "",
@@ -283,11 +283,11 @@ const DEFAULT_PORTAL_PAGES: Record<PortalPageSlug, PortalPageContent> = {
         id: "accessories-satechi",
         title: "Satechi",
         icon: "package-plus",
-        text: "Повний бренд-блок Satechi: USB4/Thunderbolt рішення, фірмові Stand & Hub, потужні GaN-зарядки, Qi2 travel-аксесуари та периферія для Apple-style сетапів.",
+        text: "Аксесуари Satechi: рішення USB4 і Thunderbolt, підставки з хабами, GaN-адаптери, заряджання Qi2 та периферія для робочого місця.",
         items: [
           "USB4 Multiport Adapter, Pro Hub серія, TB4 Multi Display Dock",
           "Stand & Hub для Mac mini та Monitor Stand Hub XL",
-          "165W GaN Charger, Qi2 travel-зарядки, клавіатури й стенди"
+          "Адаптер GaN 165 Вт, дорожні зарядні пристрої Qi2, клавіатури й підставки"
         ],
         imageUrl: "",
         imageAlt: "",
@@ -295,11 +295,11 @@ const DEFAULT_PORTAL_PAGES: Record<PortalPageSlug, PortalPageContent> = {
       },
       {
         id: "accessories-apple-peripherals",
-        title: "Apple периферія",
+        title: "Периферія Apple",
         icon: "sparkles",
-        text: "Окремий блок по периферії Apple: Apple TV, HomePod, Apple Pencil, AirTag, Magic Mouse і Magic Trackpad як логічне доповнення до iPhone, iPad, Mac та розумного дому.",
+        text: "Apple TV, HomePod, Apple Pencil, AirTag, Magic Mouse і Magic Trackpad: можливості, сумісність і підбір до пристроїв клієнта.",
         items: [
-          "Apple TV і HomePod для домашнього медіа- та smart-home сценарію",
+          "Apple TV і HomePod для домашніх розваг та розумного дому",
           "Apple Pencil, AirTag, Magic Mouse і Magic Trackpad",
           "Каталог поколінь, сумісність і логіка підбору під екосистему клієнта"
         ],

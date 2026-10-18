@@ -190,11 +190,11 @@ export function ModuleQuiz({ moduleId, questions, passScore }: ModuleQuizProps) 
             </div>
 
             <h2 className="mt-5 font-[var(--font-heading)] text-3xl font-semibold text-white">
-              {passed ? "Тест зданий!" : "Ще одна спроба"}
+              {passed ? "Тест складено!" : "Ще одна спроба"}
             </h2>
             <p className="mt-2 text-sm leading-7 text-slate-600">
               {passed
-                ? "Ви успішно підтвердили знання по модулю. Результат зараховано."
+                ? "Ви успішно підтвердили знання з модуля. Результат зараховано."
                 : `Прохідний бал — ${passScore}%. Перегляньте матеріал і спробуйте ще.`}
             </p>
           </div>
@@ -257,7 +257,7 @@ export function ModuleQuiz({ moduleId, questions, passScore }: ModuleQuizProps) 
           {result.questionResults && result.questionResults.length > 0 && (
             <div className="mt-8">
               <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-500">
-                Відповіді по питаннях
+                Відповіді на запитання
               </p>
               <div className="grid gap-2 sm:grid-cols-2">
                 {result.questionResults.map((qr, i) => {

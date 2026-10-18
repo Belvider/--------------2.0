@@ -214,7 +214,7 @@ export const smegKettlesCatalogBlocks: ModuleContentBlock[] = [
   {
     type: "text",
     title: "Каталог чайників Smeg",
-    html: `<p>У цьому модулі зібрані дві основні моделі з вашого матеріалу: <strong>KLF03</strong> як класичний преміальний чайник і <strong>KLF04</strong> як версія з терморегуляцією. Вони закривають два типові запити: <strong>дизайн і простота</strong> або <strong>дизайн плюс контроль температури</strong>.</p>`
+    html: `<p><strong>Smeg KLF03</strong> підходить для звичайного кип’ятіння води, а <strong>KLF04</strong> дає змогу вибирати температуру. Уточніть, які напої готує клієнт і чи потрібен йому контроль нагрівання.</p>`
   },
   {
     type: "productCatalog",
@@ -243,7 +243,7 @@ export const smegKettlesCatalogBlocks: ModuleContentBlock[] = [
   },
   {
     type: "text",
-    title: "Оригінальний конспект: KLF03 та KLF04",
+    title: "KLF03 та KLF04: основні характеристики",
     html: `<h3>Основні моделі</h3><h4>Smeg KLF03</h4><ul><li>Об’єм: 1,7 л (≈7 чашок)</li><li>Корпус: нержавіюча сталь з емалевим покриттям</li><li>Потужність: 2400 Вт</li><li>Авто-вимкнення, захист від «сухого» ходу, фільтр від накипу</li><li>Поворотна база 360°, прихований кабель</li></ul><p><strong>Доступні кольори:</strong> Pastel Blue, Pastel Green, Cream, Red, Black, Steel, Grey, Pink, Matte Black, White, Gold, Rose Gold, Dolce Gabbana.</p><h4>Smeg KLF04 з терморегуляцією</h4><ul><li>Об’єм: 1,7 л</li><li>Температурні режими: 50–100 °C з кроком 10 °C</li><li>Підтримання тепла: до 20 хв</li><li>Авто-вимкнення; база 360°</li></ul><p><strong>Доступні кольори:</strong> White, Red, Cream, Pastel Blue, Pastel Green, Pink, Black, Steel.</p><p>Ці чайники SMEG — не просто побутова техніка, а стильний акцент вашої кухні.</p>`
   }
 ];

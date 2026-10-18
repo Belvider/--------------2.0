@@ -267,9 +267,9 @@ function moduleQuestions(categoryName: string) {
 function iphoneFoundationQuestions() {
   return [
     {
-      question: "Яка версія iPhone зазвичай має один фізичний слот nano-SIM і підтримку eSIM?",
+      question: "Що потрібно перевірити, щоб точно визначити підтримувані SIM-картки конкретного iPhone?",
       type: QuestionType.SINGLE,
-      options: ["iPhone Global", "iPhone Dual SIM", "R-SIM версія", "MDM-версія"],
+      options: ["Номер моделі та офіційні характеристики регіональної версії", "Лише колір корпусу", "Лише назву Global у прайсі", "Кількість встановлених програм"],
       correctAnswer: { index: 0 },
       sortOrder: 1
     },
@@ -288,9 +288,9 @@ function iphoneFoundationQuestions() {
       sortOrder: 3
     },
     {
-      question: "Що означає перший символ «M» у номері моделі iPhone?",
+      question: "Яке позначення потрібно звірити з довідником Apple, щоб визначити модель і регіональну версію?",
       type: QuestionType.SINGLE,
-      options: ["Новий пристрій", "Демо-зразок", "Сервісна заміна", "Персоналізований з гравіюванням"],
+      options: ["Номер моделі Axxxx", "Колір шпалер", "Першу літеру імені власника", "Кількість встановлених програм"],
       correctAnswer: { index: 0 },
       sortOrder: 4
     },
@@ -328,7 +328,7 @@ function iphoneCatalogQuestions() {
     {
       question: "Оберіть моделі, де в характеристиках вказано титановий корпус або титанові рамки.",
       type: QuestionType.MULTIPLE,
-      options: ["iPhone 15 Pro / 15 Pro Max", "iPhone 16 Pro / 16 Pro Max", "iPhone 17 Air", "iPhone XR"],
+      options: ["iPhone 15 Pro / 15 Pro Max", "iPhone 16 Pro / 16 Pro Max", "iPhone Air", "iPhone XR"],
       correctAnswer: { indices: [0, 1, 2] },
       sortOrder: 3
     },
@@ -791,7 +791,7 @@ function airpodsCatalogQuestions() {
     {
       question: "Яка модель має чип H2 у навушниках і чип U1 у зарядному кейсі?",
       type: QuestionType.SINGLE,
-      options: ["AirPods 3", "AirPods Pro 2", "AirPods Max 2", "AirPods Pro 1"],
+      options: ["AirPods 3", "AirPods Pro 2", "AirPods Max із USB-C (2024)", "AirPods Pro 1"],
       correctAnswer: { index: 1 },
       sortOrder: 2
     },
@@ -802,13 +802,13 @@ function airpodsCatalogQuestions() {
         "EarPods з 3,5 мм",
         "EarPods з Lightning",
         "EarPods з USB-C",
-        "AirPods Max 2"
+        "AirPods Max із USB-C (2024)"
       ],
       correctAnswer: { indices: [0, 1, 2] },
       sortOrder: 3
     },
     {
-      question: "True/False: AirPods Max 2 у вашому каталозі вже перейшли на USB-C.",
+      question: "True/False: AirPods Max із USB-C (2024) мають роз’єм USB-C для заряджання.",
       type: QuestionType.TRUE_FALSE,
       options: ["True", "False"],
       correctAnswer: { value: true },
@@ -2122,7 +2122,7 @@ function smegToastersCatalogQuestions() {
       sortOrder: 1
     },
     {
-      question: "Яка модель у вашому матеріалі описується як компактніший сценарій на 1-2 людини?",
+      question: "Яка модель має чотири окремі слоти та дві незалежні зони керування?",
       type: QuestionType.SINGLE,
       options: ["TSF02", "TSF03", "KLF03", "DCF02"],
       correctAnswer: { index: 1 },
@@ -2141,7 +2141,7 @@ function smegToastersCatalogQuestions() {
       sortOrder: 3
     },
     {
-      question: "Яка модель більше підійде для сім'ї або активного сніданкового сценарію?",
+      question: "Яка модель має два довгі слоти зі спільним керуванням?",
       type: QuestionType.SINGLE,
       options: ["TSF03", "TSF02", "Обидві однаково", "Жодна"],
       correctAnswer: { index: 1 },

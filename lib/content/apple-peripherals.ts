@@ -406,7 +406,7 @@ export const applePeripheralsCatalogBlocks: ModuleContentBlock[] = [
   {
     type: "text",
     title: "Apple peripherals — моделі й технічні характеристики",
-    html: `<p>У цьому модулі зібрано технічні характеристики та моделі ключової периферії Apple: Apple TV, HomePod, Apple Pencil, AirTag, Magic Mouse та Magic Trackpad. Блоки побудовані в тому самому форматі каталогу, що і в інших Apple-категоріях порталу, щоб команда могла швидко орієнтуватися в поколіннях, сумісності та позиціонуванні.</p>`
+    html: `<p>Порівняйте Apple TV, HomePod, Apple Pencil, AirTag, Magic Mouse та Magic Trackpad за завданням, яке вони вирішують. Почніть із пристроїв клієнта та перевірте сумісність конкретного покоління аксесуара.</p><p>Під час демонстрації покажіть одну корисну дію: керування телевізором, відтворення музики, малювання, пошук речі або роботу з Mac.</p>`
   },
   {
     type: "productCatalog",

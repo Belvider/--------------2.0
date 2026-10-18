@@ -102,6 +102,7 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
   {
     slug: "iphone-5",
     title: "iPhone 11 Pro / iPhone 11 Pro Max (2019)",
+    family: "Pro / Pro Max",
     overview: ["Діагональ: Pro — 5.8″; Pro Max — 6.5″", "Кольори: Space Gray, Silver, Gold, Midnight Green", "Пам’ять: 64 GB, 256 GB, 512 GB"],
     highlights: [
       "OLED Super Retina XDR",
@@ -114,7 +115,7 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
       "Портретний режим",
       "Нічний режим",
       "Фронтальна камера TrueDepth",
-      "IP68 (до 6 м на 30 хв)"
+      "IP68 (до 4 м на 30 хв у лабораторних умовах)"
     ],
     colors: [
       { label: "Space Gray", imageUrl: "/materials/iphone/Color/11Pro_ProMax/SpaceGray-Photoroom.png", caption: "Колір: Space Gray", default: true },
@@ -125,7 +126,7 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
   },
   {
     slug: "iphone-6",
-    title: "iPhone SE 2 gen (2020)",
+    title: "iPhone SE 2-го покоління (2020)",
     overview: ["Діагональ: 4.7″", "Кольори: Black, White, Red", "Пам’ять: 64 GB, 128 GB, 256 GB"],
     highlights: [
       "IPS Retina 4.7″",
@@ -148,7 +149,7 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
   },
   {
     slug: "iphone-7",
-    title: "iPhone SE 3 gen (2022)",
+    title: "iPhone SE 3-го покоління (2022)",
     overview: ["Діагональ: 4.7″", "Кольори: Midnight, Starlight, Red", "Пам’ять: 64 GB, 128 GB, 256 GB"],
     highlights: [
       "IPS Retina 4.7″",
@@ -171,7 +172,7 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
   },
   {
     slug: "iphone-8",
-    title: "iPhone 12 Mini / iPhone 12 (2020)",
+    title: "iPhone 12 mini / iPhone 12 (2020)",
     overview: ["Діагональ: Mini — 5.4″; 12 — 6.1″", "Кольори: Black, White, Blue, Red, Purple, Green", "Пам’ять: 64 GB, 128 GB, 256 GB"],
     highlights: [
       "OLED Super Retina XDR",
@@ -200,6 +201,7 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
   {
     slug: "iphone-9",
     title: "iPhone 12 Pro / iPhone 12 Pro Max (2020)",
+    family: "Pro / Pro Max",
     overview: ["Діагональ: Pro — 6.1″; Pro Max — 6.7″", "Кольори: Graphite, Silver, Gold, Pacific Blue", "Пам’ять: 128 GB, 256 GB, 512 GB"],
     highlights: [
       "OLED Super Retina XDR",
@@ -225,7 +227,7 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
   },
   {
     slug: "iphone-10",
-    title: "iPhone 13 Mini / iPhone 13 (2021)",
+    title: "iPhone 13 mini / iPhone 13 (2021)",
     overview: ["Діагональ: Mini — 5.4″; 13 — 6.1″", "Кольори: Starlight, Midnight, Blue, Pink, Red, Green", "Пам’ять: 128 GB, 256 GB, 512 GB"],
     highlights: [
       "True Tone",
@@ -254,6 +256,7 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
   {
     slug: "iphone-11",
     title: "iPhone 13 Pro / iPhone 13 Pro Max (2021)",
+    family: "Pro / Pro Max",
     overview: ["Діагональ: Pro — 6.1″; Pro Max — 6.7″", "Кольори: Graphite, Silver, Gold, Sierra Blue, Alpine Green", "Пам’ять: 128 GB, 256 GB, 512 GB, 1 TB"],
     highlights: [
       "OLED Super Retina XDR з ProMotion",
@@ -311,6 +314,7 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
   {
     slug: "iphone-13",
     title: "iPhone 14 Pro / iPhone 14 Pro Max (2022)",
+    family: "Pro / Pro Max",
     overview: ["Діагональ: Pro — 6.1″; Pro Max — 6.7″", "Кольори: Space Black, Silver, Gold, Deep Purple", "Пам’ять: 128 GB, 256 GB, 512 GB, 1 TB"],
     highlights: [
       "OLED Super Retina XDR з ProMotion",
@@ -346,7 +350,7 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
     highlights: [
       "OLED Super Retina XDR",
       "True Tone",
-      "Покращений Dynamic Island (декілька активностей одночасно)",
+      "Dynamic Island",
       "Face ID",
       "A16 Bionic",
       "2 стереодинаміки",
@@ -374,12 +378,13 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
   {
     slug: "iphone-15",
     title: "iPhone 15 Pro / iPhone 15 Pro Max (2023)",
+    family: "Pro / Pro Max",
     overview: ["Діагональ: Pro — 6.1″; Pro Max — 6.7″", "Кольори: Black Titanium, White Titanium, Blue Titanium, Natural Titanium", "Пам’ять: Pro — 128/256/512 GB, 1 TB; Pro Max — 256/512 GB, 1 TB"],
     highlights: [
       "OLED Super Retina XDR з ProMotion",
       "True Tone",
       "Always‑On Display",
-      "Покращений Dynamic Island",
+      "Dynamic Island",
       "Face ID",
       "A17 Pro",
       "Титанові рамки",
@@ -411,10 +416,10 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
     overview: ["Діагональ: 16 — 6.1″; 16 Plus — 6.7″", "Кольори: Black, White, Teal, Ultramarine, Pink", "Пам’ять: 128 GB, 256 GB, 512 GB"],
     highlights: [
       "OLED Super Retina XDR",
-      "True Tone, покращений Dynamic Island",
-      "Face ID, A17 Bionic",
+      "True Tone, Dynamic Island",
+      "Face ID, A18",
       "2 стереодинаміки, алюмінієва рамка",
-      "MagSafe",
+      "MagSafe, кнопка дії та Camera Control",
       "Основна камера: 48 Мп + ультраширока 12 Мп, оптичний зум до 2х",
       "Портрети нового покоління, нічний режим",
       "Dolby Vision",
@@ -436,19 +441,20 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
   {
     slug: "iphone-17",
     title: "iPhone 16 Pro / iPhone 16 Pro Max (2024)",
+    family: "Pro / Pro Max",
     overview: ["Діагональ: Pro — 6.3″; Pro Max — 6.9″", "Кольори: Black Titanium, White Titanium, Desert Titanium, Natural Titanium", "Пам’ять: Pro — 128/256/512 GB, 1 TB; Pro Max — 256/512 GB, 1 TB"],
     highlights: [
       "OLED Super Retina XDR з ProMotion",
       "True Tone",
       "Always‑On Display",
-      "Покращений Dynamic Island",
+      "Dynamic Island",
       "Face ID",
       "A18 Pro",
       "2 стереодинаміки",
       "Титанові рамки",
-      "Action Button",
+      "Кнопка дії та Camera Control",
       "MagSafe",
-      "Основна камера: 48 Мп + ультраширока 48 Мп + телефото 48 Мп (оптичний зум до 10х)",
+      "Камери: основна 48 Мп Fusion + ультраширока 48 Мп + телефото 12 Мп з оптичним наближенням 5×",
       "LiDAR",
       "Портрети нового покоління",
       "Нічний режим",
@@ -458,7 +464,7 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
       "Photonic Engine",
       "Ceramic Shield",
       "IP68",
-      "До 29 год відтворення відео",
+      "Відтворення відео: Pro — до 27 год; Pro Max — до 33 год за методикою Apple",
       "USB‑C"
     ],
     colors: [
@@ -470,13 +476,12 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
   },
   {
     slug: "iphone-18",
-    title: "iPhone 16e",
+    title: "iPhone 16e (2025)",
     overview: ["Кольори: Black, White", "Пам’ять: 128 GB, 256 GB, 512 GB"],
     highlights: [
       "OLED Super Retina XDR 6.1″ (2532×1170, 460 ppi)",
       "HDR10, Dolby Vision, True Tone",
       "Apple A18 (4‑ядерний GPU)",
-      "8 GB RAM",
       "Основна камера: 48 Мп Fusion f/1.6 з OIS",
       "Фронтальна камера: 12 Мп TrueDepth f/1.9 з автофокусом",
       "Photonic Engine, Deep Fusion, Photographic Styles, Night Mode",
@@ -486,7 +491,7 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
       "Action Button",
       "USB‑C",
       "Без MagSafe",
-      "iOS 18.3 з Apple Intelligence"
+      "Підтримка Apple Intelligence; доступність функцій залежить від мови та регіону"
     ],
     colors: [
       { label: "Black", imageUrl: "/materials/iphone/Color/16e/Black-Photoroom.png", caption: "Колір: Black", default: true },
@@ -496,20 +501,21 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
   {
     slug: "iphone-19",
     title: "iPhone 17 Pro / iPhone 17 Pro Max (2025)",
+    family: "Pro / Pro Max",
     overview: ["Діагональ: Pro — 6.3″; Pro Max — 6.9″", "Кольори: Silver, Cosmic Orange, Deep Blue", "Пам’ять: Pro — 256/512 GB, 1 TB; Pro Max — 256/512 GB, 1 TB, 2 TB"],
     highlights: [
-      "OLED Super Retina XDR з ProMotion (1–120Hz), до 3000 ніт яскравості",
+      "OLED Super Retina XDR з ProMotion до 120 Гц, до 3000 ніт на сонці",
       "True Tone, Always‑On Display, Dynamic Island",
       "Face ID, A19 Pro",
       "2 стереодинаміки, алюмінієвий unibody корпус",
       "Action Button, MagSafe",
-      "Камери: 48 Мп Fusion Main + 48 Мп Ultra Wide + 48 Мп Telephoto (оптичний зум до 6х, цифровий до 40х)",
+      "Камери: три модулі по 48 Мп; телефото 4× та 8× оптичної якості, цифрове наближення до 40×",
       "LiDAR, портрети нового покоління, нічний режим",
       "Dolby Vision, «Швидкий рух»",
-      "Фронтальна камера: 18 Мп TrueDepth з автофокусом",
+      "Фронтальна камера: 18 Мп Center Stage з автофокусом",
       "Photonic Engine, Ceramic Shield 2",
       "IP68, USB‑C",
-      "До 37 год відтворення відео"
+      "Відтворення відео: Pro — до 33 год; Pro Max — до 39 год у версіях eSIM за методикою Apple; інші регіональні версії можуть відрізнятися"
     ],
     colors: [
       { label: "Silver", imageUrl: "/materials/iphone/Color/17Pro_ProMax/Silver-Photoroom.png", caption: "Колір: Silver", default: true },
@@ -519,26 +525,28 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
   },
   {
     slug: "iphone-20",
-    title: "iPhone 17 Air (2025)",
+    title: "iPhone Air (2025)",
+    family: "Air",
+    summary: "Для тих, хто обирає тонкий і легкий корпус. Під час порівняння враховуйте одну основну камеру та роботу лише з eSIM.",
     overview: ["Діагональ: 6.5″", "Кольори: Space Black, Cloud White, Light Gold, Sky Blue", "Пам’ять: 256/512 GB, 1 TB"],
     highlights: [
-      "OLED Super Retina XDR з ProMotion (до 120Hz)",
+      "OLED Super Retina XDR з ProMotion до 120 Гц",
       "True Tone",
-      "Always‑On Display (вимкнено за замовчуванням)",
-      "Покращений Dynamic Island",
+      "Always‑On Display",
+      "Dynamic Island",
       "Face ID, A19 Pro",
-      "2 стереодинаміки",
-      "Титановий корпус (надлегкий, товщина лише 5.6 мм)",
+      "Один вбудований динамік",
+      "Титановий корпус: товщина 5,64 мм, маса 165 г",
       "MagSafe",
       "Основна камера: 48 Мп Fusion (цифровий зум до 10х)",
       "Портрети нового покоління, нічний режим",
       "Dolby Vision, «Швидкий рух»",
-      "Фронтальна камера: 18 Мп TrueDepth з автофокусом",
+      "Фронтальна камера: 18 Мп Center Stage з автофокусом",
       "Photonic Engine",
       "Ceramic Shield 2 (передня панель), Ceramic Shield (задня)",
       "IP68",
-      "До 24 год відтворення відео",
-      "USB‑C"
+      "До 27 год відтворення відео за методикою Apple",
+      "USB‑C, лише eSIM"
     ],
     colors: [
       { label: "Space Black", imageUrl: "/materials/iphone/Color/17Air/Black-Photoroom%20(1).png", caption: "Колір: Space Black", default: true },
@@ -552,7 +560,7 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
     title: "iPhone 17 (2025)",
     overview: ["Діагональ: 6.3″", "Кольори: Lavender, Sage, Mist Blue, Black, White", "Пам’ять: 256/512 GB"],
     highlights: [
-      "OLED Super Retina XDR з ProMotion (1–120Hz), HDR10, до 3000 ніт яскравості",
+      "OLED Super Retina XDR з ProMotion до 120 Гц, HDR10, до 3000 ніт на сонці",
       "True Tone",
       "Always‑On Display",
       "Dynamic Island",
@@ -566,9 +574,9 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
       "Нічний режим",
       "Dolby Vision",
       "«Швидкий рух»",
-      "Фронтальна 18 Мп TrueDepth з автофокусом, Center Stage",
+      "Фронтальна камера 18 Мп Center Stage з автофокусом",
       "Photonic Engine",
-      "Ceramic Shield 2 (передня), Ceramic Shield (задня)",
+      "Ceramic Shield 2 спереду, скляна задня панель",
       "IP68",
       "До 30 год відео",
       "USB‑C"
@@ -580,6 +588,70 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
       { label: "Black", imageUrl: "/materials/iphone/Color/17/Black-Photoroom.png", caption: "Колір: Black" },
       { label: "White", imageUrl: "/materials/iphone/Color/17/White-Photoroom.png", caption: "Колір: White" }
     ]
+  },
+  {
+    slug: "iphone-22",
+    title: "iPhone 18 Pro / iPhone 18 Pro Max (2026)",
+    family: "Pro / Pro Max",
+    summary: "Для мобільного фото й відео: основна камера зі змінною діафрагмою та розширене ручне керування. Pro Max додає більший екран і довшу автономність.",
+    overview: [
+      "Екран: Pro — 6,3″; Pro Max — 6,9″",
+      "Кольори: Black, Silver, Glacier, Burgundy",
+      "Пам’ять обох моделей: 256 GB, 512 GB, 1 TB, 2 TB"
+    ],
+    highlights: [
+      "OLED Super Retina XDR, ProMotion до 120 Гц, Always-On Display",
+      "A20 Pro та охолодження з випарною камерою",
+      "Основна камера 48 Мп зі змінною діафрагмою; ультраширока й телефото — по 48 Мп",
+      "Телефото 4×; наближення 8× оптичної якості",
+      "Фронтальна камера 18 Мп Center Stage; Face ID",
+      "Алюмінієвий корпус, Ceramic Shield 2 спереду",
+      "Відтворення відео: Pro — до 36 год; Pro Max — до 45 год за методикою Apple",
+      "USB-C, MagSafe; формат SIM перевіряйте за регіональною версією"
+    ],
+    colors: []
+  },
+  {
+    slug: "iphone-23",
+    title: "iPhone Duo (2026)",
+    family: "Duo",
+    summary: "Складаний iPhone для роботи з двома програмами поруч і перегляду на великому екрані. Старт продажів Apple — 23 жовтня 2026 року; місцеву наявність уточнюйте окремо.",
+    overview: [
+      "Екрани: внутрішній — 7,6″; зовнішній — 5,4″",
+      "Кольори: Night Sky, Star White",
+      "Пам’ять: 256 GB, 512 GB, 1 TB, 2 TB"
+    ],
+    highlights: [
+      "Два OLED-дисплеї Super Retina XDR з ProMotion до 120 Гц",
+      "A20 Pro; титановий складаний корпус",
+      "Камери: основна 48 Мп Fusion та ультраширока 48 Мп; наближення 2× оптичної якості",
+      "Зовнішня фронтальна камера 12 Мп Center Stage; внутрішня камера FaceTime під екраном",
+      "Touch ID у бічній кнопці; лише eSIM",
+      "Відтворення відео: до 31 год на внутрішньому або до 44 год на зовнішньому екрані за методикою Apple",
+      "USB-C і MagSafe; окремого телефото, як у Pro, немає"
+    ],
+    colors: []
+  },
+  {
+    slug: "iphone-24",
+    title: "iPhone 17e (2026)",
+    family: "SE / e",
+    summary: "Для щоденного користування з A19 і MagSafe. На відміну від iPhone 17, має менший екран і одну задню камеру.",
+    overview: [
+      "Екран: 6,1″ OLED Super Retina XDR",
+      "Кольори: Black, White, Soft Pink",
+      "Пам’ять: 256 GB, 512 GB"
+    ],
+    highlights: [
+      "A19 із 4-ядерним графічним процесором",
+      "Основна камера 48 Мп Fusion; режим 2× із центральної частини сенсора",
+      "Фронтальна камера 12 Мп TrueDepth з автофокусом; Face ID",
+      "MagSafe та Qi2 до 15 Вт; USB-C",
+      "Кнопка дії; Ceramic Shield 2 спереду",
+      "До 26 год відтворення відео за методикою Apple",
+      "Формат SIM перевіряйте за регіональною версією"
+    ],
+    colors: []
   }
 ];
 
@@ -588,236 +660,192 @@ export const iphoneFoundationBlocks: ModuleContentBlock[] = [
     type: "text",
     title: "Apple iPhone",
     html: `
-      <p>Всім привіт, бандо! У цьому модулі зібрано базу по Apple iPhone: чим моделі відрізняються, як орієнтуватися в новій та вживаній техніці, які регіональні версії існують та на що звертати увагу під час консультації.</p>
-      <p>Матеріал перенесено з вашої HTML-версії у формат навчального порталу, щоб ним було зручно користуватися з телефону, планшета та ПК.</p>
+      <p>Мета цього модуля — навчитися добирати iPhone під потреби покупця й пояснювати відмінності моделей зрозумілими словами.</p>
+      <h4>Після навчання ви зможете</h4>
+      <ul>
+        <li>Зіставити бюджет, розмір екрана, камери й автономність із конкретним сценарієм користування.</li>
+        <li>Відрізнити лінійки Pro, Pro Max, Air, Duo, e та попередні покоління.</li>
+        <li>Перевірити стан вживаного пристрою, блокування й сумісність SIM.</li>
+        <li>Пояснити користь технологій без зайвих термінів і непідтверджених обіцянок.</li>
+      </ul>
+      <p><strong>Порядок навчання:</strong> стан пристрою → вибір лінійки → регіональна версія → перевірка → демонстрація переваг.</p>
     `
   },
   {
     type: "text",
     title: "Вживана техніка Apple",
     html: `
-      <p>Ринок вживаної техніки Apple активно зростає завдяки довговічності пристроїв, популярності бренду та високій ціні нових моделей. Для успішних продажів важливо добре орієнтуватися в модельному ряді iPhone і пропонувати сервісне обслуговування.</p>
-      <h4>Основні характеристики ринку</h4>
-      <ul>
-        <li><strong>Великий попит:</strong> якість і дизайн Apple тримають попит навіть на старі моделі.</li>
-        <li><strong>Ціна:</strong> техніка Apple повільніше знецінюється, ніж у інших брендів.</li>
-        <li><strong>Різноманітність:</strong> iPhone, iPad, MacBook, Apple Watch та інші пристрої у різних станах.</li>
-        <li><strong>Передпродажна перевірка:</strong> повний тест кожного пристрою, заміна зношених запчастин, наприклад АКБ.</li>
-      </ul>
+      <p>Вживаний iPhone обирають за поєднанням можливостей, стану та ціни. Однакова назва моделі не означає однаковий стан двох пристроїв.</p>
+      <h4>Передпродажна перевірка</h4>
+      <ol>
+        <li><strong>Власність і активація.</strong> Попередній власник має вилучити пристрій зі свого облікового запису Apple. Не приймайте iPhone з блокуванням активації.</li>
+        <li><strong>Корпус і функції.</strong> Перевірте дисплей, дотики, камери, мікрофони, динаміки, кнопки, заряджання та розпізнавання обличчя або відбитка пальця.</li>
+        <li><strong>Акумулятор і ремонт.</strong> Перегляньте стан акумулятора та історію деталей і обслуговування, якщо модель їх показує. Поясніть покупцю відомі заміни й повідомлення системи.</li>
+        <li><strong>Зв’язок.</strong> Перевірте Wi-Fi, мобільну мережу та відсутність обмеження оператора.</li>
+      </ol>
+      <p><strong>У консультації:</strong> покажіть результати перевірки, назвіть помітні дефекти й поясніть умови гарантії саме магазину. Ємність акумулятора у відсотках не дорівнює кількості годин роботи.</p>
+      <p>Детальніше: <a href="https://support.apple.com/en-us/104999" target="_blank" rel="noopener noreferrer">рекомендації Apple щодо вживаного iPhone</a>.</p>
     `
   },
   {
     type: "text",
     title: "Нова техніка Apple",
     html: `
-      <p>Нові пристрої Apple задають стандарти ринку преміум-сегмента: сучасний дизайн, інтегрована екосистема, потужність і довготривала підтримка.</p>
-      <h4>Основні характеристики</h4>
-      <ul>
-        <li><strong>Великий попит:</strong> стабільно високий інтерес до нових релізів і оновлень.</li>
-        <li><strong>Інновації:</strong> передові процесори, дисплеї, камери, захист даних і сервіси.</li>
-        <li><strong>Ціна:</strong> преміальна вартість із відповідною якістю, статусом та підтримкою.</li>
-        <li><strong>Різноманітність:</strong> смартфони, планшети, ноутбуки, годинники для різних сценаріїв.</li>
-        <li><strong>Сервіс:</strong> гарантія та глобальна мережа сервісних центрів.</li>
-      </ul>
+      <p>Консультацію починайте з потреб покупця. Новіша або дорожча модель має сенс тоді, коли її переваги потрібні в щоденному користуванні.</p>
+      <h4>П’ять запитань перед вибором</h4>
+      <ol>
+        <li>Який бюджет і яким смартфоном людина користується зараз?</li>
+        <li>Що важливіше: компактність, великий екран чи мінімальна маса?</li>
+        <li>Для чого потрібні камери: сімейні фото, портрети, наближення чи професійне відео?</li>
+        <li>Скільки пам’яті вже зайнято та чи потрібне перенесення даних?</li>
+        <li>Яка SIM-картка й аксесуари використовуються зараз?</li>
+      </ol>
+      <p><strong>Перед оплатою:</strong> узгодьте модель, пам’ять, колір, регіональну версію, комплектацію, сумісний зарядний пристрій та конкретні умови гарантії. Дату анонсу або старту продажів Apple не прирівнюйте до наявності в магазині.</p>
     `
   },
   {
     type: "text",
     title: "Лінійки iPhone",
     html: `
-      <h4>Стандартні базові моделі</h4>
-      <ul>
-        <li><strong>Опис:</strong> збалансовані функції для щоденних задач: продуктивність, камери, дизайн.</li>
-        <li><strong>Кому підходять:</strong> тим, хто хоче основний набір функцій без «про»-надбавок за розумну ціну.</li>
-      </ul>
-      <h4>Pro</h4>
-      <ul>
-        <li><strong>Опис:</strong> кращі дисплеї, потужні чіпи, розширені камери та інструменти для творчості й бізнесу.</li>
-        <li><strong>Кому підходять:</strong> фото- та відеокреаторам, дизайнерам, ентузіастам продуктивності.</li>
-      </ul>
-      <h4>Pro Max</h4>
-      <ul>
-        <li><strong>Опис:</strong> усе, що є в Pro, але з більшим екраном і автономністю для медіа та ігор.</li>
-        <li><strong>Кому підходять:</strong> тим, хто цінує великий дисплей і максимальні можливості камер.</li>
-      </ul>
-      <h4>SE / e</h4>
-      <ul>
-        <li><strong>Опис:</strong> бюджетні моделі з сучасною продуктивністю і класичним дизайном.</li>
-        <li><strong>Кому підходять:</strong> прихильникам компактних форм і нижчого бюджету без втрати надійності.</li>
-      </ul>
-      <h4>Mini</h4>
-      <ul>
-        <li><strong>Опис:</strong> компактні iPhone з актуальними характеристиками й зручністю одноручного використання.</li>
-        <li><strong>Кому підходять:</strong> тим, кому важлива компактність та легкість.</li>
-      </ul>
+      <table>
+        <thead><tr><th>Лінійка</th><th>Для якого сценарію</th><th>Що порівняти</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Базова / Plus</strong></td><td>Щоденні справи, фото й спілкування.</td><td>Plus — більший екран у відповідних поколіннях. Базовий iPhone 17 уже має ProMotion.</td></tr>
+          <tr><td><strong>Pro / Pro Max</strong></td><td>Наближення, складніша зйомка, ігри й робота з відео.</td><td>Камери, формати запису, розмір і маса. Pro Max зазвичай працює довше, але камери порівнюйте за конкретним поколінням.</td></tr>
+          <tr><td><strong>Air</strong></td><td>Тонкий і легкий смартфон із великим екраном.</td><td>iPhone Air має одну задню камеру та працює лише з eSIM.</td></tr>
+          <tr><td><strong>Duo</strong></td><td>Робота з програмами поруч, читання й перегляд на розкладеному екрані.</td><td>Складаний формат, Touch ID, eSIM та відсутність окремого телефото. Не плутайте з позначенням Dual SIM.</td></tr>
+          <tr><td><strong>SE / e</strong></td><td>Нижчий бюджет і основні можливості iPhone.</td><td>SE має кнопку «Початок» із Touch ID; моделі e — Face ID. iPhone 16e не має MagSafe, а iPhone 17e має.</td></tr>
+          <tr><td><strong>mini</strong></td><td>Насамперед компактність і користування однією рукою.</td><td>Лінійка представлена iPhone 12 mini та 13 mini. Перевіряйте стан акумулятора й підтримувану версію iOS.</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Приклад пояснення:</strong> «Вам потрібне наближення на концертах — порівняймо телефото конкретних Pro-моделей. Якщо головне — легкість у руці, окремо спробуйте Air».</p>
     `
   },
   {
     type: "text",
     title: "Версії iPhone за ринками",
     html: `
-      <h4>iPhone Global</h4>
+      <p>Торгова назва «Global» не є єдиною технічною конфігурацією Apple. Тип SIM залежить від моделі та ринку, для якого виготовлено пристрій.</p>
+      <h4>Основні варіанти</h4>
       <ul>
-        <li><strong>Ринок:</strong> Європа, Азія, Латинська Америка, Канада, Австралія.</li>
-        <li><strong>SIM-карта:</strong> один фізичний слот nano-SIM + підтримка eSIM.</li>
-        <li><strong>Сумісність:</strong> працює з усіма мобільними операторами, підтримує LTE/5G у більшості країн.</li>
-        <li><strong>Гарантія:</strong> 1 рік Apple; в Україні — обслуговування через авторизовані сервісні центри або магазини, які надали гарантію.</li>
-        <li><strong>Переваги:</strong> найбільш універсальна версія, підтримує фізичну SIM-карту, зручна для подорожей.</li>
-        <li><strong>Позначення в артикулах:</strong> LL/A, ZP/A, ZA/A, T/A, F/A, VC/A.</li>
+        <li><strong>nano-SIM + eSIM:</strong> поширена комбінація у багатьох міжнародних версіях. Уточніть її за номером конкретної моделі.</li>
+        <li><strong>Лише eSIM:</strong> фізичного слота немає. iPhone Air та iPhone Duo використовують цей формат; у інших лінійках він залежить від ринку.</li>
+        <li><strong>Дві фізичні nano-SIM:</strong> доступні в окремих моделях для певних ринків. Не переносіть це правило на всі пристрої з Китаю, Гонконгу чи Макао.</li>
       </ul>
-      <h4>iPhone eSIM</h4>
-      <ul>
-        <li><strong>Ринок:</strong> США, починаючи з iPhone 14.</li>
-        <li><strong>SIM-карта:</strong> відсутній фізичний слот — лише eSIM, до 8 eSIM на одному пристрої.</li>
-        <li><strong>Сумісність:</strong> працює лише з операторами, які підтримують eSIM. В Україні — Kyivstar, Vodafone, lifecell.</li>
-        <li><strong>Гарантія:</strong> 1 рік Apple; в Україні — обслуговування через магазини, які надали гарантію.</li>
-        <li><strong>Переваги:</strong> зручне перемикання між операторами, немає фізичної SIM-картки, нижчий ризик втрати SIM.</li>
-        <li><strong>Обмеження:</strong> не всі оператори підтримують eSIM; не працює з фізичними SIM-картами.</li>
-      </ul>
-      <h4>Оновлені регіони з eSIM-only версією iPhone 17</h4>
-      <ul>
-        <li>США</li>
-        <li>Канада</li>
-        <li>Японія</li>
-        <li>Мексика</li>
-        <li>Саудівська Аравія</li>
-        <li>ОАЕ</li>
-        <li>Катар</li>
-        <li>Кувейт</li>
-        <li>Бахрейн</li>
-        <li>Оман</li>
-        <li>Гуам</li>
-        <li>Американські Віргінські острови</li>
-      </ul>
-      <p>У цих країнах iPhone 17 не має фізичного слоту для SIM-картки — лише eSIM. Користувачі активують мобільний зв’язок через цифровий профіль.</p>
-      <h4>iPhone Dual SIM</h4>
-      <ul>
-        <li><strong>Ринок:</strong> Китай, Гонконг, Макао та деякі країни Азії.</li>
-        <li><strong>SIM-карта:</strong> два фізичних слоти nano-SIM без eSIM.</li>
-        <li><strong>Сумісність:</strong> зручно для подорожей, бізнесу або розділення особистого й робочого номерів.</li>
-        <li><strong>Гарантія:</strong> 1 рік Apple; в Україні — переважно через магазини, які надали гарантію.</li>
-        <li><strong>Переваги:</strong> повноцінна підтримка Dual SIM без eSIM.</li>
-        <li><strong>Обмеження:</strong> відсутність eSIM; у деяких регіонах можливі обмеження на FaceTime Audio.</li>
-        <li><strong>Позначення в артикулах:</strong> CH/A, ZP/A, ZA/A.</li>
-      </ul>
+      <h4>Що перевірити з покупцем</h4>
+      <ol>
+        <li>Чи підтримує його оператор eSIM саме для потрібного тарифу?</li>
+        <li>Чи потрібна фізична SIM для роботи або подорожей?</li>
+        <li>Чи немає обмеження оператора: «Налаштування» → «Загальні» → «Про пристрій» → «Блокування оператором»?</li>
+      </ol>
+      <p>Dual SIM означає роботу з двома номерами, а не обов’язково два фізичні слоти. Гарантію та доступні сервіси уточнюйте для конкретного пристрою й місця обслуговування.</p>
+      <p>Джерело: <a href="https://support.apple.com/en-us/109317" target="_blank" rel="noopener noreferrer">Apple — Dual SIM та eSIM</a>.</p>
     `
   },
   {
     type: "facts",
     title: "Специфічні регіональні особливості",
     items: [
-      "США: 5G mmWave, видима антена, лише eSIM, найширша підтримка частот.",
-      "ОАЕ: можливі обмеження на відеодзвінки та FaceTime у межах регіону.",
-      "Європа: обмеження максимальної гучності в навушниках приблизно на 10-12% нижче.",
-      "Японія: звук затвора камери часто не вимикається всередині країни.",
-      "Південна Корея: у «Локаторі» можуть бути недоступні вкладка «Люди» і шаринг геопозиції.",
-      "Китай: без eSIM; гарантія діє лише в Китаї."
+      "Регіон перевіряйте за номером моделі Axxxx та офіційними характеристиками, а не лише за країною продавця.",
+      "Підтримка eSIM і фізичних SIM різниться навіть усередині одного покоління. Для Air та Duo одразу обговоріть eSIM.",
+      "Підтримка частот 5G сама по собі не гарантує доступ до 5G: потрібні сумісний оператор, тариф і покриття.",
+      "Apple Intelligence, Siri, супутникові функції та окремі сервіси залежать від моделі, мови й регіону. Перевіряйте потрібну функцію перед обіцянкою покупцю.",
+      "Місцеві правила, оператор і налаштування можуть впливати на окремі функції. Не узагальнюйте старі регіональні обмеження на всі нові моделі.",
+      "Для гарантійного звернення важливі документи про купівлю та умови продавця або сервісного центру. Не обіцяйте однакове обслуговування в кожній країні."
     ]
   },
   {
     type: "text",
     title: "Як визначити регіон за номером моделі",
     html: `
-      <ul>
-        <li><strong>Де подивитися:</strong> Налаштування → Основні → Про пристрій → Model Number, наприклад MQ0G3QN/A.</li>
-        <li><strong>Суфікси регіонів:</strong> LL/A — США; CH/A — Китай; ZA/A — Сінгапур; ZD/A — Люксембург, Австрія, Бельгія, Монако, Німеччина, Франція, Нідерланди, Швейцарія; QN/A — Швеція, Данія, Ісландія, Норвегія; QL/A — Іспанія, Італія, Португалія; RX/A — Україна; SX/A — Словенія; UA/A — Україна; VC/A — Канада; X/A — Австралія, Нова Зеландія; HN/A — Індія; JA/A — Японія; BE — Велика Британія, Ірландія; B/A — Латинська Америка.</li>
-        <li><strong>Перший символ моделі:</strong> M — новий; F — офіційно відновлений; N — сервісна заміна; число — демо-зразок; P — персоналізований пристрій з гравіюванням.</li>
-      </ul>
+      <ol>
+        <li>Відкрийте «Налаштування» → «Загальні» → «Про пристрій».</li>
+        <li>У полі «Номер моделі» спочатку видно артикул, наприклад із закінченням <strong>/A</strong>. Натисніть на нього, щоб побачити номер <strong>Axxxx</strong>.</li>
+        <li>Знайдіть Axxxx у <a href="https://support.apple.com/en-us/108044" target="_blank" rel="noopener noreferrer">довіднику моделей Apple</a> і звірте конфігурацію SIM та інші відмінності.</li>
+      </ol>
+      <p><strong>Артикул і стан — різні речі.</strong> Початкова літера артикула не доводить, що iPhone зараз новий, не ремонтувався або не був активований. Фактичний стан, історію обслуговування та активацію перевіряють окремо.</p>
+      <p>Інструкція: <a href="https://support.apple.com/en-us/106343" target="_blank" rel="noopener noreferrer">де знайти номер моделі</a>.</p>
     `
   },
   {
     type: "text",
     title: "R-SIM та MDM: що не продаємо",
     html: `
-      <h4>Політика</h4>
+      <p><strong>Правило приймання:</strong> пристрої з R-SIM або корпоративним керуванням MDM не приймаємо на викуп чи Trade-In та не продаємо.</p>
+      <h4>MDM — корпоративне керування</h4>
+      <p>Організація може встановлювати правила, програми та обмеження, а також дистанційно блокувати або стирати пристрій. MDM не є характеристикою модельного ряду.</p>
       <ul>
-        <li><strong>Не приймаємо та не продаємо:</strong> пристрої з R-SIM та MDM ні на викуп, ні в Trade-In.</li>
+        <li>Перегляньте розділ «Налаштування» → «Загальні» → «VPN та керування пристроєм» і повідомлення про нагляд організації.</li>
+        <li>Відсутність профілю в налаштуваннях не доводить, що пристрій вилучено з корпоративної системи.</li>
+        <li>Якщо під час налаштування з’являється «Віддалене керування», передайте питання відповідальному працівнику. Зняти корпоративну прив’язку має організація-власник.</li>
       </ul>
-      <h4>Що таке MDM</h4>
-      <ul>
-        <li><strong>Визначення:</strong> система корпоративного керування пристроями. Після скидання активувати без корпоративного пароля неможливо.</li>
-        <li><strong>Функції:</strong> моніторинг місцезнаходження, контроль додатків, обмеження, профілі Wi-Fi/VPN/пошта, автозапуск апів, дистанційне блокування та стирання.</li>
-        <li><strong>Як перевірити:</strong> Налаштування → Загальні → VPN та керування пристроєм; додатково — платні онлайн-чекери.</li>
-      </ul>
-      <h4>Що таке R-SIM</h4>
-      <ul>
-        <li><strong>Визначення:</strong> пристрій або програмний обхід блокування оператора для роботи з іншими SIM.</li>
-        <li><strong>Ризики:</strong> після скидання до заводських налаштувань пристрій часто неможливо активувати; робота без підкладки нестабільна.</li>
-        <li><strong>Як працює:</strong> вставляється разом із SIM або прошивається і імітує «правильну» SIM оператора-локера без апаратного втручання.</li>
-      </ul>
+      <h4>R-SIM — обхід обмеження оператора</h4>
+      <p>Це адаптер для SIM-картки, що використовується для роботи заблокованого під оператора iPhone в іншій мережі. Він не є офіційним розблокуванням оператором; після оновлення або повторної активації зв’язок може перестати працювати.</p>
+      <p><strong>Перевірка:</strong> огляньте лоток SIM і статус блокування оператором. У разі сумніву припиніть приймання та зверніться до відповідального працівника.</p>
     `
   },
   {
     type: "text",
     title: "Дисплеї iPhone",
     html: `
-      <h4>Типи дисплеїв</h4>
-      <ul>
-        <li><strong>LCD:</strong> ранні моделі та iPhone SE (2022). Менша контрастність і яскравість.</li>
-        <li><strong>OLED:</strong> починаючи з iPhone X — глибокий чорний, висока контрастність, енергоефективність.</li>
-      </ul>
-      <h4>Частота оновлення</h4>
-      <ul>
-        <li><strong>60 Гц:</strong> базові моделі.</li>
-        <li><strong>120 Гц ProMotion:</strong> Pro-моделі з iPhone 13 Pro — плавність і менші затримки.</li>
-      </ul>
-      <h4>Розміри та яскравість</h4>
-      <ul>
-        <li><strong>Діагоналі:</strong> від 4.7″ у SE до 6.9″ у Pro Max.</li>
-        <li><strong>Яскравість:</strong> база — до приблизно 800 ніт; Pro — до приблизно 2000 ніт на сонці.</li>
-      </ul>
-      <h4>Інтерфейсні особливості</h4>
-      <ul>
-        <li><strong>Dynamic Island:</strong> з iPhone 14 Pro, а в 16-й серії — також у базових моделях.</li>
-        <li><strong>HDR10 / Dolby Vision:</strong> підвищена якість відео.</li>
-        <li><strong>True Tone:</strong> автопідлаштування балансу білого до освітлення.</li>
-        <li><strong>Ceramic Shield:</strong> підвищений захист дисплея з 12 серії.</li>
-      </ul>
+      <table>
+        <thead><tr><th>Характеристика</th><th>Що означає для користувача</th><th>Як показати</th></tr></thead>
+        <tbody>
+          <tr><td><strong>LCD / OLED</strong></td><td>OLED відображає глибокий чорний. LCD використовується, зокрема, в XR, 11 і SE 2-го та 3-го поколінь.</td><td>Порівняйте темне фото й контрастність за однакової яскравості.</td></tr>
+          <tr><td><strong>ProMotion до 120 Гц</strong></td><td>Плавніше прокручування й анімації. Є в Pro починаючи з 13 Pro, а також в iPhone 17, Air і Duo.</td><td>Прокрутіть список або вебсторінку поруч із моделлю на 60 Гц.</td></tr>
+          <tr><td><strong>Яскравість</strong></td><td>Впливає на читабельність надворі. Типова, пікова HDR і пікова на сонці — різні показники.</td><td>Порівнюйте однакові режими за офіційною специфікацією, а не лише найбільше число.</td></tr>
+          <tr><td><strong>Діагональ і форма</strong></td><td>Великий екран зручний для відео, але впливає на габарити. У Duo є окремі внутрішній і зовнішній екрани.</td><td>Дайте потримати пристрій, набрати текст і оцінити розмір у кишені.</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Важливо:</strong> Ceramic Shield та захист IP68 не роблять пристрій невразливим до падінь або води. Не демонструйте захист зануренням чи ударами.</p>
     `
   },
   {
     type: "text",
     title: "Основні технології Apple в iPhone",
     html: `
+      <h4>Функція → користь → коротка демонстрація</h4>
       <ul>
-        <li><strong>True Tone:</strong> автоматично підлаштовує баланс білого до зовнішнього освітлення, щоб очі менше втомлювалися.</li>
-        <li><strong>Face ID:</strong> безпечне розблокування одним поглядом, працює навіть зі змінами зовнішності й у темряві.</li>
-        <li><strong>Автояскравість:</strong> регулює яскравість екрана залежно від умов освітлення і допомагає економити батарею.</li>
-        <li><strong>Qi Wireless Charging:</strong> універсальний стандарт бездротової зарядки, доступний з iPhone 8.</li>
-        <li><strong>MagSafe:</strong> екосистема аксесуарів і швидша бездротова зарядка, підтримується з iPhone 12.</li>
-        <li><strong>eSIM:</strong> цифрова SIM-картка, підтримується з iPhone XS і новіших моделей.</li>
-        <li><strong>Нічний режим:</strong> яскравіші знімки з кращою деталізацією в умовах слабкого освітлення, починаючи з iPhone 11.</li>
-        <li><strong>LiDAR:</strong> допомагає для AR, точних вимірювань, портретів і фокусування в темряві.</li>
-        <li><strong>Ceramic Shield:</strong> міцніше покриття екрана, з’явилося з iPhone 12.</li>
-        <li><strong>ProMotion:</strong> адаптивна частота оновлення до 120 Гц у Pro-лінійці.</li>
-        <li><strong>Кінематографічний режим:</strong> автоматично перемикає фокус і змінює глибину кадру під час зйомки відео.</li>
-        <li><strong>Dynamic Island:</strong> показує активності у згорнутому вигляді: дзвінки, маршрут, музику та інше.</li>
-        <li><strong>Action Button:</strong> з iPhone 15 Pro замінює класичний перемикач звуку на кастомну кнопку.</li>
-        <li><strong>Camera Control:</strong> у 16-й серії дає більш гнучке керування камерою та режимами зйомки.</li>
+        <li><strong>True Tone:</strong> підлаштовує кольорову температуру екрана під освітлення. Покажіть перемикач у налаштуваннях дисплея.</li>
+        <li><strong>Face ID / Touch ID:</strong> підтверджують особу для розблокування та оплати. У Duo Touch ID розташований у бічній кнопці; у SE — у кнопці «Початок».</li>
+        <li><strong>Dynamic Island:</strong> показує поточні активності, наприклад таймер або відтворення музики. Запустіть таймер і поверніться на головний екран.</li>
+        <li><strong>MagSafe:</strong> магнітне позиціювання сумісних зарядних пристроїв та аксесуарів. Перевірте підтримку моделі: у 16e MagSafe немає, у 17e є.</li>
+        <li><strong>Кнопка дії:</strong> запускає призначену функцію. Покажіть, як вибрати ліхтарик, камеру або швидку команду.</li>
+        <li><strong>Camera Control:</strong> окремий елемент керування камерою в сумісних моделях. Його наявність перевіряйте в характеристиках, а не лише за номером покоління.</li>
+        <li><strong>Ультраширока камера / телефото:</strong> дають відповідно ширший кадр і наближення. Покажіть однакову сцену різними об’єктивами.</li>
       </ul>
+      <h4>Як правильно пояснювати наближення</h4>
+      <p>Оптичне наближення, режим оптичної якості з частини сенсора та цифрове збільшення — різні речі. Наприклад, у 17 Pro й 18 Pro є телефото 4× і режим 8× оптичної якості. Цифрові 40× не означають окремий об’єктив 40×.</p>
     `
   },
   {
     type: "text",
     title: "iOS — стабільність, безпека та екосистема",
     html: `
+      <p>Екосистема має цінність, коли спрощує конкретні дії покупця. Оберіть одну-дві функції, які відповідають його пристроям і звичкам.</p>
       <ul>
-        <li><strong>Інтуїтивний інтерфейс:</strong> система жестів, зрозуміле розташування іконок, Control Center, Spotlight Search і темний режим.</li>
-        <li><strong>Продуктивність і стабільність:</strong> iOS оптимізована під апаратне забезпечення iPhone і забезпечує плавну роботу та хорошу автономність.</li>
-        <li><strong>Екосистема Apple:</strong> Handoff, AirDrop, iCloud і Continuity спрощують роботу між iPhone, Mac, iPad, Apple Watch та AirPods.</li>
-        <li><strong>Безпека та конфіденційність:</strong> Face ID, Touch ID, шифрування даних, контроль дозволів і перевірка програм в App Store.</li>
-        <li><strong>Вбудовані програми та сервіси:</strong> Safari, Messages, Mail, Photos, Notes, Health, Apple Music, Apple Pay, iCloud Drive та інші сервіси.</li>
-        <li><strong>App Store:</strong> мільйони додатків для різних завдань із високими стандартами якості та безпеки.</li>
-        <li><strong>Розширені функції:</strong> Siri, Live Text, FaceTime, iMessage, Focus Modes та інші інструменти для щоденної роботи.</li>
-        <li><strong>Оновлення та підтримка:</strong> Apple регулярно випускає оновлення iOS і довго підтримує навіть старі моделі.</li>
+        <li><strong>AirDrop:</strong> передавання фото та файлів між сумісними пристроями Apple без месенджера.</li>
+        <li><strong>iCloud:</strong> синхронізація даних і резервне копіювання. Поясніть обсяг сховища та можливу оплату додаткового місця.</li>
+        <li><strong>Функції безперервності:</strong> продовження роботи між сумісними Mac, iPad та iPhone; вимоги залежать від конкретної функції.</li>
+        <li><strong>Конфіденційність:</strong> код допуску, біометрія, дозволи програм і «Локатор». Допоможіть перевірити налаштування, не просіть повідомляти вам пароль облікового запису.</li>
+        <li><strong>Оновлення:</strong> Apple підтримує моделі протягом багатьох років. Перед продажем старішого iPhone перевірте сумісність із потрібними програмами та поточною iOS.</li>
+        <li><strong>Apple Intelligence:</strong> доступність залежить від сумісного пристрою, мови й регіону. Не обіцяйте всі функції українською без перевірки.</li>
       </ul>
+      <p><strong>Після продажу:</strong> узгодьте перенесення даних, резервну копію та активацію SIM. Покупець має самостійно вводити свої паролі й коди підтвердження.</p>
     `
   },
   {
     type: "text",
-    title: "Для більш докладного заглиблення",
+    title: "Самоперевірка та додаткові матеріали",
     html: `
-      <blockquote>Для глибшого самостійного вивчення використовуйте матеріали support.apple.com/uk-ua/docs.</blockquote>
+      <h4>Перевірте себе перед тестом</h4>
+      <ol>
+        <li>Покупець хоче легкий iPhone. Які переваги й обмеження Air ви поясните?</li>
+        <li>Чим Duo відрізняється від Pro Max і від позначення Dual SIM?</li>
+        <li>Які перевірки обов’язкові перед продажем вживаного пристрою?</li>
+        <li>Як перевірити формат SIM і чому одного слова «Global» недостатньо?</li>
+      </ol>
+      <p>Для практики використовуйте <a href="https://support.apple.com/uk-ua/guide/iphone/welcome/ios" target="_blank" rel="noopener noreferrer">посібник користувача iPhone</a>, <a href="https://www.apple.com/iphone/compare/" target="_blank" rel="noopener noreferrer">порівняння моделей Apple</a> та каталог у наступному матеріалі.</p>
     `
   }
 ];
@@ -827,19 +855,25 @@ export const iphoneCatalogBlocks: ModuleContentBlock[] = [
     type: "text",
     title: "Як користуватися каталогом моделей",
     html: `
-      <p>Нижче зібрано повний перелік моделей iPhone і технічних характеристик із вашої верстки. Для кожної картки доступні кольори, пам’ять, діагональ і ключові особливості, які варто проговорити клієнту під час консультації.</p>
-      <p>Рекомендуємо порівнювати не лише цифри, а й сценарій використання: компактність, камера, автономність, тип SIM, зарядка, матеріал корпуса та сумісність з аксесуарами.</p>
+      <p>Каталог охоплює покоління від iPhone X до iPhone 18 Pro та iPhone Duo. Спочатку визначте сценарій покупця, потім порівняйте дві-три відповідні моделі.</p>
+      <ol>
+        <li><strong>Розмір:</strong> екран, маса та зручність у руці.</li>
+        <li><strong>Камери:</strong> потрібні об’єктиви, наближення та формати відео.</li>
+        <li><strong>Щоденне користування:</strong> пам’ять, автономність, SIM і заряджання.</li>
+        <li><strong>Для вживаного:</strong> фактичний стан, акумулятор та історія ремонту.</li>
+      </ol>
+      <p><strong>Новинки 2026 року:</strong> iPhone 18 Pro, 18 Pro Max і складаний iPhone Duo. Старт продажів Duo в Apple заплановано на <strong>23 жовтня 2026 року</strong>; наявність у магазині уточнюйте окремо. В актуальному каталозі Apple станом на 18 жовтня немає базового iPhone 18 або 18 Plus.</p>
     `
   },
   {
     type: "facts",
     title: "Фокус під час консультації",
     items: [
-      "SE та e-лінійка — для клієнтів, яким важливі компактність або доступніша ціна.",
-      "Базові iPhone — збалансовані моделі для щоденних задач і входу в екосистему Apple.",
-      "Pro та Pro Max — для камер, ігор, роботи з контентом і максимальної продуктивності.",
-      "Mini — сильний аргумент для клієнтів, яким потрібен компактний смартфон без компромісів у швидкості.",
-      "Вживані моделі продаються краще, коли продавець впевнено пояснює стан пристрою, батарею та сервісну історію."
+      "iPhone 17 — універсальний варіант із ProMotion і двома задніми камерами. Для плавності 120 Гц вже не обов’язково обирати Pro.",
+      "iPhone 18 Pro / Pro Max — для контролю зйомки та телефото. Pro Max варто порівнювати з Pro за габаритами й автономністю.",
+      "iPhone Air — для мінімальної товщини й малої маси. Одразу поясніть одну задню камеру та підтримку лише eSIM.",
+      "iPhone Duo — для складаного великого екрана та багатозадачності. Покажіть різницю форматів, Touch ID і можливості камер.",
+      "iPhone 16e та 17e відрізняються, зокрема, MagSafe: у 16e його немає, у 17e є. SE й mini оцінюйте також за віком і станом акумулятора."
     ]
   },
   {
@@ -849,20 +883,27 @@ export const iphoneCatalogBlocks: ModuleContentBlock[] = [
   },
   {
     type: "facts",
-    title: "Швидкий орієнтир по підбору",
+    title: "Швидкий орієнтир для вибору",
     items: [
-      "Для бюджету та класичного керування: iPhone SE або iPhone 16e.",
-      "Для універсального вибору: базові серії iPhone 12-16 з пам’яттю 128-256 GB.",
-      "Для фото, відео та 120 Гц: серії Pro, починаючи з iPhone 13 Pro.",
-      "Для максимальної автономності та великого екрана: Pro Max або Plus.",
-      "Для клієнтів, які питають про США-версії: одразу уточнюйте готовність користуватися eSIM."
+      "Менший бюджет: порівняйте e-моделі з перевіреним вживаним iPhone. Ціну зіставляйте зі станом і потрібними функціями.",
+      "Професійне відео: перевірте конкретні режими ProRes, вимоги до пам’яті, зовнішнього накопичувача та кабелю.",
+      "Великий екран: порівняйте Pro Max, Plus відповідних поколінь і складаний Duo; дайте оцінити габарити.",
+      "Автономність: години відтворення відео Apple — лабораторний орієнтир, а не обіцянка такої самої тривалості ігор або навігації.",
+      "Остаточний вибір: підтвердьте пам’ять, тип SIM, сумісні аксесуари, стан пристрою й наявність перед оформленням."
     ]
   },
   {
     type: "text",
-    title: "Примітка щодо актуальності",
+    title: "Офіційні характеристики та актуальність",
     html: `
-      <p>Блок із серією iPhone 17 перенесено у портал у тому вигляді, як він був у вашому вихідному HTML-матеріалі. Для команди це зручно як внутрішній навчальний конспект, але перед публічним або фінальним використанням цей блок варто періодично звіряти з актуальними релізами та оновленнями Apple.</p>
+      <p>Дані про новинки та моделі 2025–2026 років актуальні на <strong>18 жовтня 2026 року</strong>. Офіційні специфікації допоможуть перевірити регіональну версію та доступність потрібних функцій.</p>
+      <ul>
+        <li><a href="https://www.apple.com/iphone-18-pro/specs/" target="_blank" rel="noopener noreferrer">iPhone 18 Pro та 18 Pro Max — характеристики</a> · <a href="https://www.apple.com/newsroom/2026/09/apple-debuts-iphone-18-pro-and-iphone-18-pro-max/" target="_blank" rel="noopener noreferrer">анонс Apple</a>.</li>
+        <li><a href="https://www.apple.com/iphone-duo/specs/" target="_blank" rel="noopener noreferrer">iPhone Duo — характеристики</a> · <a href="https://www.apple.com/iphone-duo/" target="_blank" rel="noopener noreferrer">можливості та старт продажів</a>.</li>
+        <li><a href="https://www.apple.com/iphone-air/specs/" target="_blank" rel="noopener noreferrer">iPhone Air</a>, <a href="https://www.apple.com/iphone-17/specs/" target="_blank" rel="noopener noreferrer">iPhone 17</a> та <a href="https://www.apple.com/iphone-17e/specs/" target="_blank" rel="noopener noreferrer">iPhone 17e</a>.</li>
+        <li><a href="https://support.apple.com/en-us/125090" target="_blank" rel="noopener noreferrer">iPhone 17 Pro</a> та <a href="https://support.apple.com/en-us/125091" target="_blank" rel="noopener noreferrer">iPhone 17 Pro Max</a>.</li>
+      </ul>
+      <p><strong>Перед консультацією:</strong> уточніть фактичну наявність, ціну, комплектацію й умови обслуговування в магазині. Час роботи та швидкість заряджання залежать від умов використання й аксесуарів.</p>
     `
   }
 ];

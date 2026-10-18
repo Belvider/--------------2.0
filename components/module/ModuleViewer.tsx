@@ -1,12 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowLeft, ArrowRight, CheckCircle2, Circle, PlayCircle } from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCircle2, ChevronRight } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import type { ModuleCatalogProduct, ModuleContentBlock } from "@/lib/module-content";
 import { getVideoSource } from "@/lib/video-source";
 import { getRequestError, requestJson } from "@/lib/http-client";
+import styles from "./ModuleViewer.module.css";
 
 type ModuleViewerProps = {
   moduleId: number;
@@ -19,10 +20,6 @@ type ModuleViewerPage = {
   title: string;
   blocks: ModuleContentBlock[];
   blockIndexes: number[];
-  preview: {
-    src: string;
-    alt: string;
-  } | null;
 };
 
 const ALL_FILTER_KEY = "all";
@@ -105,72 +102,6 @@ function isHeavyModuleBlock(block: ModuleContentBlock) {
   return false;
 }
 
-function getYouTubeThumbnail(url: string) {
-  const match = url.match(/(?:embed\/|youtu\.be\/|v=)([^?&/]+)/);
-  const videoId = match?.[1];
-
-  if (!videoId) {
-    return null;
-  }
-
-  return `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
-}
-
-function getBlockPreview(block: ModuleContentBlock) {
-  if (block.type === "image" && block.url) {
-    return {
-      src: block.url,
-      alt: block.caption ?? block.title
-    };
-  }
-
-  if (block.type === "productCatalog") {
-    const firstProduct = block.products[0];
-    const previewColor = firstProduct?.colors.find((color) => color.default) ?? firstProduct?.colors[0];
-
-    if (previewColor?.imageUrl) {
-      return {
-        src: previewColor.imageUrl,
-        alt: previewColor.caption || firstProduct?.title || block.title
-      };
-    }
-  }
-
-  if (block.type === "video" && block.url) {
-    const thumbnailUrl = getYouTubeThumbnail(block.url);
-
-    if (thumbnailUrl) {
-      return {
-        src: thumbnailUrl,
-        alt: block.title
-      };
-    }
-  }
-
-  return null;
-}
-
-function getPagePreview(blocks: ModuleContentBlock[]) {
-  for (const block of blocks) {
-    const preview = getBlockPreview(block);
-
-    if (preview) {
-      return preview;
-    }
-  }
-
-  return null;
-}
-
-function getBlockTypeLabel(block: ModuleContentBlock) {
-  if (block.type === "video") return "Відео";
-  if (block.type === "pdf") return "PDF";
-  if (block.type === "image") return "Зображення";
-  if (block.type === "facts") return "Факти";
-  if (block.type === "productCatalog") return "Каталог";
-  return "Текст";
-}
-
 function buildModulePages(blocks: ModuleContentBlock[]): ModuleViewerPage[] {
   const pages: ModuleViewerPage[] = [];
   let buffer: ModuleContentBlock[] = [];
@@ -184,8 +115,7 @@ function buildModulePages(blocks: ModuleContentBlock[]): ModuleViewerPage[] {
     pages.push({
       title: buffer[0]?.title ?? "Розділ модуля",
       blocks: [...buffer],
-      blockIndexes: [...bufferIndexes],
-      preview: getPagePreview(buffer)
+      blockIndexes: [...bufferIndexes]
     });
 
     buffer = [];
@@ -198,8 +128,7 @@ function buildModulePages(blocks: ModuleContentBlock[]): ModuleViewerPage[] {
       pages.push({
         title: block.title,
         blocks: [block],
-        blockIndexes: [index],
-        preview: getPagePreview([block])
+        blockIndexes: [index]
       });
       return;
     }
@@ -215,14 +144,6 @@ function buildModulePages(blocks: ModuleContentBlock[]): ModuleViewerPage[] {
   flushBuffer();
 
   return pages;
-}
-
-function getPageSecondaryLabel(page: ModuleViewerPage) {
-  if (page.blocks.length <= 1) {
-    return "Окремий розділ";
-  }
-
-  return `${page.blocks.length} об'єднані підрозділи`;
 }
 
 function getProductYear(product: ModuleCatalogProduct) {
@@ -310,25 +231,6 @@ function getColorTone(label: string) {
   return "#cbd5e1";
 }
 
-function getConsultationSummary(product: ModuleCatalogProduct) {
-  if (product.summary) {
-    return product.summary;
-  }
-
-  const family = getProductFamily(product);
-  const overviewSummary = product.overview
-    .map(parseOverviewItem)
-    .slice(0, 3)
-    .map((item) => (item.label === "Характеристика" ? item.value : `${item.label}: ${item.value}`))
-    .join(" • ");
-
-  if (overviewSummary) {
-    return `${product.title} — модель у лінійці ${family}. Ключові орієнтири: ${overviewSummary}.`;
-  }
-
-  return `${product.title} — модель у лінійці ${family} для швидкої консультації та точного підбору під запит клієнта.`;
-}
-
 function ProductCatalogCard({ product }: { product: ModuleCatalogProduct }) {
   const defaultColorIndex = Math.max(product.colors.findIndex((color) => color.default), 0);
   const [activeColorIndex, setActiveColorIndex] = useState(defaultColorIndex);
@@ -342,7 +244,7 @@ function ProductCatalogCard({ product }: { product: ModuleCatalogProduct }) {
   return (
     <article
       id={product.slug}
-      className="scroll-mt-6 overflow-hidden rounded-[20px] border border-white/10 bg-white/[0.025] transition duration-200 hover:-translate-y-[2px] hover:border-[rgba(40,178,158,0.2)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.3)]"
+      className={styles.productCard}
     >
       {/* ── Шапка: назва + badges ── */}
       <div className="border-b border-white/[0.07] px-4 py-4 sm:px-6 sm:py-5">
@@ -355,24 +257,19 @@ function ProductCatalogCard({ product }: { product: ModuleCatalogProduct }) {
               {year}
             </span>
           )}
-          {product.colors.length > 0 && (
-            <span className="rounded-full border border-[rgba(40,178,158,0.2)] bg-[rgba(40,178,158,0.08)] px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.22em] text-[color:var(--brand-strong)]">
-              {product.colors.length} кольорів
-            </span>
-          )}
         </div>
-        <h4 className="mt-3 font-[var(--font-heading)] text-2xl font-semibold leading-tight tracking-[-0.04em] text-white sm:text-[1.75rem]">
+        <h3 className="mt-3 font-[var(--font-heading)] text-2xl font-semibold leading-tight tracking-[-0.03em] text-white sm:text-[1.75rem]">
           {product.title}
-        </h4>
+        </h3>
+        {product.summary ? <p className={styles.productSummary}>{product.summary}</p> : null}
       </div>
 
       {/* ── Основний контент: ліво = фото, право = деталі ── */}
-      <div className="grid gap-0 sm:grid-cols-[280px_minmax(0,1fr)] xl:grid-cols-[320px_minmax(0,1fr)]">
+      <div className={activeColor ? styles.productLayout : undefined}>
 
         {/* ── Ліво: зображення ── */}
-        <div className="border-b border-white/[0.07] bg-white/[0.015] p-5 sm:border-b-0 sm:border-r">
-          {activeColor ? (
-            <figure>
+        {activeColor ? <div className={styles.productVisual}>
+          <figure>
               <Image
                 src={activeColor.imageUrl}
                 alt={`${product.title}, ${activeColor.caption}`}
@@ -381,12 +278,7 @@ function ProductCatalogCard({ product }: { product: ModuleCatalogProduct }) {
                 unoptimized
                 className="mx-auto h-[200px] w-full max-w-[240px] object-contain drop-shadow-[0_20px_36px_rgba(0,0,0,0.35)] sm:h-[240px]"
               />
-            </figure>
-          ) : (
-            <div className="flex h-[200px] items-center justify-center text-sm text-slate-600">
-              Зображення не додано
-            </div>
-          )}
+          </figure>
 
           {/* Колір-dots: тільки кольорові кружечки */}
           {product.colors.length > 0 && (
@@ -401,7 +293,8 @@ function ProductCatalogCard({ product }: { product: ModuleCatalogProduct }) {
                       type="button"
                       onClick={() => setActiveColorIndex(index)}
                       title={color.label}
-                      aria-label={color.label}
+                      aria-label={`${product.title}: ${color.label}`}
+                      aria-pressed={active}
                       className={`focus-ring rounded-full transition-all duration-150 ${
                         active
                           ? "scale-125 ring-2 ring-[color:var(--brand-strong)] ring-offset-1 ring-offset-[rgba(15,11,23,0.9)]"
@@ -416,13 +309,13 @@ function ProductCatalogCard({ product }: { product: ModuleCatalogProduct }) {
                 <p className="mt-3 text-center text-xs font-medium text-slate-400">
                   {activeColor.label}
                   {activeColor.caption && activeColor.caption !== activeColor.label && (
-                    <span className="ml-1.5 text-slate-600">· {activeColor.caption}</span>
+                    <span className="ml-1.5 text-slate-400">· {activeColor.caption}</span>
                   )}
                 </p>
               )}
             </div>
           )}
-        </div>
+        </div> : null}
 
         {/* ── Право: характеристики + аргументи ── */}
         <div className="space-y-0 divide-y divide-white/[0.06]">
@@ -433,11 +326,11 @@ function ProductCatalogCard({ product }: { product: ModuleCatalogProduct }) {
               <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.22em] text-slate-500">Характеристики</p>
               <dl className="space-y-2">
                 {overview.map((item) => (
-                  <div key={`${product.slug}-${item.label}`} className="flex items-baseline gap-3">
-                    <dt className="w-28 flex-none text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-500 sm:w-32">
+                  <div key={`${product.slug}-${item.label}-${item.value}`} className={styles.specification}>
+                    <dt>
                       {item.label}
                     </dt>
-                    <dd className="min-w-0 flex-1 text-sm font-medium text-white">{item.value}</dd>
+                    <dd>{item.value}</dd>
                   </div>
                 ))}
               </dl>
@@ -448,11 +341,11 @@ function ProductCatalogCard({ product }: { product: ModuleCatalogProduct }) {
           {visibleHighlights.length > 0 && (
             <div className="px-4 py-4 sm:px-5">
               <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.22em] text-slate-500">
-                Аргументи продажу
+                Що пояснити клієнту
               </p>
               <ul className="space-y-2">
                 {visibleHighlights.map((item, index) => (
-                  <li key={item} className="flex items-start gap-2.5 text-sm text-slate-600">
+                  <li key={item} className="flex items-start gap-2.5 text-sm text-slate-300">
                     <span className="mt-0.5 flex size-4 flex-none items-center justify-center rounded-full bg-[rgba(40,178,158,0.14)] text-[9px] font-bold text-[color:var(--brand-strong)]">
                       {index + 1}
                     </span>
@@ -464,11 +357,11 @@ function ProductCatalogCard({ product }: { product: ModuleCatalogProduct }) {
               {extraHighlights.length > 0 && (
                 <details className="group mt-3">
                   <summary className="cursor-pointer text-xs font-semibold text-slate-500 hover:text-slate-300 transition list-none">
-                    + ще {extraHighlights.length} характеристик
+                    Інші особливості ({extraHighlights.length})
                   </summary>
                   <ul className="mt-2 space-y-1.5">
                     {extraHighlights.map((item) => (
-                      <li key={item} className="flex items-start gap-2 text-xs text-slate-600">
+                      <li key={item} className="flex items-start gap-2 text-sm text-slate-300">
                         <span className="mt-1.5 size-1 flex-none rounded-full bg-[color:var(--brand-strong)] opacity-50" />
                         {item}
                       </li>
@@ -524,70 +417,23 @@ function ProductCatalogBlockView({ block }: { block: Extract<ModuleContentBlock,
   const years = block.products.map(getProductYear).filter((year) => year > 0);
   const oldestYear = years.length > 0 ? Math.min(...years) : null;
   const newestYear = years.length > 0 ? Math.max(...years) : null;
-  const uniqueFamilies = Array.from(new Set(block.products.map(getProductFamily)));
-  const familySummaryLabel = uniqueFamilies.length === 1 ? uniqueFamilies[0] : `${uniqueFamilies.length}`;
-  const familySummaryCaption = uniqueFamilies.length === 1 ? "Фокус каталогу" : "Сімейств у блоці";
-
   return (
     <section className="space-y-5">
-      <div className="relative overflow-hidden rounded-[30px] border border-slate-200/70 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.05),transparent_20%),linear-gradient(150deg,rgba(17,24,39,0.62),rgba(31,41,55,0.56)_56%,rgba(51,65,85,0.5))] px-4 py-5 text-white shadow-[0_16px_34px_rgba(15,23,42,0.12)] backdrop-blur-[20px] sm:rounded-[36px] sm:px-6 sm:py-7">
-        <div className="pointer-events-none absolute inset-x-10 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(138,242,223,0.84),transparent)]" />
-        <div className="pointer-events-none absolute -right-12 top-0 size-40 rounded-full bg-[radial-gradient(circle,rgba(138,242,223,0.14),transparent_72%)] blur-3xl" />
-        <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_300px] xl:items-end">
-          <div className="min-w-0">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.34em] text-slate-300/80">Модельний ряд</p>
-            <h3 className="mt-4 max-w-4xl font-[var(--font-heading)] text-[2rem] font-semibold leading-[0.98] tracking-[-0.04em] text-[#48d9c2] sm:text-[3.2rem]">
-              {block.title}
-            </h3>
-            <p className="mt-4 max-w-3xl text-sm leading-7 text-slate-300 sm:text-[1.02rem]">
-              Внутрішній конспект для команди продажів: швидко звіряйте покоління, позиціонування, ключові характеристики й
-              аргументи продажу, а також підбирайте потрібний варіант під запит клієнта без зайвого пошуку.
-            </p>
-          </div>
-
-          <div className="rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.07),rgba(255,255,255,0.03))] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-lg">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-slate-300/75">Швидкий зріз</p>
-
-            <div className="mt-4 space-y-3">
-              <div className="flex items-end justify-between gap-4 border-b border-white/10 pb-3">
-                <div>
-                  <p className="text-xs uppercase tracking-[0.2em] text-slate-300/70">Моделей</p>
-                  <p className="mt-2 text-sm text-slate-300">У каталозі</p>
-                </div>
-                <p className="font-[var(--font-heading)] text-4xl font-semibold text-white">{block.products.length}</p>
-              </div>
-
-              <div className="flex items-end justify-between gap-4 border-b border-white/10 pb-3">
-                <div>
-                  <p className="text-xs uppercase tracking-[0.2em] text-slate-300/70">Період</p>
-                  <p className="mt-2 text-sm text-slate-300">Діапазон поколінь</p>
-                </div>
-                <p className="text-right font-[var(--font-heading)] text-3xl font-semibold text-white">
-                  {oldestYear && newestYear ? `${oldestYear}-${newestYear}` : "Без року"}
-                </p>
-              </div>
-
-              <div className="flex items-end justify-between gap-4">
-                <div>
-                  <p className="text-xs uppercase tracking-[0.2em] text-slate-300/70">
-                    {uniqueFamilies.length === 1 ? "Лінійка" : "Сімейства"}
-                  </p>
-                  <p className="mt-2 text-sm text-slate-300">{familySummaryCaption}</p>
-                </div>
-                <p className="text-right font-[var(--font-heading)] text-3xl font-semibold text-white">{familySummaryLabel}</p>
-              </div>
-            </div>
-          </div>
+      <header className={styles.catalogHeader}>
+        <div>
+          <p className={styles.eyebrow}>Модельний ряд</p>
+          <h2 className={styles.blockTitle}>{block.title}</h2>
         </div>
-      </div>
+        <p className={styles.catalogMeta}>
+          Моделей: <strong>{block.products.length}</strong>
+          {oldestYear && newestYear ? <span> · {oldestYear === newestYear ? oldestYear : `${oldestYear}–${newestYear}`}</span> : null}
+        </p>
+      </header>
 
-      <div className="relative overflow-hidden rounded-[24px] border border-white/10 bg-[linear-gradient(180deg,rgba(25,19,36,0.68),rgba(16,12,24,0.72))] p-3.5 shadow-[0_10px_22px_rgba(0,0,0,0.12)] backdrop-blur-[18px] sm:rounded-[30px] sm:p-5">
-        <div className="pointer-events-none absolute inset-x-8 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(138,242,223,0.64),transparent)]" />
-        <div className="grid gap-4 2xl:grid-cols-[minmax(0,1fr)_320px] 2xl:items-start">
+      <div className={styles.catalogTools}>
+        <div className="grid gap-4 xl:grid-cols-[minmax(0,1fr)_300px] xl:items-start">
           <div className="min-w-0">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-400">
-              {catalogFilters.length > 1 ? "Навігація по каталогу" : "Огляд лінійки"}
-            </p>
+            <p className="text-sm font-semibold text-slate-200">{catalogFilters.length > 1 ? "Оберіть лінійку" : "Пошук моделі"}</p>
             {catalogFilters.length > 1 ? (
               <div className="mt-3 flex flex-wrap gap-2">
                 {catalogFilters.map((filter) => {
@@ -598,6 +444,7 @@ function ProductCatalogBlockView({ block }: { block: Extract<ModuleContentBlock,
                       key={filter.key}
                       type="button"
                       onClick={() => setActiveFilter(filter.key)}
+                      aria-pressed={active}
                       className={`focus-ring rounded-full px-4 py-2 text-sm font-medium transition ${
                         active
                           ? "border border-[rgba(40,178,158,0.28)] bg-[rgba(40,178,158,0.16)] text-white shadow-[0_12px_24px_rgba(0,0,0,0.24)]"
@@ -609,36 +456,31 @@ function ProductCatalogBlockView({ block }: { block: Extract<ModuleContentBlock,
                   );
                 })}
               </div>
-            ) : (
-              <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-300">
-                У цьому блоці зібрано одну серію пристроїв, тож можна одразу перейти до пошуку конкретної моделі або швидкого
-                переходу по картках нижче.
-              </p>
-            )}
+            ) : null}
           </div>
 
           <label className="block min-w-0">
-            <span className="sr-only">Пошук по моделях</span>
+            <span className="sr-only">Знайти модель, колір або характеристику</span>
             <input
               type="search"
               value={query}
               onChange={(event) => setQuery(event.target.value)}
-              placeholder="Пошук по моделі, кольору або характеристиці"
+              placeholder="Модель, колір або характеристика"
               className="focus-ring w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-slate-500"
             />
           </label>
         </div>
 
         <div className="mt-4 flex flex-wrap items-center justify-between gap-3 text-sm text-slate-400">
-          <p>
+          <p role="status" aria-live="polite">
             Показано <strong className="text-white">{filteredProducts.length}</strong> з{" "}
             <strong className="text-white">{block.products.length}</strong> моделей
           </p>
-          <p>Фільтри допомагають швидко перейти до потрібного сегмента лінійки</p>
+          {query || activeFilter !== ALL_FILTER_KEY ? <button type="button" onClick={() => { setQuery(""); setActiveFilter(ALL_FILTER_KEY); }} className="focus-ring rounded px-2 py-1 text-sm text-[color:var(--brand-strong)] underline underline-offset-4">Скинути фільтри</button> : null}
         </div>
 
         <details className="mt-4 rounded-[20px] border border-white/10 bg-white/5 px-4 py-3.5 sm:rounded-[24px]">
-          <summary className="cursor-pointer text-sm font-semibold text-white">Швидкий перехід по моделях</summary>
+          <summary className="focus-ring cursor-pointer rounded text-sm font-semibold text-white">Перейти до моделі</summary>
           <div className="mt-4 flex flex-wrap gap-2">
             {filteredProducts.map((product) => (
               <a
@@ -706,7 +548,7 @@ function PowerStationCalculatorCard() {
       efficiencyValue < 0.6 ||
       efficiencyValue > 0.9
     ) {
-      setResultHtml("<strong>Перевір значення.</strong> Потужність і час мають бути більші за нуль, а ККД — у межах 0.6–0.9.");
+      setResultHtml("<strong>Перевірте значення.</strong> Потужність і час мають бути більшими за нуль, а ККД — у межах 0,6–0,9.");
       return;
     }
 
@@ -738,7 +580,7 @@ function PowerStationCalculatorCard() {
           <input type="number" min="0.1" step="0.5" value={hours} onChange={(event) => setHours(event.target.value)} />
         </label>
         <label className="calc-field">
-          <span>ККД системи (0.6–0.9)</span>
+          <span>ККД системи (0,6–0,9)</span>
           <input
             type="number"
             min="0.6"
@@ -757,7 +599,7 @@ function PowerStationCalculatorCard() {
           Скинути
         </button>
       </div>
-      {resultHtml ? <div className="calc-result" dangerouslySetInnerHTML={{ __html: resultHtml }} /> : null}
+      {resultHtml ? <div className="calc-result" role="status" aria-live="polite" dangerouslySetInnerHTML={{ __html: resultHtml }} /> : null}
     </div>
   );
 }
@@ -766,10 +608,10 @@ function renderBlock(block: ModuleContentBlock) {
   if (block.type === "video" && block.url) {
     const video = getVideoSource(block.url, block.provider);
     return (
-      <div className="space-y-2">
-        <h3 className="font-[var(--font-heading)] text-[1.9rem] font-semibold tracking-[-0.03em] text-[var(--brand-strong)] sm:text-3xl">
+      <div className="space-y-5">
+        <h2 className={styles.blockTitle}>
           {block.title}
-        </h3>
+        </h2>
         <div className="overflow-hidden rounded-[24px] border border-white/10 bg-black">
           {video?.kind === "video" ? (
             <video src={video.url} controls preload="metadata" className="aspect-video w-full" aria-label={block.title}>
@@ -792,9 +634,9 @@ function renderBlock(block: ModuleContentBlock) {
   if (block.type === "pdf" && block.url) {
     return (
       <div className="space-y-4">
-        <h3 className="font-[var(--font-heading)] text-[1.9rem] font-semibold tracking-[-0.03em] text-[color:var(--brand-strong)] sm:text-3xl">
+        <h2 className={styles.blockTitle}>
           {block.title}
-        </h3>
+        </h2>
         <a
           href={block.url}
           target="_blank"
@@ -814,38 +656,31 @@ function renderBlock(block: ModuleContentBlock) {
   if (block.type === "image" && block.url) {
     return (
       <div className="space-y-3">
-        <h3 className="font-[var(--font-heading)] text-[1.9rem] font-semibold tracking-[-0.03em] text-[var(--brand-strong)] sm:text-3xl">
+        <h2 className={styles.blockTitle}>
           {block.title}
-        </h3>
+        </h2>
         <div className="relative h-56 w-full overflow-hidden rounded-[24px] border border-white/10 sm:h-72">
           <Image src={block.url} alt={block.caption ?? block.title} fill unoptimized className="object-cover" />
         </div>
-        {block.caption && <p className="text-sm text-slate-600">{block.caption}</p>}
+        {block.caption && <p className="text-sm leading-6 text-slate-400">{block.caption}</p>}
       </div>
     );
   }
 
   if (block.type === "facts") {
     return (
-      <div className="rounded-[14px] border border-white/10 bg-white/[0.025] p-4 sm:p-5">
-        <div className="flex items-center gap-2.5">
-          <span className="flex size-7 items-center justify-center rounded-[7px] border border-[rgba(40,178,158,0.22)] bg-[rgba(40,178,158,0.1)] text-[11px] font-bold text-[color:var(--brand-strong)]">
-            {(block.items?.length ?? 0)}
-          </span>
-          <h3 className="font-[var(--font-heading)] text-base font-semibold tracking-[-0.01em] text-white">
-            {block.title}
-          </h3>
-        </div>
-        <ul className="mt-4 space-y-2">
+      <div className={styles.facts}>
+        <h2 className={styles.blockTitle}>{block.title}</h2>
+        <ol className="mt-5 space-y-3">
           {block.items?.map((item, i) => (
-            <li key={item} className="flex items-start gap-3 rounded-[10px] border border-white/[0.065] bg-white/[0.015] px-3 py-2.5 text-sm text-slate-600">
-              <span className="mt-0.5 flex size-4 flex-none items-center justify-center rounded-full bg-[rgba(40,178,158,0.14)] text-[9px] font-bold text-[color:var(--brand-strong)]">
+            <li key={item} className="flex items-start gap-3 text-[0.97rem] text-slate-300">
+              <span aria-hidden="true" className="mt-0.5 flex size-6 flex-none items-center justify-center rounded-full bg-[rgba(40,178,158,0.12)] text-xs font-semibold text-[color:var(--brand-strong)]">
                 {i + 1}
               </span>
-              <span className="leading-5">{item}</span>
+              <span className="leading-7">{item}</span>
             </li>
           ))}
-        </ul>
+        </ol>
       </div>
     );
   }
@@ -860,10 +695,10 @@ function renderBlock(block: ModuleContentBlock) {
     const textSegments = hasPowerStationCalculator ? block.html.split(calculatorMarker) : [block.html];
 
     return (
-      <article className="space-y-2">
-        <h3 className="font-[var(--font-heading)] text-[1.9rem] font-semibold tracking-[-0.03em] text-[var(--brand-strong)] sm:text-3xl">
+      <article className={`space-y-5 ${styles.lessonText}`}>
+        <h2 className={styles.blockTitle}>
           {block.title}
-        </h3>
+        </h2>
         <div className="space-y-4">
           {textSegments.map((segment, index) => (
             <div key={`${block.title}-segment-${index}`} className="space-y-4">
@@ -876,7 +711,7 @@ function renderBlock(block: ModuleContentBlock) {
     );
   }
 
-  return <p className="text-sm text-slate-500">Цей тип контенту поки не підтримується.</p>;
+  return <p className="text-sm text-slate-400">Не вдалося відкрити матеріал. Повідомте адміністратора.</p>;
 }
 
 export function ModuleViewer({ moduleId, blocks, initialProgressPct, hasQuiz }: ModuleViewerProps) {
@@ -914,13 +749,6 @@ export function ModuleViewer({ moduleId, blocks, initialProgressPct, hasQuiz }: 
 
     setSeenBlockIndexes(prefill);
   }, [moduleId, blocks.length, initialProgressPct]);
-
-  // Скролимо до верху контенту при зміні сторінки
-  useEffect(() => {
-    if (activePageIndex > 0 || contentTopRef.current) {
-      contentTopRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  }, [activePageIndex]);
 
   useEffect(() => {
     const activePage = pages[activePageIndex];
@@ -962,93 +790,26 @@ export function ModuleViewer({ moduleId, blocks, initialProgressPct, hasQuiz }: 
   }, [moduleId, progressPct, initialProgressPct, router, retrySave]);
 
   const activePage = pages[activePageIndex];
+  const getBlockAnchor = (blockIndex: number) => `module-${moduleId}-topic-${blockIndex + 1}`;
+
+  function openPage(index: number) {
+    setActivePageIndex(index);
+    const behavior = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth";
+    contentTopRef.current?.scrollIntoView({ behavior, block: "start" });
+  }
 
   return (
-    <section className="grid gap-3 sm:gap-4 2xl:grid-cols-[minmax(0,1fr)_248px] 2xl:items-start">
-      <div ref={contentTopRef} className="card min-w-0 animate-fadeUp space-y-4 p-4 sm:p-6">
-        {activePage ? (
-          <div className="space-y-6">
-            {activePage.blocks.length > 1 ? (
-              <div className="rounded-[22px] border border-white/10 bg-white/5 p-3.5 shadow-[0_8px_20px_rgba(0,0,0,0.08)] sm:rounded-[24px] sm:p-4">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">У цьому розділі</p>
-                <div className="mt-3 grid grid-cols-1 gap-2.5 sm:grid-cols-2 xl:grid-cols-3">
-                  {activePage.blocks.map((block, index) => {
-                    const preview = getBlockPreview(block) ?? activePage.preview;
-
-                    return (
-                      <div
-                        key={`${block.title}-${index}`}
-                        className="flex items-center gap-3 rounded-[20px] border border-white/10 bg-white/[0.04] p-3"
-                      >
-                        {preview ? (
-                          <div className="relative h-14 w-14 flex-none overflow-hidden rounded-[16px] border border-white/10 bg-white/[0.03]">
-                            <Image src={preview.src} alt={preview.alt} fill unoptimized className="object-contain p-2" />
-                          </div>
-                        ) : (
-                          <div className="flex h-14 w-14 flex-none items-center justify-center rounded-[16px] border border-white/10 bg-white/[0.03] text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-400">
-                            {getBlockTypeLabel(block)}
-                          </div>
-                        )}
-                        <div className="min-w-0">
-                          <p className="truncate text-sm font-semibold text-slate-100">{block.title}</p>
-                          <p className="mt-1 text-xs text-slate-400">{getBlockTypeLabel(block)}</p>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            ) : null}
-
-            <div className="space-y-6 sm:space-y-8">
-              {activePage.blocks.map((block, index) => (
-                <div
-                  key={`${block.title}-${index}`}
-                  className={index > 0 ? "border-t border-slate-200 pt-6 sm:pt-8" : undefined}
-                >
-                  {renderBlock(block)}
-                </div>
-              ))}
-            </div>
-          </div>
-        ) : (
-          <p>Контент модуля відсутній</p>
-        )}
-
-        <div className="flex items-center justify-between gap-3 border-t border-white/8 pt-4">
-          <button
-            type="button"
-            onClick={() => setActivePageIndex((value) => Math.max(0, value - 1))}
-            disabled={activePageIndex === 0}
-            className="focus-ring module-btn-back"
-          >
-            <ArrowLeft className="size-4" aria-hidden="true" />
-            Назад
-          </button>
-          <span className="text-xs font-semibold tabular-nums text-slate-500">
-            {activePageIndex + 1} / {pages.length}
-          </span>
-          <button
-            type="button"
-            onClick={() => setActivePageIndex((value) => Math.min(pages.length - 1, value + 1))}
-            disabled={activePageIndex >= pages.length - 1}
-            className="focus-ring module-btn-next"
-          >
-            Далі
-            <ArrowRight className="size-4" aria-hidden="true" />
-          </button>
-        </div>
-      </div>
-
-      <aside className="card h-fit p-3.5 sm:p-4 2xl:sticky 2xl:top-4">
+    <section className={styles.viewer} aria-label="Навчальний матеріал">
+      <aside className={`card ${styles.sidebar}`}>
         <div className="flex items-center justify-between gap-3">
-          <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">Розділи модуля</p>
+          <h2 className="text-sm font-semibold text-slate-200">Зміст матеріалу</h2>
           <span className="rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-1 text-[11px] font-semibold tabular-nums text-slate-500">
             {pages.length}
           </span>
         </div>
 
-        <div className="mt-3 grid gap-1.5 sm:grid-cols-2 2xl:grid-cols-1">
+        <nav className={styles.moduleNav} aria-label="Зміст матеріалу">
+          <ol className={styles.moduleNavList}>
           {pages.map((page, index) => {
             const active = index === activePageIndex;
             const done = !active && page.blockIndexes.every((blockIndex) => seenBlockIndexes.has(blockIndex));
@@ -1059,37 +820,30 @@ export function ModuleViewer({ moduleId, blocks, initialProgressPct, hasQuiz }: 
                 : "module-nav-page-idle";
 
             return (
+              <li key={index}>
               <button
-                key={index}
                 type="button"
-                onClick={() => setActivePageIndex(index)}
+                onClick={() => openPage(index)}
+                aria-current={active ? "step" : undefined}
+                aria-controls={`module-${moduleId}-content`}
                 className={`focus-ring module-nav-page ${stateClass}`}
               >
-                <span className="flex min-w-0 items-center gap-2.5">
-                  {page.preview ? (
-                    <span className="relative h-10 w-10 flex-none overflow-hidden rounded-[12px] border border-white/10 bg-white/[0.04]">
-                      <Image src={page.preview.src} alt={page.preview.alt} fill unoptimized className="object-contain p-1.5" />
-                    </span>
-                  ) : (
-                    <span className={`flex h-10 w-10 flex-none items-center justify-center rounded-[12px] border ${active ? "border-white/15 bg-white/10" : done ? "border-[rgba(40,178,158,0.2)] bg-[rgba(40,178,158,0.08)]" : "border-white/8 bg-white/[0.03]"}`}>
-                      {done
-                        ? <CheckCircle2 className="size-4 text-[color:var(--brand-strong)]" aria-hidden="true" />
-                        : active
-                          ? <PlayCircle className="size-4 text-white/80" aria-hidden="true" />
-                          : <Circle className="size-4 text-slate-500" aria-hidden="true" />}
-                    </span>
-                  )}
-                  <span className="min-w-0">
-                    <span className="block truncate text-sm font-medium">{page.title}</span>
-                    <span className={`mt-0.5 block text-xs ${active ? "text-white/60" : done ? "text-[color:var(--brand-strong)]/70" : "text-slate-500"}`}>
-                      {getPageSecondaryLabel(page)}
-                    </span>
+                <span className="flex min-w-0 items-start gap-3">
+                  <span className={styles.pageNumber} aria-hidden="true">
+                    {done ? <CheckCircle2 className="size-4 text-[color:var(--brand-strong)]" /> : String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span className={styles.pageName}>
+                    <span className="block text-sm font-medium leading-5">{page.title}</span>
+                    {page.blocks.length > 1 ? <span className={styles.pageTopics}>{page.blocks.slice(1).map((block) => block.title).join(" · ")}</span> : null}
+                    <span className="sr-only">{active ? "Поточний розділ" : done ? "Переглянуто" : "Ще не переглянуто"}</span>
                   </span>
                 </span>
               </button>
+              </li>
             );
           })}
-        </div>
+          </ol>
+        </nav>
 
         <div className="mt-4 overflow-hidden rounded-[22px] border border-white/10 bg-white/[0.02]">
           <div className="p-3.5">
@@ -1097,7 +851,7 @@ export function ModuleViewer({ moduleId, blocks, initialProgressPct, hasQuiz }: 
               <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">Прогрес</p>
               <p className="font-[var(--font-heading)] text-lg font-bold text-ink">{progressPct}%</p>
             </div>
-            <div className="progress-track mt-2.5">
+            <div className="progress-track mt-2.5" role="progressbar" aria-label="Переглянутий матеріал" aria-valuenow={progressPct} aria-valuemin={0} aria-valuemax={100}>
               <div className="progress-fill" style={{ width: `${progressPct}%` }} />
             </div>
             <p className="mt-2.5 text-xs leading-5 text-slate-500">
@@ -1125,9 +879,75 @@ export function ModuleViewer({ moduleId, blocks, initialProgressPct, hasQuiz }: 
             <div className="flex items-center justify-center gap-2 border-t border-white/10 bg-white/[0.015] px-4 py-3 text-sm font-medium text-slate-500">
               {progressPct >= 100 ? "Очікуємо збереження прогресу…" : "Тест після 100%"}
             </div>
-          ) : <p className="border-t border-white/10 px-4 py-3 text-center text-sm text-slate-300">Для цього матеріалу окремий тест не потрібен.</p>}
+          ) : null}
         </div>
       </aside>
+
+      <div ref={contentTopRef} id={`module-${moduleId}-content`} className={`card animate-fadeUp ${styles.content}`}>
+        {activePage ? (
+          <div className="space-y-8">
+            <p className={styles.eyebrow}>Розділ {activePageIndex + 1} із {pages.length}</p>
+            {activePage.blocks.length > 1 ? (
+              <nav className={styles.topicNav} aria-label="Теми поточного розділу">
+                <p className={styles.topicNavLabel}>У цьому розділі</p>
+                <ol className={styles.topicLinks}>
+                  {activePage.blocks.map((block, index) => (
+                    <li key={`${block.title}-${index}`}>
+                      <a
+                        href={`#${getBlockAnchor(activePage.blockIndexes[index])}`}
+                        className={`focus-ring ${styles.topicLink}`}
+                      >
+                        <span className={styles.topicNumber} aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+                        <span>{block.title}</span>
+                        <ChevronRight className="ml-auto size-4 shrink-0 text-slate-500" aria-hidden="true" />
+                      </a>
+                    </li>
+                  ))}
+                </ol>
+              </nav>
+            ) : null}
+
+            <div className={styles.topics}>
+              {activePage.blocks.map((block, index) => (
+                <div
+                  key={`${block.title}-${index}`}
+                  id={getBlockAnchor(activePage.blockIndexes[index])}
+                  tabIndex={-1}
+                  className={styles.topic}
+                >
+                  {renderBlock(block)}
+                </div>
+              ))}
+            </div>
+          </div>
+        ) : (
+          <p className="py-8 text-slate-400">Навчальні матеріали ще не опубліковані.</p>
+        )}
+
+        {pages.length > 1 ? <nav aria-label="Перехід між розділами" className={styles.pageControls}>
+          <button
+            type="button"
+            onClick={() => openPage(Math.max(0, activePageIndex - 1))}
+            disabled={activePageIndex === 0}
+            className="focus-ring module-btn-back"
+          >
+            <ArrowLeft className="size-4" aria-hidden="true" />
+            Назад
+          </button>
+          <span className="text-xs font-semibold tabular-nums text-slate-500">
+            <span className="sr-only">Розділ </span>{activePageIndex + 1} / {pages.length}
+          </span>
+          <button
+            type="button"
+            onClick={() => openPage(Math.min(pages.length - 1, activePageIndex + 1))}
+            disabled={activePageIndex >= pages.length - 1}
+            className="focus-ring module-btn-next"
+          >
+            Далі
+            <ArrowRight className="size-4" aria-hidden="true" />
+          </button>
+        </nav> : null}
+      </div>
     </section>
   );
 }

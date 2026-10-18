@@ -296,7 +296,7 @@ export const digitalCamerasCatalogBlocks: ModuleContentBlock[] = [
   {
     type: "text",
     title: "Каталог Instax і Canon",
-    html: `<p>Цей модуль збирає основні моделі з вашого матеріалу в одну практичну карту. Тут є <strong>миттєві камери Fujifilm Instax</strong> для розваг, подій і швидких емоційних кадрів, а також <strong>Canon EOS 5D Mark II / Mark III</strong> для клієнтів, яким потрібен повний кадр, оптика та професійніший результат.</p>`
+    html: `<p>Порівняйте <strong>камери миттєвого друку Fujifilm Instax</strong> та <strong>дзеркальні Canon EOS 5D Mark II / Mark III</strong>. Instax обирають для друкованого знімка одразу після зйомки; Canon — для роботи зі змінною оптикою й повнокадровим сенсором.</p><p>Уточніть формат знімків, потрібні об’єктиви, витратні матеріали та бюджет на весь комплект.</p>`
   },
   {
     type: "productCatalog",

@@ -283,7 +283,7 @@ export const goProCatalogBlocks: ModuleContentBlock[] = [
   {
     type: "text",
     title: "Каталог GoPro: від Hero до MAX",
-    html: `<p>У цьому модулі зібрані основні GoPro-моделі з вашого матеріалу: <strong>HERO 13 Black</strong>, <strong>HERO 12 Black</strong>, <strong>Creator Edition</strong>, <strong>HERO 11 Black</strong>, <strong>HERO 11 Mini</strong>, <strong>HERO 10</strong>, <strong>HERO 9</strong> і <strong>GoPro MAX</strong>. Це дозволяє швидко розкласти клієнту, де йому потрібен флагман, де вистачить попереднього покоління, а де вже логічний перехід у creator або 360-сценарій.</p>`
+    html: `<p>Порівняйте покоління <strong>GoPro HERO Black</strong>, компактну <strong>HERO 11 Mini</strong>, комплект <strong>Creator Edition</strong> і камеру <strong>GoPro MAX</strong>. Спочатку визначте, що зніматиме клієнт: спорт, подорожі, відеоблог чи панорамне відео.</p><p>Потім зіставте потрібні режими, автономність, кріплення, звук і комплектність.</p>`
   },
   {
     type: "productCatalog",

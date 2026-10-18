@@ -30,6 +30,7 @@ export default async function ModulePage({ params }: PageProps) {
   const blocks = parseModuleContentBlocks(learningModule.contentBlocks);
   const progress = learningModule.progresses[0];
   const progressPct = progress?.progressPct ?? 0;
+  const hasQuiz = learningModule.questions.length > 0;
   const canTakeQuiz = progressPct >= 100 || progress?.status === "COMPLETED";
   const lastAttempt = learningModule.attempts[0] ?? null;
   const progressStatusLabel = getProgressStatusLabel(progress?.status ?? "NOT_STARTED", progressPct);
@@ -53,8 +54,8 @@ export default async function ModulePage({ params }: PageProps) {
           <div className="mt-5 grid gap-5 xl:grid-cols-[minmax(0,1fr)_340px] xl:items-start">
             <div className="max-w-4xl">
               <span className="portal-chip">Навчальний матеріал</span>
-              <h1 className="portal-page-title mt-4">{learningModule.title}</h1>
-              <p className="portal-subtitle mt-4 max-w-3xl">{learningModule.description}</p>
+              <h1 className="portal-page-title mt-3">{learningModule.title}</h1>
+              <p className="portal-subtitle mt-3 max-w-3xl">{learningModule.description}</p>
 
               <div className="mt-5 flex flex-wrap gap-3 text-sm text-slate-600">
                 <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.025] px-3 py-1.5">
@@ -63,49 +64,51 @@ export default async function ModulePage({ params }: PageProps) {
                 </span>
                 <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.025] px-3 py-1.5">
                   <Layers3 className="size-4 text-[color:var(--brand-strong)]" aria-hidden="true" />
-                  {blocks.length} блоків
+                  Тем: {blocks.length}
                 </span>
                 <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.025] px-3 py-1.5">
                   <BookOpenCheck className="size-4 text-[color:var(--brand-strong)]" aria-hidden="true" />
-                  {learningModule.questions.length} питань у тесті
+                  {hasQuiz ? `Запитань у тесті: ${learningModule.questions.length}` : "Самостійне опрацювання"}
                 </span>
               </div>
 
               <div className="mt-5 rounded-[14px] border border-white/10 bg-white/[0.025] p-4">
                 <div className="flex flex-wrap items-center justify-between gap-3 text-sm text-slate-500">
-                  <span>Готовність до фінального тесту</span>
+                  <span>Переглянуто матеріалу</span>
                   <span>{progressPct}%</span>
                 </div>
                 <div className="mt-3 h-2 overflow-hidden rounded-full bg-white/10">
                   <div
                     className="h-full rounded-full bg-[linear-gradient(90deg,rgba(40,178,158,0.95),rgba(138,242,223,0.88))]"
                     style={{ width: `${progressPct}%` }}
+                    role="progressbar"
+                    aria-label="Переглянуто матеріалу"
+                    aria-valuenow={progressPct}
+                    aria-valuemin={0}
+                    aria-valuemax={100}
                   />
                 </div>
                 <p className="mt-3 text-sm text-slate-600">
-                  {canTakeQuiz
-                    ? "Матеріал завершено, тож можна одразу переходити до перевірки знань."
-                    : "Після перегляду всіх блоків тест відкриється автоматично як фінальний етап модуля."}
+                  {progressStatusLabel}
                 </p>
               </div>
             </div>
 
             <div className="grid gap-3">
-              <div className="rounded-[14px] border border-white/10 bg-white/[0.025] p-4">
-                <p className="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-slate-500">Поточний прогрес</p>
-                <p className="mt-3 font-[var(--font-heading)] text-3xl font-semibold text-ink">{progressPct}%</p>
-                <p className="mt-2 text-sm text-slate-600">{progressStatusLabel}</p>
-              </div>
-
-              <div className="rounded-[14px] border border-white/10 bg-white/[0.025] p-4">
-                <p className="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-slate-500">Остання спроба</p>
-                <p className="mt-3 font-[var(--font-heading)] text-3xl font-semibold text-ink">
-                  {lastAttempt ? `${lastAttempt.score}%` : "—"}
-                </p>
-                <p className="mt-2 text-sm text-slate-600">
-                  {lastAttempt ? (lastAttempt.passed ? "Тест уже проходили успішно" : "Була спроба, але ще можна покращити") : "Ще не було перевірки знань"}
-                </p>
-              </div>
+              {hasQuiz && (
+                <div className="rounded-[14px] border border-white/10 bg-white/[0.025] p-5">
+                  <h2 className="font-[var(--font-heading)] text-lg font-semibold text-white">Перевірка знань</h2>
+                  <p className="mt-2 text-sm leading-6 text-slate-400">
+                    {canTakeQuiz ? "Матеріал переглянуто. Перевірте, як ви застосовуєте знання на практиці." : "Опрацюйте всі розділи матеріалу, щоб відкрити підсумковий тест."}
+                  </p>
+                  {lastAttempt && (
+                    <p className="mt-4 border-t border-white/10 pt-4 text-sm text-slate-300">
+                      Останній результат: <strong className="text-white">{lastAttempt.score}%</strong>
+                      <span className="mt-1 block text-slate-400">{lastAttempt.passed ? "Тест складено" : "Тест ще не складено"}</span>
+                    </p>
+                  )}
+                </div>
+              )}
 
               <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-1">
                 <Link
@@ -116,7 +119,7 @@ export default async function ModulePage({ params }: PageProps) {
                   До категорії
                 </Link>
 
-                {canTakeQuiz ? (
+                {hasQuiz && (canTakeQuiz ? (
                   <Link
                     href={`/module/${learningModule.id}/quiz`}
                     className="focus-ring inline-flex items-center justify-center gap-2 rounded-full bg-[linear-gradient(90deg,rgba(40,178,158,0.96),rgba(15,78,67,0.96))] px-4 py-3 text-sm font-semibold text-white shadow-[0_14px_30px_rgba(6,95,82,0.32)] transition hover:brightness-105"
@@ -128,9 +131,9 @@ export default async function ModulePage({ params }: PageProps) {
                 ) : (
                   <div className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-3 text-sm font-semibold text-slate-500">
                     <Sparkles className="size-4" aria-hidden="true" />
-                    Тест відкриється після 100%
+                    Спочатку опрацюйте матеріал
                   </div>
-                )}
+                ))}
               </div>
             </div>
           </div>

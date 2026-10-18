@@ -278,7 +278,7 @@ export const gamingConsolesCatalogBlocks: ModuleContentBlock[] = [
   {
     type: "text",
     title: "Каталог сучасних ігрових платформ",
-    html: `<p>У цьому модулі ми зібрали не лише PlayStation, а весь практичний набір платформ із вашого матеріалу: <strong>Sony PlayStation 5</strong>, <strong>PlayStation VR2</strong>, <strong>Xbox Series S / X</strong>, <strong>Steam Deck</strong>, <strong>Nintendo Switch</strong> та <strong>Asus ROG Ally / Ally X</strong>. Це дозволяє продавцю швидко підбирати не бренд, а правильний сценарій під клієнта.</p>`
+    html: `<p>Порівняйте домашні та портативні ігрові платформи: <strong>PlayStation 5</strong>, <strong>Xbox Series S / X</strong>, <strong>Steam Deck</strong>, <strong>Nintendo Switch</strong> та <strong>Asus ROG Ally / Ally X</strong>. Окремо розгляньте <strong>PlayStation VR2</strong> як гарнітуру віртуальної реальності.</p><p>Почніть із потрібних ігор, місця гри та наявних пристроїв. Потім уточніть формат придбання ігор, підписки, кількість гравців і потрібні аксесуари.</p>`
   },
   {
     type: "productCatalog",
