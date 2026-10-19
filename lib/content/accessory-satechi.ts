@@ -19,9 +19,9 @@ export const accessorySatechiBlocks: ModuleContentBlock[] = [
       <p>Один з найсвіжіших і найпотужніших адаптерів Satechi під USB4: дає 8K HDMI, швидкісні порти та зарядку ноутбука по Power Delivery. Хороший варіант для MacBook/iPad Pro, коли хочеться «одним кабелем усе під’єднав».</p>
       <h5>Характеристики</h5>
       <ul>
-        <li>Порти: 8K HDMI, USB-C (data), USB-C PD, USB-A, Ethernet, micro/SD (залежно від ревізії)</li>
+        <li>ST-U4MA3M: HDMI 8K, 30 Гц (на Mac до 4K, 60 Гц), 3× USB-A, SD/microSD, Gigabit Ethernet, аудіо 3,5 мм, USB-C PD</li>
         <li>USB4 / високошвидкісна передача даних</li>
-        <li>Power Delivery для зарядки ноутбука через USB-C</li>
+        <li>USB-C PD приймає до 100 Вт; близько 15 Вт використовує сам хаб. Цей порт не передає дані чи відео</li>
         <li>Алюмінієвий корпус, компактний формат</li>
       </ul>
       <h5>Кому підходить</h5>
@@ -52,11 +52,11 @@ export const accessorySatechiBlocks: ModuleContentBlock[] = [
       <p>Повноцінна Thunderbolt 4 док-станція для робочого місця: один кабель до ноутбука — і ти маєш багато портів + живлення + кілька дисплеїв. Це рішення «для постійного столу», коли хочеш перетворити MacBook на стаціонарну станцію.</p>
       <h5>Характеристики</h5>
       <ul>
-        <li>Thunderbolt 4 upstream: до 96 Вт Power Delivery для ноутбука</li>
-        <li>Відео: 2× HDMI 2.1 (до 8K/30 або 4K/60 залежно від режиму) + TB4 відеовихід</li>
-        <li>USB: 3× USB-A 3.2 Gen2 (10Gbps), 2× USB-A 2.0, 1× USB-C data (10Gbps)</li>
-        <li>Мережа: 2.5G Ethernet</li>
-        <li>Слоти: SD UHS-II + microSD UHS-II</li>
+        <li>Thunderbolt 4 upstream: до 96 Вт Power Delivery; для багатомоніторного режиму потрібен DisplayLink Manager</li>
+        <li>Відео: 2× HDMI 2.0 до 4K, 60 Гц через DisplayLink; відеовиходи TB4 залежать від комп’ютера</li>
+        <li>Дані: 2× USB-A 3.2 до 10 Гбіт/с; downstream Thunderbolt 4 до 40 Гбіт/с</li>
+        <li>Мережа: Gigabit Ethernet</li>
+        <li>Слот: SD 4.0 UHS-II</li>
         <li>Аудіо: 3.5 мм комбінований</li>
       </ul>
       <h5>Кому підходить</h5>
@@ -78,7 +78,7 @@ export const accessorySatechiBlocks: ModuleContentBlock[] = [
       <h5>Характеристики</h5>
       <ul>
         <li>Сумісність: Mac mini (M4 / M4 Pro)</li>
-        <li>Передні порти: USB-A, USB-C, SD/microSD (залежно від версії)</li>
+        <li>Порти: 2× USB-A 10 Гбіт/с, 1× USB-A 480 Мбіт/с, SD UHS-II; кабель USB-C служить для підключення до Mac mini</li>
         <li>Вбудований слот/відсік для SSD (NVMe) для швидкого зовнішнього сховища</li>
         <li>Алюмінієвий корпус у стилі Apple</li>
       </ul>
@@ -89,7 +89,7 @@ export const accessorySatechiBlocks: ModuleContentBlock[] = [
         <li>Для домашніх студій/офісів «Mac mini як десктоп»</li>
       </ul>
 
-      <h4>Satechi USB-C Monitor Stand Hub XL</h4>
+      <h4>Satechi Type-C Aluminum Monitor Stand Hub for iMac</h4>
       <p>Підставка під монітор із вбудованим USB-C хабом. Піднімає екран на комфортну висоту, а порти тримає буквально під рукою.</p>
       <h5>Характеристики</h5>
       <ul>
@@ -116,7 +116,7 @@ export const accessorySatechiBlocks: ModuleContentBlock[] = [
       <h5>Характеристики</h5>
       <ul>
         <li>Загальна потужність: 165 Вт</li>
-        <li>Порти: 4 (комбінація USB-C PD + USB-A залежно від версії)</li>
+        <li>Порти: 4× USB-C PD; до 100 Вт на один пристрій, 165 Вт — сумарна потужність</li>
         <li>USB-C PD для ноутбуків і планшетів</li>
         <li>GaN-технологія: менші розміри й менше нагрівання при високій потужності</li>
       </ul>
@@ -130,11 +130,11 @@ export const accessorySatechiBlocks: ModuleContentBlock[] = [
   },
   {
     type: "text",
-    title: "Qi2 / MagSafe бездротові зарядки",
+    title: "Qi2 / MagSafe бездротові зарядні пристрої",
     html: `
       <p>Нове покоління «магнітної» зарядки Satechi під стандарт Qi2: швидко, компактно і з ідеєю «один аксесуар для iPhone+Watch+AirPods».</p>
 
-      <h4>Satechi 3-in-1 Foldable Qi2 Wireless Charging Stand (2025)</h4>
+      <h4>Satechi 3-in-1 Foldable Qi2 Wireless Charging Stand</h4>
       <p>Тревел-зарядка, яка складається в плоский «брусочок». Заряджає iPhone магнітно по Qi2, Apple Watch з fast-charge та AirPods на базі. В комплекті — потужний адаптер для подорожей.</p>
       <h5>Характеристики</h5>
       <ul>

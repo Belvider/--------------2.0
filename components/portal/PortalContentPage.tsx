@@ -51,8 +51,8 @@ export function PortalContentPage({ user, content }: PortalContentPageProps) {
             <p className="portal-subtitle mt-4 max-w-3xl">{content.subtitle}</p>
           </div>
 
-          <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-1">
-            <div className="rounded-[16px] border border-white/10 bg-white/[0.025] px-4 py-4">
+          <div className="portal-summary-grid portal-section-summary grid gap-3 sm:grid-cols-2 xl:grid-cols-1">
+            <div className="portal-summary-count rounded-[16px] border border-white/10 bg-white/[0.025] px-4 py-4">
               <p className="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-slate-500">Розділів</p>
               <p className="mt-2.5 font-[var(--font-heading)] text-3xl font-semibold text-ink">{content.cards.length}</p>
               <p className="mt-1 text-xs text-slate-500">{totalItems} навчальних пунктів</p>

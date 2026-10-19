@@ -12,9 +12,7 @@ export const accessoryBelkinBlocks: ModuleContentBlock[] = [
   {
     type: "text",
     title: "Важливо для продажів (Recall)",
-    html: `
-      <p>Belkin відкликала BoostCharge Pro Fast Wireless Charger for Apple Watch + Power Bank 10K (модель <strong>BPD005</strong>) через ризик перегріву. Якщо у продажах або поверненнях зустрічається BPD005 — рекомендуємо клієнту припинити використання і звернутись у підтримку Belkin для refund.</p>
-    `
+    html: `<p>Перед продажем або прийманням перевірте точний артикул у <a href="https://www.belkin.com/support-article/?articleNum=337289" target="_blank" rel="noreferrer noopener">переліку відкликань Belkin</a>. Він охоплює, зокрема, BPD005, а також MMA008, BPB002 і PB0003. Якщо конкретний пристрій підпадає під відкликання, припиніть його використання та продаж і виконайте інструкцію виробника щодо повернення коштів та утилізації.</p>`
   },
   {
     type: "text",
@@ -27,7 +25,7 @@ export const accessoryBelkinBlocks: ModuleContentBlock[] = [
       <h5>Характеристики</h5>
       <ul>
         <li>Бездротова зарядка iPhone через MagSafe: до 15 Вт</li>
-        <li>Apple Watch: модуль швидкої зарядки (для Series 7+)</li>
+        <li>Apple Watch: швидкість залежить від артикула станції; ранній WIZ009 не слід прирівнювати до моделей зі швидким заряджанням</li>
         <li>AirPods/інший TWS: Qi-зона до 5 Вт</li>
         <li>Комплектний блок живлення, сертифікація MFi</li>
       </ul>
@@ -39,18 +37,18 @@ export const accessoryBelkinBlocks: ModuleContentBlock[] = [
       </ul>
 
       <h4>BoostCharge Pro 2-in-1 Wireless Charger Stand with MagSafe (2021–2023)</h4>
-      <p>Компактніша станція для iPhone + Apple Watch. Ідеальна, коли AirPods не треба заряджати щодня, а хочеться красиву вертикальну MagSafe-подачу і окремий watch-пад.</p>
+      <p>Компактніша станція для iPhone + AirPods. Ідеальна, коли AirPods не треба заряджати щодня, а хочеться красиву вертикальну MagSafe-подачу і окрему Qi-зону для кейса.</p>
       <h5>Характеристики</h5>
       <ul>
         <li>MagSafe для iPhone: до 15 Вт</li>
-        <li>Apple Watch: швидка зарядка (Series 7+)</li>
+        <li>AirPods: Qi-заряджання сумісного кейса до 5 Вт</li>
         <li>Регульований кут, стабільна магнітна посадка</li>
         <li>MFi/MagSafe-сертифікація</li>
       </ul>
       <h5>Кому підходить</h5>
       <ul>
-        <li>Власникам iPhone + Apple Watch</li>
-        <li>Для ліжка/офісу, де потрібна одна база на 2 пристрої</li>
+        <li>Власникам iPhone + AirPods</li>
+        <li>Для тумбочки/офісу, де потрібна одна база на 2 пристрої</li>
         <li>Тим, хто любить чистий мінімалізм без зайвих платформ</li>
       </ul>
 
@@ -65,7 +63,7 @@ export const accessoryBelkinBlocks: ModuleContentBlock[] = [
       </ul>
       <h5>Кому підходить</h5>
       <ul>
-        <li>Для власників iPhone 12–16, які часто “на ходу”</li>
+        <li>Для власників сумісних iPhone із MagSafe, які часто в дорозі</li>
         <li>Тим, хто хоче магнітне кріплення без кабелів</li>
         <li>Подорожі, місто, робота в дорозі</li>
       </ul>
@@ -77,7 +75,7 @@ export const accessoryBelkinBlocks: ModuleContentBlock[] = [
         <li>Сумарна потужність: 65 Вт</li>
         <li>USB-C PD / PPS, автоматичне розподілення між портами</li>
         <li>GaN-технологія: менший розмір і нижчий нагрів</li>
-        <li>Підтримка швидкої зарядки iPhone/iPad та MacBook Air/Pro</li>
+        <li>Заряджання через USB-PD; вимоги до швидкого заряджання перевіряйте для конкретної моделі iPhone, iPad або MacBook</li>
       </ul>
       <h5>Кому підходить</h5>
       <ul>
@@ -134,10 +132,10 @@ export const accessoryBelkinBlocks: ModuleContentBlock[] = [
       <p>Професійний TB4-док для робочого столу: один кабель — і MacBook отримує зарядку, дисплеї, мережу та повний набір портів.</p>
       <h5>Характеристики</h5>
       <ul>
-        <li>Thunderbolt 4: 1× upstream + 2× downstream</li>
+        <li>INC006: 1× upstream і 1× downstream Thunderbolt 4</li>
         <li>Підтримка дисплеїв: до dual 4K / або 8K (залежно від платформи)</li>
         <li>Зарядка ноутбука: до 90 Вт через TB4</li>
-        <li>Порти: USB-A, USB-C, SD/microSD, аудіо, Gigabit/2.5GbE (залежно від ревізії)</li>
+        <li>INC006: 2× HDMI 2.0, 4× USB-A, USB-C, SD 4.0, аудіо 3,5 мм і Gigabit Ethernet</li>
       </ul>
       <h5>Кому підходить</h5>
       <ul>
@@ -207,7 +205,7 @@ export const accessoryBelkinBlocks: ModuleContentBlock[] = [
       <h5>Особливості серії</h5>
       <ul>
         <li>Легкі, зручні, націлені на щоденне використання</li>
-        <li>Очікувано хороші мікрофони для дзвінків</li>
+        <li>Перевірте якість мікрофонів у типовому для покупця середовищі</li>
         <li>Ставка на довгу роботу і просте керування</li>
       </ul>
       <h5>Кому підходить</h5>

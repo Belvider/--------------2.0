@@ -105,7 +105,7 @@ export default async function ProfilePage() {
       {/* ════════════════════════════════════════
           СТАТИСТИКА — 4 + streak
       ════════════════════════════════════════ */}
-      <section className="grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
+      <section className="portal-summary-grid portal-profile-stats grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
         {[
           {
             icon: GraduationCap,

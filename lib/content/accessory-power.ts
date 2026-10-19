@@ -27,7 +27,7 @@ export const accessoryPowerBlocks: ModuleContentBlock[] = [
           <tbody>
             <tr>
               <td>30W USB-C</td>
-              <td>Ранні MacBook 12″ (2015–2019), частина MacBook Air попередніх поколінь.</td>
+              <td>MacBook 12″ (2015–2017), частина MacBook Air попередніх поколінь.</td>
               <td>Базова зарядка для невибагливих сценаріїв.</td>
             </tr>
             <tr>
@@ -84,7 +84,7 @@ export const accessoryPowerBlocks: ModuleContentBlock[] = [
             <tr>
               <td>MacBook Pro 16″</td>
               <td>Адаптер 140W + кабель USB-C ↔ MagSafe 3</td>
-              <td>Fast charge реалізовано саме через MagSafe 3 на 140W.</td>
+              <td>Для моделей із листопада 2023 року також підтримується адаптер 140 Вт із кабелем USB-C 240 Вт; для моделей 16″ 2021 року та початку 2023 року — MagSafe 3.</td>
             </tr>
             <tr>
               <td>MacBook Air (лінійка M3)</td>
@@ -101,7 +101,7 @@ export const accessoryPowerBlocks: ModuleContentBlock[] = [
     title: "Інші адаптери та сценарії",
     html: `
       <ul>
-        <li><strong>20W USB-C Power Adapter</strong> — базовий універсал для iPhone, iPad, AirPods; iPhone 8 і новіші заряджаються до приблизно 50% за 30–35 хвилин.</li>
+        <li><strong>20W USB-C Power Adapter</strong> — базовий універсал для iPhone, iPad, AirPods; швидкість заряджання залежить від конкретної моделі iPhone, кабелю й потужності адаптера.</li>
         <li><strong>35W Dual USB-C</strong> — зручно для подорожей та робочого столу: два порти, автоматичний розподіл потужності; є компактна й звичайна версії з однаковою електронікою.</li>
         <li><strong>USB-C PD сумісність</strong> — дотримуємося стандарту USB Power Delivery для кращої швидкості й сумісності, у тому числі з iPhone 15 / 16.</li>
       </ul>
@@ -113,7 +113,7 @@ export const accessoryPowerBlocks: ModuleContentBlock[] = [
     html: `
       <h4>USB-C ↔ MagSafe 3</h4>
       <ul>
-        <li>Потрібен для швидкого заряджання 16″ Pro з адаптером 140W; має світлодіодний індикатор (жовтий / зелений).</li>
+        <li>Для 16″ Pro 2021 року та початку 2023 року це потрібний кабель швидкого заряджання 140 Вт; новіші моделі також підтримують USB-C 240 Вт. Індикатор — жовтий/зелений.</li>
         <li>Довжина 2 м; доступні кілька кольорів під колір ноутбука.</li>
       </ul>
 
@@ -158,7 +158,7 @@ export const accessoryPowerBlocks: ModuleContentBlock[] = [
             <tr>
               <td>16″ Pro для інтенсивної роботи</td>
               <td>140W + MagSafe 3</td>
-              <td>Повне fast charge саме з 140W через MagSafe 3.</td>
+              <td>140 Вт із MagSafe 3; на моделях із листопада 2023 року також USB-C 240 Вт.</td>
             </tr>
             <tr>
               <td>Компактна подорож</td>
@@ -186,7 +186,7 @@ export const accessoryPowerBlocks: ModuleContentBlock[] = [
     html: `
       <p><strong>Чи можу я використовувати адаптер більшої потужності?</strong><br />Так. Це безпечно: ноутбук контролює споживання, тому візьме лише необхідну потужність.</p>
       <p><strong>Чим 35W Dual USB-C відрізняється від 35W Dual USB-C Compact?</strong><br />Електроніка й можливості однакові, різниця лише у форм-факторі та геометрії штекера. Обидві версії автоматично розподіляють потужність між портами.</p>
-      <p><strong>Коли потрібен саме MagSafe 3 кабель?</strong><br />Для максимально швидкого заряджання 16″ Pro з адаптером 140W; також він зручний як магнітний конектор з індикатором стану.</p>
+      <p><strong>Коли потрібен саме MagSafe 3 кабель?</strong><br />Для 16″ Pro 2021 року та початку 2023 року потрібен MagSafe 3; для новіших можливий і кабель USB-C 240 Вт. MagSafe 3 має магнітний конектор та індикатор стану.</p>
     `
   }
 ];

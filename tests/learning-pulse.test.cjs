@@ -74,7 +74,7 @@ test("learning rhythm selects today and clicking another day updates the live de
   buttons = nodes(tree, (node) => node.type === "button");
   assert.equal(buttons[0].props["aria-pressed"], true);
   assert.equal(buttons[1].props["aria-pressed"], false);
-  assert.match(selectionText(tree), /18 жовтня2 модулі опрацьовано/);
+  assert.match(selectionText(tree), /18 жовтня2 модулі у навчанні/);
   assert.doesNotMatch(selectionText(tree), /Сьогодні/);
 });
 

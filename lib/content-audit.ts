@@ -113,7 +113,7 @@ const SOURCE_ALLOWED_LABELS: Record<string, string[]> = {
   "accessory-cases.ts": ["Apple", "iPhone", "iPad", "Pitaka", "Spigen", "UAG"],
   "accessory-glass.ts": ["Apple", "iPhone"],
   "accessory-power.ts": ["Apple", "iPhone", "iPad", "MacBook", "AirPods", "Apple Watch"],
-  "accessory-satechi.ts": ["Satechi", "Apple", "iPhone", "iPad", "MacBook", "AirPods", "Apple Watch"],
+  "accessory-satechi.ts": ["Satechi", "Apple", "iPhone", "iPad", "MacBook", "iMac", "AirPods", "Apple Watch"],
   "apple-airpods.ts": ["Apple", "AirPods", "iPhone", "iPad", "MacBook", "Apple Watch"],
   "apple-imac.ts": ["Apple", "iMac", "MacBook", "iPhone", "iPad", "AirPods", "Apple Watch"],
   "apple-ipad.ts": ["Apple", "iPad", "iPhone", "MacBook", "Apple Watch", "AirPods"],

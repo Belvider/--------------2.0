@@ -281,7 +281,7 @@ function iphoneFoundationQuestions() {
       sortOrder: 2
     },
     {
-      question: "True/False: ProMotion з частотою до 120 Гц з'явився в Pro-моделях, починаючи з iPhone 13 Pro.",
+      question: "ProMotion з частотою до 120 Гц з'явився в Pro-моделях, починаючи з iPhone 13 Pro.",
       type: QuestionType.TRUE_FALSE,
       options: ["True", "False"],
       correctAnswer: { value: true },
@@ -333,14 +333,14 @@ function iphoneCatalogQuestions() {
       sortOrder: 3
     },
     {
-      question: "True/False: iPhone SE 2 gen і SE 3 gen використовують Touch ID замість Face ID.",
+      question: "iPhone SE 2-го та 3-го поколінь використовують Touch ID замість Face ID.",
       type: QuestionType.TRUE_FALSE,
       options: ["True", "False"],
       correctAnswer: { value: true },
       sortOrder: 4
     },
     {
-      question: "Який варіант найкраще описує серію Pro Max у вашому матеріалі?",
+      question: "Який варіант найкраще описує серію Pro Max в матеріалі?",
       type: QuestionType.SINGLE,
       options: [
         "Компактні моделі з мінімальним екраном",
@@ -371,16 +371,21 @@ function ipadFoundationQuestions() {
       sortOrder: 2
     },
     {
-      question: "True/False: iPad Wi‑Fi + Cellular підходить для клієнтів, яким потрібен мобільний інтернет у поїздках.",
+      question: "iPad Wi‑Fi + Cellular підходить для клієнтів, яким потрібен мобільний інтернет у поїздках.",
       type: QuestionType.TRUE_FALSE,
       options: ["True", "False"],
       correctAnswer: { value: true },
       sortOrder: 3
     },
     {
-      question: "Що з переліченого не продаємо і не приймаємо у Trade‑In згідно з матеріалом?",
+      question: "Що з переліченого перешкоджає безпечному прийманню вживаного iPad у Trade-In?",
       type: QuestionType.MULTIPLE,
-      options: ["Пристрої з MDM", "Пристрої з R-SIM", "Офіційні Cellular-версії", "iPad з Touch ID"],
+      options: [
+        "Невилучене корпоративне керування MDM",
+        "Блокування активації чужим обліковим записом",
+        "Офіційна Cellular-версія",
+        "Наявність Touch ID"
+      ],
       correctAnswer: { indices: [0, 1] },
       sortOrder: 4
     },
@@ -423,7 +428,7 @@ function ipadCatalogQuestions() {
       sortOrder: 3
     },
     {
-      question: "True/False: У каталозі iPad Pro 2024 згадано Nano-Texture Glass для конфігурацій від 1 ТБ.",
+      question: "У каталозі iPad Pro 2024 згадано Nano-Texture Glass для конфігурацій від 1 ТБ.",
       type: QuestionType.TRUE_FALSE,
       options: ["True", "False"],
       correctAnswer: { value: true },
@@ -463,7 +468,7 @@ function macbookFoundationQuestions() {
       sortOrder: 3
     },
     {
-      question: "True/False: Пристрої з MDM не продаємо і не приймаємо на Trade‑In.",
+      question: "Пристрої з MDM не продаємо і не приймаємо на Trade‑In.",
       type: QuestionType.TRUE_FALSE,
       options: ["True", "False"],
       correctAnswer: { value: true },
@@ -496,7 +501,7 @@ function macbookCatalogQuestions() {
       sortOrder: 2
     },
     {
-      question: "True/False: MacBook Pro 14″ / 16″ на Apple Silicon у каталозі мають Liquid Retina XDR і ProMotion.",
+      question: "MacBook Pro 14″ / 16″ на Apple Silicon у каталозі мають Liquid Retina XDR і ProMotion.",
       type: QuestionType.TRUE_FALSE,
       options: ["True", "False"],
       correctAnswer: { value: true },
@@ -541,7 +546,7 @@ function imacFoundationQuestions() {
       sortOrder: 2
     },
     {
-      question: "True/False: macOS у матеріалі описується як система з тісною інтеграцією з iPhone, iPad та іншими пристроями Apple.",
+      question: "macOS у матеріалі описується як система з тісною інтеграцією з iPhone, iPad та іншими пристроями Apple.",
       type: QuestionType.TRUE_FALSE,
       options: ["True", "False"],
       correctAnswer: { value: true },
@@ -551,9 +556,9 @@ function imacFoundationQuestions() {
       question: "Що з переліченого входить до регіональних відмінностей iMac у матеріалі?",
       type: QuestionType.MULTIPLE,
       options: [
-        "Тип вилки та напруга",
-        "Клавіатурні розкладки",
-        "Регіональні коди в артикулах",
+        "Фізична вилка й комплектний кабель",
+        "Клавіатурна розкладка",
+        "Заводський артикул конкретної конфігурації",
         "Колір логотипа Apple"
       ],
       correctAnswer: { indices: [0, 1, 2] },
@@ -596,7 +601,7 @@ function imacCatalogQuestions() {
       sortOrder: 2
     },
     {
-      question: "True/False: Mac Pro у матеріалі позиціонується як флагманський настільний Mac для професійних задач.",
+      question: "Mac Pro у матеріалі позиціонується як флагманський настільний Mac для професійних задач.",
       type: QuestionType.TRUE_FALSE,
       options: ["True", "False"],
       correctAnswer: { value: true },
@@ -627,7 +632,7 @@ function imacCatalogQuestions() {
 function appleWatchFoundationQuestions() {
   return [
     {
-      question: "Яка головна різниця між Apple Watch GPS і GPS + Cellular (LTE) у вашому матеріалі?",
+      question: "Яка головна різниця між Apple Watch GPS і GPS + Cellular (LTE) в матеріалі?",
       type: QuestionType.SINGLE,
       options: [
         "GPS-версія підтримує лише Android",
@@ -639,10 +644,10 @@ function appleWatchFoundationQuestions() {
       sortOrder: 1
     },
     {
-      question: "True/False: Червоне кільце на Digital Crown є ознакою LTE-версії Apple Watch.",
+      question: "Відсутність червоного кільця на Digital Crown завжди доводить, що Apple Watch не підтримує Cellular.",
       type: QuestionType.TRUE_FALSE,
       options: ["True", "False"],
-      correctAnswer: { value: true },
+      correctAnswer: { value: false },
       sortOrder: 2
     },
     {
@@ -656,10 +661,10 @@ function appleWatchFoundationQuestions() {
       question: "Оберіть коректні тези з розділу про регіональні відмінності Apple Watch.",
       type: QuestionType.MULTIPLE,
       options: [
-        "ЕКГ доступна не в усіх країнах",
-        "У США є обмеження щодо кисню в крові для частини нових моделей",
-        "LTE Apple Watch повноцінно працює в Україні без обмежень",
-        "Китайські моделі можуть мати інші локальні обмеження"
+        "ЕКГ доступна не в усіх країнах і має вікові вимоги",
+        "Для частини US-моделей аналіз кисню в крові виконується на iPhone",
+        "Будь-який тариф eSIM автоматично підтримує Apple Watch",
+        "Функції залежать від моделі, регіону та версії системи"
       ],
       correctAnswer: { indices: [0, 1, 3] },
       sortOrder: 4
@@ -708,7 +713,7 @@ function appleWatchCatalogQuestions() {
       sortOrder: 3
     },
     {
-      question: "True/False: Apple Watch Ultra та Ultra 2 у вашому каталозі мають 49 мм титановий корпус.",
+      question: "Apple Watch Ultra та Ultra 2 в каталозі мають 49 мм титановий корпус.",
       type: QuestionType.TRUE_FALSE,
       options: ["True", "False"],
       correctAnswer: { value: true },
@@ -751,7 +756,7 @@ function airpodsFoundationQuestions() {
       sortOrder: 2
     },
     {
-      question: "True/False: AirPods Pro та AirPods 4 ANC позиціонуються як моделі для клієнтів, яким важливе шумозаглушення.",
+      question: "AirPods Pro та AirPods 4 ANC позиціонуються як моделі для клієнтів, яким важливе шумозаглушення.",
       type: QuestionType.TRUE_FALSE,
       options: ["True", "False"],
       correctAnswer: { value: true },
@@ -808,7 +813,7 @@ function airpodsCatalogQuestions() {
       sortOrder: 3
     },
     {
-      question: "True/False: AirPods Max із USB-C (2024) мають роз’єм USB-C для заряджання.",
+      question: "AirPods Max із USB-C (2024) мають роз’єм USB-C для заряджання.",
       type: QuestionType.TRUE_FALSE,
       options: ["True", "False"],
       correctAnswer: { value: true },
@@ -852,7 +857,7 @@ function applePeripheralsFoundationQuestions() {
       sortOrder: 2
     },
     {
-      question: "True/False: Apple Pencil треба підбирати насамперед за сумісністю з конкретною моделлю iPad.",
+      question: "Apple Pencil треба підбирати насамперед за сумісністю з конкретною моделлю iPad.",
       type: QuestionType.TRUE_FALSE,
       options: ["True", "False"],
       correctAnswer: { value: true },
@@ -883,7 +888,7 @@ function applePeripheralsFoundationQuestions() {
 function applePeripheralsCatalogQuestions() {
   return [
     {
-      question: "Яка модель Apple TV у вашому каталозі має чип A15 Bionic?",
+      question: "Яка модель Apple TV в каталозі має чип A15 Bionic?",
       type: QuestionType.SINGLE,
       options: [
         "Apple TV HD",
@@ -908,7 +913,7 @@ function applePeripheralsCatalogQuestions() {
       sortOrder: 2
     },
     {
-      question: "True/False: HomePod mini у вашому матеріалі базується на Apple S5.",
+      question: "HomePod mini 1-го покоління (2020) у матеріалі має чип Apple S5.",
       type: QuestionType.TRUE_FALSE,
       options: ["True", "False"],
       correctAnswer: { value: true },
@@ -959,14 +964,14 @@ function dysonHairStylersFoundationQuestions() {
       sortOrder: 2
     },
     {
-      question: "True/False: Complete Long відрізняється від базового Airwrap насамперед довшими циліндричними насадками.",
+      question: "Complete Long відрізняється від базового Airwrap насамперед довшими циліндричними насадками.",
       type: QuestionType.TRUE_FALSE,
       options: ["True", "False"],
       correctAnswer: { value: true },
       sortOrder: 3
     },
     {
-      question: "Яка версія Airwrap найкраще підходить клієнту з кучерявим або кудрявим волоссям?",
+      question: "Яка версія Airwrap найкраще підходить клієнту з кучерявим або дуже кучерявим волоссям?",
       type: QuestionType.SINGLE,
       options: [
         "Volumise",
@@ -995,7 +1000,7 @@ function dysonHairStylersFoundationQuestions() {
 function dysonHairStylersCatalogQuestions() {
   return [
     {
-      question: "Яка модель у вашому каталозі Dyson додає Bluetooth і роботу з додатком MyDyson?",
+      question: "Яка модель в каталозі Dyson додає Bluetooth і роботу з застосунком MyDyson?",
       type: QuestionType.SINGLE,
       options: [
         "Dyson Airwrap Multi-styler / Complete Long",
@@ -1020,7 +1025,7 @@ function dysonHairStylersCatalogQuestions() {
       sortOrder: 2
     },
     {
-      question: "True/False: Dyson Corrale може працювати без кабелю приблизно до 30 хвилин.",
+      question: "Dyson Corrale може працювати без кабелю приблизно до 30 хвилин.",
       type: QuestionType.TRUE_FALSE,
       options: ["True", "False"],
       correctAnswer: { value: true },
@@ -1039,7 +1044,7 @@ function dysonHairStylersCatalogQuestions() {
       sortOrder: 4
     },
     {
-      question: "Яка новація найбільше відрізняє Dyson Airwrap Coanda 2x від попередніх версій у вашому матеріалі?",
+      question: "Яка новація найбільше відрізняє Dyson Airwrap Coanda 2x від попередніх версій в матеріалі?",
       type: QuestionType.SINGLE,
       options: [
         "Перехід на провід Lightning",
@@ -1081,7 +1086,7 @@ function dysonAirPurifiersFoundationQuestions() {
       sortOrder: 2
     },
     {
-      question: "True/False: Dyson AM09 продається насамперед як очищувач повітря з HEPA-фільтром.",
+      question: "Dyson AM09 продається насамперед як очищувач повітря з HEPA-фільтром.",
       type: QuestionType.TRUE_FALSE,
       options: ["True", "False"],
       correctAnswer: { value: false },
@@ -1117,7 +1122,7 @@ function dysonAirPurifiersFoundationQuestions() {
 function dysonAirPurifiersCatalogQuestions() {
   return [
     {
-      question: "Яка модель у каталозі Dyson поєднує очищення, зволоження та охолодження?",
+      question: "Яка модель у каталозі поєднує очищення, зволоження та вентилятор?",
       type: QuestionType.SINGLE,
       options: [
         "Dyson Purifier Big+Quiet BP03",
@@ -1129,7 +1134,7 @@ function dysonAirPurifiersCatalogQuestions() {
       sortOrder: 1
     },
     {
-      question: "Оберіть моделі, що входять до каталогу Dyson Air Care у вашому матеріалі.",
+      question: "Оберіть моделі, що входять до каталогу Dyson Air Care в матеріалі.",
       type: QuestionType.MULTIPLE,
       options: [
         "Dyson Purifier Big+Quiet Formaldehyde BP03",
@@ -1142,14 +1147,14 @@ function dysonAirPurifiersCatalogQuestions() {
       sortOrder: 2
     },
     {
-      question: "True/False: HP09 позиціонується як цілорічне рішення з очищенням, обігрівом та охолодженням.",
+      question: "HP09 поєднує очищення повітря, обігрів і вентилятор; режим Cool не замінює кондиціонер.",
       type: QuestionType.TRUE_FALSE,
       options: ["True", "False"],
       correctAnswer: { value: true },
       sortOrder: 3
     },
     {
-      question: "Яка модель у каталозі найкраще відповідає сценарію преміального Hot+Cool без акценту на HEPA-очищення як головну цінність?",
+      question: "Яка модель Hot+Cool не має HEPA-фільтра й функції очищення повітря?",
       type: QuestionType.SINGLE,
       options: [
         "Dyson AM09 Hot and Cool",
@@ -1161,7 +1166,7 @@ function dysonAirPurifiersCatalogQuestions() {
       sortOrder: 4
     },
     {
-      question: "Що є найсильнішим позиціонуванням BP03 у вашому каталозі?",
+      question: "Що є найсильнішим позиціонуванням BP03 в каталозі?",
       type: QuestionType.SINGLE,
       options: [
         "Пристрій для укладки волосся",
@@ -1203,7 +1208,7 @@ function dysonVacuumsFoundationQuestions() {
       sortOrder: 2
     },
     {
-      question: "True/False: WashG1 варто продавати насамперед як рішення для твердих підлог, а не як головний варіант для килимів.",
+      question: "WashG1 варто продавати насамперед як рішення для твердих підлог, а не як головний варіант для килимів.",
       type: QuestionType.TRUE_FALSE,
       options: ["True", "False"],
       correctAnswer: { value: true },
@@ -1239,7 +1244,7 @@ function dysonVacuumsFoundationQuestions() {
 function dysonVacuumsCatalogQuestions() {
   return [
     {
-      question: "Яка модель у вашому каталозі Dyson додає сценарій вологого прибирання завдяки насадці Submarine?",
+      question: "Яка модель в каталозі Dyson додає сценарій вологого прибирання завдяки насадці Submarine?",
       type: QuestionType.SINGLE,
       options: [
         "Dyson V15 Detect",
@@ -1251,7 +1256,7 @@ function dysonVacuumsCatalogQuestions() {
       sortOrder: 1
     },
     {
-      question: "Оберіть моделі, що входять до лінійки Dyson Gen5detect у вашому каталозі.",
+      question: "Оберіть моделі, що входять до лінійки Dyson Gen5detect в каталозі.",
       type: QuestionType.MULTIPLE,
       options: [
         "Gen5detect Absolute Pro",
@@ -1264,7 +1269,7 @@ function dysonVacuumsCatalogQuestions() {
       sortOrder: 2
     },
     {
-      question: "True/False: Dyson Gen5detect Absolute Pro у вашому матеріалі має гнучку щілинну насадку та адаптер для зарядки в автомобілі.",
+      question: "Комплектацію Gen5detect Absolute Pro потрібно перевіряти за конкретним артикулом, а не лише за назвою Pro.",
       type: QuestionType.TRUE_FALSE,
       options: ["True", "False"],
       correctAnswer: { value: true },
@@ -1283,7 +1288,7 @@ function dysonVacuumsCatalogQuestions() {
       sortOrder: 4
     },
     {
-      question: "Що є найсильнішим позиціонуванням Dyson V15 Detect Absolute у вашому каталозі?",
+      question: "Що є найсильнішим позиціонуванням Dyson V15 Detect Absolute в каталозі?",
       type: QuestionType.SINGLE,
       options: [
         "Базовий бюджетний Dyson без лазера",
@@ -1307,14 +1312,14 @@ function garminSmartWatchesFoundationQuestions() {
       sortOrder: 1
     },
     {
-      question: "Оберіть спеціалізовані серії Garmin, які прив'язані до конкретного виду активності або професії.",
+      question: "Оберіть спеціалізовані серії Garmin для гольфу, дайвінгу або преміальних професійних сценаріїв.",
       type: QuestionType.MULTIPLE,
       options: ["Approach", "Descent", "MARQ", "Forerunner", "Instinct"],
       correctAnswer: { indices: [0, 1, 2] },
       sortOrder: 2
     },
     {
-      question: "True/False: Instinct продається через rugged-захист, outdoor-сценарії та tactical-версії, а не як lifestyle-лінійка з акцентом на AMOLED.",
+      question: "Instinct орієнтований на активне використання й міцність; Instinct 3 має версії AMOLED і Solar.",
       type: QuestionType.TRUE_FALSE,
       options: ["True", "False"],
       correctAnswer: { value: true },
@@ -1328,7 +1333,7 @@ function garminSmartWatchesFoundationQuestions() {
       sortOrder: 4
     },
     {
-      question: "З чого найкраще починати консультацію по Garmin?",
+      question: "З чого найкраще починати консультацію щодо Garmin?",
       type: QuestionType.SINGLE,
       options: [
         "З демонстрації найдорожчої моделі",
@@ -1359,7 +1364,7 @@ function garminSmartWatchesCatalogQuestions() {
       sortOrder: 2
     },
     {
-      question: "True/False: Epix — це преміальна AMOLED-альтернатива Fenix для клієнта, якому важливий більш яскравий дисплей.",
+      question: "Epix Gen 2 / Pro Gen 2 — преміальні AMOLED-моделі попереднього покоління; AMOLED також є у новіших Fenix.",
       type: QuestionType.TRUE_FALSE,
       options: ["True", "False"],
       correctAnswer: { value: true },
@@ -1392,14 +1397,14 @@ function marshallSpeakersFoundationQuestions() {
       sortOrder: 1
     },
     {
-      question: "Оберіть портативні моделі Marshall із вашого матеріалу.",
+      question: "Оберіть портативні моделі Marshall із матеріалу.",
       type: QuestionType.MULTIPLE,
       options: ["Tufton", "Kilburn II", "Middleton", "Stockwell II", "Woburn II"],
       correctAnswer: { indices: [0, 1, 2, 3] },
       sortOrder: 2
     },
     {
-      question: "True/False: Acton у вашому матеріалі позиціонується як компактна домашня колонка, а не як портативний варіант з акумулятором.",
+      question: "Acton в матеріалі позиціонується як компактна домашня колонка, а не як портативний варіант з акумулятором.",
       type: QuestionType.TRUE_FALSE,
       options: ["True", "False"],
       correctAnswer: { value: true },
@@ -1418,7 +1423,7 @@ function marshallSpeakersFoundationQuestions() {
       sortOrder: 4
     },
     {
-      question: "Яка модель Marshall у вашому матеріалі описана як найуніверсальніша домашня колонка для вітальні?",
+      question: "Яка модель Marshall в матеріалі описана як найуніверсальніша домашня колонка для вітальні?",
       type: QuestionType.SINGLE,
       options: ["Stanmore", "Willen", "Emberton II", "Stockwell II"],
       correctAnswer: { index: 0 },
@@ -1430,7 +1435,7 @@ function marshallSpeakersFoundationQuestions() {
 function marshallSpeakersCatalogQuestions() {
   return [
     {
-      question: "Яка модель Marshall у вашому каталозі має HDMI серед основних підключень?",
+      question: "Яка модель Marshall в каталозі має HDMI серед основних підключень?",
       type: QuestionType.SINGLE,
       options: ["Woburn III", "Stanmore II", "Acton II", "Kilburn II"],
       correctAnswer: { index: 0 },
@@ -1444,21 +1449,21 @@ function marshallSpeakersCatalogQuestions() {
       sortOrder: 2
     },
     {
-      question: "True/False: Tufton у вашому матеріалі продається як найбільший і найпотужніший portable Marshall із 20+ год автономності.",
+      question: "Tufton в матеріалі продається як найбільший і найпотужніший portable Marshall із 20+ год автономності.",
       type: QuestionType.TRUE_FALSE,
       options: ["True", "False"],
       correctAnswer: { value: true },
       sortOrder: 3
     },
     {
-      question: "Яка модель Marshall є найменшою та найлегшою у вашому каталозі?",
+      question: "Яка модель Marshall є найменшою та найлегшою в каталозі?",
       type: QuestionType.SINGLE,
       options: ["Willen", "Emberton", "Stockwell II", "Middleton"],
       correctAnswer: { index: 0 },
       sortOrder: 4
     },
     {
-      question: "Що найкраще описує позиціонування Middleton у вашому матеріалі?",
+      question: "Що найкраще описує позиціонування Middleton в матеріалі?",
       type: QuestionType.SINGLE,
       options: [
         "Базова домашня колонка для маленької кімнати",
@@ -1487,7 +1492,7 @@ function jblFoundationQuestions() {
       sortOrder: 1
     },
     {
-      question: "Яка лінійка JBL у вашому матеріалі позиціонується як преміальне домашнє аудіо з ретро-дизайном?",
+      question: "Яка лінійка JBL в матеріалі позиціонується як преміальне домашнє аудіо з ретро-дизайном?",
       type: QuestionType.SINGLE,
       options: ["PartyBox", "Pulse", "Authentics", "Go"],
       correctAnswer: { index: 2 },
@@ -1501,14 +1506,14 @@ function jblFoundationQuestions() {
       sortOrder: 3
     },
     {
-      question: "True/False: PartyBoost у JBL важливо продавати як аргумент для об'єднання сумісних колонок у гучнішу систему або стереопару.",
+      question: "PartyBoost у JBL важливо продавати як аргумент для об'єднання сумісних колонок у гучнішу систему або стереопару.",
       type: QuestionType.TRUE_FALSE,
       options: ["True", "False"],
       correctAnswer: { value: true },
       sortOrder: 4
     },
     {
-      question: "Яка JBL-лінійка у вашому матеріалі відповідає за сценарій телевізора, фільмів та домашнього кінотеатру?",
+      question: "Яка JBL-лінійка в матеріалі відповідає за сценарій телевізора, фільмів та домашнього кінотеатру?",
       type: QuestionType.SINGLE,
       options: ["Charge", "Pulse", "JBL Bar", "Xtreme"],
       correctAnswer: { index: 2 },
@@ -1520,21 +1525,21 @@ function jblFoundationQuestions() {
 function jblCatalogQuestions() {
   return [
     {
-      question: "Яка модель JBL у вашому каталозі має потужність 1170 Вт, 10-дюймовий сабвуфер і знімні бездротові колонки?",
+      question: "Яка модель JBL в каталозі має потужність 1170 Вт, 10-дюймовий сабвуфер і знімні бездротові колонки?",
       type: QuestionType.SINGLE,
       options: ["JBL Bar 500", "JBL PartyBox 710", "JBL Bar 1300", "JBL Boombox 3"],
       correctAnswer: { index: 2 },
       sortOrder: 1
     },
     {
-      question: "Оберіть JBL-моделі, де у вашому матеріалі прямо присутній powerbank-сценарій або USB для заряджання інших пристроїв.",
+      question: "Оберіть JBL-моделі, де в матеріалі прямо присутній powerbank-сценарій або USB для заряджання інших пристроїв.",
       type: QuestionType.MULTIPLE,
       options: ["Charge 5", "Xtreme 3", "Boombox 2", "Pulse 5", "Go 4"],
       correctAnswer: { indices: [0, 1, 2] },
       sortOrder: 2
     },
     {
-      question: "True/False: JBL Pulse 5 у вашому каталозі поєднує світлове шоу 360° і захист IP67.",
+      question: "JBL Pulse 5 в каталозі поєднує світлове шоу 360° і захист IP67.",
       type: QuestionType.TRUE_FALSE,
       options: ["True", "False"],
       correctAnswer: { value: true },
@@ -1548,7 +1553,7 @@ function jblCatalogQuestions() {
       sortOrder: 4
     },
     {
-      question: "Яке сімейство JBL у вашому матеріалі треба продавати через мікрофонні входи, гітару, підсвітку та вечірковий сценарій?",
+      question: "Яке сімейство JBL в матеріалі треба продавати через мікрофонні входи, гітару, підсвітку та вечірковий сценарій?",
       type: QuestionType.SINGLE,
       options: ["Authentics", "JBL Bar", "PartyBox", "Flip"],
       correctAnswer: { index: 2 },
@@ -1572,7 +1577,7 @@ function gamingConsolesFoundationQuestions() {
       sortOrder: 1
     },
     {
-      question: "Яка платформа у вашому матеріалі позиціонується як гібридна консоль для дому й подорожей?",
+      question: "Яка платформа в матеріалі позиціонується як гібридна консоль для дому й подорожей?",
       type: QuestionType.SINGLE,
       options: ["PlayStation 5 Pro", "Xbox Series X", "Nintendo Switch", "PlayStation VR2"],
       correctAnswer: { index: 2 },
@@ -1586,14 +1591,14 @@ function gamingConsolesFoundationQuestions() {
       sortOrder: 3
     },
     {
-      question: "True/False: PlayStation VR2 потребує PlayStation 5 і працює через кабельне USB-C підключення.",
+      question: "На PlayStation 5 гарнітура PlayStation VR2 підключається кабелем USB-C.",
       type: QuestionType.TRUE_FALSE,
       options: ["True", "False"],
       correctAnswer: { value: true },
       sortOrder: 4
     },
     {
-      question: "Яка екосистема у вашому матеріалі найсильніше продається через ексклюзиви Sony та DualSense?",
+      question: "Яка екосистема в матеріалі найсильніше продається через ексклюзиви Sony та DualSense?",
       type: QuestionType.SINGLE,
       options: ["Steam Deck", "Nintendo Switch", "PlayStation 5", "Xbox Series S"],
       correctAnswer: { index: 2 },
@@ -1605,28 +1610,28 @@ function gamingConsolesFoundationQuestions() {
 function gamingConsolesCatalogQuestions() {
   return [
     {
-      question: "Яка модель у вашому каталозі має 2 ТБ SSD, PSSR і найсильнішу графіку в лінійці PlayStation?",
+      question: "Яка модель в каталозі має 2 ТБ SSD, PSSR і найсильнішу графіку в лінійці PlayStation?",
       type: QuestionType.SINGLE,
       options: ["PS5 Slim", "PS5 Pro", "Xbox Series X", "Steam Deck OLED"],
       correctAnswer: { index: 1 },
       sortOrder: 1
     },
     {
-      question: "Яка Xbox-консоль у вашому матеріалі має дисковод і флагманський 4K-сценарій?",
+      question: "Яка модель у дисковій версії поєднує Xbox-екосистему та UHD Blu-ray?",
       type: QuestionType.SINGLE,
       options: ["Xbox Series S", "Xbox Series X", "Nintendo Switch OLED", "PS5 Digital Edition"],
       correctAnswer: { index: 1 },
       sortOrder: 2
     },
     {
-      question: "Яка портативна платформа у вашому каталозі працює на Windows 11 Home і підтримує Game Pass, Steam та Epic Games?",
+      question: "Яка портативна платформа в каталозі працює на Windows 11 Home і підтримує Game Pass, Steam та Epic Games?",
       type: QuestionType.SINGLE,
       options: ["Steam Deck", "Nintendo Switch", "Asus ROG Ally / Ally X", "PlayStation VR2"],
       correctAnswer: { index: 2 },
       sortOrder: 3
     },
     {
-      question: "Оберіть portable або hybrid-рішення з вашого каталогу.",
+      question: "Оберіть портативні або гібридні рішення з каталогу.",
       type: QuestionType.MULTIPLE,
       options: ["Steam Deck", "Nintendo Switch family", "Asus ROG Ally / Ally X", "PlayStation 5 Slim", "Xbox Series X"],
       correctAnswer: { indices: [0, 1, 2] },
@@ -1676,7 +1681,7 @@ function digitalCamerasFoundationQuestions() {
       sortOrder: 3
     },
     {
-      question: "True/False: Картриджі Instax є витратним матеріалом, тому їх логічно пропонувати разом із камерою.",
+      question: "Картриджі Instax є витратним матеріалом, тому їх логічно пропонувати разом із камерою.",
       type: QuestionType.TRUE_FALSE,
       options: ["True", "False"],
       correctAnswer: { value: true },
@@ -1700,7 +1705,7 @@ function digitalCamerasFoundationQuestions() {
 function digitalCamerasCatalogQuestions() {
   return [
     {
-      question: "Яка Instax-модель у вашому каталозі використовує найбільший формат плівки?",
+      question: "Яка Instax-модель в каталозі використовує найбільший формат плівки?",
       type: QuestionType.SINGLE,
       options: ["Instax Mini 12", "Instax SQ1", "Instax Wide 300", "Instax Mini 40"],
       correctAnswer: { index: 2 },
@@ -1714,7 +1719,7 @@ function digitalCamerasCatalogQuestions() {
       sortOrder: 2
     },
     {
-      question: "Яка Canon-модель у вашому матеріалі має 61 точку автофокусу та два слоти карт пам'яті?",
+      question: "Яка Canon-модель в матеріалі має 61 точку автофокусу та два слоти карт пам'яті?",
       type: QuestionType.SINGLE,
       options: ["Canon EOS 5D Mark II", "Canon EOS 5D Mark III", "Instax Mini LiPlay", "Instax Wide 300"],
       correctAnswer: { index: 1 },
@@ -1728,7 +1733,7 @@ function digitalCamerasCatalogQuestions() {
       sortOrder: 4
     },
     {
-      question: "Яка модель найкраще підходить як доступніший вхід у повний кадр Canon?",
+      question: "Яка з наведених Canon EOS 5D має повнокадровий сенсор 21,1 Мп?",
       type: QuestionType.SINGLE,
       options: ["Canon EOS 5D Mark II", "Canon EOS 5D Mark III", "Instax Mini 40", "Instax Wide 300"],
       correctAnswer: { index: 0 },
@@ -1764,14 +1769,14 @@ function goProFoundationQuestions() {
       sortOrder: 2
     },
     {
-      question: "Який аксесуар з вашого матеріалу найсильніше продається під довгі записи й creator-сценарій?",
+      question: "Який аксесуар із матеріалу найсильніше продається під довгі записи й creator-сценарій?",
       type: QuestionType.SINGLE,
       options: ["Volta", "Паперовий альбом", "Штатив для DSLR", "Спалах Speedlite"],
       correctAnswer: { index: 0 },
       sortOrder: 3
     },
     {
-      question: "True/False: GoPro MAX варто рекомендувати, якщо клієнту потрібне 360° і свобода перекадровки.",
+      question: "GoPro MAX варто рекомендувати, якщо клієнту потрібне 360° і свобода перекадровки.",
       type: QuestionType.TRUE_FALSE,
       options: ["True", "False"],
       correctAnswer: { value: true },
@@ -1795,7 +1800,7 @@ function goProFoundationQuestions() {
 function goProCatalogQuestions() {
   return [
     {
-      question: "Яка модель у вашому матеріалі має 10-бітний LOG, Enduro 1900 мА·год і кращий запас по теплу?",
+      question: "Яка з наведених моделей має Enduro 1900 мА·год і короткий Burst Slo-Mo до 400 кадрів/с у 720p?",
       type: QuestionType.SINGLE,
       options: ["GoPro HERO 11 Black", "GoPro HERO 12 Black", "GoPro HERO 13 Black", "GoPro MAX"],
       correctAnswer: { index: 2 },
@@ -1809,7 +1814,7 @@ function goProCatalogQuestions() {
       sortOrder: 2
     },
     {
-      question: "Оберіть комплекти Creator Edition з вашого каталогу.",
+      question: "Оберіть комплекти Creator Edition із каталогу.",
       type: QuestionType.MULTIPLE,
       options: [
         "GoPro HERO 12 Black Creator Edition",
@@ -1821,14 +1826,14 @@ function goProCatalogQuestions() {
       sortOrder: 3
     },
     {
-      question: "Яка модель у вашому матеріалі позиціонується як найкращий варіант для максимально компактного кріплення?",
+      question: "Яка модель в матеріалі позиціонується як найкращий варіант для максимально компактного кріплення?",
       type: QuestionType.SINGLE,
       options: ["GoPro HERO 13 Black", "GoPro HERO 11 Mini", "GoPro MAX", "GoPro HERO 9 Black"],
       correctAnswer: { index: 1 },
       sortOrder: 4
     },
     {
-      question: "Яка GoPro-модель принесла фронтальний екран і модульний підхід як доступніший вхід у систему?",
+      question: "Яке з наведених поколінь GoPro вперше отримало фронтальний кольоровий екран?",
       type: QuestionType.SINGLE,
       options: ["GoPro HERO 9 Black", "GoPro HERO 10 Black", "GoPro HERO 12 Black", "GoPro HERO 13 Black"],
       correctAnswer: { index: 0 },
@@ -1855,7 +1860,7 @@ function smegCoffeeMachinesFoundationQuestions() {
       question: "Що правильніше описує різницю між ECF02 і DCF02?",
       type: QuestionType.SINGLE,
       options: [
-        "ECF02 - крапельна, DCF02 - рожкова",
+        "ECF02 - крапельна, DCF02 - ріжкова",
         "ECF02 - для еспресо і молочних напоїв, DCF02 - для кількох чашок фільтр-кави",
         "Обидві моделі працюють лише як чайники",
         "DCF02 не підтримує сценарій кількох чашок"
@@ -1876,7 +1881,7 @@ function smegCoffeeMachinesFoundationQuestions() {
       sortOrder: 3
     },
     {
-      question: "True/False: У Smeg колір і зовнішній вигляд часто є повноцінним аргументом продажу, а не другорядною деталлю.",
+      question: "У Smeg колір і зовнішній вигляд часто є повноцінним аргументом продажу, а не другорядною деталлю.",
       type: QuestionType.TRUE_FALSE,
       options: ["True", "False"],
       correctAnswer: { value: true },
@@ -1900,14 +1905,14 @@ function smegCoffeeMachinesFoundationQuestions() {
 function smegCoffeeMachinesCatalogQuestions() {
   return [
     {
-      question: "Яка модель у вашому каталозі є рожковою кавоваркою з тиском 15 бар?",
+      question: "Яка модель в каталозі є ріжковою кавоваркою з тиском 15 бар?",
       type: QuestionType.SINGLE,
       options: ["Smeg DCF02", "Smeg ECF02", "Smeg KLF03", "Smeg TSF01"],
       correctAnswer: { index: 1 },
       sortOrder: 1
     },
     {
-      question: "Яка модель підходить для приготування до 10 чашок кави завдяки резервуару 1.4 л?",
+      question: "Яка модель підходить для приготування до 10 чашок кави завдяки резервуару 1,4 л?",
       type: QuestionType.SINGLE,
       options: ["Smeg ECF02", "Smeg DCF02", "GoPro HERO 13", "Canon EOS 5D Mark III"],
       correctAnswer: { index: 1 },
@@ -1950,6 +1955,134 @@ function smegCoffeeMachinesCatalogQuestions() {
 function smegKettlesFoundationQuestions() {
   return [
     {
+      question: "Яке питання найкраще допомагає на старті консультації по тостерах Smeg?",
+      type: QuestionType.SINGLE,
+      options: [
+        "Який серіал зараз дивиться клієнт",
+        "Скільки тостів клієнт готує за один раз і чи потрібен більший формат",
+        "Чи хоче клієнт одразу пральну машину",
+        "Який у клієнта улюблений пароль"
+      ],
+      correctAnswer: { index: 1 },
+      sortOrder: 1
+    },
+    {
+      question: "Що з наведеного важливо уточнити перед рекомендацією тостера?",
+      type: QuestionType.MULTIPLE,
+      options: [
+        "Кількість скибок за один раз",
+        "Чи важливий колір під інтер'єр",
+        "Чи потрібні режими розморожування та підігріву",
+        "Який у клієнта мобільний оператор"
+      ],
+      correctAnswer: { indices: [0, 1, 2] },
+      sortOrder: 2
+    },
+    {
+      question: "Для тостерів Smeg дизайн і колір часто є повноцінним аргументом продажу.",
+      type: QuestionType.SINGLE,
+      options: [
+        "True",
+        "False"
+      ],
+      correctAnswer: { value: true },
+      sortOrder: 3
+    },
+    {
+      question: "Що спільного для обох моделей в матеріалі?",
+      type: QuestionType.TRUE_FALSE,
+      options: [
+        "6 рівнів підсмажування та режими підігріву/розморожування/bagel",
+        "Температурні режими 50-100°C",
+        "Паровий режим",
+        "Вбудований кавомолочний блок"
+      ],
+      correctAnswer: { index: 0 },
+      sortOrder: 4
+    },
+    {
+      question: "Яка логіка консультації по Smeg-тостерах є правильною?",
+      type: QuestionType.SINGLE,
+      options: [
+        "Рекомендувати будь-яку модель без уточнень",
+        "Спершу зрозуміти сценарій, потім формат тостера, після цього вже колір",
+        "Починати і завершувати лише кольором",
+        "Не згадувати про режими і догляд"
+      ],
+      correctAnswer: { index: 1 },
+      sortOrder: 5
+    }
+  ];
+}
+
+function smegKettlesCatalogQuestions() {
+  return [
+    {
+      question: "Яка модель в каталозі позиціонується як варіант на 4 скибки / 2 довгі щілини?",
+      type: QuestionType.SINGLE,
+      options: [
+        "TSF03",
+        "TSF02",
+        "KLF04",
+        "ECF02"
+      ],
+      correctAnswer: { index: 1 },
+      sortOrder: 1
+    },
+    {
+      question: "Яка модель має чотири окремі слоти та дві незалежні зони керування?",
+      type: QuestionType.SINGLE,
+      options: [
+        "TSF02",
+        "TSF03",
+        "KLF03",
+        "DCF02"
+      ],
+      correctAnswer: { index: 1 },
+      sortOrder: 2
+    },
+    {
+      question: "Оберіть функції, які згадані для лінійки тостерів Smeg.",
+      type: QuestionType.MULTIPLE,
+      options: [
+        "Підігрів",
+        "Розморожування",
+        "Bagel",
+        "HyperSmooth"
+      ],
+      correctAnswer: { indices: [0,1,2] },
+      sortOrder: 3
+    },
+    {
+      question: "Яка модель має два довгі слоти зі спільним керуванням?",
+      type: QuestionType.SINGLE,
+      options: [
+        "TSF03",
+        "TSF02",
+        "Обидві однаково",
+        "Жодна"
+      ],
+      correctAnswer: { index: 1 },
+      sortOrder: 4
+    },
+    {
+      question: "Що з наведеного є логічним апсейлом для тостерів Smeg?",
+      type: QuestionType.SINGLE,
+      options: [
+        "Інша техніка Smeg у тому ж кольорі або стилі",
+        "Media Mod",
+        "Карта microSD",
+        "VR-шолом"
+      ],
+      correctAnswer: { index: 0 },
+      sortOrder: 5
+    }
+  ];
+}
+
+function smegToastersFoundationQuestions() {
+  return [
+    {
       question: "Яке питання найважливіше на старті консультації по чайниках Smeg?",
       type: QuestionType.SINGLE,
       options: [
@@ -1975,15 +2108,23 @@ function smegKettlesFoundationQuestions() {
     },
     {
       question: "Яка модель у лінійці відповідає за сценарій з терморегуляцією?",
-      type: QuestionType.SINGLE,
-      options: ["KLF03", "KLF04", "DCF02", "ECF02"],
+      type: QuestionType.TRUE_FALSE,
+      options: [
+        "KLF03",
+        "KLF04",
+        "DCF02",
+        "ECF02"
+      ],
       correctAnswer: { index: 1 },
       sortOrder: 3
     },
     {
-      question: "True/False: У Smeg колір чайника часто є повноцінним аргументом продажу.",
-      type: QuestionType.TRUE_FALSE,
-      options: ["True", "False"],
+      question: "У Smeg колір чайника часто є повноцінним аргументом продажу.",
+      type: QuestionType.SINGLE,
+      options: [
+        "True",
+        "False"
+      ],
       correctAnswer: { value: true },
       sortOrder: 4
     },
@@ -2002,19 +2143,29 @@ function smegKettlesFoundationQuestions() {
   ];
 }
 
-function smegKettlesCatalogQuestions() {
+function smegToastersCatalogQuestions() {
   return [
     {
-      question: "Яка модель у вашому каталозі має температурні режими 50-100°C?",
+      question: "Яка модель в каталозі має температурні режими 50-100°C?",
       type: QuestionType.SINGLE,
-      options: ["KLF03", "KLF04", "DCF02", "ECF02"],
+      options: [
+        "KLF03",
+        "KLF04",
+        "DCF02",
+        "ECF02"
+      ],
       correctAnswer: { index: 1 },
       sortOrder: 1
     },
     {
       question: "Яка модель позиціонується як класичний чайник без терморегуляції?",
       type: QuestionType.SINGLE,
-      options: ["KLF04", "KLF03", "GoPro MAX", "Smeg DCF02"],
+      options: [
+        "KLF04",
+        "KLF03",
+        "GoPro MAX",
+        "Smeg DCF02"
+      ],
       correctAnswer: { index: 1 },
       sortOrder: 2
     },
@@ -2027,13 +2178,18 @@ function smegKettlesCatalogQuestions() {
         "Температурні режими 50-100°C",
         "База 360°"
       ],
-      correctAnswer: { indices: [0, 1, 3] },
+      correctAnswer: { indices: [0,1,3] },
       sortOrder: 3
     },
     {
       question: "Яка модель більше підійде клієнту, який хоче підтримання тепла після нагріву?",
       type: QuestionType.SINGLE,
-      options: ["KLF03", "KLF04", "Обидві однаково", "Жодна"],
+      options: [
+        "KLF03",
+        "KLF04",
+        "Обидві однаково",
+        "Жодна"
+      ],
       correctAnswer: { index: 1 },
       sortOrder: 4
     },
@@ -2045,116 +2201,6 @@ function smegKettlesCatalogQuestions() {
         "Media Mod",
         "Карта microSD",
         "VR-контролер"
-      ],
-      correctAnswer: { index: 0 },
-      sortOrder: 5
-    }
-  ];
-}
-
-function smegToastersFoundationQuestions() {
-  return [
-    {
-      question: "Яке питання найкраще допомагає на старті консультації по тостерах Smeg?",
-      type: QuestionType.SINGLE,
-      options: [
-        "Який серіал зараз дивиться клієнт",
-        "Скільки тостів клієнт готує за один раз і чи потрібен більший формат",
-        "Чи хоче клієнт одразу пральну машину",
-        "Який у клієнта улюблений пароль"
-      ],
-      correctAnswer: { index: 1 },
-      sortOrder: 1
-    },
-    {
-      question: "Що з наведеного важливо уточнити перед рекомендацією тостера?",
-      type: QuestionType.MULTIPLE,
-      options: [
-        "Кількість скибок за один раз",
-        "Чи важливий колір під інтер'єр",
-        "Чи потрібні режими розморожування та підігріву",
-        "Який у клієнта мобільний оператор"
-      ],
-      correctAnswer: { indices: [0, 1, 2] },
-      sortOrder: 2
-    },
-    {
-      question: "True/False: Для тостерів Smeg дизайн і колір часто є повноцінним аргументом продажу.",
-      type: QuestionType.TRUE_FALSE,
-      options: ["True", "False"],
-      correctAnswer: { value: true },
-      sortOrder: 3
-    },
-    {
-      question: "Що спільного для обох моделей у вашому матеріалі?",
-      type: QuestionType.SINGLE,
-      options: [
-        "6 рівнів підсмажування та режими підігріву/розморожування/bagel",
-        "Температурні режими 50-100°C",
-        "Паровий режим",
-        "Вбудований кавомолочний блок"
-      ],
-      correctAnswer: { index: 0 },
-      sortOrder: 4
-    },
-    {
-      question: "Яка логіка консультації по Smeg-тостерах є правильною?",
-      type: QuestionType.SINGLE,
-      options: [
-        "Рекомендувати будь-яку модель без уточнень",
-        "Спершу зрозуміти сценарій, потім формат тостера, після цього вже колір",
-        "Починати і завершувати лише кольором",
-        "Не згадувати про режими і догляд"
-      ],
-      correctAnswer: { index: 1 },
-      sortOrder: 5
-    }
-  ];
-}
-
-function smegToastersCatalogQuestions() {
-  return [
-    {
-      question: "Яка модель у вашому каталозі позиціонується як варіант на 4 скибки / 2 довгі щілини?",
-      type: QuestionType.SINGLE,
-      options: ["TSF03", "TSF02", "KLF04", "ECF02"],
-      correctAnswer: { index: 1 },
-      sortOrder: 1
-    },
-    {
-      question: "Яка модель має чотири окремі слоти та дві незалежні зони керування?",
-      type: QuestionType.SINGLE,
-      options: ["TSF02", "TSF03", "KLF03", "DCF02"],
-      correctAnswer: { index: 1 },
-      sortOrder: 2
-    },
-    {
-      question: "Оберіть функції, які згадані для лінійки тостерів Smeg.",
-      type: QuestionType.MULTIPLE,
-      options: [
-        "Підігрів",
-        "Розморожування",
-        "Bagel",
-        "HyperSmooth"
-      ],
-      correctAnswer: { indices: [0, 1, 2] },
-      sortOrder: 3
-    },
-    {
-      question: "Яка модель має два довгі слоти зі спільним керуванням?",
-      type: QuestionType.SINGLE,
-      options: ["TSF03", "TSF02", "Обидві однаково", "Жодна"],
-      correctAnswer: { index: 1 },
-      sortOrder: 4
-    },
-    {
-      question: "Що з наведеного є логічним апсейлом для тостерів Smeg?",
-      type: QuestionType.SINGLE,
-      options: [
-        "Інша техніка Smeg у тому ж кольорі або стилі",
-        "Media Mod",
-        "Карта microSD",
-        "VR-шолом"
       ],
       correctAnswer: { index: 0 },
       sortOrder: 5
@@ -2177,14 +2223,14 @@ function harmanHomeAudioFoundationQuestions() {
       sortOrder: 1
     },
     {
-      question: "Оберіть лінійки або серії Harman Kardon, які у вашому матеріалі відносяться до portable-сценарію.",
+      question: "Оберіть лінійки або серії Harman Kardon, які в матеріалі відносяться до portable-сценарію.",
       type: QuestionType.MULTIPLE,
       options: ["Onyx", "Go + Play", "Luna", "Citation 200", "Radiance 2400"],
       correctAnswer: { indices: [0, 1, 2, 3] },
       sortOrder: 2
     },
     {
-      question: "True/False: Citation у вашому матеріалі позиціонується як smart / Wi-Fi / multiroom-лінійка.",
+      question: "Citation в матеріалі позиціонується як smart / Wi-Fi / multiroom-лінійка.",
       type: QuestionType.TRUE_FALSE,
       options: ["True", "False"],
       correctAnswer: { value: true },
@@ -2215,35 +2261,46 @@ function harmanHomeAudioFoundationQuestions() {
 function harmanHomeAudioCatalogQuestions() {
   return [
     {
-      question: "Яка модель Harman Kardon у вашому матеріалі є культовою 2.1-системою з окремим сабвуфером?",
+      question: "Яка модель Harman Kardon в матеріалі є культовою 2.1-системою з окремим сабвуфером?",
       type: QuestionType.SINGLE,
       options: ["Aura Studio 4", "SoundSticks 4", "Onyx Studio 9", "Citation 100"],
       correctAnswer: { index: 1 },
       sortOrder: 1
     },
     {
-      question: "Оберіть моделі Harman Kardon, для яких у вашому матеріалі прямо згадано Wi-Fi / multiroom сценарій.",
+      question: "Оберіть моделі Harman Kardon, для яких в матеріалі прямо згадано Wi-Fi / multiroom сценарій.",
       type: QuestionType.MULTIPLE,
-      options: ["Citation One MKIII", "Citation 200", "Citation 500", "Luna", "Citation Oasis MKIII"],
+      options: [
+        "Citation One MKIII",
+        "Citation 200",
+        "Citation 500",
+        "Luna",
+        "Citation Oasis"
+      ],
       correctAnswer: { indices: [0, 1, 2, 4] },
       sortOrder: 2
     },
     {
-      question: "True/False: Go + Play 3 у вашому матеріалі описується як великий преміальний portable-бумбокс із масштабним звуком.",
+      question: "Go + Play 3 в матеріалі описується як великий преміальний portable-бумбокс із масштабним звуком.",
       type: QuestionType.TRUE_FALSE,
       options: ["True", "False"],
       correctAnswer: { value: true },
       sortOrder: 3
     },
     {
-      question: "Яка модель Harman Kardon у вашому каталозі найбільше підходить для спальні як smart-будильник із Qi-зарядкою?",
+      question: "Яка модель Harman Kardon в каталозі найбільше підходить для спальні як smart-будильник із Qi-зарядкою?",
       type: QuestionType.SINGLE,
-      options: ["Citation 300", "Citation Oasis MKIII", "Onyx Studio 8", "Radiance 2400"],
+      options: [
+        "Citation 300",
+        "Citation Oasis",
+        "Onyx Studio 8",
+        "Radiance 2400"
+      ],
       correctAnswer: { index: 1 },
       sortOrder: 4
     },
     {
-      question: "Що найкраще описує позиціонування Radiance 2400 у вашому матеріалі?",
+      question: "Що найкраще описує позиціонування Radiance 2400 в матеріалі?",
       type: QuestionType.SINGLE,
       options: [
         "Компактна travel-колонка з IP67",
@@ -2272,14 +2329,14 @@ function whoopFitnessTrackersFoundationQuestions() {
       sortOrder: 1
     },
     {
-      question: "Оберіть ключові метрики WHOOP із вашого матеріалу.",
+      question: "Оберіть ключові метрики WHOOP із матеріалу.",
       type: QuestionType.MULTIPLE,
       options: ["Recovery", "Strain", "Sleep", "Stress", "Face ID"],
       correctAnswer: { indices: [0, 1, 2, 3] },
       sortOrder: 2
     },
     {
-      question: "True/False: WHOOP має екран і продається насамперед як класичний смарт-годинник.",
+      question: "WHOOP має екран і продається насамперед як класичний смарт-годинник.",
       type: QuestionType.TRUE_FALSE,
       options: ["True", "False"],
       correctAnswer: { value: false },
@@ -2315,28 +2372,28 @@ function whoopFitnessTrackersFoundationQuestions() {
 function whoopFitnessTrackersCatalogQuestions() {
   return [
     {
-      question: "Яке покоління WHOOP у вашому матеріалі позиціонується як золота середина для більшості користувачів?",
+      question: "Яке покоління WHOOP, представлене у 2021 році, стало на 33% меншим за 3.0 та додало SpO₂ і температуру шкіри?",
       type: QuestionType.SINGLE,
       options: ["WHOOP 3.0", "WHOOP 4.0", "WHOOP 5.0", "WHOOP MG"],
       correctAnswer: { index: 1 },
       sortOrder: 1
     },
     {
-      question: "Оберіть функції, які відрізняють WHOOP MG від базового WHOOP 5.0 у вашому матеріалі.",
+      question: "Оберіть можливості MG / Life, доступність яких потрібно перевіряти за країною та офіційними умовами.",
       type: QuestionType.MULTIPLE,
       options: ["ECG", "Blood Pressure Insights", "Irregular Rhythm Notifications", "Вбудований GPS"],
       correctAnswer: { indices: [0, 1, 2] },
       sortOrder: 2
     },
     {
-      question: "True/False: WHOOP 5.0 у вашому матеріалі має 14+ днів автономності.",
+      question: "WHOOP 5.0 в матеріалі має 14+ днів автономності.",
       type: QuestionType.TRUE_FALSE,
       options: ["True", "False"],
       correctAnswer: { value: true },
       sortOrder: 3
     },
     {
-      question: "Який план WHOOP у вашому матеріалі додає Stress Monitor, Health Monitor і Healthspan / WHOOP Age?",
+      question: "Який план WHOOP в матеріалі додає Stress Monitor, Health Monitor і Healthspan / WHOOP Age?",
       type: QuestionType.SINGLE,
       options: ["WHOOP One", "WHOOP Peak", "WHOOP Life", "Усі однаково"],
       correctAnswer: { index: 1 },
@@ -2347,7 +2404,7 @@ function whoopFitnessTrackersCatalogQuestions() {
       type: QuestionType.SINGLE,
       options: [
         "Тому, хто хоче смарт-годинник з екраном і навігацією",
-        "Тому, хто хоче 24/7-аналітику відновлення, сну і режиму без екрану",
+        "Тому, хто хоче 24/7-аналітику відновлення, сну і режиму без екрана",
         "Тому, хто шукає лише бюджетний крокомір без підписки",
         "Тому, кому потрібен медичний тонометр"
       ],
@@ -2384,14 +2441,14 @@ function portablePowerStationsFoundationQuestions() {
       sortOrder: 2
     },
     {
-      question: "True/False: W і Wh означають одне й те саме.",
+      question: "W і Wh означають одне й те саме.",
       type: QuestionType.TRUE_FALSE,
       options: ["True", "False"],
       correctAnswer: { value: false },
       sortOrder: 3
     },
     {
-      question: "Яка хімія АКБ у вашому матеріалі подається як безпечніша і довговічніша, але важча?",
+      question: "Яка хімія акумулятора використовується в EcoFlow RIVER 2 та DELTA 3?",
       type: QuestionType.SINGLE,
       options: ["NMC", "LiFePO₄", "Ni-MH", "Lead Acid"],
       correctAnswer: { index: 1 },
@@ -2415,28 +2472,28 @@ function portablePowerStationsFoundationQuestions() {
 function portablePowerStationsCatalogQuestions() {
   return [
     {
-      question: "До якої лінійки у вашому матеріалі належать моделі RIVER і DELTA?",
+      question: "До якої лінійки в матеріалі належать моделі RIVER і DELTA?",
       type: QuestionType.SINGLE,
       options: ["Bluetti", "EcoFlow", "Anker SOLIX", "Jackery"],
       correctAnswer: { index: 1 },
       sortOrder: 1
     },
     {
-      question: "Яка модель Bluetti у вашому матеріалі має IP65 пиловодо-захист?",
+      question: "Яка з наведених BLUETTI має IP65, що не означає дозволу на занурення у воду?",
       type: QuestionType.SINGLE,
       options: ["EB3A", "AC2P", "AC240", "AC200L"],
       correctAnswer: { index: 2 },
       sortOrder: 2
     },
     {
-      question: "True/False: Anker SOLIX F3800 у вашому матеріалі позиціонується як резерв для дому.",
+      question: "Anker SOLIX F3800 в матеріалі позиціонується як резерв для дому.",
       type: QuestionType.TRUE_FALSE,
       options: ["True", "False"],
       correctAnswer: { value: true },
       sortOrder: 3
     },
     {
-      question: "Яка модель Jackery у вашому матеріалі масштабується до 12 кВт·год системно?",
+      question: "Яка модель Jackery в матеріалі масштабується до 12 кВт·год системно?",
       type: QuestionType.SINGLE,
       options: ["Explorer 500", "Explorer 1000 Plus", "Explorer 2000 Plus", "Жодна"],
       correctAnswer: { index: 2 },
@@ -2813,7 +2870,7 @@ async function main() {
       await prisma.module.create({
         data: {
           categoryId: category.id,
-          title: "Dyson Пилососи: моделі Gen5, V15, V11, V10, V8, WashG1 та 360",
+          title: "Dyson Пилососи: V16, V15, V12, Gen5detect та інші моделі",
           description: "Каталог Dyson Vacuum з ключовими лінійками, комплектаціями і сценаріями використання для швидкого порівняння в консультації.",
           contentBlocks: dysonVacuumsCatalogBlocks,
           durationMin: 41,
@@ -2845,7 +2902,7 @@ async function main() {
       await prisma.module.create({
         data: {
           categoryId: category.id,
-          title: "Dyson Очищувачі повітря: моделі BP03, PH04, HP09 та AM09",
+          title: "Dyson Air Care: очищувачі, зволожувачі й тепловентилятори",
           description: "Каталог Dyson Air Care з ключовими моделями очищення, зволоження та Hot+Cool сценаріїв для швидкої консультації й порівняння.",
           contentBlocks: dysonAirPurifiersCatalogBlocks,
           durationMin: 29,
@@ -2980,9 +3037,9 @@ async function main() {
       await prisma.module.create({
         data: {
           categoryId: category.id,
-          title: "Ігрові консолі: PS5, Xbox, Steam Deck, Nintendo Switch та ROG Ally",
+          title: "Ігрові платформи: PlayStation, Xbox, Switch 2 і портативні ПК",
           description:
-            "Каталог сучасних консолей і handheld-рішень з ключовими відмінностями, аксесуарами та короткою логікою рекомендації під запит клієнта.",
+            "Домашні й портативні платформи Pineapple: версії, ігри, комплектність та перевірка сумісності.",
           contentBlocks: gamingConsolesCatalogBlocks,
           durationMin: 42,
           sortOrder: 2,
@@ -2999,9 +3056,9 @@ async function main() {
       await prisma.module.create({
         data: {
           categoryId: category.id,
-          title: "Портативні камери: Instax, DSLR та логіка консультації",
+          title: "Камери: Instax, цифрові компакти та змінна оптика",
           description:
-            "Практичний модуль для консультації по миттєвих камерах Fujifilm Instax і DSLR Canon: сценарії, формати, апсейл і коротка логіка підбору.",
+            "Вибір між миттєвим друком, компактною цифровою камерою та DSLR з урахуванням потрібного комплекту.",
           contentBlocks: digitalCamerasFoundationBlocks,
           durationMin: 27,
           sortOrder: 1,
@@ -3014,9 +3071,9 @@ async function main() {
       await prisma.module.create({
         data: {
           categoryId: category.id,
-          title: "Портативні камери: Fujifilm Instax і Canon EOS 5D",
+          title: "Камери: Instax Mini 12 / 13, Canon PowerShot та EOS 5D",
           description:
-            "Каталог моделей Instax і Canon 5D з позиціонуванням, форматами плівки, відмінностями між моделями та рекомендаціями під запит клієнта.",
+            "Поточні камери Pineapple та порівняння попередніх поколінь: друк, сенсор, об’єктив, живлення та аксесуари.",
           contentBlocks: digitalCamerasCatalogBlocks,
           durationMin: 38,
           sortOrder: 2,
@@ -3205,7 +3262,7 @@ async function main() {
           categoryId: category.id,
           title: "WHOOP: метрики, підписка і логіка консультації",
           description:
-            "Повний конспект по WHOOP: концепція безекранного браслета, Recovery / Strain / Sleep, підписка, ремінці, обмеження та чесна логіка продажу.",
+            "WHOOP: сон, навантаження й відновлення; вибір плану та перевірка регіональної доступності функцій.",
           contentBlocks: whoopFitnessTrackersFoundationBlocks,
           durationMin: 25,
           sortOrder: 1,
@@ -3220,7 +3277,7 @@ async function main() {
           categoryId: category.id,
           title: "WHOOP Strap 3.0, 4.0, 5.0, MG та плани членства",
           description:
-            "Каталог поколінь WHOOP і членств: ключові відмінності між 3.0, 4.0, 5.0, MG, а також логіка вибору планів One, Peak і Life.",
+            "Поточні WHOOP 5.0 / MG і попередні покоління: автономність, комплект, членство та обмеження кардіофункцій.",
           contentBlocks: whoopFitnessTrackersCatalogBlocks,
           durationMin: 31,
           sortOrder: 2,

@@ -1,6 +1,6 @@
 import type { ComponentProps } from "react";
 import Link from "next/link";
-import { ArrowLeft, ArrowUpRight, CheckCircle2, Circle, FileText, Layers3 } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Circle, Layers3 } from "lucide-react";
 import { PortalShell } from "@/components/PortalShell";
 
 type PortalArticleSection = {
@@ -57,10 +57,6 @@ export function PortalArticlePage({
                 <Layers3 className="size-4 text-[color:var(--brand-strong)]" aria-hidden="true" />
                 <span className="font-semibold text-white">{page.sections.length}</span>
                 <span className="text-slate-500">розділів</span>
-              </div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2.5 text-sm text-slate-500">
-                <FileText className="size-4 text-[color:var(--brand-strong)]" aria-hidden="true" />
-                Повний затверджений матеріал
               </div>
             </div>
           </div>

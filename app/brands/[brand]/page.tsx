@@ -61,7 +61,7 @@ export default async function BrandPage({ params }: PageProps) {
               </div>
             </div>
 
-            <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-1">
+            <div className="portal-summary-grid grid gap-3 sm:grid-cols-2 xl:grid-cols-1">
               <div className="rounded-[14px] border border-white/10 bg-white/[0.025] px-4 py-4">
                 <p className="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-slate-500">Підкатегорій</p>
                 <p className="mt-3 font-[var(--font-heading)] text-3xl font-semibold text-ink">{brand.categories.length}</p>
@@ -70,7 +70,7 @@ export default async function BrandPage({ params }: PageProps) {
                 <p className="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-slate-500">Модулів</p>
                 <p className="mt-3 font-[var(--font-heading)] text-3xl font-semibold text-ink">{modulesCount}</p>
               </div>
-              <div className="rounded-[14px] border border-white/10 bg-white/[0.025] px-4 py-4">
+              <div className="portal-summary-note rounded-[14px] border border-white/10 bg-white/[0.025] px-4 py-4">
                 <p className="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-slate-500">Фокус</p>
                 <p className="mt-3 text-sm leading-7 text-slate-600">
                   {featuredCategory ? `${featuredCategory.name} · ${featuredCategory._count.modules} мод.` : "Каталог бренду"}

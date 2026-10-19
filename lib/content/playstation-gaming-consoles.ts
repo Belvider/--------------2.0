@@ -2,372 +2,474 @@ import type { ModuleCatalogProduct, ModuleContentBlock } from "../module-content
 
 export const playstationConsoleCatalog: ModuleCatalogProduct[] = [
   {
-    slug: "sony-playstation-5",
-    title: "Sony PlayStation 5",
-    family: "Sony home console",
-    summary:
-      "Базова домашня консоль для клієнта, якому важливі ексклюзиви Sony, швидкий SSD, DualSense і комфортний сценарій гри вдома.",
-    overview: ["Формат: домашня консоль", "SSD: 825 ГБ", "Фокус: Sony exclusives + DualSense"],
-    highlights: [
-      "Версії Blu-Ray Edition, Digital Edition і різні bundle-комплекти",
-      "SSD до 5,5 ГБ/с для швидкого завантаження й плавного геймплею",
-      "Адаптивні тригери DualSense, тактильна віддача та 3D-звук",
-      "До 120 кадрів/с на 4K-дисплеях, підтримка HDMI 2.1",
-      "Підтримує фізичні диски у версії з Blu-Ray-приводом",
-      "Хороший вибір для клієнта, який хоче сильну домашню консоль без переходу в Pro-сегмент"
-    ],
-    colors: [
+    "slug": "sony-playstation-5",
+    "title": "Sony PlayStation 5",
+    "colors": [
       {
-        label: "PS5",
-        imageUrl: "/materials/playstation-gaming-consoles/playstation-5.png",
-        caption: "Sony PlayStation 5",
-        default: true
+        "label": "PS5",
+        "caption": "Sony PlayStation 5",
+        "default": true,
+        "imageUrl": "/materials/playstation-gaming-consoles/playstation-5.png"
       }
+    ],
+    "family": "Sony home console",
+    "summary": "Базова домашня консоль для клієнта, якому важливі ексклюзиви Sony, швидкий SSD, DualSense і комфортний сценарій гри вдома.",
+    "overview": [
+      "Формат: домашня консоль",
+      "SSD початкової PS5: 825 ГБ",
+      "Бібліотека: PlayStation"
+    ],
+    "highlights": [
+      "Початкова PS5 має дискову та Digital-версію; комплектації з іграми відрізняються.",
+      "Швидкісний SSD скорочує завантаження; він не гарантує однаковий FPS у всіх іграх.",
+      "Адаптивні тригери й тактильні ефекти DualSense працюють у підтримуваних іграх.",
+      "4K та до 120 кадрів/с залежать від гри, режиму й сумісного дисплея.",
+      "Для дискових ігор потрібен дисковод; частина ігор потребує завантаження даних та оновлень.",
+      "Обсяг накопичувача й порти не слід переносити з початкової PS5 на всі Slim-ревізії."
     ]
   },
   {
-    slug: "sony-playstation-5-slim",
-    title: "Sony PlayStation 5 Slim",
-    family: "Sony home console",
-    summary:
-      "Компактніша версія PS5 для клієнта, який хоче сучасний домашній геймінг, але зручніші габарити й оновлений корпус.",
-    overview: ["Формат: компактна домашня консоль", "Пам'ять: 1 ТБ SSD", "Фокус: менші габарити"],
-    highlights: [
-      "Менша і легша за класичну PS5, зручніше вписується в інтер'єр",
-      "Від'ємний дисковод можна додати або замінити при потребі",
-      "AMD Ryzen Zen 2, 16 ГБ GDDR6 і RDNA 2 залишаються на рівні повноцінної PS5",
-      "Модернізовані USB-порти й актуальніший фізичний дизайн",
-      "Підтримує 4K-геймплей та всі ключові фішки покоління PlayStation 5",
-      "Добре заходить клієнту, якому важливі компактність, сучасний вигляд і екосистема Sony"
-    ],
-    colors: [
+    "slug": "sony-playstation-5-slim",
+    "title": "Sony PlayStation 5 Slim",
+    "colors": [
       {
-        label: "PS5 Slim",
-        imageUrl: "/materials/playstation-gaming-consoles/playstation-5-slim.png",
-        caption: "Sony PlayStation 5 Slim",
-        default: true
+        "label": "PS5 Slim",
+        "caption": "Sony PlayStation 5 Slim",
+        "default": true,
+        "imageUrl": "/materials/playstation-gaming-consoles/playstation-5-slim.png"
       }
+    ],
+    "family": "Sony home console",
+    "summary": "Компактніша версія PS5 для клієнта, який хоче сучасний домашній геймінг, але зручніші габарити й оновлений корпус.",
+    "overview": [
+      "Формат: компактна домашня консоль",
+      "SSD: 825 ГБ або 1 ТБ за версією",
+      "Продуктивність: клас PS5"
+    ],
+    "highlights": [
+      "Компактніший корпус порівняно з початковою PS5.",
+      "Дискова та Digital-версія відрізняються приводом і можуть мати різний SSD.",
+      "Сумісний знімний дисковод для Digital купують окремо; перше сполучення потребує інтернету.",
+      "Два USB-C спереду та два USB-A ззаду; це не п’ять USB-портів.",
+      "Графічні можливості класу PS5; компактність не означає продуктивність рівня Pro.",
+      "Перевіряйте артикул, комплект контролерів, гру та підставку перед продажем."
     ]
   },
   {
-    slug: "sony-playstation-5-pro",
-    title: "Sony PlayStation 5 Pro",
-    family: "Sony flagship console",
-    summary:
-      "Флагманський варіант PS5 для ентузіастів, яким потрібні максимум графіки, більший SSD і сильніший запас продуктивності.",
-    overview: ["Формат: flagship home console", "SSD: 2 ТБ", "Фокус: PSSR + максимум графіки"],
-    highlights: [
-      "AMD Ryzen Zen 2 до 3.85 ГГц і графіка до 16.7 TFLOPS",
-      "16 ГБ GDDR6 для графіки та додаткові 2 ГБ DDR5 під ОС",
-      "PSSR для AI-апскейлінгу й кращої деталізації картинки",
-      "Сильніший Ray Tracing, VRR і більш плавний геймплей у вимогливих іграх",
-      "2 ТБ SSD і Game Boost для великої бібліотеки PS4/PS5-ігор",
-      "Найкращий варіант, коли клієнт каже: 'хочу максимум із PlayStation без компромісів'"
-    ],
-    colors: [
+    "slug": "sony-playstation-5-pro",
+    "title": "Sony PlayStation 5 Pro",
+    "colors": [
       {
-        label: "PS5 Pro",
-        imageUrl: "/materials/playstation-gaming-consoles/playstation-5-pro.png",
-        caption: "Sony PlayStation 5 Pro",
-        default: true
+        "label": "PS5 Pro",
+        "caption": "Sony PlayStation 5 Pro",
+        "default": true,
+        "imageUrl": "/materials/playstation-gaming-consoles/playstation-5-pro.png"
       }
+    ],
+    "family": "Sony flagship console",
+    "summary": "Флагманський варіант PS5 для ентузіастів, яким потрібні максимум графіки, більший SSD і сильніший запас продуктивності.",
+    "overview": [
+      "Формат: flagship home console",
+      "SSD: 2 ТБ",
+      "Фокус: PSSR + максимум графіки"
+    ],
+    "highlights": [
+      "Графічна система 16,7 TFLOPS, 16 ГБ GDDR6 і додаткові 2 ГБ DDR5.",
+      "PSSR масштабує зображення у підтримуваних іграх; результат залежить від проєкту.",
+      "Покращене трасування променів і режими графіки у PS5 Pro Enhanced.",
+      "2 ТБ SSD; доступний користувачу обсяг менший за номінальний.",
+      "Дисковод і вертикальна підставка продаються окремо.",
+      "Роздільна здатність та FPS залежать від гри й дисплея; не обіцяйте 4K/120 або 8K у кожній грі."
     ]
   },
   {
-    slug: "sony-playstation-vr2",
-    title: "Sony PlayStation VR2",
-    family: "Sony VR ecosystem",
-    summary:
-      "VR-рішення для PlayStation 5, яке потрібне клієнтам, що хочуть максимальне занурення, eye-tracking і повноцінний віртуальний геймінг.",
-    overview: ["Формат: VR-гарнітура для PS5", "Екран: OLED HDR", "Фокус: immersion + eye tracking"],
-    highlights: [
-      "OLED HDR із роздільною здатністю 2000×2040 на око та кутом огляду 110°",
-      "Контролери Sense з точним відстеженням рухів і тактильними ефектами",
-      "4 камери в гарнітурі, тому зовнішня камера для трекінгу не потрібна",
-      "Eye-tracking і foveated rendering для максимальної якості там, куди дивиться користувач",
-      "Працює з PlayStation 5 через USB-C кабель довжиною близько 4,5 м",
-      "Сильний апсейл для клієнта, який уже бере PS5 і хоче вау-ефект нового досвіду"
-    ],
-    colors: [
+    "slug": "sony-playstation-vr2",
+    "title": "Sony PlayStation VR2",
+    "colors": [
       {
-        label: "PS VR2",
-        imageUrl: "/materials/playstation-gaming-consoles/playstation-vr2.png",
-        caption: "Sony PlayStation VR2",
-        default: true
+        "label": "PS VR2",
+        "caption": "Sony PlayStation VR2",
+        "default": true,
+        "imageUrl": "/materials/playstation-gaming-consoles/playstation-vr2.png"
       }
+    ],
+    "family": "Sony VR ecosystem",
+    "summary": "VR-рішення для PlayStation 5, яке потрібне клієнтам, що хочуть максимальне занурення, eye-tracking і повноцінний віртуальний геймінг.",
+    "overview": [
+      "Формат: кабельна VR-гарнітура",
+      "Для PS5; ПК — з адаптером",
+      "Дисплеї: OLED"
+    ],
+    "highlights": [
+      "2000 × 2040 пікселів на око, до 120 Гц і кут огляду приблизно 110°.",
+      "Контролери Sense та камери гарнітури відстежують рух у підготовленій ігровій зоні.",
+      "На PS5 доступні підтримувані грою HDR, відстеження погляду та тактильні ефекти.",
+      "На ПК потрібні адаптер, відповідні порти та сумісне обладнання; частина функцій PS5 не працює.",
+      "Ігри першої PS VR не стають автоматично сумісними з PS VR2.",
+      "Перед продажем перевіряйте бібліотеку VR-ігор, місце для гри та комфорт посадки."
     ]
+  },
+  {
+    "slug": "playstation-portal",
+    "title": "PlayStation Portal",
+    "family": "Пристрій потокового відтворення",
+    "summary": "Екран із контролером для Remote Play та підтримуваного хмарного стримінгу; ігри локально не встановлює.",
+    "overview": [
+      "Формат: потокова гра",
+      "Remote Play: від сумісної PS5",
+      "Мережа: стабільний Wi-Fi"
+    ],
+    "highlights": [
+      "Remote Play передає гру з налаштованої PS5 через мережу.",
+      "Хмарний стримінг потребує PS Plus Premium, дорослого акаунта та підтримуваного регіону.",
+      "України немає в офіційному списку регіонів хмарного стримінгу: не обіцяйте цю функцію без перевірки.",
+      "Це не автономна консоль для офлайн-гри; якість залежить від затримки та стабільності мережі."
+    ],
+    "colors": []
   }
 ];
 
 export const xboxConsoleCatalog: ModuleCatalogProduct[] = [
   {
-    slug: "microsoft-xbox-series-s",
-    title: "Microsoft Xbox Series S",
-    family: "Xbox console",
-    summary:
-      "Найкращий Xbox-вхід для бюджету, цифрової бібліотеки й Game Pass, коли клієнту не критичні 4K та дисковод.",
-    overview: ["Формат: цифрова домашня консоль", "Роздільна здатність: до 1440p", "Фокус: доступний Game Pass"],
-    highlights: [
-      "Компактна й легка, зручна для невеликих просторів або перевезення",
-      "До 1440p і до 120 fps у вибраних проєктах",
-      "10 ГБ RAM і SSD 512 ГБ для швидкого завантаження",
-      "Quick Resume, VRR та сучасний Xbox-сценарій без дисків",
-      "Добре поєднується з Game Pass як аргументом доступу до великої бібліотеки",
-      "Правильний вибір для клієнта, якому потрібна 'недорога консоль і багато ігор одразу'"
-    ],
-    colors: [
+    "slug": "microsoft-xbox-series-s",
+    "title": "Microsoft Xbox Series S",
+    "colors": [
       {
-        label: "Series S",
-        imageUrl: "/materials/playstation-gaming-consoles/xbox-series-s.png",
-        caption: "Microsoft Xbox Series S",
-        default: true
+        "label": "Series S",
+        "caption": "Microsoft Xbox Series S",
+        "default": true,
+        "imageUrl": "/materials/playstation-gaming-consoles/xbox-series-s.png"
       }
+    ],
+    "family": "Xbox console",
+    "summary": "Найкращий Xbox-вхід для бюджету, цифрової бібліотеки й Game Pass, коли клієнту не критичні 4K та дисковод.",
+    "overview": [
+      "Формат: цифрова домашня консоль",
+      "SSD: 512 ГБ або 1 ТБ",
+      "Ігри: цифрова бібліотека"
+    ],
+    "highlights": [
+      "Дисковода немає: ігри купують і завантажують у цифровому форматі.",
+      "Цільова роздільна здатність — до 1440p; до 120 кадрів/с у підтримуваних іграх і режимах.",
+      "10 ГБ GDDR6; накопичувач 512 ГБ або 1 ТБ залежно від версії.",
+      "Quick Resume і VRR працюють із відповідними іграми та обладнанням.",
+      "Game Pass купують окремо; перевіряйте план, каталог і регіональну доступність.",
+      "Підходить, якщо пріоритет — компактність і цифрові покупки, а не максимальна графіка Series X."
     ]
   },
   {
-    slug: "microsoft-xbox-series-x",
-    title: "Microsoft Xbox Series X",
-    family: "Xbox console",
-    summary:
-      "Флагманський Xbox для 4K-геймінгу, дискових ігор і клієнтів, які хочуть максимум від екосистеми Microsoft.",
-    overview: ["Формат: flagship home console", "SSD: 1 ТБ", "Фокус: 4K + Blu-Ray + Game Pass"],
-    highlights: [
-      "4K/60 fps і до 120 fps у частині ігор",
-      "16 ГБ RAM, 1 ТБ SSD і офіційні карти розширення пам'яті",
-      "Blu-Ray привід дає сценарій фізичних копій і меншу залежність від онлайн-магазину",
-      "Ray Tracing, Quick Resume, Dolby Vision та Dolby Atmos",
-      "Краще підходить для великого ТВ і клієнтів, які хочуть флагманську Xbox-продуктивність",
-      "Сильний аргумент, коли людина вибирає між потужністю, зручністю Game Pass і дисковою бібліотекою"
-    ],
-    colors: [
+    "slug": "microsoft-xbox-series-x",
+    "title": "Microsoft Xbox Series X",
+    "colors": [
       {
-        label: "Series X",
-        imageUrl: "/materials/playstation-gaming-consoles/xbox-series-x.png",
-        caption: "Microsoft Xbox Series X",
-        default: true
+        "label": "Series X",
+        "caption": "Microsoft Xbox Series X",
+        "default": true,
+        "imageUrl": "/materials/playstation-gaming-consoles/xbox-series-x.png"
       }
+    ],
+    "family": "Xbox console",
+    "summary": "Продуктивніша домашня Xbox для сумісних 4K-ігор. Важливо окремо вибрати дискову або Digital-версію.",
+    "overview": [
+      "Формат: домашня консоль",
+      "SSD: 1 ТБ або 2 ТБ за версією",
+      "Привід: є не в усіх версіях"
+    ],
+    "highlights": [
+      "4K і до 120 кадрів/с залежать від конкретної гри та графічного режиму.",
+      "16 ГБ GDDR6, SSD і сумісні карти розширення пам’яті.",
+      "Carbon Black та окремі Galaxy Black мають UHD Blu-ray; Robot White Digital не читає диски.",
+      "Quick Resume, трасування променів і VRR — у підтримуваних сценаріях.",
+      "Зовнішній USB-накопичувач не замінює карту розширення для запуску більшості оптимізованих Series X|S ігор.",
+      "Game Pass, мережеві функції й окремі аудіоформати перевіряйте за планом та обладнанням."
     ]
   }
 ];
 
 export const portableGamingCatalog: ModuleCatalogProduct[] = [
   {
-    slug: "steam-deck",
-    title: "Steam Deck",
-    family: "Handheld PC",
-    summary:
-      "Портативний ПК для Steam-користувачів, який добре заходить клієнтам, що хочуть свою PC-бібліотеку в handheld-форматі.",
-    overview: ["Формат: handheld PC", "ОС: SteamOS 3.0", "Фокус: Steam library on the go"],
-    highlights: [
-      "APU AMD Zen 2 + RDNA 2 і 16 ГБ LPDDR5",
-      "LCD 7″ 60 Гц або OLED 7.4″ HDR до 90 Гц",
-      "Proton запускає багато Windows-ігор без окремого портингу",
-      "Cloud Saves, Remote Play, Desktop Mode та можливість dual-boot Windows",
-      "microSD є у всіх версіях, док-станція дає сценарій настільного ПК",
-      "Ідеальний варіант для клієнта, який каже: 'я PC-геймер і хочу грати в дорозі'"
-    ],
-    colors: [
+    "slug": "steam-deck",
+    "title": "Steam Deck",
+    "colors": [
       {
-        label: "Steam Deck",
-        imageUrl: "/materials/playstation-gaming-consoles/steam-deck.png",
-        caption: "Steam Deck",
-        default: true
+        "label": "Steam Deck",
+        "caption": "Steam Deck",
+        "default": true,
+        "imageUrl": "/materials/playstation-gaming-consoles/steam-deck.png"
       }
+    ],
+    "family": "Handheld PC",
+    "summary": "Портативний ПК для Steam-користувачів, який добре заходить клієнтам, що хочуть свою PC-бібліотеку в handheld-форматі.",
+    "overview": [
+      "Формат: портативний ПК",
+      "ОС: SteamOS",
+      "Екран: LCD 7″ або OLED 7,4″"
+    ],
+    "highlights": [
+      "LCD і OLED мають різні дисплеї, батареї та бездротові модулі.",
+      "OLED: 1280 × 800, HDR, до 90 Гц, 50 Вт·год; автономність залежить від гри.",
+      "Proton запускає багато Windows-ігор; античит і окремі лаунчери можуть обмежувати сумісність.",
+      "Перевіряйте Deck Verified / Playable та актуальні вимоги потрібної гри.",
+      "microSD розширює бібліотеку; для док-станції перевіряйте потрібні порти й живлення.",
+      "Desktop Mode — середовище Linux; встановлення Windows є окремим налаштуванням із перевіркою драйверів."
     ]
   },
   {
-    slug: "nintendo-switch-family",
-    title: "Nintendo Switch Family",
-    family: "Hybrid console",
-    summary:
-      "Гібридна сімейна платформа для дому та подорожей із сильними ексклюзивами Nintendo і зручним мультиплеєром.",
-    overview: ["Формат: hybrid / portable / TV", "Екран: 5.5–7″", "Фокус: family gaming + Nintendo exclusives"],
-    highlights: [
-      "Швидке перемикання між портативним, настільним і TV-режимами",
-      "Standard, Lite та OLED покривають різні бюджети й сценарії використання",
-      "Joy-Con з HD Rumble, сенсорами руху та локальним мультиплеєром",
-      "Mario, Zelda, Animal Crossing, Pokemon і Metroid як головні ексклюзиви платформи",
-      "Nintendo Switch Online додає мультиплеєр, хмарні сейви та класичні бібліотеки NES/SNES",
-      "Найкращий варіант для сім'ї, казуального геймінгу та клієнта, який любить саме ігри Nintendo"
-    ],
-    colors: [
+    "slug": "nintendo-switch-family",
+    "title": "Nintendo Switch / Lite / OLED",
+    "colors": [
       {
-        label: "Nintendo Switch",
-        imageUrl: "/materials/playstation-gaming-consoles/nintendo-switch.png",
-        caption: "Nintendo Switch",
-        default: true
+        "label": "Nintendo Switch",
+        "caption": "Nintendo Switch",
+        "default": true,
+        "imageUrl": "/materials/playstation-gaming-consoles/nintendo-switch.png"
       }
+    ],
+    "family": "Hybrid console",
+    "summary": "Гібридна сімейна платформа для дому та подорожей із сильними ексклюзивами Nintendo і зручним мультиплеєром.",
+    "overview": [
+      "Формат: залежить від моделі",
+      "Екран: 5,5–7″",
+      "Пам’ять: 32 ГБ або 64 ГБ"
+    ],
+    "highlights": [
+      "Switch і OLED підтримують телевізійний, настільний і портативний режими.",
+      "Switch Lite — лише портативний формат без виведення на телевізор і без знімних Joy-Con.",
+      "Switch / Lite мають 32 ГБ, OLED — 64 ГБ; доступне розширення сумісною microSD.",
+      "OLED відрізняється 7-дюймовим OLED-екраном, підставкою й LAN-портом дока.",
+      "Сумісність гри та кількість гравців перевіряйте окремо; не кожна гра підходить для Lite без додаткових контролерів.",
+      "Nintendo Switch Online й підтримка хмарних збережень залежать від гри та плану."
     ]
   },
   {
-    slug: "asus-rog-ally-family",
-    title: "Asus ROG Ally / Ally X",
-    family: "Handheld Windows PC",
-    summary:
-      "Windows-портатив для клієнта, якому потрібні Steam, Game Pass, Epic Games і максимально ПК-шний сценарій у handheld-форматі.",
-    overview: ["Формат: handheld Windows PC", "Екран: 7″ FHD 120 Гц", "Фокус: Windows + Game Pass + Steam"],
-    highlights: [
-      "AMD Z1 Extreme або Z1, дисплей 7″ FHD 120 Гц із FreeSync і Dolby Vision",
-      "Windows 11 Home дає звичний сценарій Steam, Game Pass, Epic Games та інших лаунчерів",
-      "ROG Ally X додає 80 Wh батарею, 24 ГБ RAM і більше SSD",
-      "Armoury Crate SE спрощує профілі продуктивності та оновлення",
-      "2 × USB-C у Ally X, один із них Thunderbolt 4, плюс сценарій XG Mobile eGPU",
-      "Потрібен тоді, коли клієнт хоче 'портативний Windows-ПК для будь-яких ігор, а не лише консольну екосистему'"
-    ],
-    colors: [
+    "slug": "asus-rog-ally-family",
+    "title": "Asus ROG Ally / Ally X",
+    "colors": [
       {
-        label: "ROG Ally",
-        imageUrl: "/materials/playstation-gaming-consoles/rog-ally.png",
-        caption: "Asus ROG Ally / Ally X",
-        default: true
+        "label": "ROG Ally",
+        "caption": "Asus ROG Ally / Ally X",
+        "default": true,
+        "imageUrl": "/materials/playstation-gaming-consoles/rog-ally.png"
       }
+    ],
+    "family": "Handheld Windows PC",
+    "summary": "Windows-портатив для клієнта, якому потрібні Steam, Game Pass, Epic Games і максимально ПК-шний сценарій у handheld-форматі.",
+    "overview": [
+      "Формат: портативний Windows-ПК",
+      "Екран: 7″ FHD, до 120 Гц",
+      "Покоління: Ally 2023 / X 2024"
+    ],
+    "highlights": [
+      "ROG Ally має AMD Z1 або Z1 Extreme; Ally X 2024 — Z1 Extreme.",
+      "IPS-екран FHD до 120 Гц і FreeSync; Dolby Atmos стосується звуку, а не HDR Dolby Vision.",
+      "Ally X 2024 має батарею 80 Вт·год і 24 ГБ пам’яті проти 40 Вт·год та 16 ГБ у початкового Ally.",
+      "Steam, Xbox app / PC Game Pass та інші лаунчери працюють у Windows за вимогами конкретних ігор.",
+      "Ally X має USB4 із сумісністю Thunderbolt 4 та USB-C 3.2; старого фірмового порту XG Mobile в ньому немає.",
+      "FPS і час роботи залежать від гри, профілю потужності й роздільної здатності; не обіцяйте фіксованих годин у Turbo."
     ]
+  },
+  {
+    "slug": "nintendo-switch-2",
+    "title": "Nintendo Switch 2",
+    "family": "Гібридна консоль",
+    "summary": "Нове покоління Nintendo для гри вдома й у дорозі з більшим екраном та Joy-Con 2.",
+    "overview": [
+      "Екран: 7,9″ LCD, 1080p",
+      "Пам’ять: 256 ГБ",
+      "Розширення: microSD Express"
+    ],
+    "highlights": [
+      "Екран підтримує HDR10 і VRR до 120 Гц у сумісних режимах.",
+      "На телевізорі: до 4K/60 або до 120 кадрів/с у 1080p / 1440p; залежить від гри.",
+      "Joy-Con 2 кріпляться магнітно; старі аксесуари перевіряйте за сумісністю.",
+      "Підтримується багато ігор першої Switch, але є винятки й окремі платні оновлення.",
+      "Для ігор потрібна microSD Express; звичайна microSD не є рівнозначною заміною."
+    ],
+    "colors": []
+  },
+  {
+    "slug": "asus-rog-xbox-ally-family",
+    "title": "ASUS ROG Xbox Ally / Ally X",
+    "family": "Портативний Windows-ПК",
+    "summary": "Окреме покоління ASUS із повноекранним інтерфейсом Xbox і доступом до сумісних ПК-бібліотек.",
+    "overview": [
+      "ОС: Windows",
+      "Ally: Ryzen Z2 A",
+      "Ally X: Ryzen AI Z2 Extreme"
+    ],
+    "highlights": [
+      "Це портативні ПК, а не зменшена Xbox Series X: перевіряйте саме ПК-версію гри.",
+      "Ally та Ally X відрізняються процесором, пам’яттю, SSD і батареєю.",
+      "ROG Xbox Ally має 60 Вт·год, Xbox Ally X — 80 Вт·год.",
+      "PC Game Pass, Steam та інші бібліотеки залежать від ліцензії, вимог гри й підписки.",
+      "Не плутайте Xbox Ally X із попереднім ROG Ally X 2024."
+    ],
+    "colors": []
+  },
+  {
+    "slug": "lenovo-legion-go-family",
+    "title": "Lenovo Legion Go / Go S / Go 2",
+    "family": "Портативний ПК",
+    "summary": "Сімейство портативних ПК, у якому важливо перевірити точний індекс моделі, ОС, екран та контролери.",
+    "overview": [
+      "Формат: портативний ПК",
+      "ОС: залежить від комплектації",
+      "Конфігурація: за артикулом"
+    ],
+    "highlights": [
+      "У Pineapple є Go S і Go 2 у різних конфігураціях; назви не означають однакового обладнання.",
+      "Legion Go 2 має 8,8-дюймовий OLED 1920 × 1200 до 144 Гц.",
+      "Windows і SteamOS мають різну сумісність лаунчерів та античитів.",
+      "Процесор, оперативну пам’ять і SSD звіряйте за повним кодом моделі.",
+      "Габарити, контролери та час роботи порівнюйте під потрібні ігри й сценарій перенесення."
+    ],
+    "colors": []
   }
 ];
 
 export const gamingConsolesFoundationBlocks: ModuleContentBlock[] = [
   {
-    type: "text",
-    title: "Ігрові консолі",
-    html: `<p>Привіт, командо! Ласкаво просимо до навчального матеріалу з ігрових консолей! Тут ми розберемо сучасні платформи, їх відмінності та як це впливає на вибір клієнта. Охопимо стаціонарні (домашні), портативні та гібридні рішення, а також ключові критерії для геймерів: продуктивність, ексклюзиви, екосистеми сервісів, підключення та дизайн.</p><p>Категорія ігрових консолей давно вийшла за межі простої відповіді «PlayStation чи Xbox». У консультації ми працюємо від сценарію: <strong>домашній AAA-геймінг</strong>, <strong>бюджетна цифрова консоль</strong>, <strong>портативний PC-геймінг</strong>, <strong>сімейна гібридна платформа</strong> або <strong>VR-досвід</strong>.</p>`
+    "html": "<p>Ігрову платформу обирають за потрібними іграми, місцем гри та вже придбаною бібліотекою. Порівняйте домашні консолі, портативні ПК, гібридні Nintendo Switch і VR-гарнітуру.</p><p>Потім уточніть диски чи цифрові покупки, бюджет на ігри й підписки, кількість гравців і потрібні аксесуари. Сумісність конкретної гри, регіон акаунта та спосіб оплати перевіряйте до продажу.</p>",
+    "type": "text",
+    "title": "Ігрові консолі"
   },
   {
-    type: "facts",
-    title: "Що уточнити перед рекомендацією консолі",
-    items: [
+    "type": "facts",
+    "items": [
       "Де клієнт буде грати: лише вдома, у поїздках чи в змішаному сценарії.",
       "Чи важливі ексклюзиви Sony, Nintendo або доступ до PC-бібліотеки.",
       "Чи потрібен дисковод або достатньо лише цифрової бібліотеки.",
       "Наскільки важливі підписки та сервіси на кшталт Game Pass або Nintendo Switch Online.",
       "Чи потрібні додаткові аксесуари: другий геймпад, гарнітура, зарядна станція, док або VR."
-    ]
+    ],
+    "title": "Що уточнити перед рекомендацією консолі"
   },
   {
-    type: "image",
-    title: "Аксесуари PlayStation 5",
-    url: "/materials/playstation-gaming-consoles/playstation-5-accessories.png",
-    caption: "Другий DualSense, зарядна станція, гарнітура та інші аксесуари для PlayStation 5"
+    "url": "/materials/playstation-gaming-consoles/playstation-5-accessories.png",
+    "type": "image",
+    "title": "Аксесуари PlayStation 5",
+    "caption": "Другий DualSense, зарядна станція, гарнітура та інші аксесуари для PlayStation 5"
   },
   {
-    type: "text",
-    title: "Як швидко розвести платформи по сценаріях",
-    html: `<h3>Sony PlayStation</h3><ul><li><strong>PS5 / PS5 Slim / PS5 Pro:</strong> сильний домашній AAA-геймінг, ексклюзиви Sony, DualSense, 4K і преміальний вау-ефект.</li><li><strong>PS VR2:</strong> окремий допродаж для клієнта, який хоче новий рівень занурення.</li></ul><h3>Microsoft Xbox</h3><ul><li><strong>Series S:</strong> бюджетний вхід у геймінг через цифрову бібліотеку й Game Pass.</li><li><strong>Series X:</strong> флагманський Xbox із дисководом і сильним 4K-сценарієм.</li></ul><h3>Steam Deck і ROG Ally</h3><ul><li><strong>Steam Deck:</strong> handheld для Steam-користувача й PC-бібліотеки.</li><li><strong>ROG Ally / Ally X:</strong> Windows-портатив, коли потрібна максимальна сумісність із різними лаунчерами.</li></ul><h3>Nintendo Switch</h3><ul><li><strong>Switch family:</strong> сімейний, портативний і гібридний геймінг, ексклюзиви Nintendo та мультиплеєр.</li></ul>`
+    "html": "<h3>Домашні консолі</h3><ul><li><strong>PS5 / Slim / Pro:</strong> бібліотека PlayStation і DualSense. Pro покращує графіку підтримуваних ігор.</li><li><strong>Xbox Series S:</strong> цифрова консоль; <strong>Series X:</strong> вища продуктивність, є дискові й цифрові версії.</li></ul><h3>Портативні платформи</h3><ul><li><strong>Steam Deck:</strong> SteamOS; перевіряйте позначки сумісності ігор.</li><li><strong>ROG Ally / Xbox Ally та Legion Go:</strong> портативні ПК; ОС і конфігурацію звіряйте за моделлю.</li><li><strong>Nintendo Switch / Switch 2:</strong> ігри Nintendo й гібридний формат; Switch Lite працює лише в портативному режимі.</li></ul><h3>Додаткові формати</h3><ul><li><strong>PS VR2:</strong> VR для PS5; на сумісному ПК потрібен окремий адаптер і є функціональні обмеження.</li><li><strong>PlayStation Portal:</strong> потокове відтворення, а не автономний запуск ігор як на портативному ПК.</li></ul>",
+    "type": "text",
+    "title": "Як розрізняти платформи за сценаріями"
   },
   {
-    type: "image",
-    title: "Карта вибору консолі",
-    url: "/materials/playstation-gaming-consoles/gaming-console-guide.png",
-    caption: "Швидка візуальна логіка вибору консолі під тип користувача"
+    "url": "/materials/playstation-gaming-consoles/gaming-console-guide.png",
+    "type": "image",
+    "title": "Карта вибору консолі",
+    "caption": "Швидка візуальна логіка вибору консолі під тип користувача"
   },
   {
-    type: "facts",
-    title: "Швидка логіка підбору консолі",
-    items: [
-      "PS5 Slim = домашня консоль для більшості клієнтів, яким важливі Sony-ігри та зручніший корпус.",
-      "PS5 Pro = максимум графіки, 2 ТБ SSD і флагманський PlayStation-сценарій.",
-      "Xbox Series S = найсильніший бюджетний digital-вхід у консольний геймінг.",
-      "Xbox Series X = флагманський Xbox із дисководом, 4K і Game Pass.",
-      "Steam Deck = PC-геймінг у дорозі для користувача Steam.",
-      "Nintendo Switch = сімейна, гібридна й travel-friendly платформа з ексклюзивами Nintendo.",
-      "ROG Ally / Ally X = handheld Windows-ПК для клієнта, який хоче максимум сумісності та ПК-функціональності."
-    ]
+    "type": "facts",
+    "items": [
+      "PS5 Slim — домашня консоль; SSD, дисковод і кількість контролерів уточнюйте за артикулом.",
+      "PS5 Pro — 2 ТБ SSD і покращення графіки в сумісних іграх; дисковод продається окремо.",
+      "Xbox Series S — цифрові ігри; Series X буває з дисководом і без нього.",
+      "Steam Deck — зручний доступ до сумісних ігор Steam у дорозі.",
+      "ROG Ally / Xbox Ally й Legion Go — портативні ПК; сумісність гри залежить також від ОС і античита.",
+      "Switch 2 та Switch OLED — для ігор Nintendo, дому й подорожей; Lite не виводить гру на телевізор.",
+      "Підписка не означає доступу до всіх ігор: каталог і регіональні умови змінюються."
+    ],
+    "title": "Швидка логіка підбору консолі"
   }
 ];
 
 export const gamingConsolesCatalogBlocks: ModuleContentBlock[] = [
   {
-    type: "text",
-    title: "Каталог сучасних ігрових платформ",
-    html: `<p>Порівняйте домашні та портативні ігрові платформи: <strong>PlayStation 5</strong>, <strong>Xbox Series S / X</strong>, <strong>Steam Deck</strong>, <strong>Nintendo Switch</strong> та <strong>Asus ROG Ally / Ally X</strong>. Окремо розгляньте <strong>PlayStation VR2</strong> як гарнітуру віртуальної реальності.</p><p>Почніть із потрібних ігор, місця гри та наявних пристроїв. Потім уточніть формат придбання ігор, підписки, кількість гравців і потрібні аксесуари.</p>`
+    "html": "<p>Порівняйте домашні та портативні ігрові платформи: <strong>PlayStation 5</strong>, <strong>Xbox Series S / X</strong>, <strong>Steam Deck</strong>, <strong>Nintendo Switch</strong> та <strong>Asus ROG Ally / Ally X</strong>. Окремо розгляньте <strong>PlayStation VR2</strong> як гарнітуру віртуальної реальності.</p><p>Почніть із потрібних ігор, місця гри та наявних пристроїв. Потім уточніть формат придбання ігор, підписки, кількість гравців і потрібні аксесуари.</p>",
+    "type": "text",
+    "title": "Каталог сучасних ігрових платформ"
   },
   {
-    type: "productCatalog",
-    title: "Sony PlayStation 5 та PlayStation VR2",
-    products: playstationConsoleCatalog
+    "type": "productCatalog",
+    "title": "PlayStation 5, PS VR2 і Portal",
+    "products": playstationConsoleCatalog
   },
   {
-    type: "facts",
-    title: "Аксесуари й допродаж для PlayStation 5",
-    items: [
-      "Другий DualSense актуальний навіть одному геймеру, щоб не випадати з гри під час зарядки.",
-      "Зарядна станція для двох геймпадів не займає USB-порти консолі.",
-      "DualSense Edge продається як premium-контролер із глибшим налаштуванням.",
-      "Pulse 3D і PULSE Elite / Elevate закривають сценарій 3D-звуку та повнішого занурення.",
-      "HD Camera і Media Remote логічно допродаються під стрімінг і мультимедіа."
-    ]
+    "type": "facts",
+    "items": [
+      "Другий DualSense потрібен для сумісних локальних багатокористувацьких ігор або як запасний.",
+      "Зарядна станція має відповідати моделі контролера; перевіряйте живлення в комплекті.",
+      "DualSense Edge додає налаштування й змінні елементи; його функції залежать від гри та платформи.",
+      "PULSE Elite — повнорозмірна гарнітура, PULSE Explore — навушники, PULSE Elevate — колонки.",
+      "Для аудіо перевіряйте PlayStation Link, USB-адаптер або дротове підключення; Bluetooth не є універсальним способом підключення до PS5."
+    ],
+    "title": "Аксесуари й допродаж для PlayStation 5"
   },
   {
-    type: "productCatalog",
-    title: "Microsoft Xbox Series",
-    products: xboxConsoleCatalog
+    "type": "productCatalog",
+    "title": "Microsoft Xbox Series",
+    "products": xboxConsoleCatalog
   },
   {
-    type: "image",
-    title: "Аксесуари Xbox",
-    url: "/materials/playstation-gaming-consoles/xbox-accessories.png",
-    caption: "Геймпади, Elite Series 2, заряджання та розширення пам'яті для Xbox"
+    "url": "/materials/playstation-gaming-consoles/xbox-accessories.png",
+    "type": "image",
+    "title": "Аксесуари Xbox",
+    "caption": "Геймпади, Elite Series 2, заряджання та розширення пам'яті для Xbox"
   },
   {
-    type: "facts",
-    title: "Що продавати разом з Xbox",
-    items: [
-      "Другий Xbox Wireless Controller або Elite Series 2 для активнішого сценарію гри.",
-      "Rechargeable Battery Pack чи зарядна станція прибирають проблему батарейок.",
-      "Xbox Wireless Headset добре закриває сценарій голосового чату й занурення.",
-      "Seagate Expansion Card є ключовим аргументом, коли клієнту бракує внутрішньої пам'яті."
-    ]
+    "type": "facts",
+    "items": [
+      "Другий Xbox Wireless Controller — для підтримуваних ігор удвох; Elite Series 2 — для розширених налаштувань.",
+      "Сумісний акумуляторний комплект або зарядна станція — альтернатива змінним батарейкам.",
+      "Для гарнітури перевіряйте Xbox Wireless, сумісний USB або 3,5 мм; звичайний Bluetooth не підключає будь-які навушники до консолі.",
+      "Карти розширення для Series X|S і зовнішні USB SSD/HDD мають різні можливості запуску ігор."
+    ],
+    "title": "Що продавати разом з Xbox"
   },
   {
-    type: "productCatalog",
-    title: "Портативні та гібридні рішення",
-    products: portableGamingCatalog
+    "type": "productCatalog",
+    "title": "Портативні та гібридні рішення",
+    "products": portableGamingCatalog
   },
   {
-    type: "facts",
-    title: "Кому що рекомендувати коротко",
-    items: [
-      "Для фаната ексклюзивів Sony і домашнього AAA-геймінгу: PS5 Slim або PS5 Pro.",
-      "Для клієнта, якому важливі 4K, дисковод і Game Pass: Xbox Series X.",
-      "Для бюджету та цифрової моделі з великою підпискою: Xbox Series S.",
-      "Для PC-геймера зі Steam-бібліотекою: Steam Deck.",
-      "Для handheld-сценарію з Windows, Steam, Game Pass і Epic: ROG Ally / Ally X.",
-      "Для сім'ї, подорожей та ігор Nintendo: Switch family."
-    ]
+    "type": "facts",
+    "items": [
+      "Домашня бібліотека PlayStation і DualSense — PS5 Slim; покращення графіки підтримуваних ігор — Pro.",
+      "Цифрові Xbox-ігри й компактність — Series S; продуктивніші режими — Series X потрібної версії.",
+      "Сумісна Steam-бібліотека в дорозі — Steam Deck.",
+      "Портативний Windows-ПК — ROG Ally / Xbox Ally або відповідний Legion Go.",
+      "Ігри Nintendo, гібридний формат і нове покоління — Switch 2; OLED — попередня платформа з OLED-екраном.",
+      "Потоковий доступ до PS5 — Portal, а не заміна автономного портативного ПК."
+    ],
+    "title": "Кому що рекомендувати коротко"
   },
   {
-    type: "text",
-    title: "Sony PlayStation 5 — повний затверджений матеріал",
-    html: `<h3>Лінійка моделей</h3><ul><li><strong>PS5 Blu‑Ray Edition:</strong> версія з дисководом Blu‑Ray для фізичних копій.</li><li><strong>PS5 Digital Edition:</strong> повністю цифрова версія без дисководу, покупки через PlayStation Store.</li><li><strong>PlayStation Bundle:</strong> комплекти з додатковою грою, джойстиком тощо.</li></ul><h3>Консоль PS5 — базові можливості</h3><ul><li><strong>Швидкісний SSD:</strong> миттєве завантаження та плавний геймплей (до 5,5 ГБ/с).</li><li><strong>Занурення:</strong> тактильна віддача, адаптивні тригери DualSense, 3D‑звук.</li><li><strong>Відео:</strong> до 120 кадрів/с на 4K екранах з 120 Гц; підтримка 8K через HDMI 2.1.</li><li><strong>Сумісність:</strong> оновлення дискових ігор до цифрових версій для PS5.</li></ul><h3>Інтерфейси, пам’ять та комплект</h3><ul><li><strong>Порти:</strong> AUX, HDMI, USB; привід Blu‑Ray (крім Digital Edition).</li><li><strong>Пам’ять:</strong> SSD 825 ГБ.</li><li><strong>Комплект:</strong> PS5, DualSense, кабель живлення, HDMI (2.1), USB‑перехідник.</li></ul><h3>PlayStation 5 Slim</h3><ul><li><strong>Габарити:</strong> менша і легша, сучасніший дизайн, легкі матеріали з тією ж робочою температурою.</li><li><strong>Порти:</strong> модернізовані USB для швидших передач.</li><li><strong>Дисковод:</strong> від’ємний дисковод — легко замінюється при потребі.</li></ul><h3>Технічні характеристики</h3><ul><li><strong>CPU:</strong> AMD Ryzen Zen 2, 8 ядер/16 потоків, 3.5 ГГц.</li><li><strong>RAM:</strong> 16 ГБ GDDR6.</li><li><strong>GPU:</strong> AMD RDNA 2, 2.23 ГГц (10.3 TFLOPS).</li><li><strong>Інтерфейси:</strong> 2× USB‑C, 3× USB‑A, 1× HDMI.</li></ul><h3>PlayStation 5 Pro</h3><ul><li><strong>CPU:</strong> AMD Ryzen Zen 2, 8 ядер/16 потоків, до 3.85 ГГц.</li><li><strong>GPU:</strong> AMD RDNA 3, 16.7 TFLOPS (+45% швидший рендеринг vs PS5).</li><li><strong>Пам’ять:</strong> 16 ГБ GDDR6 (графіка) + 2 ГБ DDR5 (ОС).</li><li><strong>SSD:</strong> 2 ТБ.</li></ul><h3>Ключові особливості</h3><ul><li><strong>Графіка і FPS:</strong> більше CU (+67%), швидша пам’ять — плавніший геймплей і якість.</li><li><strong>Ray Tracing:</strong> передові алгоритми освітлення та відображень.</li><li><strong>AI‑апскейлінг PSSR:</strong> підвищення роздільної здатності та деталізації.</li><li><strong>Game Boost:</strong> покращення для понад 8500 ігор PS4.</li><li><strong>Мережі:</strong> підтримка Wi‑Fi 7, VRR, додаткові USB‑C порти.</li></ul><h3>Порівняння з PS5</h3><ul><li><strong>GPU:</strong> потужніший графічний процесор.</li><li><strong>Пам’ять:</strong> 2 ТБ SSD vs 825 ГБ у стандартній PS5.</li><li><strong>Охолодження:</strong> оптимізоване тепловідведення для стабільності.</li></ul><h3>Аксесуари для PS5</h3><ul><li><strong>Другий геймпад:</strong> актуально навіть для одного геймера — під час зарядки основного.</li><li><strong>Станція заряджання:</strong> для двох геймпадів без зайняття USB‑портів.</li><li><strong>DualSense Edge:</strong> преміальний контролер з розширеним налаштуванням і комфортом.</li><li><strong>Pulse 3D:</strong> бездротова гарнітура з шумозаглушенням (до 12 год), Tempest 3D AudioTech.</li><li><strong>PULSE Elevate:</strong> об’ємний 3D-звук з глибокими басами, чіткими деталями та миттєвим підключенням для повного занурення в гру.</li><li><strong>HD Camera:</strong> Full HD камера зі зняттям фону — для стрімерів.</li><li><strong>Media Remote:</strong> ПДУ для мультимедіа та керування TV.</li></ul>`
+    "html": "<h3>Модель і комплект</h3><ul><li>Початкова PS5 має SSD 825 ГБ; Slim Digital може мати 825 ГБ або 1 ТБ залежно від ревізії. Перевіряйте артикул.</li><li>Дискова версія читає сумісні Blu-ray-ігри; Digital потребує цифрових покупок. Pro постачається без дисковода.</li><li>Slim і Pro мають два USB-C спереду та два USB-A ззаду; у початкової PS5 порти інші.</li></ul><h3>Графіка та ігри</h3><ul><li>4K і до 120 кадрів/с — можливі режими окремих ігор за наявності сумісного дисплея.</li><li>PS5 Pro додає PSSR, покращене трасування променів і 2 ТБ SSD; ефект залежить від гри.</li><li>Не обіцяйте 8K для звичайної PS5 або автоматичного безкоштовного оновлення будь-якої PS4-гри.</li><li>Для дискового оновлення гри може бути потрібен диск у приводі; умови визначає видавець.</li></ul><h3>Підбір аксесуарів</h3><p>Уточніть локальну гру вдвох, потрібне аудіопідключення та комплектність. Дисковод, вертикальна підставка, друга гра чи другий DualSense можуть продаватися окремо.</p>",
+    "type": "text",
+    "title": "PlayStation 5: версії, графіка та комплектність"
   },
   {
-    type: "text",
-    title: "Sony PlayStation VR2 — повний затверджений матеріал",
-    html: `<h3>Особливості та дизайн</h3><ul><li><strong>Легкість:</strong> 560 г, відсутність дискомфорту.</li><li><strong>Контролери Sense:</strong> точне відтворення рухів і жестів, аналогові стики, кнопки дій, “захоплення”.</li><li><strong>Відстеження:</strong> 4 камери в гарнітурі — зовнішня камера не потрібна.</li><li><strong>Комфорт:</strong> лінзи Френеля, вентиляція, регульовані ремінці.</li></ul><h3>Комплектація</h3><ul><li><strong>Гарнітура VR, контролери VR2 Sense R/L з ремінцями.</strong></li><li><strong>Кабель для підключення та зарядки, навушники з амбушурами.</strong></li><li><strong>Документація:</strong> інструкції, гарантія.</li></ul><h3>Підключення та екран</h3><ul><li><strong>Підключення:</strong> кабельна гарнітура — потрібна PS5; USB‑C довжиною ~4,5 м.</li><li><strong>OLED HDR:</strong> 2000×2040 на око, кут огляду 110°, яскравість і контрастність.</li><li><strong>Звук:</strong> вкладиші в комплекті, ізольований звук.</li></ul><h3>Унікальні функції</h3><ul><li><strong>Вібрація гарнітури:</strong> тактильні ефекти на обличчі в деяких іграх.</li><li><strong>Eye‑tracking:</strong> відстеження погляду, foveated rendering — максимальна якість там, куди дивишся.</li><li><strong>Скан кімнати:</strong> визначення ігрової зони, відображення перешкод полігонами.</li></ul><h3>Контент та сумісність</h3><ul><li><strong>VR‑тільки:</strong> окремі ігри доступні лише у VR.</li><li><strong>PS5‑ігри з VR:</strong> безкоштовні оновлення для PSVR2 (No Man’s Sky, Gran Turismo 7, Resident Evil Village).</li><li><strong>Несумісність:</strong> старі PSVR‑ігри не працюють автоматично — потрібні оновлення.</li></ul>`
+    "html": "<p>PS VR2 — кабельна VR-гарнітура з OLED-дисплеями 2000 × 2040 на око та контролерами Sense. Чотири камери відстежують ігрову зону без окремої зовнішньої камери.</p><ul><li>На PS5 підтримуються передбачені грою HDR, відстеження погляду й тактильні ефекти.</li><li>На сумісному ПК потрібен окремий адаптер; HDR, відстеження погляду та частина тактильних можливостей недоступні.</li><li>Ігри першої PS VR не запускаються автоматично; перевіряйте окрему PS VR2-версію.</li><li>Перевірте місце для гри, посадку гарнітури, вікові рекомендації й підтримку потрібного проєкту. Комфорт не можна гарантувати за вагою пристрою.</li></ul>",
+    "type": "text",
+    "title": "PlayStation VR2: підключення та сумісність"
   },
   {
-    type: "text",
-    title: "Microsoft Xbox — Series S і Series X — повний затверджений матеріал",
-    html: `<h3>Архітектура та пам’ять</h3><ul><li><strong>Zen 2 (AMD):</strong> спільна платформа для обох моделей.</li><li><strong>RAM:</strong> Series X — 16 ГБ, Series S — 10 ГБ.</li><li><strong>SSD:</strong> Series X — 1 ТБ (доступно ~800 ГБ), Series S — 512 ГБ (доступно ~364 ГБ).</li><li><strong>Розширення:</strong> офіційні карти розширення; зовнішні SSD/HDD для старих ігор.</li></ul><h3>Роздільна здатність та привід</h3><ul><li><strong>Series S:</strong> до 1440p, 120 fps для деяких проєктів; цифрові ігри тільки з Мережі.</li><li><strong>Series X:</strong> 4K, 120 fps, привід Blu‑Ray — менша залежність від онлайну, можливість перепродажу дисків.</li></ul><h3>Дизайн та практичність</h3><ul><li><strong>Розміри:</strong> Series S — вдвічі менша і легша ніж X; зручна для транспортування.</li><li><strong>Матеріал:</strong> матовий пластик; S практичніша (менше видно сліди), чорна X — більш марка.</li></ul><h3>Xbox Series S</h3><ul><li><strong>Позиціонування:</strong> компактна, доступна, цифрова.</li><li><strong>Геймплей:</strong> до 1440p, 60 fps (до 120 fps для окремих ігор).</li><li><strong>SSD:</strong> 512 ГБ, швидке завантаження; Ray Tracing, VRR, Quick Resume.</li></ul><h3>Xbox Series X</h3><ul><li><strong>Позиціонування:</strong> флагманська продуктивність, дисковод.</li><li><strong>Геймплей:</strong> 4K/60 fps, до 120 fps в окремих проєктах.</li><li><strong>Технології:</strong> Ray Tracing, Quick Resume, Dolby Vision/Atmos.</li><li><strong>SSD:</strong> 1 ТБ із підтримкою розширення.</li></ul><h3>Аксесуари для Xbox</h3><ul><li><strong>Геймпади:</strong> Xbox Wireless Controller різних кольорів; Elite Series 2 для про‑гри.</li><li><strong>Живлення:</strong> Rechargeable Battery Pack; зарядні станції; USB‑C кабелі.</li><li><strong>Гарнітури:</strong> Xbox Wireless Headset; сумісні гарнітури (Bluetooth, адаптер).</li><li><strong>Пам’ять:</strong> Seagate Expansion Card (офіційна); зовнішні SSD/HDD.</li></ul>`
+    "html": "<h3>Series S</h3><p>Компактна цифрова Xbox із 10 ГБ GDDR6 та SSD 512 ГБ або 1 ТБ. Приводу немає. Цільові режими — до 1440p і до 120 кадрів/с у підтримуваних іграх.</p><h3>Series X</h3><p>16 ГБ GDDR6 і продуктивніші графічні режими. Є дискові та Digital-версії, SSD 1 ТБ або 2 ТБ залежно від виконання. Наявність дисковода перевіряйте за повною назвою.</p><h3>Що перевірити</h3><ul><li>Роздільна здатність і FPS залежать від гри та режиму; Series S також може виводити масштабоване 4K-зображення.</li><li>Game Pass — окрема підписка зі змінним каталогом; усі ігри автоматично не включені.</li><li>У Series X використовується Wi-Fi 802.11ac, а не Wi-Fi 6.</li><li>Сумісні карти розширення й зовнішні USB-накопичувачі мають різні сценарії запуску та зберігання ігор.</li><li>Bluetooth у навушниках не гарантує підключення до Xbox: перевіряйте Xbox Wireless, USB або 3,5 мм.</li></ul>",
+    "type": "text",
+    "title": "Xbox Series S / X: версії та бібліотека"
   },
   {
-    type: "text",
-    title: "Steam Deck — повний затверджений матеріал",
-    html: `<h3>Платформа та дисплеї</h3><ul><li><strong>APU:</strong> AMD (Zen 2 + RDNA 2), AAA‑ігри на 1280×800.</li><li><strong>RAM:</strong> 16 ГБ LPDDR5 (5500 MT/s).</li><li><strong>Дисплеї:</strong> LCD 7″ 60 Гц; OLED 7.4″ HDR до 90 Гц — яскравіше, контрастніше.</li><li><strong>Зв’язок:</strong> Wi‑Fi 5 (LCD) або 6E (OLED), Bluetooth 5.0.</li><li><strong>Акумулятор:</strong> 40 Wh (LCD) — 2–8 год; 50 Wh (OLED) — 3–12 год.</li></ul><h3>Конфігурації</h3><ul><li><strong>64 ГБ eMMC:</strong> бюджетно.</li><li><strong>256/512 ГБ NVMe SSD:</strong> швидко та містко.</li><li><strong>512 ГБ OLED / 1 ТБ OLED:</strong> OLED‑екран, швидкий SSD, більше пам’яті, антиблікове скло.</li><li><strong>microSD:</strong> слот у всіх моделях.</li></ul><h3>SteamOS та можливості</h3><ul><li><strong>SteamOS 3.0:</strong> оптимізований під портатив.</li><li><strong>Proton:</strong> Windows‑ігри без портингу.</li><li><strong>Deck Verified:</strong> мітки сумісності (Verified/Playable/Unsupported).</li><li><strong>Cloud Saves/Remote Play:</strong> продовження прогресу, стрім з ПК.</li><li><strong>Desktop Mode:</strong> Linux‑десктоп, емулі, софт, dual‑boot Windows.</li></ul><h3>Аксесуари</h3><ul><li><strong>Docking Station:</strong> HDMI, DP, Ethernet, USB, FreeSync — як настільний ПК.</li><li><strong>Чохли/сумки:</strong> захист і відсіки для аксесуарів.</li><li><strong>Зарядки 45 Вт, microSD UHS‑I/II, захисні плівки:</strong> для зручності й розширення.</li></ul>`
+    "html": "<h3>LCD і OLED</h3><ul><li>LCD: екран 7″ 1280 × 800 до 60 Гц, батарея 40 Вт·год.</li><li>OLED: 7,4″ HDR до 90 Гц, батарея 50 Вт·год, Wi-Fi 6E, Bluetooth 5.3 і пам’ять 6400 MT/s.</li><li>Травлене антиблікове скло має OLED 1 ТБ; не всі OLED-комплектації.</li></ul><h3>Ігри й аксесуари</h3><ul><li>SteamOS працює на Linux; Proton підтримує багато Windows-ігор, але не гарантує роботу кожного античита чи лаунчера.</li><li>Перевірте потрібні ігри за актуальними позначками Deck Verified / Playable.</li><li>Cloud Saves та Remote Play залежать від підтримки гри й мережі.</li><li>Для розширення використовуйте сумісну microSD; для заряджання — належне USB-C PD живлення до 45 Вт.</li><li>Час роботи залежить від навантаження. Заявлені діапазони не є гарантією автономності у вимогливій AAA-грі.</li></ul>",
+    "type": "text",
+    "title": "Steam Deck: дисплеї та сумісність ігор"
   },
   {
-    type: "text",
-    title: "Nintendo Switch — повний затверджений матеріал",
-    html: `<h3>Особливості та сервіси</h3><ul><li><strong>Форм‑фактор:</strong> швидке перемикання між портативним, настільним і TV‑режимами.</li><li><strong>Joy‑Con:</strong> HD Rumble, сенсори руху, локальний/мережевий мультиплеєр.</li><li><strong>Ексклюзиви:</strong> Mario, Zelda, Animal Crossing, Pokémon, Metroid.</li><li><strong>Сервіси:</strong> eShop; Nintendo Switch Online (NES/SNES, хмарні сейви, мультиплеєр).</li></ul><h3>Платформа та моделі</h3><ul><li><strong>Процесор/графіка:</strong> NVIDIA Tegra (ARM), оптимізація під енергоефективність.</li><li><strong>RAM:</strong> 4 ГБ LPDDR4.</li><li><strong>Дисплеї:</strong> Standard — 6.2″ LCD; Lite — 5.5″ LCD; OLED — 7″ OLED.</li><li><strong>Сховище:</strong> 32 ГБ (Standard/OLED), 64 ГБ (Lite); microSDXC.</li><li><strong>Акумулятор:</strong> ~4.5–9 год залежно від моделі й навантаження.</li><li><strong>Порти:</strong> USB‑C, 3.5 мм аудіо, Bluetooth, Wi‑Fi 5.</li></ul><h3>Варіанти</h3><ul><li><strong>Switch Standard:</strong> портатив+TV, док‑станція.</li><li><strong>Switch Lite:</strong> тільки портатив, вбудовані Joy‑Con, компактний.</li><li><strong>Switch OLED:</strong> 7″ OLED, ширша підставка, LAN‑порт у доку, краща аудіо.</li></ul><h3>Активності та інтерфейс</h3><ul><li><strong>Сімейна гра:</strong> до 8 консолей локально, до 4 гравців на одному екрані.</li><li><strong>Онлайн:</strong> класика NES/SNES, голосовий чат (мобіл. додаток), хмарні сейви.</li><li><strong>UI:</strong> проста навігація по бібліотеці, швидкий доступ до контролерів і друзів.</li></ul><h3>Аксесуари</h3><ul><li><strong>Pro Controller:</strong> ергономіка і тривала робота.</li><li><strong>Joy‑Con Strap/Grip:</strong> комфорт і безпека.</li><li><strong>Док‑станція:</strong> запасний або замінний.</li><li><strong>microSDXC:</strong> розширення бібліотеки.</li><li><strong>Чохли/кейси:</strong> захист консолі й контролерів.</li><li><strong>Зарядна станція Joy‑Con:</strong> одночасна зарядка.</li></ul>`
+    "html": "<h3>Попереднє покоління</h3><ul><li>Switch: 6,2″ LCD і 32 ГБ; гібридний формат із доком.</li><li>Switch Lite: 5,5″ LCD і 32 ГБ; лише портативна гра без виведення на телевізор.</li><li>Switch OLED: 7″ OLED і 64 ГБ; док із LAN та ширша підставка.</li><li>Для окремих ігор на Lite можуть знадобитися додаткові контролери.</li></ul><h3>Switch 2</h3><ul><li>7,9″ LCD 1920 × 1080 із HDR10 та VRR до 120 Гц; 256 ГБ внутрішнього сховища.</li><li>Магнітні Joy-Con 2; аксесуари та ігри першої Switch перевіряйте за списком сумісності.</li><li>Для розширення сховища ігор потрібна microSD Express.</li><li>Телевізійний режим підтримує до 4K/60 або 1080p / 1440p до 120 кадрів/с у відповідних іграх.</li></ul><p>Nintendo Switch Online, хмарні збереження та мережеві режими залежать від гри й плану. Кількість гравців перевіряють для конкретного проєкту.</p>",
+    "type": "text",
+    "title": "Nintendo Switch: покоління, режими та пам’ять"
   },
   {
-    type: "text",
-    title: "Asus ROG Ally та Ally X — повний затверджений матеріал",
-    html: `<h3>Платформа та дисплей</h3><ul><li><strong>CPU/GPU:</strong> Z1 Extreme (8C/16T, до 5.10 ГГц, RDNA 3 12 CU ~8.6 TFLOPs) або Z1 (6C/12T, RDNA 3 4 CU ~2.56 TFLOPs).</li><li><strong>RAM:</strong> 16 ГБ LPDDR5‑6400.</li><li><strong>Дисплей:</strong> 7″ IPS‑LCD FHD (1920×1080), до 120 Гц, 500 ніт, FreeSync, Dolby Vision.</li><li><strong>Зв’язок:</strong> Wi‑Fi 6E, Bluetooth 5.2.</li><li><strong>Акумулятор:</strong> 40 Wh — ~2–3 год (Turbo), ~4–8 год (Performance).</li></ul><h3>Конфігурації та розширення</h3><ul><li><strong>SSD:</strong> 512 ГБ NVMe.</li><li><strong>Слоти:</strong> M.2 2230 Gen4x4; microSD UHS‑II.</li><li><strong>ROG Ally X:</strong> темний колір, збільшена автономність, більше пам’яті, модернізована ергономіка і порти.</li></ul><h3>Ally X — ключові покращення</h3><ul><li><strong>Акумулятор:</strong> 80 Wh (проти 40 Wh) — до 8–10 год (Performance), 15+ год (Power‑Saving).</li><li><strong>RAM/SSD:</strong> 24 ГБ LPDDR5 (7500 MT/s); 1/2 ТБ NVMe SSD.</li><li><strong>Охолодження:</strong> більші вентилятори, оптимізований потік повітря — мінус 5–10 °C.</li><li><strong>Ергономіка:</strong> виступи 4.5 мм на ручках, зміщена вага, 2× USB‑C (один Thunderbolt 4).</li><li><strong>Armoury Crate SE:</strong> швидші оновлення BIOS/драйверів, прості профілі продуктивності.</li></ul><h3>Windows 11 та екосистема</h3><ul><li><strong>Windows 11 Home:</strong> повноцінний десктоп, Steam, Game Pass, Epic Games.</li><li><strong>Armoury Crate SE:</strong> керування профілями і вентиляторами.</li><li><strong>ROG XG Mobile Dock:</strong> eGPU‑док (PCIe 4.0 ×8), HDMI/USB/Ethernet/FreeSync — використання як настільного ПК.</li></ul>`
+    "html": "<h3>Ally та Ally X</h3><ul><li>ROG Ally 2023: AMD Z1 або Z1 Extreme, 16 ГБ оперативної пам’яті й батарея 40 Вт·год.</li><li>ROG Ally X 2024: Z1 Extreme, 24 ГБ і батарея 80 Вт·год.</li><li>Обидва мають 7″ FHD IPS до 120 Гц із FreeSync. Dolby Atmos — аудіофункція; HDR Dolby Vision не заявляйте.</li><li>У початкового Ally є фірмовий XG Mobile; Ally X 2024 має USB4 із сумісністю Thunderbolt 4 замість цього роз’єму.</li></ul><h3>ROG Xbox Ally / Xbox Ally X</h3><p>Це окреме покоління портативних Windows-ПК: Xbox Ally має Ryzen Z2 A, Xbox Ally X — Ryzen AI Z2 Extreme. Лаунчер Xbox не перетворює їх на Xbox Series: перевіряйте ПК-версії ігор та право доступу до них.</p><p>Перед рекомендацією зіставте конкретну гру, профіль потужності, обсяг пам’яті та час роботи. Фіксовану автономність або роботу будь-якої гри не обіцяйте.</p>",
+    "type": "text",
+    "title": "ASUS ROG Ally: покоління, порти й Windows"
   },
   {
-    type: "text",
-    title: "Яку консоль обрати клієнту — повний затверджений матеріал",
-    html: `<h3>Сценарії та ключові відмінності</h3><ul><li><strong>Steam Deck:</strong> для PC‑геймерів, портативний ПК зі SteamOS/Proton, десктоп‑режим, microSD, 2–12 год автономності, док для монітора.</li><li><strong>PS5 Slim:</strong> фанати ексклюзивів Sony, сімейні геймери, компактність; 4K/120 fps, 1 ТБ SSD, трасування променів, USB‑C спереду, Wi‑Fi 5.</li><li><strong>PS5 Pro:</strong> ентузіасти, максимум графіки і 8K/VRR; ~16.7 TFLOPs, 2 ТБ SSD, Wi‑Fi 7, AI‑масштабування PSSR, Game Boost.</li><li><strong>Xbox Series S:</strong> бюджетно, Game Pass, без 4K і дисководу; 1440p/120 fps, SSD, повна сумісність.</li><li><strong>Xbox Series X:</strong> флагман 4K/120 fps, дисковод, Game Pass; ~12 TFLOPs, 1 ТБ SSD, Wi‑Fi 6, глибока сумісність.</li><li><strong>Nintendo Switch (Standard/Lite/OLED):</strong> сім’ї, казуальні геймери, фанати Nintendo; гібридний форм‑фактор, Joy‑Con, 4.5–9 год автономності, OLED — 7″+LAN.</li><li><strong>Asus ROG Ally / Ally X:</strong> повноцінний Windows‑ПК у портативі; Z1/Z1 Extreme, 7″ 120 Гц FHD, Wi‑Fi 6E, Armoury Crate, слоти M.2/microSD, XG Mobile eGPU.</li></ul><h3>Коротко по вибору</h3><ul><li><strong>ПК‑геймінг на ходу:</strong> Steam Deck.</li><li><strong>Домашня сімейна консоль з ексклюзивами Sony:</strong> PS5 Slim.</li><li><strong>Максимум графіки і продуктивності:</strong> PS5 Pro.</li><li><strong>Бюджет і цифровий доступ до сотень ігор:</strong> Xbox Series S.</li><li><strong>Флагман з 4K, дисководом і Game Pass:</strong> Xbox Series X.</li><li><strong>Універсальна платформа для дому і подорожей:</strong> Nintendo Switch.</li><li><strong>Портативний Windows‑ПК для будь‑яких ігор:</strong> Asus ROG Ally / Ally X.</li></ul>`
+    "html": "<ol><li><strong>Ігри:</strong> назвіть потрібні проєкти та перевірте платформу й бібліотеку клієнта.</li><li><strong>Місце гри:</strong> домашня PS5 / Xbox, гібридна Switch або портативний ПК.</li><li><strong>Диски й підписки:</strong> з’ясуйте право доступу, потрібний план та регіональні обмеження.</li><li><strong>Екран:</strong> перевірте можливості телевізора або власного дисплея пристрою; FPS залежить від гри.</li><li><strong>Комплект:</strong> контролери, заряджання, карта пам’яті, чохол або гарнітура — лише під підтверджену потребу.</li></ol>",
+    "type": "text",
+    "title": "Як підсумувати вибір платформи"
   }
 ];
 

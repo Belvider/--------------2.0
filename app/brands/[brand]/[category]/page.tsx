@@ -64,7 +64,7 @@ export default async function CategoryPage({ params }: PageProps) {
           </div>
 
           {/* Stat-картки — уніфікований стиль */}
-          <div className="grid grid-cols-3 gap-3 xl:grid-cols-1">
+          <div className="portal-summary-grid portal-summary-grid--three grid grid-cols-3 gap-3 xl:grid-cols-1">
             {[
               { label: "Модулів", value: categoryData.modules.length },
               { label: "У процесі", value: inProgressModules },

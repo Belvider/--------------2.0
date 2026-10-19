@@ -12,17 +12,17 @@ export const imacCatalog: ModuleCatalogProduct[] = [
       "Графіка: Radeon Pro 555 або Radeon Pro 560"
     ],
     "highlights": [
-      "Дисплей Retina 21.5 дюйма 4K",
-      "Процесор Intel Core i5 (кастом i7)",
-      "Графічний процесор: Radeon Pro 555 або Radeon Pro 560",
-      "Оперативна пам’ять: 8GB (кастом 16GB, 32GB)",
-      "Пам’ять Hard Drive: 1TB, 1TB Fusion Drive (кастом памʼять SSD)",
-      "Камера FaceTime HD",
-      "Аудіо: Стереодинаміки",
-      "Клавіатура Magic Keyboard",
-      "Порти: Чотири Thunderbolt 3 (USB‑C), чотири USB‑A, Ethernet, SDXC, аудіо 3.5 мм",
-      "Комплектація: iMac, Magic Keyboard, Magic Mouse, адаптер та кабель живлення, кабель USB/Lightning"
-    ],
+  "Дисплей Retina 21.5 дюйма 4K",
+  "Процесор Intel Core i5 (кастом i7)",
+  "Графічний процесор: Radeon Pro 555 або Radeon Pro 560",
+  "Оперативна пам’ять: 8GB (кастом 16GB, 32GB)",
+  "Пам’ять Hard Drive: 1TB, 1TB Fusion Drive (кастом памʼять SSD)",
+  "Камера FaceTime HD",
+  "Аудіо: Стереодинаміки",
+  "Клавіатура Magic Keyboard",
+  "Порти: Два Thunderbolt 3 (USB‑C), чотири USB‑A, Ethernet, SDXC, аудіо 3.5 мм",
+  "Заводський комплект: iMac, Magic Keyboard, Magic Mouse, кабель живлення й зарядний кабель аксесуарів"
+],
     "colors": [
       {
         "label": "Silver",
@@ -43,18 +43,18 @@ export const imacCatalog: ModuleCatalogProduct[] = [
       "Графіка: Intel Iris Plus Graphics 640"
     ],
     "highlights": [
-      "Дисплей 21.5 дюйма",
-      "Роздільна здатність 1920×1080 з підтримкою мільйонів кольорів",
-      "Процесор Intel Core i5",
-      "Графічний процесор: Intel Iris Plus Graphics 640",
-      "Оперативна пам’ять: 8GB",
-      "Пам’ять SSD: 256GB",
-      "Камера FaceTime HD",
-      "Аудіо: Стереодинаміки",
-      "Клавіатура Magic Keyboard",
-      "Порти: Два Thunderbolt 3 (USB‑C), чотири USB‑A, Ethernet, SDXC, аудіо 3.5 мм",
-      "Комплектація: iMac, Magic Keyboard, Magic Mouse, адаптер та кабель живлення, кабель USB/Lightning"
-    ],
+  "Дисплей 21.5 дюйма",
+  "Роздільна здатність 1920×1080 з підтримкою мільйонів кольорів",
+  "Процесор Intel Core i5",
+  "Графічний процесор: Intel Iris Plus Graphics 640",
+  "Оперативна пам’ять: 8GB",
+  "Пам’ять SSD: 256GB",
+  "Камера FaceTime HD",
+  "Аудіо: Стереодинаміки",
+  "Клавіатура Magic Keyboard",
+  "Порти: Два Thunderbolt 3 (USB‑C), чотири USB‑A, Ethernet, SDXC, аудіо 3.5 мм",
+  "Заводський комплект: iMac, Magic Keyboard, Magic Mouse, кабель живлення й зарядний кабель аксесуарів"
+],
     "colors": [
       {
         "label": "Silver",
@@ -75,17 +75,17 @@ export const imacCatalog: ModuleCatalogProduct[] = [
       "Графіка: Radeon Pro Vega 56"
     ],
     "highlights": [
-      "Дисплей Retina 27 дюйма 5K",
-      "Процесор Intel Xeon W",
-      "Графіка: Radeon Pro Vega 56",
-      "ОЗП: 32GB (кастом 64GB, 128GB, 256GB)",
-      "SSD: 1TB (кастом 2TB, 4TB)",
-      "Камера FaceTime HD 1080p",
-      "Аудіо: Стереодинаміки",
-      "Клавіатура Magic Keyboard із цифровою панеллю",
-      "Порти: Чотири Thunderbolt 3 (USB‑C), чотири USB‑A, Ethernet, SDXC, аудіо 3.5 мм",
-      "Комплектація: iMac, Magic Keyboard, Magic Mouse, адаптер та кабель живлення, кабель USB/Lightning"
-    ],
+  "Дисплей Retina 27 дюйма 5K",
+  "Процесор Intel Xeon W",
+  "Графіка: Radeon Pro Vega 56",
+  "ОЗП: 32GB (кастом 64GB, 128GB, 256GB)",
+  "SSD: 1TB (кастом 2TB, 4TB)",
+  "Камера FaceTime HD 1080p",
+  "Аудіо: Стереодинаміки",
+  "Клавіатура Magic Keyboard із цифровою панеллю",
+  "Порти: Чотири Thunderbolt 3 (USB‑C), чотири USB‑A, Ethernet, SDXC, аудіо 3.5 мм",
+  "Заводський комплект: iMac, Magic Keyboard, Magic Mouse, кабель живлення й зарядний кабель аксесуарів"
+],
     "colors": [
       {
         "label": "Space Gray",
@@ -106,17 +106,17 @@ export const imacCatalog: ModuleCatalogProduct[] = [
       "Графіка: Radeon Pro 570X / 575X / 580X"
     ],
     "highlights": [
-      "Дисплей Retina 27 дюйма 5K",
-      "Процесор Intel Core i5 (кастом i7)",
-      "Графіка: Radeon Pro 570X / 575X / 580X",
-      "ОЗП: 8GB (кастом 16GB, 32GB, 64GB)",
-      "FusionDrive: 1TB, 2TB (кастом 3TB або 1TB/2TB SSD)",
-      "Камера FaceTime HD",
-      "Аудіо: Стереодинаміки",
-      "Клавіатура Magic Keyboard",
-      "Порти: Два Thunderbolt 3 (USB‑C), чотири USB‑A, Ethernet, SDXC, аудіо 3.5 мм",
-      "Комплектація: iMac, Magic Keyboard, Magic Mouse, адаптер та кабель живлення, кабель USB/Lightning"
-    ],
+  "Дисплей Retina 27 дюйма 5K",
+  "Процесор Intel Core i5 (кастом i7)",
+  "Графіка: Radeon Pro 570/575/580",
+  "ОЗП: 8GB (кастом 16GB, 32GB, 64GB)",
+  "FusionDrive: 1TB, 2TB (кастом 3TB або 1TB/2TB SSD)",
+  "Камера FaceTime HD",
+  "Аудіо: Стереодинаміки",
+  "Клавіатура Magic Keyboard",
+  "Порти: Два Thunderbolt 3 (USB‑C), чотири USB‑A, Ethernet, SDXC, аудіо 3.5 мм",
+  "Заводський комплект: iMac, Magic Keyboard, Magic Mouse, кабель живлення й зарядний кабель аксесуарів"
+],
     "colors": [
       {
         "label": "Silver",
@@ -137,17 +137,17 @@ export const imacCatalog: ModuleCatalogProduct[] = [
       "Графіка: Radeon Pro 555X, 560X"
     ],
     "highlights": [
-      "Дисплей Retina 21.5 дюйма 4K",
-      "Процесор Intel Core i3, i5 (кастом i7)",
-      "Графіка: Radeon Pro 555X, 560X",
-      "ОЗП: 8GB (кастом 16GB, 32GB)",
-      "SSD: 256GB (кастом 1TB Fusion Drive)",
-      "Камера FaceTime HD",
-      "Аудіо: Стереодинаміки",
-      "Клавіатура Magic Keyboard",
-      "Порти: Два Thunderbolt 3 (USB‑C), чотири USB‑A, Ethernet, SDXC, аудіо 3.5 мм",
-      "Комплектація: iMac, Magic Keyboard, Magic Mouse, адаптер та кабель живлення, кабель USB/Lightning"
-    ],
+  "Дисплей Retina 21.5 дюйма 4K",
+  "Процесор Intel Core i3, i5 (кастом i7)",
+  "Графіка: Radeon Pro 555X, 560X",
+  "ОЗП: 8GB (кастом 16GB, 32GB)",
+  "SSD: 256GB (кастом 1TB Fusion Drive)",
+  "Камера FaceTime HD",
+  "Аудіо: Стереодинаміки",
+  "Клавіатура Magic Keyboard",
+  "Порти: Два Thunderbolt 3 (USB‑C), чотири USB‑A, Ethernet, SDXC, аудіо 3.5 мм",
+  "Заводський комплект: iMac, Magic Keyboard, Magic Mouse, кабель живлення й зарядний кабель аксесуарів"
+],
     "colors": [
       {
         "label": "Silver",
@@ -168,17 +168,17 @@ export const imacCatalog: ModuleCatalogProduct[] = [
       "Графіка: Radeon Pro 570X / 575X / 580X"
     ],
     "highlights": [
-      "Дисплей Retina 27 дюйма 5K",
-      "Процесор Intel Core i5, i7 (кастом i9)",
-      "Графіка: Radeon Pro 570X / 575X / 580X",
-      "ОЗП: 8GB (кастом 16GB, 32GB, 64GB)",
-      "FusionDrive: 1TB, 2TB (кастом 3TB або 256GB/512GB/1TB/2TB SSD)",
-      "Камера FaceTime HD",
-      "Аудіо: Стереодинаміки",
-      "Клавіатура Magic Keyboard",
-      "Порти: Два Thunderbolt 3 (USB‑C), чотири USB‑A, Ethernet, SDXC, аудіо 3.5 мм",
-      "Комплектація: iMac, Magic Keyboard, Magic Mouse, адаптер та кабель живлення, кабель USB/Lightning"
-    ],
+  "Дисплей Retina 27 дюйма 5K",
+  "Процесор Intel Core i5, i7 (кастом i9)",
+  "Графіка: Radeon Pro 570X / 575X / 580X",
+  "ОЗП: 8GB (кастом 16GB, 32GB, 64GB)",
+  "FusionDrive: 1TB, 2TB (кастом 3TB або 256GB/512GB/1TB/2TB SSD)",
+  "Камера FaceTime HD",
+  "Аудіо: Стереодинаміки",
+  "Клавіатура Magic Keyboard",
+  "Порти: Два Thunderbolt 3 (USB‑C), чотири USB‑A, Ethernet, SDXC, аудіо 3.5 мм",
+  "Заводський комплект: iMac, Magic Keyboard, Magic Mouse, кабель живлення й зарядний кабель аксесуарів"
+],
     "colors": [
       {
         "label": "Silver",
@@ -199,18 +199,18 @@ export const imacCatalog: ModuleCatalogProduct[] = [
       "Процесор: Intel Core i5, i7 (кастом i9)"
     ],
     "highlights": [
-      "Дисплей Retina 27 дюйма 5K",
-      "Технологія True Tone",
-      "Процесор Intel Core i5, i7 (кастом i9)",
-      "Графіка: AMD Radeon Pro 5300, 5500 XT; кастом 5700, 5700 XT",
-      "ОЗП: 8GB (кастом 16GB, 32GB, 64GB, 128GB)",
-      "SSD: 256GB, 512GB (кастом 1TB, 2TB, 4TB, 8TB)",
-      "Камера FaceTime HD 1080p",
-      "Аудіо: Стереодинаміки",
-      "Клавіатура Magic Keyboard",
-      "Порти: Два Thunderbolt 3 (USB‑C), чотири USB‑A, Ethernet, SDXC, аудіо 3.5 мм",
-      "Комплектація: iMac, Magic Keyboard, Magic Mouse, адаптер та кабель живлення, кабель USB/Lightning"
-    ],
+  "Дисплей Retina 27 дюйма 5K",
+  "Технологія True Tone",
+  "Процесор Intel Core i5, i7 (кастом i9)",
+  "Графіка: AMD Radeon Pro 5300, 5500 XT; кастом 5700, 5700 XT",
+  "ОЗП: 8GB (кастом 16GB, 32GB, 64GB, 128GB)",
+  "SSD: 256GB, 512GB (кастом 1TB, 2TB, 4TB, 8TB)",
+  "Камера FaceTime HD 1080p",
+  "Аудіо: Стереодинаміки",
+  "Клавіатура Magic Keyboard",
+  "Порти: Два Thunderbolt 3 (USB‑C), чотири USB‑A, Ethernet, SDXC, аудіо 3.5 мм",
+  "Заводський комплект: iMac, Magic Keyboard, Magic Mouse, кабель живлення й зарядний кабель аксесуарів"
+],
     "colors": [
       {
         "label": "Silver",
@@ -231,20 +231,20 @@ export const imacCatalog: ModuleCatalogProduct[] = [
       "Графіка: 7 ядер"
     ],
     "highlights": [
-      "Дисплей Retina 24 дюйма 4.5K",
-      "Технологія True Tone",
-      "Процесор Apple M1 (8 ядер CPU: 4 продуктивності, 4 ефективності)",
-      "Графічний процесор: 7 ядер",
-      "16‑ядерна система Neural Engine",
-      "ОЗП: 8GB, 16GB",
-      "SSD: 256GB, 512GB, 1TB",
-      "Камера FaceTime HD 1080p",
-      "Аудіо: Система із шести динаміків, об’ємний стереозвук, підтримка просторового аудіо",
-      "Клавіатура Magic Keyboard",
-      "Порти: Два Thunderbolt 4 (USB‑C), (Два USB 3), Ethernet, аудіо 3.5 мм",
-      "Комплектація: iMac, Magic Keyboard, Magic Mouse, адаптер та кабель живлення, кабель USB‑C / Lightning",
-      "Доступні кольори: Blue, Green, Pink, Silver"
-    ],
+  "Дисплей Retina 24 дюйма 4.5K",
+  "Технологія True Tone",
+  "Процесор Apple M1 (8 ядер CPU: 4 продуктивності, 4 ефективності)",
+  "Графічний процесор: 7 ядер",
+  "16‑ядерна система Neural Engine",
+  "ОЗП: 8GB, 16GB",
+  "SSD: 256GB, 512GB, 1TB",
+  "Камера FaceTime HD 1080p",
+  "Аудіо: Система із шести динаміків, об’ємний стереозвук, підтримка просторового аудіо",
+  "Клавіатура Magic Keyboard",
+  "Порти: два Thunderbolt / USB 4 (USB-C), аудіо 3,5 мм; Ethernet у блоці живлення — опція",
+  "Комплектація: iMac, Magic Keyboard, Magic Mouse, адаптер та кабель живлення, кабель USB‑C / Lightning",
+  "Доступні кольори: Blue, Green, Pink, Silver"
+],
     "colors": [
       {
         "label": "Blue",
@@ -274,7 +274,7 @@ export const imacCatalog: ModuleCatalogProduct[] = [
   },
   {
     "slug": "imac-24-m1-2021-4-ports",
-    "title": "iMac 24″ M1 (2021) — 4 порти Thunderbolt",
+    "title": "iMac24″M1 (2021) — 4 порти (2Thunderbolt+2USB 3)",
     "family": "iMac 24″",
     "summary": "Старша версія iMac 24 на M1 для клієнтів, яким потрібні більше портів, ширший вибір кольорів і трохи сильніша графіка в тому ж форм-факторі.",
     "overview": [
@@ -283,20 +283,20 @@ export const imacCatalog: ModuleCatalogProduct[] = [
       "Графіка: 8 ядер"
     ],
     "highlights": [
-      "Дисплей Retina 24 дюйма 4.5K",
-      "Технологія True Tone",
-      "Процесор Apple M1 (8 ядер CPU: 4 продуктивності, 4 ефективності)",
-      "Графічний процесор: 8 ядер",
-      "16‑ядерна система Neural Engine",
-      "ОЗП: 8GB, 16GB",
-      "SSD: 256GB, 512GB, 1TB, 2TB",
-      "Камера FaceTime HD 1080p",
-      "Аудіо: Система із шести динаміків, об’ємний стереозвук, підтримка просторового аудіо",
-      "Клавіатура Magic Keyboard",
-      "Порти: Два Thunderbolt 4 (USB‑C), (Два USB 3), Ethernet, аудіо 3.5 мм",
-      "Комплектація: iMac, Magic Keyboard, Magic Mouse, адаптер та кабель живлення, кабель USB‑C / Lightning",
-      "Доступні кольори: Blue, Green, Pink, Silver, Yellow, Orange, Purple"
-    ],
+  "Дисплей Retina 24 дюйма 4.5K",
+  "Технологія True Tone",
+  "Процесор Apple M1 (8 ядер CPU: 4 продуктивності, 4 ефективності)",
+  "Графічний процесор: 8 ядер",
+  "16‑ядерна система Neural Engine",
+  "ОЗП: 8GB, 16GB",
+  "SSD: 256GB, 512GB, 1TB, 2TB",
+  "Камера FaceTime HD 1080p",
+  "Аудіо: Система із шести динаміків, об’ємний стереозвук, підтримка просторового аудіо",
+  "Клавіатура Magic Keyboard",
+  "Порти: два Thunderbolt / USB 4 (USB-C) та два USB 3 (USB-C), аудіо 3,5 мм; Ethernet у блоці живлення",
+  "Комплектація: iMac, Magic Keyboard, Magic Mouse, адаптер та кабель живлення, кабель USB‑C / Lightning",
+  "Доступні кольори: Blue, Green, Pink, Silver, Yellow, Orange, Purple"
+],
     "colors": [
       {
         "label": "Blue",
@@ -353,27 +353,27 @@ export const imacCatalog: ModuleCatalogProduct[] = [
       "Графіка: 8 ядер (у 4‑портовому варіанті — 10 ядер)"
     ],
     "highlights": [
-      "Дисплей Retina 24 дюйма 4.5K",
-      "Технологія True Tone",
-      "Процесор Apple M3 (8 ядер CPU: 4 продуктивності, 4 ефективності)",
-      "Графіка: 8 ядер (у 4‑портовому Thunderbolt варіанті — 10 ядер)",
-      "16‑ядерна система Neural Engine",
-      "ОЗП: 8GB, 16GB, 24GB",
-      "SSD: 256GB, 512GB, 1TB (у 4‑портовому iMac доступно 2TB)",
-      "Камера FaceTime HD 1080p",
-      "Аудіо: Система із шести динаміків, об’ємний стереозвук, підтримка просторового аудіо",
-      "Клавіатура Magic Keyboard",
-      "Порти: Два Thunderbolt 4 (USB‑C), (Два USB 3), Ethernet, аудіо 3.5 мм",
-      "Комплектація: iMac, Magic Keyboard, Magic Mouse, адаптер 143 Вт та кабель живлення, кабель USB‑C / Lightning"
-    ],
+  "Дисплей Retina 24 дюйма 4.5K",
+  "Технологія True Tone",
+  "Процесор Apple M3 (8 ядер CPU: 4 продуктивності, 4 ефективності)",
+  "Графіка: 8 ядер (у 4‑портовому Thunderbolt варіанті — 10 ядер)",
+  "16‑ядерна система Neural Engine",
+  "ОЗП: 8GB, 16GB, 24GB",
+  "SSD: 256GB, 512GB, 1TB (у 4‑портовому iMac доступно 2TB)",
+  "Камера FaceTime HD 1080p",
+  "Аудіо: Система із шести динаміків, об’ємний стереозвук, підтримка просторового аудіо",
+  "Клавіатура Magic Keyboard",
+  "Порти: два Thunderbolt / USB 4 (USB-C); у старшій версії також два USB 3 (USB-C); Ethernet залежно від конфігурації",
+  "Комплектація: iMac, Magic Keyboard, Magic Mouse, адаптер 143 Вт та кабель живлення, кабель USB‑C / Lightning"
+],
     "colors": [
-      {
-        "label": "Основний рендер",
-        "imageUrl": "/materials/imac/imac-24-m3-2023.png",
-        "caption": "Основний рендер моделі",
-        "default": true
-      }
-    ]
+  {
+    "label": "Загальний вигляд",
+    "imageUrl": "/materials/imac/imac-24-m3-2023.png",
+    "caption": "iMac 24″ M3 (2023) — 2 порти / 4 порти",
+    "default": true
+  }
+]
   },
   {
     "slug": "imac-24-m4-2024",
@@ -386,27 +386,27 @@ export const imacCatalog: ModuleCatalogProduct[] = [
       "Графіка: 8 ядер (у 4‑портовому iMac — 10 ядер)"
     ],
     "highlights": [
-      "Дисплей Retina 24 дюйма 4.5K (Доступний варіант з нанотекстурою)",
-      "Технологія True Tone",
-      "Процесор Apple M4: 8 ядер (4 продуктивні, 4 ефективні); доступний варіант на 10 ядер (6 продуктивних, 4 ефективних) для 4‑портового Thunderbolt",
-      "Графіка: 8 ядер (у 4‑портовому iMac — 10 ядер)",
-      "16‑ядерна система Neural Engine",
-      "ОЗП: 16GB, 24GB (32GB у варіанті на 4 порти Thunderbolt)",
-      "SSD: 256GB, 512GB, 1TB (у 4‑портовому iMac доступно 2TB)",
-      "Камера FaceTime HD 1080p",
-      "Аудіо: Система із шести динаміків, об’ємний стереозвук, підтримка просторового аудіо",
-      "Клавіатура Magic Keyboard",
-      "Порти: Два або 4 порти Thunderbolt 4 (USB‑C), (Два порти USB 4 та 3.1), Ethernet, аудіо 3.5 мм, DisplayPort",
-      "Комплектація: iMac, Magic Keyboard, Magic Mouse, адаптер 143 Вт та кабель живлення, кабель USB‑C / Lightning"
-    ],
+  "Дисплей Retina 24 дюйма 4,5K; нанотекстура — опція",
+  "Технологія True Tone",
+  "Процесор: Apple M4 — CPU 8 (4P+4E) у 2-портовому або 10 (4P+6E) у 4-портовому",
+  "Графіка: 8 ядер (у 4‑портовому iMac — 10 ядер)",
+  "16‑ядерна система Neural Engine",
+  "ОЗП: 16GB, 24GB (32GB у варіанті на 4 порти Thunderbolt)",
+  "SSD: 256GB, 512GB, 1TB (у 4‑портовому iMac доступно 2TB)",
+  "Камера: 12 Мп Center Stage з Desk View",
+  "Аудіо: Система із шести динаміків, об’ємний стереозвук, підтримка просторового аудіо",
+  "Клавіатура Magic Keyboard",
+  "Порти: 2 або 4 Thunderbolt 4 (USB-C), аудіо 3,5 мм; Ethernet у блоці живлення залежно від конфігурації",
+  "Заводський комплект: iMac, Magic Keyboard, Magic Mouse, адаптер 143 Вт, кабель живлення, USB-C кабель аксесуарів"
+],
     "colors": [
-      {
-        "label": "Основний рендер",
-        "imageUrl": "/materials/imac/imac-24-m4-2024.png",
-        "caption": "Основний рендер моделі",
-        "default": true
-      }
-    ]
+  {
+    "label": "Загальний вигляд",
+    "imageUrl": "/materials/imac/imac-24-m4-2024.png",
+    "caption": "iMac 24″ M4 (2024) — 2 порти / 4 порти",
+    "default": true
+  }
+]
   }
 ];
 
@@ -508,20 +508,20 @@ export const macMiniCatalog: ModuleCatalogProduct[] = [
       "ОЗП: 16GB"
     ],
     "highlights": [
-      "Процесор: Apple M4 з 10‑ядерним CPU (4 продуктивні + 6 ефективних)",
-      "ОЗП: 16GB (конфігурації 24GB або 32GB)",
-      "SSD: 256GB (конфігурації 512GB, 1TB, 2TB)",
-      "Графіка: 10‑ядерний GPU Apple; апаратне трасування променів",
-      "Порти: 2× Thunderbolt 4, 2× USB‑A, HDMI, Gigabit Ethernet (опція 10GbE), аудіо 3.5 мм"
-    ],
+  "Процесор: Apple M4 з 10‑ядерним CPU (4 продуктивні + 6 ефективних)",
+  "ОЗП: 16GB (конфігурації 24GB або 32GB)",
+  "SSD: 256GB (конфігурації 512GB, 1TB, 2TB)",
+  "Графіка: 10‑ядерний GPU Apple; апаратне трасування променів",
+  "Порти: 3×Thunderbolt 4 ззаду,2×USB-C (USB 3) спереду, HDMI, Ethernet, аудіо 3,5 мм; USB-A немає"
+],
     "colors": [
-      {
-        "label": "Основний рендер",
-        "imageUrl": "/materials/imac/mac-mini-m4-2024.png",
-        "caption": "Основний рендер моделі",
-        "default": true
-      }
-    ]
+  {
+    "label": "Загальний вигляд",
+    "imageUrl": "/materials/imac/mac-mini-m4-2024.png",
+    "caption": "Mac mini M4 (2024)",
+    "default": true
+  }
+]
   },
   {
     "slug": "mac-mini-m4-pro-2024",
@@ -534,23 +534,23 @@ export const macMiniCatalog: ModuleCatalogProduct[] = [
       "ОЗП: 24GB"
     ],
     "highlights": [
-      "Процесор: Apple M4 Pro (12 ядер: 8 продуктивних + 4 ефективних), можливий варіант 14 ядер (10P + 4E)",
-      "Графіка: 16 ядер (варіант 20 ядер)",
-      "ОЗП: 24GB (конфігурації 48GB або 64GB)",
-      "SSD: 512GB (конфігурації 1TB, 2TB, 4TB, 8TB)",
-      "Порти: 4× Thunderbolt 5, 2× USB‑A, HDMI, Gigabit Ethernet (опція 10GbE), аудіо 3.5 мм",
-      "Підтримка дисплеїв: до трьох дисплеїв 6K",
-      "Додатково: апаратне трасування променів; 16‑ядерний Neural Engine",
-      "Позиціонування: значне підвищення продуктивності для відео, 3D, ML"
-    ],
+  "Процесор: Apple M4 Pro (12 ядер: 8 продуктивних + 4 ефективних), можливий варіант 14 ядер (10P + 4E)",
+  "Графіка: 16 ядер (варіант 20 ядер)",
+  "ОЗП: 24GB (конфігурації 48GB або 64GB)",
+  "SSD: 512GB (конфігурації 1TB, 2TB, 4TB, 8TB)",
+  "Порти: 3×Thunderbolt 5 ззаду,2×USB-C (USB 3) спереду, HDMI, Ethernet, аудіо 3,5 мм; USB-A немає",
+  "Підтримка дисплеїв: до трьох дисплеїв 6K",
+  "Додатково: апаратне трасування променів; 16‑ядерний Neural Engine",
+  "Позиціонування: значне підвищення продуктивності для відео, 3D, ML"
+],
     "colors": [
-      {
-        "label": "Основний рендер",
-        "imageUrl": "/materials/imac/mac-mini-m4-2024.png",
-        "caption": "Основний рендер лінійки Mac mini M4",
-        "default": true
-      }
-    ]
+  {
+    "label": "Загальний вигляд",
+    "imageUrl": "/materials/imac/mac-mini-m4-2024.png",
+    "caption": "Mac mini M4 Pro (2024)",
+    "default": true
+  }
+]
   }
 ];
 
@@ -566,15 +566,15 @@ export const macProCatalog: ModuleCatalogProduct[] = [
       "ОЗП: до 1.5TB"
     ],
     "highlights": [
-      "Процесор: Intel Xeon W — 8/12/16/24/28 ядер",
-      "Графічні процесори: AMD Radeon Pro 580X / W5500X / W5700X; Vega II / Vega II Duo; W6800X / W6900X; W6800X Duo / W6600X",
-      "ОЗП: 32GB / 48GB / 96GB / 384GB / 768GB / 1.5TB",
-      "SSD: 256GB / 512GB / 1TB / 2TB / 4TB / 8TB",
-      "Підключення дисплеїв: до 12× 4K, 6× 5K або 6× Pro Display XDR (залежить від конфігурації)",
-      "Порти: до 12× Thunderbolt 3 (USB‑C), 2× USB 3, 2× Gigabit Ethernet",
-      "PCIe: 8 слотів розширення",
-      "Комплектація: Magic Keyboard з цифровою панеллю, Magic Mouse, кабель USB‑C/Lightning (1 м), кабель живлення"
-    ],
+  "Процесор: Intel Xeon W — 8/12/16/24/28 ядер",
+  "Графічні процесори: AMD Radeon Pro 580X / W5500X / W5700X; Vega II / Vega II Duo; W6800X / W6900X; W6800X Duo / W6600X",
+  "ОЗП: 32GB / 48GB / 96GB / 384GB / 768GB / 1.5TB",
+  "SSD: 256GB / 512GB / 1TB / 2TB / 4TB / 8TB",
+  "Підключення дисплеїв: до 12× 4K, 6× 5K або 6× Pro Display XDR (залежить від конфігурації)",
+  "Порти: до 12× Thunderbolt 3 (USB‑C), 2× USB 3, 2×10Gb Ethernet",
+  "PCIe: 8 слотів розширення",
+  "Комплектація: Magic Keyboard з цифровою панеллю, Magic Mouse, кабель USB‑C/Lightning (1 м), кабель живлення"
+],
     "colors": [
       {
         "label": "Silver",
@@ -586,7 +586,7 @@ export const macProCatalog: ModuleCatalogProduct[] = [
   },
   {
     "slug": "mac-pro-m2-2023",
-    "title": "Mac Pro M2 (2023)",
+    "title": "Mac Pro M2 Ultra (2023)",
     "family": "Mac Pro",
     "summary": "Сучасний Mac Pro на Apple Silicon для студій, продакшну, складних обчислень і клієнтів, яким потрібен максимум продуктивності в настільному Mac.",
     "overview": [
@@ -595,16 +595,16 @@ export const macProCatalog: ModuleCatalogProduct[] = [
       "Neural Engine: 32 ядра"
     ],
     "highlights": [
-      "Процесор: M2 Ultra (24‑ядерний CPU: 16P + 8E)",
-      "Графіка: 60 ядер (кастом 76 ядер)",
-      "Neural Engine: 32 ядра",
-      "ОЗП: 64GB (кастом 128GB, 192GB)",
-      "SSD: 1TB (2TB, 4TB, 8TB)",
-      "Підключення дисплеїв: до восьми 4K, шести 6K або трьох 8K",
-      "Порти: 8× Thunderbolt 4 (USB‑C), 3× USB‑A, 2× HDMI, 2× Gigabit Ethernet",
-      "PCIe: 7 слотів (шість вільних; один із встановленою IO‑платою)",
-      "Комплектація: Magic Keyboard з Touch ID і цифровою панеллю, Magic Mouse, кабель USB‑C/Lightning (1 м), кабель живлення"
-    ],
+  "Процесор: M2 Ultra (24‑ядерний CPU: 16P + 8E)",
+  "Графіка: 60 ядер (кастом 76 ядер)",
+  "Neural Engine: 32 ядра",
+  "ОЗП: 64GB (кастом 128GB, 192GB)",
+  "SSD: 1TB (2TB, 4TB, 8TB)",
+  "Підключення дисплеїв: до восьми 4K, шести 6K або трьох 8K",
+  "Порти: 8× Thunderbolt 4 (USB‑C), 3× USB‑A, 2× HDMI, 2×10Gb Ethernet",
+  "PCIe: 7 слотів (шість вільних; один із встановленою IO‑платою)",
+  "Комплектація: Magic Keyboard з Touch ID і цифровою панеллю, Magic Mouse, кабель USB‑C/Lightning (1 м), кабель живлення"
+],
     "colors": [
       {
         "label": "Silver",
@@ -637,13 +637,13 @@ export const macStudioCatalog: ModuleCatalogProduct[] = [
       "Комплектація: Кабель живлення"
     ],
     "colors": [
-      {
-        "label": "Основний рендер",
-        "imageUrl": "/materials/imac/mac-studio-m1-2022.png",
-        "caption": "Основний рендер моделі",
-        "default": true
-      }
-    ]
+  {
+    "label": "Загальний вигляд",
+    "imageUrl": "/materials/imac/mac-studio-m1-2022.png",
+    "caption": "Mac Studio M1 (2022)",
+    "default": true
+  }
+]
   },
   {
     "slug": "mac-studio-m2-2023",
@@ -656,22 +656,22 @@ export const macStudioCatalog: ModuleCatalogProduct[] = [
       "Neural Engine: 16 або 32 ядра"
     ],
     "highlights": [
-      "Процесор: M2 Max (12‑ядерний CPU: 8P + 4E), графіка 30 ядер (опція 38), 16‑ядерний Neural Engine",
-      "Процесор: M2 Ultra (24‑ядерний CPU: 16P + 8E), графіка 60 ядер (опція 76), 32‑ядерний Neural Engine",
-      "ОЗП: 32GB/64GB (або 96GB для 38‑ядерної графіки) — M2 Max; 64GB/128GB/192GB — M2 Ultra",
-      "SSD: 512GB/1TB/2TB/4TB/8TB (M2 Max), 1TB/2TB/4TB/8TB (M2 Ultra)",
-      "Дисплеї: до п’яти (M2 Max) або до восьми (M2 Ultra/Pro конф.)",
-      "Порти: 4× Thunderbolt 4 (M2 Max); 6× Thunderbolt 4 (M2 Ultra); 2× USB‑A (обидва), 2× USB‑C (M2 Max), HDMI, 10GbE, SDXC (UHS‑II)",
-      "Комплектація: Кабель живлення"
-    ],
+  "Процесор: M2 Max (12‑ядерний CPU: 8P + 4E), графіка 30 ядер (опція 38), 16‑ядерний Neural Engine",
+  "Процесор: M2 Ultra (24‑ядерний CPU: 16P + 8E), графіка 60 ядер (опція 76), 32‑ядерний Neural Engine",
+  "ОЗП: 32GB/64GB (або 96GB для 38‑ядерної графіки) — M2 Max; 64GB/128GB/192GB — M2 Ultra",
+  "SSD: 512GB/1TB/2TB/4TB/8TB (M2 Max), 1TB/2TB/4TB/8TB (M2 Ultra)",
+  "Дисплеї: до п’яти (M2 Max) або до восьми (M2 Ultra)",
+  "Порти: 4× Thunderbolt 4 (M2 Max); 6× Thunderbolt 4 (M2 Ultra); 2× USB‑A (обидва), 2× USB‑C (M2 Max), HDMI, 10GbE, SDXC (UHS‑II)",
+  "Комплектація: Кабель живлення"
+],
     "colors": [
-      {
-        "label": "Основний рендер",
-        "imageUrl": "/materials/imac/mac-studio-m2-2023.png",
-        "caption": "Основний рендер моделі",
-        "default": true
-      }
-    ]
+  {
+    "label": "Загальний вигляд",
+    "imageUrl": "/materials/imac/mac-studio-m2-2023.png",
+    "caption": "Mac Studio M2 (2023)",
+    "default": true
+  }
+]
   }
 ];
 
@@ -684,7 +684,7 @@ export const imacFoundationBlocks: ModuleContentBlock[] = [
   {
     "type": "text",
     "title": "Переваги та технології iMac",
-    "html": "<h3>Інноваційний дизайн</h3>\n<ul>\n<li><strong>Естетика:</strong> Тонкий, елегантний корпус з мінімалістичним дизайном.</li>\n<li><strong>Моноблок:</strong> Всі компоненти вбудовані в один корпус, що заощаджує місце і виглядає акуратно.</li>\n</ul>\n<h3>Висока продуктивність</h3>\n<ul>\n<li><strong>Потужні процесори:</strong> Використання процесорів Apple Silicon забезпечує високу продуктивність та ефективність енергоспоживання.</li>\n<li><strong>Швидка пам'ять та зберігання:</strong> SSD-диски та оперативна пам'ять високої швидкості забезпечують швидкий доступ до даних і запуск додатків.</li>\n</ul>\n<h3>Чудова якість зображення</h3>\n<ul>\n<li><strong>Retina Display:</strong> Висока роздільна здатність, чудова чіткість і яскравість зображення.</li>\n<li><strong>Технологія True Tone:</strong> Автоматичне налаштування кольорів для більш природного зображення.</li>\n<li><strong>Широке колірне охоплення P3:</strong> Насичені та реалістичні кольори.</li>\n<li><strong>Nano-Texture Glass:</strong> Спеціальне покриття на дисплеї, яке зменшує відблиски і забезпечує чудову видимість навіть за умов сильного освітлення.</li>\n</ul>\n<h3>Мультимедійні можливості</h3>\n<ul>\n<li><strong>Високоякісна камера та звук:</strong> Камера для відеодзвінків та вбудовані стереодинаміки з підтримкою просторового звуку.</li>\n<li><strong>Потужні мікрофони:</strong> Трьохмірні мікрофони студійної якості для чіткого запису голосу.</li>\n</ul>\n<h3>Зручність використання</h3>\n<ul>\n<li><strong>macOS:</strong> Стабільна та інтуїтивна операційна система з багатьма корисними функціями.</li>\n<li><strong>Інтеграція з екосистемою Apple:</strong> Взаємодія з iPhone, iPad та Apple Watch.</li>\n<li><strong>Підключення:</strong> Thunderbolt/USB 4 порти для швидкої передачі даних і підключення периферійних пристроїв.</li>\n</ul>\n<h3>Екологічність</h3>\n<ul>\n<li><strong>Відновлювані матеріали:</strong> Екологічно чисті матеріали та енергоощадні технології.</li>\n<li><strong>Зниження впливу на довкілля:</strong> Apple активно працює над зменшенням впливу на навколишнє середовище.</li>\n</ul>\n<h3>Надійність і довговічність</h3>\n<ul>\n<li><strong>Високоякісні компоненти:</strong> Тривалий термін служби завдяки надійним комплектуючим.</li>\n</ul>"
+    "html": "<h4>Що порівняти в iMac</h4><ul><li>Моноблок поєднує дисплей і комп’ютер; клавіатура та миша входять у заводський комплект, але комплектність вживаного перевіряють окремо.</li><li>iMac24 на Apple Silicon має дисплей 4,5K, TrueTone та P3; нанотекстура є опцією iMac M4, а не властивістю всіх iMac.</li><li>Камера у M1/M3 — 1080p, у M4 — 12 Мп Center Stage з Desk View. Система з шести динаміків і три мікрофони підходять для відеодзвінків.</li><li>Кількість портів, Ethernet, Touch ID клавіатури й максимальна пам’ять залежать від конфігурації; слово iMac24 не визначає весь комплект.</li></ul>"
   },
   {
     "type": "text",
@@ -694,7 +694,7 @@ export const imacFoundationBlocks: ModuleContentBlock[] = [
   {
     "type": "text",
     "title": "Регіональні відмінності та MDM",
-    "html": "<h3>Регіональні відмінності</h3>\n<h4>Тип електричної вилки та напруги</h4>\n<ul>\n<li><strong>США:</strong> Тип A або B, напруга 110–120 В.</li>\n<li><strong>Європа:</strong> Тип C або F, напруга 220–240 В.</li>\n<li><strong>Велика Британія:</strong> Тип G, напруга 230 В.</li>\n<li><strong>Комплектація:</strong> iMac комплектується кабелем живлення, сумісним із місцевими стандартами.</li>\n</ul>\n<h4>Відмінності клавіатури за регіонами</h4>\n<ul>\n<li><strong>США (US):</strong> QWERTY, менший Enter (прямокутник), ширші Shift, без «€».</li>\n<li><strong>Велика Британія (UK):</strong> QWERTY, Enter «перевернута L», змінені @ та \".</li>\n<li><strong>Німеччина (German):</strong> QWERTZ, «Ä», «Ö», «Ü», «ß», Enter «перевернута L».</li>\n<li><strong>Франція (AZERTY):</strong> AZERTY, «é», «à», «ç», вертикальний Enter.</li>\n<li><strong>Скандинавія (Nordic):</strong> QWERTY для SE/NO/DK/FI, «Å», «Ä», «Ö», Enter «перевернута L».</li>\n<li><strong>Україна (Cyrillic):</strong> QWERTY + кирилиця, «Ґ», «Є», «І», «Ї», «₴», Enter «перевернута L».</li>\n<li><strong>Японія (JIS):</strong> QWERTY + японська (ひらがな, カタカナ), коротший пробіл, Enter «перевернута L».</li>\n<li><strong>Китай, Корея:</strong> QWERTY + ввід ієрогліфів через Pinyin, спецклавіші.</li>\n<li><strong>Арабські країни:</strong> QWERTY + арабська писемність, «ء», «ش», Enter «перевернута L».</li>\n<li><strong>Індія:</strong> QWERTY + деванагарі та інші писемності, комбіновані клавіші.</li>\n</ul>\n<h4>Мережеві адаптери</h4>\n<ul>\n<li><strong>Ethernet:</strong> Можуть відрізнятися специфікації адаптерів.</li>\n<li><strong>Wi‑Fi:</strong> Налаштування під дозволені діапазони частот країни.</li>\n</ul>\n<h4>Регіональні коди в артикулах</h4>\n<ul>\n<li><strong>Європа:</strong> B/A (UK), D/A (DE), F/A (FR), T/A (IT), ZD/A (ЦСЄ).</li>\n<li><strong>Азія:</strong> J/A (JP), ZA/A (Пд‑Сх Азія), ZP/A (HK).</li>\n<li><strong>Північна Америка:</strong> LL/A (USA), VC/A (Canada).</li>\n<li><strong>Австралія та Океанія:</strong> X/A (Australia).</li>\n<li><strong>Латинська Америка:</strong> BZ/A (Brazil), E/A (Mexico).</li>\n<li><strong>Близький Схід:</strong> AE/A (UAE).</li>\n</ul>\n<h4>Як зрозуміти артикул iMac</h4>\n<ul>\n<li><strong>Буквено‑цифрова частина:</strong> Перші 5–6 символів — модель і базова конфігурація. Наприклад, iMac 24\" M1: MGPD3, MGPL3, MGPM3.</li>\n<li><strong>Суфікс після слешу:</strong> UA/A (Україна), LL/A (США), VC/A (Канада) тощо.</li>\n</ul>\n<h4>Приклад розшифрування артикула MacBook</h4>\n<ul>\n<li><strong>M:</strong> Новий гаджет, куплений у Apple.</li>\n<li><strong>F:</strong> Відновлено Apple або оператором.</li>\n<li><strong>P:</strong> Смартфон з гравіюванням.</li>\n<li><strong>N:</strong> Пристрій надано як заміна несправного iMac; новий, без браку.</li>\n<li><strong>«/A» у кінці:</strong> Для фірмових магазинів Apple.</li>\n</ul>\n<h4>Особливі позначення в артикулах</h4>\n<ul>\n<li><strong>CTO (Configure To Order):</strong> Зібрані за спецзамовленнями (RAM, SSD); позначення CTO в назві.</li>\n<li><strong>REF (Refurbished):</strong> Відновлені пристрої; позначення REF або літера F (наприклад, F1234LL/A).</li>\n</ul>\n<h4>MDM (Mobile Device Management)</h4>\n<p>MDM — технологія керування мобільними пристроями для централізованого моніторингу та безпеки MacBook, iPhone, iPad, а також iMac, Mac mini, Mac Pro.</p>\n<ul>\n<li><strong>Конфігурація пристроїв:</strong> Wi‑Fi, VPN, пошта, політики безпеки.</li>\n<li><strong>Моніторинг:</strong> Стан, місцезнаходження, оновлення, параметри.</li>\n<li><strong>Безпека:</strong> Видалення/блокування у разі втрати, паролі, політики.</li>\n<li><strong>Додатки:</strong> Централізована установка та оновлення.</li>\n<li><strong>Контроль доступу:</strong> Доступ до корпоративних ресурсів.</li>\n</ul>\n<p>Застосування MDM: освітні установи, великі компанії — контроль використання, безпеки даних і дотримання політик.</p>"
+    "html": "<h4>Регіональна версія та стан</h4><ul><li>Звірте фізичну розкладку клавіатури, вилку, кабель і комплектацію. Живлення сучасного iMac — 100–240 В,50–60 Гц; регіональна вилка не означає автоматично іншу робочу напругу комп’ютера.</li><li>Заводський артикул і модель допомагають знайти конфігурацію. Літера M/F/P/N або закінчення/A не підтверджують поточного стану, відсутності ремонту чи гарантії.</li><li>Для вживаного Mac перевірте блокування активації, стан, накопичувач і корпоративне керування MDM. Організація може встановлювати політики та дистанційно блокувати або стирати Mac; вилучення з корпоративної системи має виконати власник-організація.</li><li>Пристрої з невилученим MDM не приймаємо й не продаємо. Умови гарантії підтверджуйте документами магазину.</li></ul>"
   },
   {
     "type": "facts",
@@ -747,17 +747,17 @@ export const imacCatalogBlocks: ModuleContentBlock[] = [
           "Графіка: Radeon Pro 555 або Radeon Pro 560"
         ],
         "highlights": [
-          "Дисплей Retina 21.5 дюйма 4K",
-          "Процесор Intel Core i5 (кастом i7)",
-          "Графічний процесор: Radeon Pro 555 або Radeon Pro 560",
-          "Оперативна пам’ять: 8GB (кастом 16GB, 32GB)",
-          "Пам’ять Hard Drive: 1TB, 1TB Fusion Drive (кастом памʼять SSD)",
-          "Камера FaceTime HD",
-          "Аудіо: Стереодинаміки",
-          "Клавіатура Magic Keyboard",
-          "Порти: Чотири Thunderbolt 3 (USB‑C), чотири USB‑A, Ethernet, SDXC, аудіо 3.5 мм",
-          "Комплектація: iMac, Magic Keyboard, Magic Mouse, адаптер та кабель живлення, кабель USB/Lightning"
-        ],
+  "Дисплей Retina 21.5 дюйма 4K",
+  "Процесор Intel Core i5 (кастом i7)",
+  "Графічний процесор: Radeon Pro 555 або Radeon Pro 560",
+  "Оперативна пам’ять: 8GB (кастом 16GB, 32GB)",
+  "Пам’ять Hard Drive: 1TB, 1TB Fusion Drive (кастом памʼять SSD)",
+  "Камера FaceTime HD",
+  "Аудіо: Стереодинаміки",
+  "Клавіатура Magic Keyboard",
+  "Порти: Два Thunderbolt 3 (USB‑C), чотири USB‑A, Ethernet, SDXC, аудіо 3.5 мм",
+  "Заводський комплект: iMac, Magic Keyboard, Magic Mouse, кабель живлення й зарядний кабель аксесуарів"
+],
         "colors": [
           {
             "label": "Silver",
@@ -778,18 +778,18 @@ export const imacCatalogBlocks: ModuleContentBlock[] = [
           "Графіка: Intel Iris Plus Graphics 640"
         ],
         "highlights": [
-          "Дисплей 21.5 дюйма",
-          "Роздільна здатність 1920×1080 з підтримкою мільйонів кольорів",
-          "Процесор Intel Core i5",
-          "Графічний процесор: Intel Iris Plus Graphics 640",
-          "Оперативна пам’ять: 8GB",
-          "Пам’ять SSD: 256GB",
-          "Камера FaceTime HD",
-          "Аудіо: Стереодинаміки",
-          "Клавіатура Magic Keyboard",
-          "Порти: Два Thunderbolt 3 (USB‑C), чотири USB‑A, Ethernet, SDXC, аудіо 3.5 мм",
-          "Комплектація: iMac, Magic Keyboard, Magic Mouse, адаптер та кабель живлення, кабель USB/Lightning"
-        ],
+  "Дисплей 21.5 дюйма",
+  "Роздільна здатність 1920×1080 з підтримкою мільйонів кольорів",
+  "Процесор Intel Core i5",
+  "Графічний процесор: Intel Iris Plus Graphics 640",
+  "Оперативна пам’ять: 8GB",
+  "Пам’ять SSD: 256GB",
+  "Камера FaceTime HD",
+  "Аудіо: Стереодинаміки",
+  "Клавіатура Magic Keyboard",
+  "Порти: Два Thunderbolt 3 (USB‑C), чотири USB‑A, Ethernet, SDXC, аудіо 3.5 мм",
+  "Заводський комплект: iMac, Magic Keyboard, Magic Mouse, кабель живлення й зарядний кабель аксесуарів"
+],
         "colors": [
           {
             "label": "Silver",
@@ -810,17 +810,17 @@ export const imacCatalogBlocks: ModuleContentBlock[] = [
           "Графіка: Radeon Pro Vega 56"
         ],
         "highlights": [
-          "Дисплей Retina 27 дюйма 5K",
-          "Процесор Intel Xeon W",
-          "Графіка: Radeon Pro Vega 56",
-          "ОЗП: 32GB (кастом 64GB, 128GB, 256GB)",
-          "SSD: 1TB (кастом 2TB, 4TB)",
-          "Камера FaceTime HD 1080p",
-          "Аудіо: Стереодинаміки",
-          "Клавіатура Magic Keyboard із цифровою панеллю",
-          "Порти: Чотири Thunderbolt 3 (USB‑C), чотири USB‑A, Ethernet, SDXC, аудіо 3.5 мм",
-          "Комплектація: iMac, Magic Keyboard, Magic Mouse, адаптер та кабель живлення, кабель USB/Lightning"
-        ],
+  "Дисплей Retina 27 дюйма 5K",
+  "Процесор Intel Xeon W",
+  "Графіка: Radeon Pro Vega 56",
+  "ОЗП: 32GB (кастом 64GB, 128GB, 256GB)",
+  "SSD: 1TB (кастом 2TB, 4TB)",
+  "Камера FaceTime HD 1080p",
+  "Аудіо: Стереодинаміки",
+  "Клавіатура Magic Keyboard із цифровою панеллю",
+  "Порти: Чотири Thunderbolt 3 (USB‑C), чотири USB‑A, Ethernet, SDXC, аудіо 3.5 мм",
+  "Заводський комплект: iMac, Magic Keyboard, Magic Mouse, кабель живлення й зарядний кабель аксесуарів"
+],
         "colors": [
           {
             "label": "Space Gray",
@@ -841,17 +841,17 @@ export const imacCatalogBlocks: ModuleContentBlock[] = [
           "Графіка: Radeon Pro 570X / 575X / 580X"
         ],
         "highlights": [
-          "Дисплей Retina 27 дюйма 5K",
-          "Процесор Intel Core i5 (кастом i7)",
-          "Графіка: Radeon Pro 570X / 575X / 580X",
-          "ОЗП: 8GB (кастом 16GB, 32GB, 64GB)",
-          "FusionDrive: 1TB, 2TB (кастом 3TB або 1TB/2TB SSD)",
-          "Камера FaceTime HD",
-          "Аудіо: Стереодинаміки",
-          "Клавіатура Magic Keyboard",
-          "Порти: Два Thunderbolt 3 (USB‑C), чотири USB‑A, Ethernet, SDXC, аудіо 3.5 мм",
-          "Комплектація: iMac, Magic Keyboard, Magic Mouse, адаптер та кабель живлення, кабель USB/Lightning"
-        ],
+  "Дисплей Retina 27 дюйма 5K",
+  "Процесор Intel Core i5 (кастом i7)",
+  "Графіка: Radeon Pro 570/575/580",
+  "ОЗП: 8GB (кастом 16GB, 32GB, 64GB)",
+  "FusionDrive: 1TB, 2TB (кастом 3TB або 1TB/2TB SSD)",
+  "Камера FaceTime HD",
+  "Аудіо: Стереодинаміки",
+  "Клавіатура Magic Keyboard",
+  "Порти: Два Thunderbolt 3 (USB‑C), чотири USB‑A, Ethernet, SDXC, аудіо 3.5 мм",
+  "Заводський комплект: iMac, Magic Keyboard, Magic Mouse, кабель живлення й зарядний кабель аксесуарів"
+],
         "colors": [
           {
             "label": "Silver",
@@ -872,17 +872,17 @@ export const imacCatalogBlocks: ModuleContentBlock[] = [
           "Графіка: Radeon Pro 555X, 560X"
         ],
         "highlights": [
-          "Дисплей Retina 21.5 дюйма 4K",
-          "Процесор Intel Core i3, i5 (кастом i7)",
-          "Графіка: Radeon Pro 555X, 560X",
-          "ОЗП: 8GB (кастом 16GB, 32GB)",
-          "SSD: 256GB (кастом 1TB Fusion Drive)",
-          "Камера FaceTime HD",
-          "Аудіо: Стереодинаміки",
-          "Клавіатура Magic Keyboard",
-          "Порти: Два Thunderbolt 3 (USB‑C), чотири USB‑A, Ethernet, SDXC, аудіо 3.5 мм",
-          "Комплектація: iMac, Magic Keyboard, Magic Mouse, адаптер та кабель живлення, кабель USB/Lightning"
-        ],
+  "Дисплей Retina 21.5 дюйма 4K",
+  "Процесор Intel Core i3, i5 (кастом i7)",
+  "Графіка: Radeon Pro 555X, 560X",
+  "ОЗП: 8GB (кастом 16GB, 32GB)",
+  "SSD: 256GB (кастом 1TB Fusion Drive)",
+  "Камера FaceTime HD",
+  "Аудіо: Стереодинаміки",
+  "Клавіатура Magic Keyboard",
+  "Порти: Два Thunderbolt 3 (USB‑C), чотири USB‑A, Ethernet, SDXC, аудіо 3.5 мм",
+  "Заводський комплект: iMac, Magic Keyboard, Magic Mouse, кабель живлення й зарядний кабель аксесуарів"
+],
         "colors": [
           {
             "label": "Silver",
@@ -903,17 +903,17 @@ export const imacCatalogBlocks: ModuleContentBlock[] = [
           "Графіка: Radeon Pro 570X / 575X / 580X"
         ],
         "highlights": [
-          "Дисплей Retina 27 дюйма 5K",
-          "Процесор Intel Core i5, i7 (кастом i9)",
-          "Графіка: Radeon Pro 570X / 575X / 580X",
-          "ОЗП: 8GB (кастом 16GB, 32GB, 64GB)",
-          "FusionDrive: 1TB, 2TB (кастом 3TB або 256GB/512GB/1TB/2TB SSD)",
-          "Камера FaceTime HD",
-          "Аудіо: Стереодинаміки",
-          "Клавіатура Magic Keyboard",
-          "Порти: Два Thunderbolt 3 (USB‑C), чотири USB‑A, Ethernet, SDXC, аудіо 3.5 мм",
-          "Комплектація: iMac, Magic Keyboard, Magic Mouse, адаптер та кабель живлення, кабель USB/Lightning"
-        ],
+  "Дисплей Retina 27 дюйма 5K",
+  "Процесор Intel Core i5, i7 (кастом i9)",
+  "Графіка: Radeon Pro 570X / 575X / 580X",
+  "ОЗП: 8GB (кастом 16GB, 32GB, 64GB)",
+  "FusionDrive: 1TB, 2TB (кастом 3TB або 256GB/512GB/1TB/2TB SSD)",
+  "Камера FaceTime HD",
+  "Аудіо: Стереодинаміки",
+  "Клавіатура Magic Keyboard",
+  "Порти: Два Thunderbolt 3 (USB‑C), чотири USB‑A, Ethernet, SDXC, аудіо 3.5 мм",
+  "Заводський комплект: iMac, Magic Keyboard, Magic Mouse, кабель живлення й зарядний кабель аксесуарів"
+],
         "colors": [
           {
             "label": "Silver",
@@ -934,18 +934,18 @@ export const imacCatalogBlocks: ModuleContentBlock[] = [
           "Процесор: Intel Core i5, i7 (кастом i9)"
         ],
         "highlights": [
-          "Дисплей Retina 27 дюйма 5K",
-          "Технологія True Tone",
-          "Процесор Intel Core i5, i7 (кастом i9)",
-          "Графіка: AMD Radeon Pro 5300, 5500 XT; кастом 5700, 5700 XT",
-          "ОЗП: 8GB (кастом 16GB, 32GB, 64GB, 128GB)",
-          "SSD: 256GB, 512GB (кастом 1TB, 2TB, 4TB, 8TB)",
-          "Камера FaceTime HD 1080p",
-          "Аудіо: Стереодинаміки",
-          "Клавіатура Magic Keyboard",
-          "Порти: Два Thunderbolt 3 (USB‑C), чотири USB‑A, Ethernet, SDXC, аудіо 3.5 мм",
-          "Комплектація: iMac, Magic Keyboard, Magic Mouse, адаптер та кабель живлення, кабель USB/Lightning"
-        ],
+  "Дисплей Retina 27 дюйма 5K",
+  "Технологія True Tone",
+  "Процесор Intel Core i5, i7 (кастом i9)",
+  "Графіка: AMD Radeon Pro 5300, 5500 XT; кастом 5700, 5700 XT",
+  "ОЗП: 8GB (кастом 16GB, 32GB, 64GB, 128GB)",
+  "SSD: 256GB, 512GB (кастом 1TB, 2TB, 4TB, 8TB)",
+  "Камера FaceTime HD 1080p",
+  "Аудіо: Стереодинаміки",
+  "Клавіатура Magic Keyboard",
+  "Порти: Два Thunderbolt 3 (USB‑C), чотири USB‑A, Ethernet, SDXC, аудіо 3.5 мм",
+  "Заводський комплект: iMac, Magic Keyboard, Magic Mouse, кабель живлення й зарядний кабель аксесуарів"
+],
         "colors": [
           {
             "label": "Silver",
@@ -966,20 +966,20 @@ export const imacCatalogBlocks: ModuleContentBlock[] = [
           "Графіка: 7 ядер"
         ],
         "highlights": [
-          "Дисплей Retina 24 дюйма 4.5K",
-          "Технологія True Tone",
-          "Процесор Apple M1 (8 ядер CPU: 4 продуктивності, 4 ефективності)",
-          "Графічний процесор: 7 ядер",
-          "16‑ядерна система Neural Engine",
-          "ОЗП: 8GB, 16GB",
-          "SSD: 256GB, 512GB, 1TB",
-          "Камера FaceTime HD 1080p",
-          "Аудіо: Система із шести динаміків, об’ємний стереозвук, підтримка просторового аудіо",
-          "Клавіатура Magic Keyboard",
-          "Порти: Два Thunderbolt 4 (USB‑C), (Два USB 3), Ethernet, аудіо 3.5 мм",
-          "Комплектація: iMac, Magic Keyboard, Magic Mouse, адаптер та кабель живлення, кабель USB‑C / Lightning",
-          "Доступні кольори: Blue, Green, Pink, Silver"
-        ],
+  "Дисплей Retina 24 дюйма 4.5K",
+  "Технологія True Tone",
+  "Процесор Apple M1 (8 ядер CPU: 4 продуктивності, 4 ефективності)",
+  "Графічний процесор: 7 ядер",
+  "16‑ядерна система Neural Engine",
+  "ОЗП: 8GB, 16GB",
+  "SSD: 256GB, 512GB, 1TB",
+  "Камера FaceTime HD 1080p",
+  "Аудіо: Система із шести динаміків, об’ємний стереозвук, підтримка просторового аудіо",
+  "Клавіатура Magic Keyboard",
+  "Порти: два Thunderbolt / USB 4 (USB-C), аудіо 3,5 мм; Ethernet у блоці живлення — опція",
+  "Комплектація: iMac, Magic Keyboard, Magic Mouse, адаптер та кабель живлення, кабель USB‑C / Lightning",
+  "Доступні кольори: Blue, Green, Pink, Silver"
+],
         "colors": [
           {
             "label": "Blue",
@@ -1009,7 +1009,7 @@ export const imacCatalogBlocks: ModuleContentBlock[] = [
       },
       {
         "slug": "imac-24-m1-2021-4-ports",
-        "title": "iMac 24″ M1 (2021) — 4 порти Thunderbolt",
+        "title": "iMac24″M1 (2021) — 4 порти (2Thunderbolt+2USB 3)",
         "family": "iMac 24″",
         "summary": "Старша версія iMac 24 на M1 для клієнтів, яким потрібні більше портів, ширший вибір кольорів і трохи сильніша графіка в тому ж форм-факторі.",
         "overview": [
@@ -1018,20 +1018,20 @@ export const imacCatalogBlocks: ModuleContentBlock[] = [
           "Графіка: 8 ядер"
         ],
         "highlights": [
-          "Дисплей Retina 24 дюйма 4.5K",
-          "Технологія True Tone",
-          "Процесор Apple M1 (8 ядер CPU: 4 продуктивності, 4 ефективності)",
-          "Графічний процесор: 8 ядер",
-          "16‑ядерна система Neural Engine",
-          "ОЗП: 8GB, 16GB",
-          "SSD: 256GB, 512GB, 1TB, 2TB",
-          "Камера FaceTime HD 1080p",
-          "Аудіо: Система із шести динаміків, об’ємний стереозвук, підтримка просторового аудіо",
-          "Клавіатура Magic Keyboard",
-          "Порти: Два Thunderbolt 4 (USB‑C), (Два USB 3), Ethernet, аудіо 3.5 мм",
-          "Комплектація: iMac, Magic Keyboard, Magic Mouse, адаптер та кабель живлення, кабель USB‑C / Lightning",
-          "Доступні кольори: Blue, Green, Pink, Silver, Yellow, Orange, Purple"
-        ],
+  "Дисплей Retina 24 дюйма 4.5K",
+  "Технологія True Tone",
+  "Процесор Apple M1 (8 ядер CPU: 4 продуктивності, 4 ефективності)",
+  "Графічний процесор: 8 ядер",
+  "16‑ядерна система Neural Engine",
+  "ОЗП: 8GB, 16GB",
+  "SSD: 256GB, 512GB, 1TB, 2TB",
+  "Камера FaceTime HD 1080p",
+  "Аудіо: Система із шести динаміків, об’ємний стереозвук, підтримка просторового аудіо",
+  "Клавіатура Magic Keyboard",
+  "Порти: два Thunderbolt / USB 4 (USB-C) та два USB 3 (USB-C), аудіо 3,5 мм; Ethernet у блоці живлення",
+  "Комплектація: iMac, Magic Keyboard, Magic Mouse, адаптер та кабель живлення, кабель USB‑C / Lightning",
+  "Доступні кольори: Blue, Green, Pink, Silver, Yellow, Orange, Purple"
+],
         "colors": [
           {
             "label": "Blue",
@@ -1088,27 +1088,27 @@ export const imacCatalogBlocks: ModuleContentBlock[] = [
           "Графіка: 8 ядер (у 4‑портовому варіанті — 10 ядер)"
         ],
         "highlights": [
-          "Дисплей Retina 24 дюйма 4.5K",
-          "Технологія True Tone",
-          "Процесор Apple M3 (8 ядер CPU: 4 продуктивності, 4 ефективності)",
-          "Графіка: 8 ядер (у 4‑портовому Thunderbolt варіанті — 10 ядер)",
-          "16‑ядерна система Neural Engine",
-          "ОЗП: 8GB, 16GB, 24GB",
-          "SSD: 256GB, 512GB, 1TB (у 4‑портовому iMac доступно 2TB)",
-          "Камера FaceTime HD 1080p",
-          "Аудіо: Система із шести динаміків, об’ємний стереозвук, підтримка просторового аудіо",
-          "Клавіатура Magic Keyboard",
-          "Порти: Два Thunderbolt 4 (USB‑C), (Два USB 3), Ethernet, аудіо 3.5 мм",
-          "Комплектація: iMac, Magic Keyboard, Magic Mouse, адаптер 143 Вт та кабель живлення, кабель USB‑C / Lightning"
-        ],
+  "Дисплей Retina 24 дюйма 4.5K",
+  "Технологія True Tone",
+  "Процесор Apple M3 (8 ядер CPU: 4 продуктивності, 4 ефективності)",
+  "Графіка: 8 ядер (у 4‑портовому Thunderbolt варіанті — 10 ядер)",
+  "16‑ядерна система Neural Engine",
+  "ОЗП: 8GB, 16GB, 24GB",
+  "SSD: 256GB, 512GB, 1TB (у 4‑портовому iMac доступно 2TB)",
+  "Камера FaceTime HD 1080p",
+  "Аудіо: Система із шести динаміків, об’ємний стереозвук, підтримка просторового аудіо",
+  "Клавіатура Magic Keyboard",
+  "Порти: два Thunderbolt / USB 4 (USB-C); у старшій версії також два USB 3 (USB-C); Ethernet залежно від конфігурації",
+  "Комплектація: iMac, Magic Keyboard, Magic Mouse, адаптер 143 Вт та кабель живлення, кабель USB‑C / Lightning"
+],
         "colors": [
-          {
-            "label": "Основний рендер",
-            "imageUrl": "/materials/imac/imac-24-m3-2023.png",
-            "caption": "Основний рендер моделі",
-            "default": true
-          }
-        ]
+  {
+    "label": "Загальний вигляд",
+    "imageUrl": "/materials/imac/imac-24-m3-2023.png",
+    "caption": "iMac 24″ M3 (2023) — 2 порти / 4 порти",
+    "default": true
+  }
+]
       },
       {
         "slug": "imac-24-m4-2024",
@@ -1121,27 +1121,27 @@ export const imacCatalogBlocks: ModuleContentBlock[] = [
           "Графіка: 8 ядер (у 4‑портовому iMac — 10 ядер)"
         ],
         "highlights": [
-          "Дисплей Retina 24 дюйма 4.5K (Доступний варіант з нанотекстурою)",
-          "Технологія True Tone",
-          "Процесор Apple M4: 8 ядер (4 продуктивні, 4 ефективні); доступний варіант на 10 ядер (6 продуктивних, 4 ефективних) для 4‑портового Thunderbolt",
-          "Графіка: 8 ядер (у 4‑портовому iMac — 10 ядер)",
-          "16‑ядерна система Neural Engine",
-          "ОЗП: 16GB, 24GB (32GB у варіанті на 4 порти Thunderbolt)",
-          "SSD: 256GB, 512GB, 1TB (у 4‑портовому iMac доступно 2TB)",
-          "Камера FaceTime HD 1080p",
-          "Аудіо: Система із шести динаміків, об’ємний стереозвук, підтримка просторового аудіо",
-          "Клавіатура Magic Keyboard",
-          "Порти: Два або 4 порти Thunderbolt 4 (USB‑C), (Два порти USB 4 та 3.1), Ethernet, аудіо 3.5 мм, DisplayPort",
-          "Комплектація: iMac, Magic Keyboard, Magic Mouse, адаптер 143 Вт та кабель живлення, кабель USB‑C / Lightning"
-        ],
+  "Дисплей Retina 24 дюйма 4,5K; нанотекстура — опція",
+  "Технологія True Tone",
+  "Процесор: Apple M4 — CPU 8 (4P+4E) у 2-портовому або 10 (4P+6E) у 4-портовому",
+  "Графіка: 8 ядер (у 4‑портовому iMac — 10 ядер)",
+  "16‑ядерна система Neural Engine",
+  "ОЗП: 16GB, 24GB (32GB у варіанті на 4 порти Thunderbolt)",
+  "SSD: 256GB, 512GB, 1TB (у 4‑портовому iMac доступно 2TB)",
+  "Камера: 12 Мп Center Stage з Desk View",
+  "Аудіо: Система із шести динаміків, об’ємний стереозвук, підтримка просторового аудіо",
+  "Клавіатура Magic Keyboard",
+  "Порти: 2 або 4 Thunderbolt 4 (USB-C), аудіо 3,5 мм; Ethernet у блоці живлення залежно від конфігурації",
+  "Заводський комплект: iMac, Magic Keyboard, Magic Mouse, адаптер 143 Вт, кабель живлення, USB-C кабель аксесуарів"
+],
         "colors": [
-          {
-            "label": "Основний рендер",
-            "imageUrl": "/materials/imac/imac-24-m4-2024.png",
-            "caption": "Основний рендер моделі",
-            "default": true
-          }
-        ]
+  {
+    "label": "Загальний вигляд",
+    "imageUrl": "/materials/imac/imac-24-m4-2024.png",
+    "caption": "iMac 24″ M4 (2024) — 2 порти / 4 порти",
+    "default": true
+  }
+]
       }
     ]
   },
@@ -1251,20 +1251,20 @@ export const imacCatalogBlocks: ModuleContentBlock[] = [
           "ОЗП: 16GB"
         ],
         "highlights": [
-          "Процесор: Apple M4 з 10‑ядерним CPU (4 продуктивні + 6 ефективних)",
-          "ОЗП: 16GB (конфігурації 24GB або 32GB)",
-          "SSD: 256GB (конфігурації 512GB, 1TB, 2TB)",
-          "Графіка: 10‑ядерний GPU Apple; апаратне трасування променів",
-          "Порти: 2× Thunderbolt 4, 2× USB‑A, HDMI, Gigabit Ethernet (опція 10GbE), аудіо 3.5 мм"
-        ],
+  "Процесор: Apple M4 з 10‑ядерним CPU (4 продуктивні + 6 ефективних)",
+  "ОЗП: 16GB (конфігурації 24GB або 32GB)",
+  "SSD: 256GB (конфігурації 512GB, 1TB, 2TB)",
+  "Графіка: 10‑ядерний GPU Apple; апаратне трасування променів",
+  "Порти: 3×Thunderbolt 4 ззаду,2×USB-C (USB 3) спереду, HDMI, Ethernet, аудіо 3,5 мм; USB-A немає"
+],
         "colors": [
-          {
-            "label": "Основний рендер",
-            "imageUrl": "/materials/imac/mac-mini-m4-2024.png",
-            "caption": "Основний рендер моделі",
-            "default": true
-          }
-        ]
+  {
+    "label": "Загальний вигляд",
+    "imageUrl": "/materials/imac/mac-mini-m4-2024.png",
+    "caption": "Mac mini M4 (2024)",
+    "default": true
+  }
+]
       },
       {
         "slug": "mac-mini-m4-pro-2024",
@@ -1277,30 +1277,30 @@ export const imacCatalogBlocks: ModuleContentBlock[] = [
           "ОЗП: 24GB"
         ],
         "highlights": [
-          "Процесор: Apple M4 Pro (12 ядер: 8 продуктивних + 4 ефективних), можливий варіант 14 ядер (10P + 4E)",
-          "Графіка: 16 ядер (варіант 20 ядер)",
-          "ОЗП: 24GB (конфігурації 48GB або 64GB)",
-          "SSD: 512GB (конфігурації 1TB, 2TB, 4TB, 8TB)",
-          "Порти: 4× Thunderbolt 5, 2× USB‑A, HDMI, Gigabit Ethernet (опція 10GbE), аудіо 3.5 мм",
-          "Підтримка дисплеїв: до трьох дисплеїв 6K",
-          "Додатково: апаратне трасування променів; 16‑ядерний Neural Engine",
-          "Позиціонування: значне підвищення продуктивності для відео, 3D, ML"
-        ],
+  "Процесор: Apple M4 Pro (12 ядер: 8 продуктивних + 4 ефективних), можливий варіант 14 ядер (10P + 4E)",
+  "Графіка: 16 ядер (варіант 20 ядер)",
+  "ОЗП: 24GB (конфігурації 48GB або 64GB)",
+  "SSD: 512GB (конфігурації 1TB, 2TB, 4TB, 8TB)",
+  "Порти: 3×Thunderbolt 5 ззаду,2×USB-C (USB 3) спереду, HDMI, Ethernet, аудіо 3,5 мм; USB-A немає",
+  "Підтримка дисплеїв: до трьох дисплеїв 6K",
+  "Додатково: апаратне трасування променів; 16‑ядерний Neural Engine",
+  "Позиціонування: значне підвищення продуктивності для відео, 3D, ML"
+],
         "colors": [
-          {
-            "label": "Основний рендер",
-            "imageUrl": "/materials/imac/mac-mini-m4-2024.png",
-            "caption": "Основний рендер лінійки Mac mini M4",
-            "default": true
-          }
-        ]
+  {
+    "label": "Загальний вигляд",
+    "imageUrl": "/materials/imac/mac-mini-m4-2024.png",
+    "caption": "Mac mini M4 Pro (2024)",
+    "default": true
+  }
+]
       }
     ]
   },
   {
     "type": "text",
     "title": "Mac Pro",
-    "html": "<p>Mac Pro — високопродуктивний настільний комп’ютер для професіоналів, флагман лінійки Mac. Орієнтований на відеопродакшн, 3D, музику та складні обчислення.</p>"
+    "html": "<p>Mac Pro — професійна станція для завдань, де потрібні PCIe-карти розширення й спеціалізовані інтерфейси. M2 Ultra (2023) має шість вільних слотів PCIe, але не підтримує дискретні GPU. Це не гарантія вищої продуктивності за будь-який новіший Mac Studio: порівнюйте конкретне навантаження.</p>"
   },
   {
     "type": "productCatalog",
@@ -1317,15 +1317,15 @@ export const imacCatalogBlocks: ModuleContentBlock[] = [
           "ОЗП: до 1.5TB"
         ],
         "highlights": [
-          "Процесор: Intel Xeon W — 8/12/16/24/28 ядер",
-          "Графічні процесори: AMD Radeon Pro 580X / W5500X / W5700X; Vega II / Vega II Duo; W6800X / W6900X; W6800X Duo / W6600X",
-          "ОЗП: 32GB / 48GB / 96GB / 384GB / 768GB / 1.5TB",
-          "SSD: 256GB / 512GB / 1TB / 2TB / 4TB / 8TB",
-          "Підключення дисплеїв: до 12× 4K, 6× 5K або 6× Pro Display XDR (залежить від конфігурації)",
-          "Порти: до 12× Thunderbolt 3 (USB‑C), 2× USB 3, 2× Gigabit Ethernet",
-          "PCIe: 8 слотів розширення",
-          "Комплектація: Magic Keyboard з цифровою панеллю, Magic Mouse, кабель USB‑C/Lightning (1 м), кабель живлення"
-        ],
+  "Процесор: Intel Xeon W — 8/12/16/24/28 ядер",
+  "Графічні процесори: AMD Radeon Pro 580X / W5500X / W5700X; Vega II / Vega II Duo; W6800X / W6900X; W6800X Duo / W6600X",
+  "ОЗП: 32GB / 48GB / 96GB / 384GB / 768GB / 1.5TB",
+  "SSD: 256GB / 512GB / 1TB / 2TB / 4TB / 8TB",
+  "Підключення дисплеїв: до 12× 4K, 6× 5K або 6× Pro Display XDR (залежить від конфігурації)",
+  "Порти: до 12× Thunderbolt 3 (USB‑C), 2× USB 3, 2×10Gb Ethernet",
+  "PCIe: 8 слотів розширення",
+  "Комплектація: Magic Keyboard з цифровою панеллю, Magic Mouse, кабель USB‑C/Lightning (1 м), кабель живлення"
+],
         "colors": [
           {
             "label": "Silver",
@@ -1337,7 +1337,7 @@ export const imacCatalogBlocks: ModuleContentBlock[] = [
       },
       {
         "slug": "mac-pro-m2-2023",
-        "title": "Mac Pro M2 (2023)",
+        "title": "Mac Pro M2 Ultra (2023)",
         "family": "Mac Pro",
         "summary": "Сучасний Mac Pro на Apple Silicon для студій, продакшну, складних обчислень і клієнтів, яким потрібен максимум продуктивності в настільному Mac.",
         "overview": [
@@ -1346,16 +1346,16 @@ export const imacCatalogBlocks: ModuleContentBlock[] = [
           "Neural Engine: 32 ядра"
         ],
         "highlights": [
-          "Процесор: M2 Ultra (24‑ядерний CPU: 16P + 8E)",
-          "Графіка: 60 ядер (кастом 76 ядер)",
-          "Neural Engine: 32 ядра",
-          "ОЗП: 64GB (кастом 128GB, 192GB)",
-          "SSD: 1TB (2TB, 4TB, 8TB)",
-          "Підключення дисплеїв: до восьми 4K, шести 6K або трьох 8K",
-          "Порти: 8× Thunderbolt 4 (USB‑C), 3× USB‑A, 2× HDMI, 2× Gigabit Ethernet",
-          "PCIe: 7 слотів (шість вільних; один із встановленою IO‑платою)",
-          "Комплектація: Magic Keyboard з Touch ID і цифровою панеллю, Magic Mouse, кабель USB‑C/Lightning (1 м), кабель живлення"
-        ],
+  "Процесор: M2 Ultra (24‑ядерний CPU: 16P + 8E)",
+  "Графіка: 60 ядер (кастом 76 ядер)",
+  "Neural Engine: 32 ядра",
+  "ОЗП: 64GB (кастом 128GB, 192GB)",
+  "SSD: 1TB (2TB, 4TB, 8TB)",
+  "Підключення дисплеїв: до восьми 4K, шести 6K або трьох 8K",
+  "Порти: 8× Thunderbolt 4 (USB‑C), 3× USB‑A, 2× HDMI, 2×10Gb Ethernet",
+  "PCIe: 7 слотів (шість вільних; один із встановленою IO‑платою)",
+  "Комплектація: Magic Keyboard з Touch ID і цифровою панеллю, Magic Mouse, кабель USB‑C/Lightning (1 м), кабель живлення"
+],
         "colors": [
           {
             "label": "Silver",
@@ -1396,13 +1396,13 @@ export const imacCatalogBlocks: ModuleContentBlock[] = [
           "Комплектація: Кабель живлення"
         ],
         "colors": [
-          {
-            "label": "Основний рендер",
-            "imageUrl": "/materials/imac/mac-studio-m1-2022.png",
-            "caption": "Основний рендер моделі",
-            "default": true
-          }
-        ]
+  {
+    "label": "Загальний вигляд",
+    "imageUrl": "/materials/imac/mac-studio-m1-2022.png",
+    "caption": "Mac Studio M1 (2022)",
+    "default": true
+  }
+]
       },
       {
         "slug": "mac-studio-m2-2023",
@@ -1415,29 +1415,29 @@ export const imacCatalogBlocks: ModuleContentBlock[] = [
           "Neural Engine: 16 або 32 ядра"
         ],
         "highlights": [
-          "Процесор: M2 Max (12‑ядерний CPU: 8P + 4E), графіка 30 ядер (опція 38), 16‑ядерний Neural Engine",
-          "Процесор: M2 Ultra (24‑ядерний CPU: 16P + 8E), графіка 60 ядер (опція 76), 32‑ядерний Neural Engine",
-          "ОЗП: 32GB/64GB (або 96GB для 38‑ядерної графіки) — M2 Max; 64GB/128GB/192GB — M2 Ultra",
-          "SSD: 512GB/1TB/2TB/4TB/8TB (M2 Max), 1TB/2TB/4TB/8TB (M2 Ultra)",
-          "Дисплеї: до п’яти (M2 Max) або до восьми (M2 Ultra/Pro конф.)",
-          "Порти: 4× Thunderbolt 4 (M2 Max); 6× Thunderbolt 4 (M2 Ultra); 2× USB‑A (обидва), 2× USB‑C (M2 Max), HDMI, 10GbE, SDXC (UHS‑II)",
-          "Комплектація: Кабель живлення"
-        ],
+  "Процесор: M2 Max (12‑ядерний CPU: 8P + 4E), графіка 30 ядер (опція 38), 16‑ядерний Neural Engine",
+  "Процесор: M2 Ultra (24‑ядерний CPU: 16P + 8E), графіка 60 ядер (опція 76), 32‑ядерний Neural Engine",
+  "ОЗП: 32GB/64GB (або 96GB для 38‑ядерної графіки) — M2 Max; 64GB/128GB/192GB — M2 Ultra",
+  "SSD: 512GB/1TB/2TB/4TB/8TB (M2 Max), 1TB/2TB/4TB/8TB (M2 Ultra)",
+  "Дисплеї: до п’яти (M2 Max) або до восьми (M2 Ultra)",
+  "Порти: 4× Thunderbolt 4 (M2 Max); 6× Thunderbolt 4 (M2 Ultra); 2× USB‑A (обидва), 2× USB‑C (M2 Max), HDMI, 10GbE, SDXC (UHS‑II)",
+  "Комплектація: Кабель живлення"
+],
         "colors": [
-          {
-            "label": "Основний рендер",
-            "imageUrl": "/materials/imac/mac-studio-m2-2023.png",
-            "caption": "Основний рендер моделі",
-            "default": true
-          }
-        ]
+  {
+    "label": "Загальний вигляд",
+    "imageUrl": "/materials/imac/mac-studio-m2-2023.png",
+    "caption": "Mac Studio M2 (2023)",
+    "default": true
+  }
+]
       }
     ]
   },
   {
     "type": "text",
     "title": "Перевірка конфігурації",
-    "html": "<p>Звірте точну модель, рік випуску, чип, обсяг оперативної пам’яті й накопичувача. Окремо перевірте комплектність, кількість підтримуваних дисплеїв і сумісність потрібної периферії.</p>"
+    "html": "<p>Звірте модель, рік, чип, пам’ять, SSD, порти й кількість підтримуваних дисплеїв. У Apple Silicon пам’ять обирають при купівлі.</p><p><strong>Mac Studio (2025)</strong> має M4 Max або M3 Ultra та Thunderbolt 5. M4 Max: CPU 14/16, GPU 32/40, до 128 ГБ. M3 Ultra: CPU 28/32, GPU 60/80; точні варіанти пам’яті та SSD перевіряйте за артикулом. Не переносіть характеристики Studio 2025 на Studio M1/M2.</p>"
   }
 ];
 

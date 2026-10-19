@@ -47,8 +47,7 @@ export default async function BrandsPage() {
             <span className="portal-chip">Каталог навчання</span>
             <h1 className="portal-page-title mt-4">Бренди та напрямки</h1>
             <p className="portal-subtitle mt-4 max-w-3xl">
-              Оберіть бренд і перейдіть у потрібну категорію навчання. Тут ми зібрали всі продуктові напрями в одному
-              спокійному каталозі, щоб до потрібного матеріалу можна було дійти за кілька кліків.
+              Оберіть бренд, знайдіть потрібну категорію й переходьте до навчання.
             </p>
 
             <div className="mt-5 flex flex-wrap gap-2">
@@ -69,7 +68,7 @@ export default async function BrandsPage() {
             </div>
           </div>
 
-          <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-2">
+          <div className="portal-summary-grid grid gap-3 sm:grid-cols-2 xl:grid-cols-2">
             <div className="rounded-[24px] border border-white/10 bg-white/[0.025] px-4 py-4">
               <div className="flex items-center justify-between gap-3">
                 <p className="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-slate-500">Брендів</p>
@@ -108,8 +107,7 @@ export default async function BrandsPage() {
                 <p className="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-slate-500">Рекомендований старт</p>
                 <p className="portal-display-title-tight mt-3 text-2xl text-ink">{spotlightBrand.name}</p>
                 <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-600">
-                  Якщо хочете почати з найобʼємнішого бренду в каталозі, зайдіть сюди першими. Це хороший маршрут, щоб
-                  протестувати нову навігацію й пройти одразу кілька повних гілок навчання.
+                  Почніть із найповнішого розділу каталогу: оберіть категорію, опрацюйте матеріал і перевірте знання.
                 </p>
               </div>
 
