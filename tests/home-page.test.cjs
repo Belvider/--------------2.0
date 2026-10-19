@@ -55,7 +55,10 @@ async function renderHome(data) {
       if (request === 'next/link') return { __esModule: true, default: ({ children, ...props }) => React.createElement('a', props, children) };
       if (request.endsWith('.module.css')) return { __esModule: true, default: new Proxy({}, { get: (_, key) => String(key) }) };
       if (request === '@/lib/prisma') throw new Error('Home SSR tests must not access a database');
-      if (request.startsWith('@/')) return load(request.slice(2) + '.ts');
+      if (request.startsWith('@/')) {
+        const relative = request.slice(2);
+        return load(relative + (fs.existsSync(path.resolve(__dirname, '..', relative + '.tsx')) ? '.tsx' : '.ts'));
+      }
       return installed(request);
     };
     loaded._compile(ts.transpileModule(fs.readFileSync(filename, 'utf8'), {
@@ -117,7 +120,7 @@ test('an empty catalog renders honest zero progress and the no-result state with
   assert.match(markup, /<h1>Головна<\/h1>/);
   assert.match(markup, /Матеріали незабаром з’являться/);
   assert.equal(primaryAction(markup).href, '/brands');
-  assert.match(markup, /<p class="progressDescription">[^<]*0 із 0[^<]*<\/p>/);
+  assert.match(markup, /<p class="progressDescription">Залишилося модулів: 0<\/p>/);
   assert.match(markup, /aria-valuenow="0"/);
   assert.match(markup, /Нових матеріалів поки немає\./);
   assert.match(markup, /<p class="statValue">—<\/p><h2>Середній результат<\/h2>/);

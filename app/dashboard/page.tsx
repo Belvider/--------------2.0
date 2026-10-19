@@ -1,16 +1,18 @@
 import type { Metadata, Route } from "next";
+import type { CSSProperties } from "react";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, Award, BarChart3, BookOpenCheck, CalendarDays, ChevronDown, Clock3, Trophy } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Award, BarChart3, BookOpenCheck, CalendarDays, ChevronDown, Clock3, Sparkles, Trophy } from "lucide-react";
 import { OnboardingModal } from "@/components/OnboardingModal";
 import { PortalShell } from "@/components/PortalShell";
+import { QuickPractice } from "@/components/home/QuickPractice";
+import { LearningPulse } from "@/components/home/LearningPulse";
+import { getActivityDay } from "@/lib/activity-days";
 import { requireAuthPageUser } from "@/lib/guards";
 import { getDashboardData } from "@/lib/queries";
 import { cn, formatDate } from "@/lib/ui";
 import styles from "./home.module.css";
 
 export const metadata: Metadata = { title: "Головна | Портал навчання" };
-
-const DAY_LABELS = ["Нд", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"];
 
 function getGreetingName(fullName: string) {
   const parts = fullName.trim().split(/\s+/).filter(Boolean);
@@ -47,9 +49,21 @@ export default async function HomePage() {
   const featuredCta = featuredId ? quizReady ? "Перейти до тесту" : featuredProgress > 0 ? "Продовжити навчання" : "Почати модуль"
     : allComplete ? "Повторити матеріали" : "Відкрити каталог";
   const remainingAssignments = openAssignments.filter((item) => item.moduleId !== featuredId);
-  const activeDays = data.weeklyActivity.filter((item) => item.modulesCount > 0).length;
   const progressPct = Math.min(100, Math.max(0, data.progressPct));
-  const today = new Intl.DateTimeFormat("uk-UA", { day: "numeric", month: "long", timeZone: "Europe/Kyiv" }).format(new Date());
+  const now = new Date();
+  const activityDay = getActivityDay(now);
+  const practiceIndex = Math.floor(Date.parse(activityDay + "T00:00:00Z") / 86_400_000);
+  const today = new Intl.DateTimeFormat("uk-UA", { day: "numeric", month: "long", timeZone: "Europe/Kyiv" }).format(now);
+  const metrics = [
+    {
+      icon: BarChart3,
+      label: "Середній результат",
+      value: data.averageQuizScore !== null ? data.averageQuizScore + "%" : "—",
+      note: data.averageQuizScore !== null ? "Найкращі спроби за модулями" : "Після першого тесту"
+    },
+    { icon: Award, label: "Сертифікати", value: data.certificatesCount, note: "За успішні тести" },
+    { icon: CalendarDays, label: "Активні дні", value: data.activeDaysLast14 + " / 14", note: "За останні два тижні" }
+  ];
 
   return (
     <PortalShell user={user}>
@@ -59,17 +73,25 @@ export default async function HomePage() {
       <div className={styles.home}>
         <header className={styles.header}>
           <div>
-            <p className={styles.date}><CalendarDays size={14} aria-hidden="true" />{today}</p>
+            <p className={styles.headerEyebrow}><span aria-hidden="true" />Ваш простір навчання</p>
             <h1>Головна</h1>
-            <p className={styles.subtitle}>Ваш наступний крок і прогрес навчання.</p>
+            <p className={styles.subtitle}>Від знань про техніку — до впевненої консультації.</p>
           </div>
-          <Link href="/brands" className={cn("focus-ring", styles.catalogLink)}>
-            Усі матеріали <ArrowUpRight size={16} aria-hidden="true" />
-          </Link>
+          <div className={styles.headerActions}>
+            <p className={styles.date}><CalendarDays size={14} aria-hidden="true" />{today}</p>
+            <Link href="/brands" className={cn("focus-ring", styles.catalogLink)}>
+              Усі матеріали <ArrowUpRight size={16} aria-hidden="true" />
+            </Link>
+          </div>
         </header>
 
         <section className={styles.learningGrid} aria-label="Навчання та прогрес">
           <article className={cn("card", styles.panel, styles.feature, overdue && styles.featureUrgent)}>
+            <div className={styles.featureArt} aria-hidden="true">
+              <span className={styles.orbit} /><span className={styles.orbitInner} />
+              <div className={styles.featureGlyph}><BookOpenCheck strokeWidth={1.15} /></div>
+              <span className={styles.artSpark}><Sparkles size={18} /></span>
+            </div>
             <div className={styles.featureTop}>
               <span className={styles.eyebrow}><BookOpenCheck size={15} aria-hidden="true" />Наступний крок</span>
               {featuredAssignment?.dueAt ? (
@@ -97,39 +119,40 @@ export default async function HomePage() {
           </article>
 
           <article className={cn("card", styles.panel, styles.progressPanel)}>
-            <p className={styles.eyebrow}>Ваш прогрес</p>
-            <div className={styles.progressValue}>{progressPct}<span>%</span></div>
-            <p className={styles.progressDescription}>Завершено модулів: {data.completedModules} із {data.totalModules}</p>
-            <div className={styles.progressTrack} role="progressbar" aria-label="Завершені модулі"
-              aria-valuemin={0} aria-valuemax={100} aria-valuenow={progressPct}>
-              <span style={{ width: progressPct + "%" }} />
+            <div className={styles.sectionHeader}>
+              <h2 className={styles.eyebrow}>Ваш прогрес</h2>
+              <Link href="/profile" className={cn("focus-ring", styles.iconLink)} aria-label="Прогрес і досягнення у профілі"><ArrowUpRight size={16} aria-hidden="true" /></Link>
             </div>
-            <dl className={styles.progressDetails}>
-              <div><dt>У процесі</dt><dd>{data.inProgressModules}</dd></div>
-              <div><dt>Залишилося</dt><dd>{Math.max(data.totalModules - data.completedModules, 0)}</dd></div>
-            </dl>
-            <Link href="/profile" className={cn("focus-ring", styles.textLink)}>
-              Детальніше у профілі <ArrowRight size={14} aria-hidden="true" />
-            </Link>
+            <div className={styles.progressSummary}>
+              <div className={styles.progressRing} style={{ "--progress": progressPct + "%" } as CSSProperties}
+                role="progressbar" aria-label="Завершені модулі" aria-valuemin={0} aria-valuemax={100} aria-valuenow={progressPct}>
+                <div className={styles.progressValue}>{progressPct}<span>%</span><small>завершено</small></div>
+              </div>
+              <dl className={styles.progressDetails}>
+                <div><dt><span className={styles.completedDot} />Завершено</dt><dd>{data.completedModules}<small> / {data.totalModules}</small></dd></div>
+                <div><dt><span className={styles.inProgressDot} />У процесі</dt><dd>{data.inProgressModules}</dd></div>
+              </dl>
+            </div>
+            <p className={styles.progressDescription}>Залишилося модулів: {Math.max(data.totalModules - data.completedModules, 0)}</p>
+            <section className={styles.stats} aria-label="Показники навчання">
+              {metrics.map((stat) => {
+                const Icon = stat.icon;
+                return (
+                  <article key={stat.label} className={styles.stat}>
+                    <Icon size={16} className={styles.statIcon} aria-hidden="true" />
+                    <p className={styles.statValue}>{stat.value}</p>
+                    <h2>{stat.label}</h2>
+                    <p className={styles.statNote}>{stat.note}</p>
+                  </article>
+                );
+              })}
+            </section>
           </article>
         </section>
 
-        <section className={styles.stats} aria-label="Показники навчання">
-          {[
-            { icon: BarChart3, label: "Середній результат", value: data.averageQuizScore !== null ? data.averageQuizScore + "%" : "—", note: data.averageQuizScore !== null ? "Найкращі спроби за модулями" : "Після першого тесту" },
-            { icon: Award, label: "Сертифікати", value: data.certificatesCount, note: "За успішні тести" },
-            { icon: CalendarDays, label: "Активні дні", value: data.activeDaysLast14 + " / 14", note: "За останні два тижні" }
-          ].map((stat) => {
-            const Icon = stat.icon;
-            return (
-              <article key={stat.label} className={cn("card", styles.stat)}>
-                <Icon size={19} className={styles.statIcon} aria-hidden="true" />
-                <p className={styles.statValue}>{stat.value}</p>
-                <h2>{stat.label}</h2>
-                <p className={styles.statNote}>{stat.note}</p>
-              </article>
-            );
-          })}
+        <section className={styles.exploreGrid} aria-label="Мініпрактика та навчальна активність">
+          <QuickPractice key={activityDay} initialIndex={practiceIndex} />
+          <LearningPulse days={data.weeklyActivity} />
         </section>
 
         {remainingAssignments.length > 0 && (
@@ -157,51 +180,27 @@ export default async function HomePage() {
           </section>
         )}
 
-        <section className={styles.materialsGrid} aria-label="Матеріали та активність">
-          <article className={cn("card", styles.panel)}>
-            <div className={styles.sectionHeader}>
-              <div><p className={styles.eyebrow}>Каталог</p><h2>Останні матеріали</h2></div>
-              <Link href="/brands" className={cn("focus-ring", styles.iconLink)} aria-label="Усі навчальні матеріали">
-                <ArrowUpRight size={18} aria-hidden="true" />
+        <section className={cn("card", styles.panel, styles.catalogPanel)} aria-labelledby="home-materials-title">
+          <div className={styles.sectionHeader}>
+            <div><p className={styles.eyebrow}>Знайдіть свою тему</p><h2 id="home-materials-title">Останні матеріали</h2></div>
+            <Link href="/brands" className={cn("focus-ring", styles.iconLink)} aria-label="Усі навчальні матеріали">
+              <ArrowUpRight size={18} aria-hidden="true" />
+            </Link>
+          </div>
+          <div className={styles.materialList}>
+            {data.newMaterials.slice(0, 3).map((item, index) => (
+              <Link key={item.id} href={("/module/" + item.id) as Route} className={cn("focus-ring", styles.material)}>
+                <span className={styles.materialNumber} aria-hidden="true">0{index + 1}</span>
+                <div className={styles.rowCopy}>
+                  <p className={styles.materialBrand}>{item.category.brand.name}</p>
+                  <h3>{item.title}</h3>
+                  <p><Clock3 size={12} aria-hidden="true" />{item.durationMin} хв</p>
+                </div>
+                <span className={styles.materialArrow}><ArrowUpRight size={17} aria-hidden="true" /></span>
               </Link>
-            </div>
-            <div className={styles.materialList}>
-              {data.newMaterials.slice(0, 3).map((item) => (
-                <Link key={item.id} href={("/module/" + item.id) as Route} className={cn("focus-ring", styles.material)}>
-                  <span className={styles.materialIcon}><BookOpenCheck size={20} aria-hidden="true" /></span>
-                  <div className={styles.rowCopy}>
-                    <h3>{item.title}</h3>
-                    <p>{item.category.brand.name} · {item.durationMin} хв</p>
-                  </div>
-                  <ArrowRight size={15} aria-hidden="true" />
-                </Link>
-              ))}
-              {data.newMaterials.length === 0 && <p className={styles.empty}>Нових матеріалів поки немає.</p>}
-            </div>
-          </article>
-
-          <article className={cn("card", styles.panel, styles.activityPanel)}>
-            <div className={styles.sectionHeader}>
-              <div><p className={styles.eyebrow}>Навчальний ритм</p><h2>Останні 7 днів</h2></div>
-              <span className={styles.activityCount}>{activeDays} / 7</span>
-            </div>
-            <ol className={styles.activityWeek} aria-label="Активність за останні сім днів">
-              {data.weeklyActivity.map((day) => {
-                const date = new Date(day.day + "T12:00:00Z");
-                const label = new Intl.DateTimeFormat("uk-UA", { day: "numeric", month: "long", timeZone: "Europe/Kyiv" }).format(date);
-                return (
-                  <li key={day.day} aria-current={day.isToday ? "date" : undefined}
-                    className={cn(styles.activityDay, day.modulesCount > 0 && styles.activeDay, day.isToday && styles.today)}
-                    title={label + ": модулів — " + day.modulesCount}>
-                    <span>{day.modulesCount || "—"}</span>
-                    <small>{DAY_LABELS[date.getUTCDay()]}</small>
-                  </li>
-                );
-              })}
-            </ol>
-            <p className={styles.activityNote}>{activeDays > 0 ? "Модулі, з якими ви працювали щодня." : "За цей період активності ще немає."}</p>
-            <Link href="/profile" className={cn("focus-ring", styles.textLink)}>Історія навчання<ArrowRight size={14} aria-hidden="true" /></Link>
-          </article>
+            ))}
+            {data.newMaterials.length === 0 && <p className={styles.empty}>Нових матеріалів поки немає.</p>}
+          </div>
         </section>
 
         {data.leaderboard.length > 0 && (
