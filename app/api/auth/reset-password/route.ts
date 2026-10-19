@@ -27,15 +27,18 @@ export async function POST(request: Request) {
       await tx.$executeRaw`SELECT id FROM users WHERE id = ${tokenEntry.userId} FOR UPDATE`;
       const user = await tx.user.findUnique({ where: { id: tokenEntry.userId }, select: { id: true, email: true, isActive: true } });
       if (!user?.isActive) return false;
+      // A reset may wait for another password operation's row lock. Check its
+      // expiry again at consumption time, not at the start of that wait.
+      const consumedAt = new Date();
       const consumed = await tx.passwordResetToken.updateMany({
-        where: { id: tokenEntry.id, usedAt: null, expiresAt: { gt: now } },
-        data: { usedAt: now }
+        where: { id: tokenEntry.id, usedAt: null, expiresAt: { gt: consumedAt } },
+        data: { usedAt: consumedAt }
       });
       if (consumed.count !== 1) return false;
       await tx.user.update({ where: { id: tokenEntry.userId }, data: { passwordHash } });
       await tx.passwordResetToken.updateMany({
         where: { userId: tokenEntry.userId, usedAt: null },
-        data: { usedAt: now }
+        data: { usedAt: consumedAt }
       });
       await tx.loginAttempt.deleteMany({ where: { email: user.email, successful: false } });
       return true;

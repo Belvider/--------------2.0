@@ -250,8 +250,8 @@ export function AdminUserAccessPanel({ userId, userName, canManage }: AdminUserA
       </div>
 
       <div className="mt-4 space-y-1">
-        {message ? <p className="text-sm text-emerald-300">{message}</p> : null}
-        {error ? <p className="text-sm text-rose-300">{error}</p> : null}
+        {message ? <p role="status" className="text-sm text-emerald-300">{message}</p> : null}
+        {error ? <p role="alert" className="text-sm text-rose-300">{error}</p> : null}
         {!canManage ? <p className="text-sm text-slate-500">Керування доступом недоступне для цього профілю.</p> : null}
       </div>
     </section>
