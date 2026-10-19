@@ -8,7 +8,7 @@ import type { Role } from "@prisma/client";
 import {
   Building2,
   CreditCard,
-  LayoutDashboard,
+  House,
   LogOut,
   MoreHorizontal,
   Package,
@@ -24,7 +24,7 @@ import { AccessibleDialog } from "@/components/AccessibleDialog";
 type NavItem = { href: Route; label: string; icon: ComponentType<{ className?: string }> };
 
 const MAIN_LINKS: NavItem[] = [
-  { href: "/dashboard", label: "Дашборд", icon: LayoutDashboard },
+  { href: "/dashboard", label: "Головна", icon: House },
   { href: "/brands",    label: "Бренди",   icon: Building2 },
   { href: "/profile",   label: "Профіль",  icon: UserCircle }
 ];
@@ -36,7 +36,7 @@ const MORE_LINKS: NavItem[] = [
 ];
 
 const ADMIN_LINKS: NavItem[] = [
-  { href: "/dashboard", label: "Дашборд", icon: LayoutDashboard },
+  { href: "/dashboard", label: "Головна", icon: House },
   { href: "/brands",    label: "Бренди",   icon: Building2 },
   { href: "/profile",   label: "Профіль",  icon: UserCircle },
   { href: "/admin",     label: "Адмін",    icon: ShieldCheck }

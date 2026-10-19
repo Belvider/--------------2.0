@@ -96,7 +96,7 @@ export default async function AdminPage() {
       <section className="card px-4 py-5 sm:px-6 sm:py-7 xl:px-8 xl:py-8 animate-fadeUp">
         <div className="flex flex-wrap items-start justify-between gap-5">
           <div>
-            <span className="portal-chip">Адмін-дашборд</span>
+            <span className="portal-chip">Огляд</span>
             <h1 className="portal-page-title mt-4">Центр керування</h1>
             <p className="portal-subtitle mt-3 max-w-2xl">
               Живий стан порталу: команда, контент, прогрес і сигнали безпеки.

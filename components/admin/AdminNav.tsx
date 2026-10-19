@@ -21,7 +21,7 @@ type NavLink = {
 };
 
 const LINKS: NavLink[] = [
-  { href: "/admin",             label: "Дашборд",      icon: LayoutDashboard, exact: true },
+  { href: "/admin",             label: "Огляд",         icon: LayoutDashboard, exact: true },
   { href: "/admin/users",       label: "Команда",       icon: Users2 },
   { href: "/admin/reports",     label: "Звіти",         icon: BarChart3 },
   { href: "/admin/content",     label: "Контент",       icon: FolderKanban },

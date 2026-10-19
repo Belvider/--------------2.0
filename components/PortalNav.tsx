@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { Role } from "@prisma/client";
-import { Building2, CreditCard, LayoutDashboard, Package, ShieldCheck, UserCircle, Wrench } from "lucide-react";
+import { Building2, CreditCard, House, Package, ShieldCheck, UserCircle, Wrench } from "lucide-react";
 import { cn } from "@/lib/ui";
 
 type PortalNavProps = {
@@ -12,7 +12,7 @@ type PortalNavProps = {
 };
 
 const links = [
-  { href: "/dashboard", label: "Дашборд", icon: LayoutDashboard },
+  { href: "/dashboard", label: "Головна", icon: House },
   { href: "/brands", label: "Бренди", icon: Building2 },
   { href: "/services", label: "Сервіс", icon: Wrench },
   { href: "/accessories", label: "Аксесуари", icon: Package },

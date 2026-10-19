@@ -703,6 +703,7 @@ export async function getAdminAuditSummary() {
 
 export async function getDashboardData(userId: string) {
   const now = new Date();
+  const today = getActivityDay(now);
   const sevenDaysAgo = new Date(now);
   sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
 
@@ -721,7 +722,8 @@ export async function getDashboardData(userId: string) {
     userBadges,
     certificatesCount,
     leaderboardRaw,
-    assignmentsData
+    assignmentsData,
+    activityDays
   ] = await Promise.all([
     prisma.module.count({ where: { isPublished: true } }),
     prisma.module.aggregate({
@@ -733,18 +735,21 @@ export async function getDashboardData(userId: string) {
     prisma.userProgress.count({
       where: {
         userId,
-        status: ProgressStatus.COMPLETED
+        status: ProgressStatus.COMPLETED,
+        module: { isPublished: true }
       }
     }),
     prisma.userProgress.findFirst({
       where: {
         userId,
-        status: ProgressStatus.IN_PROGRESS
+        status: ProgressStatus.IN_PROGRESS,
+        module: { isPublished: true }
       },
-      orderBy: [{ progressPct: "desc" }, { lastSeenAt: "desc" }],
+      orderBy: [{ lastSeenAt: "desc" }, { progressPct: "desc" }],
       include: {
         module: {
           include: {
+            _count: { select: { questions: true } },
             category: {
               include: {
                 brand: true
@@ -755,7 +760,7 @@ export async function getDashboardData(userId: string) {
       }
     }),
     prisma.userProgress.findMany({
-      where: { userId },
+      where: { userId, module: { isPublished: true } },
       select: {
         status: true,
         progressPct: true,
@@ -793,7 +798,7 @@ export async function getDashboardData(userId: string) {
       }
     }),
     prisma.quizAttempt.findMany({
-      where: { userId },
+      where: { userId, module: { isPublished: true } },
       select: { moduleId: true, score: true, passed: true }
     }),
     prisma.userBadge.findMany({
@@ -806,12 +811,17 @@ export async function getDashboardData(userId: string) {
     prisma.certificate.count({ where: { userId } }),
     prisma.userProgress.groupBy({
       by: ["userId"],
-      where: { status: ProgressStatus.COMPLETED },
+      where: { status: ProgressStatus.COMPLETED, module: { isPublished: true } },
       _count: { _all: true },
       orderBy: { _count: { userId: "desc" } },
       take: 10
       }),
-    getResolvedAssignmentsForUser(userId)
+    getResolvedAssignmentsForUser(userId),
+    prisma.learningActivity.groupBy({
+      by: ["day"],
+      where: { userId, day: { gte: shiftActivityDay(today, -13), lte: today } },
+      _count: { _all: true }
+    })
   ]);
 
   const leaderboardUsers = await prisma.user.findMany({
@@ -835,7 +845,7 @@ export async function getDashboardData(userId: string) {
 
   const leaderboardAttempts = leaderboardUserIds.length > 0
     ? await prisma.quizAttempt.findMany({
-        where: { userId: { in: leaderboardUserIds } },
+        where: { userId: { in: leaderboardUserIds }, module: { isPublished: true } },
         select: { userId: true, moduleId: true, score: true }
       })
     : [];
@@ -890,10 +900,12 @@ export async function getDashboardData(userId: string) {
   );
   const completedLast30Days = completedLast30DaysItems.length;
   const completedMinutesLast30Days = completedLast30DaysItems.reduce((sum, item) => sum + item.module.durationMin, 0);
-  const activeDaysLast14 = (await prisma.learningActivity.groupBy({
-    by: ["day"],
-    where: { userId, day: { gte: shiftActivityDay(getActivityDay(), -13), lte: getActivityDay() } }
-  })).length;
+  const activeDaysLast14 = activityDays.length;
+  const activityByDay = new Map(activityDays.map((item) => [item.day, item._count._all]));
+  const weeklyActivity = Array.from({ length: 7 }, (_, index) => {
+    const day = shiftActivityDay(today, index - 6);
+    return { day, modulesCount: activityByDay.get(day) ?? 0, isToday: day === today };
+  });
   const continueModuleRemainingMin =
     currentProgress && currentProgress.progressPct < 100
       ? Math.max(Math.round(currentProgress.module.durationMin * ((100 - currentProgress.progressPct) / 100)), 1)
@@ -936,6 +948,7 @@ export async function getDashboardData(userId: string) {
     completedLast30Days,
     completedMinutesLast30Days,
     activeDaysLast14,
+    weeklyActivity,
     projectedCompletionDays
   };
 }

@@ -79,7 +79,7 @@ export function AdminShell({ user, children }: AdminShellProps) {
               <span className="flex size-9 items-center justify-center rounded-[10px] border border-transparent bg-transparent">
                 <ArrowLeft className="size-4" aria-hidden="true" />
               </span>
-              <span>До порталу</span>
+              <span>На головну</span>
             </Link>
 
             <form action="/api/auth/logout" method="post">
