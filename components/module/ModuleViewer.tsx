@@ -25,6 +25,14 @@ type ModuleViewerPage = {
 const ALL_FILTER_KEY = "all";
 const SIMPLE_BLOCKS_PER_PAGE = 3;
 
+// The Apple Store PNGs include large transparent margins. Frame the device,
+// keeping a transparent safety margin and the original image proportions.
+const iphoneImageFrames = [
+  { prefix: "/materials/iphone/2026/18-pro/", x: 145, y: 200, width: 650, height: 772 },
+  { prefix: "/materials/iphone/2026/duo/", x: 49, y: 272, width: 841, height: 568 },
+  { prefix: "/materials/iphone/2026/17e/", x: 116, y: 132, width: 708, height: 849 }
+];
+
 const colorToneMap: Record<string, string> = {
   black: "#202124",
   "space black": "#171717",
@@ -240,11 +248,28 @@ function ProductCatalogCard({ product }: { product: ModuleCatalogProduct }) {
   const defaultColorIndex = Math.max(product.colors.findIndex((color) => color.default), 0);
   const [activeColorIndex, setActiveColorIndex] = useState(defaultColorIndex);
   const activeColor = product.colors[activeColorIndex] ?? product.colors[0];
+  const imageFrame = iphoneImageFrames.find((frame) => activeColor?.imageUrl.startsWith(frame.prefix));
   const overview = product.overview.map(parseOverviewItem);
   const visibleHighlights = product.highlights.slice(0, 6);
   const extraHighlights = product.highlights.slice(6);
   const year = product.title.match(/\((\d{4})\)/)?.[1];
   const family = getProductFamily(product);
+  const productImage = activeColor ? (
+    <Image
+      src={activeColor.imageUrl}
+      alt={`${product.title}, ${activeColor.caption}`}
+      width={imageFrame ? 940 : 560}
+      height={imageFrame ? 1112 : 560}
+      unoptimized
+      className={imageFrame ? styles.framedProductImage : "mx-auto h-[200px] w-full max-w-[240px] object-contain drop-shadow-[0_20px_36px_rgba(0,0,0,0.35)] sm:h-[240px]"}
+      style={imageFrame ? {
+        width: `${940 / imageFrame.width * 100}%`,
+        height: `${1112 / imageFrame.height * 100}%`,
+        left: `${-imageFrame.x / imageFrame.width * 100}%`,
+        top: `${-imageFrame.y / imageFrame.height * 100}%`
+      } : undefined}
+    />
+  ) : null;
 
   return (
     <article
@@ -274,15 +299,18 @@ function ProductCatalogCard({ product }: { product: ModuleCatalogProduct }) {
 
         {/* ── Ліво: зображення ── */}
         {activeColor ? <div className={styles.productVisual}>
-          <figure>
-              <Image
-                src={activeColor.imageUrl}
-                alt={`${product.title}, ${activeColor.caption}`}
-                width={560}
-                height={560}
-                unoptimized
-                className="mx-auto h-[200px] w-full max-w-[240px] object-contain drop-shadow-[0_20px_36px_rgba(0,0,0,0.35)] sm:h-[240px]"
-              />
+          <figure className={imageFrame ? styles.productImageFigure : undefined}>
+            {imageFrame ? (
+              <div
+                className={styles.productImageViewport}
+                style={{
+                  aspectRatio: `${imageFrame.width} / ${imageFrame.height}`,
+                  width: `min(100%, calc(var(--product-image-height) * ${imageFrame.width / imageFrame.height}))`
+                }}
+              >
+                {productImage}
+              </div>
+            ) : productImage}
           </figure>
 
           {/* Колір-dots: тільки кольорові кружечки */}
