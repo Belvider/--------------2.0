@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import type { ModuleCatalogProduct, ModuleContentBlock } from "@/lib/module-content";
 import { getVideoSource } from "@/lib/video-source";
 import { getRequestError, requestJson } from "@/lib/http-client";
+import { getProductImageFrame } from "@/lib/product-image-frames";
 import styles from "./ModuleViewer.module.css";
 
 type ModuleViewerProps = {
@@ -24,14 +25,6 @@ type ModuleViewerPage = {
 
 const ALL_FILTER_KEY = "all";
 const SIMPLE_BLOCKS_PER_PAGE = 3;
-
-// The Apple Store PNGs include large transparent margins. Frame the device,
-// keeping a transparent safety margin and the original image proportions.
-const iphoneImageFrames = [
-  { prefix: "/materials/iphone/2026/18-pro/", x: 145, y: 200, width: 650, height: 772 },
-  { prefix: "/materials/iphone/2026/duo/", x: 49, y: 272, width: 841, height: 568 },
-  { prefix: "/materials/iphone/2026/17e/", x: 116, y: 132, width: 708, height: 849 }
-];
 
 const colorToneMap: Record<string, string> = {
   black: "#202124",
@@ -252,7 +245,7 @@ function ProductCatalogCard({ product }: { product: ModuleCatalogProduct }) {
   const defaultColorIndex = Math.max(product.colors.findIndex((color) => color.default), 0);
   const [activeColorIndex, setActiveColorIndex] = useState(defaultColorIndex);
   const activeColor = product.colors[activeColorIndex] ?? product.colors[0];
-  const imageFrame = iphoneImageFrames.find((frame) => activeColor?.imageUrl.startsWith(frame.prefix));
+  const imageFrame = getProductImageFrame(activeColor?.imageUrl);
   const overview = product.overview.map(parseOverviewItem);
   const visibleHighlights = product.highlights.slice(0, 6);
   const extraHighlights = product.highlights.slice(6);
@@ -262,13 +255,13 @@ function ProductCatalogCard({ product }: { product: ModuleCatalogProduct }) {
     <Image
       src={activeColor.imageUrl}
       alt={`${product.title}, ${activeColor.caption}`}
-      width={imageFrame ? 940 : 560}
-      height={imageFrame ? 1112 : 560}
+      width={imageFrame?.naturalWidth ?? 560}
+      height={imageFrame?.naturalHeight ?? 560}
       unoptimized
       className={imageFrame ? styles.framedProductImage : "mx-auto h-[200px] w-full max-w-[240px] object-contain drop-shadow-[0_20px_36px_rgba(0,0,0,0.35)] sm:h-[240px]"}
       style={imageFrame ? {
-        width: `${940 / imageFrame.width * 100}%`,
-        height: `${1112 / imageFrame.height * 100}%`,
+        width: `${imageFrame.naturalWidth / imageFrame.width * 100}%`,
+        height: `${imageFrame.naturalHeight / imageFrame.height * 100}%`,
         left: `${-imageFrame.x / imageFrame.width * 100}%`,
         top: `${-imageFrame.y / imageFrame.height * 100}%`
       } : undefined}
@@ -317,10 +310,10 @@ function ProductCatalogCard({ product }: { product: ModuleCatalogProduct }) {
             ) : productImage}
           </figure>
 
-          {/* Колір-dots: тільки кольорові кружечки */}
+          {/* Show a selector only when there is another photo to choose. */}
           {product.colors.length > 0 && (
-            <div className="mt-5">
-              <div className="flex flex-wrap justify-center gap-2">
+            <div className="mt-3 sm:mt-5">
+              {product.colors.length > 1 && <div className="flex flex-wrap justify-center gap-1">
                 {product.colors.map((color, index) => {
                   const active = index === activeColorIndex;
                   const tone = getColorTone(color.label);
@@ -332,22 +325,26 @@ function ProductCatalogCard({ product }: { product: ModuleCatalogProduct }) {
                       title={color.label}
                       aria-label={`${product.title}: ${color.label}`}
                       aria-pressed={active}
-                      className={`focus-ring rounded-full transition-all duration-150 ${
-                        active
-                          ? "scale-125 ring-2 ring-[color:var(--brand-strong)] ring-offset-1 ring-offset-[rgba(15,11,23,0.9)]"
-                          : "opacity-60 hover:opacity-90 hover:scale-110"
-                      }`}
-                      style={{ width: 20, height: 20, backgroundColor: tone, border: "1.5px solid rgba(255,255,255,0.15)" }}
-                    />
+                      className={product.variantType === "model"
+                        ? `focus-ring min-h-8 rounded-full border px-3 py-1 text-xs font-medium transition ${active
+                          ? "border-[color:var(--brand-strong)] bg-[rgba(40,178,158,0.12)] text-[color:var(--brand-strong)]"
+                          : "border-white/15 text-slate-300 hover:border-white/30"}`
+                        : "focus-ring group flex size-7 items-center justify-center rounded-full"}
+                    >
+                      {product.variantType === "model" ? color.label : <span
+                        aria-hidden="true"
+                        className={`size-5 rounded-full transition-all duration-150 ${active
+                          ? "ring-2 ring-[color:var(--brand-strong)] ring-offset-2 ring-offset-[rgba(15,11,23,0.9)]"
+                          : "opacity-60 group-hover:opacity-90"}`}
+                        style={{ backgroundColor: tone, border: "1.5px solid rgba(255,255,255,0.15)" }}
+                      />}
+                    </button>
                   );
                 })}
-              </div>
+              </div>}
               {activeColor && (
-                <p className="mt-3 text-center text-xs font-medium text-slate-400">
-                  {activeColor.label}
-                  {activeColor.caption && activeColor.caption !== activeColor.label && (
-                    <span className="ml-1.5 text-slate-400">· {activeColor.caption}</span>
-                  )}
+                <p className={`${product.colors.length > 1 ? "mt-2 " : ""}text-center text-xs font-medium text-slate-400`}>
+                  {activeColor.caption || activeColor.label}
                 </p>
               )}
             </div>
@@ -360,7 +357,7 @@ function ProductCatalogCard({ product }: { product: ModuleCatalogProduct }) {
           {/* Технічні характеристики */}
           {overview.length > 0 && (
             <div className="px-4 py-4 sm:px-5">
-              <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.22em] text-slate-500">Характеристики</p>
+              <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.22em] text-slate-400">Характеристики</p>
               <dl className="space-y-2">
                 {overview.map((item) => (
                   <div key={`${product.slug}-${item.label}-${item.value}`} className={styles.specification}>
@@ -377,7 +374,7 @@ function ProductCatalogCard({ product }: { product: ModuleCatalogProduct }) {
           {/* Аргументи для консультації */}
           {visibleHighlights.length > 0 && (
             <div className="px-4 py-4 sm:px-5">
-              <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.22em] text-slate-500">
+              <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.22em] text-slate-400">
                 Що пояснити клієнту
               </p>
               <ul className="space-y-2">
@@ -393,7 +390,7 @@ function ProductCatalogCard({ product }: { product: ModuleCatalogProduct }) {
 
               {extraHighlights.length > 0 && (
                 <details className="group mt-3">
-                  <summary className="cursor-pointer text-xs font-semibold text-slate-500 hover:text-slate-300 transition list-none">
+                  <summary className="focus-ring cursor-pointer text-xs font-semibold text-slate-400 hover:text-slate-300 transition list-none">
                     Інші особливості ({extraHighlights.length})
                   </summary>
                   <ul className="mt-2 space-y-1.5">

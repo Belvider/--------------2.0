@@ -128,11 +128,13 @@ export function parseReviewArguments(args) {
     if (arg === '--local') local = true;
     else if (arg === '--apply') apply = true;
     else if (arg === '--review') {
-      const date = args[++i];
-      if (!/^\d{4}-\d{2}-\d{2}$/.test(date ?? '') || Number.isNaN(Date.parse(date))
-        || new Date(date).toISOString().slice(0, 10) !== date) throw new Error('Use --review YYYY-MM-DD with a valid date.');
-      reviewDate = date;
-    } else throw new Error('Use --review YYYY-MM-DD, --local and/or --apply only.');
+      const selection = args[++i];
+      const match = /^(\d{4}-\d{2}-\d{2})(?:-[a-z0-9]+(?:-[a-z0-9]+)*)?$/.exec(selection ?? '');
+      const date = match?.[1];
+      if (!date || Number.isNaN(Date.parse(date)) || new Date(date).toISOString().slice(0, 10) !== date)
+        throw new Error('Use --review YYYY-MM-DD with an optional lowercase review name.');
+      reviewDate = selection;
+    } else throw new Error('Use --review YYYY-MM-DD[-name], --local and/or --apply only.');
   }
   return { reviewDate, local, apply };
 }
@@ -145,7 +147,7 @@ async function main() {
   try { hostname = new URL(url).hostname; } catch { throw new Error('Invalid configured database address.'); }
   if (local ? !['localhost', '127.0.0.1', '[::1]'].includes(hostname) : !hostname.endsWith('.neon.tech')) throw new Error('Unexpected database target.');
   const manifest = JSON.parse(fs.readFileSync(`content/reviews/${reviewDate}.json`, 'utf8'));
-  if (manifest.reviewedAt !== reviewDate) throw new Error('Review date does not match the selected manifest.');
+  if (manifest.reviewedAt !== reviewDate.slice(0, 10)) throw new Error('Review date does not match the selected manifest.');
   validateReviewManifest(manifest);
   const ids = [...new Set(manifest.edits.map(edit => edit.moduleId))].sort((a, b) => a - b);
   const target = local ? 'local' : 'production';

@@ -125,7 +125,19 @@ export const playstationConsoleCatalog: ModuleCatalogProduct[] = [
       "України немає в офіційному списку регіонів хмарного стримінгу: не обіцяйте цю функцію без перевірки.",
       "Це не автономна консоль для офлайн-гри; якість залежить від затримки та стабільності мережі."
     ],
-    "colors": []
+    "colors": [
+      {
+        "label": "White",
+        "caption": "White",
+        "default": true,
+        "imageUrl": "/materials/playstation-gaming-consoles/2026/portal-white.webp"
+      },
+      {
+        "label": "Midnight Black",
+        "caption": "Midnight Black",
+        "imageUrl": "/materials/playstation-gaming-consoles/2026/portal-midnight-black.webp"
+      }
+    ]
   }
 ];
 
@@ -285,11 +297,19 @@ export const portableGamingCatalog: ModuleCatalogProduct[] = [
       "Підтримується багато ігор першої Switch, але є винятки й окремі платні оновлення.",
       "Для ігор потрібна microSD Express; звичайна microSD не є рівнозначною заміною."
     ],
-    "colors": []
+    "colors": [
+      {
+        "label": "Nintendo Switch 2",
+        "caption": "Консоль і док-станція",
+        "default": true,
+        "imageUrl": "/materials/playstation-gaming-consoles/2026/switch-2.webp"
+      }
+    ]
   },
   {
     "slug": "asus-rog-xbox-ally-family",
     "title": "ASUS ROG Xbox Ally / Ally X",
+    "variantType": "model",
     "family": "Портативний Windows-ПК",
     "summary": "Окреме покоління ASUS із повноекранним інтерфейсом Xbox і доступом до сумісних ПК-бібліотек.",
     "overview": [
@@ -304,11 +324,24 @@ export const portableGamingCatalog: ModuleCatalogProduct[] = [
       "PC Game Pass, Steam та інші бібліотеки залежать від ліцензії, вимог гри й підписки.",
       "Не плутайте Xbox Ally X із попереднім ROG Ally X 2024."
     ],
-    "colors": []
+    "colors": [
+      {
+        "label": "Xbox Ally",
+        "caption": "Xbox Ally · White",
+        "default": true,
+        "imageUrl": "/materials/playstation-gaming-consoles/2026/rog-xbox-ally-white.webp"
+      },
+      {
+        "label": "Xbox Ally X",
+        "caption": "Xbox Ally X · Black",
+        "imageUrl": "/materials/playstation-gaming-consoles/2026/rog-xbox-ally-x-black.webp"
+      }
+    ]
   },
   {
     "slug": "lenovo-legion-go-family",
     "title": "Lenovo Legion Go / Go S / Go 2",
+    "variantType": "model",
     "family": "Портативний ПК",
     "summary": "Сімейство портативних ПК, у якому важливо перевірити точний індекс моделі, ОС, екран та контролери.",
     "overview": [
@@ -323,7 +356,19 @@ export const portableGamingCatalog: ModuleCatalogProduct[] = [
       "Процесор, оперативну пам’ять і SSD звіряйте за повним кодом моделі.",
       "Габарити, контролери та час роботи порівнюйте під потрібні ігри й сценарій перенесення."
     ],
-    "colors": []
+    "colors": [
+      {
+        "label": "Go 2",
+        "caption": "Go 2 · Black",
+        "default": true,
+        "imageUrl": "/materials/playstation-gaming-consoles/2026/legion-go-2-black.webp"
+      },
+      {
+        "label": "Go S",
+        "caption": "Go S · Black, SteamOS",
+        "imageUrl": "/materials/playstation-gaming-consoles/2026/legion-go-s-black.webp"
+      }
+    ]
   }
 ];
 

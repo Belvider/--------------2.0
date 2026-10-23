@@ -321,7 +321,7 @@ export const jblPortableCatalog: ModuleCatalogProduct[] = [
       "Контурне підсвічування, налаштування у JBL Portable",
       "USB-C; кабель не входить до всіх регіональних комплектів"
     ],
-    "colors": []
+    "colors": [{ "label": "Black", "imageUrl": "/materials/jbl-bluetooth-speakers/2026/jbl-go-5-black.webp", "caption": "Black", "default": true }]
   },
   {
     "slug": "jbl-clip-5",
@@ -339,7 +339,7 @@ export const jblPortableCatalog: ModuleCatalogProduct[] = [
       "Еквалайзер і оновлення у JBL Portable",
       "Для активного використання, коли важливі легкість і кріплення"
     ],
-    "colors": []
+    "colors": [{ "label": "Black", "imageUrl": "/materials/jbl-bluetooth-speakers/2026/jbl-clip-5-black.webp", "caption": "Black", "default": true }]
   },
   {
     "slug": "jbl-flip-7",
@@ -357,7 +357,7 @@ export const jblPortableCatalog: ModuleCatalogProduct[] = [
       "Аудіо через USB-C із сумісним джерелом; це не звичайний AUX",
       "Компактний універсальний формат для дому й подорожей"
     ],
-    "colors": []
+    "colors": [{ "label": "Black", "imageUrl": "/materials/jbl-bluetooth-speakers/2026/jbl-flip-7-black.webp", "caption": "Black", "default": true }]
   },
   {
     "slug": "jbl-charge-6",
@@ -375,7 +375,7 @@ export const jblPortableCatalog: ModuleCatalogProduct[] = [
       "Auracast та AI Sound Boost",
       "Для тривалих виїздів; використання павербанка скорочує автономність"
     ],
-    "colors": []
+    "colors": [{ "label": "Black", "imageUrl": "/materials/jbl-bluetooth-speakers/2026/jbl-charge-6-black.webp", "caption": "Black", "default": true }]
   },
   {
     "slug": "jbl-xtreme-4",
@@ -393,7 +393,7 @@ export const jblPortableCatalog: ModuleCatalogProduct[] = [
       "Змінний акумулятор і функція павербанка",
       "У комплектах no Adapter перевірте вимоги до сумісного зарядного пристрою"
     ],
-    "colors": []
+    "colors": [{ "label": "Black", "imageUrl": "/materials/jbl-bluetooth-speakers/2026/jbl-xtreme-4-black.webp", "caption": "Black", "default": true }]
   },
   {
     "slug": "jbl-xtreme-5",
@@ -411,7 +411,7 @@ export const jblPortableCatalog: ModuleCatalogProduct[] = [
       "Контурне підсвічування, плечовий ремінь і павербанк",
       "Аудіо через USB-C із сумісним джерелом; зарядний комплект звіряйте за регіоном"
     ],
-    "colors": []
+    "colors": [{ "label": "Black", "imageUrl": "/materials/jbl-bluetooth-speakers/2026/jbl-xtreme-5-black.webp", "caption": "Black", "default": true }]
   },
   {
     "slug": "jbl-boombox-4",
@@ -429,7 +429,7 @@ export const jblPortableCatalog: ModuleCatalogProduct[] = [
       "Auracast для об’єднання сумісних колонок",
       "Для великих компаній; перед покупкою оцініть габарити й вагу"
     ],
-    "colors": []
+    "colors": [{ "label": "Black", "imageUrl": "/materials/jbl-bluetooth-speakers/2026/jbl-boombox-4-black.webp", "caption": "Black", "default": true }]
   },
   {
     "slug": "jbl-partybox-130",
@@ -447,7 +447,7 @@ export const jblPortableCatalog: ModuleCatalogProduct[] = [
       "Входи для мікрофонів і гітари; призначення роз’ємів звіряйте за інструкцією",
       "Складана ручка та захист від бризок; керування у JBL One"
     ],
-    "colors": []
+    "colors": [{ "label": "Black", "imageUrl": "/materials/jbl-bluetooth-speakers/2026/jbl-partybox-130-black.webp", "caption": "Black", "default": true }]
   },
   {
     "slug": "jbl-partybox-520",
@@ -465,7 +465,7 @@ export const jblPortableCatalog: ModuleCatalogProduct[] = [
       "Два комбіновані XLR-входи для відповідних джерел",
       "Для виїзних вечірок; налаштування через JBL PartyBox"
     ],
-    "colors": []
+    "colors": [{ "label": "Black", "imageUrl": "/materials/jbl-bluetooth-speakers/2026/jbl-partybox-520-black.webp", "caption": "Black", "default": true }]
   },
   {
     "slug": "jbl-partybox-720",
@@ -483,7 +483,7 @@ export const jblPortableCatalog: ModuleCatalogProduct[] = [
       "Auracast, світлове шоу та два комбіновані XLR-входи",
       "Вага близько 31 кг; ручка й колеса для транспортування"
     ],
-    "colors": []
+    "colors": [{ "label": "Black", "imageUrl": "/materials/jbl-bluetooth-speakers/2026/jbl-partybox-720-black.webp", "caption": "Black", "default": true }]
   },
   {
     "slug": "jbl-partybox-ultimate",
@@ -501,7 +501,7 @@ export const jblPortableCatalog: ModuleCatalogProduct[] = [
       "IPX4 захищає від бризок, але не дозволяє занурення",
       "Колеса спрощують переміщення; для роботи потрібна електромережа"
     ],
-    "colors": []
+    "colors": [{ "label": "Black", "imageUrl": "/materials/jbl-bluetooth-speakers/2026/jbl-partybox-ultimate-black.webp", "caption": "Black", "default": true }]
   }
 ];
 

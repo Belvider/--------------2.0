@@ -11,6 +11,7 @@ export type ModuleCatalogProduct = {
   slug: string;
   title: string;
   family?: string;
+  variantType?: "model";
   summary?: string;
   overview: string[];
   highlights: string[];

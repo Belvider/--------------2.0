@@ -337,7 +337,14 @@ export const dysonVacuumsCatalog: ModuleCatalogProduct[] = [
       "До 60 хвилин у відповідному режимі; посилений режим працює коротше",
       "Absolute та Total Clean відрізняються набором насадок — звіряйте артикул"
     ],
-    "colors": []
+    "colors": [
+      {
+        "label": "Nickel / Black",
+        "imageUrl": "/materials/dyson-vacuums/2026/v12-detect-slim/nickel-black.webp",
+        "caption": "Total Clean · Nickel / Black",
+        "default": true
+      }
+    ]
   },
   {
     "slug": "dyson-v16-piston-animal",
@@ -355,7 +362,14 @@ export const dysonVacuumsCatalog: ModuleCatalogProduct[] = [
       "Налаштування й інформація через MyDyson",
       "Кількість аксесуарів залежить від комплектації; звичайна версія не є мийною"
     ],
-    "colors": []
+    "colors": [
+      {
+        "label": "Gold",
+        "imageUrl": "/materials/dyson-vacuums/2026/v16-piston-animal/gold.webp",
+        "caption": "Gold · сухе прибирання",
+        "default": true
+      }
+    ]
   },
   {
     "slug": "dyson-v16-piston-animal-submarine",
@@ -373,7 +387,14 @@ export const dysonVacuumsCatalog: ModuleCatalogProduct[] = [
       "Для килимів використовують суху насадку",
       "Не переносіть сумісність насадок на попередні V15/V15s без перевірки"
     ],
-    "colors": []
+    "colors": [
+      {
+        "label": "Gold",
+        "imageUrl": "/materials/dyson-vacuums/2026/v16-piston-animal-submarine/gold.webp",
+        "caption": "Gold · мийна насадка Submarine 2.0",
+        "default": true
+      }
+    ]
   }
 ];
 

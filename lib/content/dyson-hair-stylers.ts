@@ -236,7 +236,14 @@ export const supersonicCatalog: ModuleCatalogProduct[] = [
       "Сушіння, розгладження та холодний потік залежно від насадки",
       "Від Professional відрізняється насамперед довжиною кабелю; напругу й комплект перевіряйте за артикулом"
     ],
-    "colors": []
+    "colors": [
+      {
+        "label": "Ceramic Pink / Rose Gold",
+        "imageUrl": "/materials/dyson-hair-stylers/2026/supersonic-r/ceramic-pink-rose-gold.webp",
+        "caption": "Ceramic Pink / Rose Gold",
+        "default": true
+      }
+    ]
   }
 ];
 

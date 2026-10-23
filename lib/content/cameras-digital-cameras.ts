@@ -199,7 +199,34 @@ export const instaxCameraCatalog: ModuleCatalogProduct[] = [
       "Зображення 62 × 46 мм; проявлення близько 90 секунд за належної температури.",
       "Mini 13 не друкує фото зі смартфона: це аналогова камера, а не гібридний принтер."
     ],
-    "colors": []
+    "colors": [
+      {
+        "label": "Lagoon Green",
+        "caption": "Lagoon Green",
+        "default": true,
+        "imageUrl": "/materials/cameras-digital-cameras/2026/instax-mini-13-lagoon-green.webp"
+      },
+      {
+        "label": "Frost Blue",
+        "caption": "Frost Blue",
+        "imageUrl": "/materials/cameras-digital-cameras/2026/instax-mini-13-frost-blue.webp"
+      },
+      {
+        "label": "Candy Pink",
+        "caption": "Candy Pink",
+        "imageUrl": "/materials/cameras-digital-cameras/2026/instax-mini-13-candy-pink.webp"
+      },
+      {
+        "label": "Dreamy Purple",
+        "caption": "Dreamy Purple",
+        "imageUrl": "/materials/cameras-digital-cameras/2026/instax-mini-13-dreamy-purple.webp"
+      },
+      {
+        "label": "Clay White",
+        "caption": "Clay White",
+        "imageUrl": "/materials/cameras-digital-cameras/2026/instax-mini-13-clay-white.webp"
+      }
+    ]
   }
 ];
 
@@ -273,7 +300,19 @@ export const canonDslrCatalog: ModuleCatalogProduct[] = [
       "Wi-Fi та Bluetooth для сумісних функцій зі смартфоном.",
       "У Pineapple є звичайні виконання й 30th Anniversary Edition; комплектність і колір перевіряйте за артикулом."
     ],
-    "colors": []
+    "colors": [
+      {
+        "label": "Black",
+        "caption": "Black",
+        "default": true,
+        "imageUrl": "/materials/cameras-digital-cameras/2026/canon-g7-x-mark-iii-black.webp"
+      },
+      {
+        "label": "Silver",
+        "caption": "Silver",
+        "imageUrl": "/materials/cameras-digital-cameras/2026/canon-g7-x-mark-iii-silver.webp"
+      }
+    ]
   }
 ];
 

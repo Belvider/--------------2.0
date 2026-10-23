@@ -1,0 +1,677 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-10-23",
+  "baseline": "6cea984265b7fc7722e8e57c3d39cfcba76591ee",
+  "modules": [
+    {
+      "id": 14,
+      "categoryId": 7,
+      "brandSlug": "apple",
+      "categorySlug": "peripherals",
+      "questionIds": [
+        66,
+        67,
+        68,
+        69,
+        70
+      ]
+    },
+    {
+      "id": 16,
+      "categoryId": 8,
+      "brandSlug": "dyson",
+      "categorySlug": "hair-stylers",
+      "questionIds": [
+        76,
+        77,
+        78,
+        79,
+        80
+      ]
+    },
+    {
+      "id": 18,
+      "categoryId": 9,
+      "brandSlug": "dyson",
+      "categorySlug": "vacuums",
+      "questionIds": [
+        86,
+        87,
+        88,
+        89,
+        90
+      ]
+    },
+    {
+      "id": 20,
+      "categoryId": 10,
+      "brandSlug": "dyson",
+      "categorySlug": "air-purifiers",
+      "questionIds": [
+        96,
+        97,
+        98,
+        99,
+        100
+      ]
+    },
+    {
+      "id": 26,
+      "categoryId": 13,
+      "brandSlug": "jbl",
+      "categorySlug": "bluetooth-speakers",
+      "questionIds": [
+        126,
+        127,
+        128,
+        129,
+        130
+      ]
+    },
+    {
+      "id": 28,
+      "categoryId": 14,
+      "brandSlug": "playstation",
+      "categorySlug": "gaming-consoles",
+      "questionIds": [
+        136,
+        137,
+        138,
+        139,
+        140
+      ]
+    },
+    {
+      "id": 32,
+      "categoryId": 16,
+      "brandSlug": "cameras",
+      "categorySlug": "digital-cameras",
+      "questionIds": [
+        156,
+        157,
+        158,
+        159,
+        160
+      ]
+    },
+    {
+      "id": 34,
+      "categoryId": 17,
+      "brandSlug": "cameras",
+      "categorySlug": "go-pro",
+      "questionIds": [
+        166,
+        167,
+        168,
+        169,
+        170
+      ]
+    }
+  ],
+  "edits": [
+    {
+      "moduleId": 14,
+      "path": "/contentBlocks/4/products/1/colors",
+      "before": [],
+      "after": [
+        {
+          "label": "White",
+          "caption": "Білий",
+          "imageUrl": "/materials/apple-peripherals/2026/airtag-2.webp",
+          "default": true
+        }
+      ],
+      "reason": "Додано точні фото моделі з короткими підписами та локальними адресами; для різних моделей використано підписаний перемикач.",
+      "sourceUrls": [
+        "https://pineapple.ua/apple-airtag-1-thing-kopia"
+      ]
+    },
+    {
+      "moduleId": 16,
+      "path": "/contentBlocks/2/products/4/colors",
+      "before": [],
+      "after": [
+        {
+          "label": "Ceramic Pink / Rose Gold",
+          "imageUrl": "/materials/dyson-hair-stylers/2026/supersonic-r/ceramic-pink-rose-gold.webp",
+          "caption": "Ceramic Pink / Rose Gold",
+          "default": true
+        }
+      ],
+      "reason": "Додано точні фото моделі з короткими підписами та локальними адресами; для різних моделей використано підписаний перемикач.",
+      "sourceUrls": [
+        "https://pineapple.ua/fen-dyson-supersonic-r-ceramic-pinkrose-gold"
+      ]
+    },
+    {
+      "moduleId": 18,
+      "path": "/contentBlocks/1/products/14/colors",
+      "before": [],
+      "after": [
+        {
+          "label": "Nickel / Black",
+          "imageUrl": "/materials/dyson-vacuums/2026/v12-detect-slim/nickel-black.webp",
+          "caption": "Total Clean · Nickel / Black",
+          "default": true
+        }
+      ],
+      "reason": "Додано точні фото моделі з короткими підписами та локальними адресами; для різних моделей використано підписаний перемикач.",
+      "sourceUrls": [
+        "https://pineapple.ua/akumuliatornyi-pylosos-dyson-v12-detect-slim-total-clean"
+      ]
+    },
+    {
+      "moduleId": 18,
+      "path": "/contentBlocks/1/products/15/colors",
+      "before": [],
+      "after": [
+        {
+          "label": "Gold",
+          "imageUrl": "/materials/dyson-vacuums/2026/v16-piston-animal/gold.webp",
+          "caption": "Gold · сухе прибирання",
+          "default": true
+        }
+      ],
+      "reason": "Додано точні фото моделі з короткими підписами та локальними адресами; для різних моделей використано підписаний перемикач.",
+      "sourceUrls": [
+        "https://pineapple.ua/akumuliatornyi-pylosos-dyson-v16-piston-animal"
+      ]
+    },
+    {
+      "moduleId": 18,
+      "path": "/contentBlocks/1/products/16/colors",
+      "before": [],
+      "after": [
+        {
+          "label": "Gold",
+          "imageUrl": "/materials/dyson-vacuums/2026/v16-piston-animal-submarine/gold.webp",
+          "caption": "Gold · мийна насадка Submarine 2.0",
+          "default": true
+        }
+      ],
+      "reason": "Додано точні фото моделі з короткими підписами та локальними адресами; для різних моделей використано підписаний перемикач.",
+      "sourceUrls": [
+        "https://pineapple.ua/akumuliatornyi-pylosos-dyson-v16-piston-animal-submarine"
+      ]
+    },
+    {
+      "moduleId": 20,
+      "path": "/contentBlocks/1/products/4/colors",
+      "before": [],
+      "after": [
+        {
+          "label": "Prussian Blue / Gold",
+          "imageUrl": "/materials/dyson-air-purifiers/2026/bp04/prussian-blue-gold.png",
+          "caption": "Prussian Blue / Gold",
+          "default": true
+        }
+      ],
+      "reason": "Додано точні фото моделі з короткими підписами та локальними адресами; для різних моделей використано підписаний перемикач.",
+      "sourceUrls": [
+        "https://www.dyson.com/air-treatment/air-purifiers/big-quiet-formaldehyde/prussian-blue-gold-bp04"
+      ]
+    },
+    {
+      "moduleId": 20,
+      "path": "/contentBlocks/1/products/5/colors",
+      "before": [],
+      "after": [
+        {
+          "label": "Nickel / Gold",
+          "imageUrl": "/materials/dyson-air-purifiers/2026/ph2-de-nox/nickel-gold.png",
+          "caption": "PH2 De-NOx · Nickel / Gold",
+          "default": true
+        }
+      ],
+      "reason": "Додано точні фото моделі з короткими підписами та локальними адресами; для різних моделей використано підписаний перемикач.",
+      "sourceUrls": [
+        "https://www.dyson.com/air-treatment/air-purifier-humidifiers/purifier-humidify-cool-ph2/de-nox-nickel-gold"
+      ]
+    },
+    {
+      "moduleId": 26,
+      "path": "/contentBlocks/1/products/19/colors",
+      "before": [],
+      "after": [
+        {
+          "label": "Black",
+          "imageUrl": "/materials/jbl-bluetooth-speakers/2026/jbl-go-5-black.webp",
+          "caption": "Black",
+          "default": true
+        }
+      ],
+      "reason": "Додано точні фото моделі з короткими підписами та локальними адресами; для різних моделей використано підписаний перемикач.",
+      "sourceUrls": [
+        "https://pineapple.ua/akustika-jbl-go-5-black"
+      ]
+    },
+    {
+      "moduleId": 26,
+      "path": "/contentBlocks/1/products/20/colors",
+      "before": [],
+      "after": [
+        {
+          "label": "Black",
+          "imageUrl": "/materials/jbl-bluetooth-speakers/2026/jbl-clip-5-black.webp",
+          "caption": "Black",
+          "default": true
+        }
+      ],
+      "reason": "Додано точні фото моделі з короткими підписами та локальними адресами; для різних моделей використано підписаний перемикач.",
+      "sourceUrls": [
+        "https://pineapple.ua/akustika-jbl-clip-5-black"
+      ]
+    },
+    {
+      "moduleId": 26,
+      "path": "/contentBlocks/1/products/21/colors",
+      "before": [],
+      "after": [
+        {
+          "label": "Black",
+          "imageUrl": "/materials/jbl-bluetooth-speakers/2026/jbl-flip-7-black.webp",
+          "caption": "Black",
+          "default": true
+        }
+      ],
+      "reason": "Додано точні фото моделі з короткими підписами та локальними адресами; для різних моделей використано підписаний перемикач.",
+      "sourceUrls": [
+        "https://pineapple.ua/akustika-jbl-flip-7-black"
+      ]
+    },
+    {
+      "moduleId": 26,
+      "path": "/contentBlocks/1/products/22/colors",
+      "before": [],
+      "after": [
+        {
+          "label": "Black",
+          "imageUrl": "/materials/jbl-bluetooth-speakers/2026/jbl-charge-6-black.webp",
+          "caption": "Black",
+          "default": true
+        }
+      ],
+      "reason": "Додано точні фото моделі з короткими підписами та локальними адресами; для різних моделей використано підписаний перемикач.",
+      "sourceUrls": [
+        "https://pineapple.ua/akustika-jbl-charge-6-black"
+      ]
+    },
+    {
+      "moduleId": 26,
+      "path": "/contentBlocks/1/products/23/colors",
+      "before": [],
+      "after": [
+        {
+          "label": "Black",
+          "imageUrl": "/materials/jbl-bluetooth-speakers/2026/jbl-xtreme-4-black.webp",
+          "caption": "Black",
+          "default": true
+        }
+      ],
+      "reason": "Додано точні фото моделі з короткими підписами та локальними адресами; для різних моделей використано підписаний перемикач.",
+      "sourceUrls": [
+        "https://pineapple.ua/akustika-jbl-xtreme-4-black"
+      ]
+    },
+    {
+      "moduleId": 26,
+      "path": "/contentBlocks/1/products/24/colors",
+      "before": [],
+      "after": [
+        {
+          "label": "Black",
+          "imageUrl": "/materials/jbl-bluetooth-speakers/2026/jbl-xtreme-5-black.webp",
+          "caption": "Black",
+          "default": true
+        }
+      ],
+      "reason": "Додано точні фото моделі з короткими підписами та локальними адресами; для різних моделей використано підписаний перемикач.",
+      "sourceUrls": [
+        "https://pineapple.ua/akustika-jbl-xtreme-5-black"
+      ]
+    },
+    {
+      "moduleId": 26,
+      "path": "/contentBlocks/1/products/25/colors",
+      "before": [],
+      "after": [
+        {
+          "label": "Black",
+          "imageUrl": "/materials/jbl-bluetooth-speakers/2026/jbl-boombox-4-black.webp",
+          "caption": "Black",
+          "default": true
+        }
+      ],
+      "reason": "Додано точні фото моделі з короткими підписами та локальними адресами; для різних моделей використано підписаний перемикач.",
+      "sourceUrls": [
+        "https://pineapple.ua/akustika-jbl-boombox-4-black"
+      ]
+    },
+    {
+      "moduleId": 26,
+      "path": "/contentBlocks/1/products/26/colors",
+      "before": [],
+      "after": [
+        {
+          "label": "Black",
+          "imageUrl": "/materials/jbl-bluetooth-speakers/2026/jbl-partybox-130-black.webp",
+          "caption": "Black",
+          "default": true
+        }
+      ],
+      "reason": "Додано точні фото моделі з короткими підписами та локальними адресами; для різних моделей використано підписаний перемикач.",
+      "sourceUrls": [
+        "https://pineapple.ua/akustika-jbl-partybox-130-black"
+      ]
+    },
+    {
+      "moduleId": 26,
+      "path": "/contentBlocks/1/products/27/colors",
+      "before": [],
+      "after": [
+        {
+          "label": "Black",
+          "imageUrl": "/materials/jbl-bluetooth-speakers/2026/jbl-partybox-520-black.webp",
+          "caption": "Black",
+          "default": true
+        }
+      ],
+      "reason": "Додано точні фото моделі з короткими підписами та локальними адресами; для різних моделей використано підписаний перемикач.",
+      "sourceUrls": [
+        "https://pineapple.ua/akustika-jbl-partybox-520-black"
+      ]
+    },
+    {
+      "moduleId": 26,
+      "path": "/contentBlocks/1/products/28/colors",
+      "before": [],
+      "after": [
+        {
+          "label": "Black",
+          "imageUrl": "/materials/jbl-bluetooth-speakers/2026/jbl-partybox-720-black.webp",
+          "caption": "Black",
+          "default": true
+        }
+      ],
+      "reason": "Додано точні фото моделі з короткими підписами та локальними адресами; для різних моделей використано підписаний перемикач.",
+      "sourceUrls": [
+        "https://pineapple.ua/akustika-jbl-partybox-720-black"
+      ]
+    },
+    {
+      "moduleId": 26,
+      "path": "/contentBlocks/1/products/29/colors",
+      "before": [],
+      "after": [
+        {
+          "label": "Black",
+          "imageUrl": "/materials/jbl-bluetooth-speakers/2026/jbl-partybox-ultimate-black.webp",
+          "caption": "Black",
+          "default": true
+        }
+      ],
+      "reason": "Додано точні фото моделі з короткими підписами та локальними адресами; для різних моделей використано підписаний перемикач.",
+      "sourceUrls": [
+        "https://pineapple.ua/akustika-jbl-partybox-ultimate-black"
+      ]
+    },
+    {
+      "moduleId": 28,
+      "path": "/contentBlocks/1/products/4/colors",
+      "before": [],
+      "after": [
+        {
+          "label": "White",
+          "caption": "White",
+          "default": true,
+          "imageUrl": "/materials/playstation-gaming-consoles/2026/portal-white.webp"
+        },
+        {
+          "label": "Midnight Black",
+          "caption": "Midnight Black",
+          "imageUrl": "/materials/playstation-gaming-consoles/2026/portal-midnight-black.webp"
+        }
+      ],
+      "reason": "Додано точні фото моделі з короткими підписами та локальними адресами; для різних моделей використано підписаний перемикач.",
+      "sourceUrls": [
+        "https://pineapple.ua/prystrii-dystantsiinoi-hry-playstation-portal",
+        "https://pineapple.ua/pristrij-distancijnoi-gri-playstation-portal-kopia"
+      ]
+    },
+    {
+      "moduleId": 28,
+      "path": "/contentBlocks/6/products/3/colors",
+      "before": [],
+      "after": [
+        {
+          "label": "Nintendo Switch 2",
+          "caption": "Консоль і док-станція",
+          "default": true,
+          "imageUrl": "/materials/playstation-gaming-consoles/2026/switch-2.webp"
+        }
+      ],
+      "reason": "Додано точні фото моделі з короткими підписами та локальними адресами; для різних моделей використано підписаний перемикач.",
+      "sourceUrls": [
+        "https://pineapple.ua/igrova-pristavka-nintendo-switch-2"
+      ]
+    },
+    {
+      "moduleId": 28,
+      "path": "/contentBlocks/6/products/4",
+      "before": {
+        "slug": "asus-rog-xbox-ally-family",
+        "title": "ASUS ROG Xbox Ally / Ally X",
+        "colors": [],
+        "family": "Портативний Windows-ПК",
+        "summary": "Окреме покоління ASUS із повноекранним інтерфейсом Xbox і доступом до сумісних ПК-бібліотек.",
+        "overview": [
+          "ОС: Windows",
+          "Ally: Ryzen Z2 A",
+          "Ally X: Ryzen AI Z2 Extreme"
+        ],
+        "highlights": [
+          "Це портативні ПК, а не зменшена Xbox Series X: перевіряйте саме ПК-версію гри.",
+          "Ally та Ally X відрізняються процесором, пам’яттю, SSD і батареєю.",
+          "ROG Xbox Ally має 60 Вт·год, Xbox Ally X — 80 Вт·год.",
+          "PC Game Pass, Steam та інші бібліотеки залежать від ліцензії, вимог гри й підписки.",
+          "Не плутайте Xbox Ally X із попереднім ROG Ally X 2024."
+        ]
+      },
+      "after": {
+        "slug": "asus-rog-xbox-ally-family",
+        "title": "ASUS ROG Xbox Ally / Ally X",
+        "variantType": "model",
+        "family": "Портативний Windows-ПК",
+        "summary": "Окреме покоління ASUS із повноекранним інтерфейсом Xbox і доступом до сумісних ПК-бібліотек.",
+        "overview": [
+          "ОС: Windows",
+          "Ally: Ryzen Z2 A",
+          "Ally X: Ryzen AI Z2 Extreme"
+        ],
+        "highlights": [
+          "Це портативні ПК, а не зменшена Xbox Series X: перевіряйте саме ПК-версію гри.",
+          "Ally та Ally X відрізняються процесором, пам’яттю, SSD і батареєю.",
+          "ROG Xbox Ally має 60 Вт·год, Xbox Ally X — 80 Вт·год.",
+          "PC Game Pass, Steam та інші бібліотеки залежать від ліцензії, вимог гри й підписки.",
+          "Не плутайте Xbox Ally X із попереднім ROG Ally X 2024."
+        ],
+        "colors": [
+          {
+            "label": "Xbox Ally",
+            "caption": "Xbox Ally · White",
+            "default": true,
+            "imageUrl": "/materials/playstation-gaming-consoles/2026/rog-xbox-ally-white.webp"
+          },
+          {
+            "label": "Xbox Ally X",
+            "caption": "Xbox Ally X · Black",
+            "imageUrl": "/materials/playstation-gaming-consoles/2026/rog-xbox-ally-x-black.webp"
+          }
+        ]
+      },
+      "reason": "Додано точні фото моделі з короткими підписами та локальними адресами; для різних моделей використано підписаний перемикач.",
+      "sourceUrls": [
+        "https://pineapple.ua/igrova-konsol-asus-rog-xbox-ally-512gb",
+        "https://pineapple.ua/igrova-konsol-asus-rog-xbox-ally-x-1tb"
+      ]
+    },
+    {
+      "moduleId": 28,
+      "path": "/contentBlocks/6/products/5",
+      "before": {
+        "slug": "lenovo-legion-go-family",
+        "title": "Lenovo Legion Go / Go S / Go 2",
+        "colors": [],
+        "family": "Портативний ПК",
+        "summary": "Сімейство портативних ПК, у якому важливо перевірити точний індекс моделі, ОС, екран та контролери.",
+        "overview": [
+          "Формат: портативний ПК",
+          "ОС: залежить від комплектації",
+          "Конфігурація: за артикулом"
+        ],
+        "highlights": [
+          "У Pineapple є Go S і Go 2 у різних конфігураціях; назви не означають однакового обладнання.",
+          "Legion Go 2 має 8,8-дюймовий OLED 1920 × 1200 до 144 Гц.",
+          "Windows і SteamOS мають різну сумісність лаунчерів та античитів.",
+          "Процесор, оперативну пам’ять і SSD звіряйте за повним кодом моделі.",
+          "Габарити, контролери та час роботи порівнюйте під потрібні ігри й сценарій перенесення."
+        ]
+      },
+      "after": {
+        "slug": "lenovo-legion-go-family",
+        "title": "Lenovo Legion Go / Go S / Go 2",
+        "variantType": "model",
+        "family": "Портативний ПК",
+        "summary": "Сімейство портативних ПК, у якому важливо перевірити точний індекс моделі, ОС, екран та контролери.",
+        "overview": [
+          "Формат: портативний ПК",
+          "ОС: залежить від комплектації",
+          "Конфігурація: за артикулом"
+        ],
+        "highlights": [
+          "У Pineapple є Go S і Go 2 у різних конфігураціях; назви не означають однакового обладнання.",
+          "Legion Go 2 має 8,8-дюймовий OLED 1920 × 1200 до 144 Гц.",
+          "Windows і SteamOS мають різну сумісність лаунчерів та античитів.",
+          "Процесор, оперативну пам’ять і SSD звіряйте за повним кодом моделі.",
+          "Габарити, контролери та час роботи порівнюйте під потрібні ігри й сценарій перенесення."
+        ],
+        "colors": [
+          {
+            "label": "Go 2",
+            "caption": "Go 2 · Black",
+            "default": true,
+            "imageUrl": "/materials/playstation-gaming-consoles/2026/legion-go-2-black.webp"
+          },
+          {
+            "label": "Go S",
+            "caption": "Go S · Black, SteamOS",
+            "imageUrl": "/materials/playstation-gaming-consoles/2026/legion-go-s-black.webp"
+          }
+        ]
+      },
+      "reason": "Додано точні фото моделі з короткими підписами та локальними адресами; для різних моделей використано підписаний перемикач.",
+      "sourceUrls": [
+        "https://pineapple.ua/igrova-konsol-legion-go-2-8asp2-32gb-f2tb",
+        "https://pineapple.ua/igrova-konsol-lenovo-legion-go-s-8apu1-32gb-f1tb-steamos-corna"
+      ]
+    },
+    {
+      "moduleId": 32,
+      "path": "/contentBlocks/1/products/7/colors",
+      "before": [],
+      "after": [
+        {
+          "label": "Lagoon Green",
+          "caption": "Lagoon Green",
+          "default": true,
+          "imageUrl": "/materials/cameras-digital-cameras/2026/instax-mini-13-lagoon-green.webp"
+        },
+        {
+          "label": "Frost Blue",
+          "caption": "Frost Blue",
+          "imageUrl": "/materials/cameras-digital-cameras/2026/instax-mini-13-frost-blue.webp"
+        },
+        {
+          "label": "Candy Pink",
+          "caption": "Candy Pink",
+          "imageUrl": "/materials/cameras-digital-cameras/2026/instax-mini-13-candy-pink.webp"
+        },
+        {
+          "label": "Dreamy Purple",
+          "caption": "Dreamy Purple",
+          "imageUrl": "/materials/cameras-digital-cameras/2026/instax-mini-13-dreamy-purple.webp"
+        },
+        {
+          "label": "Clay White",
+          "caption": "Clay White",
+          "imageUrl": "/materials/cameras-digital-cameras/2026/instax-mini-13-clay-white.webp"
+        }
+      ],
+      "reason": "Додано точні фото моделі з короткими підписами та локальними адресами; для різних моделей використано підписаний перемикач.",
+      "sourceUrls": [
+        "https://pineapple.ua/fotokamera-fujifilm-instax-mini-13-lagoon-green",
+        "https://pineapple.ua/fotokamera-fujifilm-instax-mini-13-frost-blue",
+        "https://pineapple.ua/fotokamera-fujifilm-instax-mini-13-candy-pink",
+        "https://pineapple.ua/fotokamera-fujifilm-instax-mini-13-dreamy-purple",
+        "https://pineapple.ua/fotokamera-fujifilm-instax-mini-13-clay-white"
+      ]
+    },
+    {
+      "moduleId": 32,
+      "path": "/contentBlocks/3/products/2/colors",
+      "before": [],
+      "after": [
+        {
+          "label": "Black",
+          "caption": "Black",
+          "default": true,
+          "imageUrl": "/materials/cameras-digital-cameras/2026/canon-g7-x-mark-iii-black.webp"
+        },
+        {
+          "label": "Silver",
+          "caption": "Silver",
+          "imageUrl": "/materials/cameras-digital-cameras/2026/canon-g7-x-mark-iii-silver.webp"
+        }
+      ],
+      "reason": "Додано точні фото моделі з короткими підписами та локальними адресами; для різних моделей використано підписаний перемикач.",
+      "sourceUrls": [
+        "https://pineapple.ua/kompaktnij-cifrovij-fotoaparat-canon-powershot-g7-x-mark-iii-black",
+        "https://pineapple.ua/kompaktnij-cifrovij-fotoaparat-canon-powershot-g7-x-mark-iii-silver"
+      ]
+    },
+    {
+      "moduleId": 34,
+      "path": "/contentBlocks/1/products/6/colors",
+      "before": [],
+      "after": [
+        {
+          "label": "Black",
+          "caption": "Black",
+          "default": true,
+          "imageUrl": "/materials/cameras-go-pro/2026/gopro-hero-2024.webp"
+        }
+      ],
+      "reason": "Додано точні фото моделі з короткими підписами та локальними адресами; для різних моделей використано підписаний перемикач.",
+      "sourceUrls": [
+        "https://pineapple.ua/eksn-kamera-gopro-hero"
+      ]
+    },
+    {
+      "moduleId": 34,
+      "path": "/contentBlocks/1/products/7/colors",
+      "before": [],
+      "after": [
+        {
+          "label": "Black",
+          "caption": "Black",
+          "default": true,
+          "imageUrl": "/materials/cameras-go-pro/2026/gopro-lit-hero.webp"
+        }
+      ],
+      "reason": "Додано точні фото моделі з короткими підписами та локальними адресами; для різних моделей використано підписаний перемикач.",
+      "sourceUrls": [
+        "https://pineapple.ua/eksn-kamera-gopro-lit-hero"
+      ]
+    }
+  ]
+}

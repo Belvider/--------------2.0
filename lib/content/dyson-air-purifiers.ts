@@ -114,7 +114,14 @@ export const dysonAirPurifierCatalog: ModuleCatalogProduct[] = [
       "Датчик CO₂ лише вимірює рівень: прилад не замінює провітрювання",
       "MyDyson і пульт; без обігріву та зволоження"
     ],
-    "colors": []
+    "colors": [
+      {
+        "label": "Prussian Blue / Gold",
+        "imageUrl": "/materials/dyson-air-purifiers/2026/bp04/prussian-blue-gold.png",
+        "caption": "Prussian Blue / Gold",
+        "default": true
+      }
+    ]
   },
   {
     "slug": "dyson-purifier-humidify-cool-ph05",
@@ -132,7 +139,14 @@ export const dysonAirPurifierCatalog: ModuleCatalogProduct[] = [
       "MyDyson для налаштування й моніторингу",
       "Позначення PH05 та PH2 звіряйте з артикулом; вентилятор не замінює кондиціонер"
     ],
-    "colors": []
+    "colors": [
+      {
+        "label": "Nickel / Gold",
+        "imageUrl": "/materials/dyson-air-purifiers/2026/ph2-de-nox/nickel-gold.png",
+        "caption": "PH2 De-NOx · Nickel / Gold",
+        "default": true
+      }
+    ]
   }
 ];
 

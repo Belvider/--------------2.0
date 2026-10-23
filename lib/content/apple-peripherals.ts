@@ -254,7 +254,7 @@ export const airTagCatalog: ModuleCatalogProduct[] = [
       "Потрібні iOS/iPadOS 26 або новіша версія",
       "Батарейка CR2032; понад рік роботи за методикою Apple"
     ],
-    "colors": []
+    "colors": [{ label: "White", caption: "Білий", imageUrl: "/materials/apple-peripherals/2026/airtag-2.webp", default: true }]
   }
 ];
 

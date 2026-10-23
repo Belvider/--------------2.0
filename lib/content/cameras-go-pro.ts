@@ -176,7 +176,14 @@ export const goproHeroCatalog: ModuleCatalogProduct[] = [
       "Вбудований акумулятор; сумісність аксесуарів перевіряйте за моделлю.",
       "Порівнюйте з HERO Black за потрібними режимами, а не лише за спільною назвою HERO."
     ],
-    "colors": []
+    "colors": [
+      {
+        "label": "Black",
+        "caption": "Black",
+        "default": true,
+        "imageUrl": "/materials/cameras-go-pro/2026/gopro-hero-2024.webp"
+      }
+    ]
   },
   {
     "slug": "gopro-lit-hero",
@@ -194,7 +201,14 @@ export const goproHeroCatalog: ModuleCatalogProduct[] = [
       "Не має повного набору режимів HERO13 Black; порівнюйте конкретні можливості.",
       "Батарея й теплові умови обмежують час запису; робота світла також витрачає заряд."
     ],
-    "colors": []
+    "colors": [
+      {
+        "label": "Black",
+        "caption": "Black",
+        "default": true,
+        "imageUrl": "/materials/cameras-go-pro/2026/gopro-lit-hero.webp"
+      }
+    ]
   }
 ];
 

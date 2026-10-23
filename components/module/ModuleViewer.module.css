@@ -293,6 +293,13 @@
   color: #e2e8f0;
 }
 
+@media (max-width: 360px) {
+  .specification {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.125rem;
+  }
+}
+
 @media (min-width: 640px) {
   .productImageFigure {
     --product-image-height: 240px;

@@ -11,7 +11,8 @@ test('review selection accepts a dated manifest without opening arbitrary paths'
   const { parseReviewArguments } = await library;
   assert.deepEqual(parseReviewArguments([]), { reviewDate: '2026-10-19', local: false, apply: false });
   assert.deepEqual(parseReviewArguments(['--review', '2026-10-23', '--local', '--apply']), { reviewDate: '2026-10-23', local: true, apply: true });
-  for (const args of [['--review'], ['--review', '../secrets'], ['--review', '2026-02-31'], ['--review', '2026-13-01'], ['--local', '--local'], ['--unknown']]) {
+  assert.deepEqual(parseReviewArguments(['--review', '2026-10-23-photos']), { reviewDate: '2026-10-23-photos', local: false, apply: false });
+  for (const args of [['--review'], ['--review', '../secrets'], ['--review', '2026-02-31'], ['--review', '2026-13-01'], ['--review', '2026-10-23-../secret'], ['--review', '2026-10-23-photos/secret'], ['--review', '2026-10-23--photos'], ['--local', '--local'], ['--unknown']]) {
     assert.throws(() => parseReviewArguments(args));
   }
 });
