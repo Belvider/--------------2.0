@@ -9,6 +9,7 @@ import {
 import { prisma } from "@/lib/prisma";
 import { getActivityDay, shiftActivityDay } from "@/lib/activity-days";
 import { getBestModuleScores, getQuizStatistics } from "@/lib/learning-statistics";
+import { buildLearningOverview } from "@/lib/learning-overview";
 
 export async function getPortalPageContent(slug: PortalPageSlug) {
   const setting = await prisma.appSetting.findUnique({
@@ -723,7 +724,8 @@ export async function getDashboardData(userId: string) {
     certificatesCount,
     leaderboardRaw,
     assignmentsData,
-    activityDays
+    activityDays,
+    learningCatalog
   ] = await Promise.all([
     prisma.module.count({ where: { isPublished: true } }),
     prisma.module.aggregate({
@@ -762,6 +764,7 @@ export async function getDashboardData(userId: string) {
     prisma.userProgress.findMany({
       where: { userId, module: { isPublished: true } },
       select: {
+        moduleId: true,
         status: true,
         progressPct: true,
         completedAt: true,
@@ -821,6 +824,28 @@ export async function getDashboardData(userId: string) {
       by: ["day"],
       where: { userId, day: { gte: shiftActivityDay(today, -13), lte: today } },
       _count: { _all: true }
+    }),
+    prisma.module.findMany({
+      where: { isPublished: true },
+      orderBy: [
+        { category: { brand: { sortOrder: "asc" } } },
+        { category: { sortOrder: "asc" } },
+        { sortOrder: "asc" },
+        { id: "asc" }
+      ],
+      select: {
+        id: true,
+        title: true,
+        durationMin: true,
+        isPublished: true,
+        _count: { select: { questions: true } },
+        category: {
+          select: {
+            name: true,
+            brand: { select: { id: true, name: true, slug: true } }
+          }
+        }
+      }
     })
   ]);
 
@@ -949,7 +974,8 @@ export async function getDashboardData(userId: string) {
     completedMinutesLast30Days,
     activeDaysLast14,
     weeklyActivity,
-    projectedCompletionDays
+    projectedCompletionDays,
+    learningOverview: buildLearningOverview({ modules: learningCatalog, progress: progressList, attempts: quizAttemptsAggregate })
   };
 }
 

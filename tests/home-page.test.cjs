@@ -134,3 +134,45 @@ test('a genuine zero quiz result remains visible rather than being treated as an
   assert.match(markup, /Найкращі спроби за модулями/);
   assert.doesNotMatch(markup, /Після першого тесту/);
 });
+
+function recommendation(id, reason, overrides = {}) {
+  return { id, title: 'Рекомендована тема ' + id, durationMin: 15,
+    category: { name: 'Навушники', brand: { name: 'Apple', slug: 'apple' } },
+    reason, progressPct: 0, quizReady: false, ...overrides };
+}
+
+test('a new learner gets a concrete next module without duplicating it in recommendations', async () => {
+  const next = recommendation(41, 'next');
+  const markup = await renderHome(homeData({ learningOverview: { brands: [], recommendations: [next, recommendation(42, 'next')] } }));
+  assert.equal(primaryAction(markup).href, '/module/41');
+  assert.equal(markup.split(next.title).length - 1, 1);
+  assert.match(markup, /href="\/module\/42"/);
+  assert.match(markup, /Далі у вашому маршруті/);
+});
+
+test('recommendations distinguish a quiz-ready continuation from a material to review', async () => {
+  const markup = await renderHome(homeData({
+    continueModule: learningModule(22, 'Основний модуль'), continueModuleProgress: 70,
+    learningOverview: { brands: [], recommendations: [recommendation(41, 'continue', { progressPct: 100, quizReady: true }), recommendation(42, 'review', { progressPct: 100, quizReady: true })] }
+  }));
+  assert.equal(primaryAction(markup).href, '/module/22');
+  assert.match(markup, /href="\/module\/41\/quiz"/);
+  assert.match(markup, /href="\/module\/42"/);
+  assert.doesNotMatch(markup, /href="\/module\/42\/quiz"/);
+});
+
+test('a complete catalog preserves the completion state instead of turning a suggestion into new work', async () => {
+  const markup = await renderHome(homeData({ totalModules: 3, completedModules: 3, inProgressModules: 0, progressPct: 100,
+    learningOverview: { brands: [], recommendations: [recommendation(41, 'review')] } }));
+  assert.equal(primaryAction(markup).href, '/brands');
+  assert.match(markup, /Ви завершили всі модулі/);
+  assert.match(markup, /Закріпити знання/);
+});
+
+test('a fully read topic recommended for review opens its material rather than promising another quiz attempt', async () => {
+  const markup = await renderHome(homeData({ continueModule: learningModule(22, 'Тема для повторення'), continueModuleProgress: 100,
+    learningOverview: { brands: [], recommendations: [recommendation(22, 'review', { progressPct: 100, quizReady: true })] } }));
+  assert.equal(primaryAction(markup).href, '/module/22');
+  assert.match(primaryAction(markup).content, /Повторити матеріал/);
+  assert.doesNotMatch(markup, /href="\/module\/22\/quiz"/);
+});

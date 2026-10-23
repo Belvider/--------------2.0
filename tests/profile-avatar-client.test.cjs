@@ -43,6 +43,7 @@ function harness(avatarUrl = "/uploads/avatars/old.png") {
     if (request === "@/components/UserAvatar") return { UserAvatar: Avatar };
     if (request === "@/lib/http-client") return require("../lib/http-client.ts");
     if (request === "@/lib/avatar-upload") return require("../lib/avatar-upload.ts");
+    if (request.endsWith(".css")) return { __esModule: true, default: new Proxy({}, { get: (_, name) => String(name) }) };
     return installed(request);
   };
   loaded._compile(ts.transpileModule(fs.readFileSync(filename, "utf8"), {

@@ -1,11 +1,12 @@
 import type { Metadata, Route } from "next";
 import type { CSSProperties } from "react";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, Award, BarChart3, BookOpenCheck, CalendarDays, ChevronDown, Clock3, Sparkles, Trophy } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Award, BarChart3, BookOpenCheck, CalendarDays, ChevronDown, Clock3, Lightbulb, RotateCcw, Sparkles, Trophy } from "lucide-react";
 import { OnboardingModal } from "@/components/OnboardingModal";
 import { PortalShell } from "@/components/PortalShell";
 import { QuickPractice } from "@/components/home/QuickPractice";
 import { LearningPulse } from "@/components/home/LearningPulse";
+import { LearningDirections } from "@/components/home/LearningDirections";
 import { getActivityDay } from "@/lib/activity-days";
 import { requireAuthPageUser } from "@/lib/guards";
 import { getDashboardData } from "@/lib/queries";
@@ -23,32 +24,39 @@ function getGreetingName(fullName: string) {
 export default async function HomePage() {
   const user = await requireAuthPageUser();
   const data = await getDashboardData(user.id);
+  const overview = data.learningOverview ?? { brands: [], recommendations: [] };
   const openAssignments = data.assignments.filter((item) => !item.isCompleted);
   const overdue = openAssignments.find((item) => item.isOverdue);
   const dueSoon = openAssignments.find((item) => item.isDueSoon);
   const featuredAssignment = overdue ?? dueSoon ?? (data.continueModule ? null : openAssignments[0]) ?? null;
-  const featuredId = featuredAssignment?.moduleId ?? data.continueModule?.id;
-  const featuredProgress = featuredAssignment?.progress.progressPct ?? data.continueModuleProgress;
-  const featuredBrand = featuredAssignment?.brand.name ?? data.continueModule?.category.brand.name;
-  const featuredCategory = featuredAssignment?.category.name ?? data.continueModule?.category.name;
-  const featuredDuration = featuredAssignment?.durationMin ?? data.continueModule?.durationMin;
-  const quizReady = featuredProgress >= 100 && data.continueModule !== null
-    && data.continueModule.id === featuredId && data.continueModule._count.questions > 0;
   const allComplete = data.totalModules > 0 && data.completedModules === data.totalModules;
-  const featuredTitle = featuredAssignment?.title ?? data.continueModule?.title
+  const firstRecommendation = !featuredAssignment && !data.continueModule && !allComplete
+    ? overview.recommendations.find(item => item.reason === "next") : null;
+  const featuredId = featuredAssignment?.moduleId ?? data.continueModule?.id ?? firstRecommendation?.id;
+  const featuredProgress = featuredAssignment?.progress.progressPct ?? data.continueModuleProgress ?? firstRecommendation?.progressPct ?? 0;
+  const featuredBrand = featuredAssignment?.brand.name ?? data.continueModule?.category.brand.name ?? firstRecommendation?.category.brand.name;
+  const featuredCategory = featuredAssignment?.category.name ?? data.continueModule?.category.name ?? firstRecommendation?.category.name;
+  const featuredDuration = featuredAssignment?.durationMin ?? data.continueModule?.durationMin ?? firstRecommendation?.durationMin;
+  const needsReview = overview.recommendations.some(item => item.id === featuredId && item.reason === "review");
+  const quizReady = !needsReview && featuredProgress >= 100 && data.continueModule !== null
+    && data.continueModule.id === featuredId && data.continueModule._count.questions > 0;
+  const featuredTitle = featuredAssignment?.title ?? data.continueModule?.title ?? firstRecommendation?.title
     ?? (allComplete ? "Ви завершили всі модулі" : data.totalModules > 0 ? "Оберіть наступний матеріал" : "Матеріали незабаром з’являться");
-  const featuredDescription = quizReady ? "Матеріал переглянуто. Залишилося перевірити знання."
+  const featuredDescription = needsReview ? "Поверніться до теми, щоб закріпити знання після результату тесту."
+    : quizReady ? "Матеріал переглянуто. Залишилося перевірити знання."
     : overdue ? "Термін виконання минув. Поверніться до призначеного модуля."
     : dueSoon ? "У цього призначення наближається термін виконання."
     : featuredAssignment ? "Цей модуль призначено вам для навчання."
     : data.continueModule ? "Продовжіть з останнього відкритого матеріалу."
+    : firstRecommendation ? "Почніть із цієї теми, щоб розширити знання про напрям."
     : allComplete ? "Поверніться до матеріалів, коли потрібно освіжити знання."
     : data.totalModules > 0 ? "Знайдіть потрібний бренд або напрямок у каталозі."
     : "Загляньте пізніше, щоб почати навчання.";
   const featuredHref = (featuredId ? "/module/" + featuredId + (quizReady ? "/quiz" : "") : "/brands") as Route;
-  const featuredCta = featuredId ? quizReady ? "Перейти до тесту" : featuredProgress > 0 ? "Продовжити навчання" : "Почати модуль"
+  const featuredCta = featuredId ? needsReview ? "Повторити матеріал" : quizReady ? "Перейти до тесту" : featuredProgress > 0 ? "Продовжити навчання" : "Почати модуль"
     : allComplete ? "Повторити матеріали" : "Відкрити каталог";
   const remainingAssignments = openAssignments.filter((item) => item.moduleId !== featuredId);
+  const recommendations = overview.recommendations.filter(item => item.id !== featuredId);
   const progressPct = Math.min(100, Math.max(0, data.progressPct));
   const now = new Date();
   const activityDay = getActivityDay(now);
@@ -73,9 +81,9 @@ export default async function HomePage() {
       <div className={styles.home}>
         <header className={styles.header}>
           <div>
-            <p className={styles.headerEyebrow}><span aria-hidden="true" />Ваш простір навчання</p>
+            <p className={styles.headerEyebrow}><span aria-hidden="true" />Особистий простір · {user.firstName?.trim() || getGreetingName(user.name)}</p>
             <h1>Головна</h1>
-            <p className={styles.subtitle}>Від знань про техніку — до впевненої консультації.</p>
+            <p className={styles.subtitle}>Ваш наступний крок, прогрес і теми для впевненої консультації.</p>
           </div>
           <div className={styles.headerActions}>
             <p className={styles.date}><CalendarDays size={14} aria-hidden="true" />{today}</p>
@@ -109,13 +117,15 @@ export default async function HomePage() {
             )}
             <p className={styles.featureDescription}>{featuredDescription}</p>
             {featuredId && featuredProgress > 0 && (
-              <div className={styles.materialProgress}>
-                <span>Переглянуто матеріалу</span><strong>{featuredProgress}%</strong>
+              <div className={styles.materialProgressWrap}>
+                <div className={styles.materialProgress}><span>Переглянуто матеріалу</span><strong>{featuredProgress}%</strong></div>
+                <div className={styles.materialTrack} aria-hidden="true"><span style={{ width: Math.min(100, Math.max(0, featuredProgress)) + "%" }} /></div>
               </div>
             )}
             <Link href={featuredHref} className={cn("focus-ring", styles.primaryButton)}>
               {featuredCta}<ArrowRight size={17} aria-hidden="true" />
             </Link>
+            <p className={styles.weeklyNote}><CalendarDays size={13} aria-hidden="true" />За останні 7 днів завершено: <strong>{data.completedLast7Days ?? 0}</strong></p>
           </article>
 
           <article className={cn("card", styles.panel, styles.progressPanel)}>
@@ -150,11 +160,6 @@ export default async function HomePage() {
           </article>
         </section>
 
-        <section className={styles.exploreGrid} aria-label="Мініпрактика та навчальна активність">
-          <QuickPractice key={activityDay} initialIndex={practiceIndex} />
-          <LearningPulse days={data.weeklyActivity} />
-        </section>
-
         {remainingAssignments.length > 0 && (
           <section className={cn("card", styles.panel)} aria-labelledby="home-assignments-title">
             <div className={styles.sectionHeader}>
@@ -179,6 +184,36 @@ export default async function HomePage() {
             {remainingAssignments.length > 3 && <p className={styles.moreNote}>Ще {remainingAssignments.length - 3} — у вашому профілі.</p>}
           </section>
         )}
+
+        {recommendations.length > 0 && <section className={styles.recommendations} aria-labelledby="home-recommendations-title">
+          <div className={styles.sectionHeader}>
+            <div><p className={styles.eyebrow}><Lightbulb size={14} aria-hidden="true" />На основі вашого навчання</p><h2 id="home-recommendations-title">Далі у вашому маршруті</h2></div>
+            <span className={styles.recommendationNote}>Оберіть тему у зручному для вас порядку</span>
+          </div>
+          <div className={styles.recommendationGrid}>
+            {recommendations.map(item => (
+              <Link key={item.id} href={("/module/" + item.id + (item.quizReady && item.reason === "continue" ? "/quiz" : "")) as Route}
+                className={cn("focus-ring", styles.recommendation, item.reason === "review" && styles.reviewRecommendation)}>
+                <div className={styles.recommendationTop}>
+                  <span>{item.reason === "continue" ? <BookOpenCheck size={14} aria-hidden="true" /> : item.reason === "review" ? <RotateCcw size={14} aria-hidden="true" /> : <Sparkles size={14} aria-hidden="true" />}
+                    {item.reason === "continue" ? item.quizReady ? "Готово до тесту" : "Продовжити" : item.reason === "review" ? "Закріпити знання" : "Нова тема"}</span>
+                  <ArrowUpRight size={17} aria-hidden="true" />
+                </div>
+                <p className={styles.recommendationBrand}>{item.category.brand.name} · {item.category.name}</p>
+                <h3>{item.title}</h3>
+                <p className={styles.recommendationReason}>{item.reason === "continue" ? `${item.progressPct}% матеріалу вже переглянуто` : item.reason === "review" ? "Поверніться до теми після результату тесту" : "Наступний крок у ще не завершеному напрямі"}</p>
+                <footer><span><Clock3 size={12} aria-hidden="true" />{item.durationMin} хв матеріалу</span><ArrowRight size={15} aria-hidden="true" /></footer>
+              </Link>
+            ))}
+          </div>
+        </section>}
+
+        <LearningDirections brands={overview.brands} />
+
+        <section className={styles.exploreGrid} aria-label="Мініпрактика та навчальна активність">
+          <QuickPractice key={activityDay} initialIndex={practiceIndex} />
+          <LearningPulse days={data.weeklyActivity} />
+        </section>
 
         <section className={cn("card", styles.panel, styles.catalogPanel)} aria-labelledby="home-materials-title">
           <div className={styles.sectionHeader}>

@@ -66,7 +66,7 @@
 .feature {
   position: relative;
   display: flex;
-  min-height: 22rem;
+  min-height: 0;
   flex-direction: column;
   align-items: start;
   overflow: hidden;
@@ -92,7 +92,7 @@
 .feature .eyebrow { color: #7ce7d3; }
 .featureTitle {
   max-width: 28ch;
-  margin-top: 2rem;
+  margin-top: 1.25rem;
   color: #f5fffd;
   font-family: var(--font-heading);
   font-size: clamp(1.5rem,2.5vw,2rem);
@@ -107,8 +107,13 @@
 .moduleMeta { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; margin-top: 0.875rem; color: #b9d1cf; font-size: 0.75rem; line-height: 1.5; }
 .moduleMeta span:last-child { display: inline-flex; align-items: center; gap: 0.375rem; white-space: nowrap; }
 .featureDescription { max-width: 49ch; margin-top: 1rem; color: #b5c8ce; font-size: 0.8125rem; line-height: 1.75; }
-.materialProgress { display: flex; align-items: center; justify-content: space-between; gap: 1rem; width: 100%; max-width: 23rem; margin-top: 1.125rem; color: #abc4c4; font-size: 0.6875rem; }
+.materialProgressWrap { width: 100%; max-width: 23rem; margin-top: 1rem; }
+.materialProgress { display: flex; align-items: center; justify-content: space-between; gap: 1rem; color: #abc4c4; font-size: 0.6875rem; }
 .materialProgress strong { color: #e1f7f2; font-weight: 600; }
+.materialTrack { height: .25rem; margin-top: .5rem; overflow: hidden; border-radius: 99px; background: rgba(190,231,223,.12); }
+.materialTrack span { display: block; height: 100%; border-radius: inherit; background: #70e4cc; }
+.weeklyNote { display: flex; flex-wrap: wrap; align-items: center; gap: .375rem; margin-top: 1rem; color: #b8cecd; font-size: .6875rem; line-height: 1.6; }
+.weeklyNote strong { color: #dff8f0; font-weight: 600; }
 .primaryButton {
   min-height: 3rem;
   max-width: 100%;
@@ -191,6 +196,21 @@
 .materialArrow { position: absolute; top: 1rem; right: 1rem; color: #a9a6bc; }
 .empty { padding: 1rem 0; color: #a8b4c5; font-size: 0.875rem; line-height: 1.7; }
 
+.recommendations { min-width: 0; padding: .25rem 0; }
+.recommendationNote { max-width: 26ch; color: #abb4c8; font-size: .75rem; line-height: 1.65; }
+.recommendationGrid { display: grid; gap: .75rem; margin-top: 1.125rem; }
+.recommendation { display: flex; flex-direction: column; min-width: 0; padding: 1.125rem; border: 1px solid rgba(130,218,201,.16); border-radius: 1.125rem; background: linear-gradient(145deg,rgba(30,42,42,.93),rgba(20,21,32,.97)); transition: border-color .18s,transform .18s; }
+.recommendation:hover { border-color: rgba(130,218,201,.4); transform: translateY(-2px); }
+.reviewRecommendation { border-color: rgba(191,171,237,.21); background: linear-gradient(145deg,rgba(41,32,55,.95),rgba(24,21,34,.98)); }
+.recommendationTop { display: flex; align-items: center; justify-content: space-between; gap: .75rem; color: #96e6d3; font-size: .6875rem; font-weight: 550; }
+.recommendationTop > span { display: inline-flex; align-items: center; gap: .375rem; }
+.reviewRecommendation .recommendationTop { color: #d1bbed; }
+.recommendationBrand { margin-top: 1rem; color: #b4bdcf; font-size: .6875rem; line-height: 1.6; }
+.recommendation h3 { display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 2; margin-top: .375rem; color: #f2f5fa; font-size: .9375rem; font-weight: 600; line-height: 1.5; overflow-wrap: anywhere; }
+.recommendationReason { margin-top: .625rem; color: #b3bed0; font-size: .75rem; line-height: 1.7; }
+.recommendation footer { display: flex; align-items: center; justify-content: space-between; gap: .5rem; margin-top: auto; padding-top: 1rem; color: #bad7d0; font-size: .6875rem; }
+.recommendation footer > span { display: inline-flex; align-items: center; gap: .375rem; }
+
 .team { min-width: 0; padding: 0 1.25rem; border-radius: 1rem; background: rgba(24,19,35,0.9); }
 .team > summary { display: flex; min-height: 3.75rem; align-items: center; gap: 0.75rem; cursor: pointer; list-style: none; color: #d7d8e7; font-size: 0.8125rem; font-weight: 550; }
 .team > summary::-webkit-details-marker { display: none; }
@@ -234,20 +254,41 @@
   .progressSummary { gap: 1.375rem; }
   .headerActions { flex-direction: column; align-items: end; }
   .assignmentList { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .recommendationGrid { grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); }
+}
+@media (min-width: 640px) and (max-width: 1279px) {
+  .recommendationGrid { grid-template-columns: repeat(2,minmax(0,1fr)); }
 }
 @media (max-width: 479px) {
-  .headerActions { width: 100%; justify-content: space-between; }
+  .header { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: .5rem .75rem; }
+  .header > div:first-child { display: contents; }
+  .headerEyebrow { grid-column: 1 / -1; }
+  .header h1 { grid-column: 1; grid-row: 2; margin: 0; font-size: 2rem; }
+  .subtitle { grid-column: 1 / -1; grid-row: 3; margin-top: .125rem; }
+  .headerActions { grid-column: 2; grid-row: 2; width: auto; }
+  .headerActions .date { display: none; }
+  .catalogLink { min-height: 2.375rem; padding: .5rem .625rem; font-size: .6875rem; }
   .featureTitle { margin-top: 1.5rem; }
   .featureArt { width: 12rem; height: 12rem; opacity: 0.3; right: -3.75rem; bottom: -2.5rem; }
   .featureGlyph { inset: 2.875rem; }
   .featureGlyph > svg { width: 3.25rem; height: 3.25rem; }
   .progressSummary { gap: 1.25rem; }
+  .progressRing { width: 6rem; height: 6rem; }
+  .progressValue { font-size: 1.875rem; }
+  .progressValue > small { margin-top: .375rem; }
+  .progressDetails { gap: .625rem; }
+  .stats { padding-top: .875rem; gap: .625rem; }
+  .stat { padding-top: .625rem; }
+  .statIcon, .statNote { display: none; }
+  .statValue { margin-top: 0; }
+  .stat h2 { font-size: .6875rem; }
+  .recommendationNote { max-width: none; }
   .team > summary > small { display: none; }
   .team > summary > .chevron { margin-left: auto; }
   .sectionHeader { flex-wrap: wrap; }
   .sectionHeader > .textLink { min-height: 1.75rem; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .primaryButton, .assignment, .material, .chevron { transition: none; }
-  .primaryButton:hover, .material:hover { transform: none; }
+  .primaryButton, .assignment, .material, .chevron, .recommendation { transition: none; }
+  .primaryButton:hover, .material:hover, .recommendation:hover { transform: none; }
 }

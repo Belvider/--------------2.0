@@ -6,6 +6,7 @@ import { Camera, Loader2, Mail, MapPin, Trash2, UserRound } from "lucide-react";
 import { UserAvatar } from "@/components/UserAvatar";
 import { AVATAR_ACCEPT, MAX_AVATAR_FILE_SIZE, getAvatarFileError } from "@/lib/avatar-upload";
 import { getRequestError, requestJson } from "@/lib/http-client";
+import styles from "@/app/profile/profile.module.css";
 
 type ProfileIdentityCardProps = {
   user: {
@@ -73,22 +74,21 @@ export function ProfileIdentityCard({ user }: ProfileIdentityCardProps) {
   }
 
   return (
-    <section aria-busy={isPending} className="card px-4 py-5 sm:px-6 sm:py-7 xl:px-8 xl:py-8">
-      <div className="grid gap-5 xl:grid-cols-[auto_minmax(0,1fr)_auto] xl:items-center">
-        <div className="flex items-center justify-center">
-          <div className="relative">
+    <section aria-busy={isPending} className={styles.identity}>
+      <div className={styles.identityMain}>
+          <div className={styles.avatarWrap}>
             <UserAvatar
               name={user.name}
               avatarUrl={avatarUrl}
               size="lg"
-              className="shadow-[0_22px_40px_rgba(0,0,0,0.18)]"
+              className={styles.avatar}
               initialsClassName="text-xl"
             />
             <button
               type="button"
               onClick={() => inputRef.current?.click()}
               disabled={isPending}
-              className="focus-ring absolute -bottom-1 -right-1 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/12 bg-[rgba(40,178,158,0.22)] text-white transition hover:bg-[rgba(40,178,158,0.3)] disabled:opacity-70"
+              className={`focus-ring ${styles.avatarButton}`}
               aria-label="Змінити фото профілю"
             >
               {isPending ? <Loader2 className="size-4 animate-spin" aria-hidden="true" /> : <Camera className="size-4" aria-hidden="true" />}
@@ -108,39 +108,24 @@ export function ProfileIdentityCard({ user }: ProfileIdentityCardProps) {
               }}
             />
           </div>
-        </div>
-
         <div>
-          <span className="portal-chip">Особистий кабінет</span>
-          <h1 className="portal-page-title mt-4">{user.name}</h1>
-          <p className="portal-subtitle mt-3 max-w-2xl">
-            Ваш персональний центр навчання: основні дані, досягнення, історія проходження модулів та керування фото
-            профілю в одному місці.
-          </p>
-
-          <div className="mt-5 flex flex-wrap gap-3">
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.025] px-3 py-1.5 text-sm text-slate-600">
-              <UserRound className="size-4 text-[color:var(--brand-strong)]" aria-hidden="true" />
-              {user.position}
-            </span>
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.025] px-3 py-1.5 text-sm text-slate-600">
-              <MapPin className="size-4 text-[color:var(--brand-strong)]" aria-hidden="true" />
-              {user.department}
-              {user.store ? ` · ${user.store}` : ""}
-            </span>
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.025] px-3 py-1.5 text-sm text-slate-600">
-              <Mail className="size-4 text-[color:var(--brand-strong)]" aria-hidden="true" />
-              {user.email}
-            </span>
-          </div>
+          <p className={styles.eyebrow}>Мій профіль</p>
+          <h1 className={styles.identityName}>{user.name}</h1>
+          <p className={styles.identityEmail}><Mail className="size-3" aria-hidden="true" /><span>{user.email}</span></p>
         </div>
+      </div>
 
-        <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-1">
+      <div className={styles.identityMeta}>
+        <span><UserRound className="size-3.5" aria-hidden="true" />{user.position}</span>
+        <span><MapPin className="size-3.5" aria-hidden="true" />{user.department}{user.store ? ` · ${user.store}` : ""}</span>
+      </div>
+
+        <div className={styles.photoTools}>
           <button
             type="button"
             onClick={() => inputRef.current?.click()}
             disabled={isPending}
-            className="focus-ring bg-ink inline-flex items-center justify-center gap-2 rounded-full px-4 py-3 text-sm font-semibold disabled:opacity-70"
+            className={`focus-ring ${styles.photoButton}`}
           >
             {isPending ? <Loader2 className="size-4 animate-spin" aria-hidden="true" /> : <Camera className="size-4" aria-hidden="true" />}
             Змінити фото
@@ -150,18 +135,16 @@ export function ProfileIdentityCard({ user }: ProfileIdentityCardProps) {
               type="button"
               onClick={() => updateAvatar("DELETE")}
               disabled={isPending}
-              className="focus-ring inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/[0.025] px-4 py-3 text-sm font-medium text-white/85 transition hover:bg-white/[0.04] disabled:opacity-70"
+              className={`focus-ring ${styles.photoButton}`}
             >
               <Trash2 className="size-4" aria-hidden="true" />
               Видалити
             </button>
           ) : null}
+          <p className={styles.photoHint}>JPG, PNG, WEBP, AVIF · до {MAX_AVATAR_FILE_SIZE / 1024 / 1024} МБ</p>
         </div>
-      </div>
-
-      <p className="mt-4 text-xs text-slate-400">JPG, PNG, WEBP або AVIF, до {MAX_AVATAR_FILE_SIZE / 1024 / 1024} МБ.</p>
-      {error ? <p role="alert" className="relative mt-3 text-sm text-rose-300">{error}</p> : null}
-      {notice ? <p role="status" className="relative mt-3 text-sm text-slate-300">{notice}</p> : null}
+      {error ? <p role="alert" className={`${styles.feedback} ${styles.error}`}>{error}</p> : null}
+      {notice ? <p role="status" className={`${styles.feedback} ${styles.success}`}>{notice}</p> : null}
     </section>
   );
 }

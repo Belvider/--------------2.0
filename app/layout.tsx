@@ -33,8 +33,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="uk-UA">
-      <body className={manrope.variable}>
+    <html lang="uk-UA" className={manrope.variable}>
+      <body>
         {children}
         <GlobalSearch />
         <ScrollToTopButton />

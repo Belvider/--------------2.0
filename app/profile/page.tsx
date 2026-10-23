@@ -1,441 +1,149 @@
 import Link from "next/link";
-import {
-  Award,
-  BarChart3,
-  BookOpenCheck,
-  CheckCircle2,
-  Clock3,
-  FileBadge2,
-  Flame,
-  GraduationCap,
-  LineChart,
-  Target,
-  TrendingUp,
-  XCircle
-} from "lucide-react";
-import { ActivityHeatmap } from "@/components/ActivityHeatmap";
-import { AssignedModulesSection } from "@/components/assignments/AssignedModulesSection";
+import { ArrowRight, Award, BookOpenCheck, CheckCircle2, ChevronDown, ClipboardList, Clock3, FileBadge2, Flame, Layers3, Target, TrendingUp } from "lucide-react";
 import { ProfileIdentityCard } from "@/components/profile/ProfileIdentityCard";
+import { ProfileHistory } from "@/components/profile/ProfileHistory";
 import { PortalShell } from "@/components/PortalShell";
 import { requireAuthPageUser } from "@/lib/guards";
 import { getProfileData } from "@/lib/queries";
+import { getActivityDay, getActivityStreak, shiftActivityDay } from "@/lib/activity-days";
+import { getQuizStatistics } from "@/lib/learning-statistics";
 import { formatDate } from "@/lib/ui";
-import { getActivityDay, getActivityStreak } from "@/lib/activity-days";
+import styles from "./profile.module.css";
 
-function pluralizeUk(value: number, one: string, few: string, many: string) {
+function pluralize(value: number, one: string, few: string, many: string) {
   const mod10 = value % 10, mod100 = value % 100;
   if (mod10 === 1 && mod100 !== 11) return one;
   if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) return few;
   return many;
 }
-
-function formatMinutes(m: number) {
-  if (m < 60) return `${m} хв`;
-  const h = Math.floor(m / 60);
-  const min = m % 60;
-  return min > 0 ? `${h}г ${min}хв` : `${h} год`;
+function formatMinutes(value: number) {
+  const minutes = Math.max(0, Math.round(value));
+  if (minutes < 60) return `${minutes} хв`;
+  const hours = Math.floor(minutes / 60), rest = minutes % 60;
+  return rest ? `${hours} год ${rest} хв` : `${hours} год`;
+}
+function timestamp(value: Date | string | null | undefined) {
+  return value ? new Date(value instanceof Date ? value.getTime() : value).getTime() : 0;
+}
+function iso(value: Date | string | null | undefined) {
+  return value ? new Date(timestamp(value)).toISOString() : null;
 }
 
 export default async function ProfilePage() {
   const currentUser = await requireAuthPageUser();
   const profile = await getProfileData(currentUser.id);
-
   if (!profile.user) return null;
 
+  const publishedIds = new Set(profile.publishedModules.map(module => module.id));
+  const progress = profile.progressList.filter(entry => publishedIds.has(entry.moduleId));
+  const attempts = profile.attempts.filter(entry => publishedIds.has(entry.moduleId));
+  const completed = progress.filter(entry => entry.status === "COMPLETED");
+  const inProgress = progress.filter(entry => entry.status === "IN_PROGRESS").sort((a, b) => timestamp(b.lastSeenAt) - timestamp(a.lastSeenAt));
+  const total = profile.publishedModules.length;
+  const progressPct = total ? Math.min(100, Math.round(completed.length / total * 100)) : 0;
+  const stats = getQuizStatistics(attempts);
+  const nominalMinutes = progress.reduce((sum, entry) => sum + (entry.status === "COMPLETED" ? entry.module.durationMin : Math.round(entry.module.durationMin * Math.max(0, Math.min(100, entry.progressPct)) / 100)), 0);
   const today = getActivityDay();
-  const streak = getActivityStreak(profile.activityDays.map((item) => item.day), today);
+  const streak = getActivityStreak(profile.activityDays.filter(day => day.count > 0).map(day => day.day), today);
+  const activityMap = new Map(profile.activityDays.map(day => [day.day, day.count]));
+  const last28Days = Array.from({ length: 28 }, (_, index) => {
+    const day = shiftActivityDay(today, index - 27);
+    return { day, count: activityMap.get(day) ?? 0 };
+  });
+  const activeDays = last28Days.filter(day => day.count > 0).length;
+  const openAssignments = profile.assignments.filter(item => !item.isCompleted).sort((a, b) => Number(b.isOverdue) - Number(a.isOverdue) || Number(b.required) - Number(a.required) || (timestamp(a.dueAt) || Infinity) - (timestamp(b.dueAt) || Infinity));
+  const latestAttempts = [...attempts].sort((a, b) => timestamp(b.attemptedAt) - timestamp(a.attemptedAt));
+  const review = latestAttempts.find(item => !item.passed && !attempts.some(other => other.moduleId === item.moduleId && other.passed));
+  const assignment = openAssignments[0], continuing = inProgress[0];
+  const next = assignment ? {
+    title: assignment.title, brand: assignment.brand.name, durationMin: assignment.durationMin, href: `/module/${assignment.moduleId}` as const,
+    label: assignment.isOverdue ? "Призначення потребує уваги" : "Ваше призначення", action: assignment.progress.status === "IN_PROGRESS" ? "Продовжити модуль" : "Відкрити модуль",
+    detail: assignment.dueAt ? `${assignment.isOverdue ? "Термін минув" : "Виконати до"}: ${formatDate(assignment.dueAt)}` : "Модуль у вашій навчальній траєкторії."
+  } : review ? {
+    title: review.module.title, brand: review.module.category.brand.name, durationMin: review.module.durationMin, href: `/module/${review.moduleId}` as const,
+    label: "Закріпіть знання", action: "Повторити матеріал", detail: `Останній результат цього модуля — ${Math.round(review.score)}%. Перегляньте матеріал перед наступною спробою.`
+  } : continuing ? {
+    title: continuing.module.title, brand: continuing.module.category.brand.name, durationMin: continuing.module.durationMin, href: `/module/${continuing.moduleId}` as const,
+    label: "Продовжуйте з місця зупинки", action: "Продовжити модуль", detail: `${continuing.progressPct}% матеріалу вже переглянуто.`
+  } : null;
 
-  // Групування прогресу по брендах
-  const brandGroups = new Map<string, {
-    brandName: string;
-    brandSlug: string;
-    total: number;
-    completed: number;
-    inProgress: number;
-    totalMinutes: number;
-    completedMinutes: number;
-    lastActivity: string | null;
-  }>();
-
+  const brandMap = new Map<string, { name: string; slug: string; total: number; completed: number; inProgress: number }>();
   for (const learningModule of profile.publishedModules) {
-    const key = learningModule.category.brand.slug;
-    const ex = brandGroups.get(key) ?? {
-      brandName: learningModule.category.brand.name,
-      brandSlug: key,
-      total: 0, completed: 0, inProgress: 0,
-      totalMinutes: 0, completedMinutes: 0,
-      lastActivity: null
-    };
-    ex.total += 1;
-    ex.totalMinutes += learningModule.durationMin;
-    brandGroups.set(key, ex);
+    const brand = learningModule.category.brand;
+    const group = brandMap.get(brand.slug) ?? { name: brand.name, slug: brand.slug, total: 0, completed: 0, inProgress: 0 };
+    group.total++; brandMap.set(brand.slug, group);
   }
-  for (const entry of profile.progressList) {
-    const key = entry.module.category.brand.slug;
-    const ex = brandGroups.get(key);
-    if (!ex || !entry.module.isPublished) continue;
-    if (entry.status === "COMPLETED") { ex.completed += 1; ex.completedMinutes += entry.module.durationMin; }
-    if (entry.status === "IN_PROGRESS") ex.inProgress += 1;
-    const entryDate = entry.lastSeenAt ? getActivityDay(entry.lastSeenAt) : null;
-    if (entryDate && (!ex.lastActivity || entryDate > ex.lastActivity)) ex.lastActivity = entryDate;
-    brandGroups.set(key, ex);
+  for (const entry of progress) {
+    const group = brandMap.get(entry.module.category.brand.slug);
+    if (group) { if (entry.status === "COMPLETED") group.completed++; else if (entry.status === "IN_PROGRESS") group.inProgress++; }
   }
+  const brands = [...brandMap.values()].sort((a, b) => Number(b.completed + b.inProgress > 0) - Number(a.completed + a.inProgress > 0) || b.completed / b.total - a.completed / a.total || a.name.localeCompare(b.name, "uk"));
+  const visibleBrands = brands.slice(0, 6), remainingBrands = brands.slice(6);
+  const brandRow = (brand: typeof brands[number]) => {
+    const pct = Math.min(100, Math.round(brand.completed / brand.total * 100));
+    return <Link key={brand.slug} href={`/brands/${brand.slug}`} className={`focus-ring ${styles.brand}`}>
+      <div className={styles.brandTop}><span className={styles.brandMark} aria-hidden="true">{brand.name.slice(0, 1)}</span><span className={styles.brandName}>{brand.name}</span><strong>{pct}%</strong>{pct === 100 && <CheckCircle2 className="size-3.5 text-[#a2dfcf]" aria-label="Усі модулі бренду завершено" />}</div>
+      <div className={styles.rail} aria-hidden="true"><span style={{ width: `${pct}%` }} /></div>
+      <div className={styles.brandMeta}><span>{brand.completed} із {brand.total} {pluralize(brand.total, "модуля", "модулів", "модулів")} завершено</span><span>{brand.inProgress ? `${brand.inProgress} у процесі` : pct === 100 ? "Усе опрацьовано" : "Є що відкрити"}</span></div>
+    </Link>;
+  };
 
-  const sortedBrands = [...brandGroups.values()].sort((a, b) => b.completed - a.completed || b.total - a.total);
-
-  // Останні 5 завершених модулів
-  const recentCompleted = profile.progressList
-    .filter((e) => e.status === "COMPLETED")
-    .sort((a, b) => {
-      const aDate = a.completedAt?.getTime() ?? 0;
-      const bDate = b.completedAt?.getTime() ?? 0;
-      return bDate - aDate;
-    })
-    .slice(0, 5);
-
-  // Останні тест-спроби
-  const recentAttempts = [...profile.attempts]
-    .sort((a, b) => new Date(b.attemptedAt).getTime() - new Date(a.attemptedAt).getTime())
-    .slice(0, 6);
-
-  return (
-    <PortalShell user={currentUser}>
+  return <PortalShell user={currentUser}>
+    <div className={styles.profile}>
       <ProfileIdentityCard user={profile.user} />
-
-      {/* ════════════════════════════════════════
-          СТАТИСТИКА — 4 + streak
-      ════════════════════════════════════════ */}
-      <section className="portal-summary-grid portal-profile-stats grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
-        {[
-          {
-            icon: GraduationCap,
-            label: "Завершено модулів",
-            value: profile.stats.completedModules,
-            sub: `${profile.certificates.length} ${pluralizeUk(profile.certificates.length, "сертифікат", "сертифікати", "сертифікатів")}`,
-            accent: false
-          },
-          {
-            icon: LineChart,
-            label: "Середній бал",
-            value: profile.stats.testedModules > 0 ? `${profile.stats.avgScore}%` : "—",
-            sub: profile.stats.testedModules > 0 ? `${profile.stats.testedModules} модулів` : "немає спроб",
-            accent: profile.stats.avgScore >= 80
-          },
-          {
-            icon: Target,
-            label: "Pass rate",
-            value: profile.stats.testedModules > 0 ? `${profile.stats.passRate}%` : "—",
-            sub: "кращі спроби",
-            accent: profile.stats.passRate >= 80
-          },
-          {
-            icon: Clock3,
-            label: "Час навчання",
-            value: profile.stats.totalMinutes >= 60
-              ? `${Math.floor(profile.stats.totalMinutes / 60)}г ${profile.stats.totalMinutes % 60 > 0 ? `${profile.stats.totalMinutes % 60}хв` : ""}`
-              : `${profile.stats.totalMinutes} хв`,
-            sub: "навчального контенту",
-            accent: false
-          }
-        ].map((stat) => {
-          const Icon = stat.icon;
-          return (
-            <article key={stat.label} className="card p-4 sm:p-5">
-              <div className={`inline-flex size-9 items-center justify-center rounded-[10px] border ${
-                stat.accent
-                  ? "border-[rgba(40,178,158,0.25)] bg-[rgba(40,178,158,0.12)]"
-                  : "border-white/10 bg-white/[0.03]"
-              }`}>
-                <Icon className={`size-4 ${stat.accent ? "text-[color:var(--brand-strong)]" : "text-[color:var(--brand-strong)]"}`} aria-hidden="true" />
-              </div>
-              <p className="mt-4 text-[0.65rem] font-bold uppercase tracking-[0.2em] text-slate-500">{stat.label}</p>
-              <p className="mt-2 font-[var(--font-heading)] text-4xl font-semibold text-ink">{stat.value}</p>
-              <p className="mt-1 text-xs text-slate-500">{stat.sub}</p>
-            </article>
-          );
-        })}
-
-        {/* Streak card */}
-        <article className={`card p-4 sm:p-5 ${streak >= 3 ? "border-[rgba(230,191,114,0.2)]" : ""}`}>
-          <div className={`inline-flex size-9 items-center justify-center rounded-[10px] border ${
-            streak >= 3 ? "border-[rgba(230,191,114,0.25)] bg-[rgba(230,191,114,0.12)]" : "border-white/10 bg-white/[0.03]"
-          }`}>
-            <Flame className={`size-4 ${streak >= 3 ? "text-[#e6bf72]" : "text-slate-500"}`} aria-hidden="true" />
-          </div>
-          <p className="mt-4 text-[0.65rem] font-bold uppercase tracking-[0.2em] text-slate-500">Streak</p>
-          <p className="mt-2 font-[var(--font-heading)] text-4xl font-semibold text-ink">{streak}</p>
-          <p className="mt-1 text-xs text-slate-500">
-            {streak === 0 ? "Немає активних днів" : streak === 1 ? "активний день" : `${pluralizeUk(streak, "день", "дні", "днів")} поспіль`}
-          </p>
+      <section className={styles.overview} aria-label="Огляд навчання">
+        <article className={`${styles.panel} ${styles.overviewPanel}`}>
+          <div className={styles.sectionHeader}><div><p className={styles.eyebrow}>Навчальний шлях</p><h2>Ваш прогрес у матеріалах</h2></div><Layers3 className="size-4 text-[#b6a0df]" aria-hidden="true" /></div>
+          <div className={styles.progressHeading}><div><strong>{progressPct}<small>%</small></strong><p>опублікованих модулів завершено</p></div><span className={styles.progressFraction}>{completed.length} із {total}</span></div>
+          <div className={styles.rail} role="progressbar" aria-label="Завершені модулі опублікованого каталогу" aria-valuenow={progressPct} aria-valuemin={0} aria-valuemax={100}><span style={{ width: `${progressPct}%` }} /></div>
+          <div className={styles.progressLegend}><span><strong>{inProgress.length}</strong> у процесі</span><span><strong>{Math.max(0, total - completed.length - inProgress.length)}</strong> ще не розпочато</span></div>
+          <p className={styles.volume}><Clock3 className="size-3.5" aria-hidden="true" /><span><strong>Обсяг опрацьованих матеріалів — {formatMinutes(nominalMinutes)}.</strong><br />За орієнтовною тривалістю модулів, з урахуванням переглянутого прогресу.</span></p>
         </article>
-      </section>
-
-      {/* ════════════════════════════════════════
-          ПРИЗНАЧЕННЯ
-      ════════════════════════════════════════ */}
-      <AssignedModulesSection
-        label="Навчальні завдання"
-        title="Призначені модулі"
-        subtitle="Модулі призначені персонально або через відділ."
-        emptyText="Активних призначень зараз немає."
-        assignments={profile.assignments}
-        summary={profile.assignmentSummary}
-      />
-
-      {/* ════════════════════════════════════════
-          АКТИВНІСТЬ HEATMAP + ОСТАННЯ АКТИВНІСТЬ
-      ════════════════════════════════════════ */}
-      <section className="grid grid-cols-1 gap-4 xl:grid-cols-[minmax(0,1.4fr)_0.6fr]">
-        <article className="card p-4 sm:p-6">
-          <div className="flex items-center gap-2 mb-5">
-            <TrendingUp className="size-4 text-[color:var(--brand-strong)]" aria-hidden="true" />
-            <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-slate-500">Активність</p>
-          </div>
-          <ActivityHeatmap activityDays={profile.activityDays} totalDays={84} today={today} />
-        </article>
-
-        <article className="card p-4 sm:p-5">
-          <div className="flex items-center gap-2 mb-4">
-            <BookOpenCheck className="size-4 text-[color:var(--brand-strong)]" aria-hidden="true" />
-            <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-slate-500">Останні завершення</p>
-          </div>
-          {recentCompleted.length > 0 ? (
-            <div className="space-y-2.5">
-              {recentCompleted.map((entry) => (
-                <Link
-                  key={entry.id}
-                  href={`/module/${entry.moduleId}`}
-                  className="focus-ring group flex items-start gap-3 rounded-[12px] border border-white/[0.065] bg-white/[0.02] p-3 transition hover:border-[rgba(40,178,158,0.15)]"
-                >
-                  <CheckCircle2 className="mt-0.5 size-4 flex-none text-[color:var(--brand-strong)]" aria-hidden="true" />
-                  <div className="min-w-0">
-                    <p className="truncate text-sm font-medium text-white group-hover:text-[color:var(--brand-strong)]">
-                      {entry.module.title}
-                    </p>
-                    <p className="mt-0.5 text-[10px] text-slate-500">
-                      {entry.module.category.brand.name} · {entry.completedAt ? formatDate(entry.completedAt) : "—"}
-                    </p>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          ) : (
-            <p className="text-sm text-slate-500">Ще нічого не завершено.</p>
-          )}
-        </article>
-      </section>
-
-      {/* ════════════════════════════════════════
-          ПРОГРЕС ПО БРЕНДАХ — детальний
-      ════════════════════════════════════════ */}
-      <section className="card p-4 sm:p-6">
-        <div className="flex items-center justify-between gap-4 mb-5">
-          <div>
-            <p className="text-[0.68rem] font-bold uppercase tracking-[0.2em] text-slate-500">Прогрес навчання</p>
-            <h2 className="mt-1 font-[var(--font-heading)] text-xl font-semibold text-white">По брендах</h2>
-          </div>
-          <span className="rounded-full border border-white/10 bg-white/[0.025] px-3 py-1 text-[11px] font-semibold text-slate-500">
-            {sortedBrands.length} брендів
-          </span>
+        <div className={styles.metrics}>
+          {[
+            { Icon: TrendingUp, value: stats.testedModules ? `${stats.avgScore}%` : "—", title: "Середній результат", note: "Найкращий бал кожного модуля" },
+            { Icon: Target, value: stats.testedModules ? `${stats.passRate}%` : "—", title: "Успішно складені тести", note: stats.testedModules ? `${stats.testedModules} ${pluralize(stats.testedModules, "модуль із тестом", "модулі з тестами", "модулів із тестами")}` : "Після першої спроби" },
+            { Icon: FileBadge2, value: profile.certificates.length, title: "Сертифікати", note: "Усі збережені результати" },
+            { Icon: Flame, value: streak, title: "Серія активності", note: streak ? `${pluralize(streak, "День", "Дні", "Днів")} поспіль` : "Поверніться до матеріалів" }
+          ].map(({ Icon, value, title, note }) => <article key={title} className={styles.metric}><Icon aria-hidden="true" /><strong>{value}</strong><h3>{title}</h3><p>{note}</p></article>)}
         </div>
-
-        {sortedBrands.length > 0 ? (
-          <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
-            {sortedBrands.map((brand) => {
-              const pct = brand.total > 0 ? Math.round((brand.completed / brand.total) * 100) : 0;
-              const isDone = pct === 100;
-              return (
-                <Link
-                  key={brand.brandSlug}
-                  href={`/brands/${brand.brandSlug}`}
-                  className="focus-ring group rounded-[14px] border border-white/[0.07] bg-white/[0.025] p-4 transition hover:border-[rgba(40,178,158,0.2)] hover:bg-white/[0.04]"
-                >
-                  <div className="flex items-start justify-between gap-2">
-                    <p className="font-[var(--font-heading)] text-base font-semibold text-white group-hover:text-[color:var(--brand-strong)] transition">
-                      {brand.brandName}
-                    </p>
-                    {isDone && (
-                      <CheckCircle2 className="size-4 flex-none text-[color:var(--brand-strong)]" aria-hidden="true" />
-                    )}
-                  </div>
-
-                  {/* Прогрес бар */}
-                  <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-white/[0.06]">
-                    <div
-                      className={`h-full rounded-full transition-all duration-500 ${
-                        isDone
-                          ? "bg-[linear-gradient(90deg,rgba(40,178,158,0.95),rgba(138,242,223,0.85))]"
-                          : pct >= 50
-                            ? "bg-[linear-gradient(90deg,rgba(40,178,158,0.7),rgba(138,242,223,0.6))]"
-                            : "bg-[rgba(40,178,158,0.45)]"
-                      }`}
-                      style={{ width: `${pct}%` }}
-                    />
-                  </div>
-
-                  {/* Метаданні */}
-                  <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px]">
-                    <span className={`font-bold ${isDone ? "text-[color:var(--brand-strong)]" : "text-white"}`}>
-                      {pct}%
-                    </span>
-                    <span className="text-slate-500">{brand.completed}/{brand.total} модулів</span>
-                    {brand.inProgress > 0 && (
-                      <span className="rounded-full border border-amber-500/20 bg-amber-500/10 px-2 py-0.5 font-semibold text-amber-300">
-                        {brand.inProgress} в процесі
-                      </span>
-                    )}
-                  </div>
-
-                  <div className="mt-2 flex items-center gap-3 text-[10px] text-slate-600">
-                    <span>{formatMinutes(brand.completedMinutes)} навчання</span>
-                    {brand.lastActivity && (
-                      <span>· {brand.lastActivity}</span>
-                    )}
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-        ) : (
-          <div className="rounded-[12px] border border-white/[0.065] bg-white/[0.02] px-4 py-8 text-center">
-            <p className="text-sm text-slate-500">Ще немає пройдених модулів.</p>
-            <Link href="/brands" className="focus-ring mt-3 inline-flex items-center gap-2 rounded-full border border-[rgba(40,178,158,0.22)] bg-[rgba(40,178,158,0.1)] px-4 py-2 text-sm font-semibold text-[color:var(--brand-strong)]">
-              Відкрити каталог
-            </Link>
-          </div>
-        )}
       </section>
-
-      {/* ════════════════════════════════════════
-          ТЕСТИ + СЕРТИФІКАТИ + БЕЙДЖІ
-      ════════════════════════════════════════ */}
-      <section className="grid grid-cols-1 gap-4 xl:grid-cols-3">
-
-        {/* Історія тестів */}
-        <article className="card p-4 sm:p-6">
-          <div className="flex items-center gap-2.5 mb-4">
-            <div className="inline-flex size-9 items-center justify-center rounded-[10px] border border-white/10 bg-white/[0.03]">
-              <BarChart3 className="size-4 text-[color:var(--brand-strong)]" aria-hidden="true" />
-            </div>
-            <div>
-              <p className="text-[0.68rem] font-bold uppercase tracking-[0.2em] text-slate-500">Тестування</p>
-              <h2 className="mt-0.5 text-base font-semibold text-white">Остання активність</h2>
-            </div>
-          </div>
-
-          {recentAttempts.length > 0 ? (
-            <div className="space-y-2">
-              {recentAttempts.map((attempt) => (
-                <div key={attempt.id} className={`flex items-center gap-3 rounded-[10px] border px-3 py-2.5 ${
-                  attempt.passed
-                    ? "border-[rgba(40,178,158,0.15)] bg-[rgba(40,178,158,0.05)]"
-                    : "border-white/[0.065] bg-white/[0.02]"
-                }`}>
-                  {attempt.passed
-                    ? <CheckCircle2 className="size-4 flex-none text-[color:var(--brand-strong)]" aria-hidden="true" />
-                    : <XCircle className="size-4 flex-none text-slate-500" aria-hidden="true" />}
-                  <div className="min-w-0 flex-1">
-                    <p className="truncate text-xs font-medium text-white">{attempt.module.title}</p>
-                    <p className="text-[10px] text-slate-500">{formatDate(attempt.attemptedAt)}</p>
-                  </div>
-                  <span className={`flex-none rounded-full border px-2 py-0.5 text-xs font-bold ${
-                    attempt.passed
-                      ? "border-[rgba(40,178,158,0.25)] bg-[rgba(40,178,158,0.1)] text-[color:var(--brand-strong)]"
-                      : "border-white/10 bg-white/[0.025] text-slate-400"
-                  }`}>
-                    {attempt.score}%
-                  </span>
-                </div>
-              ))}
-
-              {profile.stats.testedModules > 0 && (
-                <div className="mt-3 rounded-[10px] border border-white/[0.07] bg-white/[0.025] px-3 py-2.5">
-                  <div className="flex items-center justify-between text-xs">
-                    <span className="text-slate-500">Середній бал</span>
-                    <span className="font-bold text-white">{profile.stats.avgScore}%</span>
-                  </div>
-                  <div className="mt-1.5 h-1 overflow-hidden rounded-full bg-white/[0.06]">
-                    <div className="h-full rounded-full bg-[rgba(40,178,158,0.8)]" style={{ width: `${profile.stats.avgScore}%` }} />
-                  </div>
-                </div>
-              )}
-            </div>
-          ) : (
-            <p className="text-sm text-slate-500">Тести ще не здавались.</p>
-          )}
+      <section className={styles.nextGrid} aria-label="Наступний крок і активність">
+        <article className={`${styles.panel} ${styles.nextPanel}`}>
+          <p className={styles.eyebrow}>{next?.label ?? (completed.length ? "Продовжуйте розвиватися" : "Почнімо навчання")}</p>
+          <h2 className={styles.nextTitle}>{next?.title ?? (total ? "Знайдіть наступний напрям для себе" : "Нові матеріали готуються")}</h2>
+          {next ? <><p className={styles.nextMeta}><span>{next.brand}</span><span>{formatMinutes(next.durationMin)} · орієнтовна тривалість</span></p><p className={styles.nextDescription}>{next.detail}</p></> : <p className={styles.nextDescription}>Оберіть бренд, познайомтеся з продуктами й перевірте знання в тесті.</p>}
+          <Link href={next?.href ?? "/brands"} className={`focus-ring ${styles.primaryLink}`}>{next?.action ?? "Перейти до каталогу"}<ArrowRight className="size-4" aria-hidden="true" /></Link>
         </article>
-
-        {/* Сертифікати */}
-        <article className="card p-4 sm:p-6">
-          <div className="flex items-center gap-2.5 mb-4">
-            <div className="inline-flex size-9 items-center justify-center rounded-[10px] border border-white/10 bg-white/[0.03]">
-              <FileBadge2 className="size-4 text-[color:var(--brand-strong)]" aria-hidden="true" />
-            </div>
-            <div>
-              <p className="text-[0.68rem] font-bold uppercase tracking-[0.2em] text-slate-500">Офіційні результати</p>
-              <h2 className="mt-0.5 text-base font-semibold text-white">Сертифікати</h2>
-            </div>
+        <article className={styles.panel}>
+          <div className={styles.sectionHeader}><div><p className={styles.eyebrow}>Останні 28 днів</p><h2>Ритм навчання</h2></div></div>
+          <p className={styles.activityValue}><strong>{activeDays}</strong>{pluralize(activeDays, "активний день", "активні дні", "активних днів")}</p>
+          <div className={styles.activityTrack} role="img" aria-label={`${activeDays} ${pluralize(activeDays, "активний день", "активні дні", "активних днів")} за останні 28 днів`}>
+            {last28Days.map(day => <span key={day.day} title={`${formatDate(`${day.day}T12:00:00Z`)}: ${day.count} ${pluralize(day.count, "модуль", "модулі", "модулів")}`} className={day.count >= 3 ? styles.activityHigh : day.count === 2 ? styles.activityMedium : day.count === 1 ? styles.activityLow : undefined} />)}
           </div>
-
-          <div className="space-y-2">
-            {profile.certificates.map((cert) => (
-              <Link
-                key={cert.id}
-                href={`/certificate/${cert.id}`}
-                className="focus-ring flex items-center gap-3 rounded-[10px] border border-[rgba(40,178,158,0.15)] bg-[rgba(40,178,158,0.05)] px-3 py-2.5 transition hover:border-[rgba(40,178,158,0.3)] hover:bg-[rgba(40,178,158,0.09)]"
-              >
-                <CheckCircle2 className="size-4 flex-none text-[color:var(--brand-strong)]" aria-hidden="true" />
-                <div className="min-w-0 flex-1">
-                  <p className="truncate text-xs font-medium text-white">{cert.module.title}</p>
-                  <p className="text-[10px] text-slate-500">{formatDate(cert.issuedAt)}</p>
-                </div>
-                <span className="text-[10px] font-semibold text-[color:var(--brand-strong)]">→</span>
-              </Link>
-            ))}
-            {profile.certificates.length === 0 && (
-              <p className="text-sm text-slate-500">Сертифікатів поки немає. Пройдіть модуль і здайте тест.</p>
-            )}
-          </div>
-        </article>
-
-        {/* Бейджі */}
-        <article className="card p-4 sm:p-6">
-          <div className="flex items-center gap-2.5 mb-4">
-            <div className="inline-flex size-9 items-center justify-center rounded-[10px] border border-white/10 bg-white/[0.03]">
-              <Award className="size-4 text-[color:var(--brand-strong)]" aria-hidden="true" />
-            </div>
-            <div>
-              <p className="text-[0.68rem] font-bold uppercase tracking-[0.2em] text-slate-500">Визнання</p>
-              <h2 className="mt-0.5 text-base font-semibold text-white">Бейджі</h2>
-            </div>
-          </div>
-
-          {profile.badges.length > 0 ? (
-            <div className="flex flex-wrap gap-2">
-              {profile.badges.map((entry) => (
-                <span
-                  key={entry.id}
-                  className="inline-flex items-center gap-1.5 rounded-full border border-[rgba(230,191,114,0.22)] bg-[rgba(230,191,114,0.1)] px-3 py-1.5 text-sm font-semibold text-[#e6bf72]"
-                >
-                  {entry.badge.icon && <span aria-hidden="true">{entry.badge.icon}</span>}
-                  {entry.badge.name}
-                </span>
-              ))}
-            </div>
-          ) : (
-            <div className="space-y-3">
-              <p className="text-sm text-slate-500">Бейджів ще немає.</p>
-              <div className="rounded-[12px] border border-white/[0.065] bg-white/[0.02] p-3">
-                <p className="text-[11px] font-semibold text-slate-400">Як отримати бейдж?</p>
-                <p className="mt-1.5 text-xs leading-5 text-slate-500">
-                  Завершіть перший модуль, пройдіть тест або досягніть 100% по бренду — система видасть бейдж автоматично.
-                </p>
-              </div>
-            </div>
-          )}
+          <div className={styles.activityDates}><span>{formatDate(`${last28Days[0].day}T12:00:00Z`)}</span><span>Сьогодні</span></div>
+          <p className={styles.activityNote}><BookOpenCheck aria-hidden="true" /><span>Перегляди матеріалів і спроби тестів. Вища колонка — більше модулів цього дня.</span></p>
         </article>
       </section>
-
-    </PortalShell>
-  );
+      {profile.assignments.length > 0 && <details className={`${styles.panel} ${styles.assignmentDetails}`} id="profile-assignments">
+        <summary className="focus-ring"><ClipboardList className="size-4" aria-hidden="true" /><span>Навчальні призначення<small>{profile.assignmentSummary.open} відкритих · {profile.assignmentSummary.completed} виконано{profile.assignmentSummary.overdue ? ` · ${profile.assignmentSummary.overdue} із простроченим терміном` : ""}</small></span><ChevronDown className="size-4" aria-hidden="true" /></summary>
+        <div className={styles.assignmentRows}>{profile.assignments.map(item => <div key={item.id} className={styles.assignmentRow}>
+          {item.isCompleted ? <CheckCircle2 className="size-4" aria-hidden="true" /> : <BookOpenCheck className="size-4" aria-hidden="true" />}
+          <div className={styles.rowCopy}><h3>{item.title}</h3><p>{item.brand.name} · {formatMinutes(item.durationMin)}{item.isCompleted ? " · Виконано" : item.required ? " · Обов’язковий" : ""}</p>{item.dueAt && !item.isCompleted && <p className={item.isOverdue ? styles.due : undefined}>{item.isOverdue ? "Термін минув" : "Виконати до"}: {formatDate(item.dueAt)}</p>}{item.note && <p>{item.note}</p>}</div>
+          <Link href={`/module/${item.moduleId}`} className={`focus-ring ${styles.textLink}`} aria-label={`${item.isCompleted ? "Переглянути" : "Відкрити"} модуль ${item.title}`}><ArrowRight className="size-4" aria-hidden="true" /></Link>
+        </div>)}</div>
+      </details>}
+      {brands.length > 0 && <section className={styles.panel}>
+        <header className={styles.sectionHeader}><div><p className={styles.eyebrow}>Сильні сторони та нові напрями</p><h2>Знання за брендами</h2></div><p>{brands.length} {pluralize(brands.length, "бренд", "бренди", "брендів")}</p></header>
+        <div className={styles.brandGrid}>{visibleBrands.map(brandRow)}</div>
+        {remainingBrands.length > 0 && <details className={styles.moreBrands}><summary className="focus-ring">Ще {remainingBrands.length} {pluralize(remainingBrands.length, "напрям", "напрями", "напрямів")}<ChevronDown className="size-3.5" aria-hidden="true" /></summary><div className={styles.brandGrid}>{remainingBrands.map(brandRow)}</div></details>}
+      </section>}
+      <ProfileHistory
+        modules={[...progress].sort((a, b) => timestamp(b.lastSeenAt) - timestamp(a.lastSeenAt)).map(entry => ({ id: entry.id, moduleId: entry.moduleId, title: entry.module.title, brand: entry.module.category.brand.name, status: entry.status, progressPct: Math.max(0, Math.min(100, entry.progressPct)), date: iso(entry.completedAt ?? entry.lastSeenAt), href: `/module/${entry.moduleId}` }))}
+        attempts={latestAttempts.map(entry => ({ id: entry.id, moduleId: entry.moduleId, title: entry.module.title, brand: entry.module.category.brand.name, score: entry.score, passed: entry.passed, date: iso(entry.attemptedAt)!, href: `/module/${entry.moduleId}` }))}
+        certificates={profile.certificates.map(entry => ({ id: entry.id, title: entry.module.title, date: iso(entry.issuedAt)!, href: `/certificate/${entry.id}` }))}
+      />
+      {profile.badges.length > 0 && <section className={styles.panel}><header className={styles.sectionHeader}><div><p className={styles.eyebrow}>Ваші досягнення</p><h2>Здобуті відзнаки</h2></div><Award className="size-4 text-[#d9c69e]" aria-hidden="true" /></header><div className={styles.badges}>{profile.badges.map(entry => <span key={entry.id} className={styles.badge} title={entry.badge.description}>{entry.badge.icon && <span aria-hidden="true">{entry.badge.icon}</span>}{entry.badge.name}</span>)}</div></section>}
+    </div>
+  </PortalShell>;
 }

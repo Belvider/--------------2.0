@@ -35,7 +35,7 @@ function fixture({ currentPct = 25, activities = [] } = {}) {
   const modules = [1, 2, 3, 4].map(id => ({
     id, title: `Module ${id}`, isPublished: id !== 4, durationMin: id === 4 ? 200 : 20,
     _count: { questions: id === 2 ? 3 : 0 },
-    category: { name: 'Category', brand: { name: 'Brand' } }
+    category: { name: 'Category', brand: { id: 1, name: 'Brand', slug: 'brand' } }
   }));
   const progress = [
     { userId: 'learner', moduleId: 1, module: modules[0], status: 'COMPLETED', progressPct: 100, completedAt: new Date('2026-10-20T10:00:00Z'), lastSeenAt: new Date('2026-10-20T10:00:00Z') },
