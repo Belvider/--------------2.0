@@ -37,7 +37,7 @@ export function UserAvatar({
       className={`relative inline-flex shrink-0 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.015))] ${sizeMap[size]} ${className}`.trim()}
     >
       {avatarUrl ? (
-        <Image src={avatarUrl} alt={name} fill sizes="96px" className={`object-cover ${imageClassName}`.trim()} />
+        <Image src={avatarUrl} alt={name} fill sizes="96px" unoptimized={avatarUrl.startsWith("/uploads/") || avatarUrl.startsWith("/api/uploads/")} className={`object-cover ${imageClassName}`.trim()} />
       ) : (
         <span
           className={`font-[var(--font-heading)] text-sm font-semibold uppercase tracking-[0.08em] text-white/88 ${initialsClassName}`.trim()}

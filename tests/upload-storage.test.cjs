@@ -44,7 +44,36 @@ test('Vercel Blob credentials are separate from Netlify and support connected-st
   assert.equal(storage({ NETLIFY: 'true' }).isNetlifyBlobStorageEnabled(), true);
   assert.equal(storage({ BLOB_STORE_ID: 'store-test', VERCEL_OIDC_TOKEN: 'test-oidc' }).isVercelBlobStorageEnabled(), true);
   assert.equal(storage({ BLOB_STORE_ID: 'store-test' }).isVercelBlobStorageEnabled(), false);
+  assert.equal(storage({ BLOB_STORE_ID: 'store-test' }).isLocalUploadStorageEnabled(), true);
   assert.equal(storage({}).isLocalUploadStorageEnabled(), true);
+});
+
+test('Vercel connected stores let the SDK authenticate through the request-context OIDC token', async () => {
+  for (const env of [
+    { VERCEL: '1', BLOB_STORE_ID: 'store-test' },
+    { VERCEL_ENV: 'production', BLOB_STORE_ID: 'store-test' }
+  ]) {
+    const calls = [];
+    // The SDK obtains the OIDC token from Vercel's request context. It need not
+    // be copied into process.env or passed through this storage adapter.
+    const runtime = storage(env, {
+      put: async (...args) => { calls.push(['put', ...args]); },
+      get: async (...args) => {
+        calls.push(['get', ...args]);
+        return { statusCode: 200, stream: new Blob(['avatar-bytes']).stream(), blob: { contentType: 'image/png' } };
+      }
+    });
+    assert.equal(runtime.isVercelBlobStorageEnabled(), true);
+    assert.equal(runtime.isLocalUploadStorageEnabled(), false);
+    const saved = await runtime.saveUploadFile({ key: 'avatars/context.png', file: image(), metadata: { kind: 'avatar' } });
+    assert.equal(saved.url, '/uploads/avatars/context.png');
+    assert.equal(calls[0][0], 'put');
+    assert.equal(calls[0][3].access, 'private');
+    assert.equal(Object.hasOwn(calls[0][3], 'token'), false);
+    assert.equal(Object.hasOwn(calls[0][3], 'oidcToken'), false);
+    assert.equal(Buffer.from((await runtime.getStoredUpload('avatars/context.png')).data).toString(), 'avatar-bytes');
+    assert.deepEqual(calls[1], ['get', 'avatars/context.png', { access: 'private' }]);
+  }
 });
 
 test('Vercel saves privately, preserves application URLs, reads via authenticated SDK and deletes by pathname', async () => {
@@ -99,10 +128,15 @@ test('Vercel without durable storage rejects mutations before reading bytes or t
       key: 'avatars/test.png',
       file: { type: 'image/png', size: 1, arrayBuffer: async () => { readBytes = true; } },
       metadata: { kind: 'avatar' }
-    }), /private Vercel Blob store/);
+    }), (error) => {
+      assert.ok(error instanceof runtime.UploadStorageConfigurationError);
+      assert.equal(error.name, 'UploadStorageConfigurationError');
+      assert.match(error.message, /private Vercel Blob store/);
+      return true;
+    });
     assert.equal(readBytes, false);
-    await assert.rejects(runtime.deleteUploadByKey('avatars/test.png'), /private Vercel Blob store/);
-    await assert.rejects(runtime.deleteUploadByUrl('/uploads/avatars/test.png'), /private Vercel Blob store/);
+    await assert.rejects(runtime.deleteUploadByKey('avatars/test.png'), runtime.UploadStorageConfigurationError);
+    await assert.rejects(runtime.deleteUploadByUrl('/uploads/avatars/test.png'), runtime.UploadStorageConfigurationError);
   }
 });
 
@@ -131,9 +165,9 @@ test('admin media never creates local folders on Vercel, with or without storage
   }
 });
 
-test('local storage continues to save, read and delete inside the upload root', async () => {
+test('a store ID without local credentials keeps save, read and delete on local disk', async () => {
   const calls = [];
-  const runtime = storage({}, {}, {
+  const runtime = storage({ BLOB_STORE_ID: 'store-test' }, {}, {
     mkdir: async (...args) => { calls.push(['mkdir', ...args]); },
     writeFile: async (...args) => { calls.push(['writeFile', ...args]); },
     readFile: async (key) => { calls.push(['readFile', key]); return Buffer.from('local-image'); },
@@ -192,6 +226,10 @@ test('missing private blobs return null while provider errors do not fall back t
   const error = new Error('Storage unavailable');
   await assert.rejects(storage(vercelEnv, { get: async () => { throw error; } }).getStoredUpload('avatars/test.png'), error);
   await assert.rejects(storage(vercelEnv, { put: async () => { throw error; } }).saveUploadFile({
+    key: 'avatars/test.png', file: image(), metadata: { kind: 'avatar' }
+  }), error);
+  const oidcEnv = { VERCEL: '1', BLOB_STORE_ID: 'store-test' };
+  await assert.rejects(storage(oidcEnv, { put: async () => { throw error; } }).saveUploadFile({
     key: 'avatars/test.png', file: image(), metadata: { kind: 'avatar' }
   }), error);
 });

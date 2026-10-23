@@ -43,6 +43,13 @@ type BlobListItem = {
   metadata: Record<string, unknown>;
 };
 
+export class UploadStorageConfigurationError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = "UploadStorageConfigurationError";
+  }
+}
+
 function sanitizeUploadKey(value: string) {
   let decoded: string;
   try {
@@ -70,8 +77,10 @@ export function isNetlifyBlobStorageEnabled() {
 }
 
 export function isVercelBlobStorageEnabled() {
+  // On Vercel the SDK can get OIDC from the request context rather than env.
   return Boolean(
-    process.env.BLOB_READ_WRITE_TOKEN || (process.env.BLOB_STORE_ID && process.env.VERCEL_OIDC_TOKEN)
+    process.env.BLOB_READ_WRITE_TOKEN ||
+      (process.env.BLOB_STORE_ID && (process.env.VERCEL_OIDC_TOKEN || isVercelDeployment()))
   );
 }
 
@@ -87,7 +96,7 @@ export function isLocalUploadStorageEnabled() {
 
 function requireDurableUploadStorage() {
   if (!isVercelBlobStorageEnabled() && !isNetlifyBlobStorageEnabled() && isVercelDeployment()) {
-    throw new Error(
+    throw new UploadStorageConfigurationError(
       "Upload storage is not configured. Connect a private Vercel Blob store to this project and redeploy."
     );
   }
