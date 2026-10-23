@@ -118,21 +118,39 @@ export async function writeContentReview(tx, plan) {
   }
 }
 
+export function parseReviewArguments(args) {
+  let reviewDate = '2026-10-19', local = false, apply = false;
+  const seen = new Set();
+  for (let i = 0; i < args.length; i++) {
+    const arg = args[i];
+    if (seen.has(arg)) throw new Error('Duplicate review argument.');
+    seen.add(arg);
+    if (arg === '--local') local = true;
+    else if (arg === '--apply') apply = true;
+    else if (arg === '--review') {
+      const date = args[++i];
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(date ?? '') || Number.isNaN(Date.parse(date))
+        || new Date(date).toISOString().slice(0, 10) !== date) throw new Error('Use --review YYYY-MM-DD with a valid date.');
+      reviewDate = date;
+    } else throw new Error('Use --review YYYY-MM-DD, --local and/or --apply only.');
+  }
+  return { reviewDate, local, apply };
+}
+
 async function main() {
-  const args = process.argv.slice(2);
-  if (args.some(arg => !['--apply', '--local'].includes(arg))) throw new Error('Use --local and/or --apply only.');
-  const local = args.includes('--local'), apply = args.includes('--apply');
+  const { reviewDate, local, apply } = parseReviewArguments(process.argv.slice(2));
   const url = process.env[local ? 'SOURCE_DATABASE_URL' : 'TARGET_DATABASE_URL'];
   if (!url) throw new Error('Load the transfer environment file explicitly.');
   let hostname;
   try { hostname = new URL(url).hostname; } catch { throw new Error('Invalid configured database address.'); }
   if (local ? !['localhost', '127.0.0.1', '[::1]'].includes(hostname) : !hostname.endsWith('.neon.tech')) throw new Error('Unexpected database target.');
-  const manifest = JSON.parse(fs.readFileSync('content/reviews/2026-10-19.json', 'utf8'));
+  const manifest = JSON.parse(fs.readFileSync(`content/reviews/${reviewDate}.json`, 'utf8'));
+  if (manifest.reviewedAt !== reviewDate) throw new Error('Review date does not match the selected manifest.');
   validateReviewManifest(manifest);
   const ids = [...new Set(manifest.edits.map(edit => edit.moduleId))].sort((a, b) => a - b);
   const target = local ? 'local' : 'production';
   const stamp = new Date().toISOString().replace(/[:.]/g, '-');
-  const prefix = `reports/content-verification-2026-10-19/${target}-${stamp}`;
+  const prefix = `reports/content-verification-${reviewDate}/${target}-${stamp}`;
   const db = new PrismaClient({ datasources: { db: { url } } });
   try {
     const result = await db.$transaction(async tx => {

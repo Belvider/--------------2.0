@@ -7,6 +7,15 @@ const moduleFixture = () => ({ id: 1, categoryId: 2, category: { slug: 'phones',
 const review = (edits = [{ moduleId: 1, path: '/contentBlocks/0/html', before: 'Old', after: 'Verified', reason: 'Official source', sourceUrls: [] }]) => ({ version: 1,
   modules: [{ id: 1, categoryId: 2, categorySlug: 'phones', brandSlug: 'apple', questionIds: [9] }], edits });
 
+test('review selection accepts a dated manifest without opening arbitrary paths', async () => {
+  const { parseReviewArguments } = await library;
+  assert.deepEqual(parseReviewArguments([]), { reviewDate: '2026-10-19', local: false, apply: false });
+  assert.deepEqual(parseReviewArguments(['--review', '2026-10-23', '--local', '--apply']), { reviewDate: '2026-10-23', local: true, apply: true });
+  for (const args of [['--review'], ['--review', '../secrets'], ['--review', '2026-02-31'], ['--review', '2026-13-01'], ['--local', '--local'], ['--unknown']]) {
+    assert.throws(() => parseReviewArguments(args));
+  }
+});
+
 test('review preserves independent online edits and is idempotent with JSONB key order', async () => {
   const { prepareContentReview } = await library;
   const current = moduleFixture(); current.description = 'Edited online'; current.contentBlocks[0].title = 'Custom heading';

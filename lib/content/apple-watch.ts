@@ -343,7 +343,7 @@ export const appleWatchSeriesCatalog: ModuleCatalogProduct[] = [
   "Дисплей: OLED Retina з Always-On Display, яскравість до 2000 ніт",
   "Корпус: алюмінієвий, 41 мм та 45 мм",
   "Кнопки: Digital Crown з тактильним відгуком",
-  "Процесор: Apple S9, чип W3, Ultra Wideband2-гопокоління",
+  "Процесор: Apple S9, чип W3, Ultra Wideband 2-го покоління",
   "ОС: watchOS; сумісність із iPhone перевіряйте за поколінням",
   "Пам’ять: 64 ГБ",
   "Модулі: GPS, ГЛОНАСС, LTE, Galileo",
@@ -463,11 +463,11 @@ export const appleWatchSeriesCatalog: ModuleCatalogProduct[] = [
     overview: [
   "Дисплей: LTPO OLED Retina Always-On до 2000 ніт",
   "Пам’ять: 64 ГБ",
-  "Процесор: AppleS10"
+  "Процесор: Apple S10"
 ],
     highlights: [
   "Дисплей: LTPO OLED Retina, Always-On, до 2000 ніт",
-  "Процесор: AppleS10 (64-біт, 2 ядра)",
+  "Процесор: Apple S10 (64-біт, 2 ядра)",
   "Neural Engine: 4-ядерна система",
   "ОС: watchOS; сумісність із iPhone перевіряйте за поколінням",
   "Пам’ять: 64 ГБ",
@@ -521,6 +521,70 @@ export const appleWatchSeriesCatalog: ModuleCatalogProduct[] = [
     "caption": "Титан: Slate"
   }
 ]
+  },
+  {
+    "slug": "apple-watch-series-12-2026",
+    "title": "Apple Watch Series 12 (2026)",
+    "family": "Series",
+    "summary": "Модель Series для щоденної активності й тренувань із вибором алюмінієвого, титанового або керамічного корпусу.",
+    "overview": [
+      "Дисплей: LTPO3 OLED Retina Always-On до 2000 ніт",
+      "Корпус: 42/46 мм; кераміка — 43/47 мм",
+      "Процесор: Apple S11, пам’ять 64 ГБ"
+    ],
+    "highlights": [
+      "Дисплей LTPO3 OLED Always-On із яскравістю до 2000 ніт",
+      "Алюміній має скло Ceramic Shield 2; титан і кераміка — сапфірове",
+      "Чип S11 із 4-ядерним Neural Engine та 64 ГБ пам’яті",
+      "До 24 годин звичайної роботи або до 38 годин в енергозбереженні за методикою Apple",
+      "Швидке заряджання: до 80% приблизно за 30 хвилин",
+      "Пульс, ЕКГ, відстеження сну й оцінка готовності Readiness; функції здоров’я мають регіональні та вікові умови",
+      "Водостійкість 50 м, пилозахист IP6X і глибиномір до 6 м; рейтинг не означає дозвіл на занурення на 50 м",
+      "Потрібен iPhone 11 або новіший, включно з iPhone SE 2 або новішим, з iOS 27 чи новішою версією"
+    ],
+    "colors": [
+      {
+        "label": "Black (Aluminum)",
+        "imageUrl": "/materials/apple-watch/2026/series-12/black-aluminum.webp",
+        "caption": "Алюміній: Black",
+        "default": true
+      },
+      {
+        "label": "Dark Bronze (Aluminum)",
+        "imageUrl": "/materials/apple-watch/2026/series-12/dark-bronze-aluminum.webp",
+        "caption": "Алюміній: Dark Bronze"
+      },
+      {
+        "label": "Light Gold (Aluminum)",
+        "imageUrl": "/materials/apple-watch/2026/series-12/light-gold-aluminum.webp",
+        "caption": "Алюміній: Light Gold"
+      },
+      {
+        "label": "Space Gray (Aluminum)",
+        "imageUrl": "/materials/apple-watch/2026/series-12/space-gray-aluminum.webp",
+        "caption": "Алюміній: Space Gray"
+      },
+      {
+        "label": "Radiant Gold Titanium",
+        "imageUrl": "/materials/apple-watch/2026/series-12/radiant-gold-titanium.webp",
+        "caption": "Титан: Radiant Gold"
+      },
+      {
+        "label": "Natural Titanium",
+        "imageUrl": "/materials/apple-watch/2026/series-12/natural-titanium.webp",
+        "caption": "Титан: Natural"
+      },
+      {
+        "label": "Pearl White Ceramic",
+        "imageUrl": "/materials/apple-watch/2026/series-12/pearl-white-ceramic.webp",
+        "caption": "Кераміка: Pearl White"
+      },
+      {
+        "label": "Night Blue Ceramic",
+        "imageUrl": "/materials/apple-watch/2026/series-12/night-blue-ceramic.webp",
+        "caption": "Кераміка: Night Blue"
+      }
+    ]
   }
 ];
 
@@ -716,7 +780,7 @@ export const appleWatchUltraCatalog: ModuleCatalogProduct[] = [
   "Яскравість: до 3000 ніт",
   "Корпус: титановий 49 мм (аерокосмічний сплав)",
   "Кнопки: Digital Crown + програмована кнопка",
-  "Процесор: Apple S9, чип W3, Ultra Wideband2-гопокоління",
+  "Процесор: Apple S9, чип W3, Ultra Wideband 2-го покоління",
   "ОС: watchOS; сумісність із iPhone перевіряйте за поколінням",
   "Пам’ять: 64 ГБ",
   "Модулі: GPS, ГЛОНАСС, LTE, Galileo",
@@ -767,6 +831,40 @@ export const appleWatchUltraCatalog: ModuleCatalogProduct[] = [
       { label: "Natural Titanium", imageUrl: "/materials/apple-watch/Color/Ultra3/Natural-Photoroom%20(1).png", caption: "Титан: Natural", default: true },
       { label: "Black Titanium", imageUrl: "/materials/apple-watch/Color/Ultra3/Ultra3-Photoroom.png", caption: "Титан: Black" }
     ]
+  },
+  {
+    "slug": "apple-watch-ultra-4-2026",
+    "title": "Apple Watch Ultra 4 (2026)",
+    "family": "Ultra",
+    "summary": "Модель Ultra для тривалих тренувань і подорожей із титановим корпусом, точним GPS та збільшеною автономністю.",
+    "overview": [
+      "Дисплей: LTPO3 OLED Retina Always-On до 3000 ніт",
+      "Корпус: титан Grade 5, 49 мм",
+      "Процесор: Apple S11, пам’ять 64 ГБ"
+    ],
+    "highlights": [
+      "Дисплей LTPO3 OLED Always-On до 3000 ніт і плоске сапфірове скло",
+      "Титановий корпус Grade 5, 49 мм; кольори Natural та Black",
+      "Чип S11 із 4-ядерним Neural Engine та 64 ГБ пам’яті",
+      "До 50 годин звичайної роботи або до 84 годин в енергозбереженні за методикою Apple",
+      "Швидке заряджання: до 80% приблизно за 45 хвилин",
+      "Точний двочастотний GPS, компас, висотомір, кнопка Action та сирена",
+      "Водостійкість 100 м, IP6X; рекреаційні занурення дозволені до 40 м, а не на 100 м",
+      "Cellular та супутникові функції залежать від країни й оператора; потрібен сумісний iPhone з iOS 27 чи новішою версією"
+    ],
+    "colors": [
+      {
+        "label": "Natural Titanium",
+        "imageUrl": "/materials/apple-watch/2026/ultra-4/natural-titanium.webp",
+        "caption": "Титан: Natural",
+        "default": true
+      },
+      {
+        "label": "Black Titanium",
+        "imageUrl": "/materials/apple-watch/2026/ultra-4/black-titanium.webp",
+        "caption": "Титан: Black"
+      }
+    ]
   }
 ];
 
@@ -795,7 +893,7 @@ export const appleWatchFoundationBlocks: ModuleContentBlock[] = [
   {
     type: "text",
     title: "Дисплеї Apple Watch",
-    html: "<h4>Корпус, дисплей і яскравість</h4><ul><li>Позначення 38/40/41/42/44/45/46/49 мм описує розмір корпусу, а не діагональ дисплея.</li><li>Series 1–3: 38/42 мм; Series 4–6: 40/44 мм; Series 7–9: 41/45 мм; Series 10/11: 42/46 мм. SE 1–3: 40/44 мм; Ultra 1–4: 49 мм.</li><li>Series 12: 42/46 мм в алюмінії та титані,43/47 мм у кераміці.</li><li>Усі мають OLED Retina; Always-On і технологія LTPO залежать від покоління. Series 9–12 — до 2000 ніт; Ultra — до 2000, Ultra 2–4 — до 3000 ніт.</li><li>Матеріал скла залежить від корпусу та покоління: не обіцяйте сапфір усім моделям. У Series 12 алюміній має Ceramic Shield 2, титан і кераміка — сапфір.</li></ul>"
+    html: "<h4>Корпус, дисплей і яскравість</h4><ul><li>Позначення 38/40/41/42/44/45/46/49 мм описує розмір корпусу, а не діагональ дисплея.</li><li>Series 1–3: 38/42 мм; Series 4–6: 40/44 мм; Series 7–9: 41/45 мм; Series 10/11: 42/46 мм. SE 1–3: 40/44 мм; Ultra 1–4: 49 мм.</li><li>Series 12: 42/46 мм в алюмінії та титані, 43/47 мм у кераміці.</li><li>Усі мають OLED Retina; Always-On і технологія LTPO залежать від покоління. Series 9–12 — до 2000 ніт; Ultra — до 2000, Ultra 2–4 — до 3000 ніт.</li><li>Матеріал скла залежить від корпусу та покоління: не обіцяйте сапфір усім моделям. У Series 12 алюміній має Ceramic Shield 2, титан і кераміка — сапфір.</li></ul>"
   },
   {
     type: "text",
@@ -866,7 +964,7 @@ export const appleWatchCatalogBlocks: ModuleContentBlock[] = [
   {
     type: "text",
     title: "Що перевірити перед покупкою",
-    html: "<p>Перевірте сумісність з iPhone, розмір корпусу й ремінця, версію GPS/Cellular і комплектність. Функції здоров’я перевіряйте за моделлю, віком, країною та системою.</p><h4>Нові покоління в Pineapple</h4><ul><li>Series 12 (2026): S11, 64 ГБ, Always-On OLED до 2000 ніт. Корпус 42/46 мм в алюмінії/титані або 43/47 мм у кераміці; до 24 годин звичайної роботи або 38 годин енергозбереження за методикою Apple.</li><li>Ultra 4 (2026): S11, 49 мм, титан, сапфір, OLED до 3000 ніт. До 50 годин звичайної роботи або 84 годин енергозбереження; сирена,5G/LTE та супутникові функції за регіональними умовами.</li></ul>"
+    html: "<p>Перевірте сумісність з iPhone, розмір корпусу й ремінця, версію GPS/Cellular і комплектність. Функції здоров’я перевіряйте за моделлю, віком, країною та системою.</p>"
   }
 ];
 

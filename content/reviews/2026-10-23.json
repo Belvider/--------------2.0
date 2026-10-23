@@ -1,0 +1,1560 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-10-23",
+  "baseline": "3073dc229608a5584e48c1233a76b2e530885a14",
+  "modules": [
+    {
+      "id": 9,
+      "categoryId": 5,
+      "brandSlug": "apple",
+      "categorySlug": "apple-watch",
+      "questionIds": [
+        41,
+        42,
+        43,
+        44,
+        45
+      ]
+    },
+    {
+      "id": 10,
+      "categoryId": 5,
+      "brandSlug": "apple",
+      "categorySlug": "apple-watch",
+      "questionIds": [
+        46,
+        47,
+        48,
+        49,
+        50
+      ]
+    },
+    {
+      "id": 14,
+      "categoryId": 7,
+      "brandSlug": "apple",
+      "categorySlug": "peripherals",
+      "questionIds": [
+        66,
+        67,
+        68,
+        69,
+        70
+      ]
+    }
+  ],
+  "edits": [
+    {
+      "moduleId": 9,
+      "path": "/contentBlocks/4/html",
+      "before": "<h4>Корпус, дисплей і яскравість</h4><ul><li>Позначення 38/40/41/42/44/45/46/49 мм описує розмір корпусу, а не діагональ дисплея.</li><li>Series 1–3: 38/42 мм; Series 4–6: 40/44 мм; Series 7–9: 41/45 мм; Series 10/11: 42/46 мм. SE 1–3: 40/44 мм; Ultra 1–4: 49 мм.</li><li>Series 12: 42/46 мм в алюмінії та титані,43/47 мм у кераміці.</li><li>Усі мають OLED Retina; Always-On і технологія LTPO залежать від покоління. Series 9–12 — до 2000 ніт; Ultra — до 2000, Ultra 2–4 — до 3000 ніт.</li><li>Матеріал скла залежить від корпусу та покоління: не обіцяйте сапфір усім моделям. У Series 12 алюміній має Ceramic Shield 2, титан і кераміка — сапфір.</li></ul>",
+      "after": "<h4>Корпус, дисплей і яскравість</h4><ul><li>Позначення 38/40/41/42/44/45/46/49 мм описує розмір корпусу, а не діагональ дисплея.</li><li>Series 1–3: 38/42 мм; Series 4–6: 40/44 мм; Series 7–9: 41/45 мм; Series 10/11: 42/46 мм. SE 1–3: 40/44 мм; Ultra 1–4: 49 мм.</li><li>Series 12: 42/46 мм в алюмінії та титані, 43/47 мм у кераміці.</li><li>Усі мають OLED Retina; Always-On і технологія LTPO залежать від покоління. Series 9–12 — до 2000 ніт; Ultra — до 2000, Ultra 2–4 — до 3000 ніт.</li><li>Матеріал скла залежить від корпусу та покоління: не обіцяйте сапфір усім моделям. У Series 12 алюміній має Ceramic Shield 2, титан і кераміка — сапфір.</li></ul>",
+      "reason": "Виправлено пробіли та прибрано повторний опис новинок після додавання карток.",
+      "sourceUrls": [
+        "https://www.apple.com/apple-watch-series-12/specs/",
+        "https://www.apple.com/apple-watch-ultra-4/specs/",
+        "https://pineapple.ua/smart-hodynnyky/apple-watch/apple-watch-series/apple-watch-series-12",
+        "https://pineapple.ua/apple-watch-series-12-gps-lte-46mm-black-aluminum-case-with-black-sport-band-sm-mjg84",
+        "https://pineapple.ua/apple-watch-series-12-gps-lte-46mm-dark-bronze-aluminum-case-with-olive-sport-band-sm-mjgd4",
+        "https://pineapple.ua/apple-watch-series-12-gps-lte-46mm-light-gold-aluminum-case-with-sand-sport-band-sm-mjga4",
+        "https://pineapple.ua/apple-watch-series-12-gps-lte-46mm-space-gray-aluminum-case-with-navy-blue-sport-band-sm-mjg64",
+        "https://pineapple.ua/apple-watch-series-12-gps-lte-46mm-radiant-gold-titanium-case-with-burgundy-sport-band-sm-mjgr4",
+        "https://pineapple.ua/apple-watch-series-12-gps-lte-46mm-natural-titanium-case-with-navy-blue-sport-band-sm-mjgm4",
+        "https://pineapple.ua/apple-watch-series-12-gps-lte-46mm-pearl-white-ceramic-case-with-sand-sport-band-sm-mjh14",
+        "https://pineapple.ua/apple-watch-series-12-gps-lte-46mm-night-blue-ceramic-case-with-navy-blue-sport-band-sm-mjh34",
+        "https://pineapple.ua/apple-watch-ultra-4-gps-lte-49mm-natural-titanium-case-with-natural-titanium-milanese-loop-large-mjaa4",
+        "https://pineapple.ua/apple-watch-ultra-4-gps-lte-49mm-black-titanium-case-with-desert-alpine-loop-medium-mjct4mkf44"
+      ]
+    },
+    {
+      "moduleId": 10,
+      "path": "/contentBlocks/1/products",
+      "before": [
+        {
+          "slug": "apple-watch-series-3-2017",
+          "title": "Apple Watch Series 3 (2017)",
+          "colors": [
+            {
+              "label": "Загальний вигляд",
+              "caption": "Apple Watch Series 3 (2017)",
+              "default": true,
+              "imageUrl": "/materials/apple-watch/1.png"
+            },
+            {
+              "label": "Silver (Aluminum)",
+              "caption": "Алюміній: Silver",
+              "imageUrl": "/materials/apple-watch/Color/3/Silver-Photoroom.png"
+            },
+            {
+              "label": "Space Gray (Aluminum)",
+              "caption": "Алюміній: Space Gray",
+              "imageUrl": "/materials/apple-watch/Color/3/SpaceGray-Photoroom.png"
+            },
+            {
+              "label": "Gold (Aluminum)",
+              "caption": "Алюміній: Gold",
+              "imageUrl": "/materials/apple-watch/Color/3/gold-Photoroom.png"
+            }
+          ],
+          "family": "Series",
+          "summary": "Класичний вхід у лінійку Apple Watch для базових сповіщень, активності та знайомства з екосистемою смарт-годинників Apple.",
+          "overview": [
+            "Дисплей: OLED Retina",
+            "Корпус: 38 мм / 42 мм",
+            "Процесор: Apple S3, чип W2"
+          ],
+          "highlights": [
+            "Дисплей: OLED Retina",
+            "Корпус: алюмінієвий, 38 мм та 42 мм",
+            "Кнопки: Digital Crown",
+            "Процесор: Apple S3, чип W2",
+            "ОС: watchOS",
+            "Пам’ять: 8 ГБ (з LTE — 16 ГБ)",
+            "Модулі: GPS, ГЛОНАСС",
+            "Висотомір: барометричний",
+            "Bluetooth 4.2",
+            "Водостійкість: рейтинг 50 м",
+            "Аудіо: динамік, мікрофон",
+            "Автономність: до 18 год",
+            "Датчики: акселерометр, гіроскоп",
+            "Здоров’я: пульс, сповіщення про ритм",
+            "Безпека: SOS"
+          ]
+        },
+        {
+          "slug": "apple-watch-series-4-2018",
+          "title": "Apple Watch Series 4 (2018)",
+          "colors": [
+            {
+              "label": "Загальний вигляд",
+              "caption": "Apple Watch Series 4 (2018)",
+              "default": true,
+              "imageUrl": "/materials/apple-watch/4.png"
+            },
+            {
+              "label": "Silver (Aluminum)",
+              "caption": "Алюміній: Silver",
+              "imageUrl": "/materials/apple-watch/Color/4/Silver-Photoroom.png"
+            },
+            {
+              "label": "Space Gray (Aluminum)",
+              "caption": "Алюміній: Space Gray",
+              "imageUrl": "/materials/apple-watch/Color/4/SpaceGray-Photoroom.png"
+            },
+            {
+              "label": "Gold (Aluminum)",
+              "caption": "Алюміній: Gold",
+              "imageUrl": "/materials/apple-watch/Color/4/Gold-Photoroom.png"
+            }
+          ],
+          "family": "Series",
+          "summary": "Покоління зі збільшеним дисплеєм, тактильним Digital Crown та підтримкою ЕКГ, що стало важливою віхою еволюції Apple Watch.",
+          "overview": [
+            "Дисплей: OLED Retina",
+            "Корпус: 40 мм / 44 мм",
+            "Процесор: Apple S4, чип W3"
+          ],
+          "highlights": [
+            "Дисплей: OLED Retina",
+            "Корпус: алюмінієвий, 40 мм та 44 мм",
+            "Кнопки: Digital Crown з тактильним відгуком",
+            "Процесор: Apple S4, чип W3",
+            "ОС: watchOS",
+            "Пам’ять: 16 ГБ",
+            "Модулі: GPS, ГЛОНАСС, LTE, Galileo",
+            "Висотомір: барометричний",
+            "Bluetooth 5.0",
+            "Водостійкість: рейтинг 50 м",
+            "Аудіо: динамік 2-го покоління, мікрофон",
+            "Автономність: до 18 год",
+            "Датчики: акселерометр, гіроскоп",
+            "Здоров’я: пульс, ЕКГ",
+            "Безпека: падіння, SOS"
+          ]
+        },
+        {
+          "slug": "apple-watch-series-5-2019",
+          "title": "Apple Watch Series 5 (2019)",
+          "colors": [
+            {
+              "label": "Загальний вигляд",
+              "caption": "Apple Watch Series 5 (2019)",
+              "default": true,
+              "imageUrl": "/materials/apple-watch/5.png"
+            },
+            {
+              "label": "Silver (Aluminum)",
+              "caption": "Алюміній: Silver",
+              "imageUrl": "/materials/apple-watch/Color/5/Silver-Photoroom.png"
+            },
+            {
+              "label": "Space Gray (Aluminum)",
+              "caption": "Алюміній: Space Gray",
+              "imageUrl": "/materials/apple-watch/Color/5/Spacegray-Photoroom.png"
+            },
+            {
+              "label": "Gold (Aluminum)",
+              "caption": "Алюміній: Gold",
+              "imageUrl": "/materials/apple-watch/Color/5/Gold-Photoroom.png"
+            }
+          ],
+          "family": "Series",
+          "summary": "Перше покоління з Always-On Display, яке зробило Apple Watch зручнішим для постійного зчитування часу та циферблата.",
+          "overview": [
+            "Дисплей: OLED Retina з Always-On",
+            "Корпус: 40 мм / 44 мм",
+            "Процесор: Apple S5, чип W3"
+          ],
+          "highlights": [
+            "Дисплей: OLED Retina з Always-On Display",
+            "Корпус: алюмінієвий, 40 мм та 44 мм",
+            "Кнопки: Digital Crown з тактильним відгуком",
+            "Процесор: Apple S5, чип W3",
+            "ОС: watchOS",
+            "Пам’ять: 32 ГБ",
+            "Модулі: GPS, ГЛОНАСС, LTE, Galileo",
+            "Висотомір: барометричний",
+            "Bluetooth 5.0",
+            "Водостійкість: рейтинг 50 м",
+            "Аудіо: динамік 2-го покоління, мікрофон",
+            "Автономність: до 18 год",
+            "Датчики: акселерометр, гіроскоп, компас",
+            "Здоров’я: пульс, ЕКГ",
+            "Безпека: падіння, SOS"
+          ]
+        },
+        {
+          "slug": "apple-watch-series-6-2020",
+          "title": "Apple Watch Series 6 (2020)",
+          "colors": [
+            {
+              "label": "Загальний вигляд",
+              "caption": "Apple Watch Series 6 (2020)",
+              "default": true,
+              "imageUrl": "/materials/apple-watch/6.png"
+            },
+            {
+              "label": "Silver (Aluminum)",
+              "caption": "Алюміній: Silver",
+              "imageUrl": "/materials/apple-watch/Color/6/Silver-Photoroom%20(1).png"
+            },
+            {
+              "label": "Space Gray (Aluminum)",
+              "caption": "Алюміній: Space Gray",
+              "imageUrl": "/materials/apple-watch/Color/6/SpaceGray-Photoroom%20(1).png"
+            },
+            {
+              "label": "Blue (Aluminum)",
+              "caption": "Алюміній: Blue",
+              "imageUrl": "/materials/apple-watch/Color/6/Blue-Photoroom.png"
+            },
+            {
+              "label": "Product Red (Aluminum)",
+              "caption": "Алюміній: Product Red",
+              "imageUrl": "/materials/apple-watch/Color/6/Red-Photoroom.png"
+            }
+          ],
+          "family": "Series",
+          "summary": "Серія, де Apple активно розвинула напрям функцій здоров’я завдяки вимірюванню кисню в крові та швидшій платформі S6.",
+          "overview": [
+            "Дисплей: OLED Retina з Always-On",
+            "Корпус: 40 мм / 44 мм",
+            "Процесор: Apple S6, чипи W3 та U1"
+          ],
+          "highlights": [
+            "Дисплей: OLED Retina з Always-On Display",
+            "Корпус: алюмінієвий, 40 мм та 44 мм",
+            "Кнопки: Digital Crown з тактильним відгуком",
+            "Процесор: Apple S6, чипи W3 та U1",
+            "ОС: watchOS",
+            "Пам’ять: 32 ГБ",
+            "Модулі: GPS, ГЛОНАСС, LTE, Galileo",
+            "Висотомір: завжди активний",
+            "Bluetooth 5.0",
+            "Водостійкість: рейтинг 50 м",
+            "Аудіо: динамік 2-го покоління, мікрофон",
+            "Автономність: до 18 год",
+            "Датчики: акселерометр, гіроскоп, компас",
+            "Здоров’я: пульс, ЕКГ, кисень у крові",
+            "Безпека: падіння, SOS"
+          ]
+        },
+        {
+          "slug": "apple-watch-series-7-2021",
+          "title": "Apple Watch Series 7 (2021)",
+          "colors": [
+            {
+              "label": "Загальний вигляд",
+              "caption": "Apple Watch Series 7 (2021)",
+              "default": true,
+              "imageUrl": "/materials/apple-watch/7.png"
+            },
+            {
+              "label": "Midnight (Aluminum)",
+              "caption": "Алюміній: Midnight",
+              "imageUrl": "/materials/apple-watch/Color/7/Midnight-Photoroom.png"
+            },
+            {
+              "label": "Starlight (Aluminum)",
+              "caption": "Алюміній: Starlight",
+              "imageUrl": "/materials/apple-watch/Color/7/Starlight-Photoroom.png"
+            },
+            {
+              "label": "Green (Aluminum)",
+              "caption": "Алюміній: Green",
+              "imageUrl": "/materials/apple-watch/Color/7/Green-Photoroom.png"
+            },
+            {
+              "label": "Blue (Aluminum)",
+              "caption": "Алюміній: Blue",
+              "imageUrl": "/materials/apple-watch/Color/7/Blue-Photoroom.png"
+            },
+            {
+              "label": "Product Red (Aluminum)",
+              "caption": "Алюміній: Product Red",
+              "imageUrl": "/materials/apple-watch/Color/7/Red-Photoroom.png"
+            }
+          ],
+          "family": "Series",
+          "summary": "Оновлення з більшим дисплеєм, швидшим заряджанням та пилозахистом IP6X для щоденного активного використання.",
+          "overview": [
+            "Дисплей: OLED Retina з Always-On",
+            "Корпус: 41 мм / 45 мм",
+            "Процесор: Apple S7, чипи W3 та U1"
+          ],
+          "highlights": [
+            "Дисплей: OLED Retina з Always-On Display",
+            "Корпус: алюмінієвий, 41 мм та 45 мм",
+            "Кнопки: Digital Crown з тактильним відгуком",
+            "Процесор: Apple S7, чипи W3 та U1",
+            "ОС: watchOS",
+            "Пам’ять: 32 ГБ",
+            "Модулі: GPS, ГЛОНАСС, LTE, Galileo",
+            "Висотомір: завжди активний",
+            "Bluetooth 5.0",
+            "Водостійкість: рейтинг 50 м, пил IP6X",
+            "Аудіо: динамік 2-го покоління, мікрофон",
+            "Автономність: до 18 год, швидке заряджання",
+            "Датчики: акселерометр, гіроскоп, компас",
+            "Здоров’я: пульс, ЕКГ, кисень у крові",
+            "Безпека: падіння, SOS"
+          ]
+        },
+        {
+          "slug": "apple-watch-series-8-2022",
+          "title": "Apple Watch Series 8 (2022)",
+          "colors": [
+            {
+              "label": "Загальний вигляд",
+              "caption": "Apple Watch Series 8 (2022)",
+              "default": true,
+              "imageUrl": "/materials/apple-watch/8.png"
+            },
+            {
+              "label": "Silver (Aluminum)",
+              "caption": "Алюміній: Silver",
+              "imageUrl": "/materials/apple-watch/Color/8/Silver-Photoroom.png"
+            },
+            {
+              "label": "Midnight (Aluminum)",
+              "caption": "Алюміній: Midnight",
+              "imageUrl": "/materials/apple-watch/Color/8/Midnight-Photoroom.png"
+            },
+            {
+              "label": "Starlight (Aluminum)",
+              "caption": "Алюміній: Starlight",
+              "imageUrl": "/materials/apple-watch/Color/8/Starlight-Photoroom.png"
+            },
+            {
+              "label": "Product Red (Aluminum)",
+              "caption": "Алюміній: Product Red",
+              "imageUrl": "/materials/apple-watch/Color/8/Red-Photoroom.png"
+            }
+          ],
+          "family": "Series",
+          "summary": "Збалансоване покоління з датчиком температури тіла, Crash Detection і кращим увагою до показників здоров’я для масового користувача.",
+          "overview": [
+            "Дисплей: OLED Retina з Always-On",
+            "Корпус: 41 мм / 45 мм",
+            "Процесор: Apple S8, чипи W3 та U1"
+          ],
+          "highlights": [
+            "Дисплей: OLED Retina з Always-On Display",
+            "Корпус: алюмінієвий, 41 мм та 45 мм",
+            "Кнопки: Digital Crown з тактильним відгуком",
+            "Процесор: Apple S8, чипи W3 та U1",
+            "ОС: watchOS; сумісність із iPhone перевіряйте за поколінням",
+            "Пам’ять: 32 ГБ",
+            "Модулі: GPS, ГЛОНАСС, LTE, Galileo",
+            "Висотомір: завжди активний",
+            "Bluetooth 5.3",
+            "Водостійкість: рейтинг 50 м, пил IP6X",
+            "Аудіо: динамік 2-го покоління, мікрофон",
+            "Автономність: до 18 год, швидке заряджання",
+            "Датчики: акселерометр, гіроскоп, компас",
+            "Компас: «Пункти маршруту» і «Пройдений маршрут»",
+            "Здоров’я: пульс, ЕКГ, кисень у крові, температура зап’ястя, цикл/овуляція",
+            "Безпека: падіння, SOS, аварії",
+            "Комплектні ремінці: S/M – M/L (залежно від кольору)"
+          ]
+        },
+        {
+          "slug": "apple-watch-series-9-2023",
+          "title": "Apple Watch Series 9 (2023)",
+          "colors": [
+            {
+              "label": "Загальний вигляд",
+              "caption": "Apple Watch Series 9 (2023)",
+              "default": true,
+              "imageUrl": "/materials/apple-watch/9.png"
+            },
+            {
+              "label": "Silver (Aluminum)",
+              "caption": "Алюміній: Silver",
+              "imageUrl": "/materials/apple-watch/Color/9/Silver-Photoroom.png"
+            },
+            {
+              "label": "Midnight (Aluminum)",
+              "caption": "Алюміній: Midnight",
+              "imageUrl": "/materials/apple-watch/Color/9/Midnight-Photoroom.png"
+            },
+            {
+              "label": "Pink (Aluminum)",
+              "caption": "Алюміній: Pink",
+              "imageUrl": "/materials/apple-watch/Color/9/Pink-Photoroom.png"
+            },
+            {
+              "label": "Starlight (Aluminum)",
+              "caption": "Алюміній: Starlight",
+              "imageUrl": "/materials/apple-watch/Color/9/Starlight-Photoroom.png"
+            },
+            {
+              "label": "Product Red (Aluminum)",
+              "caption": "Алюміній: Product Red",
+              "imageUrl": "/materials/apple-watch/Color/9/red-Photoroom.png"
+            }
+          ],
+          "family": "Series",
+          "summary": "Покоління з чипом S9, яскравішим екраном, Double Tap і швидшою Siri, яке добре продається як сучасний універсальний Apple Watch.",
+          "overview": [
+            "Дисплей: OLED Retina Always-On до 2000 ніт",
+            "Корпус: 41 мм / 45 мм",
+            "Процесор: Apple S9, чипи W3 та U1"
+          ],
+          "highlights": [
+            "Дисплей: OLED Retina з Always-On Display, яскравість до 2000 ніт",
+            "Корпус: алюмінієвий, 41 мм та 45 мм",
+            "Кнопки: Digital Crown з тактильним відгуком",
+            "Процесор: Apple S9, чип W3, Ultra Wideband2-гопокоління",
+            "ОС: watchOS; сумісність із iPhone перевіряйте за поколінням",
+            "Пам’ять: 64 ГБ",
+            "Модулі: GPS, ГЛОНАСС, LTE, Galileo",
+            "Висотомір: завжди активний",
+            "Bluetooth 5.3",
+            "Водостійкість: рейтинг 50 м, пил IP6X",
+            "Аудіо: динамік 2-го покоління, мікрофон",
+            "Автономність: до 18 год (до 36 год в енергозбереженні), швидке заряджання",
+            "Датчики: акселерометр, гіроскоп, компас",
+            "Компас: «Пункти маршруту» і «Пройдений маршрут»",
+            "Siri: швидша, з доступом до даних про здоров’я",
+            "Функції: NameDrop, точний пошук iPhone",
+            "Здоров’я: пульс, ЕКГ, кисень у крові, температура зап’ястя, цикл/овуляція",
+            "Безпека: падіння, SOS, аварії",
+            "Комплектні ремінці: S/M – M/L (залежно від кольору)"
+          ]
+        },
+        {
+          "slug": "apple-watch-series-10-2024",
+          "title": "Apple Watch Series 10 (2024)",
+          "colors": [
+            {
+              "label": "Загальний вигляд",
+              "caption": "Apple Watch Series 10 (2024)",
+              "default": true,
+              "imageUrl": "/materials/apple-watch/10.png"
+            },
+            {
+              "label": "Silver (Aluminum)",
+              "caption": "Алюміній: Silver",
+              "imageUrl": "/materials/apple-watch/Color/10/Silver-Photoroom.png"
+            },
+            {
+              "label": "Jet Black (Aluminum)",
+              "caption": "Алюміній: Jet Black",
+              "imageUrl": "/materials/apple-watch/Color/10/JetBlack-Photoroom.png"
+            },
+            {
+              "label": "Gold (Aluminum)",
+              "caption": "Алюміній: Gold",
+              "imageUrl": "/materials/apple-watch/Color/10/Gold-Photoroom.png"
+            },
+            {
+              "label": "Rose Gold (Aluminum)",
+              "caption": "Алюміній: Rose Gold",
+              "imageUrl": "/materials/apple-watch/Color/10/RoseGold-Photoroom.png"
+            },
+            {
+              "label": "Natural Titanium",
+              "caption": "Титан: Natural",
+              "imageUrl": "/materials/apple-watch/Color/10/NaturalT-Photoroom.png"
+            },
+            {
+              "label": "Slate Titanium",
+              "caption": "Титан: Slate",
+              "imageUrl": "/materials/apple-watch/Color/10/SlateT-Photoroom.png"
+            }
+          ],
+          "family": "Series",
+          "summary": "Оновлена серія з тоншим корпусом, ширококутним LTPO3-дисплеєм, титановими варіантами та акцентом на сучасний дизайн і здоров’я.",
+          "overview": [
+            "Дисплей: LTPO3 OLED Retina Always-On",
+            "Розміри: 42 мм / 46 мм",
+            "Процесор: Apple S10 з 4-ядерним Neural Engine"
+          ],
+          "highlights": [
+            "Дисплей: LTPO3 OLED Retina, Always-On, ширококутний",
+            "Розміри: 42 мм та 46 мм",
+            "Яскравість: до 2000 ніт (на 40% яскравіше під кутом)",
+            "Корпус: алюміній або титан",
+            "Товщина: 9.7 мм (на 10% тонше за попередню модель)",
+            "Процесор: Apple S10 з 4-ядерним Neural Engine",
+            "ОС: watchOS; сумісність із iPhone перевіряйте за поколінням",
+            "Пам’ять: 64 ГБ",
+            "Автономність: до 18 годин",
+            "Швидке заряджання: до 80% за 30 хв",
+            "Датчики: серцебиття (електричний + оптичний), SpO₂, компас, барометр, температура води, глибина",
+            "Водостійкість: рейтинг 50 м",
+            "Підключення: Wi-Fi 4, Bluetooth 5.3, GPS, GLONASS, Galileo, QZSS, BeiDou",
+            "Комплектні ремінці: S/M – M/L (залежно від кольору)"
+          ]
+        },
+        {
+          "slug": "apple-watch-series-11-2025",
+          "title": "Apple Watch Series 11 (2025)",
+          "colors": [
+            {
+              "label": "Загальний вигляд",
+              "caption": "Apple Watch Series 11 (2025)",
+              "default": true,
+              "imageUrl": "/materials/apple-watch/11.png"
+            },
+            {
+              "label": "Silver (Aluminum)",
+              "caption": "Алюміній: Silver",
+              "imageUrl": "/materials/apple-watch/Color/11/Silver-Photoroom.png"
+            },
+            {
+              "label": "Jet Black (Aluminum)",
+              "caption": "Алюміній: Jet Black",
+              "imageUrl": "/materials/apple-watch/Color/11/JetBlack-Photoroom.png"
+            },
+            {
+              "label": "Space Gray (Aluminum)",
+              "caption": "Алюміній: Space Gray",
+              "imageUrl": "/materials/apple-watch/Color/11/SpaceGray-Photoroom.png"
+            },
+            {
+              "label": "Gold Titanium",
+              "caption": "Титан: Gold",
+              "imageUrl": "/materials/apple-watch/Color/11/GoldTitanium-Photoroom.png"
+            },
+            {
+              "label": "Natural Titanium",
+              "caption": "Титан: Natural",
+              "imageUrl": "/materials/apple-watch/Color/11/NaturalTitanium-Photoroom.png"
+            },
+            {
+              "label": "Slate Titanium",
+              "caption": "Титан: Slate",
+              "imageUrl": "/materials/apple-watch/Color/11/SlateTitanium-Photoroom.png"
+            }
+          ],
+          "family": "Series",
+          "summary": "Модель серії Series для щоденного використання, тренувань і спостереження за показниками здоров’я.",
+          "overview": [
+            "Дисплей: LTPO OLED Retina Always-On до 2000 ніт",
+            "Пам’ять: 64 ГБ",
+            "Процесор: AppleS10"
+          ],
+          "highlights": [
+            "Дисплей: LTPO OLED Retina, Always-On, до 2000 ніт",
+            "Процесор: AppleS10 (64-біт, 2 ядра)",
+            "Neural Engine: 4-ядерна система",
+            "ОС: watchOS; сумісність із iPhone перевіряйте за поколінням",
+            "Пам’ять: 64 ГБ",
+            "Скло: Ion-X (алюміній), сапфірове (титан)",
+            "Модулі: GPS, LTE, Galileo, ГЛОНАСС",
+            "Bluetooth 5.3, Wi-Fi 802.11n, NFC",
+            "Датчики: акселерометр, гіроскоп, компас, барометр, освітлення",
+            "Глибиномір до 6 м + датчик температури води",
+            "Точний пошук iPhone, NameDrop",
+            "Здоров’я: пульс, ЕКГ, кисень у крові, температура зап’ястя, цикл/овуляція",
+            "Новий додаток Vitals + Sleep Score + виявлення апное",
+            "Безпека: падіння, SOS, аварії",
+            "Автономність: до 24 год (до 38 год в енергозбереженні)",
+            "Швидке заряджання: 80% за ~30 хв, 8 годин відстеження сну після 5 хв зарядки"
+          ]
+        }
+      ],
+      "after": [
+        {
+          "slug": "apple-watch-series-3-2017",
+          "title": "Apple Watch Series 3 (2017)",
+          "family": "Series",
+          "summary": "Класичний вхід у лінійку Apple Watch для базових сповіщень, активності та знайомства з екосистемою смарт-годинників Apple.",
+          "overview": [
+            "Дисплей: OLED Retina",
+            "Корпус: 38 мм / 42 мм",
+            "Процесор: Apple S3, чип W2"
+          ],
+          "highlights": [
+            "Дисплей: OLED Retina",
+            "Корпус: алюмінієвий, 38 мм та 42 мм",
+            "Кнопки: Digital Crown",
+            "Процесор: Apple S3, чип W2",
+            "ОС: watchOS",
+            "Пам’ять: 8 ГБ (з LTE — 16 ГБ)",
+            "Модулі: GPS, ГЛОНАСС",
+            "Висотомір: барометричний",
+            "Bluetooth 4.2",
+            "Водостійкість: рейтинг 50 м",
+            "Аудіо: динамік, мікрофон",
+            "Автономність: до 18 год",
+            "Датчики: акселерометр, гіроскоп",
+            "Здоров’я: пульс, сповіщення про ритм",
+            "Безпека: SOS"
+          ],
+          "colors": [
+            {
+              "label": "Загальний вигляд",
+              "imageUrl": "/materials/apple-watch/1.png",
+              "caption": "Apple Watch Series 3 (2017)",
+              "default": true
+            },
+            {
+              "label": "Silver (Aluminum)",
+              "imageUrl": "/materials/apple-watch/Color/3/Silver-Photoroom.png",
+              "caption": "Алюміній: Silver"
+            },
+            {
+              "label": "Space Gray (Aluminum)",
+              "imageUrl": "/materials/apple-watch/Color/3/SpaceGray-Photoroom.png",
+              "caption": "Алюміній: Space Gray"
+            },
+            {
+              "label": "Gold (Aluminum)",
+              "imageUrl": "/materials/apple-watch/Color/3/gold-Photoroom.png",
+              "caption": "Алюміній: Gold"
+            }
+          ]
+        },
+        {
+          "slug": "apple-watch-series-4-2018",
+          "title": "Apple Watch Series 4 (2018)",
+          "family": "Series",
+          "summary": "Покоління зі збільшеним дисплеєм, тактильним Digital Crown та підтримкою ЕКГ, що стало важливою віхою еволюції Apple Watch.",
+          "overview": [
+            "Дисплей: OLED Retina",
+            "Корпус: 40 мм / 44 мм",
+            "Процесор: Apple S4, чип W3"
+          ],
+          "highlights": [
+            "Дисплей: OLED Retina",
+            "Корпус: алюмінієвий, 40 мм та 44 мм",
+            "Кнопки: Digital Crown з тактильним відгуком",
+            "Процесор: Apple S4, чип W3",
+            "ОС: watchOS",
+            "Пам’ять: 16 ГБ",
+            "Модулі: GPS, ГЛОНАСС, LTE, Galileo",
+            "Висотомір: барометричний",
+            "Bluetooth 5.0",
+            "Водостійкість: рейтинг 50 м",
+            "Аудіо: динамік 2-го покоління, мікрофон",
+            "Автономність: до 18 год",
+            "Датчики: акселерометр, гіроскоп",
+            "Здоров’я: пульс, ЕКГ",
+            "Безпека: падіння, SOS"
+          ],
+          "colors": [
+            {
+              "label": "Загальний вигляд",
+              "imageUrl": "/materials/apple-watch/4.png",
+              "caption": "Apple Watch Series 4 (2018)",
+              "default": true
+            },
+            {
+              "label": "Silver (Aluminum)",
+              "imageUrl": "/materials/apple-watch/Color/4/Silver-Photoroom.png",
+              "caption": "Алюміній: Silver"
+            },
+            {
+              "label": "Space Gray (Aluminum)",
+              "imageUrl": "/materials/apple-watch/Color/4/SpaceGray-Photoroom.png",
+              "caption": "Алюміній: Space Gray"
+            },
+            {
+              "label": "Gold (Aluminum)",
+              "imageUrl": "/materials/apple-watch/Color/4/Gold-Photoroom.png",
+              "caption": "Алюміній: Gold"
+            }
+          ]
+        },
+        {
+          "slug": "apple-watch-series-5-2019",
+          "title": "Apple Watch Series 5 (2019)",
+          "family": "Series",
+          "summary": "Перше покоління з Always-On Display, яке зробило Apple Watch зручнішим для постійного зчитування часу та циферблата.",
+          "overview": [
+            "Дисплей: OLED Retina з Always-On",
+            "Корпус: 40 мм / 44 мм",
+            "Процесор: Apple S5, чип W3"
+          ],
+          "highlights": [
+            "Дисплей: OLED Retina з Always-On Display",
+            "Корпус: алюмінієвий, 40 мм та 44 мм",
+            "Кнопки: Digital Crown з тактильним відгуком",
+            "Процесор: Apple S5, чип W3",
+            "ОС: watchOS",
+            "Пам’ять: 32 ГБ",
+            "Модулі: GPS, ГЛОНАСС, LTE, Galileo",
+            "Висотомір: барометричний",
+            "Bluetooth 5.0",
+            "Водостійкість: рейтинг 50 м",
+            "Аудіо: динамік 2-го покоління, мікрофон",
+            "Автономність: до 18 год",
+            "Датчики: акселерометр, гіроскоп, компас",
+            "Здоров’я: пульс, ЕКГ",
+            "Безпека: падіння, SOS"
+          ],
+          "colors": [
+            {
+              "label": "Загальний вигляд",
+              "imageUrl": "/materials/apple-watch/5.png",
+              "caption": "Apple Watch Series 5 (2019)",
+              "default": true
+            },
+            {
+              "label": "Silver (Aluminum)",
+              "imageUrl": "/materials/apple-watch/Color/5/Silver-Photoroom.png",
+              "caption": "Алюміній: Silver"
+            },
+            {
+              "label": "Space Gray (Aluminum)",
+              "imageUrl": "/materials/apple-watch/Color/5/Spacegray-Photoroom.png",
+              "caption": "Алюміній: Space Gray"
+            },
+            {
+              "label": "Gold (Aluminum)",
+              "imageUrl": "/materials/apple-watch/Color/5/Gold-Photoroom.png",
+              "caption": "Алюміній: Gold"
+            }
+          ]
+        },
+        {
+          "slug": "apple-watch-series-6-2020",
+          "title": "Apple Watch Series 6 (2020)",
+          "family": "Series",
+          "summary": "Серія, де Apple активно розвинула напрям функцій здоров’я завдяки вимірюванню кисню в крові та швидшій платформі S6.",
+          "overview": [
+            "Дисплей: OLED Retina з Always-On",
+            "Корпус: 40 мм / 44 мм",
+            "Процесор: Apple S6, чипи W3 та U1"
+          ],
+          "highlights": [
+            "Дисплей: OLED Retina з Always-On Display",
+            "Корпус: алюмінієвий, 40 мм та 44 мм",
+            "Кнопки: Digital Crown з тактильним відгуком",
+            "Процесор: Apple S6, чипи W3 та U1",
+            "ОС: watchOS",
+            "Пам’ять: 32 ГБ",
+            "Модулі: GPS, ГЛОНАСС, LTE, Galileo",
+            "Висотомір: завжди активний",
+            "Bluetooth 5.0",
+            "Водостійкість: рейтинг 50 м",
+            "Аудіо: динамік 2-го покоління, мікрофон",
+            "Автономність: до 18 год",
+            "Датчики: акселерометр, гіроскоп, компас",
+            "Здоров’я: пульс, ЕКГ, кисень у крові",
+            "Безпека: падіння, SOS"
+          ],
+          "colors": [
+            {
+              "label": "Загальний вигляд",
+              "imageUrl": "/materials/apple-watch/6.png",
+              "caption": "Apple Watch Series 6 (2020)",
+              "default": true
+            },
+            {
+              "label": "Silver (Aluminum)",
+              "imageUrl": "/materials/apple-watch/Color/6/Silver-Photoroom%20(1).png",
+              "caption": "Алюміній: Silver"
+            },
+            {
+              "label": "Space Gray (Aluminum)",
+              "imageUrl": "/materials/apple-watch/Color/6/SpaceGray-Photoroom%20(1).png",
+              "caption": "Алюміній: Space Gray"
+            },
+            {
+              "label": "Blue (Aluminum)",
+              "imageUrl": "/materials/apple-watch/Color/6/Blue-Photoroom.png",
+              "caption": "Алюміній: Blue"
+            },
+            {
+              "label": "Product Red (Aluminum)",
+              "imageUrl": "/materials/apple-watch/Color/6/Red-Photoroom.png",
+              "caption": "Алюміній: Product Red"
+            }
+          ]
+        },
+        {
+          "slug": "apple-watch-series-7-2021",
+          "title": "Apple Watch Series 7 (2021)",
+          "family": "Series",
+          "summary": "Оновлення з більшим дисплеєм, швидшим заряджанням та пилозахистом IP6X для щоденного активного використання.",
+          "overview": [
+            "Дисплей: OLED Retina з Always-On",
+            "Корпус: 41 мм / 45 мм",
+            "Процесор: Apple S7, чипи W3 та U1"
+          ],
+          "highlights": [
+            "Дисплей: OLED Retina з Always-On Display",
+            "Корпус: алюмінієвий, 41 мм та 45 мм",
+            "Кнопки: Digital Crown з тактильним відгуком",
+            "Процесор: Apple S7, чипи W3 та U1",
+            "ОС: watchOS",
+            "Пам’ять: 32 ГБ",
+            "Модулі: GPS, ГЛОНАСС, LTE, Galileo",
+            "Висотомір: завжди активний",
+            "Bluetooth 5.0",
+            "Водостійкість: рейтинг 50 м, пил IP6X",
+            "Аудіо: динамік 2-го покоління, мікрофон",
+            "Автономність: до 18 год, швидке заряджання",
+            "Датчики: акселерометр, гіроскоп, компас",
+            "Здоров’я: пульс, ЕКГ, кисень у крові",
+            "Безпека: падіння, SOS"
+          ],
+          "colors": [
+            {
+              "label": "Загальний вигляд",
+              "imageUrl": "/materials/apple-watch/7.png",
+              "caption": "Apple Watch Series 7 (2021)",
+              "default": true
+            },
+            {
+              "label": "Midnight (Aluminum)",
+              "imageUrl": "/materials/apple-watch/Color/7/Midnight-Photoroom.png",
+              "caption": "Алюміній: Midnight"
+            },
+            {
+              "label": "Starlight (Aluminum)",
+              "imageUrl": "/materials/apple-watch/Color/7/Starlight-Photoroom.png",
+              "caption": "Алюміній: Starlight"
+            },
+            {
+              "label": "Green (Aluminum)",
+              "imageUrl": "/materials/apple-watch/Color/7/Green-Photoroom.png",
+              "caption": "Алюміній: Green"
+            },
+            {
+              "label": "Blue (Aluminum)",
+              "imageUrl": "/materials/apple-watch/Color/7/Blue-Photoroom.png",
+              "caption": "Алюміній: Blue"
+            },
+            {
+              "label": "Product Red (Aluminum)",
+              "imageUrl": "/materials/apple-watch/Color/7/Red-Photoroom.png",
+              "caption": "Алюміній: Product Red"
+            }
+          ]
+        },
+        {
+          "slug": "apple-watch-series-8-2022",
+          "title": "Apple Watch Series 8 (2022)",
+          "family": "Series",
+          "summary": "Збалансоване покоління з датчиком температури тіла, Crash Detection і кращим увагою до показників здоров’я для масового користувача.",
+          "overview": [
+            "Дисплей: OLED Retina з Always-On",
+            "Корпус: 41 мм / 45 мм",
+            "Процесор: Apple S8, чипи W3 та U1"
+          ],
+          "highlights": [
+            "Дисплей: OLED Retina з Always-On Display",
+            "Корпус: алюмінієвий, 41 мм та 45 мм",
+            "Кнопки: Digital Crown з тактильним відгуком",
+            "Процесор: Apple S8, чипи W3 та U1",
+            "ОС: watchOS; сумісність із iPhone перевіряйте за поколінням",
+            "Пам’ять: 32 ГБ",
+            "Модулі: GPS, ГЛОНАСС, LTE, Galileo",
+            "Висотомір: завжди активний",
+            "Bluetooth 5.3",
+            "Водостійкість: рейтинг 50 м, пил IP6X",
+            "Аудіо: динамік 2-го покоління, мікрофон",
+            "Автономність: до 18 год, швидке заряджання",
+            "Датчики: акселерометр, гіроскоп, компас",
+            "Компас: «Пункти маршруту» і «Пройдений маршрут»",
+            "Здоров’я: пульс, ЕКГ, кисень у крові, температура зап’ястя, цикл/овуляція",
+            "Безпека: падіння, SOS, аварії",
+            "Комплектні ремінці: S/M – M/L (залежно від кольору)"
+          ],
+          "colors": [
+            {
+              "label": "Загальний вигляд",
+              "imageUrl": "/materials/apple-watch/8.png",
+              "caption": "Apple Watch Series 8 (2022)",
+              "default": true
+            },
+            {
+              "label": "Silver (Aluminum)",
+              "imageUrl": "/materials/apple-watch/Color/8/Silver-Photoroom.png",
+              "caption": "Алюміній: Silver"
+            },
+            {
+              "label": "Midnight (Aluminum)",
+              "imageUrl": "/materials/apple-watch/Color/8/Midnight-Photoroom.png",
+              "caption": "Алюміній: Midnight"
+            },
+            {
+              "label": "Starlight (Aluminum)",
+              "imageUrl": "/materials/apple-watch/Color/8/Starlight-Photoroom.png",
+              "caption": "Алюміній: Starlight"
+            },
+            {
+              "label": "Product Red (Aluminum)",
+              "imageUrl": "/materials/apple-watch/Color/8/Red-Photoroom.png",
+              "caption": "Алюміній: Product Red"
+            }
+          ]
+        },
+        {
+          "slug": "apple-watch-series-9-2023",
+          "title": "Apple Watch Series 9 (2023)",
+          "family": "Series",
+          "summary": "Покоління з чипом S9, яскравішим екраном, Double Tap і швидшою Siri, яке добре продається як сучасний універсальний Apple Watch.",
+          "overview": [
+            "Дисплей: OLED Retina Always-On до 2000 ніт",
+            "Корпус: 41 мм / 45 мм",
+            "Процесор: Apple S9, чипи W3 та U1"
+          ],
+          "highlights": [
+            "Дисплей: OLED Retina з Always-On Display, яскравість до 2000 ніт",
+            "Корпус: алюмінієвий, 41 мм та 45 мм",
+            "Кнопки: Digital Crown з тактильним відгуком",
+            "Процесор: Apple S9, чип W3, Ultra Wideband 2-го покоління",
+            "ОС: watchOS; сумісність із iPhone перевіряйте за поколінням",
+            "Пам’ять: 64 ГБ",
+            "Модулі: GPS, ГЛОНАСС, LTE, Galileo",
+            "Висотомір: завжди активний",
+            "Bluetooth 5.3",
+            "Водостійкість: рейтинг 50 м, пил IP6X",
+            "Аудіо: динамік 2-го покоління, мікрофон",
+            "Автономність: до 18 год (до 36 год в енергозбереженні), швидке заряджання",
+            "Датчики: акселерометр, гіроскоп, компас",
+            "Компас: «Пункти маршруту» і «Пройдений маршрут»",
+            "Siri: швидша, з доступом до даних про здоров’я",
+            "Функції: NameDrop, точний пошук iPhone",
+            "Здоров’я: пульс, ЕКГ, кисень у крові, температура зап’ястя, цикл/овуляція",
+            "Безпека: падіння, SOS, аварії",
+            "Комплектні ремінці: S/M – M/L (залежно від кольору)"
+          ],
+          "colors": [
+            {
+              "label": "Загальний вигляд",
+              "imageUrl": "/materials/apple-watch/9.png",
+              "caption": "Apple Watch Series 9 (2023)",
+              "default": true
+            },
+            {
+              "label": "Silver (Aluminum)",
+              "imageUrl": "/materials/apple-watch/Color/9/Silver-Photoroom.png",
+              "caption": "Алюміній: Silver"
+            },
+            {
+              "label": "Midnight (Aluminum)",
+              "imageUrl": "/materials/apple-watch/Color/9/Midnight-Photoroom.png",
+              "caption": "Алюміній: Midnight"
+            },
+            {
+              "label": "Pink (Aluminum)",
+              "imageUrl": "/materials/apple-watch/Color/9/Pink-Photoroom.png",
+              "caption": "Алюміній: Pink"
+            },
+            {
+              "label": "Starlight (Aluminum)",
+              "imageUrl": "/materials/apple-watch/Color/9/Starlight-Photoroom.png",
+              "caption": "Алюміній: Starlight"
+            },
+            {
+              "label": "Product Red (Aluminum)",
+              "imageUrl": "/materials/apple-watch/Color/9/red-Photoroom.png",
+              "caption": "Алюміній: Product Red"
+            }
+          ]
+        },
+        {
+          "slug": "apple-watch-series-10-2024",
+          "title": "Apple Watch Series 10 (2024)",
+          "family": "Series",
+          "summary": "Оновлена серія з тоншим корпусом, ширококутним LTPO3-дисплеєм, титановими варіантами та акцентом на сучасний дизайн і здоров’я.",
+          "overview": [
+            "Дисплей: LTPO3 OLED Retina Always-On",
+            "Розміри: 42 мм / 46 мм",
+            "Процесор: Apple S10 з 4-ядерним Neural Engine"
+          ],
+          "highlights": [
+            "Дисплей: LTPO3 OLED Retina, Always-On, ширококутний",
+            "Розміри: 42 мм та 46 мм",
+            "Яскравість: до 2000 ніт (на 40% яскравіше під кутом)",
+            "Корпус: алюміній або титан",
+            "Товщина: 9.7 мм (на 10% тонше за попередню модель)",
+            "Процесор: Apple S10 з 4-ядерним Neural Engine",
+            "ОС: watchOS; сумісність із iPhone перевіряйте за поколінням",
+            "Пам’ять: 64 ГБ",
+            "Автономність: до 18 годин",
+            "Швидке заряджання: до 80% за 30 хв",
+            "Датчики: серцебиття (електричний + оптичний), SpO₂, компас, барометр, температура води, глибина",
+            "Водостійкість: рейтинг 50 м",
+            "Підключення: Wi-Fi 4, Bluetooth 5.3, GPS, GLONASS, Galileo, QZSS, BeiDou",
+            "Комплектні ремінці: S/M – M/L (залежно від кольору)"
+          ],
+          "colors": [
+            {
+              "label": "Загальний вигляд",
+              "imageUrl": "/materials/apple-watch/10.png",
+              "caption": "Apple Watch Series 10 (2024)",
+              "default": true
+            },
+            {
+              "label": "Silver (Aluminum)",
+              "imageUrl": "/materials/apple-watch/Color/10/Silver-Photoroom.png",
+              "caption": "Алюміній: Silver"
+            },
+            {
+              "label": "Jet Black (Aluminum)",
+              "imageUrl": "/materials/apple-watch/Color/10/JetBlack-Photoroom.png",
+              "caption": "Алюміній: Jet Black"
+            },
+            {
+              "label": "Gold (Aluminum)",
+              "imageUrl": "/materials/apple-watch/Color/10/Gold-Photoroom.png",
+              "caption": "Алюміній: Gold"
+            },
+            {
+              "label": "Rose Gold (Aluminum)",
+              "imageUrl": "/materials/apple-watch/Color/10/RoseGold-Photoroom.png",
+              "caption": "Алюміній: Rose Gold"
+            },
+            {
+              "label": "Natural Titanium",
+              "imageUrl": "/materials/apple-watch/Color/10/NaturalT-Photoroom.png",
+              "caption": "Титан: Natural"
+            },
+            {
+              "label": "Slate Titanium",
+              "imageUrl": "/materials/apple-watch/Color/10/SlateT-Photoroom.png",
+              "caption": "Титан: Slate"
+            }
+          ]
+        },
+        {
+          "slug": "apple-watch-series-11-2025",
+          "title": "Apple Watch Series 11 (2025)",
+          "family": "Series",
+          "summary": "Модель серії Series для щоденного використання, тренувань і спостереження за показниками здоров’я.",
+          "overview": [
+            "Дисплей: LTPO OLED Retina Always-On до 2000 ніт",
+            "Пам’ять: 64 ГБ",
+            "Процесор: Apple S10"
+          ],
+          "highlights": [
+            "Дисплей: LTPO OLED Retina, Always-On, до 2000 ніт",
+            "Процесор: Apple S10 (64-біт, 2 ядра)",
+            "Neural Engine: 4-ядерна система",
+            "ОС: watchOS; сумісність із iPhone перевіряйте за поколінням",
+            "Пам’ять: 64 ГБ",
+            "Скло: Ion-X (алюміній), сапфірове (титан)",
+            "Модулі: GPS, LTE, Galileo, ГЛОНАСС",
+            "Bluetooth 5.3, Wi-Fi 802.11n, NFC",
+            "Датчики: акселерометр, гіроскоп, компас, барометр, освітлення",
+            "Глибиномір до 6 м + датчик температури води",
+            "Точний пошук iPhone, NameDrop",
+            "Здоров’я: пульс, ЕКГ, кисень у крові, температура зап’ястя, цикл/овуляція",
+            "Новий додаток Vitals + Sleep Score + виявлення апное",
+            "Безпека: падіння, SOS, аварії",
+            "Автономність: до 24 год (до 38 год в енергозбереженні)",
+            "Швидке заряджання: 80% за ~30 хв, 8 годин відстеження сну після 5 хв зарядки"
+          ],
+          "colors": [
+            {
+              "label": "Загальний вигляд",
+              "imageUrl": "/materials/apple-watch/11.png",
+              "caption": "Apple Watch Series 11 (2025)",
+              "default": true
+            },
+            {
+              "label": "Silver (Aluminum)",
+              "imageUrl": "/materials/apple-watch/Color/11/Silver-Photoroom.png",
+              "caption": "Алюміній: Silver"
+            },
+            {
+              "label": "Jet Black (Aluminum)",
+              "imageUrl": "/materials/apple-watch/Color/11/JetBlack-Photoroom.png",
+              "caption": "Алюміній: Jet Black"
+            },
+            {
+              "label": "Space Gray (Aluminum)",
+              "imageUrl": "/materials/apple-watch/Color/11/SpaceGray-Photoroom.png",
+              "caption": "Алюміній: Space Gray"
+            },
+            {
+              "label": "Gold Titanium",
+              "imageUrl": "/materials/apple-watch/Color/11/GoldTitanium-Photoroom.png",
+              "caption": "Титан: Gold"
+            },
+            {
+              "label": "Natural Titanium",
+              "imageUrl": "/materials/apple-watch/Color/11/NaturalTitanium-Photoroom.png",
+              "caption": "Титан: Natural"
+            },
+            {
+              "label": "Slate Titanium",
+              "imageUrl": "/materials/apple-watch/Color/11/SlateTitanium-Photoroom.png",
+              "caption": "Титан: Slate"
+            }
+          ]
+        },
+        {
+          "slug": "apple-watch-series-12-2026",
+          "title": "Apple Watch Series 12 (2026)",
+          "family": "Series",
+          "summary": "Модель Series для щоденної активності й тренувань із вибором алюмінієвого, титанового або керамічного корпусу.",
+          "overview": [
+            "Дисплей: LTPO3 OLED Retina Always-On до 2000 ніт",
+            "Корпус: 42/46 мм; кераміка — 43/47 мм",
+            "Процесор: Apple S11, пам’ять 64 ГБ"
+          ],
+          "highlights": [
+            "Дисплей LTPO3 OLED Always-On із яскравістю до 2000 ніт",
+            "Алюміній має скло Ceramic Shield 2; титан і кераміка — сапфірове",
+            "Чип S11 із 4-ядерним Neural Engine та 64 ГБ пам’яті",
+            "До 24 годин звичайної роботи або до 38 годин в енергозбереженні за методикою Apple",
+            "Швидке заряджання: до 80% приблизно за 30 хвилин",
+            "Пульс, ЕКГ, відстеження сну й оцінка готовності Readiness; функції здоров’я мають регіональні та вікові умови",
+            "Водостійкість 50 м, пилозахист IP6X і глибиномір до 6 м; рейтинг не означає дозвіл на занурення на 50 м",
+            "Потрібен iPhone 11 або новіший, включно з iPhone SE 2 або новішим, з iOS 27 чи новішою версією"
+          ],
+          "colors": [
+            {
+              "label": "Black (Aluminum)",
+              "imageUrl": "/materials/apple-watch/2026/series-12/black-aluminum.webp",
+              "caption": "Алюміній: Black",
+              "default": true
+            },
+            {
+              "label": "Dark Bronze (Aluminum)",
+              "imageUrl": "/materials/apple-watch/2026/series-12/dark-bronze-aluminum.webp",
+              "caption": "Алюміній: Dark Bronze"
+            },
+            {
+              "label": "Light Gold (Aluminum)",
+              "imageUrl": "/materials/apple-watch/2026/series-12/light-gold-aluminum.webp",
+              "caption": "Алюміній: Light Gold"
+            },
+            {
+              "label": "Space Gray (Aluminum)",
+              "imageUrl": "/materials/apple-watch/2026/series-12/space-gray-aluminum.webp",
+              "caption": "Алюміній: Space Gray"
+            },
+            {
+              "label": "Radiant Gold Titanium",
+              "imageUrl": "/materials/apple-watch/2026/series-12/radiant-gold-titanium.webp",
+              "caption": "Титан: Radiant Gold"
+            },
+            {
+              "label": "Natural Titanium",
+              "imageUrl": "/materials/apple-watch/2026/series-12/natural-titanium.webp",
+              "caption": "Титан: Natural"
+            },
+            {
+              "label": "Pearl White Ceramic",
+              "imageUrl": "/materials/apple-watch/2026/series-12/pearl-white-ceramic.webp",
+              "caption": "Кераміка: Pearl White"
+            },
+            {
+              "label": "Night Blue Ceramic",
+              "imageUrl": "/materials/apple-watch/2026/series-12/night-blue-ceramic.webp",
+              "caption": "Кераміка: Night Blue"
+            }
+          ]
+        }
+      ],
+      "reason": "Додано окрему картку підтвердженого покоління з точними фото варіантів корпусу.",
+      "sourceUrls": [
+        "https://www.apple.com/apple-watch-series-12/specs/",
+        "https://www.apple.com/apple-watch-ultra-4/specs/",
+        "https://pineapple.ua/smart-hodynnyky/apple-watch/apple-watch-series/apple-watch-series-12",
+        "https://pineapple.ua/apple-watch-series-12-gps-lte-46mm-black-aluminum-case-with-black-sport-band-sm-mjg84",
+        "https://pineapple.ua/apple-watch-series-12-gps-lte-46mm-dark-bronze-aluminum-case-with-olive-sport-band-sm-mjgd4",
+        "https://pineapple.ua/apple-watch-series-12-gps-lte-46mm-light-gold-aluminum-case-with-sand-sport-band-sm-mjga4",
+        "https://pineapple.ua/apple-watch-series-12-gps-lte-46mm-space-gray-aluminum-case-with-navy-blue-sport-band-sm-mjg64",
+        "https://pineapple.ua/apple-watch-series-12-gps-lte-46mm-radiant-gold-titanium-case-with-burgundy-sport-band-sm-mjgr4",
+        "https://pineapple.ua/apple-watch-series-12-gps-lte-46mm-natural-titanium-case-with-navy-blue-sport-band-sm-mjgm4",
+        "https://pineapple.ua/apple-watch-series-12-gps-lte-46mm-pearl-white-ceramic-case-with-sand-sport-band-sm-mjh14",
+        "https://pineapple.ua/apple-watch-series-12-gps-lte-46mm-night-blue-ceramic-case-with-navy-blue-sport-band-sm-mjh34",
+        "https://pineapple.ua/apple-watch-ultra-4-gps-lte-49mm-natural-titanium-case-with-natural-titanium-milanese-loop-large-mjaa4",
+        "https://pineapple.ua/apple-watch-ultra-4-gps-lte-49mm-black-titanium-case-with-desert-alpine-loop-medium-mjct4mkf44"
+      ]
+    },
+    {
+      "moduleId": 10,
+      "path": "/contentBlocks/4/products",
+      "before": [
+        {
+          "slug": "apple-watch-ultra-2022",
+          "title": "Apple Watch Ultra (2022)",
+          "colors": [
+            {
+              "label": "Natural Titanium",
+              "caption": "Корпус: Natural Titanium",
+              "default": true,
+              "imageUrl": "/materials/apple-watch/Color/Ultra1/Natural-Photoroom.png"
+            }
+          ],
+          "family": "Ultra",
+          "summary": "Перший Ultra для спорту, екстремальних умов, дайвінгу, походів і клієнтів, яким потрібні максимальна міцність та автономність.",
+          "overview": [
+            "Дисплей: OLED Retina, плоский, сапфірове скло",
+            "Корпус: титан 49 мм",
+            "Процесор: Apple S8"
+          ],
+          "highlights": [
+            "Дисплей: OLED Retina (плоский, сапфірове скло), Always On Display",
+            "Корпус: титановий 49 мм (аерокосмічний сплав)",
+            "Кнопки: Digital Crown + програмована кнопка",
+            "Процесор: Apple S8, чипи W3 та U1",
+            "ОС: watchOS; сумісність із iPhone перевіряйте за поколінням",
+            "Пам’ять: 32 ГБ",
+            "Модулі: GPS, ГЛОНАСС, LTE, Galileo",
+            "Висотомір: завжди активний",
+            "Bluetooth 5.3",
+            "Водостійкість: рейтинг 100 м, пил IP6X",
+            "Глибиномір + датчик температури води",
+            "Аудіо: 2 динаміки, 3 мікрофони",
+            "Автономність: до 36 год (до 60 год в енергозбереженні), швидке заряджання",
+            "Температурний режим: від -20°C до +55°C",
+            "Датчики: акселерометр, гіроскоп, компас",
+            "Компас: «Пункти маршруту» і «Пройдений маршрут»",
+            "Здоров’я: пульс, ЕКГ, кисень у крові, температура зап’ястя, цикл/овуляція",
+            "Безпека: падіння, SOS, аварії, сирена"
+          ]
+        },
+        {
+          "slug": "apple-watch-ultra-2-2023",
+          "title": "Apple Watch Ultra 2 (2023/2024)",
+          "colors": [
+            {
+              "label": "Natural Titanium",
+              "caption": "Корпус: Natural Titanium",
+              "default": true,
+              "imageUrl": "/materials/apple-watch/Color/Ultra2/Natural-Photoroom.png"
+            },
+            {
+              "label": "Black Titanium",
+              "caption": "Корпус: Black Titanium",
+              "imageUrl": "/materials/apple-watch/Color/Ultra2/Black-Photoroom.png"
+            }
+          ],
+          "family": "Ultra",
+          "summary": "Оновлений Ultra з 3000 ніт, S9 і Double Tap — найсильніший вибір для outdoor, спорту та клієнтів, що хочуть максимум можливостей Apple Watch.",
+          "overview": [
+            "Дисплей: OLED Retina Always-On до 3000 ніт",
+            "Корпус: титан 49 мм",
+            "Процесор: Apple S9"
+          ],
+          "highlights": [
+            "Дисплей: OLED Retina (плоский, сапфірове скло), Always On Display",
+            "Яскравість: до 3000 ніт",
+            "Корпус: титановий 49 мм (аерокосмічний сплав)",
+            "Кнопки: Digital Crown + програмована кнопка",
+            "Процесор: Apple S9, чип W3, Ultra Wideband2-гопокоління",
+            "ОС: watchOS; сумісність із iPhone перевіряйте за поколінням",
+            "Пам’ять: 64 ГБ",
+            "Модулі: GPS, ГЛОНАСС, LTE, Galileo",
+            "Висотомір: завжди активний",
+            "Bluetooth 5.3",
+            "Водостійкість: рейтинг 100 м, пил IP6X",
+            "Глибиномір + датчик температури води",
+            "Аудіо: 2 динаміки, 3 мікрофони",
+            "Автономність: до 36 год (до 72 год в енергозбереженні), швидке заряджання",
+            "Температурний режим: від -20°C до +55°C",
+            "Датчики: акселерометр, гіроскоп, компас",
+            "Компас: «Пункти маршруту» і «Пройдений маршрут»",
+            "Siri: швидша, з доступом до даних про здоров’я",
+            "Функції: NameDrop, точний пошук iPhone",
+            "Здоров’я: пульс, ЕКГ, кисень у крові, температура зап’ястя, цикл/овуляція",
+            "Безпека: падіння, SOS, аварії, сирена"
+          ]
+        },
+        {
+          "slug": "apple-watch-ultra-3-2025",
+          "title": "Apple Watch Ultra 3 (2025)",
+          "colors": [
+            {
+              "label": "Natural Titanium",
+              "caption": "Титан: Natural",
+              "default": true,
+              "imageUrl": "/materials/apple-watch/Color/Ultra3/Natural-Photoroom%20(1).png"
+            },
+            {
+              "label": "Black Titanium",
+              "caption": "Титан: Black",
+              "imageUrl": "/materials/apple-watch/Color/Ultra3/Ultra3-Photoroom.png"
+            }
+          ],
+          "family": "Ultra",
+          "summary": "Модель лінійки Ultra для тривалих тренувань, подорожей і використання на відкритому повітрі.",
+          "overview": [
+            "Дисплей: LTPO3 OLED Retina Always-On до 3000 ніт",
+            "Корпус: титан 49 мм",
+            "Процесор: Apple S10"
+          ],
+          "highlights": [
+            "Дисплей: LTPO3 OLED Retina, Always-On, до 3000 ніт",
+            "Корпус: титановий, 49 мм (Natural, Black)",
+            "Скло: плоске сапфірове",
+            "Процесор: Apple S10, 4-ядерний Neural Engine",
+            "ОС: watchOS; сумісність із iPhone перевіряйте за поколінням",
+            "Пам’ять: 64 ГБ",
+            "Модулі: GPS (L1+L5), LTE, Galileo, QZSS, BeiDou",
+            "Bluetooth 5.3, Wi-Fi 802.11n, NFC, UWB",
+            "Водостійкість: рейтинг 100 м, пил IP6X, MIL-STD 810H",
+            "Автономність: до 42 год (до 72 год у Low Power Mode)",
+            "Швидке заряджання: 80% за ~45 хв",
+            "Датчики: пульс (3-го покоління), ЕКГ, SpO₂, температура зап’ястя/води, глибина, компас, висотомір",
+            "Здоров’я: апное, гіпертонія, цикл, сон, сповіщення про ритм",
+            "Безпека: падіння, аварії, SOS, супутниковий зв’язок",
+            "Аудіо: 3 мікрофони, 2 динаміки, сирена",
+            "Жести: подвійний тап, flick-запуск"
+          ]
+        }
+      ],
+      "after": [
+        {
+          "slug": "apple-watch-ultra-2022",
+          "title": "Apple Watch Ultra (2022)",
+          "family": "Ultra",
+          "summary": "Перший Ultra для спорту, екстремальних умов, дайвінгу, походів і клієнтів, яким потрібні максимальна міцність та автономність.",
+          "overview": [
+            "Дисплей: OLED Retina, плоский, сапфірове скло",
+            "Корпус: титан 49 мм",
+            "Процесор: Apple S8"
+          ],
+          "highlights": [
+            "Дисплей: OLED Retina (плоский, сапфірове скло), Always On Display",
+            "Корпус: титановий 49 мм (аерокосмічний сплав)",
+            "Кнопки: Digital Crown + програмована кнопка",
+            "Процесор: Apple S8, чипи W3 та U1",
+            "ОС: watchOS; сумісність із iPhone перевіряйте за поколінням",
+            "Пам’ять: 32 ГБ",
+            "Модулі: GPS, ГЛОНАСС, LTE, Galileo",
+            "Висотомір: завжди активний",
+            "Bluetooth 5.3",
+            "Водостійкість: рейтинг 100 м, пил IP6X",
+            "Глибиномір + датчик температури води",
+            "Аудіо: 2 динаміки, 3 мікрофони",
+            "Автономність: до 36 год (до 60 год в енергозбереженні), швидке заряджання",
+            "Температурний режим: від -20°C до +55°C",
+            "Датчики: акселерометр, гіроскоп, компас",
+            "Компас: «Пункти маршруту» і «Пройдений маршрут»",
+            "Здоров’я: пульс, ЕКГ, кисень у крові, температура зап’ястя, цикл/овуляція",
+            "Безпека: падіння, SOS, аварії, сирена"
+          ],
+          "colors": [
+            {
+              "label": "Natural Titanium",
+              "imageUrl": "/materials/apple-watch/Color/Ultra1/Natural-Photoroom.png",
+              "caption": "Корпус: Natural Titanium",
+              "default": true
+            }
+          ]
+        },
+        {
+          "slug": "apple-watch-ultra-2-2023",
+          "title": "Apple Watch Ultra 2 (2023/2024)",
+          "family": "Ultra",
+          "summary": "Оновлений Ultra з 3000 ніт, S9 і Double Tap — найсильніший вибір для outdoor, спорту та клієнтів, що хочуть максимум можливостей Apple Watch.",
+          "overview": [
+            "Дисплей: OLED Retina Always-On до 3000 ніт",
+            "Корпус: титан 49 мм",
+            "Процесор: Apple S9"
+          ],
+          "highlights": [
+            "Дисплей: OLED Retina (плоский, сапфірове скло), Always On Display",
+            "Яскравість: до 3000 ніт",
+            "Корпус: титановий 49 мм (аерокосмічний сплав)",
+            "Кнопки: Digital Crown + програмована кнопка",
+            "Процесор: Apple S9, чип W3, Ultra Wideband 2-го покоління",
+            "ОС: watchOS; сумісність із iPhone перевіряйте за поколінням",
+            "Пам’ять: 64 ГБ",
+            "Модулі: GPS, ГЛОНАСС, LTE, Galileo",
+            "Висотомір: завжди активний",
+            "Bluetooth 5.3",
+            "Водостійкість: рейтинг 100 м, пил IP6X",
+            "Глибиномір + датчик температури води",
+            "Аудіо: 2 динаміки, 3 мікрофони",
+            "Автономність: до 36 год (до 72 год в енергозбереженні), швидке заряджання",
+            "Температурний режим: від -20°C до +55°C",
+            "Датчики: акселерометр, гіроскоп, компас",
+            "Компас: «Пункти маршруту» і «Пройдений маршрут»",
+            "Siri: швидша, з доступом до даних про здоров’я",
+            "Функції: NameDrop, точний пошук iPhone",
+            "Здоров’я: пульс, ЕКГ, кисень у крові, температура зап’ястя, цикл/овуляція",
+            "Безпека: падіння, SOS, аварії, сирена"
+          ],
+          "colors": [
+            {
+              "label": "Natural Titanium",
+              "imageUrl": "/materials/apple-watch/Color/Ultra2/Natural-Photoroom.png",
+              "caption": "Корпус: Natural Titanium",
+              "default": true
+            },
+            {
+              "label": "Black Titanium",
+              "imageUrl": "/materials/apple-watch/Color/Ultra2/Black-Photoroom.png",
+              "caption": "Корпус: Black Titanium"
+            }
+          ]
+        },
+        {
+          "slug": "apple-watch-ultra-3-2025",
+          "title": "Apple Watch Ultra 3 (2025)",
+          "family": "Ultra",
+          "summary": "Модель лінійки Ultra для тривалих тренувань, подорожей і використання на відкритому повітрі.",
+          "overview": [
+            "Дисплей: LTPO3 OLED Retina Always-On до 3000 ніт",
+            "Корпус: титан 49 мм",
+            "Процесор: Apple S10"
+          ],
+          "highlights": [
+            "Дисплей: LTPO3 OLED Retina, Always-On, до 3000 ніт",
+            "Корпус: титановий, 49 мм (Natural, Black)",
+            "Скло: плоске сапфірове",
+            "Процесор: Apple S10, 4-ядерний Neural Engine",
+            "ОС: watchOS; сумісність із iPhone перевіряйте за поколінням",
+            "Пам’ять: 64 ГБ",
+            "Модулі: GPS (L1+L5), LTE, Galileo, QZSS, BeiDou",
+            "Bluetooth 5.3, Wi-Fi 802.11n, NFC, UWB",
+            "Водостійкість: рейтинг 100 м, пил IP6X, MIL-STD 810H",
+            "Автономність: до 42 год (до 72 год у Low Power Mode)",
+            "Швидке заряджання: 80% за ~45 хв",
+            "Датчики: пульс (3-го покоління), ЕКГ, SpO₂, температура зап’ястя/води, глибина, компас, висотомір",
+            "Здоров’я: апное, гіпертонія, цикл, сон, сповіщення про ритм",
+            "Безпека: падіння, аварії, SOS, супутниковий зв’язок",
+            "Аудіо: 3 мікрофони, 2 динаміки, сирена",
+            "Жести: подвійний тап, flick-запуск"
+          ],
+          "colors": [
+            {
+              "label": "Natural Titanium",
+              "imageUrl": "/materials/apple-watch/Color/Ultra3/Natural-Photoroom%20(1).png",
+              "caption": "Титан: Natural",
+              "default": true
+            },
+            {
+              "label": "Black Titanium",
+              "imageUrl": "/materials/apple-watch/Color/Ultra3/Ultra3-Photoroom.png",
+              "caption": "Титан: Black"
+            }
+          ]
+        },
+        {
+          "slug": "apple-watch-ultra-4-2026",
+          "title": "Apple Watch Ultra 4 (2026)",
+          "family": "Ultra",
+          "summary": "Модель Ultra для тривалих тренувань і подорожей із титановим корпусом, точним GPS та збільшеною автономністю.",
+          "overview": [
+            "Дисплей: LTPO3 OLED Retina Always-On до 3000 ніт",
+            "Корпус: титан Grade 5, 49 мм",
+            "Процесор: Apple S11, пам’ять 64 ГБ"
+          ],
+          "highlights": [
+            "Дисплей LTPO3 OLED Always-On до 3000 ніт і плоске сапфірове скло",
+            "Титановий корпус Grade 5, 49 мм; кольори Natural та Black",
+            "Чип S11 із 4-ядерним Neural Engine та 64 ГБ пам’яті",
+            "До 50 годин звичайної роботи або до 84 годин в енергозбереженні за методикою Apple",
+            "Швидке заряджання: до 80% приблизно за 45 хвилин",
+            "Точний двочастотний GPS, компас, висотомір, кнопка Action та сирена",
+            "Водостійкість 100 м, IP6X; рекреаційні занурення дозволені до 40 м, а не на 100 м",
+            "Cellular та супутникові функції залежать від країни й оператора; потрібен сумісний iPhone з iOS 27 чи новішою версією"
+          ],
+          "colors": [
+            {
+              "label": "Natural Titanium",
+              "imageUrl": "/materials/apple-watch/2026/ultra-4/natural-titanium.webp",
+              "caption": "Титан: Natural",
+              "default": true
+            },
+            {
+              "label": "Black Titanium",
+              "imageUrl": "/materials/apple-watch/2026/ultra-4/black-titanium.webp",
+              "caption": "Титан: Black"
+            }
+          ]
+        }
+      ],
+      "reason": "Додано окрему картку підтвердженого покоління з точними фото варіантів корпусу.",
+      "sourceUrls": [
+        "https://www.apple.com/apple-watch-series-12/specs/",
+        "https://www.apple.com/apple-watch-ultra-4/specs/",
+        "https://pineapple.ua/smart-hodynnyky/apple-watch/apple-watch-series/apple-watch-series-12",
+        "https://pineapple.ua/apple-watch-series-12-gps-lte-46mm-black-aluminum-case-with-black-sport-band-sm-mjg84",
+        "https://pineapple.ua/apple-watch-series-12-gps-lte-46mm-dark-bronze-aluminum-case-with-olive-sport-band-sm-mjgd4",
+        "https://pineapple.ua/apple-watch-series-12-gps-lte-46mm-light-gold-aluminum-case-with-sand-sport-band-sm-mjga4",
+        "https://pineapple.ua/apple-watch-series-12-gps-lte-46mm-space-gray-aluminum-case-with-navy-blue-sport-band-sm-mjg64",
+        "https://pineapple.ua/apple-watch-series-12-gps-lte-46mm-radiant-gold-titanium-case-with-burgundy-sport-band-sm-mjgr4",
+        "https://pineapple.ua/apple-watch-series-12-gps-lte-46mm-natural-titanium-case-with-navy-blue-sport-band-sm-mjgm4",
+        "https://pineapple.ua/apple-watch-series-12-gps-lte-46mm-pearl-white-ceramic-case-with-sand-sport-band-sm-mjh14",
+        "https://pineapple.ua/apple-watch-series-12-gps-lte-46mm-night-blue-ceramic-case-with-navy-blue-sport-band-sm-mjh34",
+        "https://pineapple.ua/apple-watch-ultra-4-gps-lte-49mm-natural-titanium-case-with-natural-titanium-milanese-loop-large-mjaa4",
+        "https://pineapple.ua/apple-watch-ultra-4-gps-lte-49mm-black-titanium-case-with-desert-alpine-loop-medium-mjct4mkf44"
+      ]
+    },
+    {
+      "moduleId": 10,
+      "path": "/contentBlocks/6/html",
+      "before": "<p>Перевірте сумісність з iPhone, розмір корпусу й ремінця, версію GPS/Cellular і комплектність. Функції здоров’я перевіряйте за моделлю, віком, країною та системою.</p><h4>Нові покоління в Pineapple</h4><ul><li>Series 12 (2026): S11, 64 ГБ, Always-On OLED до 2000 ніт. Корпус 42/46 мм в алюмінії/титані або 43/47 мм у кераміці; до 24 годин звичайної роботи або 38 годин енергозбереження за методикою Apple.</li><li>Ultra 4 (2026): S11, 49 мм, титан, сапфір, OLED до 3000 ніт. До 50 годин звичайної роботи або 84 годин енергозбереження; сирена,5G/LTE та супутникові функції за регіональними умовами.</li></ul>",
+      "after": "<p>Перевірте сумісність з iPhone, розмір корпусу й ремінця, версію GPS/Cellular і комплектність. Функції здоров’я перевіряйте за моделлю, віком, країною та системою.</p>",
+      "reason": "Виправлено пробіли та прибрано повторний опис новинок після додавання карток.",
+      "sourceUrls": [
+        "https://www.apple.com/apple-watch-series-12/specs/",
+        "https://www.apple.com/apple-watch-ultra-4/specs/",
+        "https://pineapple.ua/smart-hodynnyky/apple-watch/apple-watch-series/apple-watch-series-12",
+        "https://pineapple.ua/apple-watch-series-12-gps-lte-46mm-black-aluminum-case-with-black-sport-band-sm-mjg84",
+        "https://pineapple.ua/apple-watch-series-12-gps-lte-46mm-dark-bronze-aluminum-case-with-olive-sport-band-sm-mjgd4",
+        "https://pineapple.ua/apple-watch-series-12-gps-lte-46mm-light-gold-aluminum-case-with-sand-sport-band-sm-mjga4",
+        "https://pineapple.ua/apple-watch-series-12-gps-lte-46mm-space-gray-aluminum-case-with-navy-blue-sport-band-sm-mjg64",
+        "https://pineapple.ua/apple-watch-series-12-gps-lte-46mm-radiant-gold-titanium-case-with-burgundy-sport-band-sm-mjgr4",
+        "https://pineapple.ua/apple-watch-series-12-gps-lte-46mm-natural-titanium-case-with-navy-blue-sport-band-sm-mjgm4",
+        "https://pineapple.ua/apple-watch-series-12-gps-lte-46mm-pearl-white-ceramic-case-with-sand-sport-band-sm-mjh14",
+        "https://pineapple.ua/apple-watch-series-12-gps-lte-46mm-night-blue-ceramic-case-with-navy-blue-sport-band-sm-mjh34",
+        "https://pineapple.ua/apple-watch-ultra-4-gps-lte-49mm-natural-titanium-case-with-natural-titanium-milanese-loop-large-mjaa4",
+        "https://pineapple.ua/apple-watch-ultra-4-gps-lte-49mm-black-titanium-case-with-desert-alpine-loop-medium-mjct4mkf44"
+      ]
+    },
+    {
+      "moduleId": 14,
+      "path": "/contentBlocks/4/products/1/highlights/1",
+      "before": "UWB 2-гопоколіннядля розширеного точного пошуку на сумісних пристроях",
+      "after": "UWB 2-го покоління для розширеного точного пошуку на сумісних пристроях",
+      "reason": "Виправлено дві друкарські помилки в картці AirTag.",
+      "sourceUrls": []
+    },
+    {
+      "moduleId": 14,
+      "path": "/contentBlocks/4/products/1/highlights/2",
+      "before": "Динамікна 50% гучніший за попереднє покоління за методикою Apple",
+      "after": "Динамік на 50% гучніший за попереднє покоління за методикою Apple",
+      "reason": "Виправлено дві друкарські помилки в картці AirTag.",
+      "sourceUrls": []
+    }
+  ]
+}
