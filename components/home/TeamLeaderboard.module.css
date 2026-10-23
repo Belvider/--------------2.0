@@ -16,7 +16,7 @@
 .you { color: #61dfc9; white-space: nowrap; }
 .leader > strong { flex: none; color: #e2e8f0; font-size: 1rem; font-weight: 600; text-align: right; }
 .leader > strong > small { display: block; margin-top: .125rem; color: #a8b4c5; font-size: .625rem; font-weight: 400; }
-.footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .5rem .75rem; padding-bottom: 1rem; color: #a7a5bd; font-size: .6875rem; }
+.footer { display: flex; align-items: center; justify-content: flex-start; flex-wrap: wrap; gap: .5rem .75rem; padding-bottom: 1rem; color: #a7a5bd; font-size: .6875rem; }
 .footer > button { display: inline-flex; align-items: center; justify-content: center; gap: .375rem; min-height: 2.5rem; border: 1px solid rgba(179,162,220,.2); border-radius: .625rem; padding: .5rem .75rem; color: #d7d8e7; font-size: .75rem; font-weight: 550; transition: background 180ms ease; }
 .footer > button:hover { background: rgba(179,162,220,.08); }
 .footer > button > svg { flex: none; transition: transform 180ms ease; }
@@ -27,6 +27,7 @@
   .leader { gap: .5rem; padding: .625rem; }
   .rank { width: 1.25rem; }
   .copy h3 { font-size: .8125rem; }
+  .footer { flex-direction: column; align-items: flex-start; }
 }
 @media (prefers-reduced-motion: reduce) {
   .chevron, .footer > button, .footer > button > svg { transition: none; }
