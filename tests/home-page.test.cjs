@@ -135,6 +135,21 @@ test('a genuine zero quiz result remains visible rather than being treated as an
   assert.doesNotMatch(markup, /Після першого тесту/);
 });
 
+test('home passes the whole team to its ranking and offers access beyond the first five participants', async () => {
+  const leaderboard = Array.from({ length: 8 }, (_, index) => ({
+    userId: index === 1 ? 'home-test-user' : `teammate-${index}`,
+    name: `Колега ${index + 1}`, department: 'Навчання', completed: index < 2 ? 3 - index : 0, avgScore: null
+  }));
+  const markup = await renderHome(homeData({ leaderboard }));
+  assert.match(markup, /Рейтинг команди/);
+  assert.match(markup, /Учасників: 8/);
+  assert.match(markup, /Показати всіх \(8\)/);
+  assert.match(markup, /Показано 5 із 8/);
+  assert.match(markup, /Колега 5/);
+  assert.match(markup, /Колега 2[\s\S]*? · Ви/);
+  assert.match(markup, /0<small>модулів/);
+});
+
 function recommendation(id, reason, overrides = {}) {
   return { id, title: 'Рекомендована тема ' + id, durationMin: 15,
     category: { name: 'Навушники', brand: { name: 'Apple', slug: 'apple' } },

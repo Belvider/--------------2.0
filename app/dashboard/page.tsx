@@ -1,12 +1,13 @@
 import type { Metadata, Route } from "next";
 import type { CSSProperties } from "react";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, Award, BarChart3, BookOpenCheck, CalendarDays, ChevronDown, Clock3, Lightbulb, RotateCcw, Sparkles, Trophy } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Award, BarChart3, BookOpenCheck, CalendarDays, Clock3, Lightbulb, RotateCcw, Sparkles } from "lucide-react";
 import { OnboardingModal } from "@/components/OnboardingModal";
 import { PortalShell } from "@/components/PortalShell";
 import { QuickPractice } from "@/components/home/QuickPractice";
 import { LearningPulse } from "@/components/home/LearningPulse";
 import { LearningDirections } from "@/components/home/LearningDirections";
+import { TeamLeaderboard } from "@/components/home/TeamLeaderboard";
 import { getActivityDay } from "@/lib/activity-days";
 import { requireAuthPageUser } from "@/lib/guards";
 import { getDashboardData } from "@/lib/queries";
@@ -238,22 +239,7 @@ export default async function HomePage() {
           </div>
         </section>
 
-        {data.leaderboard.length > 0 && (
-          <details className={cn("card", styles.team)}>
-            <summary className="focus-ring">
-              <Trophy size={17} aria-hidden="true" /><span>Рейтинг команди</span><small>За завершеними модулями</small><ChevronDown size={16} className={styles.chevron} aria-hidden="true" />
-            </summary>
-            <ol className={styles.leaderboard}>
-              {data.leaderboard.slice(0, 5).map((row, index) => (
-                <li key={row.userId} className={cn(styles.leader, row.userId === user.id && styles.currentUser)}>
-                  <span className={styles.rank}>{index + 1}</span>
-                  <div className={styles.rowCopy}><h3>{row.name}{row.userId === user.id ? " · Ви" : ""}</h3><p>{row.department}</p></div>
-                  <strong>{row.completed}<small>модулів</small></strong>
-                </li>
-              ))}
-            </ol>
-          </details>
-        )}
+        <TeamLeaderboard entries={data.leaderboard} currentUserId={user.id} />
       </div>
     </PortalShell>
   );

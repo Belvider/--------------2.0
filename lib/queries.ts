@@ -723,6 +723,8 @@ export async function getDashboardData(userId: string) {
     userBadges,
     certificatesCount,
     leaderboardRaw,
+    leaderboardUsers,
+    leaderboardAttempts,
     assignmentsData,
     activityDays,
     learningCatalog
@@ -815,10 +817,16 @@ export async function getDashboardData(userId: string) {
     prisma.userProgress.groupBy({
       by: ["userId"],
       where: { status: ProgressStatus.COMPLETED, module: { isPublished: true } },
-      _count: { _all: true },
-      orderBy: { _count: { userId: "desc" } },
-      take: 10
-      }),
+      _count: { _all: true }
+    }),
+    prisma.user.findMany({
+      select: { id: true, name: true, department: true }
+    }),
+    prisma.quizAttempt.groupBy({
+      by: ["userId", "moduleId"],
+      where: { module: { isPublished: true } },
+      _max: { score: true }
+    }),
     getResolvedAssignmentsForUser(userId),
     prisma.learningActivity.groupBy({
       by: ["day"],
@@ -849,62 +857,36 @@ export async function getDashboardData(userId: string) {
     })
   ]);
 
-  const leaderboardUsers = await prisma.user.findMany({
-    where: {
-      id: {
-        in: leaderboardRaw.map((item) => item.userId)
-      }
-    },
-    select: {
-      id: true,
-      name: true,
-      department: true
-    }
-  });
-
-  const usersById = new Map(leaderboardUsers.map((item) => [item.id, item]));
-
-  const leaderboardUserIds = leaderboardRaw
-    .map((item) => item.userId)
-    .filter((id): id is string => id !== null);
-
-  const leaderboardAttempts = leaderboardUserIds.length > 0
-    ? await prisma.quizAttempt.findMany({
-        where: { userId: { in: leaderboardUserIds }, module: { isPublished: true } },
-        select: { userId: true, moduleId: true, score: true }
-      })
-    : [];
-
+  const completedByUser = new Map(leaderboardRaw.map((item) => [item.userId, item._count._all]));
   const bestScoresByUser = new Map<string, Map<number, number>>();
   for (const attempt of leaderboardAttempts) {
+    if (attempt._max.score === null) continue;
     if (!bestScoresByUser.has(attempt.userId)) {
       bestScoresByUser.set(attempt.userId, new Map());
     }
     const moduleMap = bestScoresByUser.get(attempt.userId)!;
-    const cur = moduleMap.get(attempt.moduleId) ?? Number.NEGATIVE_INFINITY;
-    if (attempt.score > cur) moduleMap.set(attempt.moduleId, attempt.score);
+    moduleMap.set(attempt.moduleId, attempt._max.score);
   }
 
-  const leaderboard = leaderboardRaw
-    .map((item) => {
-      const user = usersById.get(item.userId);
-      if (!user) return null;
-
-      const moduleScores = bestScoresByUser.get(item.userId);
+  const leaderboard = leaderboardUsers
+    .map((learner) => {
+      const moduleScores = bestScoresByUser.get(learner.id);
       const scores = moduleScores ? [...moduleScores.values()] : [];
       const avgScore = scores.length > 0
         ? Math.round(scores.reduce((s, v) => s + v, 0) / scores.length)
         : null;
 
       return {
-        userId: item.userId,
-        name: user.name,
-        department: user.department,
-        completed: item._count._all,
+        userId: learner.id,
+        name: learner.name,
+        department: learner.department,
+        completed: completedByUser.get(learner.id) ?? 0,
         avgScore
       };
     })
-    .filter((item): item is { userId: string; name: string; department: string; completed: number; avgScore: number | null } => item !== null);
+    .sort((left, right) => right.completed - left.completed
+      || left.name.localeCompare(right.name, "uk")
+      || left.userId.localeCompare(right.userId, "en"));
 
   const progressPct = totalModules > 0 ? Math.round((completedModules / totalModules) * 100) : 0;
   const inProgressModules = progressList.filter((item) => item.status === ProgressStatus.IN_PROGRESS).length;

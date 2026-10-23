@@ -211,20 +211,6 @@
 .recommendation footer { display: flex; align-items: center; justify-content: space-between; gap: .5rem; margin-top: auto; padding-top: 1rem; color: #bad7d0; font-size: .6875rem; }
 .recommendation footer > span { display: inline-flex; align-items: center; gap: .375rem; }
 
-.team { min-width: 0; padding: 0 1.25rem; border-radius: 1rem; background: rgba(24,19,35,0.9); }
-.team > summary { display: flex; min-height: 3.75rem; align-items: center; gap: 0.75rem; cursor: pointer; list-style: none; color: #d7d8e7; font-size: 0.8125rem; font-weight: 550; }
-.team > summary::-webkit-details-marker { display: none; }
-.team > summary > svg:first-child { flex: none; color: #b3a2dc; }
-.team > summary > small { margin-left: auto; color: #a7a5bd; font-size: 0.6875rem; font-weight: 400; }
-.chevron { flex: none; margin-left: auto; transition: transform 180ms ease; }
-.team > summary > small + .chevron { margin-left: 0; }
-.team[open] .chevron { transform: rotate(180deg); }
-.leaderboard { display: grid; gap: 0.5rem; padding-bottom: 1.25rem; }
-.leader { display: flex; align-items: center; gap: 0.75rem; min-width: 0; border: 1px solid rgba(255,255,255,0.07); border-radius: 0.75rem; padding: 0.75rem; }
-.rank { flex: none; width: 1.75rem; color: #a8b4c5; text-align: center; font-size: 0.8125rem; }
-.currentUser { border-color: rgba(97,223,201,0.3); background: rgba(53,204,179,0.04); }
-.leader > strong { flex: none; color: #e2e8f0; font-size: 1rem; font-weight: 600; text-align: right; }
-.leader > strong > small { display: block; margin-top: 0.125rem; color: #a8b4c5; font-size: 0.625rem; font-weight: 400; }
 
 @media (min-width: 640px) {
   .home { gap: 1.5rem; }
@@ -283,12 +269,10 @@
   .statValue { margin-top: 0; }
   .stat h2 { font-size: .6875rem; }
   .recommendationNote { max-width: none; }
-  .team > summary > small { display: none; }
-  .team > summary > .chevron { margin-left: auto; }
   .sectionHeader { flex-wrap: wrap; }
   .sectionHeader > .textLink { min-height: 1.75rem; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .primaryButton, .assignment, .material, .chevron, .recommendation { transition: none; }
+  .primaryButton, .assignment, .material, .recommendation { transition: none; }
   .primaryButton:hover, .material:hover, .recommendation:hover { transform: none; }
 }
