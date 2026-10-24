@@ -92,6 +92,46 @@
   outline-offset: 0.5rem;
 }
 
+.content :global([data-material-anchor]) {
+  scroll-margin-block: 6rem;
+}
+
+.content :global([data-search-focus="true"]) {
+  outline: 2px solid rgba(40, 178, 158, 0.7);
+  outline-offset: 0.35rem;
+  border-radius: 0.25rem;
+  background-color: rgba(40, 178, 158, 0.09);
+}
+
+.topicLinkFooter {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.25rem;
+}
+
+.materialLink {
+  display: inline-flex;
+  min-height: 2rem;
+  align-items: center;
+  gap: 0.375rem;
+  border-radius: 0.375rem;
+  padding: 0.25rem 0.375rem;
+  color: #94a3b8;
+  font-size: 0.6875rem;
+  line-height: 1.5;
+}
+
+.materialLink:hover {
+  color: var(--brand-strong);
+}
+
+.productLink {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0.375rem 1rem;
+}
+
 .topic + .topic {
   border-top: 1px solid rgba(255, 255, 255, 0.09);
   padding-top: 2.5rem;

@@ -12,12 +12,15 @@ type AccessibleDialogProps = {
   label: string;
   onClose: () => void;
   initialFocusRef?: RefObject<HTMLElement | null>;
+  restoreFocus?: boolean | (() => boolean);
 };
 
-export function AccessibleDialog({ children, className, label, onClose, initialFocusRef }: AccessibleDialogProps) {
+export function AccessibleDialog({ children, className, label, onClose, initialFocusRef, restoreFocus = true }: AccessibleDialogProps) {
   const dialogRef = useRef<HTMLDivElement>(null);
   const closeRef = useRef(onClose);
   closeRef.current = onClose;
+  const restoreFocusRef = useRef(restoreFocus);
+  restoreFocusRef.current = restoreFocus;
 
   useEffect(() => {
     const dialog = dialogRef.current;
@@ -31,7 +34,7 @@ export function AccessibleDialog({ children, className, label, onClose, initialF
 
     const focusables = () => Array.from(dialog.querySelectorAll<HTMLElement>(
       'a[href],button:not([disabled]),input:not([disabled]):not([type="hidden"]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])'
-    )).filter((element) => element.getClientRects().length > 0);
+    )).filter((element) => element.tabIndex !== -1 && element.getClientRects().length > 0);
     (initialFocusRef?.current ?? focusables()[0] ?? dialog).focus();
 
     function handleKey(event: KeyboardEvent) {
@@ -64,7 +67,8 @@ export function AccessibleDialog({ children, className, label, onClose, initialF
       const index = openDialogs.indexOf(dialog);
       if (index >= 0) openDialogs.splice(index, 1);
       if (--scrollLocks === 0) document.body.style.overflow = previousOverflow;
-      if (previousFocus?.isConnected) previousFocus.focus();
+      const restore = restoreFocusRef.current;
+      if ((typeof restore === "function" ? restore() : restore) && previousFocus?.isConnected) previousFocus.focus({ preventScroll: true });
     };
   }, [initialFocusRef]);
 

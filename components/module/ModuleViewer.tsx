@@ -1,13 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowLeft, ArrowRight, CheckCircle2, ChevronRight } from "lucide-react";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { ArrowLeft, ArrowRight, CheckCircle2, ChevronRight, Link2 } from "lucide-react";
+import { memo, useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import type { ModuleCatalogProduct, ModuleContentBlock } from "@/lib/module-content";
 import { getVideoSource } from "@/lib/video-source";
 import { getRequestError, requestJson } from "@/lib/http-client";
 import { getProductImageFrame } from "@/lib/product-image-frames";
+import { findModuleBlockIndexForAnchor, getFactAnchor, getModuleBlockAnchor, getProductAnchor, getProductDetailAnchor, prepareSearchableHtml } from "@/lib/content-anchors";
 import styles from "./ModuleViewer.module.css";
 
 type ModuleViewerProps = {
@@ -241,7 +242,26 @@ function getColorTone(label: string) {
   return "#cbd5e1";
 }
 
-function ProductCatalogCard({ product }: { product: ModuleCatalogProduct }) {
+function MaterialLink({ anchor, title }: { anchor: string; title: string }) {
+  const [copied, setCopied] = useState(false);
+  return <a
+    href={`#${anchor}`}
+    className={`focus-ring ${styles.materialLink}`}
+    aria-label={`Скопіювати посилання: ${title}`}
+    onClick={(event) => {
+      if (!navigator.clipboard?.writeText) return;
+      event.preventDefault();
+      const url = new URL(window.location.href);
+      url.hash = anchor;
+      navigator.clipboard.writeText(url.href).then(() => setCopied(true)).catch(() => { window.location.hash = anchor; });
+    }}
+  >
+    <Link2 className="size-3.5" aria-hidden="true" />
+    <span role="status">{copied ? "Посилання скопійовано" : "Посилання на матеріал"}</span>
+  </a>;
+}
+
+function ProductCatalogCard({ product, anchor, requestedAnchor, navigationRequest }: { product: ModuleCatalogProduct; anchor: string; requestedAnchor: string; navigationRequest: number }) {
   const defaultColorIndex = Math.max(product.colors.findIndex((color) => color.default), 0);
   const [activeColorIndex, setActiveColorIndex] = useState(defaultColorIndex);
   const activeColor = product.colors[activeColorIndex] ?? product.colors[0];
@@ -251,6 +271,10 @@ function ProductCatalogCard({ product }: { product: ModuleCatalogProduct }) {
   const extraHighlights = product.highlights.slice(6);
   const year = product.title.match(/\((\d{4})\)/)?.[1];
   const family = getProductFamily(product);
+  useEffect(() => {
+    const colorIndex = product.colors.findIndex((_, index) => getProductDetailAnchor(anchor, "color", index) === requestedAnchor);
+    if (colorIndex >= 0) setActiveColorIndex(colorIndex);
+  }, [anchor, product.colors, requestedAnchor, navigationRequest]);
   const productImage = activeColor ? (
     <Image
       src={activeColor.imageUrl}
@@ -270,9 +294,12 @@ function ProductCatalogCard({ product }: { product: ModuleCatalogProduct }) {
 
   return (
     <article
-      id={product.slug}
+      id={anchor}
+      data-material-anchor={anchor}
+      tabIndex={-1}
       className={styles.productCard}
     >
+      <span id={product.slug} data-product-legacy-anchor aria-hidden="true" />
       {/* ── Шапка: назва + badges ── */}
       <div className="border-b border-white/[0.07] px-4 py-4 sm:px-6 sm:py-5">
         <div className="flex flex-wrap items-center gap-1.5">
@@ -288,7 +315,7 @@ function ProductCatalogCard({ product }: { product: ModuleCatalogProduct }) {
         <h3 className="mt-3 font-[var(--font-heading)] text-2xl font-semibold leading-tight tracking-[-0.03em] text-white sm:text-[1.75rem]">
           {product.title}
         </h3>
-        {product.summary ? <p className={styles.productSummary}>{product.summary}</p> : null}
+        {product.summary ? <p id={getProductDetailAnchor(anchor, "summary")} data-material-anchor={getProductDetailAnchor(anchor, "summary")} className={styles.productSummary}>{product.summary}</p> : null}
       </div>
 
       {/* ── Основний контент: ліво = фото, право = деталі ── */}
@@ -320,6 +347,8 @@ function ProductCatalogCard({ product }: { product: ModuleCatalogProduct }) {
                   return (
                     <button
                       key={`${product.slug}-dot-${index}`}
+                      id={getProductDetailAnchor(anchor, "color", index)}
+                      data-material-anchor={getProductDetailAnchor(anchor, "color", index)}
                       type="button"
                       onClick={() => setActiveColorIndex(index)}
                       title={color.label}
@@ -343,7 +372,7 @@ function ProductCatalogCard({ product }: { product: ModuleCatalogProduct }) {
                 })}
               </div>}
               {activeColor && (
-                <p className={`${product.colors.length > 1 ? "mt-2 " : ""}text-center text-xs font-medium text-slate-400`}>
+                <p id={product.colors.length === 1 ? getProductDetailAnchor(anchor, "color", 0) : undefined} data-material-anchor={product.colors.length === 1 ? getProductDetailAnchor(anchor, "color", 0) : undefined} className={`${product.colors.length > 1 ? "mt-2 " : ""}text-center text-xs font-medium text-slate-400`}>
                   {activeColor.caption || activeColor.label}
                 </p>
               )}
@@ -359,8 +388,8 @@ function ProductCatalogCard({ product }: { product: ModuleCatalogProduct }) {
             <div className="px-4 py-4 sm:px-5">
               <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.22em] text-slate-400">Характеристики</p>
               <dl className="space-y-2">
-                {overview.map((item) => (
-                  <div key={`${product.slug}-${item.label}-${item.value}`} className={styles.specification}>
+                {overview.map((item, index) => (
+                  <div key={`${product.slug}-${item.label}-${item.value}`} id={getProductDetailAnchor(anchor, "spec", index)} data-material-anchor={getProductDetailAnchor(anchor, "spec", index)} className={styles.specification}>
                     <dt>
                       {item.label}
                     </dt>
@@ -379,7 +408,7 @@ function ProductCatalogCard({ product }: { product: ModuleCatalogProduct }) {
               </p>
               <ul className="space-y-2">
                 {visibleHighlights.map((item, index) => (
-                  <li key={item} className="flex items-start gap-2.5 text-sm text-slate-300">
+                  <li key={item} id={getProductDetailAnchor(anchor, "highlight", index)} data-material-anchor={getProductDetailAnchor(anchor, "highlight", index)} className="flex items-start gap-2.5 text-sm text-slate-300">
                     <span className="mt-0.5 flex size-4 flex-none items-center justify-center rounded-full bg-[rgba(40,178,158,0.14)] text-[9px] font-bold text-[color:var(--brand-strong)]">
                       {index + 1}
                     </span>
@@ -394,8 +423,8 @@ function ProductCatalogCard({ product }: { product: ModuleCatalogProduct }) {
                     Інші особливості ({extraHighlights.length})
                   </summary>
                   <ul className="mt-2 space-y-1.5">
-                    {extraHighlights.map((item) => (
-                      <li key={item} className="flex items-start gap-2 text-sm text-slate-300">
+                    {extraHighlights.map((item, index) => (
+                      <li key={item} id={getProductDetailAnchor(anchor, "highlight", index + 6)} data-material-anchor={getProductDetailAnchor(anchor, "highlight", index + 6)} className="flex items-start gap-2 text-sm text-slate-300">
                         <span className="mt-1.5 size-1 flex-none rounded-full bg-[color:var(--brand-strong)] opacity-50" />
                         {item}
                       </li>
@@ -408,11 +437,12 @@ function ProductCatalogCard({ product }: { product: ModuleCatalogProduct }) {
 
         </div>
       </div>
+      <footer className={styles.productLink}><MaterialLink anchor={anchor} title={product.title} /></footer>
     </article>
   );
 }
 
-function ProductCatalogBlockView({ block }: { block: Extract<ModuleContentBlock, { type: "productCatalog" }> }) {
+function ProductCatalogBlockView({ block, anchor, requestedAnchor, navigationRequest }: { block: Extract<ModuleContentBlock, { type: "productCatalog" }>; anchor: string; requestedAnchor: string; navigationRequest: number }) {
   const [query, setQuery] = useState("");
   const catalogFilters = useMemo(() => getCatalogFilters(block.products), [block.products]);
   const [activeFilter, setActiveFilter] = useState(ALL_FILTER_KEY);
@@ -447,6 +477,13 @@ function ProductCatalogBlockView({ block }: { block: Extract<ModuleContentBlock,
       setActiveFilter(ALL_FILTER_KEY);
     }
   }, [activeFilter, catalogFilters]);
+
+  useEffect(() => {
+    if (block.products.some((product, index) => requestedAnchor === product.slug || requestedAnchor === getProductAnchor(anchor, index) || requestedAnchor.startsWith(`${getProductAnchor(anchor, index)}-`))) {
+      setQuery("");
+      setActiveFilter(ALL_FILTER_KEY);
+    }
+  }, [anchor, block.products, requestedAnchor, navigationRequest]);
 
   const years = block.products.map(getProductYear).filter((year) => year > 0);
   const oldestYear = years.length > 0 ? Math.min(...years) : null;
@@ -531,7 +568,7 @@ function ProductCatalogBlockView({ block }: { block: Extract<ModuleContentBlock,
 
       <div className="space-y-5">
         {filteredProducts.map((product) => (
-          <ProductCatalogCard key={product.slug} product={product} />
+          <ProductCatalogCard key={product.slug} product={product} anchor={getProductAnchor(anchor, block.products.indexOf(product))} requestedAnchor={requestedAnchor} navigationRequest={navigationRequest} />
         ))}
 
         {filteredProducts.length === 0 && (
@@ -638,7 +675,13 @@ function PowerStationCalculatorCard() {
   );
 }
 
-function renderBlock(block: ModuleContentBlock) {
+// Progress and request state must not replace imported HTML after a deep link
+// focused a paragraph, heading or row inside it.
+const RichTextFragment = memo(function RichTextFragment({ html }: { html: string }) {
+  return <div className="rich-text" dangerouslySetInnerHTML={{ __html: html }} />;
+});
+
+function renderBlock(block: ModuleContentBlock, anchor: string, requestedAnchor: string, navigationRequest: number) {
   if (block.type === "video" && block.url) {
     const video = getVideoSource(block.url, block.provider);
     return (
@@ -707,7 +750,7 @@ function renderBlock(block: ModuleContentBlock) {
         <h2 className={styles.blockTitle}>{block.title}</h2>
         <ol className="mt-5 space-y-3">
           {block.items?.map((item, i) => (
-            <li key={item} className="flex items-start gap-3 text-[0.97rem] text-slate-300">
+            <li key={item} id={getFactAnchor(anchor, i)} data-material-anchor={getFactAnchor(anchor, i)} className="flex items-start gap-3 text-[0.97rem] text-slate-300">
               <span aria-hidden="true" className="mt-0.5 flex size-6 flex-none items-center justify-center rounded-full bg-[rgba(40,178,158,0.12)] text-xs font-semibold text-[color:var(--brand-strong)]">
                 {i + 1}
               </span>
@@ -720,13 +763,14 @@ function renderBlock(block: ModuleContentBlock) {
   }
 
   if (block.type === "productCatalog") {
-    return <ProductCatalogBlockView block={block} />;
+    return <ProductCatalogBlockView block={block} anchor={anchor} requestedAnchor={requestedAnchor} navigationRequest={navigationRequest} />;
   }
 
   if (block.type === "text") {
     const calculatorMarker = "<!-- power-station-calculator -->";
-    const hasPowerStationCalculator = block.html.includes(calculatorMarker);
-    const textSegments = hasPowerStationCalculator ? block.html.split(calculatorMarker) : [block.html];
+    const preparedHtml = prepareSearchableHtml(block.html, anchor).html;
+    const hasPowerStationCalculator = preparedHtml.includes(calculatorMarker);
+    const textSegments = hasPowerStationCalculator ? preparedHtml.split(calculatorMarker) : [preparedHtml];
 
     return (
       <article className={`space-y-5 ${styles.lessonText}`}>
@@ -736,7 +780,7 @@ function renderBlock(block: ModuleContentBlock) {
         <div className="space-y-4">
           {textSegments.map((segment, index) => (
             <div key={`${block.title}-segment-${index}`} className="space-y-4">
-              {segment.trim() ? <div className="rich-text" dangerouslySetInnerHTML={{ __html: segment }} /> : null}
+              {segment.trim() ? <RichTextFragment html={segment} /> : null}
               {hasPowerStationCalculator && index < textSegments.length - 1 ? <PowerStationCalculatorCard /> : null}
             </div>
           ))}
@@ -752,6 +796,8 @@ export function ModuleViewer({ moduleId, blocks, initialProgressPct, hasQuiz }: 
   const router = useRouter();
   const pages = useMemo(() => buildModulePages(blocks), [blocks]);
   const [activePageIndex, setActivePageIndex] = useState(0);
+  const [readyModuleId, setReadyModuleId] = useState<number | null>(null);
+  const [navigation, setNavigation] = useState({ anchor: "", request: 0 });
   const [seenBlockIndexes, setSeenBlockIndexes] = useState<Set<number>>(new Set());
   const contentTopRef = useRef<HTMLDivElement>(null);
   const [savedProgress, setSavedProgress] = useState({ moduleId, pct: initialProgressPct });
@@ -761,10 +807,80 @@ export function ModuleViewer({ moduleId, blocks, initialProgressPct, hasQuiz }: 
   const [retrySave, setRetrySave] = useState(0);
 
   useEffect(() => {
-    setActivePageIndex(0);
     setSaveError(null);
     setIsSaving(false);
   }, [moduleId]);
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      setActivePageIndex(0);
+      setReadyModuleId(moduleId);
+      return;
+    }
+    function followHash(hash: string, initial = false) {
+      let anchor: string;
+      try { anchor = decodeURIComponent(hash.replace(/^#/, "")); } catch { return; }
+      const blockIndex = findModuleBlockIndexForAnchor(moduleId, blocks, anchor);
+      const pageIndex = pages.findIndex((page) => page.blockIndexes.includes(blockIndex));
+      if (pageIndex >= 0) setActivePageIndex(pageIndex);
+      else if (initial || !anchor) setActivePageIndex(0);
+      setNavigation((previous) => ({ anchor, request: previous.request + 1 }));
+    }
+    const onHashChange = () => followHash(window.location.hash);
+    const onMaterialNavigate = (event: Event) => {
+      const anchor = (event as CustomEvent<{ anchor?: string }>).detail?.anchor;
+      if (typeof anchor === "string") followHash(anchor);
+    };
+    const onAnchorClick = (event: MouseEvent) => {
+      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      const link = event.target instanceof Element ? event.target.closest<HTMLAnchorElement>("a[href]") : null;
+      if (!link || link.target === "_blank" || link.hasAttribute("download")) return;
+      const url = new URL(link.href, window.location.href);
+      if (url.origin === window.location.origin && url.pathname === window.location.pathname && url.hash) followHash(url.hash);
+    };
+    followHash(window.location.hash, true);
+    setReadyModuleId(moduleId);
+    window.addEventListener("hashchange", onHashChange);
+    window.addEventListener("popstate", onHashChange);
+    window.addEventListener("material:navigate", onMaterialNavigate);
+    document.addEventListener("click", onAnchorClick);
+    return () => {
+      window.removeEventListener("hashchange", onHashChange);
+      window.removeEventListener("popstate", onHashChange);
+      window.removeEventListener("material:navigate", onMaterialNavigate);
+      document.removeEventListener("click", onAnchorClick);
+    };
+  }, [moduleId, blocks, pages]);
+
+  useEffect(() => {
+    if (typeof window === "undefined" || !navigation.anchor || readyModuleId !== moduleId) return;
+    let frame = 0;
+    let attempts = 0;
+    let highlighted: HTMLElement | null = null;
+    const reveal = () => {
+      const target = document.getElementById(navigation.anchor)
+        ?? Array.from(contentTopRef.current?.querySelectorAll<HTMLElement>("[data-material-anchor]") ?? [])
+          .find((element) => element.dataset.materialAnchor === navigation.anchor);
+      if (!target || !contentTopRef.current?.contains(target)) {
+        if (++attempts < 30) frame = window.requestAnimationFrame(reveal);
+        return;
+      }
+      for (let ancestor = target.parentElement; ancestor && ancestor !== contentTopRef.current; ancestor = ancestor.parentElement) {
+        if (ancestor instanceof HTMLDetailsElement) ancestor.open = true;
+      }
+      highlighted = target.hasAttribute("data-product-legacy-anchor") ? target.parentElement : target;
+      if (!highlighted) return;
+      highlighted.dataset.searchFocus = "true";
+      if (!highlighted.hasAttribute("tabindex")) highlighted.setAttribute("tabindex", "-1");
+      highlighted.focus({ preventScroll: true });
+      highlighted.scrollIntoView({ behavior: "instant", block: "center" });
+    };
+    frame = window.requestAnimationFrame(reveal);
+    return () => {
+      window.cancelAnimationFrame(frame);
+      if (highlighted) delete highlighted.dataset.searchFocus;
+    };
+  }, [activePageIndex, moduleId, navigation, readyModuleId]);
 
   useEffect(() => {
     setActivePageIndex((current) => Math.min(current, Math.max(pages.length - 1, 0)));
@@ -785,6 +901,7 @@ export function ModuleViewer({ moduleId, blocks, initialProgressPct, hasQuiz }: 
   }, [moduleId, blocks.length, initialProgressPct]);
 
   useEffect(() => {
+    if (readyModuleId !== moduleId) return;
     const activePage = pages[activePageIndex];
 
     if (!activePage) {
@@ -796,7 +913,7 @@ export function ModuleViewer({ moduleId, blocks, initialProgressPct, hasQuiz }: 
       activePage.blockIndexes.forEach((index) => next.add(index));
       return next;
     });
-  }, [activePageIndex, pages]);
+  }, [activePageIndex, pages, moduleId, readyModuleId]);
 
   const progressPct = useMemo(() => {
     if (blocks.length === 0) return 0;
@@ -804,6 +921,7 @@ export function ModuleViewer({ moduleId, blocks, initialProgressPct, hasQuiz }: 
   }, [blocks.length, seenBlockIndexes]);
 
   useEffect(() => {
+    if (readyModuleId !== moduleId) return;
     let active = true;
     const timer = setTimeout(() => {
       setIsSaving(true);
@@ -821,13 +939,18 @@ export function ModuleViewer({ moduleId, blocks, initialProgressPct, hasQuiz }: 
     }, 450);
 
     return () => { active = false; clearTimeout(timer); };
-  }, [moduleId, progressPct, initialProgressPct, router, retrySave]);
+  }, [moduleId, progressPct, initialProgressPct, router, retrySave, readyModuleId]);
 
   const activePage = pages[activePageIndex];
-  const getBlockAnchor = (blockIndex: number) => `module-${moduleId}-topic-${blockIndex + 1}`;
+  const getBlockAnchor = (blockIndex: number) => getModuleBlockAnchor(moduleId, blockIndex);
 
   function openPage(index: number) {
     setActivePageIndex(index);
+    const anchor = getModuleBlockAnchor(moduleId, pages[index]?.blockIndexes[0] ?? 0);
+    setNavigation((previous) => ({ anchor, request: previous.request + 1 }));
+    const url = new URL(window.location.href);
+    url.hash = anchor;
+    if (url.href !== window.location.href) window.history.pushState(null, "", url);
     const behavior = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth";
     contentTopRef.current?.scrollIntoView({ behavior, block: "start" });
   }
@@ -949,7 +1072,8 @@ export function ModuleViewer({ moduleId, blocks, initialProgressPct, hasQuiz }: 
                   tabIndex={-1}
                   className={styles.topic}
                 >
-                  {renderBlock(block)}
+                  {renderBlock(block, getBlockAnchor(activePage.blockIndexes[index]), navigation.anchor, navigation.request)}
+                  <div className={styles.topicLinkFooter}><MaterialLink anchor={getBlockAnchor(activePage.blockIndexes[index])} title={block.title} /></div>
                 </div>
               ))}
             </div>

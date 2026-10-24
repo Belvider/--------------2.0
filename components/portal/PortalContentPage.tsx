@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import { PortalShell } from "@/components/PortalShell";
 import type { PortalCardIconKey, PortalPageContent } from "@/lib/portal-pages";
+import { getPortalCardAnchor, getPortalCardItemAnchor } from "@/lib/content-anchors";
 
 const iconMap: Record<PortalCardIconKey, LucideIcon> = {
   "shield-check": ShieldCheck,
@@ -69,9 +70,11 @@ export function PortalContentPage({ user, content }: PortalContentPageProps) {
       <section className="grid auto-rows-fr gap-4 sm:grid-cols-2 xl:grid-cols-3 animate-fadeUp" style={{ animationDelay: "120ms" }}>
         {content.cards.map((card, index) => {
           const Icon = iconMap[card.icon] ?? Sparkles;
+          const anchor = getPortalCardAnchor(content.slug, index);
 
           return (
-            <article key={card.id} className="card group flex min-w-0 h-full flex-col p-4 hover-glow sm:p-5">
+            <article key={card.id} id={anchor} tabIndex={-1}
+              className="card group flex min-w-0 h-full scroll-mt-6 flex-col p-4 hover-glow focus:outline focus:outline-2 focus:outline-[color:var(--brand-strong)] target:outline target:outline-2 target:outline-[color:var(--brand-strong)] sm:p-5">
               {card.imageUrl && /^(\/[^/]|https?:\/\/)/i.test(card.imageUrl) && <div className="mb-4 overflow-hidden rounded-xl border border-white/10">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={card.imageUrl} alt={card.imageAlt || card.title} loading="lazy"
@@ -104,7 +107,9 @@ export function PortalContentPage({ user, content }: PortalContentPageProps) {
                   {card.items.map((item, i) => (
                     <li
                       key={i}
-                      className="flex items-start gap-2.5 rounded-[10px] border border-white/[0.065] bg-white/[0.02] px-3 py-2.5 text-sm text-slate-600"
+                      id={getPortalCardItemAnchor(anchor, i)}
+                      tabIndex={-1}
+                      className="flex scroll-mt-6 items-start gap-2.5 rounded-[10px] border border-white/[0.065] bg-white/[0.02] px-3 py-2.5 text-sm text-slate-600 focus:outline focus:outline-2 focus:outline-[color:var(--brand-strong)] target:outline target:outline-2 target:outline-[color:var(--brand-strong)]"
                     >
                       <span className="mt-0.5 flex size-4 flex-none items-center justify-center rounded-full bg-[rgba(40,178,158,0.14)] text-[9px] font-bold text-[color:var(--brand-strong)]">
                         {i + 1}
