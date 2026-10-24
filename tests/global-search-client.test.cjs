@@ -54,6 +54,7 @@ function harness() {
     if (request === "next/navigation") return { useRouter: () => ({ push(href) { pushes.push(href); } }) };
     if (request === "@/components/AccessibleDialog") return { AccessibleDialog: Dialog };
     if (request === "@/lib/http-client") return require("../lib/http-client.ts");
+    if (request === "@/lib/search-highlights") return require("../lib/search-highlights.ts");
     return installed(request);
   };
   const loaded = { exports: {} };
@@ -240,6 +241,19 @@ test("safe excerpts highlight literal search text and escape markup from materia
     const restoreFocus = h.dialog().props.restoreFocus;
     h.button("Закрити пошук").props.onClick();
     assert.equal(restoreFocus(), true, "manual close restores the trigger focus");
+  } finally { h?.destroy(); global.fetch = original; }
+});
+
+test("visible results highlight normalized device names, feature stems and apostrophes", async () => {
+  const original = global.fetch;
+  let h;
+  try {
+    global.fetch = async () => response([result(1, { title: "iPhone 17 Pro Max", snippet: "Пам'ять: 256 ГБ" })]);
+    h = harness(); h.open(); h.query("айфон17 promax пам’ять"); await h.tick();
+    const html = h.html();
+    for (const word of ["iPhone", "17", "Pro", "Max", "Пам&#x27;ять"]) {
+      assert.ok(html.includes(`>${word}</mark>`), `the visible result explains the match: ${word}`);
+    }
   } finally { h?.destroy(); global.fetch = original; }
 });
 

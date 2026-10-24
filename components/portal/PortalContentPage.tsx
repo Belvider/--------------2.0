@@ -17,6 +17,7 @@ import {
   type LucideIcon
 } from "lucide-react";
 import { PortalShell } from "@/components/PortalShell";
+import { MaterialPermalink } from "@/components/MaterialPermalink";
 import type { PortalCardIconKey, PortalPageContent } from "@/lib/portal-pages";
 import { getPortalCardAnchor, getPortalCardItemAnchor } from "@/lib/content-anchors";
 
@@ -86,9 +87,12 @@ export function PortalContentPage({ user, content }: PortalContentPageProps) {
                 <div className="inline-flex size-10 flex-none items-center justify-center rounded-[10px] border border-[rgba(40,178,158,0.2)] bg-[rgba(40,178,158,0.1)]">
                   <Icon className="size-5 text-[color:var(--brand-strong)]" aria-hidden="true" />
                 </div>
-                <span className="font-[var(--font-heading)] text-[1.5rem] font-semibold leading-none text-white/10">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
+                <div className="flex items-center gap-2">
+                  <span className="font-[var(--font-heading)] text-[1.5rem] font-semibold leading-none text-white/10">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <MaterialPermalink anchor={anchor} title={card.title} compact />
+                </div>
               </div>
 
               {/* Назва */}
@@ -114,7 +118,8 @@ export function PortalContentPage({ user, content }: PortalContentPageProps) {
                       <span className="mt-0.5 flex size-4 flex-none items-center justify-center rounded-full bg-[rgba(40,178,158,0.14)] text-[9px] font-bold text-[color:var(--brand-strong)]">
                         {i + 1}
                       </span>
-                      <span className="leading-5">{item}</span>
+                      <span className="min-w-0 flex-1 leading-5">{item}</span>
+                      <MaterialPermalink anchor={getPortalCardItemAnchor(anchor, i)} title={item} compact />
                     </li>
                   ))}
                 </ul>

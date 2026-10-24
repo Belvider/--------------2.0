@@ -95,7 +95,7 @@ export type SearchableHtmlFragment = { anchor: string; text: string; title?: str
  * Add stable targets to readable units without reparsing or normalizing authored HTML.
  * An existing id remains intact; data-material-anchor provides a second target for search.
  */
-export function prepareSearchableHtml(html: string, blockAnchor: string): { html: string; fragments: SearchableHtmlFragment[] } {
+export function prepareSearchableHtml(html: string, blockAnchor: string, options: { showPermalinks?: boolean } = {}): { html: string; fragments: SearchableHtmlFragment[] } {
   type Element = { tag: string; start: number; openingEnd: number; end: number; innerEnd: number; opening: string; targeted: boolean };
   const elements: Element[] = [];
   const stack: Element[] = [];
@@ -141,6 +141,42 @@ export function prepareSearchableHtml(html: string, blockAnchor: string): { html
     const hasId = /\sid\s*=/i.test(element.opening);
     const attributes = `${hasId ? "" : ` id="${anchor}"`} data-material-anchor="${anchor}"`;
     edits.push({ position: element.start, remove: element.openingEnd - element.start, html: element.opening.replace(/\/?\s*>$/, (ending) => `${attributes}${ending}`) });
+    if (options.showPermalinks) {
+      // Controls stay within valid content: rows contain cells, never links, and
+      // a nested authored link must close before its neighbouring permalink.
+      let container = element;
+      if (element.tag === "tr") {
+        const cells = elements.filter((cell) => /^(?:td|th)$/.test(cell.tag)
+          && cell.start > element.start && cell.end <= element.end
+          && !elements.some((row) => row !== element && row.tag === "tr"
+            && row.start > element.start && row.start < cell.start && row.end >= cell.end));
+        const lastCell = cells[cells.length - 1];
+        if (!lastCell) continue;
+        container = lastCell;
+      }
+      let position = container.innerEnd;
+      if (container.tag === "li") {
+        const childList = elements.find((list) => /^(?:ul|ol)$/.test(list.tag)
+          && list.start > container.start && list.end <= container.end);
+        if (childList) position = childList.start;
+      }
+      // Imported list/table copy can use paragraphs. Keep the small control on
+      // the text line instead of adding an otherwise empty line below it.
+      const lastParagraph = elements.filter((paragraph) => paragraph.tag === "p"
+        && paragraph.start > container.start && paragraph.end <= position
+        && !elements.some((listItem) => listItem !== container && listItem.tag === "li"
+          && listItem.start > container.start && listItem.start < paragraph.start && listItem.end >= paragraph.end))
+        .at(-1);
+      if (lastParagraph) position = lastParagraph.innerEnd;
+      for (const link of elements.filter((candidate) => candidate.tag === "a"
+        && candidate.start < position && candidate.end > position).sort((left, right) => left.start - right.start)) {
+        position = Math.max(position, link.end);
+      }
+      const escapeAttribute = (value: string) => value.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+      const label = escapeAttribute(`Скопіювати посилання на фрагмент: ${text.slice(0, 110)}`);
+      const control = `<a href="#${encodeURIComponent(anchor)}" data-material-permalink="${escapeAttribute(anchor)}" data-rich-permalink="true" aria-label="${label}" title="Скопіювати посилання на цей фрагмент"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 17H7A5 5 0 0 1 7 7h2"></path><path d="M15 7h2a5 5 0 1 1 0 10h-2"></path><path d="M8 12h8"></path></svg></a>`;
+      edits.push({ position, remove: 0, html: control });
+    }
   }
 
   // Imported comparison tables can have their own minimum width. Keep their

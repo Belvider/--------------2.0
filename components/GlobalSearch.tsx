@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { ArrowRight, Building2, BookOpenCheck, FolderOpen, Search, Smartphone, TextSearch, X } from "lucide-react";
 import { AccessibleDialog } from "@/components/AccessibleDialog";
 import { getRequestError, requestJson } from "@/lib/http-client";
+import { splitSearchHighlights } from "@/lib/search-highlights";
 import type { SearchResponse, SearchResult, SearchResultType } from "@/lib/search-types";
 
 const PAGE_SIZE = 12;
@@ -15,12 +16,9 @@ const resultLabels: Record<SearchResultType, string> = {
 const resultIcons = { brand: Building2, category: FolderOpen, module: BookOpenCheck, product: Smartphone, section: TextSearch };
 
 function Highlight({ text, query }: { text: string; query: string }) {
-  const terms = [...new Set(query.trim().split(/\s+/u).filter(Boolean))].sort((a, b) => b.length - a.length);
-  if (!terms.length) return <>{text}</>;
-  const expression = new RegExp(`(${terms.map((term) => term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})`, "giu");
-  return <>{text.split(expression).map((part, index) => index % 2
-    ? <mark key={index} className="rounded-sm bg-[rgba(40,178,158,0.2)] px-0.5 text-teal-100">{part}</mark>
-    : part)}</>;
+  return <>{splitSearchHighlights(text, query).map((part, index) => part.highlighted
+    ? <mark key={index} className="rounded-sm bg-[rgba(40,178,158,0.2)] px-0.5 text-teal-100">{part.text}</mark>
+    : part.text)}</>;
 }
 
 export function GlobalSearch() {

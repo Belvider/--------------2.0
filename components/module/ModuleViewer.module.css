@@ -125,6 +125,91 @@
   color: var(--brand-strong);
 }
 
+.inlinePermalink {
+  margin-inline-start: 0.375rem;
+  vertical-align: middle;
+}
+
+.rowPermalink {
+  margin-block: -0.125rem;
+}
+
+/* The same small, persistent control is used inside imported rich text. It is
+   deliberately visible on touch screens as well as when using a keyboard. */
+.content :global(a[data-rich-permalink="true"]) {
+  display: inline-flex;
+  box-sizing: border-box;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin-inline-start: 0.375rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.025);
+  padding: 0;
+  color: #94a3b8;
+  font-size: 0;
+  line-height: 1;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: color 160ms ease, background 160ms ease;
+}
+
+.content :global(a[data-rich-permalink="true"] svg) {
+  width: 0.875rem;
+  height: 0.875rem;
+  flex: none;
+}
+
+.content :global(a[data-rich-permalink="true"]:hover),
+.content :global(a[data-rich-permalink="true"][data-copied="true"]) {
+  background: rgba(45, 212, 191, 0.1);
+  color: #99f6e4;
+}
+
+.content :global(a[data-rich-permalink="true"]:focus-visible) {
+  outline: 2px solid var(--brand-strong);
+  outline-offset: 3px;
+}
+
+.permalinkHint {
+  display: flex;
+  align-items: start;
+  gap: 0.5rem;
+  color: #94a3b8;
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+
+.permalinkHint svg {
+  width: 0.875rem;
+  height: 0.875rem;
+  flex: none;
+  margin-top: 0.125rem;
+}
+
+.permalinkStatus {
+  position: fixed;
+  z-index: 120;
+  inset-inline: 1rem;
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  width: fit-content;
+  max-width: calc(100vw - 2rem);
+  margin-inline: auto;
+  border: 1px solid rgba(40, 178, 158, 0.35);
+  border-radius: 0.75rem;
+  background: #182325;
+  padding: 0.75rem 1rem;
+  color: #ccfbf1;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  pointer-events: none;
+}
+
 .productLink {
   display: flex;
   justify-content: flex-end;

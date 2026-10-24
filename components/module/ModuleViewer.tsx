@@ -8,6 +8,7 @@ import type { ModuleCatalogProduct, ModuleContentBlock } from "@/lib/module-cont
 import { getVideoSource } from "@/lib/video-source";
 import { getRequestError, requestJson } from "@/lib/http-client";
 import { getProductImageFrame } from "@/lib/product-image-frames";
+import { MaterialPermalink as MaterialLink } from "@/components/MaterialPermalink";
 import { findModuleBlockIndexForAnchor, getFactAnchor, getModuleBlockAnchor, getProductAnchor, getProductDetailAnchor, prepareSearchableHtml } from "@/lib/content-anchors";
 import styles from "./ModuleViewer.module.css";
 
@@ -242,25 +243,6 @@ function getColorTone(label: string) {
   return "#cbd5e1";
 }
 
-function MaterialLink({ anchor, title }: { anchor: string; title: string }) {
-  const [copied, setCopied] = useState(false);
-  return <a
-    href={`#${anchor}`}
-    className={`focus-ring ${styles.materialLink}`}
-    aria-label={`Скопіювати посилання: ${title}`}
-    onClick={(event) => {
-      if (!navigator.clipboard?.writeText) return;
-      event.preventDefault();
-      const url = new URL(window.location.href);
-      url.hash = anchor;
-      navigator.clipboard.writeText(url.href).then(() => setCopied(true)).catch(() => { window.location.hash = anchor; });
-    }}
-  >
-    <Link2 className="size-3.5" aria-hidden="true" />
-    <span role="status">{copied ? "Посилання скопійовано" : "Посилання на матеріал"}</span>
-  </a>;
-}
-
 function ProductCatalogCard({ product, anchor, requestedAnchor, navigationRequest }: { product: ModuleCatalogProduct; anchor: string; requestedAnchor: string; navigationRequest: number }) {
   const defaultColorIndex = Math.max(product.colors.findIndex((color) => color.default), 0);
   const [activeColorIndex, setActiveColorIndex] = useState(defaultColorIndex);
@@ -315,7 +297,7 @@ function ProductCatalogCard({ product, anchor, requestedAnchor, navigationReques
         <h3 className="mt-3 font-[var(--font-heading)] text-2xl font-semibold leading-tight tracking-[-0.03em] text-white sm:text-[1.75rem]">
           {product.title}
         </h3>
-        {product.summary ? <p id={getProductDetailAnchor(anchor, "summary")} data-material-anchor={getProductDetailAnchor(anchor, "summary")} className={styles.productSummary}>{product.summary}</p> : null}
+        {product.summary ? <p id={getProductDetailAnchor(anchor, "summary")} data-material-anchor={getProductDetailAnchor(anchor, "summary")} className={styles.productSummary}>{product.summary}<MaterialLink anchor={getProductDetailAnchor(anchor, "summary")} title={`${product.title}: ${product.summary}`} compact className={styles.inlinePermalink} /></p> : null}
       </div>
 
       {/* ── Основний контент: ліво = фото, право = деталі ── */}
@@ -374,6 +356,7 @@ function ProductCatalogCard({ product, anchor, requestedAnchor, navigationReques
               {activeColor && (
                 <p id={product.colors.length === 1 ? getProductDetailAnchor(anchor, "color", 0) : undefined} data-material-anchor={product.colors.length === 1 ? getProductDetailAnchor(anchor, "color", 0) : undefined} className={`${product.colors.length > 1 ? "mt-2 " : ""}text-center text-xs font-medium text-slate-400`}>
                   {activeColor.caption || activeColor.label}
+                  <MaterialLink anchor={getProductDetailAnchor(anchor, "color", activeColorIndex)} title={`${product.title}: ${activeColor.caption || activeColor.label}`} compact className={styles.inlinePermalink} />
                 </p>
               )}
             </div>
@@ -393,7 +376,7 @@ function ProductCatalogCard({ product, anchor, requestedAnchor, navigationReques
                     <dt>
                       {item.label}
                     </dt>
-                    <dd>{item.value}</dd>
+                    <dd>{item.value}<MaterialLink anchor={getProductDetailAnchor(anchor, "spec", index)} title={`${product.title}: ${item.label} — ${item.value}`} compact className={styles.inlinePermalink} /></dd>
                   </div>
                 ))}
               </dl>
@@ -412,7 +395,8 @@ function ProductCatalogCard({ product, anchor, requestedAnchor, navigationReques
                     <span className="mt-0.5 flex size-4 flex-none items-center justify-center rounded-full bg-[rgba(40,178,158,0.14)] text-[9px] font-bold text-[color:var(--brand-strong)]">
                       {index + 1}
                     </span>
-                    <span className="leading-5">{item}</span>
+                    <span className="min-w-0 flex-1 leading-5">{item}</span>
+                    <MaterialLink anchor={getProductDetailAnchor(anchor, "highlight", index)} title={`${product.title}: ${item}`} compact className={styles.rowPermalink} />
                   </li>
                 ))}
               </ul>
@@ -426,7 +410,8 @@ function ProductCatalogCard({ product, anchor, requestedAnchor, navigationReques
                     {extraHighlights.map((item, index) => (
                       <li key={item} id={getProductDetailAnchor(anchor, "highlight", index + 6)} data-material-anchor={getProductDetailAnchor(anchor, "highlight", index + 6)} className="flex items-start gap-2 text-sm text-slate-300">
                         <span className="mt-1.5 size-1 flex-none rounded-full bg-[color:var(--brand-strong)] opacity-50" />
-                        {item}
+                        <span className="min-w-0 flex-1 leading-5">{item}</span>
+                        <MaterialLink anchor={getProductDetailAnchor(anchor, "highlight", index + 6)} title={`${product.title}: ${item}`} compact className={styles.rowPermalink} />
                       </li>
                     ))}
                   </ul>
@@ -437,7 +422,7 @@ function ProductCatalogCard({ product, anchor, requestedAnchor, navigationReques
 
         </div>
       </div>
-      <footer className={styles.productLink}><MaterialLink anchor={anchor} title={product.title} /></footer>
+      <footer className={styles.productLink}><MaterialLink anchor={anchor} title={product.title} className={styles.materialLink} /></footer>
     </article>
   );
 }
@@ -754,7 +739,8 @@ function renderBlock(block: ModuleContentBlock, anchor: string, requestedAnchor:
               <span aria-hidden="true" className="mt-0.5 flex size-6 flex-none items-center justify-center rounded-full bg-[rgba(40,178,158,0.12)] text-xs font-semibold text-[color:var(--brand-strong)]">
                 {i + 1}
               </span>
-              <span className="leading-7">{item}</span>
+              <span className="min-w-0 flex-1 leading-7">{item}</span>
+              <MaterialLink anchor={getFactAnchor(anchor, i)} title={`${block.title}: ${item}`} compact className={styles.rowPermalink} />
             </li>
           ))}
         </ol>
@@ -768,7 +754,7 @@ function renderBlock(block: ModuleContentBlock, anchor: string, requestedAnchor:
 
   if (block.type === "text") {
     const calculatorMarker = "<!-- power-station-calculator -->";
-    const preparedHtml = prepareSearchableHtml(block.html, anchor).html;
+    const preparedHtml = prepareSearchableHtml(block.html, anchor, { showPermalinks: true }).html;
     const hasPowerStationCalculator = preparedHtml.includes(calculatorMarker);
     const textSegments = hasPowerStationCalculator ? preparedHtml.split(calculatorMarker) : [preparedHtml];
 
@@ -805,6 +791,41 @@ export function ModuleViewer({ moduleId, blocks, initialProgressPct, hasQuiz }: 
   const [saveError, setSaveError] = useState<string | null>(null);
   const [isSaving, setIsSaving] = useState(false);
   const [retrySave, setRetrySave] = useState(0);
+  const [richPermalinkStatus, setRichPermalinkStatus] = useState("");
+  const richPermalinkTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const richCopiedLink = useRef<HTMLAnchorElement | null>(null);
+
+  useEffect(() => () => {
+    if (richPermalinkTimer.current) clearTimeout(richPermalinkTimer.current);
+  }, []);
+
+  function copyRichPermalink(event: React.MouseEvent<HTMLElement>) {
+    if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    const link = event.target instanceof Element ? event.target.closest<HTMLAnchorElement>('a[data-rich-permalink="true"]') : null;
+    const anchor = link?.dataset.materialPermalink;
+    if (!link || !anchor || !contentTopRef.current?.contains(link) || !navigator.clipboard?.writeText) return;
+    event.preventDefault();
+    const url = new URL(window.location.href);
+    url.hash = anchor;
+    const announce = (message: string) => {
+      if (richPermalinkTimer.current) clearTimeout(richPermalinkTimer.current);
+      setRichPermalinkStatus(message);
+      richPermalinkTimer.current = setTimeout(() => {
+        setRichPermalinkStatus("");
+        richCopiedLink.current?.removeAttribute("data-copied");
+      }, 3000);
+    };
+    navigator.clipboard.writeText(url.href).then(() => {
+      richCopiedLink.current?.removeAttribute("data-copied");
+      richCopiedLink.current = link;
+      link.dataset.copied = "true";
+      announce("Посилання на фрагмент скопійовано");
+    }).catch(() => {
+      window.location.hash = anchor;
+      window.dispatchEvent(new CustomEvent("material:navigate", { detail: { anchor } }));
+      announce("Посилання відкрито в адресному рядку");
+    });
+  }
 
   useEffect(() => {
     setSaveError(null);
@@ -956,7 +977,8 @@ export function ModuleViewer({ moduleId, blocks, initialProgressPct, hasQuiz }: 
   }
 
   return (
-    <section className={styles.viewer} aria-label="Навчальний матеріал">
+    <section className={styles.viewer} aria-label="Навчальний матеріал" onClick={copyRichPermalink}>
+      <span role="status" aria-live="polite" aria-atomic="true" className={richPermalinkStatus ? styles.permalinkStatus : "sr-only"}>{richPermalinkStatus}</span>
       <aside className={`card ${styles.sidebar}`}>
         <div className="flex items-center justify-between gap-3">
           <h2 className="text-sm font-semibold text-slate-200">Зміст матеріалу</h2>
@@ -1044,6 +1066,7 @@ export function ModuleViewer({ moduleId, blocks, initialProgressPct, hasQuiz }: 
         {activePage ? (
           <div className="space-y-8">
             <p className={styles.eyebrow}>Розділ {activePageIndex + 1} із {pages.length}</p>
+            <p className={styles.permalinkHint}><Link2 aria-hidden="true" /><span>Значок посилання біля інформації копіює адресу саме цього фрагмента.</span></p>
             {activePage.blocks.length > 1 ? (
               <nav className={styles.topicNav} aria-label="Теми поточного розділу">
                 <p className={styles.topicNavLabel}>У цьому розділі</p>
@@ -1073,7 +1096,7 @@ export function ModuleViewer({ moduleId, blocks, initialProgressPct, hasQuiz }: 
                   className={styles.topic}
                 >
                   {renderBlock(block, getBlockAnchor(activePage.blockIndexes[index]), navigation.anchor, navigation.request)}
-                  <div className={styles.topicLinkFooter}><MaterialLink anchor={getBlockAnchor(activePage.blockIndexes[index])} title={block.title} /></div>
+                  <div className={styles.topicLinkFooter}><MaterialLink anchor={getBlockAnchor(activePage.blockIndexes[index])} title={block.title} className={styles.materialLink} /></div>
                 </div>
               ))}
             </div>
