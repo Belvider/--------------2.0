@@ -73,6 +73,20 @@ test("angle brackets in quoted attributes keep markup intact and do not become s
   assert.deepEqual(prepareSearchableHtml(withScript, "module-1-topic-1").fragments.map(({ text }) => text), ["Public"]);
 });
 
+test("wide imported tables scroll inside their own region without changing exact row links", () => {
+  const table = '<table style="min-width:620px"><tr><th>Модель</th><th>Потужність</th></tr><tr><td>Станція</td><td>1 кВт</td></tr></table>';
+  const plain = prepareSearchableHtml(`<p>Порівняння</p>${table}<p>Підсумок</p>`, "module-1-topic-4");
+  const authored = prepareSearchableHtml(`<p>Порівняння</p><div class="existing table-scroll compact"><section>${table}</section></div><p>Підсумок</p>`, "module-1-topic-4");
+  assert.equal((plain.html.match(/class="table-scroll"/g) ?? []).length, 1);
+  assert.ok(plain.html.includes('<div class="table-scroll" role="region" aria-label="Таблиця навчального матеріалу" tabindex="0"><table style="min-width:620px">'));
+  assert.ok(plain.html.includes('</table></div><p id="module-1-topic-4-text-4"'));
+  assert.equal((authored.html.match(/\btable-scroll\b/g) ?? []).length, 1, "authored scroll ancestors remain intact, including a nested table");
+  assert.deepEqual(plain.fragments, authored.fragments, "wrapping must not renumber searchable targets or alter their copy");
+  assert.equal(plain.fragments[1].anchor, "module-1-topic-4-text-2");
+  assert.ok(plain.html.includes('<tr id="module-1-topic-4-text-2" data-material-anchor="module-1-topic-4-text-2">'));
+  assert.ok(authored.html.includes('<div class="existing table-scroll compact"><section><table style="min-width:620px">'));
+});
+
 test("generated, legacy product and authored targets resolve to their actual hidden block", () => {
   const blocks = [
     { type: "facts", title: "Вступ", items: ["Початок"] },

@@ -130,7 +130,7 @@ export function prepareSearchableHtml(html: string, blockAnchor: string): { html
     parent !== element && parent.targeted && /^(?:tr|li)$/.test(parent.tag) && !(parent.tag === "li" && element.tag === "li")
     && parent.start < element.start && parent.end >= element.end));
   const fragments: SearchableHtmlFragment[] = [];
-  const edits: { position: number; opening: string }[] = [];
+  const edits: { position: number; remove: number; html: string }[] = [];
   let heading: string | undefined;
   for (const element of readable) {
     const text = stripSearchableHtml(html.slice(element.openingEnd, element.innerEnd));
@@ -140,12 +140,25 @@ export function prepareSearchableHtml(html: string, blockAnchor: string): { html
     fragments.push({ anchor, text, ...(heading ? { title: heading } : {}) });
     const hasId = /\sid\s*=/i.test(element.opening);
     const attributes = `${hasId ? "" : ` id="${anchor}"`} data-material-anchor="${anchor}"`;
-    edits.push({ position: element.start, opening: element.opening.replace(/\/?\s*>$/, (ending) => `${attributes}${ending}`) });
+    edits.push({ position: element.start, remove: element.openingEnd - element.start, html: element.opening.replace(/\/?\s*>$/, (ending) => `${attributes}${ending}`) });
   }
+
+  // Imported comparison tables can have their own minimum width. Keep their
+  // horizontal scrolling local to the table, including on an exact row link.
+  for (const table of elements.filter((element) => element.tag === "table")) {
+    const alreadyWrapped = elements.some((ancestor) => {
+      if (ancestor.start >= table.start || ancestor.end < table.end) return false;
+      const classAttribute = ancestor.opening.match(/\sclass\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/i);
+      return (classAttribute?.[1] ?? classAttribute?.[2] ?? classAttribute?.[3] ?? "").split(/\s+/).includes("table-scroll");
+    });
+    if (alreadyWrapped) continue;
+    edits.push({ position: table.start, remove: 0, html: '<div class="table-scroll" role="region" aria-label="Таблиця навчального матеріалу" tabindex="0">' });
+    edits.push({ position: table.end, remove: 0, html: "</div>" });
+  }
+
   let prepared = html;
-  for (const edit of edits.reverse()) {
-    const original = elements.find((element) => element.start === edit.position)!;
-    prepared = prepared.slice(0, edit.position) + edit.opening + prepared.slice(original.openingEnd);
+  for (const edit of edits.sort((left, right) => right.position - left.position || right.remove - left.remove)) {
+    prepared = prepared.slice(0, edit.position) + edit.html + prepared.slice(edit.position + edit.remove);
   }
   // Bare text in an imported block still links to its containing topic.
   if (!fragments.length) {
