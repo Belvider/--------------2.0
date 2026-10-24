@@ -134,7 +134,7 @@ test('clipboard rejection opens the exact native fragment instead of claiming it
   } finally { h.destroy(); }
 });
 
-test('every rendered overview card and learning item exposes its own compact exact beacon', () => {
+test('overview anchors remain addressable while their permalink controls are visually hidden', () => {
   const { MaterialPermalink } = loadSource('components/MaterialPermalink.tsx');
   const { PortalContentPage } = loadSource('components/portal/PortalContentPage.tsx', {
     '@/components/PortalShell': { PortalShell: ({ children }) => React.createElement('main', null, children) },
@@ -155,7 +155,9 @@ test('every rendered overview card and learning item exposes its own compact exa
     for (const beacon of beacons) {
       assert.ok(beacon[0].includes(`href="#${beacon[1]}"`));
       assert.match(beacon[0], /aria-label="Скопіювати посилання:/);
-      assert.match(beacon[0], /\bsize-8\b/, 'overview beacons use the compact control');
+      assert.match(beacon[0], /\bhidden=""/);
+      assert.match(beacon[0], /style="display:none"/);
+      assert.ok(markup.includes(`id="${beacon[1]}"`), 'the actual search target is independent of its hidden control');
     }
   }
 });

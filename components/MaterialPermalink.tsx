@@ -11,6 +11,7 @@ export function MaterialPermalink({ anchor, title, compact = false, className = 
   useEffect(() => () => { if (timer.current) clearTimeout(timer.current); }, []);
   const label = `Скопіювати посилання: ${title}`;
   return <a href={`#${encodeURIComponent(anchor)}`} aria-label={label} title={copied ? "Посилання скопійовано" : label}
+    hidden style={{ display: "none" }}
     data-material-permalink={anchor}
     className={`focus-ring inline-flex shrink-0 items-center justify-center gap-1.5 rounded-lg align-middle text-slate-400 transition hover:bg-teal-400/10 hover:text-teal-200 ${compact ? "size-8 border border-white/[0.08] bg-white/[0.025]" : "min-h-8 px-1.5 text-[11px]"} ${className}`}
     onClick={(event) => {

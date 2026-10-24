@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowLeft, ArrowRight, CheckCircle2, ChevronRight, Link2 } from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCircle2, ChevronRight } from "lucide-react";
 import { memo, useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import type { ModuleCatalogProduct, ModuleContentBlock } from "@/lib/module-content";
@@ -422,7 +422,6 @@ function ProductCatalogCard({ product, anchor, requestedAnchor, navigationReques
 
         </div>
       </div>
-      <footer className={styles.productLink}><MaterialLink anchor={anchor} title={product.title} className={styles.materialLink} /></footer>
     </article>
   );
 }
@@ -754,7 +753,7 @@ function renderBlock(block: ModuleContentBlock, anchor: string, requestedAnchor:
 
   if (block.type === "text") {
     const calculatorMarker = "<!-- power-station-calculator -->";
-    const preparedHtml = prepareSearchableHtml(block.html, anchor, { showPermalinks: true }).html;
+    const preparedHtml = prepareSearchableHtml(block.html, anchor).html;
     const hasPowerStationCalculator = preparedHtml.includes(calculatorMarker);
     const textSegments = hasPowerStationCalculator ? preparedHtml.split(calculatorMarker) : [preparedHtml];
 
@@ -1066,7 +1065,6 @@ export function ModuleViewer({ moduleId, blocks, initialProgressPct, hasQuiz }: 
         {activePage ? (
           <div className="space-y-8">
             <p className={styles.eyebrow}>Розділ {activePageIndex + 1} із {pages.length}</p>
-            <p className={styles.permalinkHint}><Link2 aria-hidden="true" /><span>Значок посилання біля інформації копіює адресу саме цього фрагмента.</span></p>
             {activePage.blocks.length > 1 ? (
               <nav className={styles.topicNav} aria-label="Теми поточного розділу">
                 <p className={styles.topicNavLabel}>У цьому розділі</p>
@@ -1096,7 +1094,6 @@ export function ModuleViewer({ moduleId, blocks, initialProgressPct, hasQuiz }: 
                   className={styles.topic}
                 >
                   {renderBlock(block, getBlockAnchor(activePage.blockIndexes[index]), navigation.anchor, navigation.request)}
-                  <div className={styles.topicLinkFooter}><MaterialLink anchor={getBlockAnchor(activePage.blockIndexes[index])} title={block.title} className={styles.materialLink} /></div>
                 </div>
               ))}
             </div>
