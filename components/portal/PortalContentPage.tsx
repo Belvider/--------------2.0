@@ -75,7 +75,7 @@ export function PortalContentPage({ user, content }: PortalContentPageProps) {
 
           return (
             <article key={card.id} id={anchor} tabIndex={-1}
-              className="card group flex min-w-0 h-full scroll-mt-6 flex-col p-4 hover-glow focus:outline focus:outline-2 focus:outline-[color:var(--brand-strong)] target:outline target:outline-2 target:outline-[color:var(--brand-strong)] sm:p-5">
+              className="card group flex min-w-0 h-full scroll-mt-6 flex-col p-4 hover-glow focus:outline-none sm:p-5">
               {card.imageUrl && /^(\/[^/]|https?:\/\/)/i.test(card.imageUrl) && <div className="mb-4 overflow-hidden rounded-xl border border-white/10">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={card.imageUrl} alt={card.imageAlt || card.title} loading="lazy"
@@ -113,7 +113,7 @@ export function PortalContentPage({ user, content }: PortalContentPageProps) {
                       key={i}
                       id={getPortalCardItemAnchor(anchor, i)}
                       tabIndex={-1}
-                      className="flex scroll-mt-6 items-start gap-2.5 rounded-[10px] border border-white/[0.065] bg-white/[0.02] px-3 py-2.5 text-sm text-slate-600 focus:outline focus:outline-2 focus:outline-[color:var(--brand-strong)] target:outline target:outline-2 target:outline-[color:var(--brand-strong)]"
+                      className="flex scroll-mt-6 items-start gap-2.5 rounded-[10px] border border-white/[0.065] bg-white/[0.02] px-3 py-2.5 text-sm text-slate-600 focus:outline-none"
                     >
                       <span className="mt-0.5 flex size-4 flex-none items-center justify-center rounded-full bg-[rgba(40,178,158,0.14)] text-[9px] font-bold text-[color:var(--brand-strong)]">
                         {i + 1}

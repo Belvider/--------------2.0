@@ -88,19 +88,15 @@
 }
 
 .topic:focus {
-  outline: 2px solid rgba(40, 178, 158, 0.45);
-  outline-offset: 0.5rem;
+  outline: none;
 }
 
 .content :global([data-material-anchor]) {
   scroll-margin-block: 6rem;
 }
 
-.content :global([data-search-focus="true"]) {
-  outline: 2px solid rgba(40, 178, 158, 0.7);
-  outline-offset: 0.35rem;
-  border-radius: 0.25rem;
-  background-color: rgba(40, 178, 158, 0.09);
+.content :global([data-search-focus="true"][tabindex="-1"]:focus) {
+  outline: none;
 }
 
 .topicLinkFooter {
