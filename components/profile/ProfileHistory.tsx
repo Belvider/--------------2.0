@@ -36,6 +36,7 @@ export type ProfileCertificateHistory = {
 };
 
 type Props = {
+  isOwnProfile?: boolean;
   modules: ProfileModuleHistory[];
   attempts: ProfileAttemptHistory[];
   certificates: ProfileCertificateHistory[];
@@ -44,7 +45,7 @@ type Tab = "modules" | "attempts" | "certificates";
 const PAGE_SIZE = 6;
 const dateFormat = new Intl.DateTimeFormat("uk-UA", { day: "numeric", month: "short", year: "numeric", timeZone: "Europe/Kyiv" });
 
-export function ProfileHistory({ modules, attempts, certificates }: Props) {
+export function ProfileHistory({ modules, attempts, certificates, isOwnProfile = true }: Props) {
   const [tab, setTab] = useState<Tab>("modules");
   const [query, setQuery] = useState("");
   const [status, setStatus] = useState("all");
@@ -80,7 +81,7 @@ export function ProfileHistory({ modules, attempts, certificates }: Props) {
   return (
     <section id="profile-history" className={styles.panel} aria-labelledby={`${prefix}-title`}>
       <header className={styles.historyHeader}>
-        <div><h2 id={`${prefix}-title`}>Історія та результати</h2><p>Ваші модулі, спроби тестів і збережені сертифікати.</p></div>
+        <div><h2 id={`${prefix}-title`}>Історія та результати</h2><p>{isOwnProfile ? "Ваші модулі, спроби тестів і збережені сертифікати." : "Модулі, спроби тестів і збережені сертифікати користувача."}</p></div>
       </header>
       <div className={styles.tabs} role="tablist" aria-label="Розділи історії навчання">
         {tabs.map((item, index) => <button key={item.key} ref={element => { tabRefs.current[index] = element; }}
@@ -113,12 +114,12 @@ export function ProfileHistory({ modules, attempts, certificates }: Props) {
             return <article key={row.id} className={styles.historyRow}>
               <span className={`${styles.historyIcon} ${passed ? styles.historyPassed : ""}`}><Icon aria-hidden="true" /></span>
               <div className={styles.rowCopy}>
-                <Link href={row.href as Route} className={`focus-ring ${styles.historyTitle}`}>{row.title}</Link>
+                <Link href={row.href as Route} aria-label={!isOwnProfile ? `${tab === "certificates" ? "Відкрити сертифікат" : "Відкрити матеріал"}: ${row.title}` : undefined} className={`focus-ring ${styles.historyTitle}`}>{row.title}</Link>
                 <div className={styles.historyStatus}>
                   {"brand" in row && <span>{row.brand}</span>}
                   {row.date && <time dateTime={row.date}>{dateFormat.format(new Date(row.date))}</time>}
                   {moduleRow && <span className={passed ? styles.passed : ""}>{passed ? "Завершено" : `${moduleRow.progressPct}% матеріалу переглянуто`}</span>}
-                  {attempt && <span className={attempt.passed ? styles.passed : styles.review}>{attempt.passed ? "Тест складено" : "Варто повторити матеріал"}</span>}
+                  {attempt && <span className={attempt.passed ? styles.passed : styles.review}>{attempt.passed ? "Тест складено" : isOwnProfile ? "Варто повторити матеріал" : "Тест не складено"}</span>}
                   {tab === "certificates" && <span className={styles.passed}>Відкрити сертифікат →</span>}
                 </div>
                 {moduleRow && moduleRow.status !== "COMPLETED" && <div className={styles.rowProgress} role="progressbar" aria-label={`Переглянуто матеріал модуля ${moduleRow.title}`} aria-valuenow={moduleRow.progressPct} aria-valuemin={0} aria-valuemax={100}><span style={{ width: `${moduleRow.progressPct}%` }} /></div>}
@@ -128,7 +129,7 @@ export function ProfileHistory({ modules, attempts, certificates }: Props) {
           })}
         </div>
         {filtered.length === 0 && <div className={styles.empty}>
-          <p>{hasFilter ? "За цими умовами нічого не знайдено." : tab === "certificates" ? "Тут зберігатимуться сертифікати після успішного завершення модулів." : tab === "attempts" ? "Результати з’являться після першого тесту." : "Оберіть модуль — його прогрес з’явиться тут."}</p>
+          <p>{hasFilter ? "За цими умовами нічого не знайдено." : tab === "certificates" ? isOwnProfile ? "Тут зберігатимуться сертифікати після успішного завершення модулів." : "Збережених сертифікатів ще немає." : tab === "attempts" ? "Результати з’являться після першого тесту." : isOwnProfile ? "Оберіть модуль — його прогрес з’явиться тут." : "Користувач ще не розпочав навчальні модулі."}</p>
           {!hasFilter && <Link href="/brands" className="focus-ring">До навчальних матеріалів<ArrowRight className="size-3.5" aria-hidden="true" /></Link>}
         </div>}
         {filtered.length > limit && <button type="button" className={`focus-ring ${styles.showMore}`} onClick={() => setLimit(value => value + PAGE_SIZE)}>

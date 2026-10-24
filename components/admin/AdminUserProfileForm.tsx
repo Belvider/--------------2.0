@@ -3,7 +3,7 @@
 import { getRequestError } from "@/lib/http-client";
 
 import type { FormEvent } from "react";
-import { useMemo, useState, useTransition } from "react";
+import { useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Loader2, Save, ShieldCheck } from "lucide-react";
 import { formatDateForInput, getEditableNameParts } from "@/lib/user-profile";
@@ -76,7 +76,8 @@ export function AdminUserProfileForm({ user, canEdit, canChangeAccess }: AdminUs
   const [form, setForm] = useState<FormState>(() => getInitialState(user));
   const [message, setMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [isPending, startTransition] = useTransition();
+  const [isPending, setIsPending] = useState(false);
+  const pendingRequest = useRef(false);
 
   const summaryText = useMemo(() => {
     if (canEdit) {
@@ -93,57 +94,59 @@ export function AdminUserProfileForm({ user, canEdit, canChangeAccess }: AdminUs
     }));
   }
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    if (!canEdit || isPending) {
+    if (!canEdit || pendingRequest.current) {
       return;
     }
 
-    startTransition(async () => {
-      try {
-        setError(null);
-        setMessage(null);
-  
-        const response = await fetch("/api/admin/users", {
-          method: "PATCH",
-          headers: { "content-type": "application/json" },
-          body: JSON.stringify({
-            userId: user.id,
-            firstName: form.firstName,
-            lastName: form.lastName,
-            middleName: form.middleName,
-            email: form.email,
-            phone: form.phone,
-            birthday: form.birthday,
-            city: form.city,
-            position: form.position,
-            department: form.department,
-            store: form.store,
-            hireDate: form.hireDate,
-            notes: form.notes,
-            role: form.role,
-            isActive: form.isActive
-          })
-        });
-  
-        const data = (await response.json()) as { error?: string; user?: { name?: string } };
-  
-        if (!response.ok) {
-          setError(data.error ?? "Не вдалося зберегти зміни");
-          return;
-        }
-  
-        setMessage(`Профіль «${data.user?.name ?? user.name}» оновлено`);
-        router.refresh();
-      } catch (requestError) {
-        setError(getRequestError(requestError));
+    pendingRequest.current = true;
+    setIsPending(true);
+    try {
+      setError(null);
+      setMessage(null);
+
+      const response = await fetch("/api/admin/users", {
+        method: "PATCH",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+          userId: user.id,
+          firstName: form.firstName,
+          lastName: form.lastName,
+          middleName: form.middleName,
+          email: form.email,
+          phone: form.phone,
+          birthday: form.birthday,
+          city: form.city,
+          position: form.position,
+          department: form.department,
+          store: form.store,
+          hireDate: form.hireDate,
+          notes: form.notes,
+          ...(canChangeAccess ? { role: form.role, isActive: form.isActive } : {})
+        })
+      });
+
+      const data = (await response.json()) as { error?: string; user?: { name?: string } };
+
+      if (!response.ok) {
+        setError(data.error ?? "Не вдалося зберегти зміни");
+        return;
       }
-    });
+
+      setMessage(`Профіль «${data.user?.name ?? user.name}» оновлено`);
+      router.refresh();
+    } catch (requestError) {
+      setError(getRequestError(requestError));
+    } finally {
+      pendingRequest.current = false;
+      setIsPending(false);
+    }
   }
 
   return (
-    <section className="card p-5 sm:p-6">
+    <section id="profile-data" className="card scroll-mt-24 p-5 sm:p-6">
       <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
         <div className="max-w-3xl">
           <div className="flex items-center gap-3">
@@ -174,6 +177,8 @@ export function AdminUserProfileForm({ user, canEdit, canChangeAccess }: AdminUs
                   value={form.firstName}
                   onChange={(event) => updateField("firstName", event.target.value)}
                   disabled={!canEdit || isPending}
+                  required
+                  maxLength={80}
                   className="focus-ring rounded-[18px] border border-white/10 bg-white/[0.03] px-4 py-3 text-white placeholder:text-slate-500 disabled:cursor-not-allowed disabled:opacity-60"
                   placeholder="Ім'я"
                 />
@@ -337,8 +342,8 @@ export function AdminUserProfileForm({ user, canEdit, canChangeAccess }: AdminUs
 
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div className="space-y-1">
-            {message ? <p className="text-sm text-emerald-300">{message}</p> : null}
-            {error ? <p className="text-sm text-rose-300">{error}</p> : null}
+            {message ? <p role="status" className="text-sm text-emerald-300">{message}</p> : null}
+            {error ? <p role="alert" className="text-sm text-rose-300">{error}</p> : null}
           </div>
 
           <button

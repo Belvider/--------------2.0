@@ -5,7 +5,7 @@ import { z } from "zod";
 import { requireRole } from "@/lib/auth";
 import { createAdminAuditLog, getRequestIpAddress } from "@/lib/admin-audit";
 import { prisma } from "@/lib/prisma";
-import { buildDisplayName, normalizeProfileText, parseDateInput } from "@/lib/user-profile";
+import { buildDisplayName, getEditableNameParts, normalizeProfileText, parseDateInput } from "@/lib/user-profile";
 import { adminUserCreateSchema, adminUserUpdateSchema } from "@/lib/validators";
 
 function hasOwnProperty<ObjectType extends object>(value: ObjectType, key: keyof ObjectType) {
@@ -178,13 +178,24 @@ export async function PATCH(request: Request) {
       return NextResponse.json({ error: "Користувача не знайдено" }, { status: 404 });
     }
 
-    if (data.userId === admin.id && (hasOwnProperty(data, "role") || hasOwnProperty(data, "isActive"))) {
+    if (
+      data.userId === admin.id &&
+      ((hasOwnProperty(data, "role") && data.role !== previous.role) ||
+        (hasOwnProperty(data, "isActive") && data.isActive !== previous.isActive))
+    ) {
       return NextResponse.json({ error: "Не можна змінювати власну роль або блокувати власний акаунт" }, { status: 400 });
     }
 
-    const nextFirstName = hasOwnProperty(data, "firstName") ? normalizeProfileText(data.firstName) : previous.firstName;
-    const nextLastName = hasOwnProperty(data, "lastName") ? normalizeProfileText(data.lastName) : previous.lastName;
-    const nextMiddleName = hasOwnProperty(data, "middleName") ? normalizeProfileText(data.middleName) : previous.middleName;
+    const previousNameParts = getEditableNameParts(previous);
+    const nextFirstName = hasOwnProperty(data, "firstName")
+      ? normalizeProfileText(data.firstName)
+      : normalizeProfileText(previousNameParts.firstName);
+    const nextLastName = hasOwnProperty(data, "lastName")
+      ? normalizeProfileText(data.lastName)
+      : normalizeProfileText(previousNameParts.lastName);
+    const nextMiddleName = hasOwnProperty(data, "middleName")
+      ? normalizeProfileText(data.middleName)
+      : normalizeProfileText(previousNameParts.middleName);
 
     const updateData: Prisma.UserUpdateInput = {};
 

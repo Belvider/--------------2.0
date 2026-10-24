@@ -288,10 +288,13 @@ export function AdminUsersTab({ currentUserId, role, initialUsers, onNotice }: A
                 <td className="px-4 py-3.5">
                   <div className="flex flex-wrap gap-2">
                     <Link href={`/admin/users/${user.id}`} className="focus-ring inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.03] px-3 py-1.5 text-xs font-semibold text-ink">
-                      Профіль
+                      {user.id === currentUserId ? "Мої дані" : "Дані та доступ"}
                     </Link>
                     {role === "ADMIN" && (
                       <>
+                        <Link href={`/admin/users/${user.id}/profile`} className="focus-ring inline-flex items-center gap-1.5 rounded-full border border-[rgba(40,178,158,0.25)] bg-[rgba(40,178,158,0.08)] px-3 py-1.5 text-xs font-semibold text-[#8fe3d3]">
+                          Навчальний профіль
+                        </Link>
                         <button type="button" onClick={() => saveUser(user)} disabled={user.id === currentUserId || Boolean(pendingUserId) || isApplyingBulk} className="focus-ring inline-flex items-center gap-1.5 rounded-full bg-ink px-3 py-1.5 text-xs font-semibold text-white disabled:opacity-40">
                           <ShieldCheck className="size-3" aria-hidden="true" />
                           Зберегти

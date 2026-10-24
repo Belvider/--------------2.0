@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, Award, CheckCircle2, GraduationCap, Printer, Share2, ShieldCheck } from "lucide-react";
+import { ArrowLeft, Award, CheckCircle2, GraduationCap, ShieldCheck } from "lucide-react";
 import { CertificateActions } from "@/components/CertificateActions";
 import { requireAuthPageUser } from "@/lib/guards";
 import { prisma } from "@/lib/prisma";
@@ -18,7 +18,7 @@ export default async function CertificatePage({ params }: PageProps) {
   if (!Number.isSafeInteger(certId) || certId <= 0 || certId > 2147483647) notFound();
 
   const certificate = await prisma.certificate.findFirst({
-    where: { id: certId, userId: currentUser.id },
+    where: { id: certId, ...(currentUser.role === "ADMIN" ? {} : { userId: currentUser.id }) },
     include: {
       user: {
         select: {
@@ -41,6 +41,9 @@ export default async function CertificatePage({ params }: PageProps) {
 
   if (!certificate) notFound();
 
+  const viewingOtherUser = certificate.userId !== currentUser.id;
+  const profileHref = viewingOtherUser ? `/admin/users/${certificate.userId}/profile` as const : "/profile";
+
   const displayName = certificate.user.firstName && certificate.user.lastName
     ? `${certificate.user.lastName} ${certificate.user.firstName}`
     : certificate.user.name;
@@ -50,7 +53,7 @@ export default async function CertificatePage({ params }: PageProps) {
       {/* Кнопка "Назад" */}
       <div className="mx-auto max-w-2xl print:hidden">
         <Link
-          href="/profile"
+          href={profileHref}
           className="focus-ring inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.025] px-3 py-1.5 text-sm text-slate-600 transition hover:text-white"
         >
           <ArrowLeft className="size-4" aria-hidden="true" />
@@ -141,7 +144,7 @@ export default async function CertificatePage({ params }: PageProps) {
         {/* Дії */}
         <div className="mt-6 flex flex-wrap justify-center gap-3 print:hidden">
           <Link
-            href="/profile"
+            href={profileHref}
             className="focus-ring inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.025] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-white/[0.04]"
           >
             До профілю
@@ -151,7 +154,7 @@ export default async function CertificatePage({ params }: PageProps) {
             href="/brands"
             className="focus-ring bg-ink inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold"
           >
-            Продовжити навчання
+            {viewingOtherUser ? "До матеріалів" : "Продовжити навчання"}
             <ArrowLeft className="size-4 rotate-180" aria-hidden="true" />
           </Link>
         </div>

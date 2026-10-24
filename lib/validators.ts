@@ -34,7 +34,7 @@ export const adminUserUpdateSchema = z.object({
   userId: z.string().min(3),
   role: z.enum(["ADMIN", "MANAGER", "SELLER"]).optional(),
   isActive: z.boolean().optional(),
-  firstName: optionalTextField("Ім'я", 80).optional(),
+  firstName: z.string().trim().min(1, "Вкажіть ім'я").max(80, "Ім'я занадто довге").optional(),
   lastName: optionalTextField("Прізвище", 80).optional(),
   middleName: optionalTextField("По батькові", 80).optional(),
   email: z.string().trim().email("Невірний email").optional(),

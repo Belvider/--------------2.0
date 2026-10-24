@@ -151,6 +151,15 @@ export default async function AdminUserProfilePage({ params }: PageProps) {
               історія активності й керування доступом.
             </p>
 
+            {currentUser.role === Role.ADMIN && <div className="mt-4 flex flex-wrap gap-2">
+              <Link href={`/admin/users/${profile.user.id}/profile`} className="focus-ring inline-flex items-center gap-2 rounded-full border border-[rgba(40,178,158,0.25)] bg-[rgba(40,178,158,0.08)] px-4 py-2 text-sm font-semibold text-[#8fe3d3]">
+                Навчальний профіль
+              </Link>
+              <a href="#profile-data" className="focus-ring inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-sm font-semibold text-slate-200">
+                {currentUser.id === profile.user.id ? "Редагувати мої дані" : "Редагувати дані"}
+              </a>
+            </div>}
+
             <div className="mt-5 flex flex-wrap gap-3">
               <span className="rounded-full border border-white/10 bg-white/[0.025] px-3 py-1.5 text-sm text-slate-600">
                 {profile.user.position}

@@ -9,6 +9,7 @@ import { getRequestError, requestJson } from "@/lib/http-client";
 import styles from "@/app/profile/profile.module.css";
 
 type ProfileIdentityCardProps = {
+  editable?: boolean;
   user: {
     name: string;
     email: string;
@@ -19,7 +20,7 @@ type ProfileIdentityCardProps = {
   };
 };
 
-export function ProfileIdentityCard({ user }: ProfileIdentityCardProps) {
+export function ProfileIdentityCard({ user, editable = true }: ProfileIdentityCardProps) {
   const inputRef = useRef<HTMLInputElement | null>(null);
   const mutationPendingRef = useRef(false);
   const router = useRouter();
@@ -33,7 +34,7 @@ export function ProfileIdentityCard({ user }: ProfileIdentityCardProps) {
   }, [user.avatarUrl]);
 
   async function updateAvatar(method: "POST" | "DELETE", file?: File) {
-    if (mutationPendingRef.current) return;
+    if (!editable || mutationPendingRef.current) return;
 
     setError(null);
     setNotice(null);
@@ -84,7 +85,7 @@ export function ProfileIdentityCard({ user }: ProfileIdentityCardProps) {
               className={styles.avatar}
               initialsClassName="text-xl"
             />
-            <button
+            {editable && <><button
               type="button"
               onClick={() => inputRef.current?.click()}
               disabled={isPending}
@@ -106,10 +107,10 @@ export function ProfileIdentityCard({ user }: ProfileIdentityCardProps) {
                   return updateAvatar("POST", file);
                 }
               }}
-            />
+            /></>}
           </div>
         <div>
-          <p className={styles.eyebrow}>Мій профіль</p>
+          <p className={styles.eyebrow}>{editable ? "Мій профіль" : "Профіль користувача"}</p>
           <h1 className={styles.identityName}>{user.name}</h1>
           <p className={styles.identityEmail}><Mail className="size-3" aria-hidden="true" /><span>{user.email}</span></p>
         </div>
@@ -120,7 +121,7 @@ export function ProfileIdentityCard({ user }: ProfileIdentityCardProps) {
         <span><MapPin className="size-3.5" aria-hidden="true" />{user.department}{user.store ? ` · ${user.store}` : ""}</span>
       </div>
 
-        <div className={styles.photoTools}>
+        {editable && <div className={styles.photoTools}>
           <button
             type="button"
             onClick={() => inputRef.current?.click()}
@@ -142,7 +143,7 @@ export function ProfileIdentityCard({ user }: ProfileIdentityCardProps) {
             </button>
           ) : null}
           <p className={styles.photoHint}>JPG, PNG, WEBP, AVIF · до {MAX_AVATAR_FILE_SIZE / 1024 / 1024} МБ</p>
-        </div>
+        </div>}
       {error ? <p role="alert" className={`${styles.feedback} ${styles.error}`}>{error}</p> : null}
       {notice ? <p role="status" className={`${styles.feedback} ${styles.success}`}>{notice}</p> : null}
     </section>
