@@ -130,7 +130,7 @@ export function buildPortalSearchIndex({ modules, brands = [], categories = [], 
         guideEntry(practiceAnchor, item.title, `${item.situation} ${item.prompt} ${item.explanation}`, "Практика консультації", practiceAnchor);
         guideEntry(`${practiceAnchor}-explanation`, item.title, item.explanation, "Розбір практичного прикладу", undefined, `${item.title} ${item.situation}`, "");
       }
-      if (guide.models3d?.length) guideEntry(getLearningGuideAnchor(learningModule.id, "models"), "Огляд корпусу у 3D", guide.models3d.map(item => `${item.title} ${item.variant} ${item.note}`).join(" "), "Демонстрація у виробника");
+      if (guide.models3d?.length) guideEntry(getLearningGuideAnchor(learningModule.id, "models"), "3D-огляд пристроїв", guide.models3d.map(item => `${item.title} ${item.variant} ${item.note}`).join(" "), "3D-демонстрація");
     }
   }
   for (const page of portalPages) {

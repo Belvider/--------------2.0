@@ -20,11 +20,17 @@ function guide(overrides = {}) {
     models3d: [{ title: 'Огляд корпусу', url: 'https://www.apple.com/iphone-18-pro/', variant: 'US/eSIM', note: 'Зовнішній перегляд у виробника.' }], ...overrides };
 }
 function components() {
-  const filename = path.resolve(__dirname, '../components/module/ModuleLearningGuide.tsx');
-  const installed = Module.createRequire(filename), loaded = { exports: {} };
-  const compiled = ts.transpileModule(fs.readFileSync(filename, 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022, jsx: ts.JsxEmit.ReactJSX, esModuleInterop: true } }).outputText;
-  new Function('require', 'module', 'exports', compiled)(request => request.startsWith('@/') ? require('../' + request.slice(2) + '.ts') : installed(request), loaded, loaded.exports);
-  return loaded.exports;
+  function load(filename) {
+    const installed = Module.createRequire(filename), loaded = { exports: {} };
+    const compiled = ts.transpileModule(fs.readFileSync(filename, 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022, jsx: ts.JsxEmit.ReactJSX, esModuleInterop: true } }).outputText;
+    new Function('require', 'module', 'exports', compiled)(request => {
+      if (!request.startsWith('@/')) return installed(request);
+      const target = path.resolve(__dirname, '..', request.slice(2));
+      return fs.existsSync(target + '.tsx') ? load(target + '.tsx') : require(target + '.ts');
+    }, loaded, loaded.exports);
+    return loaded.exports;
+  }
+  return load(path.resolve(__dirname, '../components/module/ModuleLearningGuide.tsx'));
 }
 
 test('legacy blocks remain usable and guide metadata does not change their reading targets', () => {

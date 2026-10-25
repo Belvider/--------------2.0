@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { ArrowUpRight, BookOpenCheck, Play, Search } from "lucide-react";
 import { getLearningGuideAnchor, type LearningGuide, type LearningSource } from "@/lib/learning-guide";
 import { getVideoSource } from "@/lib/video-source";
+import { InlineModelViewer } from "@/components/module/InlineModelViewer";
 
 const reviewedDate = (value: string) => value.split("-").reverse().join(".");
 const targetProps = (anchor: string) => ({ id: anchor, "data-material-anchor": anchor, tabIndex: -1 });
@@ -74,6 +75,7 @@ export function LearningGuideOverview({ guide, moduleId }: { guide: LearningGuid
 
 export function LearningGuideResources({ guide, moduleId }: { guide: LearningGuide; moduleId: number }) {
   const [videoStarted, setVideoStarted] = useState(false);
+  const [activeModel, setActiveModel] = useState<number | null>(null);
   const video = guide.video ? getVideoSource(guide.video.url) : null;
   return <section className="mt-8 min-w-0 space-y-3 border-t border-white/[0.08] pt-5" aria-label="Демонстрації, практика та джерела">
     {guide.video && <details {...targetProps(getLearningGuideAnchor(moduleId, "video"))} className="min-w-0 rounded-xl border border-white/[0.08] px-3 sm:px-4">
@@ -109,11 +111,14 @@ export function LearningGuideResources({ guide, moduleId }: { guide: LearningGui
         </details>
       </div>
     </details>)}
-    {!!guide.models3d?.length && <details {...targetProps(getLearningGuideAnchor(moduleId, "models"))} className="min-w-0 rounded-xl border border-white/[0.08] px-3 sm:px-4">
-      <summary className={summaryClass}>Огляд корпусу у 3D у виробника</summary>
-      <ul className="space-y-4 pb-4 pt-2">{guide.models3d.map(item => <li key={item.url} className="min-w-0">
-        <a href={item.url} target="_blank" rel="noopener noreferrer" className="focus-ring inline-flex max-w-full items-start gap-1.5 rounded text-sm font-medium text-teal-300 underline decoration-teal-300/30 underline-offset-4 [overflow-wrap:anywhere]">{item.title}<ArrowUpRight className="mt-0.5 size-3.5 shrink-0" aria-hidden="true" /></a>
-        <p className="mt-1 text-xs leading-5 text-slate-300">{item.variant}</p><p className="mt-1 text-xs leading-5 text-slate-400">{item.note}</p>
+    {!!guide.models3d?.length && <details {...targetProps(getLearningGuideAnchor(moduleId, "models"))} onToggle={event => { if (!event.currentTarget.open) setActiveModel(null); }} className="min-w-0 rounded-xl border border-white/[0.08] px-3 sm:px-4">
+      <summary className={summaryClass}>3D-огляд пристроїв</summary>
+      <ul className="space-y-4 pb-4 pt-2">{guide.models3d.map((item, index) => <li key={`${item.url}-${index}`} className="min-w-0">
+        {item.viewer ? <InlineModelViewer model={item} active={activeModel === index} onActivate={() => setActiveModel(index)} onClose={() => setActiveModel(null)} /> : <>
+          <p className="text-sm font-semibold text-slate-200">{item.title}</p>
+          <p className="mt-1 text-xs leading-5 text-slate-300">{item.variant}</p><p className="mt-1 text-xs leading-5 text-slate-400">{item.note}</p>
+        </>}
+        <a href={item.url} target="_blank" rel="noopener noreferrer" className="focus-ring mt-3 inline-flex max-w-full items-start gap-1.5 rounded text-xs font-medium text-teal-300 underline decoration-teal-300/30 underline-offset-4 [overflow-wrap:anywhere]">{item.viewer ? "Офіційна сторінка пристрою" : "Переглянути у джерелі"}<ArrowUpRight className="mt-0.5 size-3.5 shrink-0" aria-hidden="true" /></a>
       </li>)}</ul>
     </details>}
     <details {...targetProps(getLearningGuideAnchor(moduleId, "sources"))} className="min-w-0 rounded-xl border border-white/[0.08] px-3 pb-1 sm:px-4">

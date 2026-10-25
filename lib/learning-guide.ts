@@ -2,7 +2,11 @@ export type LearningSource = { id: string; title: string; url: string; scope: st
 export type LearningRouteItem = { title: string; anchor: string };
 export type LearningPractice = { id: string; title: string; situation: string; prompt: string; explanation: string; sourceIds: string[] };
 export type LearningVideo = { title: string; url: string; author: string; summary: string[]; exercise?: string };
-export type LearningModelLink = { title: string; url: string; variant: string; note: string };
+export type LearningModelViewer = {
+  provider: "sketchfab"; uid: string; author: string; authorUrl: string;
+  sourceUrl: string; license: string; licenseUrl: string;
+};
+export type LearningModelLink = { title: string; url: string; variant: string; note: string; viewer?: LearningModelViewer };
 export type LearningGuide = {
   version: 1; reviewedAt: string; objectives: string[]; prerequisites: string;
   route: LearningRouteItem[]; reference: LearningRouteItem[]; sources: LearningSource[];
@@ -17,6 +21,22 @@ const anchor = (value: unknown): value is string => typeof value === "string" &&
 const httpsUrl = (value: unknown): value is string => {
   if (!string(value, 1600)) return false;
   try { const url = new URL(value); return url.protocol === "https:" && !url.username && !url.password; } catch { return false; }
+};
+const sketchfabUrl = (value: unknown): value is string => {
+  if (!httpsUrl(value)) return false;
+  const url = new URL(value);
+  return ["sketchfab.com", "www.sketchfab.com"].includes(url.hostname) && !url.port && !url.search && !url.hash;
+};
+const modelViewer = (value: unknown): value is LearningModelViewer => {
+  if (!record(value) || value.provider !== "sketchfab" || typeof value.uid !== "string" || !/^[a-f0-9]{32}$/.test(value.uid)
+    || !string(value.author, 100) || !sketchfabUrl(value.authorUrl) || !sketchfabUrl(value.sourceUrl)
+    || !string(value.license, 140) || !httpsUrl(value.licenseUrl)) return false;
+  const allowedKeys = ["provider", "uid", "author", "authorUrl", "sourceUrl", "license", "licenseUrl"];
+  if (Object.keys(value).some(key => !allowedKeys.includes(key))) return false;
+  const authorPath = new URL(value.authorUrl).pathname;
+  if (!/^\/[a-zA-Z0-9_.-]+\/?$/.test(authorPath)
+    || /^\/(?:models|3d-models|developers|terms|licenses|login|signup|settings|collections|oembed|feed|search|features|store)\/?$/.test(authorPath)) return false;
+  return new RegExp(`^/(?:models/${value.uid}|3d-models/(?:[a-zA-Z0-9_-]+-)?${value.uid})/?$`).test(new URL(value.sourceUrl).pathname);
 };
 const videoUrl = (value: unknown) => {
   if (!httpsUrl(value)) return false;
@@ -47,7 +67,8 @@ export function parseLearningGuide(value: unknown, moduleId?: number): LearningG
     || !string(value.video.author, 100) || !strings(value.video.summary, 5, 500)
     || (value.video.exercise !== undefined && !string(value.video.exercise, 600)))) return null;
   if (value.models3d !== undefined && (!Array.isArray(value.models3d) || value.models3d.length > 4 || !value.models3d.every(item => record(item)
-    && string(item.title, 140) && httpsUrl(item.url) && string(item.variant, 240) && string(item.note, 600)))) return null;
+    && string(item.title, 140) && httpsUrl(item.url) && string(item.variant, 240) && string(item.note, 600)
+    && (item.viewer === undefined || modelViewer(item.viewer))))) return null;
   return value as unknown as LearningGuide;
 }
 

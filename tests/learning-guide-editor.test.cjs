@@ -93,7 +93,7 @@ test('moving and removing products rebinds model-specific routes and sources wit
 test('the guide editor provides structured fields for every content section without a JSON textarea', () => {
   const { LearningGuideEditor } = loadSource('components/admin/LearningGuideEditor.tsx');
   const markup = renderToStaticMarkup(React.createElement(LearningGuideEditor, { value: guide(), moduleId: 1, blocks: [text('Основи')], onChange() {} }));
-  for (const label of ['Що працівник зможе зробити', 'Попередні знання', 'Маршрут для першого вивчення', 'Швидкий довідник', 'Офіційні джерела', 'Український конспект', 'Практичні сценарії', 'Пояснення відповіді', 'Офіційні зовнішні 3D-перегляди']) assert.ok(markup.includes(label), label);
+  for (const label of ['Що працівник зможе зробити', 'Попередні знання', 'Маршрут для першого вивчення', 'Швидкий довідник', 'Офіційні джерела', 'Український конспект', 'Практичні сценарії', 'Пояснення відповіді', '3D-перегляди та авторські моделі']) assert.ok(markup.includes(label), label);
   assert.doesNotMatch(markup, /JSON/);
 });
 
