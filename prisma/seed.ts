@@ -2601,7 +2601,7 @@ async function main() {
         data: {
           categoryId: category.id,
           title: "Apple iPhone: Лінійка, ринки та ключові технології",
-          description: "Внутрішній конспект по сегментах iPhone, регіональних версіях, MDM/R-SIM, дисплеях і технологіях Apple.",
+          description: "Як добирати iPhone під потреби покупця: лінійки, регіональні версії, перевірка стану та ключові технології.",
           contentBlocks: iphoneFoundationBlocks,
           durationMin: 28,
           sortOrder: 1,

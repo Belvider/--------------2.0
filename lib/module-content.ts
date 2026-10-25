@@ -1,3 +1,5 @@
+import type { LearningGuide } from "./learning-guide";
+
 export type ModuleBlockType = "video" | "pdf" | "text" | "image" | "facts" | "productCatalog";
 
 export type ModuleCatalogColor = {
@@ -21,6 +23,7 @@ export type ModuleCatalogProduct = {
 type BaseBlock = {
   type: ModuleBlockType;
   title: string;
+  learningGuide?: LearningGuide;
 };
 
 export type VideoBlock = BaseBlock & {

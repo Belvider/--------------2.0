@@ -4,6 +4,7 @@ import { portalPageMeta, type PortalPageContent } from "@/lib/portal-pages";
 import type { SearchResponse, SearchResult } from "@/lib/search-types";
 import { normalizeSearchQuery, normalizeSearchText, tokenizeSearchQuery } from "@/lib/search-query";
 import { getSearchHighlightRanges } from "@/lib/search-highlights";
+import { getLearningGuideAnchor, getModuleLearningGuide } from "@/lib/learning-guide";
 
 export { normalizeSearchText, tokenizeSearchQuery } from "@/lib/search-query";
 
@@ -110,6 +111,27 @@ export function buildPortalSearchIndex({ modules, brands = [], categories = [], 
         });
       }
     });
+    const guide = getModuleLearningGuide(parseModuleContentBlocks(learningModule.contentBlocks), learningModule.id);
+    if (guide) {
+      const guideEntry = (anchor: string, title: string, ownText: string, meta: string, container?: string, localContext?: string, ownTitle = title) => {
+        add({ type: "section", id: anchor, title, subtitle: path, meta, href: `${moduleHref}#${anchor}` }, ownTitle, ownText, `${path} ${localContext ?? ""}`, container, { localContext });
+      };
+      const overviewAnchor = getLearningGuideAnchor(learningModule.id, "overview");
+      guideEntry(`${overviewAnchor}-prerequisites`, "Перед початком вивчення", guide.prerequisites, "Навчальний маршрут");
+      guide.objectives.forEach((objective, index) => guideEntry(`${overviewAnchor}-objective-${index + 1}`, "Що ви зможете після вивчення", objective, "Навчальна ціль"));
+      if (guide.video) {
+        const videoAnchor = getLearningGuideAnchor(learningModule.id, "video");
+        guideEntry(videoAnchor, guide.video.title, `${guide.video.author} ${guide.video.summary.join(" ")} ${guide.video.exercise ?? ""}`, "Навчальне відео", videoAnchor);
+        guide.video.summary.forEach((note, index) => guideEntry(`${videoAnchor}-note-${index + 1}`, guide.video!.title, note, "Конспект відео", undefined, guide.video!.title, ""));
+        if (guide.video.exercise) guideEntry(`${videoAnchor}-exercise`, guide.video.title, guide.video.exercise, "Завдання після відео", undefined, guide.video.title, "");
+      }
+      for (const item of guide.practice) {
+        const practiceAnchor = getLearningGuideAnchor(learningModule.id, "practice", item.id);
+        guideEntry(practiceAnchor, item.title, `${item.situation} ${item.prompt} ${item.explanation}`, "Практика консультації", practiceAnchor);
+        guideEntry(`${practiceAnchor}-explanation`, item.title, item.explanation, "Розбір практичного прикладу", undefined, `${item.title} ${item.situation}`, "");
+      }
+      if (guide.models3d?.length) guideEntry(getLearningGuideAnchor(learningModule.id, "models"), "Огляд корпусу у 3D", guide.models3d.map(item => `${item.title} ${item.variant} ${item.note}`).join(" "), "Демонстрація у виробника");
+    }
   }
   for (const page of portalPages) {
     const route = portalPageMeta[page.slug].route;

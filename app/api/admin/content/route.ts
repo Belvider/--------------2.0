@@ -5,9 +5,24 @@ import { requireRole } from "@/lib/auth";
 import { createAdminAuditLog, getRequestIpAddress } from "@/lib/admin-audit";
 import { prisma } from "@/lib/prisma";
 import { validateQuizQuestions, validateQuestionIds } from "@/lib/quiz-editor";
+import { parseLearningGuide } from "@/lib/learning-guide";
 
 class QuizQuestionInputError extends Error {
   constructor(message: string, readonly status = 400) { super(message); }
+}
+
+function learningGuideError(blocks: unknown, moduleId?: number) {
+  if (!Array.isArray(blocks)) return "Блоки матеріалу мають бути списком.";
+  const guides = blocks.filter(block => block !== null && typeof block === "object" && Object.hasOwn(block, "learningGuide"));
+  if (guides.length > 1) return "Навчальний супровід має бути лише в одному блоці модуля.";
+  if (guides.some(block => !parseLearningGuide(block.learningGuide, moduleId))) {
+    return "Некоректний навчальний супровід: перевірте поля, джерела й переходи в межах модуля.";
+  }
+  if (moduleId === undefined && guides.some(block => {
+    const guide = parseLearningGuide(block.learningGuide)!;
+    return guide.route.length || guide.reference.length || guide.sources.some(source => source.anchors.length);
+  })) return "Спершу створіть модуль, потім додайте переходи навчального супроводу в його редакторі.";
+  return null;
 }
 
 const relativeOrAbsoluteUrlSchema = z.string().refine((value) => {
@@ -302,6 +317,11 @@ export async function POST(request: Request) {
       return NextResponse.json({ category });
     }
 
+    if (parsed.data.contentBlocks !== undefined) {
+      const guideError = learningGuideError(parsed.data.contentBlocks);
+      if (guideError) return NextResponse.json({ error: guideError }, { status: 400 });
+    }
+
     const category = await prisma.category.findUnique({
       where: { id: parsed.data.categoryId },
       select: {
@@ -576,6 +596,8 @@ export async function PATCH(request: Request) {
     }
 
     const moduleData = parsed.data;
+    const guideError = learningGuideError(moduleData.contentBlocks, moduleData.id);
+    if (guideError) return NextResponse.json({ error: guideError }, { status: 400 });
 
     const learningModule = await prisma.$transaction(async (tx) => {
       const previousModule = await tx.module.findUnique({

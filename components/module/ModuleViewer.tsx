@@ -9,6 +9,8 @@ import { getVideoSource } from "@/lib/video-source";
 import { getRequestError, requestJson } from "@/lib/http-client";
 import { getProductImageFrame } from "@/lib/product-image-frames";
 import { MaterialPermalink as MaterialLink } from "@/components/MaterialPermalink";
+import { LearningGuideOverview, LearningGuideResources, LearningSourceReferences } from "@/components/module/ModuleLearningGuide";
+import { getModuleLearningGuide, type LearningGuide } from "@/lib/learning-guide";
 import { findModuleBlockIndexForAnchor, getFactAnchor, getModuleBlockAnchor, getProductAnchor, getProductDetailAnchor, prepareSearchableHtml } from "@/lib/content-anchors";
 import styles from "./ModuleViewer.module.css";
 
@@ -243,7 +245,7 @@ function getColorTone(label: string) {
   return "#cbd5e1";
 }
 
-function ProductCatalogCard({ product, anchor, requestedAnchor, navigationRequest }: { product: ModuleCatalogProduct; anchor: string; requestedAnchor: string; navigationRequest: number }) {
+function ProductCatalogCard({ product, anchor, requestedAnchor, navigationRequest, guide }: { product: ModuleCatalogProduct; anchor: string; requestedAnchor: string; navigationRequest: number; guide?: LearningGuide | null }) {
   const defaultColorIndex = Math.max(product.colors.findIndex((color) => color.default), 0);
   const [activeColorIndex, setActiveColorIndex] = useState(defaultColorIndex);
   const activeColor = product.colors[activeColorIndex] ?? product.colors[0];
@@ -422,11 +424,12 @@ function ProductCatalogCard({ product, anchor, requestedAnchor, navigationReques
 
         </div>
       </div>
+      {guide && <div className="px-5 pb-2"><LearningSourceReferences guide={guide} anchor={anchor} /></div>}
     </article>
   );
 }
 
-function ProductCatalogBlockView({ block, anchor, requestedAnchor, navigationRequest }: { block: Extract<ModuleContentBlock, { type: "productCatalog" }>; anchor: string; requestedAnchor: string; navigationRequest: number }) {
+function ProductCatalogBlockView({ block, anchor, requestedAnchor, navigationRequest, guide }: { block: Extract<ModuleContentBlock, { type: "productCatalog" }>; anchor: string; requestedAnchor: string; navigationRequest: number; guide?: LearningGuide | null }) {
   const [query, setQuery] = useState("");
   const catalogFilters = useMemo(() => getCatalogFilters(block.products), [block.products]);
   const [activeFilter, setActiveFilter] = useState(ALL_FILTER_KEY);
@@ -552,7 +555,7 @@ function ProductCatalogBlockView({ block, anchor, requestedAnchor, navigationReq
 
       <div className="space-y-5">
         {filteredProducts.map((product) => (
-          <ProductCatalogCard key={product.slug} product={product} anchor={getProductAnchor(anchor, block.products.indexOf(product))} requestedAnchor={requestedAnchor} navigationRequest={navigationRequest} />
+          <ProductCatalogCard key={product.slug} product={product} anchor={getProductAnchor(anchor, block.products.indexOf(product))} requestedAnchor={requestedAnchor} navigationRequest={navigationRequest} guide={guide} />
         ))}
 
         {filteredProducts.length === 0 && (
@@ -665,7 +668,7 @@ const RichTextFragment = memo(function RichTextFragment({ html }: { html: string
   return <div className="rich-text" dangerouslySetInnerHTML={{ __html: html }} />;
 });
 
-function renderBlock(block: ModuleContentBlock, anchor: string, requestedAnchor: string, navigationRequest: number) {
+function renderBlock(block: ModuleContentBlock, anchor: string, requestedAnchor: string, navigationRequest: number, guide?: LearningGuide | null) {
   if (block.type === "video" && block.url) {
     const video = getVideoSource(block.url, block.provider);
     return (
@@ -748,7 +751,7 @@ function renderBlock(block: ModuleContentBlock, anchor: string, requestedAnchor:
   }
 
   if (block.type === "productCatalog") {
-    return <ProductCatalogBlockView block={block} anchor={anchor} requestedAnchor={requestedAnchor} navigationRequest={navigationRequest} />;
+    return <ProductCatalogBlockView block={block} anchor={anchor} requestedAnchor={requestedAnchor} navigationRequest={navigationRequest} guide={guide} />;
   }
 
   if (block.type === "text") {
@@ -780,6 +783,7 @@ function renderBlock(block: ModuleContentBlock, anchor: string, requestedAnchor:
 export function ModuleViewer({ moduleId, blocks, initialProgressPct, hasQuiz }: ModuleViewerProps) {
   const router = useRouter();
   const pages = useMemo(() => buildModulePages(blocks), [blocks]);
+  const learningGuide = useMemo(() => getModuleLearningGuide(blocks, moduleId), [blocks, moduleId]);
   const [activePageIndex, setActivePageIndex] = useState(0);
   const [readyModuleId, setReadyModuleId] = useState<number | null>(null);
   const [navigation, setNavigation] = useState({ anchor: "", request: 0 });
@@ -885,6 +889,7 @@ export function ModuleViewer({ moduleId, blocks, initialProgressPct, hasQuiz }: 
         if (++attempts < 30) frame = window.requestAnimationFrame(reveal);
         return;
       }
+      if (target instanceof HTMLDetailsElement) target.open = true;
       for (let ancestor = target.parentElement; ancestor && ancestor !== contentTopRef.current; ancestor = ancestor.parentElement) {
         if (ancestor instanceof HTMLDetailsElement) ancestor.open = true;
       }
@@ -1062,6 +1067,7 @@ export function ModuleViewer({ moduleId, blocks, initialProgressPct, hasQuiz }: 
       </aside>
 
       <div ref={contentTopRef} id={`module-${moduleId}-content`} className={`card animate-fadeUp ${styles.content}`}>
+        {learningGuide && <LearningGuideOverview guide={learningGuide} moduleId={moduleId} />}
         {activePage ? (
           <div className="space-y-8">
             <p className={styles.eyebrow}>Розділ {activePageIndex + 1} із {pages.length}</p>
@@ -1093,7 +1099,8 @@ export function ModuleViewer({ moduleId, blocks, initialProgressPct, hasQuiz }: 
                   tabIndex={-1}
                   className={styles.topic}
                 >
-                  {renderBlock(block, getBlockAnchor(activePage.blockIndexes[index]), navigation.anchor, navigation.request)}
+                  {renderBlock(block, getBlockAnchor(activePage.blockIndexes[index]), navigation.anchor, navigation.request, learningGuide)}
+                  {learningGuide && block.type !== "productCatalog" && <LearningSourceReferences guide={learningGuide} anchor={getBlockAnchor(activePage.blockIndexes[index])} />}
                 </div>
               ))}
             </div>
@@ -1102,6 +1109,7 @@ export function ModuleViewer({ moduleId, blocks, initialProgressPct, hasQuiz }: 
           <p className="py-8 text-slate-400">Навчальні матеріали ще не опубліковані.</p>
         )}
 
+        {learningGuide && <LearningGuideResources guide={learningGuide} moduleId={moduleId} />}
         {pages.length > 1 ? <nav aria-label="Перехід між розділами" className={styles.pageControls}>
           <button
             type="button"

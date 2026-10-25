@@ -1,0 +1,1000 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-10-25",
+  "baseline": "a92a6f52e34910edf8d7760820d864f2724a4252",
+  "modules": [
+    {
+      "id": 1,
+      "categoryId": 1,
+      "brandSlug": "apple",
+      "categorySlug": "iphone",
+      "questionIds": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": 2,
+      "categoryId": 1,
+      "brandSlug": "apple",
+      "categorySlug": "iphone",
+      "questionIds": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    }
+  ],
+  "edits": [
+    {
+      "moduleId": 1,
+      "path": "/description",
+      "before": "Внутрішній конспект по сегментах iPhone, регіональних версіях, MDM/R-SIM, дисплеях і технологіях Apple.",
+      "after": "Як добирати iPhone під потреби покупця: лінійки, регіональні версії, перевірка стану та ключові технології.",
+      "reason": "Замінено службовий опис і невдалий зворот «конспект по» на зрозумілий результат навчання.",
+      "sourceUrls": []
+    },
+    {
+      "moduleId": 1,
+      "path": "/contentBlocks/5/items/0",
+      "before": "Регіон перевіряйте за номером моделі Axxxx та офіційними характеристиками, а не лише за країною продавця.",
+      "after": "Апаратний варіант перевіряйте за номером Axxxx та офіційними характеристиками; один номер може охоплювати кілька ринків.",
+      "reason": "Номер Axxxx визначає апаратний варіант, але не завжди одну країну продажу.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/108044"
+      ]
+    },
+    {
+      "moduleId": 1,
+      "path": "/contentBlocks/6/title",
+      "before": "Як визначити регіон за номером моделі",
+      "after": "Як перевірити модель і регіональну версію",
+      "reason": "Заголовок не обіцяє однозначно визначити країну продажу лише за номером Axxxx.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/108044",
+        "https://support.apple.com/en-us/106343"
+      ]
+    },
+    {
+      "moduleId": 1,
+      "path": "/contentBlocks/6/html",
+      "before": "\n      <ol>\n        <li>Відкрийте «Налаштування» → «Загальні» → «Про пристрій».</li>\n        <li>У полі «Номер моделі» спочатку видно артикул, наприклад із закінченням <strong>/A</strong>. Натисніть на нього, щоб побачити номер <strong>Axxxx</strong>.</li>\n        <li>Знайдіть Axxxx у <a href=\"https://support.apple.com/en-us/108044\" target=\"_blank\" rel=\"noopener noreferrer\">довіднику моделей Apple</a> і звірте конфігурацію SIM та інші відмінності.</li>\n      </ol>\n      <p><strong>Артикул і стан — різні речі.</strong> Початкова літера артикула не доводить, що iPhone зараз новий, не ремонтувався або не був активований. Фактичний стан, історію обслуговування та активацію перевіряють окремо.</p>\n      <p>Інструкція: <a href=\"https://support.apple.com/en-us/106343\" target=\"_blank\" rel=\"noopener noreferrer\">де знайти номер моделі</a>.</p>\n    ",
+      "after": "\n      <ol>\n        <li>Відкрийте «Налаштування» → «Загальні» → «Про пристрій».</li>\n        <li>У полі «Номер моделі» спочатку видно артикул, наприклад із закінченням <strong>/A</strong>. Натисніть на нього, щоб побачити номер <strong>Axxxx</strong>.</li>\n        <li>Знайдіть Axxxx у <a href=\"https://support.apple.com/en-us/108044\" target=\"_blank\" rel=\"noopener noreferrer\">довіднику моделей Apple</a> і звірте конфігурацію SIM та інші відмінності. Один апаратний варіант може охоплювати кілька країн; ринок продажу уточнюйте за артикулом і документами.</li>\n      </ol>\n      <p><strong>Артикул і стан — різні речі.</strong> Початкова літера артикула не доводить, що iPhone зараз новий, не ремонтувався або не був активований. Фактичний стан, історію обслуговування та активацію перевіряють окремо.</p>\n      <p>Інструкція: <a href=\"https://support.apple.com/en-us/106343\" target=\"_blank\" rel=\"noopener noreferrer\">де знайти номер моделі</a>.</p>\n    ",
+      "reason": "Уточнено різницю між апаратним варіантом Axxxx і ринком продажу.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/108044",
+        "https://support.apple.com/en-us/106343"
+      ]
+    },
+    {
+      "moduleId": 1,
+      "path": "/contentBlocks/7/html",
+      "before": "\n      <p><strong>Правило приймання:</strong> пристрої з R-SIM або корпоративним керуванням MDM не приймаємо на викуп чи Trade-In та не продаємо.</p>\n      <h4>MDM — корпоративне керування</h4>\n      <p>Організація може встановлювати правила, програми та обмеження, а також дистанційно блокувати або стирати пристрій. MDM не є характеристикою модельного ряду.</p>\n      <ul>\n        <li>Перегляньте розділ «Налаштування» → «Загальні» → «VPN та керування пристроєм» і повідомлення про нагляд організації.</li>\n        <li>Відсутність профілю в налаштуваннях не доводить, що пристрій вилучено з корпоративної системи.</li>\n        <li>Якщо під час налаштування з’являється «Віддалене керування», передайте питання відповідальному працівнику. Зняти корпоративну прив’язку має організація-власник.</li>\n      </ul>\n      <h4>R-SIM — обхід обмеження оператора</h4>\n      <p>Це адаптер для SIM-картки, що використовується для роботи заблокованого під оператора iPhone в іншій мережі. Він не є офіційним розблокуванням оператором; після оновлення або повторної активації зв’язок може перестати працювати.</p>\n      <p><strong>Перевірка:</strong> огляньте лоток SIM і статус блокування оператором. У разі сумніву припиніть приймання та зверніться до відповідального працівника.</p>\n    ",
+      "after": "\n      <p><strong>Правило приймання:</strong> пристрої з R-SIM або корпоративним керуванням MDM не приймаємо на викуп чи Trade-In та не продаємо.</p>\n      <h4>MDM — корпоративне керування</h4>\n      <p>Організація може встановлювати правила, програми та обмеження, а також дистанційно блокувати або стирати пристрій. MDM не є характеристикою модельного ряду.</p>\n      <ul>\n        <li>Перегляньте розділ «Налаштування» → «Загальні» → «VPN та керування пристроєм» і повідомлення про нагляд організації.</li>\n        <li>Відсутність профілю в налаштуваннях не доводить, що пристрій вилучено з корпоративної системи.</li>\n        <li>Якщо під час налаштування з’являється «Віддалене керування», передайте питання відповідальному працівнику. Зняти корпоративну прив’язку має організація-власник.</li>\n      </ul>\n      <h4>R-SIM — обхід обмеження оператора</h4>\n      <p>Це адаптер для SIM-картки, що використовується для роботи заблокованого під оператора iPhone в іншій мережі. Адаптер не є офіційним розблокуванням: розблокувати iPhone для використання з іншим оператором може лише оператор, до якого прив’язаний пристрій.</p>\n      <p><strong>Перевірка:</strong> огляньте лоток SIM і статус блокування оператором. У разі сумніву припиніть приймання та зверніться до відповідального працівника.</p>\n    ",
+      "reason": "Замість непідтвердженої універсальної поведінки стороннього адаптера наведено офіційне правило Apple про розблокування оператором. Внутрішнє правило приймання не змінено.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/109316"
+      ]
+    },
+    {
+      "moduleId": 1,
+      "path": "/contentBlocks/8/html",
+      "before": "\n      <table>\n        <thead><tr><th>Характеристика</th><th>Що означає для користувача</th><th>Як показати</th></tr></thead>\n        <tbody>\n          <tr><td><strong>LCD / OLED</strong></td><td>OLED відображає глибокий чорний. LCD використовується, зокрема, в XR, 11 і SE 2-го та 3-го поколінь.</td><td>Порівняйте темне фото й контрастність за однакової яскравості.</td></tr>\n          <tr><td><strong>ProMotion до 120 Гц</strong></td><td>Плавніше прокручування й анімації. Є в Pro починаючи з 13 Pro, а також в iPhone 17, Air і Duo.</td><td>Прокрутіть список або вебсторінку поруч із моделлю на 60 Гц.</td></tr>\n          <tr><td><strong>Яскравість</strong></td><td>Впливає на читабельність надворі. Типова, пікова HDR і пікова на сонці — різні показники.</td><td>Порівнюйте однакові режими за офіційною специфікацією, а не лише найбільше число.</td></tr>\n          <tr><td><strong>Діагональ і форма</strong></td><td>Великий екран зручний для відео, але впливає на габарити. У Duo є окремі внутрішній і зовнішній екрани.</td><td>Дайте потримати пристрій, набрати текст і оцінити розмір у кишені.</td></tr>\n        </tbody>\n      </table>\n      <p><strong>Важливо:</strong> Ceramic Shield та захист IP68 не роблять пристрій невразливим до падінь або води. Не демонструйте захист зануренням чи ударами.</p>\n    ",
+      "after": "\n      <table>\n        <thead><tr><th>Характеристика</th><th>Що означає для користувача</th><th>Як показати</th></tr></thead>\n        <tbody>\n          <tr><td><strong>LCD / OLED</strong></td><td>OLED відображає глибокий чорний. LCD використовується, зокрема, в XR, 11 і SE 2-го та 3-го поколінь.</td><td>Порівняйте темне фото й контрастність за однакової яскравості.</td></tr>\n          <tr><td><strong>ProMotion до 120 Гц</strong></td><td>Плавніше прокручування й анімації. Є в Pro починаючи з 13 Pro, а також в iPhone 17, Air і Duo.</td><td>Прокрутіть список або вебсторінку поруч із моделлю на 60 Гц.</td></tr>\n          <tr><td><strong>Яскравість</strong></td><td>Впливає на читабельність надворі. Типова, пікова HDR і пікова на сонці — різні показники.</td><td>Порівнюйте однакові режими за офіційною специфікацією, а не лише найбільше число.</td></tr>\n          <tr><td><strong>Діагональ і форма</strong></td><td>Великий екран зручний для відео, але впливає на габарити. У Duo є окремі внутрішній і зовнішній екрани.</td><td>Дайте потримати пристрій, набрати текст і оцінити розмір у кишені.</td></tr>\n        </tbody>\n      </table>\n      <p><strong>Важливо:</strong> Ceramic Shield та захист IP68 не роблять пристрій невразливим до падінь або води. Клас IP визначають у лабораторних умовах; водостійкість може знижуватися зі зношенням. Не демонструйте захист зануренням чи ударами.</p>\n    ",
+      "reason": "Уточнено умови визначення IP та зниження водостійкості зі зношенням без роздування кожної картки.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/108039"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/22/highlights/11",
+      "before": "Dolby Vision до 4K 120 кадрів/с",
+      "after": "Dolby Vision до 4K 120 кадрів/с на основній камері",
+      "reason": "Режим 4K 120 кадрів/с доступний для Fusion Main; уточнено, що він не стосується всіх камер Duo.",
+      "sourceUrls": [
+        "https://www.apple.com/iphone-duo/specs/"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/4/html",
+      "before": " <p>Дані про новинки та моделі 2025–2026 років актуальні на <strong>19 жовтня 2026 року</strong>. Офіційні специфікації допоможуть перевірити регіональну версію та доступність потрібних функцій.</p> <ul> <li><a href=\"https://www.apple.com/iphone-18-pro/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone 18 Pro та 18 Pro Max — характеристики</a> · <a href=\"https://www.apple.com/newsroom/2026/09/apple-debuts-iphone-18-pro-and-iphone-18-pro-max/\" target=\"_blank\" rel=\"noopener noreferrer\">анонс Apple</a>.</li> <li><a href=\"https://www.apple.com/iphone-duo/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone Duo — характеристики</a> · <a href=\"https://www.apple.com/iphone-duo/\" target=\"_blank\" rel=\"noopener noreferrer\">можливості та старт продажів</a>.</li> <li><a href=\"https://www.apple.com/iphone-air/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone Air</a>, <a href=\"https://www.apple.com/iphone-17/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone 17</a> та <a href=\"https://www.apple.com/iphone-17e/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone 17e</a>.</li> <li><a href=\"https://support.apple.com/en-us/125090\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone 17 Pro</a> та <a href=\"https://support.apple.com/en-us/125091\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone 17 Pro Max</a>.</li> </ul> <p><strong>Перед консультацією:</strong> уточніть фактичну наявність, ціну, комплектацію й умови обслуговування в магазині. Час роботи та швидкість заряджання залежать від умов використання й аксесуарів.</p> ",
+      "after": " <p>Наведені офіційні джерела повторно переглянуто <strong>25 жовтня 2026 року</strong>. Для характеристик і доступності функцій звіряйте саме потрібну модель та регіональну версію.</p> <ul> <li><a href=\"https://www.apple.com/iphone-18-pro/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone 18 Pro та 18 Pro Max — характеристики</a> · <a href=\"https://www.apple.com/newsroom/2026/09/apple-debuts-iphone-18-pro-and-iphone-18-pro-max/\" target=\"_blank\" rel=\"noopener noreferrer\">анонс Apple</a>.</li> <li><a href=\"https://www.apple.com/iphone-duo/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone Duo — характеристики</a> · <a href=\"https://www.apple.com/iphone-duo/\" target=\"_blank\" rel=\"noopener noreferrer\">можливості та старт продажів</a>.</li> <li><a href=\"https://www.apple.com/iphone-air/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone Air</a>, <a href=\"https://www.apple.com/iphone-17/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone 17</a> та iPhone 17e: <a href=\"https://www.apple.com/ua/iphone-17e/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">версія UA — nano-SIM + eSIM</a>, <a href=\"https://www.apple.com/iphone-17e/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">версія US — лише eSIM</a>.</li> <li><a href=\"https://support.apple.com/en-us/125090\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone 17 Pro</a> та <a href=\"https://support.apple.com/en-us/125091\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone 17 Pro Max</a>.</li> </ul> <p><strong>Перед консультацією:</strong> уточніть фактичну наявність, ціну, комплектацію й умови обслуговування в магазині. Час роботи та швидкість заряджання залежать від умов використання й аксесуарів.</p> ",
+      "reason": "Оновлено дату перевірки саме наведених джерел і додано окремі UA/US специфікації 17e, щоб не переносити eSIM-only на всі регіони.",
+      "sourceUrls": [
+        "https://www.apple.com/iphone-18-pro/specs/",
+        "https://www.apple.com/iphone-duo/specs/",
+        "https://www.apple.com/iphone-air/specs/",
+        "https://www.apple.com/iphone-17/specs/",
+        "https://www.apple.com/ua/iphone-17e/specs/",
+        "https://www.apple.com/iphone-17e/specs/",
+        "https://support.apple.com/en-us/125090",
+        "https://support.apple.com/en-us/125091"
+      ]
+    },
+    {
+      "moduleId": 1,
+      "path": "/contentBlocks/0",
+      "before": {
+        "html": "\n      <p>Мета цього модуля — навчитися добирати iPhone під потреби покупця й пояснювати відмінності моделей зрозумілими словами.</p>\n      <h4>Після навчання ви зможете</h4>\n      <ul>\n        <li>Зіставити бюджет, розмір екрана, камери й автономність із конкретним сценарієм користування.</li>\n        <li>Відрізнити лінійки Pro, Pro Max, Air, Duo, e та попередні покоління.</li>\n        <li>Перевірити стан вживаного пристрою, блокування й сумісність SIM.</li>\n        <li>Пояснити користь технологій без зайвих термінів і непідтверджених обіцянок.</li>\n      </ul>\n      <p><strong>Порядок навчання:</strong> стан пристрою → вибір лінійки → регіональна версія → перевірка → демонстрація переваг.</p>\n    ",
+        "type": "text",
+        "title": "Apple iPhone"
+      },
+      "after": {
+        "learningGuide": {
+          "version": 1,
+          "reviewedAt": "2026-10-25",
+          "objectives": [
+            "З’ясувати потребу покупця й пояснити, яка лінійка iPhone відповідає його сценарію.",
+            "Перевірити стан, блокування та формат SIM конкретного пристрою.",
+            "Показати користь технологій і підготувати покупця до перенесення даних без необґрунтованих обіцянок."
+          ],
+          "prerequisites": "Спеціальна підготовка не потрібна. Якщо ви тільки починаєте, рухайтеся за навчальним маршрутом; під час консультації користуйтеся швидким довідником.",
+          "route": [
+            {
+              "title": "З’ясуйте потребу покупця",
+              "anchor": "module-1-topic-3"
+            },
+            {
+              "title": "Перевірте стан пристрою",
+              "anchor": "module-1-topic-2"
+            },
+            {
+              "title": "Оберіть лінійку",
+              "anchor": "module-1-topic-4"
+            },
+            {
+              "title": "Уточніть SIM і регіон",
+              "anchor": "module-1-topic-5"
+            },
+            {
+              "title": "Поясніть і покажіть технології",
+              "anchor": "module-1-topic-10"
+            },
+            {
+              "title": "Закріпіть знання",
+              "anchor": "module-1-topic-12"
+            }
+          ],
+          "reference": [
+            {
+              "title": "Перевірка вживаного iPhone",
+              "anchor": "module-1-topic-2"
+            },
+            {
+              "title": "SIM і регіональні версії",
+              "anchor": "module-1-topic-5"
+            },
+            {
+              "title": "Номер моделі Axxxx",
+              "anchor": "module-1-topic-7"
+            },
+            {
+              "title": "Блокування та MDM",
+              "anchor": "module-1-topic-8"
+            },
+            {
+              "title": "Дисплеї та ProMotion",
+              "anchor": "module-1-topic-9"
+            },
+            {
+              "title": "Камери, MagSafe та керування",
+              "anchor": "module-1-topic-10"
+            }
+          ],
+          "sources": [
+            {
+              "id": "compare",
+              "title": "Apple — порівняння моделей iPhone",
+              "url": "https://www.apple.com/iphone/compare/",
+              "scope": "Порівняння моделей за конкретними параметрами. Наявність, ціну та комплектацію в PineApple уточнюють окремо.",
+              "anchors": [
+                "module-1-topic-1",
+                "module-1-topic-3",
+                "module-1-topic-4",
+                "module-1-topic-12"
+              ]
+            },
+            {
+              "id": "user-guide",
+              "title": "Посібник користувача iPhone українською",
+              "url": "https://support.apple.com/uk-ua/guide/iphone/welcome/ios",
+              "scope": "Пояснення керування та функцій iOS. Доступність функцій залежить від моделі, системи, мови й регіону.",
+              "anchors": [
+                "module-1-topic-1",
+                "module-1-topic-10",
+                "module-1-topic-11",
+                "module-1-topic-12"
+              ]
+            },
+            {
+              "id": "preowned",
+              "title": "Apple — перевірка вживаного iPhone",
+              "url": "https://support.apple.com/en-us/104999",
+              "scope": "Стан пристрою, активація, акумулятор і перевірки перед купівлею. Внутрішні правила приймання PineApple визначаються окремо.",
+              "anchors": [
+                "module-1-topic-2"
+              ]
+            },
+            {
+              "id": "parts",
+              "title": "Apple — історія деталей і обслуговування",
+              "url": "https://support.apple.com/en-us/102658",
+              "scope": "Значення повідомлень про деталі. Доступний перелік залежить від моделі та версії iOS; одне повідомлення не є повною діагностикою.",
+              "anchors": [
+                "module-1-topic-2"
+              ]
+            },
+            {
+              "id": "dual-sim",
+              "title": "Apple — Dual SIM та eSIM",
+              "url": "https://support.apple.com/en-us/109317",
+              "scope": "Умови роботи двох номерів і підтримка оператора. Тип фізичних SIM перевіряйте за конкретною моделлю та ринком.",
+              "anchors": [
+                "module-1-topic-5",
+                "module-1-topic-6"
+              ]
+            },
+            {
+              "id": "model-id",
+              "title": "Apple — визначення моделі iPhone",
+              "url": "https://support.apple.com/en-us/108044",
+              "scope": "Роки випуску, номери Axxxx та відмінності виконань. Торгова назва Global не замінює перевірку номера моделі.",
+              "anchors": [
+                "module-1-topic-5",
+                "module-1-topic-6",
+                "module-1-topic-7"
+              ]
+            },
+            {
+              "id": "model-number",
+              "title": "Apple — де знайти номер моделі",
+              "url": "https://support.apple.com/en-us/106343",
+              "scope": "Пошук номера Axxxx у параметрах пристрою; артикул і номер моделі мають різне призначення.",
+              "anchors": [
+                "module-1-topic-7"
+              ]
+            },
+            {
+              "id": "carrier-unlock",
+              "title": "Apple — обмеження оператора та розблокування",
+              "url": "https://support.apple.com/en-us/109316",
+              "scope": "Перевірка Carrier Lock. Офіційне розблокування виконує оператор; це окрема перевірка від MDM та Activation Lock.",
+              "anchors": [
+                "module-1-topic-5",
+                "module-1-topic-8"
+              ]
+            },
+            {
+              "id": "device-management",
+              "title": "Apple — корпоративне керування пристроями",
+              "url": "https://support.apple.com/guide/deployment/intro-to-device-management-depc0aadd3fe/1/web/1.0",
+              "scope": "Що дозволяє служба керування організації. Це технічне пояснення MDM, а не джерело внутрішньої політики приймання магазину.",
+              "anchors": [
+                "module-1-topic-8"
+              ]
+            },
+            {
+              "id": "quick-start",
+              "title": "Apple — перенесення даних через Quick Start",
+              "url": "https://support.apple.com/en-us/102659",
+              "scope": "Підготовка пристроїв, пряме перенесення та відновлення з iCloud. Тривалість залежить від мережі й обсягу даних.",
+              "anchors": [
+                "module-1-topic-11",
+                "module-1-topic-12"
+              ]
+            },
+            {
+              "id": "intelligence",
+              "title": "Apple — вимоги та доступність Apple Intelligence",
+              "url": "https://support.apple.com/en-us/121115",
+              "scope": "Потрібні модель, версія системи, підтримувана мова й регіон. Окремі функції можуть мати додаткові вимоги.",
+              "anchors": [
+                "module-1-topic-6",
+                "module-1-topic-11"
+              ]
+            },
+            {
+              "id": "iphone13pro",
+              "title": "iPhone 13 Pro — характеристики Apple",
+              "url": "https://support.apple.com/en-us/111871",
+              "scope": "Приклад ProMotion у Pro-моделі покоління 13. Ця специфікація не описує всі базові моделі iPhone.",
+              "anchors": [
+                "module-1-topic-9"
+              ]
+            },
+            {
+              "id": "iphone17",
+              "title": "iPhone 17 — характеристики Apple (UA)",
+              "url": "https://www.apple.com/ua/iphone-17/specs/",
+              "scope": "Екран, камери та можливості українського виконання. Параметри іншого регіону звіряйте окремо.",
+              "anchors": [
+                "module-1-topic-4",
+                "module-1-topic-9"
+              ]
+            },
+            {
+              "id": "iphone18pro",
+              "title": "iPhone 18 Pro / Pro Max — характеристики Apple (UA)",
+              "url": "https://www.apple.com/ua/iphone-18-pro/specs/",
+              "scope": "Камери, формати зйомки, наближення та відмінності Pro і Pro Max. Оптична якість і цифрове збільшення позначені окремо.",
+              "anchors": [
+                "module-1-topic-4",
+                "module-1-topic-9",
+                "module-1-topic-10"
+              ]
+            },
+            {
+              "id": "air",
+              "title": "iPhone Air — характеристики Apple (UA)",
+              "url": "https://www.apple.com/ua/iphone-air/specs/",
+              "scope": "Екран, корпус, камери та eSIM. Властивості Air не слід переносити на інші лінійки.",
+              "anchors": [
+                "module-1-topic-4",
+                "module-1-topic-5",
+                "module-1-topic-9"
+              ]
+            },
+            {
+              "id": "duo",
+              "title": "iPhone Duo — характеристики Apple (UA)",
+              "url": "https://www.apple.com/ua/iphone-duo/specs/",
+              "scope": "Складаний формат, екрани, камери, Touch ID та eSIM. Анонсовані майбутні функції відрізняйте від доступних зараз.",
+              "anchors": [
+                "module-1-topic-4",
+                "module-1-topic-5",
+                "module-1-topic-9",
+                "module-1-topic-10"
+              ]
+            },
+            {
+              "id": "iphone16e",
+              "title": "iPhone 16e — характеристики Apple",
+              "url": "https://support.apple.com/en-us/122208",
+              "scope": "Заряджання стандарту Qi та інші параметри 16e. Додатковий магнітний чохол не змінює вбудовані можливості телефона.",
+              "anchors": [
+                "module-1-topic-4",
+                "module-1-topic-10"
+              ]
+            },
+            {
+              "id": "iphone17e-ua",
+              "title": "iPhone 17e — характеристики Apple (UA)",
+              "url": "https://www.apple.com/ua/iphone-17e/specs/",
+              "scope": "Українська специфікація: nano-SIM + eSIM, MagSafe та інші параметри саме цього регіонального варіанта.",
+              "anchors": [
+                "module-1-topic-4",
+                "module-1-topic-5",
+                "module-1-topic-6",
+                "module-1-topic-10"
+              ]
+            },
+            {
+              "id": "iphone17e-us",
+              "title": "iPhone 17e — характеристики Apple (US)",
+              "url": "https://www.apple.com/iphone-17e/specs/",
+              "scope": "Американська специфікація: лише eSIM. Вона не підтверджує відсутність фізичної SIM у всіх регіональних версіях 17e.",
+              "anchors": [
+                "module-1-topic-5",
+                "module-1-topic-6"
+              ]
+            }
+          ],
+          "video": {
+            "title": "Перенесення даних на новий iPhone: Quick Start та iCloud",
+            "url": "https://www.youtube.com/watch?v=8UrN8XBP9PE",
+            "author": "Apple Support",
+            "summary": [
+              "На старому iPhone увімкніть Wi-Fi і Bluetooth, розблокуйте його та розмістіть поруч із новим пристроєм.",
+              "Виконайте підказки налаштування, підключення до мережі, активації та налаштування Face ID або Touch ID.",
+              "Узгодьте спосіб: пряме перенесення потребує очікування на обох пристроях; дані з iCloud можуть дозавантажуватися у фоні.",
+              "Тримайте пристрої поруч і під’єднаними до живлення до завершення перенесення. Тривалість залежить від мережі та обсягу даних."
+            ],
+            "exercise": "Поясніть покупцю, що підготувати перед перенесенням і коли він зможе користуватися новим iPhone. Паролі й коди підтвердження покупець вводить самостійно."
+          },
+          "practice": [
+            {
+              "id": "sim-and-transfer",
+              "title": "Фізична SIM і новий iPhone",
+              "situation": "Покупець переходить зі старого iPhone на 17e. Він хоче залишити фізичну SIM і перенести фото та програми.",
+              "prompt": "Які перевірки потрібні до вибору конкретного пристрою та початку перенесення?",
+              "explanation": "Звірте номер моделі й регіон: специфікація Apple UA для 17e передбачає nano-SIM + eSIM, а US — лише eSIM. Окремо перевірте відсутність обмеження оператора. Узгодьте спосіб перенесення й час, підготуйте Wi-Fi, Bluetooth та живлення. Покупець сам вводить облікові дані.",
+              "sourceIds": [
+                "iphone17e-ua",
+                "iphone17e-us",
+                "carrier-unlock",
+                "quick-start"
+              ]
+            },
+            {
+              "id": "used-phone-evidence",
+              "title": "Одного показника недостатньо",
+              "situation": "У вживаного iPhone висока максимальна ємність акумулятора, але система показує повідомлення про невідому деталь.",
+              "prompt": "Як пояснити покупцю стан пристрою та що перевірити перед подальшим оформленням?",
+              "explanation": "Перевірте історію деталей, функції пристрою та результати діагностики за правилами магазину. Unknown може мати кілька причин і сам не доводить конкретне походження деталі. Відсоток акумулятора не підтверджує відсутність ремонту й не є прогнозом годин роботи. Повідомте відомі факти та узгодьте подальші дії з відповідальним працівником.",
+              "sourceIds": [
+                "preowned",
+                "parts"
+              ]
+            },
+            {
+              "id": "zoom-demonstration",
+              "title": "Поясніть наближення без завищених обіцянок",
+              "situation": "Покупець хоче знімати виступи здалеку й запитує, чи цифрові 40× у 18 Pro означають окремий об’єктив із таким наближенням.",
+              "prompt": "Як ви поясните різницю та яку демонстрацію проведете?",
+              "explanation": "Розділіть телефото 4×, режим 8× оптичної якості та цифрове збільшення. Це різні способи формування кадру, а не три окремі телефотооб’єктиви. Покажіть одну сцену за однакових умов і порівняйте деталі. Не обіцяйте однакову якість на всіх значеннях збільшення.",
+              "sourceIds": [
+                "iphone18pro"
+              ]
+            }
+          ]
+        },
+        "type": "text",
+        "title": "Apple iPhone",
+        "html": "\n      <p>Мета цього модуля — навчитися добирати iPhone під потреби покупця й пояснювати відмінності моделей зрозумілими словами.</p>\n      <h4>Після навчання ви зможете</h4>\n      <ul>\n        <li>Зіставити бюджет, розмір екрана, камери й автономність із конкретним сценарієм користування.</li>\n        <li>Відрізнити лінійки Pro, Pro Max, Air, Duo, e та попередні покоління.</li>\n        <li>Перевірити стан вживаного пристрою, блокування й сумісність SIM.</li>\n        <li>Пояснити користь технологій без зайвих термінів і непідтверджених обіцянок.</li>\n      </ul>\n      <p><strong>Порядок навчання:</strong> стан пристрою → вибір лінійки → регіональна версія → перевірка → демонстрація переваг.</p>\n    "
+      },
+      "reason": "Додано навчальний маршрут, довідкові переходи, прив’язані джерела й практичні матеріали без зміни порядку блоків; актуалізовано підтверджені формулювання.",
+      "sourceUrls": [
+        "https://www.apple.com/iphone/compare/",
+        "https://support.apple.com/uk-ua/guide/iphone/welcome/ios",
+        "https://support.apple.com/en-us/104999",
+        "https://support.apple.com/en-us/102658",
+        "https://support.apple.com/en-us/109317",
+        "https://support.apple.com/en-us/108044",
+        "https://support.apple.com/en-us/106343",
+        "https://support.apple.com/en-us/109316",
+        "https://support.apple.com/guide/deployment/intro-to-device-management-depc0aadd3fe/1/web/1.0",
+        "https://support.apple.com/en-us/102659",
+        "https://support.apple.com/en-us/121115",
+        "https://support.apple.com/en-us/111871",
+        "https://www.apple.com/ua/iphone-17/specs/",
+        "https://www.apple.com/ua/iphone-18-pro/specs/",
+        "https://www.apple.com/ua/iphone-air/specs/",
+        "https://www.apple.com/ua/iphone-duo/specs/",
+        "https://support.apple.com/en-us/122208",
+        "https://www.apple.com/ua/iphone-17e/specs/",
+        "https://www.apple.com/iphone-17e/specs/"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/0",
+      "before": {
+        "html": " <p>Каталог охоплює покоління від iPhone X до iPhone 18 Pro та iPhone Duo. Спочатку визначте сценарій покупця, потім порівняйте дві-три відповідні моделі.</p> <ol> <li><strong>Розмір:</strong> екран, маса та зручність у руці.</li> <li><strong>Камери:</strong> потрібні об’єктиви, наближення та формати відео.</li> <li><strong>Щоденне користування:</strong> пам’ять, автономність, SIM і заряджання.</li> <li><strong>Для вживаного:</strong> фактичний стан, акумулятор та історія ремонту.</li> </ol> <p><strong>Новинки 2026 року:</strong> iPhone 18 Pro, 18 Pro Max і складаний iPhone Duo. Старт продажів Duo в Apple заплановано на <strong>23 жовтня 2026 року</strong>; наявність у магазині уточнюйте окремо. В актуальному каталозі Apple станом на 19 жовтня немає базового iPhone 18 або 18 Plus.</p> ",
+        "type": "text",
+        "title": "Як користуватися каталогом моделей"
+      },
+      "after": {
+        "learningGuide": {
+          "version": 1,
+          "reviewedAt": "2026-10-25",
+          "objectives": [
+            "Звузити вибір до двох-трьох моделей за потребою покупця.",
+            "Порівняти характеристики одного покоління й регіонального виконання без змішування параметрів.",
+            "Підтвердити сумісність SIM та аксесуарів і зрозуміло пояснити важливі обмеження."
+          ],
+          "prerequisites": "Базові поняття й перевірки викладено в попередньому модулі про лінійки та технології iPhone. Цей каталог також можна використовувати як довідник під час консультації.",
+          "route": [
+            {
+              "title": "Визначте критерії вибору",
+              "anchor": "module-2-topic-1"
+            },
+            {
+              "title": "Зіставте потреби з лінійкою",
+              "anchor": "module-2-topic-2"
+            },
+            {
+              "title": "Порівняйте конкретні моделі",
+              "anchor": "module-2-topic-3"
+            },
+            {
+              "title": "Перевірте остаточний вибір",
+              "anchor": "module-2-topic-4"
+            }
+          ],
+          "reference": [
+            {
+              "title": "17e: регіон і MagSafe",
+              "anchor": "module-2-topic-3-product-24"
+            },
+            {
+              "title": "16e: заряджання та можливості",
+              "anchor": "module-2-topic-3-product-18"
+            },
+            {
+              "title": "iPhone 17",
+              "anchor": "module-2-topic-3-product-21"
+            },
+            {
+              "title": "Air: формат і камери",
+              "anchor": "module-2-topic-3-product-20"
+            },
+            {
+              "title": "18 Pro / Pro Max",
+              "anchor": "module-2-topic-3-product-22"
+            },
+            {
+              "title": "Duo: складаний формат",
+              "anchor": "module-2-topic-3-product-23"
+            }
+          ],
+          "sources": [
+            {
+              "id": "compare",
+              "title": "Apple — порівняння моделей iPhone",
+              "url": "https://www.apple.com/iphone/compare/",
+              "scope": "Оберіть точні моделі й порівнюйте однакові параметри. Поточну ціну та наявність уточнюйте в PineApple.",
+              "anchors": [
+                "module-2-topic-1",
+                "module-2-topic-2",
+                "module-2-topic-4",
+                "module-2-topic-5"
+              ]
+            },
+            {
+              "id": "model-id",
+              "title": "Apple — визначення моделі iPhone",
+              "url": "https://support.apple.com/en-us/108044",
+              "scope": "Номери Axxxx допомагають звірити покоління й регіональне виконання перед консультацією.",
+              "anchors": [
+                "module-2-topic-1",
+                "module-2-topic-5"
+              ]
+            },
+            {
+              "id": "spec-x",
+              "title": "iPhone X — характеристики Apple",
+              "url": "https://support.apple.com/en-us/111864",
+              "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+              "anchors": [
+                "module-2-topic-3-product-1"
+              ]
+            },
+            {
+              "id": "spec-xs",
+              "title": "iPhone XS — характеристики Apple",
+              "url": "https://support.apple.com/en-us/111881",
+              "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+              "anchors": [
+                "module-2-topic-3-product-2"
+              ]
+            },
+            {
+              "id": "spec-xs-max",
+              "title": "iPhone XS Max — характеристики Apple",
+              "url": "https://support.apple.com/en-us/111880",
+              "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+              "anchors": [
+                "module-2-topic-3-product-2"
+              ]
+            },
+            {
+              "id": "spec-xr",
+              "title": "iPhone XR — характеристики Apple",
+              "url": "https://support.apple.com/en-us/111868",
+              "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+              "anchors": [
+                "module-2-topic-3-product-3"
+              ]
+            },
+            {
+              "id": "spec-11",
+              "title": "iPhone 11 — характеристики Apple",
+              "url": "https://support.apple.com/en-us/111865",
+              "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+              "anchors": [
+                "module-2-topic-3-product-4"
+              ]
+            },
+            {
+              "id": "spec-11-pro",
+              "title": "iPhone 11 Pro — характеристики Apple",
+              "url": "https://support.apple.com/en-us/111879",
+              "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+              "anchors": [
+                "module-2-topic-3-product-5"
+              ]
+            },
+            {
+              "id": "spec-11-pro-max",
+              "title": "iPhone 11 Pro Max — характеристики Apple",
+              "url": "https://support.apple.com/en-us/111878",
+              "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+              "anchors": [
+                "module-2-topic-3-product-5"
+              ]
+            },
+            {
+              "id": "spec-se2",
+              "title": "iPhone SE 2-го покоління — характеристики Apple",
+              "url": "https://support.apple.com/en-us/111882",
+              "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+              "anchors": [
+                "module-2-topic-3-product-6"
+              ]
+            },
+            {
+              "id": "spec-se3",
+              "title": "iPhone SE 3-го покоління — характеристики Apple",
+              "url": "https://support.apple.com/en-us/111866",
+              "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+              "anchors": [
+                "module-2-topic-3-product-7"
+              ]
+            },
+            {
+              "id": "spec-12-mini",
+              "title": "iPhone 12 mini — характеристики Apple",
+              "url": "https://support.apple.com/en-us/111877",
+              "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+              "anchors": [
+                "module-2-topic-3-product-8"
+              ]
+            },
+            {
+              "id": "spec-12",
+              "title": "iPhone 12 — характеристики Apple",
+              "url": "https://support.apple.com/en-us/111876",
+              "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+              "anchors": [
+                "module-2-topic-3-product-8"
+              ]
+            },
+            {
+              "id": "spec-12-pro",
+              "title": "iPhone 12 Pro — характеристики Apple",
+              "url": "https://support.apple.com/en-us/111875",
+              "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+              "anchors": [
+                "module-2-topic-3-product-9"
+              ]
+            },
+            {
+              "id": "spec-12-pro-max",
+              "title": "iPhone 12 Pro Max — характеристики Apple",
+              "url": "https://support.apple.com/en-us/111874",
+              "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+              "anchors": [
+                "module-2-topic-3-product-9"
+              ]
+            },
+            {
+              "id": "spec-13-mini",
+              "title": "iPhone 13 mini — характеристики Apple",
+              "url": "https://support.apple.com/en-us/111873",
+              "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+              "anchors": [
+                "module-2-topic-3-product-10"
+              ]
+            },
+            {
+              "id": "spec-13",
+              "title": "iPhone 13 — характеристики Apple",
+              "url": "https://support.apple.com/en-us/111872",
+              "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+              "anchors": [
+                "module-2-topic-3-product-10"
+              ]
+            },
+            {
+              "id": "spec-13-pro",
+              "title": "iPhone 13 Pro — характеристики Apple",
+              "url": "https://support.apple.com/en-us/111871",
+              "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+              "anchors": [
+                "module-2-topic-3-product-11"
+              ]
+            },
+            {
+              "id": "spec-13-pro-max",
+              "title": "iPhone 13 Pro Max — характеристики Apple",
+              "url": "https://support.apple.com/en-us/111870",
+              "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+              "anchors": [
+                "module-2-topic-3-product-11"
+              ]
+            },
+            {
+              "id": "spec-14",
+              "title": "iPhone 14 — характеристики Apple",
+              "url": "https://support.apple.com/en-us/111850",
+              "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+              "anchors": [
+                "module-2-topic-3-product-12"
+              ]
+            },
+            {
+              "id": "spec-14-plus",
+              "title": "iPhone 14 Plus — характеристики Apple",
+              "url": "https://support.apple.com/en-us/111854",
+              "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+              "anchors": [
+                "module-2-topic-3-product-12"
+              ]
+            },
+            {
+              "id": "spec-14-pro",
+              "title": "iPhone 14 Pro — характеристики Apple",
+              "url": "https://support.apple.com/en-us/111849",
+              "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+              "anchors": [
+                "module-2-topic-3-product-13"
+              ]
+            },
+            {
+              "id": "spec-14-pro-max",
+              "title": "iPhone 14 Pro Max — характеристики Apple",
+              "url": "https://support.apple.com/en-us/111846",
+              "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+              "anchors": [
+                "module-2-topic-3-product-13"
+              ]
+            },
+            {
+              "id": "spec-15",
+              "title": "iPhone 15 — характеристики Apple",
+              "url": "https://support.apple.com/en-us/111831",
+              "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+              "anchors": [
+                "module-2-topic-3-product-14"
+              ]
+            },
+            {
+              "id": "spec-15-plus",
+              "title": "iPhone 15 Plus — характеристики Apple",
+              "url": "https://support.apple.com/en-us/111830",
+              "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+              "anchors": [
+                "module-2-topic-3-product-14"
+              ]
+            },
+            {
+              "id": "spec-15-pro",
+              "title": "iPhone 15 Pro — характеристики Apple",
+              "url": "https://support.apple.com/en-us/111829",
+              "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+              "anchors": [
+                "module-2-topic-3-product-15"
+              ]
+            },
+            {
+              "id": "spec-15-pro-max",
+              "title": "iPhone 15 Pro Max — характеристики Apple",
+              "url": "https://support.apple.com/en-us/111828",
+              "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+              "anchors": [
+                "module-2-topic-3-product-15"
+              ]
+            },
+            {
+              "id": "spec-16",
+              "title": "iPhone 16 — характеристики Apple",
+              "url": "https://support.apple.com/en-us/121029",
+              "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+              "anchors": [
+                "module-2-topic-3-product-16"
+              ]
+            },
+            {
+              "id": "spec-16-plus",
+              "title": "iPhone 16 Plus — характеристики Apple",
+              "url": "https://support.apple.com/en-us/121030",
+              "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+              "anchors": [
+                "module-2-topic-3-product-16"
+              ]
+            },
+            {
+              "id": "spec-16-pro",
+              "title": "iPhone 16 Pro — характеристики Apple",
+              "url": "https://support.apple.com/en-us/121031",
+              "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+              "anchors": [
+                "module-2-topic-3-product-17"
+              ]
+            },
+            {
+              "id": "spec-16-pro-max",
+              "title": "iPhone 16 Pro Max — характеристики Apple",
+              "url": "https://support.apple.com/en-us/121032",
+              "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+              "anchors": [
+                "module-2-topic-3-product-17"
+              ]
+            },
+            {
+              "id": "spec-16e",
+              "title": "iPhone 16e — характеристики Apple",
+              "url": "https://support.apple.com/en-us/122208",
+              "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+              "anchors": [
+                "module-2-topic-3-product-18"
+              ]
+            },
+            {
+              "id": "spec-17-pro",
+              "title": "iPhone 17 Pro — характеристики Apple",
+              "url": "https://support.apple.com/en-us/125090",
+              "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+              "anchors": [
+                "module-2-topic-3-product-19"
+              ]
+            },
+            {
+              "id": "spec-17-pro-max",
+              "title": "iPhone 17 Pro Max — характеристики Apple",
+              "url": "https://support.apple.com/en-us/125091",
+              "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+              "anchors": [
+                "module-2-topic-3-product-19"
+              ]
+            },
+            {
+              "id": "spec-air-ua",
+              "title": "iPhone Air — характеристики Apple (UA)",
+              "url": "https://www.apple.com/ua/iphone-air/specs/",
+              "scope": "Екран, камери, eSIM, корпус і умови вимірювання. Це українська специфікація моделі.",
+              "anchors": [
+                "module-2-topic-2",
+                "module-2-topic-3-product-20"
+              ]
+            },
+            {
+              "id": "spec-17-ua",
+              "title": "iPhone 17 — характеристики Apple (UA)",
+              "url": "https://www.apple.com/ua/iphone-17/specs/",
+              "scope": "Екран ProMotion, камери, пам’ять та інші параметри українського виконання.",
+              "anchors": [
+                "module-2-topic-2",
+                "module-2-topic-3-product-21"
+              ]
+            },
+            {
+              "id": "spec-18-pro-ua",
+              "title": "iPhone 18 Pro / Pro Max — характеристики Apple (UA)",
+              "url": "https://www.apple.com/ua/iphone-18-pro/specs/",
+              "scope": "Відмінності розмірів, камер та автономності українських виконань. Години відео Apple не є прогнозом ігор або навігації.",
+              "anchors": [
+                "module-2-topic-2",
+                "module-2-topic-4",
+                "module-2-topic-3-product-22"
+              ]
+            },
+            {
+              "id": "spec-18-pro-us",
+              "title": "iPhone 18 Pro / Pro Max — характеристики Apple (US)",
+              "url": "https://www.apple.com/iphone-18-pro/specs/",
+              "scope": "Американські виконання. SIM, маса й автономність можуть відрізнятися від інших регіонів; не змішуйте значення різних версій.",
+              "anchors": [
+                "module-2-topic-3-product-22"
+              ]
+            },
+            {
+              "id": "spec-duo-ua",
+              "title": "iPhone Duo — характеристики Apple (UA)",
+              "url": "https://www.apple.com/ua/iphone-duo/specs/",
+              "scope": "Екрани, складаний корпус, камери, Touch ID та eSIM. Перевіряйте поточну доступність окремих програмних можливостей.",
+              "anchors": [
+                "module-2-topic-2",
+                "module-2-topic-4",
+                "module-2-topic-3-product-23"
+              ]
+            },
+            {
+              "id": "spec-17e-ua",
+              "title": "iPhone 17e — характеристики Apple (UA)",
+              "url": "https://www.apple.com/ua/iphone-17e/specs/",
+              "scope": "Українська специфікація: nano-SIM + eSIM і MagSafe. Параметри стосуються відповідної регіональної версії.",
+              "anchors": [
+                "module-2-topic-2",
+                "module-2-topic-3-product-24"
+              ]
+            },
+            {
+              "id": "spec-17e-us",
+              "title": "iPhone 17e — характеристики Apple (US)",
+              "url": "https://www.apple.com/iphone-17e/specs/",
+              "scope": "Американська специфікація: лише eSIM. Для пристрою з фізичною SIM використовуйте відповідну регіональну специфікацію.",
+              "anchors": [
+                "module-2-topic-3-product-24"
+              ]
+            }
+          ],
+          "practice": [
+            {
+              "id": "16e-or-17e",
+              "title": "Вибір із потрібним аксесуаром",
+              "situation": "Покупець порівнює 16e та 17e й хоче користуватися сумісним магнітним зарядним пристроєм та фізичною SIM.",
+              "prompt": "Які відмінності перевірите та що уточните перед рекомендацією?",
+              "explanation": "У 16e Apple зазначає бездротове заряджання Qi, а 17e підтримує MagSafe. Для 17e також звірте регіон: у специфікації UA є nano-SIM + eSIM, у US — лише eSIM. Після цього порівняйте стан, потрібну пам’ять, фактичну ціну й сумісність конкретного аксесуара.",
+              "sourceIds": [
+                "spec-16e",
+                "spec-17e-ua",
+                "spec-17e-us"
+              ]
+            },
+            {
+              "id": "pro-or-pro-max",
+              "title": "Великий екран без зайвих компромісів",
+              "situation": "Покупець обирає між 18 Pro та Pro Max: дивиться відео в дорозі, але часто користується телефоном однією рукою.",
+              "prompt": "Як побудувати порівняння й пояснити показники автономності?",
+              "explanation": "Дайте оцінити габарити й масу обох пристроїв у руці, порівняйте розмір екрана та автономність того самого регіонального виконання. Години відтворення відео Apple — лабораторний орієнтир, а не обіцянка такої самої роботи навігації чи мобільних ігор. Вибір обґрунтуйте потребою, а не лише назвою Pro Max.",
+              "sourceIds": [
+                "spec-18-pro-ua",
+                "spec-18-pro-us",
+                "compare"
+              ]
+            }
+          ],
+          "models3d": [
+            {
+              "title": "iPhone 18 Pro — огляд корпусу у виробника",
+              "url": "https://www.apple.com/iphone-18-pro/",
+              "variant": "Офіційний AR-макет Apple: US / eSIM.",
+              "note": "На сторінці Apple оберіть View in your space. Перегляд залежить від пристрою та браузера; розташування SIM-лотка іншої регіональної версії перевіряйте окремо."
+            },
+            {
+              "title": "iPhone Duo — огляд складаного корпусу у виробника",
+              "url": "https://www.apple.com/iphone-duo/",
+              "variant": "Офіційний AR-макет Apple: US / eSIM.",
+              "note": "На сторінці Apple оберіть View in your space. Це зовнішній перегляд виробника; можливості відображення залежать від пристрою та браузера."
+            }
+          ]
+        },
+        "type": "text",
+        "title": "Як користуватися каталогом моделей",
+        "html": " <p>Каталог охоплює покоління від iPhone X до iPhone 18 Pro та iPhone Duo. Спочатку визначте сценарій покупця, потім порівняйте дві-три відповідні моделі.</p> <ol> <li><strong>Розмір:</strong> екран, маса та зручність у руці.</li> <li><strong>Камери:</strong> потрібні об’єктиви, наближення та формати відео.</li> <li><strong>Щоденне користування:</strong> пам’ять, автономність, SIM і заряджання.</li> <li><strong>Для вживаного:</strong> фактичний стан, акумулятор та історія ремонту.</li> </ol> <p><strong>Новинки 2026 року:</strong> iPhone 18 Pro, 18 Pro Max і складаний iPhone Duo. Продажі Duo в Apple розпочалися <strong>23 жовтня 2026 року</strong>; наявність конкретної моделі в PineApple уточнюйте окремо.</p> "
+      },
+      "reason": "Додано навчальний маршрут, довідкові переходи, прив’язані джерела й практичні матеріали без зміни порядку блоків; актуалізовано підтверджені формулювання.",
+      "sourceUrls": [
+        "https://www.apple.com/iphone/compare/",
+        "https://support.apple.com/en-us/108044",
+        "https://support.apple.com/en-us/111864",
+        "https://support.apple.com/en-us/111881",
+        "https://support.apple.com/en-us/111880",
+        "https://support.apple.com/en-us/111868",
+        "https://support.apple.com/en-us/111865",
+        "https://support.apple.com/en-us/111879",
+        "https://support.apple.com/en-us/111878",
+        "https://support.apple.com/en-us/111882",
+        "https://support.apple.com/en-us/111866",
+        "https://support.apple.com/en-us/111877",
+        "https://support.apple.com/en-us/111876",
+        "https://support.apple.com/en-us/111875",
+        "https://support.apple.com/en-us/111874",
+        "https://support.apple.com/en-us/111873",
+        "https://support.apple.com/en-us/111872",
+        "https://support.apple.com/en-us/111871",
+        "https://support.apple.com/en-us/111870",
+        "https://support.apple.com/en-us/111850",
+        "https://support.apple.com/en-us/111854",
+        "https://support.apple.com/en-us/111849",
+        "https://support.apple.com/en-us/111846",
+        "https://support.apple.com/en-us/111831",
+        "https://support.apple.com/en-us/111830",
+        "https://support.apple.com/en-us/111829",
+        "https://support.apple.com/en-us/111828",
+        "https://support.apple.com/en-us/121029",
+        "https://support.apple.com/en-us/121030",
+        "https://support.apple.com/en-us/121031",
+        "https://support.apple.com/en-us/121032",
+        "https://support.apple.com/en-us/122208",
+        "https://support.apple.com/en-us/125090",
+        "https://support.apple.com/en-us/125091",
+        "https://www.apple.com/ua/iphone-air/specs/",
+        "https://www.apple.com/ua/iphone-17/specs/",
+        "https://www.apple.com/ua/iphone-18-pro/specs/",
+        "https://www.apple.com/iphone-18-pro/specs/",
+        "https://www.apple.com/ua/iphone-duo/specs/",
+        "https://www.apple.com/ua/iphone-17e/specs/",
+        "https://www.apple.com/iphone-17e/specs/"
+      ]
+    }
+  ]
+}

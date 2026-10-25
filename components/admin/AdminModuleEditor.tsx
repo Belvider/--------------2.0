@@ -37,6 +37,8 @@ import type {
   VideoBlock
 } from "@/lib/module-content";
 import { AdminImageField } from "@/components/admin/AdminImageField";
+import { LearningGuideEditor } from "@/components/admin/LearningGuideEditor";
+import { parseLearningGuide, type LearningGuide } from "@/lib/learning-guide";
 import { parseModuleContentBlocks } from "@/lib/module-content";
 import { createEmptyQuizQuestion, normalizeQuizQuestion, serializeQuizQuestions, validateQuizQuestions, type EditableQuestionType, type EditableQuizQuestion } from "@/lib/quiz-editor";
 import { getRequestError, requestJson } from "@/lib/http-client";
@@ -273,7 +275,7 @@ function normalizeProduct(value: unknown, index: number): ModuleCatalogProduct {
   };
 }
 
-function normalizeBlock(block: ModuleContentBlock, index: number): ModuleContentBlock {
+function normalizeBlockContent(block: ModuleContentBlock, index: number): ModuleContentBlock {
   switch (block.type) {
     case "video":
       return {
@@ -318,8 +320,65 @@ function normalizeBlock(block: ModuleContentBlock, index: number): ModuleContent
   }
 }
 
-function normalizeBlocks(value: unknown) {
+function normalizeBlock(block: ModuleContentBlock, index: number): ModuleContentBlock {
+  const normalized = normalizeBlockContent(block, index);
+  // Preserve the draft verbatim. Required fields can be temporarily empty while
+  // editing; validate before save instead of silently dropping those edits.
+  if (Object.hasOwn(block, "learningGuide")) normalized.learningGuide = block.learningGuide;
+  return normalized;
+}
+
+export function normalizeModuleEditorBlocks(value: unknown) {
   return parseModuleContentBlocks(value).map((block, index) => normalizeBlock(block, index));
+}
+
+export function remapEditorGuideTargets(blocks: ModuleContentBlock[], transform: (anchor: string) => string | null): ModuleContentBlock[] {
+  return blocks.map(block => {
+    const guide = block.learningGuide;
+    if (!guide) return block;
+    const routes = (items: LearningGuide["route"]) => items.flatMap(item => {
+      const anchor = transform(item.anchor);
+      return anchor ? [{ ...item, anchor }] : [];
+    });
+    return { ...block, learningGuide: { ...guide, route: routes(guide.route), reference: routes(guide.reference),
+      sources: guide.sources.map(source => ({ ...source, anchors: source.anchors.flatMap(anchor => {
+        const next = transform(anchor); return next ? [next] : [];
+      }) })) } };
+  });
+}
+
+export function reorderModuleEditorBlocks(before: ModuleContentBlock[], after: ModuleContentBlock[], moduleId: number, content = after) {
+  return remapEditorGuideTargets(content, anchor => {
+    const match = anchor.match(new RegExp(`^module-${moduleId}-topic-(\\d+)(?=-|$)`));
+    if (!match) return anchor;
+    const original = before[Number(match[1]) - 1];
+    const index = original ? after.indexOf(original) : -1;
+    return index < 0 ? null : anchor.replace(match[0], `module-${moduleId}-topic-${index + 1}`);
+  });
+}
+
+export function removeModuleEditorBlock(blocks: ModuleContentBlock[], index: number, moduleId: number) {
+  const removed = blocks[index];
+  if (!removed || (removed.learningGuide && blocks.length === 1)) return blocks;
+  const remaining = blocks.filter((_, currentIndex) => currentIndex !== index);
+  const content = removed.learningGuide && !remaining.some(block => block.learningGuide)
+    ? remaining.map((block, i) => i === 0 ? { ...block, learningGuide: removed.learningGuide } : block) : remaining;
+  // `remaining` retains object identity for the position map; `content` may
+  // carry the removed host's guide without changing any surviving lesson.
+  return reorderModuleEditorBlocks(blocks, remaining, moduleId, content);
+}
+
+export function reorderModuleEditorProducts(blocks: ModuleContentBlock[], blockIndex: number, products: ModuleCatalogProduct[], moduleId: number) {
+  const catalog = blocks[blockIndex];
+  if (!catalog || catalog.type !== "productCatalog") return blocks;
+  const next = blocks.map((block, index) => index === blockIndex ? { ...catalog, products } : block);
+  return remapEditorGuideTargets(next, anchor => {
+    const match = anchor.match(new RegExp(`^module-${moduleId}-topic-${blockIndex + 1}-product-(\\d+)(?=-|$)`));
+    if (!match) return anchor;
+    const original = catalog.products[Number(match[1]) - 1];
+    const index = original ? products.indexOf(original) : -1;
+    return index < 0 ? null : anchor.replace(match[0], `module-${moduleId}-topic-${blockIndex + 1}-product-${index + 1}`);
+  });
 }
 
 function getBlockMeta(type: ModuleBlockType) {
@@ -397,7 +456,7 @@ export function AdminModuleEditor({ module, categories }: AdminModuleEditorProps
   const [sortOrder, setSortOrder] = useState(String(module.sortOrder));
   const [isPublished, setIsPublished] = useState(module.isPublished);
   const [categoryId, setCategoryId] = useState(String(module.categoryId));
-  const [blocks, setBlocks] = useState<ModuleContentBlock[]>(() => normalizeBlocks(module.contentBlocks));
+  const [blocks, setBlocks] = useState<ModuleContentBlock[]>(() => normalizeModuleEditorBlocks(module.contentBlocks));
   const [quizQuestions, setQuizQuestions] = useState<EditableQuizQuestion[]>(() =>
     module.questions
       .map((question, index) => normalizeQuizQuestion(question, index))
@@ -413,7 +472,7 @@ export function AdminModuleEditor({ module, categories }: AdminModuleEditorProps
     setSortOrder(String(module.sortOrder));
     setIsPublished(module.isPublished);
     setCategoryId(String(module.categoryId));
-    setBlocks(normalizeBlocks(module.contentBlocks));
+    setBlocks(normalizeModuleEditorBlocks(module.contentBlocks));
     setQuizQuestions(module.questions.map(normalizeQuizQuestion));
     setSavedQuestionIds(module.questions.map((question) => question.id));
   }, [module]);
@@ -442,13 +501,27 @@ export function AdminModuleEditor({ module, categories }: AdminModuleEditorProps
   );
 
   const quizQuestionsCount = quizQuestions.length;
+  const learningGuide = blocks.find(block => block.learningGuide !== undefined)?.learningGuide;
+
+  function updateLearningGuide(value: LearningGuide | undefined) {
+    setBlocks(previous => {
+      if (!previous.length) return previous;
+      const host = Math.max(0, previous.findIndex(block => block.learningGuide !== undefined));
+      return previous.map((block, index) => {
+        const next = { ...block }; delete next.learningGuide;
+        if (value && index === host) next.learningGuide = value;
+        return next;
+      });
+    });
+  }
 
   function updateBlockAt(index: number, updater: (block: ModuleContentBlock) => ModuleContentBlock) {
     setBlocks((prev) => prev.map((block, currentIndex) => (currentIndex === index ? normalizeBlock(updater(block), currentIndex) : block)));
   }
 
   function replaceBlock(index: number, block: ModuleContentBlock) {
-    setBlocks((prev) => prev.map((item, currentIndex) => (currentIndex === index ? normalizeBlock(block, currentIndex) : item)));
+    setBlocks((prev) => prev.map((item, currentIndex) => (currentIndex === index ? normalizeBlock({ ...block,
+      ...(item.learningGuide ? { learningGuide: item.learningGuide } : {}) }, currentIndex) : item)));
   }
 
   function addBlock(type: ModuleBlockType) {
@@ -456,7 +529,11 @@ export function AdminModuleEditor({ module, categories }: AdminModuleEditorProps
   }
 
   function removeBlock(index: number) {
-    setBlocks((prev) => prev.filter((_, currentIndex) => currentIndex !== index));
+    if (blocks.length === 1 && blocks[index]?.learningGuide) {
+      setError("Спершу додайте інший блок або приберіть навчальний супровід, щоб не втратити маршрут і джерела.");
+      return;
+    }
+    setBlocks((prev) => removeModuleEditorBlock(prev, index, module.id));
   }
 
   function moveBlock(index: number, direction: "up" | "down") {
@@ -470,7 +547,7 @@ export function AdminModuleEditor({ module, categories }: AdminModuleEditorProps
       const next = [...prev];
       const [item] = next.splice(index, 1);
       next.splice(targetIndex, 0, item);
-      return next;
+      return reorderModuleEditorBlocks(prev, next, module.id);
     });
   }
 
@@ -483,7 +560,7 @@ export function AdminModuleEditor({ module, categories }: AdminModuleEditorProps
       const next = [...prev];
       const [item] = next.splice(fromIndex, 1);
       next.splice(toIndex, 0, item);
-      return next;
+      return reorderModuleEditorBlocks(prev, next, module.id);
     });
   }
 
@@ -590,31 +667,29 @@ export function AdminModuleEditor({ module, categories }: AdminModuleEditorProps
   }
 
   function removeCatalogProduct(blockIndex: number, productIndex: number) {
-    updateCatalogBlock(blockIndex, (block) => ({
-      ...block,
-      products:
-        block.products.length === 1
-          ? [createEmptyProduct()]
-          : block.products.filter((_, currentIndex) => currentIndex !== productIndex)
-    }));
+    setBlocks(previous => {
+      const block = previous[blockIndex];
+      if (!block || block.type !== "productCatalog") return previous;
+      const products = block.products.length === 1 ? [createEmptyProduct()] : block.products.filter((_, index) => index !== productIndex);
+      return reorderModuleEditorProducts(previous, blockIndex, products, module.id);
+    });
   }
 
   function moveCatalogProduct(blockIndex: number, productIndex: number, direction: "up" | "down") {
-    updateCatalogBlock(blockIndex, (block) => {
+    setBlocks(previous => {
+      const block = previous[blockIndex];
+      if (!block || block.type !== "productCatalog") return previous;
       const targetIndex = direction === "up" ? productIndex - 1 : productIndex + 1;
 
       if (targetIndex < 0 || targetIndex >= block.products.length) {
-        return block;
+        return previous;
       }
 
       const nextProducts = [...block.products];
       const [item] = nextProducts.splice(productIndex, 1);
       nextProducts.splice(targetIndex, 0, item);
 
-      return {
-        ...block,
-        products: nextProducts
-      };
+      return reorderModuleEditorProducts(previous, blockIndex, nextProducts, module.id);
     });
   }
 
@@ -762,6 +837,12 @@ export function AdminModuleEditor({ module, categories }: AdminModuleEditorProps
   }
 
   function saveModule() {
+    const guides = blocks.filter(block => Object.hasOwn(block, "learningGuide"));
+    if (guides.length > 1 || guides.some(block => !parseLearningGuide(block.learningGuide, module.id))) {
+      setError("Перевірте навчальний супровід: потрібні коректна дата, 1–3 цілі, заповнені поля, HTTPS-посилання й переходи в межах цього модуля. Супровід має бути лише в одному блоці.");
+      setNotice(null);
+      return;
+    }
     const submittedDrafts = quizQuestions;
     const questions = serializeQuizQuestions(submittedDrafts);
     const validationError = validateQuizQuestions(questions);
@@ -806,6 +887,7 @@ export function AdminModuleEditor({ module, categories }: AdminModuleEditorProps
 
   return (
     <section className="space-y-4">
+      <LearningGuideEditor value={learningGuide} moduleId={module.id} blocks={blocks} onChange={updateLearningGuide} />
       <section className="card relative overflow-hidden px-5 py-6 sm:px-6 sm:py-7 xl:px-8 xl:py-8">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(40,178,158,0.16),transparent_26%),linear-gradient(145deg,rgba(255,255,255,0.04),transparent_54%)]" />
 
@@ -969,7 +1051,7 @@ export function AdminModuleEditor({ module, categories }: AdminModuleEditorProps
                 </div>
                 <div>
                   <p className="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-slate-500">Конструктор блоків</p>
-                  <h2 className="mt-1 font-[var(--font-heading)] text-2xl font-semibold text-ink">contentBlocks без JSON</h2>
+                  <h2 className="mt-1 font-[var(--font-heading)] text-2xl font-semibold text-ink">Матеріал модуля</h2>
                 </div>
               </div>
               <p className="mt-4 max-w-3xl text-sm leading-7 text-slate-600">

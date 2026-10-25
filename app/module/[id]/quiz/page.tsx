@@ -61,11 +61,10 @@ export default async function ModuleQuizPage({ params }: PageProps) {
 
           <div className="mt-5 grid gap-6 xl:grid-cols-[minmax(0,1fr)_320px] xl:items-start">
             <div className="max-w-3xl">
-              <span className="portal-chip">Окремий етап</span>
-              <h1 className="portal-page-title mt-4">Перевірка знань по модулю</h1>
+              <span className="portal-chip">Перевірка знань</span>
+              <h1 className="portal-page-title mt-4">Тест за модулем</h1>
               <p className="portal-subtitle mt-4">
-                Тест винесено в окремий спокійний контур, щоб читання матеріалу і фінальна перевірка відчувалися як два
-                чітких етапи одного якісного навчального маршруту.
+                Перевірте, як ви застосовуєте матеріал у консультації. Якщо потрібно освіжити знання, поверніться до теми перед початком тесту.
               </p>
 
               <div className="mt-5 flex flex-wrap gap-3 text-sm text-slate-600">

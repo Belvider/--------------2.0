@@ -1,4 +1,6 @@
 import type { ModuleCatalogProduct, ModuleContentBlock } from "../module-content";
+import { parseLearningGuide } from "../learning-guide";
+import iphoneLearningGuides from "../../content/learning-guides/iphone.json";
 
 export const iphoneProductCatalog: ModuleCatalogProduct[] = [
   {
@@ -641,7 +643,7 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
       "MagSafe та Qi2 до 25 Вт",
       "Камери: основна 48 Мп Fusion + ультраширока 48 Мп; наближення 2× оптичної якості",
       "Портрети нового покоління, нічний режим",
-      "Dolby Vision до 4K 120 кадрів/с",
+      "Dolby Vision до 4K 120 кадрів/с на основній камері",
       "Зовнішня фронтальна камера: 12 Мп Center Stage; внутрішня FaceTime — під екраном",
       "Ceramic Shield 2 спереду, Ceramic Shield ззаду",
       "IP68",
@@ -688,6 +690,7 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
 
 export const iphoneFoundationBlocks: ModuleContentBlock[] = [
   {
+    learningGuide: parseLearningGuide(iphoneLearningGuides["1"], 1) ?? undefined,
     type: "text",
     title: "Apple iPhone",
     html: `
@@ -777,7 +780,7 @@ export const iphoneFoundationBlocks: ModuleContentBlock[] = [
     type: "facts",
     title: "Специфічні регіональні особливості",
     items: [
-      "Регіон перевіряйте за номером моделі Axxxx та офіційними характеристиками, а не лише за країною продавця.",
+      "Апаратний варіант перевіряйте за номером Axxxx та офіційними характеристиками; один номер може охоплювати кілька ринків.",
       "Підтримка eSIM і фізичних SIM різниться навіть усередині одного покоління. Для Air та Duo одразу обговоріть eSIM.",
       "Підтримка частот 5G сама по собі не гарантує доступ до 5G: потрібні сумісний оператор, тариф і покриття.",
       "Apple Intelligence, Siri, супутникові функції та окремі сервіси залежать від моделі, мови й регіону. Перевіряйте потрібну функцію перед обіцянкою покупцю.",
@@ -787,12 +790,12 @@ export const iphoneFoundationBlocks: ModuleContentBlock[] = [
   },
   {
     type: "text",
-    title: "Як визначити регіон за номером моделі",
+    title: "Як перевірити модель і регіональну версію",
     html: `
       <ol>
         <li>Відкрийте «Налаштування» → «Загальні» → «Про пристрій».</li>
         <li>У полі «Номер моделі» спочатку видно артикул, наприклад із закінченням <strong>/A</strong>. Натисніть на нього, щоб побачити номер <strong>Axxxx</strong>.</li>
-        <li>Знайдіть Axxxx у <a href="https://support.apple.com/en-us/108044" target="_blank" rel="noopener noreferrer">довіднику моделей Apple</a> і звірте конфігурацію SIM та інші відмінності.</li>
+        <li>Знайдіть Axxxx у <a href="https://support.apple.com/en-us/108044" target="_blank" rel="noopener noreferrer">довіднику моделей Apple</a> і звірте конфігурацію SIM та інші відмінності. Один апаратний варіант може охоплювати кілька країн; ринок продажу уточнюйте за артикулом і документами.</li>
       </ol>
       <p><strong>Артикул і стан — різні речі.</strong> Початкова літера артикула не доводить, що iPhone зараз новий, не ремонтувався або не був активований. Фактичний стан, історію обслуговування та активацію перевіряють окремо.</p>
       <p>Інструкція: <a href="https://support.apple.com/en-us/106343" target="_blank" rel="noopener noreferrer">де знайти номер моделі</a>.</p>
@@ -811,7 +814,7 @@ export const iphoneFoundationBlocks: ModuleContentBlock[] = [
         <li>Якщо під час налаштування з’являється «Віддалене керування», передайте питання відповідальному працівнику. Зняти корпоративну прив’язку має організація-власник.</li>
       </ul>
       <h4>R-SIM — обхід обмеження оператора</h4>
-      <p>Це адаптер для SIM-картки, що використовується для роботи заблокованого під оператора iPhone в іншій мережі. Він не є офіційним розблокуванням оператором; після оновлення або повторної активації зв’язок може перестати працювати.</p>
+      <p>Це адаптер для SIM-картки, що використовується для роботи заблокованого під оператора iPhone в іншій мережі. Адаптер не є офіційним розблокуванням: розблокувати iPhone для використання з іншим оператором може лише оператор, до якого прив’язаний пристрій.</p>
       <p><strong>Перевірка:</strong> огляньте лоток SIM і статус блокування оператором. У разі сумніву припиніть приймання та зверніться до відповідального працівника.</p>
     `
   },
@@ -828,7 +831,7 @@ export const iphoneFoundationBlocks: ModuleContentBlock[] = [
           <tr><td><strong>Діагональ і форма</strong></td><td>Великий екран зручний для відео, але впливає на габарити. У Duo є окремі внутрішній і зовнішній екрани.</td><td>Дайте потримати пристрій, набрати текст і оцінити розмір у кишені.</td></tr>
         </tbody>
       </table>
-      <p><strong>Важливо:</strong> Ceramic Shield та захист IP68 не роблять пристрій невразливим до падінь або води. Не демонструйте захист зануренням чи ударами.</p>
+      <p><strong>Важливо:</strong> Ceramic Shield та захист IP68 не роблять пристрій невразливим до падінь або води. Клас IP визначають у лабораторних умовах; водостійкість може знижуватися зі зношенням. Не демонструйте захист зануренням чи ударами.</p>
     `
   },
   {
@@ -883,9 +886,10 @@ export const iphoneFoundationBlocks: ModuleContentBlock[] = [
 
 export const iphoneCatalogBlocks: ModuleContentBlock[] = [
   {
+    learningGuide: parseLearningGuide(iphoneLearningGuides["2"], 2) ?? undefined,
     type: "text",
     title: "Як користуватися каталогом моделей",
-    html: " <p>Каталог охоплює покоління від iPhone X до iPhone 18 Pro та iPhone Duo. Спочатку визначте сценарій покупця, потім порівняйте дві-три відповідні моделі.</p> <ol> <li><strong>Розмір:</strong> екран, маса та зручність у руці.</li> <li><strong>Камери:</strong> потрібні об’єктиви, наближення та формати відео.</li> <li><strong>Щоденне користування:</strong> пам’ять, автономність, SIM і заряджання.</li> <li><strong>Для вживаного:</strong> фактичний стан, акумулятор та історія ремонту.</li> </ol> <p><strong>Новинки 2026 року:</strong> iPhone 18 Pro, 18 Pro Max і складаний iPhone Duo. Старт продажів Duo в Apple заплановано на <strong>23 жовтня 2026 року</strong>; наявність у магазині уточнюйте окремо. В актуальному каталозі Apple станом на 19 жовтня немає базового iPhone 18 або 18 Plus.</p> "
+    html: " <p>Каталог охоплює покоління від iPhone X до iPhone 18 Pro та iPhone Duo. Спочатку визначте сценарій покупця, потім порівняйте дві-три відповідні моделі.</p> <ol> <li><strong>Розмір:</strong> екран, маса та зручність у руці.</li> <li><strong>Камери:</strong> потрібні об’єктиви, наближення та формати відео.</li> <li><strong>Щоденне користування:</strong> пам’ять, автономність, SIM і заряджання.</li> <li><strong>Для вживаного:</strong> фактичний стан, акумулятор та історія ремонту.</li> </ol> <p><strong>Новинки 2026 року:</strong> iPhone 18 Pro, 18 Pro Max і складаний iPhone Duo. Продажі Duo в Apple розпочалися <strong>23 жовтня 2026 року</strong>; наявність конкретної моделі в PineApple уточнюйте окремо.</p> "
   },
   {
     type: "facts",
@@ -917,7 +921,7 @@ export const iphoneCatalogBlocks: ModuleContentBlock[] = [
   {
     type: "text",
     title: "Офіційні характеристики та актуальність",
-    html: " <p>Дані про новинки та моделі 2025–2026 років актуальні на <strong>19 жовтня 2026 року</strong>. Офіційні специфікації допоможуть перевірити регіональну версію та доступність потрібних функцій.</p> <ul> <li><a href=\"https://www.apple.com/iphone-18-pro/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone 18 Pro та 18 Pro Max — характеристики</a> · <a href=\"https://www.apple.com/newsroom/2026/09/apple-debuts-iphone-18-pro-and-iphone-18-pro-max/\" target=\"_blank\" rel=\"noopener noreferrer\">анонс Apple</a>.</li> <li><a href=\"https://www.apple.com/iphone-duo/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone Duo — характеристики</a> · <a href=\"https://www.apple.com/iphone-duo/\" target=\"_blank\" rel=\"noopener noreferrer\">можливості та старт продажів</a>.</li> <li><a href=\"https://www.apple.com/iphone-air/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone Air</a>, <a href=\"https://www.apple.com/iphone-17/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone 17</a> та <a href=\"https://www.apple.com/iphone-17e/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone 17e</a>.</li> <li><a href=\"https://support.apple.com/en-us/125090\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone 17 Pro</a> та <a href=\"https://support.apple.com/en-us/125091\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone 17 Pro Max</a>.</li> </ul> <p><strong>Перед консультацією:</strong> уточніть фактичну наявність, ціну, комплектацію й умови обслуговування в магазині. Час роботи та швидкість заряджання залежать від умов використання й аксесуарів.</p> "
+    html: " <p>Наведені офіційні джерела повторно переглянуто <strong>25 жовтня 2026 року</strong>. Для характеристик і доступності функцій звіряйте саме потрібну модель та регіональну версію.</p> <ul> <li><a href=\"https://www.apple.com/iphone-18-pro/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone 18 Pro та 18 Pro Max — характеристики</a> · <a href=\"https://www.apple.com/newsroom/2026/09/apple-debuts-iphone-18-pro-and-iphone-18-pro-max/\" target=\"_blank\" rel=\"noopener noreferrer\">анонс Apple</a>.</li> <li><a href=\"https://www.apple.com/iphone-duo/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone Duo — характеристики</a> · <a href=\"https://www.apple.com/iphone-duo/\" target=\"_blank\" rel=\"noopener noreferrer\">можливості та старт продажів</a>.</li> <li><a href=\"https://www.apple.com/iphone-air/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone Air</a>, <a href=\"https://www.apple.com/iphone-17/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone 17</a> та iPhone 17e: <a href=\"https://www.apple.com/ua/iphone-17e/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">версія UA — nano-SIM + eSIM</a>, <a href=\"https://www.apple.com/iphone-17e/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">версія US — лише eSIM</a>.</li> <li><a href=\"https://support.apple.com/en-us/125090\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone 17 Pro</a> та <a href=\"https://support.apple.com/en-us/125091\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone 17 Pro Max</a>.</li> </ul> <p><strong>Перед консультацією:</strong> уточніть фактичну наявність, ціну, комплектацію й умови обслуговування в магазині. Час роботи та швидкість заряджання залежать від умов використання й аксесуарів.</p> "
   }
 ];
 
