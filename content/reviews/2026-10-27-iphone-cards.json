@@ -1,0 +1,2995 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-10-27",
+  "baseline": "d95ff78a4d733a8b776f2f16061b05ff10ea412d",
+  "modules": [
+    {
+      "id": 2,
+      "categoryId": 1,
+      "brandSlug": "apple",
+      "categorySlug": "iphone",
+      "questionIds": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    }
+  ],
+  "edits": [
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/0/overview/0",
+      "before": "Діагональ: 5.8″",
+      "after": "Діагональ: 5,8″",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111864"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/0/overview/2",
+      "before": "Пам’ять: 64 GB, 256 GB",
+      "after": "Пам’ять: 64 ГБ, 256 ГБ",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111864"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/0/highlights/0",
+      "before": "Super Retina HD",
+      "after": "OLED Super Retina HD",
+      "reason": "Уточнено тип матриці, підтверджений Apple.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111864"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/0/highlights/4",
+      "before": "2 стереодинаміки",
+      "after": "Стереодинаміки",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111864"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/0/highlights/5",
+      "before": "Сталева рамка, скляний глянцевий корпус",
+      "after": "Сталева рамка, глянцева скляна задня панель",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111864"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/0/highlights/6",
+      "before": "Основна камера 12 Мп + телефото",
+      "after": "Основна камера 12 Мп + телефото 12 Мп",
+      "reason": "Обидві задні камери мають роздільну здатність 12 Мп.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111864"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/0/highlights/8",
+      "before": "Фронтальна камера TrueDepth",
+      "after": "Фронтальна камера TrueDepth 7 Мп",
+      "reason": "Уточнено роздільну здатність фронтальної камери.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111864"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/0/highlights/9",
+      "before": "IP67 (до 1 м на 30 хв)",
+      "after": "IP67 (до 1 м на 30 хв у лабораторних умовах)",
+      "reason": "Уточнено лабораторні умови класу захисту.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111864"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/1/overview/0",
+      "before": "Діагональ: XS — 5.8″; XS Max — 6.5″",
+      "after": "Діагональ: XS — 5,8″; XS Max — 6,5″",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111881",
+        "https://support.apple.com/en-us/111880"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/1/overview/2",
+      "before": "Пам’ять: 64 GB, 256 GB, 512 GB",
+      "after": "Пам’ять: 64 ГБ, 256 ГБ, 512 ГБ",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111881",
+        "https://support.apple.com/en-us/111880"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/1/highlights/4",
+      "before": "2 стереодинаміки",
+      "after": "Стереодинаміки",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111881",
+        "https://support.apple.com/en-us/111880"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/1/highlights/5",
+      "before": "Сталева рамка, скляний глянцевий корпус",
+      "after": "Сталева рамка, глянцева скляна задня панель",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111881",
+        "https://support.apple.com/en-us/111880"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/1/highlights/6",
+      "before": "Основна камера 12 Мп + телефото",
+      "after": "Основна камера 12 Мп + телефото 12 Мп",
+      "reason": "Обидві задні камери мають роздільну здатність 12 Мп.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111881",
+        "https://support.apple.com/en-us/111880"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/1/highlights/8",
+      "before": "Фронтальна камера TrueDepth",
+      "after": "Фронтальна камера TrueDepth 7 Мп",
+      "reason": "Уточнено роздільну здатність фронтальної камери.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111881",
+        "https://support.apple.com/en-us/111880"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/1/highlights/9",
+      "before": "IP68 (до 2 м на 30 хв)",
+      "after": "IP68 (до 2 м на 30 хв у лабораторних умовах)",
+      "reason": "Уточнено лабораторні умови класу захисту.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111881",
+        "https://support.apple.com/en-us/111880"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/2/colors/2/label",
+      "before": "Red",
+      "after": "(PRODUCT)RED",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111868"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/2/colors/2/caption",
+      "before": "Колір: Red",
+      "after": "Колір: (PRODUCT)RED",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111868"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/2/overview/0",
+      "before": "Діагональ: 6.1″",
+      "after": "Діагональ: 6,1″",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111868"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/2/overview/1",
+      "before": "Кольори: Black, White, Red, Blue, Yellow, Coral",
+      "after": "Кольори: Black, White, (PRODUCT)RED, Blue, Yellow, Coral",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111868"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/2/overview/2",
+      "before": "Пам’ять: 64 GB, 128 GB, 256 GB",
+      "after": "Пам’ять: 64 ГБ, 128 ГБ, 256 ГБ",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111868"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/2/highlights/0",
+      "before": "IPS Liquid Retina HD 6.1″",
+      "after": "IPS Liquid Retina HD 6,1″",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111868"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/2/highlights/4",
+      "before": "2 стереодинаміки",
+      "after": "Стереодинаміки",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111868"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/2/highlights/5",
+      "before": "Алюмінієва рамка, скляний глянцевий корпус",
+      "after": "Алюмінієва рамка, глянцева скляна задня панель",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111868"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/2/highlights/7",
+      "before": "Портретний режим (програмний)",
+      "after": "Портретний режим задньої камери: для облич людей",
+      "reason": "Уточнено обмеження однокамерних XR та SE.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111868",
+        "https://support.apple.com/en-us/102398"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/2/highlights/8",
+      "before": "Фронтальна камера TrueDepth",
+      "after": "Фронтальна камера TrueDepth 7 Мп",
+      "reason": "Уточнено роздільну здатність фронтальної камери.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111868"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/2/highlights/9",
+      "before": "IP67 (до 1 м на 30 хв)",
+      "after": "IP67 (до 1 м на 30 хв у лабораторних умовах)",
+      "reason": "Уточнено лабораторні умови класу захисту.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111868"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/2/highlights/10",
+      "before": "До 16 год відтворення відео",
+      "after": "До 16 год відтворення відео за методикою Apple",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111868"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/3/colors/3/label",
+      "before": "Red",
+      "after": "(PRODUCT)RED",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111865"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/3/colors/3/caption",
+      "before": "Колір: Red",
+      "after": "Колір: (PRODUCT)RED",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111865"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/3/overview/0",
+      "before": "Діагональ: 6.1″",
+      "after": "Діагональ: 6,1″",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111865"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/3/overview/1",
+      "before": "Пам’ять: 64 GB, 128 GB, 256 GB",
+      "after": "Пам’ять: 64 ГБ, 128 ГБ, 256 ГБ",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111865"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/3/highlights/0",
+      "before": "IPS Liquid Retina HD 6.1″",
+      "after": "IPS Liquid Retina HD 6,1″",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111865"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/3/highlights/4",
+      "before": "2 стереодинаміки",
+      "after": "Стереодинаміки",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111865"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/3/highlights/5",
+      "before": "Алюмінієва рамка, скляний глянцевий корпус",
+      "after": "Алюмінієва рамка, глянцева скляна задня панель",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111865"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/3/highlights/6",
+      "before": "Основна камера: 12 Мп + ультраширока 12 Мп",
+      "after": "Основна камера: 12 Мп + надширококутна 12 Мп",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111865"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/3/highlights/9",
+      "before": "Фронтальна камера TrueDepth",
+      "after": "Фронтальна камера TrueDepth 12 Мп",
+      "reason": "Уточнено роздільну здатність фронтальної камери.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111865"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/3/highlights/10",
+      "before": "IP68 (до 2 м на 30 хв)",
+      "after": "IP68 (до 2 м на 30 хв у лабораторних умовах)",
+      "reason": "Уточнено лабораторні умови класу захисту.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111865"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/3/highlights/11",
+      "before": "До 17 год відтворення відео",
+      "after": "До 17 год відтворення відео за методикою Apple",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111865"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/4/overview/0",
+      "before": "Діагональ: Pro — 5.8″; Pro Max — 6.5″",
+      "after": "Діагональ: Pro — 5,8″; Pro Max — 6,5″",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111879",
+        "https://support.apple.com/en-us/111878"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/4/overview/2",
+      "before": "Пам’ять: 64 GB, 256 GB, 512 GB",
+      "after": "Пам’ять: 64 ГБ, 256 ГБ, 512 ГБ",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111879",
+        "https://support.apple.com/en-us/111878"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/4/highlights/4",
+      "before": "2 стереодинаміки",
+      "after": "Стереодинаміки",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111879",
+        "https://support.apple.com/en-us/111878"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/4/highlights/5",
+      "before": "Сталева рамка, скляний матовий корпус",
+      "after": "Сталева рамка, матова скляна задня панель",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111879",
+        "https://support.apple.com/en-us/111878"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/4/highlights/6",
+      "before": "Потрійна камера 12 Мп (широка, ультраширока, телефото)",
+      "after": "Три задні камери по 12 Мп: основна, надширококутна та телефото",
+      "reason": "Уточнено, що 12 Мп має кожна із трьох камер.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111879",
+        "https://support.apple.com/en-us/111878"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/4/highlights/9",
+      "before": "Фронтальна камера TrueDepth",
+      "after": "Фронтальна камера TrueDepth 12 Мп",
+      "reason": "Уточнено роздільну здатність фронтальної камери.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111879",
+        "https://support.apple.com/en-us/111878"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/5/colors/2/label",
+      "before": "Red",
+      "after": "(PRODUCT)RED",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111882"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/5/colors/2/caption",
+      "before": "Колір: Red",
+      "after": "Колір: (PRODUCT)RED",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111882"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/5/overview/0",
+      "before": "Діагональ: 4.7″",
+      "after": "Діагональ: 4,7″",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111882"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/5/overview/1",
+      "before": "Кольори: Black, White, Red",
+      "after": "Кольори: Black, White, (PRODUCT)RED",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111882"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/5/overview/2",
+      "before": "Пам’ять: 64 GB, 128 GB, 256 GB",
+      "after": "Пам’ять: 64 ГБ, 128 ГБ, 256 ГБ",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111882"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/5/highlights/0",
+      "before": "IPS Retina 4.7″",
+      "after": "IPS Retina HD 4,7″",
+      "reason": "Відновлено повну офіційну назву дисплея Retina HD.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111882"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/5/highlights/4",
+      "before": "2 стереодинаміки",
+      "after": "Стереодинаміки",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111882"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/5/highlights/5",
+      "before": "Алюмінієва рамка, скляний глянцевий корпус",
+      "after": "Алюмінієва рамка, глянцева скляна задня панель",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111882"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/5/highlights/8",
+      "before": "Портретний режим (програмний)",
+      "after": "Портретний режим задньої камери: для облич людей",
+      "reason": "Уточнено обмеження однокамерних XR та SE.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111882",
+        "https://support.apple.com/en-us/102398"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/5/highlights/9",
+      "before": "IP67 (до 1 м на 30 хв)",
+      "after": "IP67 (до 1 м на 30 хв у лабораторних умовах)",
+      "reason": "Уточнено лабораторні умови класу захисту.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111882"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/6/colors/2/label",
+      "before": "Red",
+      "after": "(PRODUCT)RED",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111866"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/6/colors/2/caption",
+      "before": "Колір: Red",
+      "after": "Колір: (PRODUCT)RED",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111866"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/6/overview/0",
+      "before": "Діагональ: 4.7″",
+      "after": "Діагональ: 4,7″",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111866"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/6/overview/1",
+      "before": "Кольори: Midnight, Starlight, Red",
+      "after": "Кольори: Midnight, Starlight, (PRODUCT)RED",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111866"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/6/overview/2",
+      "before": "Пам’ять: 64 GB, 128 GB, 256 GB",
+      "after": "Пам’ять: 64 ГБ, 128 ГБ, 256 ГБ",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111866"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/6/highlights/0",
+      "before": "IPS Retina 4.7″",
+      "after": "IPS Retina HD 4,7″",
+      "reason": "Відновлено повну офіційну назву дисплея Retina HD.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111866"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/6/highlights/4",
+      "before": "2 стереодинаміки",
+      "after": "Стереодинаміки",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111866"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/6/highlights/5",
+      "before": "Алюмінієва рамка, скляний глянцевий корпус",
+      "after": "Алюмінієва рамка, глянцева скляна задня панель",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111866"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/6/highlights/8",
+      "before": "Портретний режим (програмний)",
+      "after": "Портретний режим задньої камери: для облич людей",
+      "reason": "Уточнено обмеження однокамерних XR та SE.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111866",
+        "https://support.apple.com/en-us/102398"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/6/highlights/9",
+      "before": "IP67 (до 1 м на 30 хв)",
+      "after": "IP67 (до 1 м на 30 хв у лабораторних умовах)",
+      "reason": "Уточнено лабораторні умови класу захисту.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111866"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/6/highlights/10",
+      "before": "До 15 год відтворення відео",
+      "after": "До 15 год відтворення відео за методикою Apple",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111866"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/7/colors/3/label",
+      "before": "Red",
+      "after": "(PRODUCT)RED",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111877",
+        "https://support.apple.com/en-us/111876"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/7/colors/3/caption",
+      "before": "Колір: Red",
+      "after": "Колір: (PRODUCT)RED",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111877",
+        "https://support.apple.com/en-us/111876"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/7/overview/0",
+      "before": "Діагональ: Mini — 5.4″; 12 — 6.1″",
+      "after": "Діагональ: mini — 5,4″; 12 — 6,1″",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111877",
+        "https://support.apple.com/en-us/111876"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/7/overview/1",
+      "before": "Кольори: Black, White, Blue, Red, Purple, Green",
+      "after": "Кольори: Black, White, Blue, (PRODUCT)RED, Purple, Green",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111877",
+        "https://support.apple.com/en-us/111876"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/7/overview/2",
+      "before": "Пам’ять: 64 GB, 128 GB, 256 GB",
+      "after": "Пам’ять: 64 ГБ, 128 ГБ, 256 ГБ",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111877",
+        "https://support.apple.com/en-us/111876"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/7/highlights/5",
+      "before": "2 стереодинаміки",
+      "after": "Стереодинаміки",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111877",
+        "https://support.apple.com/en-us/111876"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/7/highlights/7",
+      "before": "Основна камера: 12 Мп + ультраширока 12 Мп",
+      "after": "Основна камера: 12 Мп + надширококутна 12 Мп",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111877",
+        "https://support.apple.com/en-us/111876"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/7/highlights/10",
+      "before": "Фронтальна камера TrueDepth",
+      "after": "Фронтальна камера TrueDepth 12 Мп",
+      "reason": "Уточнено роздільну здатність фронтальної камери.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111877",
+        "https://support.apple.com/en-us/111876"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/7/highlights/12",
+      "before": "IP68 (до 6 м на 30 хв)",
+      "after": "IP68 (до 6 м на 30 хв у лабораторних умовах)",
+      "reason": "Уточнено лабораторні умови класу захисту.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111877",
+        "https://support.apple.com/en-us/111876"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/8/overview/0",
+      "before": "Діагональ: Pro — 6.1″; Pro Max — 6.7″",
+      "after": "Діагональ: Pro — 6,1″; Pro Max — 6,7″",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111875",
+        "https://support.apple.com/en-us/111874"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/8/overview/2",
+      "before": "Пам’ять: 128 GB, 256 GB, 512 GB",
+      "after": "Пам’ять: 128 ГБ, 256 ГБ, 512 ГБ",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111875",
+        "https://support.apple.com/en-us/111874"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/8/highlights/5",
+      "before": "2 стереодинаміки",
+      "after": "Стереодинаміки",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111875",
+        "https://support.apple.com/en-us/111874"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/8/highlights/6",
+      "before": "Сталева рамка, матовий корпус",
+      "after": "Сталева рамка, матова скляна задня панель",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111875",
+        "https://support.apple.com/en-us/111874"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/8/highlights/7",
+      "before": "Потрійна камера 12 Мп (широка, ультраширока, телефото) + LiDAR",
+      "after": "Три камери по 12 Мп і LiDAR; телефото: Pro — 2×, Pro Max — 2,5×",
+      "reason": "Відокремлено різне оптичне наближення 12 Pro та Pro Max.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111875",
+        "https://support.apple.com/en-us/111874"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/8/highlights/10",
+      "before": "Фронтальна камера TrueDepth",
+      "after": "Фронтальна камера TrueDepth 12 Мп",
+      "reason": "Уточнено роздільну здатність фронтальної камери.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111875",
+        "https://support.apple.com/en-us/111874"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/8/highlights/12",
+      "before": "IP68 (до 6 м на 30 хв)",
+      "after": "IP68 (до 6 м на 30 хв у лабораторних умовах)",
+      "reason": "Уточнено лабораторні умови класу захисту.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111875",
+        "https://support.apple.com/en-us/111874"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/9/colors/4/label",
+      "before": "Red",
+      "after": "(PRODUCT)RED",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111873",
+        "https://support.apple.com/en-us/111872"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/9/colors/4/caption",
+      "before": "Колір: Red",
+      "after": "Колір: (PRODUCT)RED",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111873",
+        "https://support.apple.com/en-us/111872"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/9/overview/0",
+      "before": "Діагональ: Mini — 5.4″; 13 — 6.1″",
+      "after": "Діагональ: mini — 5,4″; 13 — 6,1″",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111873",
+        "https://support.apple.com/en-us/111872"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/9/overview/1",
+      "before": "Кольори: Starlight, Midnight, Blue, Pink, Red, Green",
+      "after": "Кольори: Starlight, Midnight, Blue, Pink, (PRODUCT)RED, Green",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111873",
+        "https://support.apple.com/en-us/111872"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/9/overview/2",
+      "before": "Пам’ять: 128 GB, 256 GB, 512 GB",
+      "after": "Пам’ять: 128 ГБ, 256 ГБ, 512 ГБ",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111873",
+        "https://support.apple.com/en-us/111872"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/9/highlights/5",
+      "before": "2 стереодинаміки",
+      "after": "Стереодинаміки",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111873",
+        "https://support.apple.com/en-us/111872"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/9/highlights/7",
+      "before": "Основна камера: 12 Мп + ультраширока 12 Мп",
+      "after": "Основна камера: 12 Мп + надширококутна 12 Мп",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111873",
+        "https://support.apple.com/en-us/111872"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/9/highlights/11",
+      "before": "Фронтальна камера TrueDepth",
+      "after": "Фронтальна камера TrueDepth 12 Мп",
+      "reason": "Уточнено роздільну здатність фронтальної камери.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111873",
+        "https://support.apple.com/en-us/111872"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/9/highlights/13",
+      "before": "IP68 (до 6 м на 30 хв)",
+      "after": "IP68 (до 6 м на 30 хв у лабораторних умовах)",
+      "reason": "Уточнено лабораторні умови класу захисту.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111873",
+        "https://support.apple.com/en-us/111872"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/10/overview/0",
+      "before": "Діагональ: Pro — 6.1″; Pro Max — 6.7″",
+      "after": "Діагональ: Pro — 6,1″; Pro Max — 6,7″",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111871",
+        "https://support.apple.com/en-us/111870"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/10/overview/2",
+      "before": "Пам’ять: 128 GB, 256 GB, 512 GB, 1 TB",
+      "after": "Пам’ять: 128 ГБ, 256 ГБ, 512 ГБ, 1 ТБ",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111871",
+        "https://support.apple.com/en-us/111870"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/10/highlights/6",
+      "before": "Потрійна камера 12 Мп (широка, ультраширока, телефото) + LiDAR",
+      "after": "Три камери по 12 Мп, телефото з оптичним наближенням 3× та LiDAR",
+      "reason": "Уточнено телефото та роздільну здатність трьох камер.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111871",
+        "https://support.apple.com/en-us/111870"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/10/highlights/10",
+      "before": "Фронтальна камера TrueDepth",
+      "after": "Фронтальна камера TrueDepth 12 Мп",
+      "reason": "Уточнено роздільну здатність фронтальної камери.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111871",
+        "https://support.apple.com/en-us/111870"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/10/highlights/12",
+      "before": "IP68 (до 6 м на 30 хв)",
+      "after": "IP68 (до 6 м на 30 хв у лабораторних умовах)",
+      "reason": "Уточнено лабораторні умови класу захисту.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111871",
+        "https://support.apple.com/en-us/111870"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/11/colors/4/label",
+      "before": "Red",
+      "after": "(PRODUCT)RED",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111850",
+        "https://support.apple.com/en-us/111854"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/11/colors/4/caption",
+      "before": "Колір: Red",
+      "after": "Колір: (PRODUCT)RED",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111850",
+        "https://support.apple.com/en-us/111854"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/11/overview/0",
+      "before": "Діагональ: 14 — 6.1″; 14 Plus — 6.7″",
+      "after": "Діагональ: 14 — 6,1″; 14 Plus — 6,7″",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111850",
+        "https://support.apple.com/en-us/111854"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/11/overview/1",
+      "before": "Кольори: Starlight, Midnight, Blue, Purple, Red, Yellow",
+      "after": "Кольори: Starlight, Midnight, Blue, Purple, (PRODUCT)RED, Yellow",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111850",
+        "https://support.apple.com/en-us/111854"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/11/overview/2",
+      "before": "Пам’ять: 128 GB, 256 GB, 512 GB",
+      "after": "Пам’ять: 128 ГБ, 256 ГБ, 512 ГБ",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111850",
+        "https://support.apple.com/en-us/111854"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/11/highlights/4",
+      "before": "2 стереодинаміки",
+      "after": "Стереодинаміки",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111850",
+        "https://support.apple.com/en-us/111854"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/11/highlights/5",
+      "before": "Алюмінієва рамка, скляний глянцевий корпус",
+      "after": "Алюмінієва рамка, глянцева скляна задня панель",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111850",
+        "https://support.apple.com/en-us/111854"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/11/highlights/7",
+      "before": "Основна камера: 12 Мп + ультраширока 12 Мп",
+      "after": "Основна камера: 12 Мп + надширококутна 12 Мп",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111850",
+        "https://support.apple.com/en-us/111854"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/11/highlights/14",
+      "before": "IP68 (до 6 м на 30 хв)",
+      "after": "IP68 (до 6 м на 30 хв у лабораторних умовах)",
+      "reason": "Уточнено лабораторні умови класу захисту.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111850",
+        "https://support.apple.com/en-us/111854"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/12/overview/0",
+      "before": "Діагональ: Pro — 6.1″; Pro Max — 6.7″",
+      "after": "Діагональ: Pro — 6,1″; Pro Max — 6,7″",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111849",
+        "https://support.apple.com/en-us/111846"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/12/overview/2",
+      "before": "Пам’ять: 128 GB, 256 GB, 512 GB, 1 TB",
+      "after": "Пам’ять: 128 ГБ, 256 ГБ, 512 ГБ, 1 ТБ",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111849",
+        "https://support.apple.com/en-us/111846"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/12/highlights/2",
+      "before": "Always‑On Display",
+      "after": "Always-On Display",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111849",
+        "https://support.apple.com/en-us/111846"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/12/highlights/6",
+      "before": "2 стереодинаміки",
+      "after": "Стереодинаміки",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111849",
+        "https://support.apple.com/en-us/111846"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/12/highlights/7",
+      "before": "Сталева рамка, матовий корпус",
+      "after": "Сталева рамка, матова скляна задня панель",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111849",
+        "https://support.apple.com/en-us/111846"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/12/highlights/9",
+      "before": "Основна камера: 48 Мп + ультраширока 12 Мп + телефото 12 Мп",
+      "after": "Основна 48 Мп + надширококутна 12 Мп + телефото 12 Мп з оптичним наближенням 3×",
+      "reason": "Уточнено можливості окремого телефото.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111849",
+        "https://support.apple.com/en-us/111846"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/13/overview/0",
+      "before": "Діагональ: 15 — 6.1″; 15 Plus — 6.7″",
+      "after": "Діагональ: 15 — 6,1″; 15 Plus — 6,7″",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111831",
+        "https://support.apple.com/en-us/111830"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/13/overview/2",
+      "before": "Пам’ять: 128 GB, 256 GB, 512 GB",
+      "after": "Пам’ять: 128 ГБ, 256 ГБ, 512 ГБ",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111831",
+        "https://support.apple.com/en-us/111830"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/13/highlights/5",
+      "before": "2 стереодинаміки",
+      "after": "Стереодинаміки",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111831",
+        "https://support.apple.com/en-us/111830"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/13/highlights/6",
+      "before": "Алюмінієва рамка, матовий корпус",
+      "after": "Алюмінієва рамка, матова скляна задня панель",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111831",
+        "https://support.apple.com/en-us/111830"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/13/highlights/8",
+      "before": "Основна камера: 48 Мп + ультраширока 12 Мп, наближення 2× оптичної якості з основного сенсора",
+      "after": "Основна камера: 48 Мп + надширококутна 12 Мп, наближення 2× оптичної якості з основного сенсора",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111831",
+        "https://support.apple.com/en-us/111830"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/13/highlights/16",
+      "before": "IP68 (до 6 м на 30 хв)",
+      "after": "IP68 (до 6 м на 30 хв у лабораторних умовах)",
+      "reason": "Уточнено лабораторні умови класу захисту.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111831",
+        "https://support.apple.com/en-us/111830"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/14/overview/0",
+      "before": "Діагональ: Pro — 6.1″; Pro Max — 6.7″",
+      "after": "Діагональ: Pro — 6,1″; Pro Max — 6,7″",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111829",
+        "https://support.apple.com/en-us/111828"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/14/overview/2",
+      "before": "Пам’ять: Pro — 128/256/512 GB, 1 TB; Pro Max — 256/512 GB, 1 TB",
+      "after": "Пам’ять: Pro — 128/256/512 ГБ, 1 ТБ; Pro Max — 256/512 ГБ, 1 ТБ",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111829",
+        "https://support.apple.com/en-us/111828"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/14/highlights/2",
+      "before": "Always‑On Display",
+      "after": "Always-On Display",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111829",
+        "https://support.apple.com/en-us/111828"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/14/highlights/7",
+      "before": "Action Button",
+      "after": "Кнопка дії",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111829",
+        "https://support.apple.com/en-us/111828"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/14/highlights/9",
+      "before": "Основна камера: 48 Мп + ультраширока 12 Мп + телефото 12 Мп (до 3 х Pro / 5 х Pro Max)",
+      "after": "Основна 48 Мп + надширококутна 12 Мп; телефото 12 Мп: Pro — 3×, Pro Max — 5×",
+      "reason": "Замінено неоднозначне «до 3 х / 5 х» на точне оптичне наближення кожної моделі.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111829",
+        "https://support.apple.com/en-us/111828"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/14/highlights/18",
+      "before": "IP68",
+      "after": "IP68 (до 6 м на 30 хв у лабораторних умовах)",
+      "reason": "Уточнено лабораторні умови класу захисту.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/111829",
+        "https://support.apple.com/en-us/111828"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/15/overview/0",
+      "before": "Діагональ: 16 — 6.1″; 16 Plus — 6.7″",
+      "after": "Діагональ: 16 — 6,1″; 16 Plus — 6,7″",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/121029",
+        "https://support.apple.com/en-us/121030"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/15/overview/2",
+      "before": "Пам’ять: 128 GB, 256 GB, 512 GB",
+      "after": "Пам’ять: 128 ГБ, 256 ГБ, 512 ГБ",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/121029",
+        "https://support.apple.com/en-us/121030"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/15/highlights/3",
+      "before": "2 стереодинаміки, алюмінієва рамка",
+      "after": "Стереодинаміки, алюмінієва рамка",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/121029",
+        "https://support.apple.com/en-us/121030"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/15/highlights/5",
+      "before": "Основна камера: 48 Мп + ультраширока 12 Мп, наближення 2× оптичної якості з основного сенсора",
+      "after": "Основна камера: 48 Мп + надширококутна 12 Мп, наближення 2× оптичної якості з основного сенсора",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/121029",
+        "https://support.apple.com/en-us/121030"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/15/highlights/12",
+      "before": "IP68",
+      "after": "IP68 (до 6 м на 30 хв у лабораторних умовах)",
+      "reason": "Уточнено лабораторні умови класу захисту.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/121029",
+        "https://support.apple.com/en-us/121030"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/16/overview/0",
+      "before": "Діагональ: Pro — 6.3″; Pro Max — 6.9″",
+      "after": "Діагональ: Pro — 6,3″; Pro Max — 6,9″",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/121031",
+        "https://support.apple.com/en-us/121032"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/16/overview/2",
+      "before": "Пам’ять: Pro — 128/256/512 GB, 1 TB; Pro Max — 256/512 GB, 1 TB",
+      "after": "Пам’ять: Pro — 128/256/512 ГБ, 1 ТБ; Pro Max — 256/512 ГБ, 1 ТБ",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/121031",
+        "https://support.apple.com/en-us/121032"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/16/highlights/2",
+      "before": "Always‑On Display",
+      "after": "Always-On Display",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/121031",
+        "https://support.apple.com/en-us/121032"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/16/highlights/6",
+      "before": "2 стереодинаміки",
+      "after": "Стереодинаміки",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/121031",
+        "https://support.apple.com/en-us/121032"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/16/highlights/10",
+      "before": "Камери: основна 48 Мп Fusion + ультраширока 48 Мп + телефото 12 Мп з оптичним наближенням 5×",
+      "after": "Камери: основна 48 Мп Fusion + надширококутна 48 Мп + телефото 12 Мп з оптичним наближенням 5×",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/121031",
+        "https://support.apple.com/en-us/121032"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/16/highlights/19",
+      "before": "IP68",
+      "after": "IP68 (до 6 м на 30 хв у лабораторних умовах)",
+      "reason": "Уточнено лабораторні умови класу захисту.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/121031",
+        "https://support.apple.com/en-us/121032"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/17/overview/1",
+      "before": "Пам’ять: 128 GB, 256 GB, 512 GB",
+      "after": "Пам’ять: 128 ГБ, 256 ГБ, 512 ГБ",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/122208"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/17/highlights/0",
+      "before": "OLED Super Retina XDR 6.1″ (2532×1170, 460 ppi)",
+      "after": "OLED Super Retina XDR 6,1″ (2532×1170, 460 ppi)",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/122208"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/17/highlights/3",
+      "before": "Основна камера: 48 Мп Fusion f/1.6 з OIS",
+      "after": "Основна камера: 48 Мп Fusion f/1,6 з OIS",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/122208"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/17/highlights/4",
+      "before": "Фронтальна камера: 12 Мп TrueDepth f/1.9 з автофокусом",
+      "after": "Фронтальна камера: 12 Мп TrueDepth f/1,9 з автофокусом",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/122208"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/17/highlights/5",
+      "before": "Photonic Engine, Deep Fusion, Photographic Styles, Night Mode",
+      "after": "Photonic Engine, Deep Fusion, стилі фотографій, нічний режим",
+      "reason": "Уніфіковано назви функцій українською.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/122208"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/17/highlights/6",
+      "before": "До 26 год відео, до 90 год аудіо",
+      "after": "До 26 год відео та до 90 год аудіо за методикою Apple",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/122208"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/17/highlights/7",
+      "before": "Qi бездротова зарядка до 7.5 Вт",
+      "after": "Qi бездротова зарядка до 7,5 Вт",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/122208"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/17/highlights/8",
+      "before": "IP68",
+      "after": "IP68 (до 6 м на 30 хв у лабораторних умовах)",
+      "reason": "Уточнено лабораторні умови класу захисту.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/122208"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/17/highlights/9",
+      "before": "Action Button",
+      "after": "Кнопка дії",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/122208"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/18/overview/0",
+      "before": "Діагональ: Pro — 6.3″; Pro Max — 6.9″",
+      "after": "Діагональ: Pro — 6,3″; Pro Max — 6,9″",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/125090",
+        "https://support.apple.com/en-us/125091"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/18/overview/2",
+      "before": "Пам’ять: Pro — 256/512 GB, 1 TB; Pro Max — 256/512 GB, 1 TB, 2 TB",
+      "after": "Пам’ять: Pro — 256/512 ГБ, 1 ТБ; Pro Max — 256/512 ГБ, 1 ТБ, 2 ТБ",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/125090",
+        "https://support.apple.com/en-us/125091"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/18/highlights/1",
+      "before": "True Tone, Always‑On Display, Dynamic Island",
+      "after": "True Tone, Always-On Display, Dynamic Island",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/125090",
+        "https://support.apple.com/en-us/125091"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/18/highlights/3",
+      "before": "2 стереодинаміки, алюмінієвий unibody корпус",
+      "after": "Стереодинаміки, алюмінієвий цільний корпус",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/125090",
+        "https://support.apple.com/en-us/125091"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/18/highlights/4",
+      "before": "Action Button, MagSafe",
+      "after": "Кнопка дії, MagSafe",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/125090",
+        "https://support.apple.com/en-us/125091"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/18/highlights/5",
+      "before": "Камери: три модулі по 48 Мп; телефото 4× та 8× оптичної якості, цифрове наближення до 40×",
+      "after": "Три задні камери по 48 Мп; телефото 4×, наближення 8× оптичної якості, цифровий зум до 40×",
+      "reason": "Відокремлено окремий телефото 4× від кадрування 8× оптичної якості.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/125090",
+        "https://support.apple.com/en-us/125091"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/18/highlights/10",
+      "before": "IP68, USB‑C",
+      "after": "IP68 (до 6 м на 30 хв у лабораторних умовах), USB‑C",
+      "reason": "Уточнено лабораторні умови класу захисту.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/125090",
+        "https://support.apple.com/en-us/125091"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/18/highlights/11",
+      "before": "Відтворення відео: Pro — до 33 год; Pro Max — до 39 год у версіях eSIM за методикою Apple; інші регіональні версії можуть відрізнятися",
+      "after": "Відео за методикою Apple: Pro — до 31 год, Pro Max — до 37 год (UA); версії лише з eSIM — до 33/39 год",
+      "reason": "Указано показники української регіональної версії поряд із US/eSIM.",
+      "sourceUrls": [
+        "https://support.apple.com/en-us/125090",
+        "https://support.apple.com/en-us/125091",
+        "https://support.apple.com/uk-ua/125090",
+        "https://support.apple.com/uk-ua/125091"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/19/overview/0",
+      "before": "Діагональ: 6.5″",
+      "after": "Діагональ: 6,5″",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://www.apple.com/ua/iphone-air/specs/"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/19/overview/2",
+      "before": "Пам’ять: 256/512 GB, 1 TB",
+      "after": "Пам’ять: 256/512 ГБ, 1 ТБ",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://www.apple.com/ua/iphone-air/specs/"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/19/highlights/2",
+      "before": "Always‑On Display",
+      "after": "Always-On Display",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://www.apple.com/ua/iphone-air/specs/"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/19/highlights/4",
+      "before": "Face ID, A19 Pro",
+      "after": "Face ID, A19 Pro з 5-ядерним GPU",
+      "reason": "Уточнено GPU Air: назва A19 Pro спільна з Pro, але кількість GPU-ядер відрізняється.",
+      "sourceUrls": [
+        "https://www.apple.com/ua/iphone-air/specs/"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/19/highlights/14",
+      "before": "IP68",
+      "after": "IP68 (до 6 м на 30 хв у лабораторних умовах)",
+      "reason": "Уточнено лабораторні умови класу захисту.",
+      "sourceUrls": [
+        "https://www.apple.com/ua/iphone-air/specs/"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/20/overview/0",
+      "before": "Діагональ: 6.3″",
+      "after": "Діагональ: 6,3″",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://www.apple.com/ua/iphone-17/specs/"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/20/overview/2",
+      "before": "Пам’ять: 256/512 GB",
+      "after": "Пам’ять: 256/512 ГБ",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://www.apple.com/ua/iphone-17/specs/"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/20/highlights/2",
+      "before": "Always‑On Display",
+      "after": "Always-On Display",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://www.apple.com/ua/iphone-17/specs/"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/20/highlights/6",
+      "before": "2 стереодинаміки",
+      "after": "Стереодинаміки",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://www.apple.com/ua/iphone-17/specs/"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/20/highlights/8",
+      "before": "Action Button",
+      "after": "Кнопка дії",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://www.apple.com/ua/iphone-17/specs/"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/20/highlights/17",
+      "before": "IP68",
+      "after": "IP68 (до 6 м на 30 хв у лабораторних умовах)",
+      "reason": "Уточнено лабораторні умови класу захисту.",
+      "sourceUrls": [
+        "https://www.apple.com/ua/iphone-17/specs/"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/20/highlights/18",
+      "before": "До 30 год відео",
+      "after": "До 30 год відео за методикою Apple",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://www.apple.com/ua/iphone-17/specs/"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/21/overview/2",
+      "before": "Пам’ять: 256/512 GB, 1 TB, 2 TB",
+      "after": "Пам’ять: 256/512 ГБ, 1 ТБ, 2 ТБ",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://www.apple.com/ua/iphone-18-pro/specs/",
+        "https://www.apple.com/iphone-18-pro/specs/"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/21/highlights/10",
+      "before": "IP68, USB-C (USB 3)",
+      "after": "IP68 (до 6 м на 30 хв у лабораторних умовах), USB-C (USB 3)",
+      "reason": "Уточнено лабораторні умови класу захисту.",
+      "sourceUrls": [
+        "https://www.apple.com/ua/iphone-18-pro/specs/",
+        "https://www.apple.com/iphone-18-pro/specs/"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/21/highlights/11",
+      "before": "Відтворення відео: Pro — до 36 год; Pro Max — до 45 год у версіях eSIM за методикою Apple",
+      "after": "Відео за методикою Apple: Pro — до 34 год, Pro Max — до 43 год (UA); версії лише з eSIM — до 36/45 год",
+      "reason": "Відокремлено автономність UA та US/eSIM: це різні регіональні специфікації.",
+      "sourceUrls": [
+        "https://www.apple.com/ua/iphone-18-pro/specs/",
+        "https://www.apple.com/iphone-18-pro/specs/"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/22/overview/2",
+      "before": "Пам’ять: 256/512 GB, 1 TB, 2 TB",
+      "after": "Пам’ять: 256/512 ГБ, 1 ТБ, 2 ТБ",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://www.apple.com/ua/iphone-duo/specs/"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/22/highlights/9",
+      "before": "Камери: основна 48 Мп Fusion + ультраширока 48 Мп; наближення 2× оптичної якості",
+      "after": "Камери: основна 48 Мп Fusion + надширококутна 48 Мп; наближення 2× оптичної якості",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://www.apple.com/ua/iphone-duo/specs/"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/22/highlights/14",
+      "before": "IP68",
+      "after": "IP68 (до 6 м на 30 хв у лабораторних умовах)",
+      "reason": "Уточнено лабораторні умови класу захисту.",
+      "sourceUrls": [
+        "https://www.apple.com/ua/iphone-duo/specs/"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/23/colors/2/caption",
+      "before": "Ніжно-рожевий",
+      "after": "Світло-рожевий",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://www.apple.com/ua/iphone-17e/specs/",
+        "https://www.apple.com/iphone-17e/specs/"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/23/overview/2",
+      "before": "Пам’ять: 256/512 GB",
+      "after": "Пам’ять: 256/512 ГБ",
+      "reason": "Уніфіковано українські одиниці, терміни та офіційні назви кольорів без зміни значення.",
+      "sourceUrls": [
+        "https://www.apple.com/ua/iphone-17e/specs/",
+        "https://www.apple.com/iphone-17e/specs/"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/23/highlights/10",
+      "before": "IP68",
+      "after": "IP68 (до 6 м на 30 хв у лабораторних умовах)",
+      "reason": "Уточнено лабораторні умови класу захисту.",
+      "sourceUrls": [
+        "https://www.apple.com/ua/iphone-17e/specs/",
+        "https://www.apple.com/iphone-17e/specs/"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/2/products/23/highlights/12",
+      "before": "USB-C (USB 2)",
+      "after": "USB-C (USB 2); UA — nano-SIM + eSIM, US — лише eSIM",
+      "reason": "Вказано важливу для продажу різницю регіональних SIM-версій.",
+      "sourceUrls": [
+        "https://www.apple.com/ua/iphone-17e/specs/",
+        "https://www.apple.com/iphone-17e/specs/"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/0/learningGuide",
+      "before": {
+        "route": [
+          {
+            "title": "Визначте критерії вибору",
+            "anchor": "module-2-topic-1"
+          },
+          {
+            "title": "Зіставте потреби з лінійкою",
+            "anchor": "module-2-topic-2"
+          },
+          {
+            "title": "Порівняйте конкретні моделі",
+            "anchor": "module-2-topic-3"
+          },
+          {
+            "title": "Перевірте остаточний вибір",
+            "anchor": "module-2-topic-4"
+          }
+        ],
+        "sources": [
+          {
+            "id": "compare",
+            "url": "https://www.apple.com/iphone/compare/",
+            "scope": "Оберіть точні моделі й порівнюйте однакові параметри. Поточну ціну та наявність уточнюйте в PineApple.",
+            "title": "Apple — порівняння моделей iPhone",
+            "anchors": [
+              "module-2-topic-1",
+              "module-2-topic-2",
+              "module-2-topic-4",
+              "module-2-topic-5"
+            ]
+          },
+          {
+            "id": "model-id",
+            "url": "https://support.apple.com/en-us/108044",
+            "scope": "Номери Axxxx допомагають звірити покоління й регіональне виконання перед консультацією.",
+            "title": "Apple — визначення моделі iPhone",
+            "anchors": [
+              "module-2-topic-1",
+              "module-2-topic-5"
+            ]
+          },
+          {
+            "id": "spec-x",
+            "url": "https://support.apple.com/en-us/111864",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "title": "iPhone X — характеристики Apple",
+            "anchors": [
+              "module-2-topic-3-product-1"
+            ]
+          },
+          {
+            "id": "spec-xs",
+            "url": "https://support.apple.com/en-us/111881",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "title": "iPhone XS — характеристики Apple",
+            "anchors": [
+              "module-2-topic-3-product-2"
+            ]
+          },
+          {
+            "id": "spec-xs-max",
+            "url": "https://support.apple.com/en-us/111880",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "title": "iPhone XS Max — характеристики Apple",
+            "anchors": [
+              "module-2-topic-3-product-2"
+            ]
+          },
+          {
+            "id": "spec-xr",
+            "url": "https://support.apple.com/en-us/111868",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "title": "iPhone XR — характеристики Apple",
+            "anchors": [
+              "module-2-topic-3-product-3"
+            ]
+          },
+          {
+            "id": "spec-11",
+            "url": "https://support.apple.com/en-us/111865",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "title": "iPhone 11 — характеристики Apple",
+            "anchors": [
+              "module-2-topic-3-product-4"
+            ]
+          },
+          {
+            "id": "spec-11-pro",
+            "url": "https://support.apple.com/en-us/111879",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "title": "iPhone 11 Pro — характеристики Apple",
+            "anchors": [
+              "module-2-topic-3-product-5"
+            ]
+          },
+          {
+            "id": "spec-11-pro-max",
+            "url": "https://support.apple.com/en-us/111878",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "title": "iPhone 11 Pro Max — характеристики Apple",
+            "anchors": [
+              "module-2-topic-3-product-5"
+            ]
+          },
+          {
+            "id": "spec-se2",
+            "url": "https://support.apple.com/en-us/111882",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "title": "iPhone SE 2-го покоління — характеристики Apple",
+            "anchors": [
+              "module-2-topic-3-product-6"
+            ]
+          },
+          {
+            "id": "spec-se3",
+            "url": "https://support.apple.com/en-us/111866",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "title": "iPhone SE 3-го покоління — характеристики Apple",
+            "anchors": [
+              "module-2-topic-3-product-7"
+            ]
+          },
+          {
+            "id": "spec-12-mini",
+            "url": "https://support.apple.com/en-us/111877",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "title": "iPhone 12 mini — характеристики Apple",
+            "anchors": [
+              "module-2-topic-3-product-8"
+            ]
+          },
+          {
+            "id": "spec-12",
+            "url": "https://support.apple.com/en-us/111876",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "title": "iPhone 12 — характеристики Apple",
+            "anchors": [
+              "module-2-topic-3-product-8"
+            ]
+          },
+          {
+            "id": "spec-12-pro",
+            "url": "https://support.apple.com/en-us/111875",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "title": "iPhone 12 Pro — характеристики Apple",
+            "anchors": [
+              "module-2-topic-3-product-9"
+            ]
+          },
+          {
+            "id": "spec-12-pro-max",
+            "url": "https://support.apple.com/en-us/111874",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "title": "iPhone 12 Pro Max — характеристики Apple",
+            "anchors": [
+              "module-2-topic-3-product-9"
+            ]
+          },
+          {
+            "id": "spec-13-mini",
+            "url": "https://support.apple.com/en-us/111873",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "title": "iPhone 13 mini — характеристики Apple",
+            "anchors": [
+              "module-2-topic-3-product-10"
+            ]
+          },
+          {
+            "id": "spec-13",
+            "url": "https://support.apple.com/en-us/111872",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "title": "iPhone 13 — характеристики Apple",
+            "anchors": [
+              "module-2-topic-3-product-10"
+            ]
+          },
+          {
+            "id": "spec-13-pro",
+            "url": "https://support.apple.com/en-us/111871",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "title": "iPhone 13 Pro — характеристики Apple",
+            "anchors": [
+              "module-2-topic-3-product-11"
+            ]
+          },
+          {
+            "id": "spec-13-pro-max",
+            "url": "https://support.apple.com/en-us/111870",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "title": "iPhone 13 Pro Max — характеристики Apple",
+            "anchors": [
+              "module-2-topic-3-product-11"
+            ]
+          },
+          {
+            "id": "spec-14",
+            "url": "https://support.apple.com/en-us/111850",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "title": "iPhone 14 — характеристики Apple",
+            "anchors": [
+              "module-2-topic-3-product-12"
+            ]
+          },
+          {
+            "id": "spec-14-plus",
+            "url": "https://support.apple.com/en-us/111854",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "title": "iPhone 14 Plus — характеристики Apple",
+            "anchors": [
+              "module-2-topic-3-product-12"
+            ]
+          },
+          {
+            "id": "spec-14-pro",
+            "url": "https://support.apple.com/en-us/111849",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "title": "iPhone 14 Pro — характеристики Apple",
+            "anchors": [
+              "module-2-topic-3-product-13"
+            ]
+          },
+          {
+            "id": "spec-14-pro-max",
+            "url": "https://support.apple.com/en-us/111846",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "title": "iPhone 14 Pro Max — характеристики Apple",
+            "anchors": [
+              "module-2-topic-3-product-13"
+            ]
+          },
+          {
+            "id": "spec-15",
+            "url": "https://support.apple.com/en-us/111831",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "title": "iPhone 15 — характеристики Apple",
+            "anchors": [
+              "module-2-topic-3-product-14"
+            ]
+          },
+          {
+            "id": "spec-15-plus",
+            "url": "https://support.apple.com/en-us/111830",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "title": "iPhone 15 Plus — характеристики Apple",
+            "anchors": [
+              "module-2-topic-3-product-14"
+            ]
+          },
+          {
+            "id": "spec-15-pro",
+            "url": "https://support.apple.com/en-us/111829",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "title": "iPhone 15 Pro — характеристики Apple",
+            "anchors": [
+              "module-2-topic-3-product-15"
+            ]
+          },
+          {
+            "id": "spec-15-pro-max",
+            "url": "https://support.apple.com/en-us/111828",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "title": "iPhone 15 Pro Max — характеристики Apple",
+            "anchors": [
+              "module-2-topic-3-product-15"
+            ]
+          },
+          {
+            "id": "spec-16",
+            "url": "https://support.apple.com/en-us/121029",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "title": "iPhone 16 — характеристики Apple",
+            "anchors": [
+              "module-2-topic-3-product-16"
+            ]
+          },
+          {
+            "id": "spec-16-plus",
+            "url": "https://support.apple.com/en-us/121030",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "title": "iPhone 16 Plus — характеристики Apple",
+            "anchors": [
+              "module-2-topic-3-product-16"
+            ]
+          },
+          {
+            "id": "spec-16-pro",
+            "url": "https://support.apple.com/en-us/121031",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "title": "iPhone 16 Pro — характеристики Apple",
+            "anchors": [
+              "module-2-topic-3-product-17"
+            ]
+          },
+          {
+            "id": "spec-16-pro-max",
+            "url": "https://support.apple.com/en-us/121032",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "title": "iPhone 16 Pro Max — характеристики Apple",
+            "anchors": [
+              "module-2-topic-3-product-17"
+            ]
+          },
+          {
+            "id": "spec-16e",
+            "url": "https://support.apple.com/en-us/122208",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "title": "iPhone 16e — характеристики Apple",
+            "anchors": [
+              "module-2-topic-3-product-18"
+            ]
+          },
+          {
+            "id": "spec-17-pro",
+            "url": "https://support.apple.com/en-us/125090",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "title": "iPhone 17 Pro — характеристики Apple",
+            "anchors": [
+              "module-2-topic-3-product-19"
+            ]
+          },
+          {
+            "id": "spec-17-pro-max",
+            "url": "https://support.apple.com/en-us/125091",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "title": "iPhone 17 Pro Max — характеристики Apple",
+            "anchors": [
+              "module-2-topic-3-product-19"
+            ]
+          },
+          {
+            "id": "spec-air-ua",
+            "url": "https://www.apple.com/ua/iphone-air/specs/",
+            "scope": "Екран, камери, eSIM, корпус і умови вимірювання. Це українська специфікація моделі.",
+            "title": "iPhone Air — характеристики Apple (UA)",
+            "anchors": [
+              "module-2-topic-2",
+              "module-2-topic-3-product-20"
+            ]
+          },
+          {
+            "id": "spec-17-ua",
+            "url": "https://www.apple.com/ua/iphone-17/specs/",
+            "scope": "Екран ProMotion, камери, пам’ять та інші параметри українського виконання.",
+            "title": "iPhone 17 — характеристики Apple (UA)",
+            "anchors": [
+              "module-2-topic-2",
+              "module-2-topic-3-product-21"
+            ]
+          },
+          {
+            "id": "spec-18-pro-ua",
+            "url": "https://www.apple.com/ua/iphone-18-pro/specs/",
+            "scope": "Відмінності розмірів, камер та автономності українських виконань. Години відео Apple не є прогнозом ігор або навігації.",
+            "title": "iPhone 18 Pro / Pro Max — характеристики Apple (UA)",
+            "anchors": [
+              "module-2-topic-2",
+              "module-2-topic-4",
+              "module-2-topic-3-product-22"
+            ]
+          },
+          {
+            "id": "spec-18-pro-us",
+            "url": "https://www.apple.com/iphone-18-pro/specs/",
+            "scope": "Американські виконання. SIM, маса й автономність можуть відрізнятися від інших регіонів; не змішуйте значення різних версій.",
+            "title": "iPhone 18 Pro / Pro Max — характеристики Apple (US)",
+            "anchors": [
+              "module-2-topic-3-product-22"
+            ]
+          },
+          {
+            "id": "spec-duo-ua",
+            "url": "https://www.apple.com/ua/iphone-duo/specs/",
+            "scope": "Екрани, складаний корпус, камери, Touch ID та eSIM. Перевіряйте поточну доступність окремих програмних можливостей.",
+            "title": "iPhone Duo — характеристики Apple (UA)",
+            "anchors": [
+              "module-2-topic-2",
+              "module-2-topic-4",
+              "module-2-topic-3-product-23"
+            ]
+          },
+          {
+            "id": "spec-17e-ua",
+            "url": "https://www.apple.com/ua/iphone-17e/specs/",
+            "scope": "Українська специфікація: nano-SIM + eSIM і MagSafe. Параметри стосуються відповідної регіональної версії.",
+            "title": "iPhone 17e — характеристики Apple (UA)",
+            "anchors": [
+              "module-2-topic-2",
+              "module-2-topic-3-product-24"
+            ]
+          },
+          {
+            "id": "spec-17e-us",
+            "url": "https://www.apple.com/iphone-17e/specs/",
+            "scope": "Американська специфікація: лише eSIM. Для пристрою з фізичною SIM використовуйте відповідну регіональну специфікацію.",
+            "title": "iPhone 17e — характеристики Apple (US)",
+            "anchors": [
+              "module-2-topic-3-product-24"
+            ]
+          }
+        ],
+        "version": 1,
+        "models3d": [
+          {
+            "url": "https://support.apple.com/en-us/111828",
+            "note": "Огляд форми корпусу, камер і кнопок. Кольори, комплектацію та характеристики звіряйте за офіційною специфікацією.",
+            "title": "iPhone 15 Pro Max",
+            "viewer": {
+              "uid": "df17520841214c1792fb8a44c6783ee7",
+              "author": "polyman Studio",
+              "assetId": "iphone-15-pro-max",
+              "license": "CC BY 4.0",
+              "provider": "local",
+              "authorUrl": "https://sketchfab.com/Polyman_3D",
+              "sourceUrl": "https://sketchfab.com/3d-models/apple-iphone-15-pro-max-black-df17520841214c1792fb8a44c6783ee7",
+              "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+            },
+            "variant": "Незалежна авторська 3D-візуалізація iPhone 15 Pro Max."
+          },
+          {
+            "url": "https://www.apple.com/iphone-18-pro/",
+            "note": "На сторінці Apple оберіть View in your space. Перегляд залежить від пристрою та браузера; розташування SIM-лотка іншої регіональної версії перевіряйте окремо.",
+            "title": "iPhone 18 Pro — огляд корпусу у виробника",
+            "variant": "Офіційний AR-макет Apple: US / eSIM."
+          },
+          {
+            "url": "https://www.apple.com/iphone-duo/",
+            "note": "На сторінці Apple оберіть View in your space. Це зовнішній перегляд виробника; можливості відображення залежать від пристрою та браузера.",
+            "title": "iPhone Duo — огляд складаного корпусу у виробника",
+            "variant": "Офіційний AR-макет Apple: US / eSIM."
+          }
+        ],
+        "practice": [
+          {
+            "id": "16e-or-17e",
+            "title": "Вибір із потрібним аксесуаром",
+            "prompt": "Які відмінності перевірите та що уточните перед рекомендацією?",
+            "situation": "Покупець порівнює 16e та 17e й хоче користуватися сумісним магнітним зарядним пристроєм та фізичною SIM.",
+            "sourceIds": [
+              "spec-16e",
+              "spec-17e-ua",
+              "spec-17e-us"
+            ],
+            "explanation": "У 16e Apple зазначає бездротове заряджання Qi, а 17e підтримує MagSafe. Для 17e також звірте регіон: у специфікації UA є nano-SIM + eSIM, у US — лише eSIM. Після цього порівняйте стан, потрібну пам’ять, фактичну ціну й сумісність конкретного аксесуара."
+          },
+          {
+            "id": "pro-or-pro-max",
+            "title": "Великий екран без зайвих компромісів",
+            "prompt": "Як побудувати порівняння й пояснити показники автономності?",
+            "situation": "Покупець обирає між 18 Pro та Pro Max: дивиться відео в дорозі, але часто користується телефоном однією рукою.",
+            "sourceIds": [
+              "spec-18-pro-ua",
+              "spec-18-pro-us",
+              "compare"
+            ],
+            "explanation": "Дайте оцінити габарити й масу обох пристроїв у руці, порівняйте розмір екрана та автономність того самого регіонального виконання. Години відтворення відео Apple — лабораторний орієнтир, а не обіцянка такої самої роботи навігації чи мобільних ігор. Вибір обґрунтуйте потребою, а не лише назвою Pro Max."
+          }
+        ],
+        "reference": [
+          {
+            "title": "17e: регіон і MagSafe",
+            "anchor": "module-2-topic-3-product-24"
+          },
+          {
+            "title": "16e: заряджання та можливості",
+            "anchor": "module-2-topic-3-product-18"
+          },
+          {
+            "title": "iPhone 17",
+            "anchor": "module-2-topic-3-product-21"
+          },
+          {
+            "title": "Air: формат і камери",
+            "anchor": "module-2-topic-3-product-20"
+          },
+          {
+            "title": "18 Pro / Pro Max",
+            "anchor": "module-2-topic-3-product-22"
+          },
+          {
+            "title": "Duo: складаний формат",
+            "anchor": "module-2-topic-3-product-23"
+          }
+        ],
+        "objectives": [
+          "Звузити вибір до двох-трьох моделей за потребою покупця.",
+          "Порівняти характеристики одного покоління й регіонального виконання без змішування параметрів.",
+          "Підтвердити сумісність SIM та аксесуарів і зрозуміло пояснити важливі обмеження."
+        ],
+        "reviewedAt": "2026-10-25",
+        "prerequisites": "Базові поняття й перевірки викладено в попередньому модулі про лінійки та технології iPhone. Цей каталог також можна використовувати як довідник під час консультації."
+      },
+      "after": {
+        "version": 1,
+        "reviewedAt": "2026-10-27",
+        "objectives": [
+          "Звузити вибір до двох-трьох моделей за потребою покупця.",
+          "Порівняти характеристики одного покоління й регіонального виконання без змішування параметрів.",
+          "Підтвердити сумісність SIM та аксесуарів і зрозуміло пояснити важливі обмеження."
+        ],
+        "prerequisites": "Базові поняття й перевірки викладено в попередньому модулі про лінійки та технології iPhone. Цей каталог також можна використовувати як довідник під час консультації.",
+        "route": [
+          {
+            "title": "Визначте критерії вибору",
+            "anchor": "module-2-topic-1"
+          },
+          {
+            "title": "Зіставте потреби з лінійкою",
+            "anchor": "module-2-topic-2"
+          },
+          {
+            "title": "Порівняйте конкретні моделі",
+            "anchor": "module-2-topic-3"
+          },
+          {
+            "title": "Перевірте остаточний вибір",
+            "anchor": "module-2-topic-4"
+          }
+        ],
+        "reference": [
+          {
+            "title": "17e: регіон і MagSafe",
+            "anchor": "module-2-topic-3-product-24"
+          },
+          {
+            "title": "16e: заряджання та можливості",
+            "anchor": "module-2-topic-3-product-18"
+          },
+          {
+            "title": "iPhone 17",
+            "anchor": "module-2-topic-3-product-21"
+          },
+          {
+            "title": "Air: формат і камери",
+            "anchor": "module-2-topic-3-product-20"
+          },
+          {
+            "title": "18 Pro / Pro Max",
+            "anchor": "module-2-topic-3-product-22"
+          },
+          {
+            "title": "Duo: складаний формат",
+            "anchor": "module-2-topic-3-product-23"
+          }
+        ],
+        "sources": [
+          {
+            "id": "compare",
+            "title": "Apple — порівняння моделей iPhone",
+            "url": "https://www.apple.com/iphone/compare/",
+            "scope": "Оберіть точні моделі й порівнюйте однакові параметри. Поточну ціну та наявність уточнюйте в PineApple.",
+            "anchors": [
+              "module-2-topic-1",
+              "module-2-topic-2",
+              "module-2-topic-4",
+              "module-2-topic-5"
+            ]
+          },
+          {
+            "id": "model-id",
+            "title": "Apple — визначення моделі iPhone",
+            "url": "https://support.apple.com/en-us/108044",
+            "scope": "Номери Axxxx допомагають звірити покоління й регіональне виконання перед консультацією.",
+            "anchors": [
+              "module-2-topic-1",
+              "module-2-topic-5"
+            ]
+          },
+          {
+            "id": "spec-x",
+            "title": "iPhone X — характеристики Apple",
+            "url": "https://support.apple.com/en-us/111864",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "anchors": [
+              "module-2-topic-3-product-1"
+            ]
+          },
+          {
+            "id": "spec-xs",
+            "title": "iPhone XS — характеристики Apple",
+            "url": "https://support.apple.com/en-us/111881",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "anchors": [
+              "module-2-topic-3-product-2"
+            ]
+          },
+          {
+            "id": "spec-xs-max",
+            "title": "iPhone XS Max — характеристики Apple",
+            "url": "https://support.apple.com/en-us/111880",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "anchors": [
+              "module-2-topic-3-product-2"
+            ]
+          },
+          {
+            "id": "spec-xr",
+            "title": "iPhone XR — характеристики Apple",
+            "url": "https://support.apple.com/en-us/111868",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "anchors": [
+              "module-2-topic-3-product-3"
+            ]
+          },
+          {
+            "id": "spec-11",
+            "title": "iPhone 11 — характеристики Apple",
+            "url": "https://support.apple.com/en-us/111865",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "anchors": [
+              "module-2-topic-3-product-4"
+            ]
+          },
+          {
+            "id": "spec-11-pro",
+            "title": "iPhone 11 Pro — характеристики Apple",
+            "url": "https://support.apple.com/en-us/111879",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "anchors": [
+              "module-2-topic-3-product-5"
+            ]
+          },
+          {
+            "id": "spec-11-pro-max",
+            "title": "iPhone 11 Pro Max — характеристики Apple",
+            "url": "https://support.apple.com/en-us/111878",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "anchors": [
+              "module-2-topic-3-product-5"
+            ]
+          },
+          {
+            "id": "spec-se2",
+            "title": "iPhone SE 2-го покоління — характеристики Apple",
+            "url": "https://support.apple.com/en-us/111882",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "anchors": [
+              "module-2-topic-3-product-6"
+            ]
+          },
+          {
+            "id": "spec-se3",
+            "title": "iPhone SE 3-го покоління — характеристики Apple",
+            "url": "https://support.apple.com/en-us/111866",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "anchors": [
+              "module-2-topic-3-product-7"
+            ]
+          },
+          {
+            "id": "spec-12-mini",
+            "title": "iPhone 12 mini — характеристики Apple",
+            "url": "https://support.apple.com/en-us/111877",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "anchors": [
+              "module-2-topic-3-product-8"
+            ]
+          },
+          {
+            "id": "spec-12",
+            "title": "iPhone 12 — характеристики Apple",
+            "url": "https://support.apple.com/en-us/111876",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "anchors": [
+              "module-2-topic-3-product-8"
+            ]
+          },
+          {
+            "id": "spec-12-pro",
+            "title": "iPhone 12 Pro — характеристики Apple",
+            "url": "https://support.apple.com/en-us/111875",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "anchors": [
+              "module-2-topic-3-product-9"
+            ]
+          },
+          {
+            "id": "spec-12-pro-max",
+            "title": "iPhone 12 Pro Max — характеристики Apple",
+            "url": "https://support.apple.com/en-us/111874",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "anchors": [
+              "module-2-topic-3-product-9"
+            ]
+          },
+          {
+            "id": "spec-13-mini",
+            "title": "iPhone 13 mini — характеристики Apple",
+            "url": "https://support.apple.com/en-us/111873",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "anchors": [
+              "module-2-topic-3-product-10"
+            ]
+          },
+          {
+            "id": "spec-13",
+            "title": "iPhone 13 — характеристики Apple",
+            "url": "https://support.apple.com/en-us/111872",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "anchors": [
+              "module-2-topic-3-product-10"
+            ]
+          },
+          {
+            "id": "spec-13-pro",
+            "title": "iPhone 13 Pro — характеристики Apple",
+            "url": "https://support.apple.com/en-us/111871",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "anchors": [
+              "module-2-topic-3-product-11"
+            ]
+          },
+          {
+            "id": "spec-13-pro-max",
+            "title": "iPhone 13 Pro Max — характеристики Apple",
+            "url": "https://support.apple.com/en-us/111870",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "anchors": [
+              "module-2-topic-3-product-11"
+            ]
+          },
+          {
+            "id": "spec-14",
+            "title": "iPhone 14 — характеристики Apple",
+            "url": "https://support.apple.com/en-us/111850",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "anchors": [
+              "module-2-topic-3-product-12"
+            ]
+          },
+          {
+            "id": "spec-14-plus",
+            "title": "iPhone 14 Plus — характеристики Apple",
+            "url": "https://support.apple.com/en-us/111854",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "anchors": [
+              "module-2-topic-3-product-12"
+            ]
+          },
+          {
+            "id": "spec-14-pro",
+            "title": "iPhone 14 Pro — характеристики Apple",
+            "url": "https://support.apple.com/en-us/111849",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "anchors": [
+              "module-2-topic-3-product-13"
+            ]
+          },
+          {
+            "id": "spec-14-pro-max",
+            "title": "iPhone 14 Pro Max — характеристики Apple",
+            "url": "https://support.apple.com/en-us/111846",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "anchors": [
+              "module-2-topic-3-product-13"
+            ]
+          },
+          {
+            "id": "spec-15",
+            "title": "iPhone 15 — характеристики Apple",
+            "url": "https://support.apple.com/en-us/111831",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "anchors": [
+              "module-2-topic-3-product-14"
+            ]
+          },
+          {
+            "id": "spec-15-plus",
+            "title": "iPhone 15 Plus — характеристики Apple",
+            "url": "https://support.apple.com/en-us/111830",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "anchors": [
+              "module-2-topic-3-product-14"
+            ]
+          },
+          {
+            "id": "spec-15-pro",
+            "title": "iPhone 15 Pro — характеристики Apple",
+            "url": "https://support.apple.com/en-us/111829",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "anchors": [
+              "module-2-topic-3-product-15"
+            ]
+          },
+          {
+            "id": "spec-15-pro-max",
+            "title": "iPhone 15 Pro Max — характеристики Apple",
+            "url": "https://support.apple.com/en-us/111828",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "anchors": [
+              "module-2-topic-3-product-15"
+            ]
+          },
+          {
+            "id": "spec-16",
+            "title": "iPhone 16 — характеристики Apple",
+            "url": "https://support.apple.com/en-us/121029",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "anchors": [
+              "module-2-topic-3-product-16"
+            ]
+          },
+          {
+            "id": "spec-16-plus",
+            "title": "iPhone 16 Plus — характеристики Apple",
+            "url": "https://support.apple.com/en-us/121030",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "anchors": [
+              "module-2-topic-3-product-16"
+            ]
+          },
+          {
+            "id": "spec-16-pro",
+            "title": "iPhone 16 Pro — характеристики Apple",
+            "url": "https://support.apple.com/en-us/121031",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "anchors": [
+              "module-2-topic-3-product-17"
+            ]
+          },
+          {
+            "id": "spec-16-pro-max",
+            "title": "iPhone 16 Pro Max — характеристики Apple",
+            "url": "https://support.apple.com/en-us/121032",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "anchors": [
+              "module-2-topic-3-product-17"
+            ]
+          },
+          {
+            "id": "spec-16e",
+            "title": "iPhone 16e — характеристики Apple",
+            "url": "https://support.apple.com/en-us/122208",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "anchors": [
+              "module-2-topic-3-product-18"
+            ]
+          },
+          {
+            "id": "spec-17-pro",
+            "title": "iPhone 17 Pro — характеристики Apple",
+            "url": "https://support.apple.com/en-us/125090",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "anchors": [
+              "module-2-topic-3-product-19"
+            ]
+          },
+          {
+            "id": "spec-17-pro-max",
+            "title": "iPhone 17 Pro Max — характеристики Apple",
+            "url": "https://support.apple.com/en-us/125091",
+            "scope": "Первісні технічні характеристики Apple (US). Формат SIM і мережі звіряйте за конкретним регіональним варіантом; поточну підтримку iOS перевіряйте окремо.",
+            "anchors": [
+              "module-2-topic-3-product-19"
+            ]
+          },
+          {
+            "id": "spec-air-ua",
+            "title": "iPhone Air — характеристики Apple (UA)",
+            "url": "https://www.apple.com/ua/iphone-air/specs/",
+            "scope": "Екран, камери, eSIM, корпус і умови вимірювання. Це українська специфікація моделі.",
+            "anchors": [
+              "module-2-topic-2",
+              "module-2-topic-3-product-20"
+            ]
+          },
+          {
+            "id": "spec-17-ua",
+            "title": "iPhone 17 — характеристики Apple (UA)",
+            "url": "https://www.apple.com/ua/iphone-17/specs/",
+            "scope": "Екран ProMotion, камери, пам’ять та інші параметри українського виконання.",
+            "anchors": [
+              "module-2-topic-2",
+              "module-2-topic-3-product-21"
+            ]
+          },
+          {
+            "id": "spec-18-pro-ua",
+            "title": "iPhone 18 Pro / Pro Max — характеристики Apple (UA)",
+            "url": "https://www.apple.com/ua/iphone-18-pro/specs/",
+            "scope": "Відмінності розмірів, камер та автономності українських виконань. Години відео Apple не є прогнозом ігор або навігації.",
+            "anchors": [
+              "module-2-topic-2",
+              "module-2-topic-4",
+              "module-2-topic-3-product-22"
+            ]
+          },
+          {
+            "id": "spec-18-pro-us",
+            "title": "iPhone 18 Pro / Pro Max — характеристики Apple (US)",
+            "url": "https://www.apple.com/iphone-18-pro/specs/",
+            "scope": "Американські виконання. SIM, маса й автономність можуть відрізнятися від інших регіонів; не змішуйте значення різних версій.",
+            "anchors": [
+              "module-2-topic-3-product-22"
+            ]
+          },
+          {
+            "id": "spec-duo-ua",
+            "title": "iPhone Duo — характеристики Apple (UA)",
+            "url": "https://www.apple.com/ua/iphone-duo/specs/",
+            "scope": "Екрани, складаний корпус, камери, Touch ID та eSIM. Перевіряйте поточну доступність окремих програмних можливостей.",
+            "anchors": [
+              "module-2-topic-2",
+              "module-2-topic-4",
+              "module-2-topic-3-product-23"
+            ]
+          },
+          {
+            "id": "spec-17e-ua",
+            "title": "iPhone 17e — характеристики Apple (UA)",
+            "url": "https://www.apple.com/ua/iphone-17e/specs/",
+            "scope": "Українська специфікація: nano-SIM + eSIM і MagSafe. Параметри стосуються відповідної регіональної версії.",
+            "anchors": [
+              "module-2-topic-2",
+              "module-2-topic-3-product-24"
+            ]
+          },
+          {
+            "id": "spec-17e-us",
+            "title": "iPhone 17e — характеристики Apple (US)",
+            "url": "https://www.apple.com/iphone-17e/specs/",
+            "scope": "Американська специфікація: лише eSIM. Для пристрою з фізичною SIM використовуйте відповідну регіональну специфікацію.",
+            "anchors": [
+              "module-2-topic-3-product-24"
+            ]
+          },
+          {
+            "id": "portrait-limits",
+            "title": "Apple: обмеження портретного режиму",
+            "url": "https://support.apple.com/en-us/102398",
+            "scope": "Умови розпізнавання облич для задньої камери XR та SE.",
+            "anchors": [
+              "module-2-topic-3-product-3",
+              "module-2-topic-3-product-6",
+              "module-2-topic-3-product-7"
+            ]
+          },
+          {
+            "id": "spec-17-pro-ua-support",
+            "title": "iPhone 17 Pro — специфікація UA",
+            "url": "https://support.apple.com/uk-ua/125090",
+            "scope": "Регіональна автономність і виконання з nano-SIM та eSIM.",
+            "anchors": [
+              "module-2-topic-3-product-19"
+            ]
+          },
+          {
+            "id": "spec-17-pro-max-ua-support",
+            "title": "iPhone 17 Pro Max — специфікація UA",
+            "url": "https://support.apple.com/uk-ua/125091",
+            "scope": "Регіональна автономність і виконання з nano-SIM та eSIM.",
+            "anchors": [
+              "module-2-topic-3-product-19"
+            ]
+          },
+          {
+            "id": "duo-product",
+            "title": "Apple: iPhone Duo та Split View",
+            "url": "https://www.apple.com/iphone-duo/",
+            "scope": "Складаний корпус і робота двох застосунків поруч.",
+            "anchors": [
+              "module-2-topic-3-product-23"
+            ]
+          },
+          {
+            "id": "pineapple-iphone",
+            "title": "PineApple: каталог нових iPhone",
+            "url": "https://pineapple.ua/smartfony/apple-iphone",
+            "scope": "Актуальний асортимент і доступні конфігурації перед консультацією.",
+            "anchors": [
+              "module-2-topic-1",
+              "module-2-topic-5"
+            ]
+          },
+          {
+            "id": "pineapple-used-iphone",
+            "title": "PineApple: каталог уживаних iPhone",
+            "url": "https://pineapple.ua/smartfony/b-u-apple-iphone",
+            "scope": "Покоління, конфігурації та категорії стану вживаних пристроїв.",
+            "anchors": [
+              "module-2-topic-1",
+              "module-2-topic-5"
+            ]
+          }
+        ],
+        "practice": [
+          {
+            "id": "16e-or-17e",
+            "title": "Вибір із потрібним аксесуаром",
+            "situation": "Покупець порівнює 16e та 17e й хоче користуватися сумісним магнітним зарядним пристроєм та фізичною SIM.",
+            "prompt": "Які відмінності перевірите та що уточните перед рекомендацією?",
+            "explanation": "У 16e Apple зазначає бездротове заряджання Qi, а 17e підтримує MagSafe. Для 17e також звірте регіон: у специфікації UA є nano-SIM + eSIM, у US — лише eSIM. Після цього порівняйте стан, потрібну пам’ять, фактичну ціну й сумісність конкретного аксесуара.",
+            "sourceIds": [
+              "spec-16e",
+              "spec-17e-ua",
+              "spec-17e-us"
+            ]
+          },
+          {
+            "id": "pro-or-pro-max",
+            "title": "Великий екран без зайвих компромісів",
+            "situation": "Покупець обирає між 18 Pro та Pro Max: дивиться відео в дорозі, але часто користується телефоном однією рукою.",
+            "prompt": "Як побудувати порівняння й пояснити показники автономності?",
+            "explanation": "Дайте оцінити габарити й масу обох пристроїв у руці, порівняйте розмір екрана та автономність того самого регіонального виконання. Години відтворення відео Apple — лабораторний орієнтир, а не обіцянка такої самої роботи навігації чи мобільних ігор. Вибір обґрунтуйте потребою, а не лише назвою Pro Max.",
+            "sourceIds": [
+              "spec-18-pro-ua",
+              "spec-18-pro-us",
+              "compare"
+            ]
+          }
+        ],
+        "models3d": [
+          {
+            "title": "iPhone 15 Pro Max",
+            "url": "https://support.apple.com/en-us/111828",
+            "variant": "Незалежна авторська 3D-візуалізація iPhone 15 Pro Max.",
+            "note": "Огляд форми корпусу, камер і кнопок. Кольори, комплектацію та характеристики звіряйте за офіційною специфікацією.",
+            "viewer": {
+              "provider": "local",
+              "assetId": "iphone-15-pro-max",
+              "uid": "df17520841214c1792fb8a44c6783ee7",
+              "author": "polyman Studio",
+              "authorUrl": "https://sketchfab.com/Polyman_3D",
+              "sourceUrl": "https://sketchfab.com/3d-models/apple-iphone-15-pro-max-black-df17520841214c1792fb8a44c6783ee7",
+              "license": "CC BY 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+            }
+          },
+          {
+            "title": "iPhone 18 Pro — огляд корпусу у виробника",
+            "url": "https://www.apple.com/iphone-18-pro/",
+            "variant": "Офіційний AR-макет Apple: US / eSIM.",
+            "note": "На сторінці Apple оберіть View in your space. Перегляд залежить від пристрою та браузера; розташування SIM-лотка іншої регіональної версії перевіряйте окремо."
+          },
+          {
+            "title": "iPhone Duo — огляд складаного корпусу у виробника",
+            "url": "https://www.apple.com/iphone-duo/",
+            "variant": "Офіційний AR-макет Apple: US / eSIM.",
+            "note": "На сторінці Apple оберіть View in your space. Це зовнішній перегляд виробника; можливості відображення залежать від пристрою та браузера."
+          }
+        ]
+      },
+      "reason": "Оновлено дату повної перевірки карток; додано точні регіональні джерела, портретні обмеження й каталоги PineApple.",
+      "sourceUrls": [
+        "https://www.apple.com/iphone/compare/",
+        "https://support.apple.com/en-us/108044",
+        "https://support.apple.com/en-us/111864",
+        "https://support.apple.com/en-us/111881",
+        "https://support.apple.com/en-us/111880",
+        "https://support.apple.com/en-us/111868",
+        "https://support.apple.com/en-us/111865",
+        "https://support.apple.com/en-us/111879",
+        "https://support.apple.com/en-us/111878",
+        "https://support.apple.com/en-us/111882",
+        "https://support.apple.com/en-us/111866",
+        "https://support.apple.com/en-us/111877",
+        "https://support.apple.com/en-us/111876",
+        "https://support.apple.com/en-us/111875",
+        "https://support.apple.com/en-us/111874",
+        "https://support.apple.com/en-us/111873",
+        "https://support.apple.com/en-us/111872",
+        "https://support.apple.com/en-us/111871",
+        "https://support.apple.com/en-us/111870",
+        "https://support.apple.com/en-us/111850",
+        "https://support.apple.com/en-us/111854",
+        "https://support.apple.com/en-us/111849",
+        "https://support.apple.com/en-us/111846",
+        "https://support.apple.com/en-us/111831",
+        "https://support.apple.com/en-us/111830",
+        "https://support.apple.com/en-us/111829",
+        "https://support.apple.com/en-us/111828",
+        "https://support.apple.com/en-us/121029",
+        "https://support.apple.com/en-us/121030",
+        "https://support.apple.com/en-us/121031",
+        "https://support.apple.com/en-us/121032",
+        "https://support.apple.com/en-us/122208",
+        "https://support.apple.com/en-us/125090",
+        "https://support.apple.com/en-us/125091",
+        "https://www.apple.com/ua/iphone-air/specs/",
+        "https://www.apple.com/ua/iphone-17/specs/",
+        "https://www.apple.com/ua/iphone-18-pro/specs/",
+        "https://www.apple.com/iphone-18-pro/specs/",
+        "https://www.apple.com/ua/iphone-duo/specs/",
+        "https://www.apple.com/ua/iphone-17e/specs/",
+        "https://www.apple.com/iphone-17e/specs/",
+        "https://support.apple.com/en-us/102398",
+        "https://support.apple.com/uk-ua/125090",
+        "https://support.apple.com/uk-ua/125091",
+        "https://www.apple.com/iphone-duo/",
+        "https://pineapple.ua/smartfony/apple-iphone",
+        "https://pineapple.ua/smartfony/b-u-apple-iphone"
+      ]
+    },
+    {
+      "moduleId": 2,
+      "path": "/contentBlocks/4/html",
+      "before": " <p>Наведені офіційні джерела повторно переглянуто <strong>25 жовтня 2026 року</strong>. Для характеристик і доступності функцій звіряйте саме потрібну модель та регіональну версію.</p> <ul> <li><a href=\"https://www.apple.com/iphone-18-pro/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone 18 Pro та 18 Pro Max — характеристики</a> · <a href=\"https://www.apple.com/newsroom/2026/09/apple-debuts-iphone-18-pro-and-iphone-18-pro-max/\" target=\"_blank\" rel=\"noopener noreferrer\">анонс Apple</a>.</li> <li><a href=\"https://www.apple.com/iphone-duo/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone Duo — характеристики</a> · <a href=\"https://www.apple.com/iphone-duo/\" target=\"_blank\" rel=\"noopener noreferrer\">можливості та старт продажів</a>.</li> <li><a href=\"https://www.apple.com/iphone-air/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone Air</a>, <a href=\"https://www.apple.com/iphone-17/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone 17</a> та iPhone 17e: <a href=\"https://www.apple.com/ua/iphone-17e/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">версія UA — nano-SIM + eSIM</a>, <a href=\"https://www.apple.com/iphone-17e/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">версія US — лише eSIM</a>.</li> <li><a href=\"https://support.apple.com/en-us/125090\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone 17 Pro</a> та <a href=\"https://support.apple.com/en-us/125091\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone 17 Pro Max</a>.</li> </ul> <p><strong>Перед консультацією:</strong> уточніть фактичну наявність, ціну, комплектацію й умови обслуговування в магазині. Час роботи та швидкість заряджання залежать від умов використання й аксесуарів.</p> ",
+      "after": " <p>Наведені офіційні джерела повторно переглянуто <strong>27 жовтня 2026 року</strong>. Для характеристик і доступності функцій звіряйте саме потрібну модель та регіональну версію.</p> <ul> <li><a href=\"https://www.apple.com/iphone-18-pro/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone 18 Pro та 18 Pro Max — характеристики</a> · <a href=\"https://www.apple.com/newsroom/2026/09/apple-debuts-iphone-18-pro-and-iphone-18-pro-max/\" target=\"_blank\" rel=\"noopener noreferrer\">анонс Apple</a>.</li> <li><a href=\"https://www.apple.com/iphone-duo/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone Duo — характеристики</a> · <a href=\"https://www.apple.com/iphone-duo/\" target=\"_blank\" rel=\"noopener noreferrer\">можливості та старт продажів</a>.</li> <li><a href=\"https://www.apple.com/iphone-air/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone Air</a>, <a href=\"https://www.apple.com/iphone-17/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone 17</a> та iPhone 17e: <a href=\"https://www.apple.com/ua/iphone-17e/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">версія UA — nano-SIM + eSIM</a>, <a href=\"https://www.apple.com/iphone-17e/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">версія US — лише eSIM</a>.</li> <li><a href=\"https://support.apple.com/en-us/125090\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone 17 Pro</a> та <a href=\"https://support.apple.com/en-us/125091\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone 17 Pro Max</a>.</li> </ul> <p><strong>Перед консультацією:</strong> уточніть фактичну наявність, ціну, комплектацію й умови обслуговування в магазині. Час роботи та швидкість заряджання залежать від умов використання й аксесуарів.</p> ",
+      "reason": "Дата повторної перевірки офіційних джерел карток.",
+      "sourceUrls": [
+        "https://www.apple.com/iphone/compare/",
+        "https://support.apple.com/en-us/108044",
+        "https://support.apple.com/en-us/111864",
+        "https://support.apple.com/en-us/111881",
+        "https://support.apple.com/en-us/111880",
+        "https://support.apple.com/en-us/111868",
+        "https://support.apple.com/en-us/111865",
+        "https://support.apple.com/en-us/111879",
+        "https://support.apple.com/en-us/111878",
+        "https://support.apple.com/en-us/111882",
+        "https://support.apple.com/en-us/111866",
+        "https://support.apple.com/en-us/111877",
+        "https://support.apple.com/en-us/111876",
+        "https://support.apple.com/en-us/111875",
+        "https://support.apple.com/en-us/111874",
+        "https://support.apple.com/en-us/111873",
+        "https://support.apple.com/en-us/111872",
+        "https://support.apple.com/en-us/111871",
+        "https://support.apple.com/en-us/111870",
+        "https://support.apple.com/en-us/111850",
+        "https://support.apple.com/en-us/111854",
+        "https://support.apple.com/en-us/111849",
+        "https://support.apple.com/en-us/111846",
+        "https://support.apple.com/en-us/111831",
+        "https://support.apple.com/en-us/111830",
+        "https://support.apple.com/en-us/111829",
+        "https://support.apple.com/en-us/111828",
+        "https://support.apple.com/en-us/121029",
+        "https://support.apple.com/en-us/121030",
+        "https://support.apple.com/en-us/121031",
+        "https://support.apple.com/en-us/121032",
+        "https://support.apple.com/en-us/122208",
+        "https://support.apple.com/en-us/125090",
+        "https://support.apple.com/en-us/125091",
+        "https://www.apple.com/ua/iphone-air/specs/",
+        "https://www.apple.com/ua/iphone-17/specs/",
+        "https://www.apple.com/ua/iphone-18-pro/specs/",
+        "https://www.apple.com/iphone-18-pro/specs/",
+        "https://www.apple.com/ua/iphone-duo/specs/",
+        "https://www.apple.com/ua/iphone-17e/specs/",
+        "https://www.apple.com/iphone-17e/specs/",
+        "https://support.apple.com/en-us/102398",
+        "https://support.apple.com/uk-ua/125090",
+        "https://support.apple.com/uk-ua/125091",
+        "https://www.apple.com/iphone-duo/",
+        "https://pineapple.ua/smartfony/apple-iphone",
+        "https://pineapple.ua/smartfony/b-u-apple-iphone"
+      ]
+    }
+  ]
+}

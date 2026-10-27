@@ -6,18 +6,18 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
   {
     slug: "iphone-1",
     title: "iPhone X (2017)",
-    overview: ["Діагональ: 5.8″", "Кольори: Space Gray, Silver", "Пам’ять: 64 GB, 256 GB"],
+    overview: ["Діагональ: 5,8″", "Кольори: Space Gray, Silver", "Пам’ять: 64 ГБ, 256 ГБ"],
     highlights: [
-  "Super Retina HD",
+  "OLED Super Retina HD",
   "True Tone",
   "Face ID",
   "A11 Bionic",
-  "2 стереодинаміки",
-  "Сталева рамка, скляний глянцевий корпус",
-  "Основна камера 12 Мп + телефото",
+  "Стереодинаміки",
+  "Сталева рамка, глянцева скляна задня панель",
+  "Основна камера 12 Мп + телефото 12 Мп",
   "Портретний режим",
-  "Фронтальна камера TrueDepth",
-  "IP67 (до 1 м на 30 хв)",
+  "Фронтальна камера TrueDepth 7 Мп",
+  "IP67 (до 1 м на 30 хв у лабораторних умовах)",
   "До 13 год відтворення відео за методикою Apple"
 ],
     colors: [
@@ -28,18 +28,18 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
   {
     slug: "iphone-2",
     title: "iPhone XS / iPhone XS Max (2018)",
-    overview: ["Діагональ: XS — 5.8″; XS Max — 6.5″", "Кольори: Space Gray, Silver, Gold", "Пам’ять: 64 GB, 256 GB, 512 GB"],
+    overview: ["Діагональ: XS — 5,8″; XS Max — 6,5″", "Кольори: Space Gray, Silver, Gold", "Пам’ять: 64 ГБ, 256 ГБ, 512 ГБ"],
     highlights: [
   "OLED Super Retina HD",
   "True Tone",
   "Face ID",
   "A12 Bionic",
-  "2 стереодинаміки",
-  "Сталева рамка, скляний глянцевий корпус",
-  "Основна камера 12 Мп + телефото",
+  "Стереодинаміки",
+  "Сталева рамка, глянцева скляна задня панель",
+  "Основна камера 12 Мп + телефото 12 Мп",
   "Портретний режим",
-  "Фронтальна камера TrueDepth",
-  "IP68 (до 2 м на 30 хв)",
+  "Фронтальна камера TrueDepth 7 Мп",
+  "IP68 (до 2 м на 30 хв у лабораторних умовах)",
   "Відтворення відео: XS — до 14 год; XS Max — до 15 год за методикою Apple"
 ],
     colors: [
@@ -51,24 +51,24 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
   {
     slug: "iphone-3",
     title: "iPhone XR (2018)",
-    overview: ["Діагональ: 6.1″", "Кольори: Black, White, Red, Blue, Yellow, Coral", "Пам’ять: 64 GB, 128 GB, 256 GB"],
+    overview: ["Діагональ: 6,1″", "Кольори: Black, White, (PRODUCT)RED, Blue, Yellow, Coral", "Пам’ять: 64 ГБ, 128 ГБ, 256 ГБ"],
     highlights: [
-      "IPS Liquid Retina HD 6.1″",
+      "IPS Liquid Retina HD 6,1″",
       "True Tone",
       "Face ID",
       "A12 Bionic",
-      "2 стереодинаміки",
-      "Алюмінієва рамка, скляний глянцевий корпус",
+      "Стереодинаміки",
+      "Алюмінієва рамка, глянцева скляна задня панель",
       "Основна камера 12 Мп",
-      "Портретний режим (програмний)",
-      "Фронтальна камера TrueDepth",
-      "IP67 (до 1 м на 30 хв)",
-      "До 16 год відтворення відео"
+      "Портретний режим задньої камери: для облич людей",
+      "Фронтальна камера TrueDepth 7 Мп",
+      "IP67 (до 1 м на 30 хв у лабораторних умовах)",
+      "До 16 год відтворення відео за методикою Apple"
     ],
     colors: [
       { label: "Black", imageUrl: "/materials/iphone/Color/XR/Black-Photoroom.png", caption: "Колір: Black", default: true },
       { label: "White", imageUrl: "/materials/iphone/Color/XR/White-Photoroom.png", caption: "Колір: White" },
-      { label: "Red", imageUrl: "/materials/iphone/Color/XR/Red-Photoroom.png", caption: "Колір: Red" },
+      { label: "(PRODUCT)RED", imageUrl: "/materials/iphone/Color/XR/Red-Photoroom.png", caption: "Колір: (PRODUCT)RED" },
       { label: "Blue", imageUrl: "/materials/iphone/Color/XR/Blue-Photoroom.png", caption: "Колір: Blue" },
       { label: "Yellow", imageUrl: "/materials/iphone/Color/XR/Yellow-Photoroom.png", caption: "Колір: Yellow" },
       { label: "Coral", imageUrl: "/materials/iphone/Color/XR/Corale-Photoroom.png", caption: "Колір: Coral" }
@@ -77,26 +77,26 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
   {
     slug: "iphone-4",
     title: "iPhone 11 (2019)",
-    overview: ["Діагональ: 6.1″", "Пам’ять: 64 GB, 128 GB, 256 GB"],
+    overview: ["Діагональ: 6,1″", "Пам’ять: 64 ГБ, 128 ГБ, 256 ГБ"],
     highlights: [
-      "IPS Liquid Retina HD 6.1″",
+      "IPS Liquid Retina HD 6,1″",
       "True Tone",
       "Face ID",
       "A13 Bionic",
-      "2 стереодинаміки",
-      "Алюмінієва рамка, скляний глянцевий корпус",
-      "Основна камера: 12 Мп + ультраширока 12 Мп",
+      "Стереодинаміки",
+      "Алюмінієва рамка, глянцева скляна задня панель",
+      "Основна камера: 12 Мп + надширококутна 12 Мп",
       "Портретний режим",
       "Нічний режим",
-      "Фронтальна камера TrueDepth",
-      "IP68 (до 2 м на 30 хв)",
-      "До 17 год відтворення відео"
+      "Фронтальна камера TrueDepth 12 Мп",
+      "IP68 (до 2 м на 30 хв у лабораторних умовах)",
+      "До 17 год відтворення відео за методикою Apple"
     ],
     colors: [
       { label: "Black", imageUrl: "/materials/iphone/Color/11/Black-Photoroom.png", caption: "Колір: Black", default: true },
       { label: "White", imageUrl: "/materials/iphone/Color/11/iphone11-white-select-2019-1397x1397.jpg-Photoroom.png", caption: "Колір: White" },
       { label: "Yellow", imageUrl: "/materials/iphone/Color/11/Yellow-Photoroom.png", caption: "Колір: Yellow" },
-      { label: "Red", imageUrl: "/materials/iphone/Color/11/Red-Photoroom.png", caption: "Колір: Red" },
+      { label: "(PRODUCT)RED", imageUrl: "/materials/iphone/Color/11/Red-Photoroom.png", caption: "Колір: (PRODUCT)RED" },
       { label: "Purple", imageUrl: "/materials/iphone/Color/11/Purple-Photoroom.png", caption: "Колір: Purple" },
       { label: "Green", imageUrl: "/materials/iphone/Color/11/Green-Photoroom.png", caption: "Колір: Green" }
     ]
@@ -105,18 +105,18 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
     slug: "iphone-5",
     title: "iPhone 11 Pro / iPhone 11 Pro Max (2019)",
     family: "Pro / Pro Max",
-    overview: ["Діагональ: Pro — 5.8″; Pro Max — 6.5″", "Кольори: Space Gray, Silver, Gold, Midnight Green", "Пам’ять: 64 GB, 256 GB, 512 GB"],
+    overview: ["Діагональ: Pro — 5,8″; Pro Max — 6,5″", "Кольори: Space Gray, Silver, Gold, Midnight Green", "Пам’ять: 64 ГБ, 256 ГБ, 512 ГБ"],
     highlights: [
       "OLED Super Retina XDR",
       "True Tone",
       "Face ID",
       "A13 Bionic",
-      "2 стереодинаміки",
-      "Сталева рамка, скляний матовий корпус",
-      "Потрійна камера 12 Мп (широка, ультраширока, телефото)",
+      "Стереодинаміки",
+      "Сталева рамка, матова скляна задня панель",
+      "Три задні камери по 12 Мп: основна, надширококутна та телефото",
       "Портретний режим",
       "Нічний режим",
-      "Фронтальна камера TrueDepth",
+      "Фронтальна камера TrueDepth 12 Мп",
       "IP68 (до 4 м на 30 хв у лабораторних умовах)"
     ],
     colors: [
@@ -129,73 +129,73 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
   {
     slug: "iphone-6",
     title: "iPhone SE 2-го покоління (2020)",
-    overview: ["Діагональ: 4.7″", "Кольори: Black, White, Red", "Пам’ять: 64 GB, 128 GB, 256 GB"],
+    overview: ["Діагональ: 4,7″", "Кольори: Black, White, (PRODUCT)RED", "Пам’ять: 64 ГБ, 128 ГБ, 256 ГБ"],
     highlights: [
-  "IPS Retina 4.7″",
+  "IPS Retina HD 4,7″",
   "True Tone",
   "Touch ID",
   "A13 Bionic",
-  "2 стереодинаміки",
-  "Алюмінієва рамка, скляний глянцевий корпус",
+  "Стереодинаміки",
+  "Алюмінієва рамка, глянцева скляна задня панель",
   "Основна камера 12 Мп",
   "Фронтальна камера 7 Мп",
-  "Портретний режим (програмний)",
-  "IP67 (до 1 м на 30 хв)",
+  "Портретний режим задньої камери: для облич людей",
+  "IP67 (до 1 м на 30 хв у лабораторних умовах)",
   "До 13 год відтворення відео за методикою Apple"
 ],
     colors: [
       { label: "Black", imageUrl: "/materials/iphone/Color/SE2020/Black-Photoroom.png", caption: "Колір: Black", default: true },
       { label: "White", imageUrl: "/materials/iphone/Color/SE2020/White-Photoroom.png", caption: "Колір: White" },
-      { label: "Red", imageUrl: "/materials/iphone/Color/SE2020/red-Photoroom.png", caption: "Колір: Red" }
+      { label: "(PRODUCT)RED", imageUrl: "/materials/iphone/Color/SE2020/red-Photoroom.png", caption: "Колір: (PRODUCT)RED" }
     ]
   },
   {
     slug: "iphone-7",
     title: "iPhone SE 3-го покоління (2022)",
-    overview: ["Діагональ: 4.7″", "Кольори: Midnight, Starlight, Red", "Пам’ять: 64 GB, 128 GB, 256 GB"],
+    overview: ["Діагональ: 4,7″", "Кольори: Midnight, Starlight, (PRODUCT)RED", "Пам’ять: 64 ГБ, 128 ГБ, 256 ГБ"],
     highlights: [
-      "IPS Retina 4.7″",
+      "IPS Retina HD 4,7″",
       "True Tone",
       "Touch ID",
       "A15 Bionic",
-      "2 стереодинаміки",
-      "Алюмінієва рамка, скляний глянцевий корпус",
+      "Стереодинаміки",
+      "Алюмінієва рамка, глянцева скляна задня панель",
       "Основна камера 12 Мп",
       "Фронтальна камера 7 Мп",
-      "Портретний режим (програмний)",
-      "IP67 (до 1 м на 30 хв)",
-      "До 15 год відтворення відео"
+      "Портретний режим задньої камери: для облич людей",
+      "IP67 (до 1 м на 30 хв у лабораторних умовах)",
+      "До 15 год відтворення відео за методикою Apple"
     ],
     colors: [
       { label: "Midnight", imageUrl: "/materials/iphone/Color/SE2022/Midnight.png", caption: "Колір: Midnight", default: true },
       { label: "Starlight", imageUrl: "/materials/iphone/Color/SE2022/white.png", caption: "Колір: Starlight" },
-      { label: "Red", imageUrl: "/materials/iphone/Color/SE2022/Red.png", caption: "Колір: Red" }
+      { label: "(PRODUCT)RED", imageUrl: "/materials/iphone/Color/SE2022/Red.png", caption: "Колір: (PRODUCT)RED" }
     ]
   },
   {
     slug: "iphone-8",
     title: "iPhone 12 mini / iPhone 12 (2020)",
-    overview: ["Діагональ: Mini — 5.4″; 12 — 6.1″", "Кольори: Black, White, Blue, Red, Purple, Green", "Пам’ять: 64 GB, 128 GB, 256 GB"],
+    overview: ["Діагональ: mini — 5,4″; 12 — 6,1″", "Кольори: Black, White, Blue, (PRODUCT)RED, Purple, Green", "Пам’ять: 64 ГБ, 128 ГБ, 256 ГБ"],
     highlights: [
       "OLED Super Retina XDR",
       "True Tone",
       "Face ID",
       "MagSafe",
       "A14 Bionic",
-      "2 стереодинаміки",
+      "Стереодинаміки",
       "Алюмінієва рамка",
-      "Основна камера: 12 Мп + ультраширока 12 Мп",
+      "Основна камера: 12 Мп + надширококутна 12 Мп",
       "Портретний режим",
       "Нічний режим",
-      "Фронтальна камера TrueDepth",
+      "Фронтальна камера TrueDepth 12 Мп",
       "Ceramic Shield",
-      "IP68 (до 6 м на 30 хв)"
+      "IP68 (до 6 м на 30 хв у лабораторних умовах)"
     ],
     colors: [
       { label: "Black", imageUrl: "/materials/iphone/Color/12/Black-Photoroom.png", caption: "Колір: Black", default: true },
       { label: "White", imageUrl: "/materials/iphone/Color/12/White-Photoroom.png", caption: "Колір: White" },
       { label: "Blue", imageUrl: "/materials/iphone/Color/12/Blue-Photoroom.png", caption: "Колір: Blue" },
-      { label: "Red", imageUrl: "/materials/iphone/Color/12/Red-Photoroom.png", caption: "Колір: Red" },
+      { label: "(PRODUCT)RED", imageUrl: "/materials/iphone/Color/12/Red-Photoroom.png", caption: "Колір: (PRODUCT)RED" },
       { label: "Purple", imageUrl: "/materials/iphone/Color/12/Purple-Photoroom.png", caption: "Колір: Purple" },
       { label: "Green", imageUrl: "/materials/iphone/Color/12/Green-Photoroom%20(1).png", caption: "Колір: Green" }
     ]
@@ -204,21 +204,21 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
     slug: "iphone-9",
     title: "iPhone 12 Pro / iPhone 12 Pro Max (2020)",
     family: "Pro / Pro Max",
-    overview: ["Діагональ: Pro — 6.1″; Pro Max — 6.7″", "Кольори: Graphite, Silver, Gold, Pacific Blue", "Пам’ять: 128 GB, 256 GB, 512 GB"],
+    overview: ["Діагональ: Pro — 6,1″; Pro Max — 6,7″", "Кольори: Graphite, Silver, Gold, Pacific Blue", "Пам’ять: 128 ГБ, 256 ГБ, 512 ГБ"],
     highlights: [
       "OLED Super Retina XDR",
       "True Tone",
       "Face ID",
       "MagSafe",
       "A14 Bionic",
-      "2 стереодинаміки",
-      "Сталева рамка, матовий корпус",
-      "Потрійна камера 12 Мп (широка, ультраширока, телефото) + LiDAR",
+      "Стереодинаміки",
+      "Сталева рамка, матова скляна задня панель",
+      "Три камери по 12 Мп і LiDAR; телефото: Pro — 2×, Pro Max — 2,5×",
       "Портретний режим",
       "Нічний режим",
-      "Фронтальна камера TrueDepth",
+      "Фронтальна камера TrueDepth 12 Мп",
       "Ceramic Shield",
-      "IP68 (до 6 м на 30 хв)"
+      "IP68 (до 6 м на 30 хв у лабораторних умовах)"
     ],
     colors: [
       { label: "Graphite", imageUrl: "/materials/iphone/Color/12Pro_ProMax/Graphite-Photoroom.png", caption: "Колір: Graphite", default: true },
@@ -230,29 +230,29 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
   {
     slug: "iphone-10",
     title: "iPhone 13 mini / iPhone 13 (2021)",
-    overview: ["Діагональ: Mini — 5.4″; 13 — 6.1″", "Кольори: Starlight, Midnight, Blue, Pink, Red, Green", "Пам’ять: 128 GB, 256 GB, 512 GB"],
+    overview: ["Діагональ: mini — 5,4″; 13 — 6,1″", "Кольори: Starlight, Midnight, Blue, Pink, (PRODUCT)RED, Green", "Пам’ять: 128 ГБ, 256 ГБ, 512 ГБ"],
     highlights: [
   "OLED Super Retina XDR",
   "True Tone",
   "Face ID",
   "MagSafe",
   "A15 Bionic",
-  "2 стереодинаміки",
+  "Стереодинаміки",
   "Алюмінієва рамка",
-  "Основна камера: 12 Мп + ультраширока 12 Мп",
+  "Основна камера: 12 Мп + надширококутна 12 Мп",
   "Портретний режим",
   "Нічний режим",
   "Кінематографічний режим",
-  "Фронтальна камера TrueDepth",
+  "Фронтальна камера TrueDepth 12 Мп",
   "Ceramic Shield",
-  "IP68 (до 6 м на 30 хв)"
+  "IP68 (до 6 м на 30 хв у лабораторних умовах)"
 ],
     colors: [
       { label: "Starlight", imageUrl: "/materials/iphone/Color/13/Starlight-Photoroom.png", caption: "Колір: Starlight", default: true },
       { label: "Midnight", imageUrl: "/materials/iphone/Color/13/Midnight-Photoroom.png", caption: "Колір: Midnight" },
       { label: "Blue", imageUrl: "/materials/iphone/Color/13/Blue-Photoroom.png", caption: "Колір: Blue" },
       { label: "Pink", imageUrl: "/materials/iphone/Color/13/Pink-Photoroom.png", caption: "Колір: Pink" },
-      { label: "Red", imageUrl: "/materials/iphone/Color/13/Red-Photoroom.png", caption: "Колір: Red" },
+      { label: "(PRODUCT)RED", imageUrl: "/materials/iphone/Color/13/Red-Photoroom.png", caption: "Колір: (PRODUCT)RED" },
       { label: "Green", imageUrl: "/materials/iphone/Color/13/Green-Photoroom.png", caption: "Колір: Green" }
     ]
   },
@@ -260,7 +260,7 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
     slug: "iphone-11",
     title: "iPhone 13 Pro / iPhone 13 Pro Max (2021)",
     family: "Pro / Pro Max",
-    overview: ["Діагональ: Pro — 6.1″; Pro Max — 6.7″", "Кольори: Graphite, Silver, Gold, Sierra Blue, Alpine Green", "Пам’ять: 128 GB, 256 GB, 512 GB, 1 TB"],
+    overview: ["Діагональ: Pro — 6,1″; Pro Max — 6,7″", "Кольори: Graphite, Silver, Gold, Sierra Blue, Alpine Green", "Пам’ять: 128 ГБ, 256 ГБ, 512 ГБ, 1 ТБ"],
     highlights: [
       "OLED Super Retina XDR з ProMotion",
       "True Tone",
@@ -268,13 +268,13 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
       "MagSafe",
       "A15 Bionic",
       "Сталева рамка",
-      "Потрійна камера 12 Мп (широка, ультраширока, телефото) + LiDAR",
+      "Три камери по 12 Мп, телефото з оптичним наближенням 3× та LiDAR",
       "Портретний режим",
       "Нічний режим",
       "Кінематографічний режим",
-      "Фронтальна камера TrueDepth",
+      "Фронтальна камера TrueDepth 12 Мп",
       "Ceramic Shield",
-      "IP68 (до 6 м на 30 хв)"
+      "IP68 (до 6 м на 30 хв у лабораторних умовах)"
     ],
     colors: [
       { label: "Graphite", imageUrl: "/materials/iphone/Color/13Pro_ProMax/Graphite-Photoroom%20(1).png", caption: "Колір: Graphite", default: true },
@@ -287,30 +287,30 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
   {
     slug: "iphone-12",
     title: "iPhone 14 / iPhone 14 Plus (2022)",
-    overview: ["Діагональ: 14 — 6.1″; 14 Plus — 6.7″", "Кольори: Starlight, Midnight, Blue, Purple, Red, Yellow", "Пам’ять: 128 GB, 256 GB, 512 GB"],
+    overview: ["Діагональ: 14 — 6,1″; 14 Plus — 6,7″", "Кольори: Starlight, Midnight, Blue, Purple, (PRODUCT)RED, Yellow", "Пам’ять: 128 ГБ, 256 ГБ, 512 ГБ"],
     highlights: [
       "OLED Super Retina XDR",
       "True Tone",
       "Face ID",
       "A15 Bionic (5-ядерний GPU)",
-      "2 стереодинаміки",
-      "Алюмінієва рамка, скляний глянцевий корпус",
+      "Стереодинаміки",
+      "Алюмінієва рамка, глянцева скляна задня панель",
       "MagSafe",
-      "Основна камера: 12 Мп + ультраширока 12 Мп",
+      "Основна камера: 12 Мп + надширококутна 12 Мп",
       "Dolby Vision відео",
       "Портретний режим, нічний режим",
       "Режим «Швидкий рух»",
       "Фронтальна камера TrueDepth з автофокусом",
       "Photonic Engine",
       "Ceramic Shield",
-      "IP68 (до 6 м на 30 хв)"
+      "IP68 (до 6 м на 30 хв у лабораторних умовах)"
     ],
     colors: [
       { label: "Starlight", imageUrl: "/materials/iphone/Color/14/Starlight-Photoroom.png", caption: "Колір: Starlight", default: true },
       { label: "Midnight", imageUrl: "/materials/iphone/Color/14/Midnight-Photoroom.png", caption: "Колір: Midnight" },
       { label: "Blue", imageUrl: "/materials/iphone/Color/14/Blue-Photoroom.png", caption: "Колір: Blue" },
       { label: "Purple", imageUrl: "/materials/iphone/Color/14/Purple-Photoroom.png", caption: "Колір: Purple" },
-      { label: "Red", imageUrl: "/materials/iphone/Color/14/Red-Photoroom.png", caption: "Колір: Red" },
+      { label: "(PRODUCT)RED", imageUrl: "/materials/iphone/Color/14/Red-Photoroom.png", caption: "Колір: (PRODUCT)RED" },
       { label: "Yellow", imageUrl: "/materials/iphone/Color/14/Yellow-Photoroom.png", caption: "Колір: Yellow" }
     ]
   },
@@ -318,18 +318,18 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
     slug: "iphone-13",
     title: "iPhone 14 Pro / iPhone 14 Pro Max (2022)",
     family: "Pro / Pro Max",
-    overview: ["Діагональ: Pro — 6.1″; Pro Max — 6.7″", "Кольори: Space Black, Silver, Gold, Deep Purple", "Пам’ять: 128 GB, 256 GB, 512 GB, 1 TB"],
+    overview: ["Діагональ: Pro — 6,1″; Pro Max — 6,7″", "Кольори: Space Black, Silver, Gold, Deep Purple", "Пам’ять: 128 ГБ, 256 ГБ, 512 ГБ, 1 ТБ"],
     highlights: [
       "OLED Super Retina XDR з ProMotion",
       "True Tone",
-      "Always‑On Display",
+      "Always-On Display",
       "Dynamic Island",
       "Face ID",
       "A16 Bionic",
-      "2 стереодинаміки",
-      "Сталева рамка, матовий корпус",
+      "Стереодинаміки",
+      "Сталева рамка, матова скляна задня панель",
       "MagSafe",
-      "Основна камера: 48 Мп + ультраширока 12 Мп + телефото 12 Мп",
+      "Основна 48 Мп + надширококутна 12 Мп + телефото 12 Мп з оптичним наближенням 3×",
       "LiDAR",
       "Портретний режим",
       "Нічний режим",
@@ -349,17 +349,17 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
   {
     slug: "iphone-14",
     title: "iPhone 15 / iPhone 15 Plus (2023)",
-    overview: ["Діагональ: 15 — 6.1″; 15 Plus — 6.7″", "Кольори: Black, Blue, Green, Yellow, Pink", "Пам’ять: 128 GB, 256 GB, 512 GB"],
+    overview: ["Діагональ: 15 — 6,1″; 15 Plus — 6,7″", "Кольори: Black, Blue, Green, Yellow, Pink", "Пам’ять: 128 ГБ, 256 ГБ, 512 ГБ"],
     highlights: [
   "OLED Super Retina XDR",
   "True Tone",
   "Dynamic Island",
   "Face ID",
   "A16 Bionic",
-  "2 стереодинаміки",
-  "Алюмінієва рамка, матовий корпус",
+  "Стереодинаміки",
+  "Алюмінієва рамка, матова скляна задня панель",
   "MagSafe",
-  "Основна камера: 48 Мп + ультраширока 12 Мп, наближення 2× оптичної якості з основного сенсора",
+  "Основна камера: 48 Мп + надширококутна 12 Мп, наближення 2× оптичної якості з основного сенсора",
   "Портрети нового покоління",
   "Нічний режим",
   "Dolby Vision",
@@ -367,7 +367,7 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
   "Фронтальна камера TrueDepth з автофокусом",
   "Photonic Engine",
   "Ceramic Shield",
-  "IP68 (до 6 м на 30 хв)",
+  "IP68 (до 6 м на 30 хв у лабораторних умовах)",
   "USB‑C"
 ],
     colors: [
@@ -382,18 +382,18 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
     slug: "iphone-15",
     title: "iPhone 15 Pro / iPhone 15 Pro Max (2023)",
     family: "Pro / Pro Max",
-    overview: ["Діагональ: Pro — 6.1″; Pro Max — 6.7″", "Кольори: Black Titanium, White Titanium, Blue Titanium, Natural Titanium", "Пам’ять: Pro — 128/256/512 GB, 1 TB; Pro Max — 256/512 GB, 1 TB"],
+    overview: ["Діагональ: Pro — 6,1″; Pro Max — 6,7″", "Кольори: Black Titanium, White Titanium, Blue Titanium, Natural Titanium", "Пам’ять: Pro — 128/256/512 ГБ, 1 ТБ; Pro Max — 256/512 ГБ, 1 ТБ"],
     highlights: [
   "OLED Super Retina XDR з ProMotion",
   "True Tone",
-  "Always‑On Display",
+  "Always-On Display",
   "Dynamic Island",
   "Face ID",
   "A17 Pro",
   "Титанові рамки",
-  "Action Button",
+  "Кнопка дії",
   "MagSafe",
-  "Основна камера: 48 Мп + ультраширока 12 Мп + телефото 12 Мп (до 3 х Pro / 5 х Pro Max)",
+  "Основна 48 Мп + надширококутна 12 Мп; телефото 12 Мп: Pro — 3×, Pro Max — 5×",
   "LiDAR",
   "Портрети нового покоління",
   "Нічний режим",
@@ -402,7 +402,7 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
   "Фронтальна камера TrueDepth з автофокусом",
   "Photonic Engine",
   "Ceramic Shield",
-  "IP68",
+  "IP68 (до 6 м на 30 хв у лабораторних умовах)",
   "Відтворення відео: Pro — до 23 год; Pro Max — до 29 год за методикою Apple",
   "USB‑C"
 ],
@@ -416,21 +416,21 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
   {
     slug: "iphone-16",
     title: "iPhone 16 / iPhone 16 Plus (2024)",
-    overview: ["Діагональ: 16 — 6.1″; 16 Plus — 6.7″", "Кольори: Black, White, Teal, Ultramarine, Pink", "Пам’ять: 128 GB, 256 GB, 512 GB"],
+    overview: ["Діагональ: 16 — 6,1″; 16 Plus — 6,7″", "Кольори: Black, White, Teal, Ultramarine, Pink", "Пам’ять: 128 ГБ, 256 ГБ, 512 ГБ"],
     highlights: [
   "OLED Super Retina XDR",
   "True Tone, Dynamic Island",
   "Face ID, A18",
-  "2 стереодинаміки, алюмінієва рамка",
+  "Стереодинаміки, алюмінієва рамка",
   "MagSafe, кнопка дії та Camera Control",
-  "Основна камера: 48 Мп + ультраширока 12 Мп, наближення 2× оптичної якості з основного сенсора",
+  "Основна камера: 48 Мп + надширококутна 12 Мп, наближення 2× оптичної якості з основного сенсора",
   "Портрети нового покоління, нічний режим",
   "Dolby Vision",
   "Режим «Швидкий рух»",
   "Фронтальна камера TrueDepth з автофокусом",
   "Photonic Engine",
   "Ceramic Shield",
-  "IP68",
+  "IP68 (до 6 м на 30 хв у лабораторних умовах)",
   "USB‑C"
 ],
     colors: [
@@ -445,19 +445,19 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
     slug: "iphone-17",
     title: "iPhone 16 Pro / iPhone 16 Pro Max (2024)",
     family: "Pro / Pro Max",
-    overview: ["Діагональ: Pro — 6.3″; Pro Max — 6.9″", "Кольори: Black Titanium, White Titanium, Desert Titanium, Natural Titanium", "Пам’ять: Pro — 128/256/512 GB, 1 TB; Pro Max — 256/512 GB, 1 TB"],
+    overview: ["Діагональ: Pro — 6,3″; Pro Max — 6,9″", "Кольори: Black Titanium, White Titanium, Desert Titanium, Natural Titanium", "Пам’ять: Pro — 128/256/512 ГБ, 1 ТБ; Pro Max — 256/512 ГБ, 1 ТБ"],
     highlights: [
       "OLED Super Retina XDR з ProMotion",
       "True Tone",
-      "Always‑On Display",
+      "Always-On Display",
       "Dynamic Island",
       "Face ID",
       "A18 Pro",
-      "2 стереодинаміки",
+      "Стереодинаміки",
       "Титанові рамки",
       "Кнопка дії та Camera Control",
       "MagSafe",
-      "Камери: основна 48 Мп Fusion + ультраширока 48 Мп + телефото 12 Мп з оптичним наближенням 5×",
+      "Камери: основна 48 Мп Fusion + надширококутна 48 Мп + телефото 12 Мп з оптичним наближенням 5×",
       "LiDAR",
       "Портрети нового покоління",
       "Нічний режим",
@@ -466,7 +466,7 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
       "Фронтальна камера TrueDepth з автофокусом",
       "Photonic Engine",
       "Ceramic Shield",
-      "IP68",
+      "IP68 (до 6 м на 30 хв у лабораторних умовах)",
       "Відтворення відео: Pro — до 27 год; Pro Max — до 33 год за методикою Apple",
       "USB‑C"
     ],
@@ -480,18 +480,18 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
   {
     slug: "iphone-18",
     title: "iPhone 16e (2025)",
-    overview: ["Кольори: Black, White", "Пам’ять: 128 GB, 256 GB, 512 GB"],
+    overview: ["Кольори: Black, White", "Пам’ять: 128 ГБ, 256 ГБ, 512 ГБ"],
     highlights: [
-      "OLED Super Retina XDR 6.1″ (2532×1170, 460 ppi)",
+      "OLED Super Retina XDR 6,1″ (2532×1170, 460 ppi)",
       "HDR10, Dolby Vision, True Tone",
       "Apple A18 (4‑ядерний GPU)",
-      "Основна камера: 48 Мп Fusion f/1.6 з OIS",
-      "Фронтальна камера: 12 Мп TrueDepth f/1.9 з автофокусом",
-      "Photonic Engine, Deep Fusion, Photographic Styles, Night Mode",
-      "До 26 год відео, до 90 год аудіо",
-      "Qi бездротова зарядка до 7.5 Вт",
-      "IP68",
-      "Action Button",
+      "Основна камера: 48 Мп Fusion f/1,6 з OIS",
+      "Фронтальна камера: 12 Мп TrueDepth f/1,9 з автофокусом",
+      "Photonic Engine, Deep Fusion, стилі фотографій, нічний режим",
+      "До 26 год відео та до 90 год аудіо за методикою Apple",
+      "Qi бездротова зарядка до 7,5 Вт",
+      "IP68 (до 6 м на 30 хв у лабораторних умовах)",
+      "Кнопка дії",
       "USB‑C",
       "Без MagSafe",
       "Підтримка Apple Intelligence; доступність функцій залежить від мови та регіону"
@@ -505,20 +505,20 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
     slug: "iphone-19",
     title: "iPhone 17 Pro / iPhone 17 Pro Max (2025)",
     family: "Pro / Pro Max",
-    overview: ["Діагональ: Pro — 6.3″; Pro Max — 6.9″", "Кольори: Silver, Cosmic Orange, Deep Blue", "Пам’ять: Pro — 256/512 GB, 1 TB; Pro Max — 256/512 GB, 1 TB, 2 TB"],
+    overview: ["Діагональ: Pro — 6,3″; Pro Max — 6,9″", "Кольори: Silver, Cosmic Orange, Deep Blue", "Пам’ять: Pro — 256/512 ГБ, 1 ТБ; Pro Max — 256/512 ГБ, 1 ТБ, 2 ТБ"],
     highlights: [
       "OLED Super Retina XDR з ProMotion до 120 Гц, до 3000 ніт на сонці",
-      "True Tone, Always‑On Display, Dynamic Island",
+      "True Tone, Always-On Display, Dynamic Island",
       "Face ID, A19 Pro",
-      "2 стереодинаміки, алюмінієвий unibody корпус",
-      "Action Button, MagSafe",
-      "Камери: три модулі по 48 Мп; телефото 4× та 8× оптичної якості, цифрове наближення до 40×",
+      "Стереодинаміки, алюмінієвий цільний корпус",
+      "Кнопка дії, MagSafe",
+      "Три задні камери по 48 Мп; телефото 4×, наближення 8× оптичної якості, цифровий зум до 40×",
       "LiDAR, портрети нового покоління, нічний режим",
       "Dolby Vision, «Швидкий рух»",
       "Фронтальна камера: 18 Мп Center Stage з автофокусом",
       "Photonic Engine, Ceramic Shield 2",
-      "IP68, USB‑C",
-      "Відтворення відео: Pro — до 33 год; Pro Max — до 39 год у версіях eSIM за методикою Apple; інші регіональні версії можуть відрізнятися"
+      "IP68 (до 6 м на 30 хв у лабораторних умовах), USB‑C",
+      "Відео за методикою Apple: Pro — до 31 год, Pro Max — до 37 год (UA); версії лише з eSIM — до 33/39 год"
     ],
     colors: [
       { label: "Silver", imageUrl: "/materials/iphone/Color/17Pro_ProMax/Silver-Photoroom.png", caption: "Колір: Silver", default: true },
@@ -531,13 +531,13 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
     title: "iPhone Air (2025)",
     family: "Air",
     summary: "Для тих, хто обирає тонкий і легкий корпус. Під час порівняння враховуйте одну основну камеру та роботу лише з eSIM.",
-    overview: ["Діагональ: 6.5″", "Кольори: Space Black, Cloud White, Light Gold, Sky Blue", "Пам’ять: 256/512 GB, 1 TB"],
+    overview: ["Діагональ: 6,5″", "Кольори: Space Black, Cloud White, Light Gold, Sky Blue", "Пам’ять: 256/512 ГБ, 1 ТБ"],
     highlights: [
       "OLED Super Retina XDR з ProMotion до 120 Гц",
       "True Tone",
-      "Always‑On Display",
+      "Always-On Display",
       "Dynamic Island",
-      "Face ID, A19 Pro",
+      "Face ID, A19 Pro з 5-ядерним GPU",
       "Один вбудований динамік",
       "Титановий корпус: товщина 5,64 мм, маса 165 г",
       "MagSafe",
@@ -547,7 +547,7 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
       "Фронтальна камера: 18 Мп Center Stage з автофокусом",
       "Photonic Engine",
       "Ceramic Shield 2 (передня панель), Ceramic Shield (задня)",
-      "IP68",
+      "IP68 (до 6 м на 30 хв у лабораторних умовах)",
       "До 27 год відтворення відео за методикою Apple",
       "USB‑C, лише eSIM"
     ],
@@ -561,17 +561,17 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
   {
     slug: "iphone-21",
     title: "iPhone 17 (2025)",
-    overview: ["Діагональ: 6.3″", "Кольори: Lavender, Sage, Mist Blue, Black, White", "Пам’ять: 256/512 GB"],
+    overview: ["Діагональ: 6,3″", "Кольори: Lavender, Sage, Mist Blue, Black, White", "Пам’ять: 256/512 ГБ"],
     highlights: [
       "OLED Super Retina XDR з ProMotion до 120 Гц, HDR10, до 3000 ніт на сонці",
       "True Tone",
-      "Always‑On Display",
+      "Always-On Display",
       "Dynamic Island",
       "Face ID",
       "A19",
-      "2 стереодинаміки",
+      "Стереодинаміки",
       "Алюмінієвий корпус",
-      "Action Button",
+      "Кнопка дії",
       "MagSafe; 48 Мп Fusion Main + 48 Мп Ultra Wide",
       "Портрети нового покоління",
       "Нічний режим",
@@ -580,8 +580,8 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
       "Фронтальна камера 18 Мп Center Stage з автофокусом",
       "Photonic Engine",
       "Ceramic Shield 2 спереду, скляна задня панель",
-      "IP68",
-      "До 30 год відео",
+      "IP68 (до 6 м на 30 хв у лабораторних умовах)",
+      "До 30 год відео за методикою Apple",
       "USB‑C"
     ],
     colors: [
@@ -599,7 +599,7 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
     overview: [
       "Діагональ: Pro — 6,3″; Pro Max — 6,9″",
       "Кольори: Black, Silver, Glacier, Burgundy",
-      "Пам’ять: 256/512 GB, 1 TB, 2 TB"
+      "Пам’ять: 256/512 ГБ, 1 ТБ, 2 ТБ"
     ],
     highlights: [
       "OLED Super Retina XDR з ProMotion до 120 Гц, до 3000 ніт на сонці",
@@ -612,8 +612,8 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
       "Dolby Vision, ProRAW, ProRes, Apple Log 2",
       "Фронтальна камера: 18 Мп Center Stage з автофокусом",
       "Photonic Engine, Ceramic Shield 2",
-      "IP68, USB-C (USB 3)",
-      "Відтворення відео: Pro — до 36 год; Pro Max — до 45 год у версіях eSIM за методикою Apple"
+      "IP68 (до 6 м на 30 хв у лабораторних умовах), USB-C (USB 3)",
+      "Відео за методикою Apple: Pro — до 34 год, Pro Max — до 43 год (UA); версії лише з eSIM — до 36/45 год"
     ],
     colors: [
       { label: "Black", imageUrl: "/materials/iphone/2026/18-pro/black.png", caption: "Чорний. На фото — iPhone 18 Pro", default: true },
@@ -629,7 +629,7 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
     overview: [
       "Діагональ: внутрішній екран — 7,6″; зовнішній — 5,4″",
       "Кольори: Night Sky, Star White",
-      "Пам’ять: 256/512 GB, 1 TB, 2 TB"
+      "Пам’ять: 256/512 ГБ, 1 ТБ, 2 ТБ"
     ],
     highlights: [
       "Два OLED-дисплеї Super Retina XDR з ProMotion до 120 Гц",
@@ -641,12 +641,12 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
       "Два застосунки поруч — Split View",
       "Camera Control",
       "MagSafe та Qi2 до 25 Вт",
-      "Камери: основна 48 Мп Fusion + ультраширока 48 Мп; наближення 2× оптичної якості",
+      "Камери: основна 48 Мп Fusion + надширококутна 48 Мп; наближення 2× оптичної якості",
       "Портрети нового покоління, нічний режим",
       "Dolby Vision до 4K 120 кадрів/с на основній камері",
       "Зовнішня фронтальна камера: 12 Мп Center Stage; внутрішня FaceTime — під екраном",
       "Ceramic Shield 2 спереду, Ceramic Shield ззаду",
-      "IP68",
+      "IP68 (до 6 м на 30 хв у лабораторних умовах)",
       "До 44 год відео на зовнішньому або до 31 год на внутрішньому екрані за методикою Apple",
       "USB-C, лише eSIM"
     ],
@@ -662,7 +662,7 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
     overview: [
       "Діагональ: 6,1″",
       "Кольори: Black, White, Soft Pink",
-      "Пам’ять: 256/512 GB"
+      "Пам’ять: 256/512 ГБ"
     ],
     highlights: [
       "OLED Super Retina XDR (2532×1170, 460 ppi)",
@@ -675,15 +675,15 @@ export const iphoneProductCatalog: ModuleCatalogProduct[] = [
       "Photonic Engine, Deep Fusion, нічний режим",
       "MagSafe та Qi2 до 15 Вт",
       "Ceramic Shield 2 спереду, скляна задня панель",
-      "IP68",
+      "IP68 (до 6 м на 30 хв у лабораторних умовах)",
       "До 26 год відтворення відео за методикою Apple",
-      "USB-C (USB 2)",
+      "USB-C (USB 2); UA — nano-SIM + eSIM, US — лише eSIM",
       "Apple Intelligence; доступність залежить від мови та регіону"
     ],
     colors: [
       { label: "Black", imageUrl: "/materials/iphone/2026/17e/black.png", caption: "Чорний", default: true },
       { label: "White", imageUrl: "/materials/iphone/2026/17e/white.png", caption: "Білий" },
-      { label: "Soft Pink", imageUrl: "/materials/iphone/2026/17e/soft-pink.png", caption: "Ніжно-рожевий" }
+      { label: "Soft Pink", imageUrl: "/materials/iphone/2026/17e/soft-pink.png", caption: "Світло-рожевий" }
     ]
   }
 ];
@@ -921,7 +921,7 @@ export const iphoneCatalogBlocks: ModuleContentBlock[] = [
   {
     type: "text",
     title: "Офіційні характеристики та актуальність",
-    html: " <p>Наведені офіційні джерела повторно переглянуто <strong>25 жовтня 2026 року</strong>. Для характеристик і доступності функцій звіряйте саме потрібну модель та регіональну версію.</p> <ul> <li><a href=\"https://www.apple.com/iphone-18-pro/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone 18 Pro та 18 Pro Max — характеристики</a> · <a href=\"https://www.apple.com/newsroom/2026/09/apple-debuts-iphone-18-pro-and-iphone-18-pro-max/\" target=\"_blank\" rel=\"noopener noreferrer\">анонс Apple</a>.</li> <li><a href=\"https://www.apple.com/iphone-duo/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone Duo — характеристики</a> · <a href=\"https://www.apple.com/iphone-duo/\" target=\"_blank\" rel=\"noopener noreferrer\">можливості та старт продажів</a>.</li> <li><a href=\"https://www.apple.com/iphone-air/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone Air</a>, <a href=\"https://www.apple.com/iphone-17/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone 17</a> та iPhone 17e: <a href=\"https://www.apple.com/ua/iphone-17e/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">версія UA — nano-SIM + eSIM</a>, <a href=\"https://www.apple.com/iphone-17e/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">версія US — лише eSIM</a>.</li> <li><a href=\"https://support.apple.com/en-us/125090\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone 17 Pro</a> та <a href=\"https://support.apple.com/en-us/125091\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone 17 Pro Max</a>.</li> </ul> <p><strong>Перед консультацією:</strong> уточніть фактичну наявність, ціну, комплектацію й умови обслуговування в магазині. Час роботи та швидкість заряджання залежать від умов використання й аксесуарів.</p> "
+    html: " <p>Наведені офіційні джерела повторно переглянуто <strong>27 жовтня 2026 року</strong>. Для характеристик і доступності функцій звіряйте саме потрібну модель та регіональну версію.</p> <ul> <li><a href=\"https://www.apple.com/iphone-18-pro/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone 18 Pro та 18 Pro Max — характеристики</a> · <a href=\"https://www.apple.com/newsroom/2026/09/apple-debuts-iphone-18-pro-and-iphone-18-pro-max/\" target=\"_blank\" rel=\"noopener noreferrer\">анонс Apple</a>.</li> <li><a href=\"https://www.apple.com/iphone-duo/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone Duo — характеристики</a> · <a href=\"https://www.apple.com/iphone-duo/\" target=\"_blank\" rel=\"noopener noreferrer\">можливості та старт продажів</a>.</li> <li><a href=\"https://www.apple.com/iphone-air/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone Air</a>, <a href=\"https://www.apple.com/iphone-17/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone 17</a> та iPhone 17e: <a href=\"https://www.apple.com/ua/iphone-17e/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">версія UA — nano-SIM + eSIM</a>, <a href=\"https://www.apple.com/iphone-17e/specs/\" target=\"_blank\" rel=\"noopener noreferrer\">версія US — лише eSIM</a>.</li> <li><a href=\"https://support.apple.com/en-us/125090\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone 17 Pro</a> та <a href=\"https://support.apple.com/en-us/125091\" target=\"_blank\" rel=\"noopener noreferrer\">iPhone 17 Pro Max</a>.</li> </ul> <p><strong>Перед консультацією:</strong> уточніть фактичну наявність, ціну, комплектацію й умови обслуговування в магазині. Час роботи та швидкість заряджання залежать від умов використання й аксесуарів.</p> "
   }
 ];
 

@@ -38,3 +38,8 @@ test("Unicode normalization preserves offsets, combining marks and compatibility
   assert.deepEqual(marked("Cafe\u0301 та Café", "café"), ["Cafe\u0301", "Café"]);
   assert.deepEqual(marked("ﬁlm", "film"), ["ﬁlm"]);
 });
+
+test("memory unit aliases preserve the original Ukrainian and Latin display text", () => {
+  assert.deepEqual(marked("Пам’ять: 128 ГБ, 1 ТБ", "128GB 1TB"), ["128", "ГБ", "1", "ТБ"]);
+  assert.deepEqual(marked("Пам’ять: 256 GB, 2 TB", "256ГБ 2ТБ"), ["256", "GB", "2", "TB"]);
+});

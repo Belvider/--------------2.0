@@ -309,7 +309,7 @@
   },
   "2": {
     "version": 1,
-    "reviewedAt": "2026-10-25",
+    "reviewedAt": "2026-10-27",
     "objectives": [
       "Звузити вибір до двох-трьох моделей за потребою покупця.",
       "Порівняти характеристики одного покоління й регіонального виконання без змішування параметрів.",
@@ -739,6 +739,64 @@
         "scope": "Американська специфікація: лише eSIM. Для пристрою з фізичною SIM використовуйте відповідну регіональну специфікацію.",
         "anchors": [
           "module-2-topic-3-product-24"
+        ]
+      },
+      {
+        "id": "portrait-limits",
+        "title": "Apple: обмеження портретного режиму",
+        "url": "https://support.apple.com/en-us/102398",
+        "scope": "Умови розпізнавання облич для задньої камери XR та SE.",
+        "anchors": [
+          "module-2-topic-3-product-3",
+          "module-2-topic-3-product-6",
+          "module-2-topic-3-product-7"
+        ]
+      },
+      {
+        "id": "spec-17-pro-ua-support",
+        "title": "iPhone 17 Pro — специфікація UA",
+        "url": "https://support.apple.com/uk-ua/125090",
+        "scope": "Регіональна автономність і виконання з nano-SIM та eSIM.",
+        "anchors": [
+          "module-2-topic-3-product-19"
+        ]
+      },
+      {
+        "id": "spec-17-pro-max-ua-support",
+        "title": "iPhone 17 Pro Max — специфікація UA",
+        "url": "https://support.apple.com/uk-ua/125091",
+        "scope": "Регіональна автономність і виконання з nano-SIM та eSIM.",
+        "anchors": [
+          "module-2-topic-3-product-19"
+        ]
+      },
+      {
+        "id": "duo-product",
+        "title": "Apple: iPhone Duo та Split View",
+        "url": "https://www.apple.com/iphone-duo/",
+        "scope": "Складаний корпус і робота двох застосунків поруч.",
+        "anchors": [
+          "module-2-topic-3-product-23"
+        ]
+      },
+      {
+        "id": "pineapple-iphone",
+        "title": "PineApple: каталог нових iPhone",
+        "url": "https://pineapple.ua/smartfony/apple-iphone",
+        "scope": "Актуальний асортимент і доступні конфігурації перед консультацією.",
+        "anchors": [
+          "module-2-topic-1",
+          "module-2-topic-5"
+        ]
+      },
+      {
+        "id": "pineapple-used-iphone",
+        "title": "PineApple: каталог уживаних iPhone",
+        "url": "https://pineapple.ua/smartfony/b-u-apple-iphone",
+        "scope": "Покоління, конфігурації та категорії стану вживаних пристроїв.",
+        "anchors": [
+          "module-2-topic-1",
+          "module-2-topic-5"
         ]
       }
     ],

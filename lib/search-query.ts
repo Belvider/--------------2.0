@@ -5,7 +5,8 @@ export function normalizeSearchText(value: string) {
     .replace(/(\d)е(?=$|[^\p{L}\p{N}])/gu, "$1e")
     .replace(/([\p{L}])(\d)/gu, "$1 $2").replace(/(\d)([\p{L}])/gu, "$1 $2")
     .replace(/\bpromax\b/g, "pro max")
-    .replace(/[^\p{L}\p{N}]+/gu, " ").replace(/\s+/g, " ").trim();
+    .replace(/[^\p{L}\p{N}]+/gu, " ").replace(/\s+/g, " ").trim()
+    .replace(/(^| )(гб|тб)(?= |$)/gu, (_, space: string, unit: string) => space + (unit === "гб" ? "gb" : "tb"));
 }
 
 export function normalizeSearchQuery(query: string) {

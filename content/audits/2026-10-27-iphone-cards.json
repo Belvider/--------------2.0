@@ -1,0 +1,5607 @@
+{
+  "reviewedAt": "2026-10-27",
+  "scope": "All textual claims present in the 24 catalog cards; not an exhaustive list of every supported device function.",
+  "modelCount": 24,
+  "fieldCount": 648,
+  "coverage": [
+    {
+      "productIndex": 0,
+      "slug": "iphone-1",
+      "title": "iPhone X (2017)",
+      "fields": [
+        {
+          "path": "/title",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111864"
+          ]
+        },
+        {
+          "path": "/colors/0/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111864"
+          ]
+        },
+        {
+          "path": "/colors/0/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111864"
+          ]
+        },
+        {
+          "path": "/colors/1/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111864"
+          ]
+        },
+        {
+          "path": "/colors/1/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111864"
+          ]
+        },
+        {
+          "path": "/overview/0",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111864"
+          ]
+        },
+        {
+          "path": "/overview/1",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111864"
+          ]
+        },
+        {
+          "path": "/overview/2",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111864"
+          ]
+        },
+        {
+          "path": "/highlights/0",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111864"
+          ]
+        },
+        {
+          "path": "/highlights/1",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111864"
+          ]
+        },
+        {
+          "path": "/highlights/2",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111864"
+          ]
+        },
+        {
+          "path": "/highlights/3",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111864"
+          ]
+        },
+        {
+          "path": "/highlights/4",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111864"
+          ]
+        },
+        {
+          "path": "/highlights/5",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111864"
+          ]
+        },
+        {
+          "path": "/highlights/6",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111864"
+          ]
+        },
+        {
+          "path": "/highlights/7",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111864"
+          ]
+        },
+        {
+          "path": "/highlights/8",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111864"
+          ]
+        },
+        {
+          "path": "/highlights/9",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111864"
+          ]
+        },
+        {
+          "path": "/highlights/10",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111864"
+          ]
+        }
+      ],
+      "media": [
+        {
+          "imageUrl": "/materials/iphone/Color/X/SpaceGray-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/X/Silver-Photoroom.png",
+          "exists": true
+        }
+      ],
+      "mediaCheck": "Local files exist; this audit verifies labels and text, not every image pixel or photographed regional variant."
+    },
+    {
+      "productIndex": 1,
+      "slug": "iphone-2",
+      "title": "iPhone XS / iPhone XS Max (2018)",
+      "fields": [
+        {
+          "path": "/title",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111881",
+            "https://support.apple.com/en-us/111880"
+          ]
+        },
+        {
+          "path": "/colors/0/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111881",
+            "https://support.apple.com/en-us/111880"
+          ]
+        },
+        {
+          "path": "/colors/0/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111881",
+            "https://support.apple.com/en-us/111880"
+          ]
+        },
+        {
+          "path": "/colors/1/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111881",
+            "https://support.apple.com/en-us/111880"
+          ]
+        },
+        {
+          "path": "/colors/1/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111881",
+            "https://support.apple.com/en-us/111880"
+          ]
+        },
+        {
+          "path": "/colors/2/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111881",
+            "https://support.apple.com/en-us/111880"
+          ]
+        },
+        {
+          "path": "/colors/2/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111881",
+            "https://support.apple.com/en-us/111880"
+          ]
+        },
+        {
+          "path": "/overview/0",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111881",
+            "https://support.apple.com/en-us/111880"
+          ]
+        },
+        {
+          "path": "/overview/1",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111881",
+            "https://support.apple.com/en-us/111880"
+          ]
+        },
+        {
+          "path": "/overview/2",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111881",
+            "https://support.apple.com/en-us/111880"
+          ]
+        },
+        {
+          "path": "/highlights/0",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111881",
+            "https://support.apple.com/en-us/111880"
+          ]
+        },
+        {
+          "path": "/highlights/1",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111881",
+            "https://support.apple.com/en-us/111880"
+          ]
+        },
+        {
+          "path": "/highlights/2",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111881",
+            "https://support.apple.com/en-us/111880"
+          ]
+        },
+        {
+          "path": "/highlights/3",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111881",
+            "https://support.apple.com/en-us/111880"
+          ]
+        },
+        {
+          "path": "/highlights/4",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111881",
+            "https://support.apple.com/en-us/111880"
+          ]
+        },
+        {
+          "path": "/highlights/5",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111881",
+            "https://support.apple.com/en-us/111880"
+          ]
+        },
+        {
+          "path": "/highlights/6",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111881",
+            "https://support.apple.com/en-us/111880"
+          ]
+        },
+        {
+          "path": "/highlights/7",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111881",
+            "https://support.apple.com/en-us/111880"
+          ]
+        },
+        {
+          "path": "/highlights/8",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111881",
+            "https://support.apple.com/en-us/111880"
+          ]
+        },
+        {
+          "path": "/highlights/9",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111881",
+            "https://support.apple.com/en-us/111880"
+          ]
+        },
+        {
+          "path": "/highlights/10",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111881",
+            "https://support.apple.com/en-us/111880"
+          ]
+        }
+      ],
+      "media": [
+        {
+          "imageUrl": "/materials/iphone/Color/Xs_XsMax/SpaceGray-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/Xs_XsMax/Silver-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/Xs_XsMax/Gold-Photoroom.png",
+          "exists": true
+        }
+      ],
+      "mediaCheck": "Local files exist; this audit verifies labels and text, not every image pixel or photographed regional variant."
+    },
+    {
+      "productIndex": 2,
+      "slug": "iphone-3",
+      "title": "iPhone XR (2018)",
+      "fields": [
+        {
+          "path": "/title",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111868"
+          ]
+        },
+        {
+          "path": "/colors/0/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111868"
+          ]
+        },
+        {
+          "path": "/colors/0/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111868"
+          ]
+        },
+        {
+          "path": "/colors/1/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111868"
+          ]
+        },
+        {
+          "path": "/colors/1/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111868"
+          ]
+        },
+        {
+          "path": "/colors/2/label",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111868"
+          ]
+        },
+        {
+          "path": "/colors/2/caption",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111868"
+          ]
+        },
+        {
+          "path": "/colors/3/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111868"
+          ]
+        },
+        {
+          "path": "/colors/3/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111868"
+          ]
+        },
+        {
+          "path": "/colors/4/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111868"
+          ]
+        },
+        {
+          "path": "/colors/4/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111868"
+          ]
+        },
+        {
+          "path": "/colors/5/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111868"
+          ]
+        },
+        {
+          "path": "/colors/5/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111868"
+          ]
+        },
+        {
+          "path": "/overview/0",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111868"
+          ]
+        },
+        {
+          "path": "/overview/1",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111868"
+          ]
+        },
+        {
+          "path": "/overview/2",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111868"
+          ]
+        },
+        {
+          "path": "/highlights/0",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111868"
+          ]
+        },
+        {
+          "path": "/highlights/1",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111868"
+          ]
+        },
+        {
+          "path": "/highlights/2",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111868"
+          ]
+        },
+        {
+          "path": "/highlights/3",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111868"
+          ]
+        },
+        {
+          "path": "/highlights/4",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111868"
+          ]
+        },
+        {
+          "path": "/highlights/5",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111868"
+          ]
+        },
+        {
+          "path": "/highlights/6",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111868"
+          ]
+        },
+        {
+          "path": "/highlights/7",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111868",
+            "https://support.apple.com/en-us/102398"
+          ]
+        },
+        {
+          "path": "/highlights/8",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111868"
+          ]
+        },
+        {
+          "path": "/highlights/9",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111868"
+          ]
+        },
+        {
+          "path": "/highlights/10",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111868"
+          ]
+        }
+      ],
+      "media": [
+        {
+          "imageUrl": "/materials/iphone/Color/XR/Black-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/XR/White-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/XR/Red-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/XR/Blue-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/XR/Yellow-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/XR/Corale-Photoroom.png",
+          "exists": true
+        }
+      ],
+      "mediaCheck": "Local files exist; this audit verifies labels and text, not every image pixel or photographed regional variant."
+    },
+    {
+      "productIndex": 3,
+      "slug": "iphone-4",
+      "title": "iPhone 11 (2019)",
+      "fields": [
+        {
+          "path": "/title",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111865"
+          ]
+        },
+        {
+          "path": "/colors/0/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111865"
+          ]
+        },
+        {
+          "path": "/colors/0/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111865"
+          ]
+        },
+        {
+          "path": "/colors/1/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111865"
+          ]
+        },
+        {
+          "path": "/colors/1/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111865"
+          ]
+        },
+        {
+          "path": "/colors/2/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111865"
+          ]
+        },
+        {
+          "path": "/colors/2/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111865"
+          ]
+        },
+        {
+          "path": "/colors/3/label",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111865"
+          ]
+        },
+        {
+          "path": "/colors/3/caption",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111865"
+          ]
+        },
+        {
+          "path": "/colors/4/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111865"
+          ]
+        },
+        {
+          "path": "/colors/4/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111865"
+          ]
+        },
+        {
+          "path": "/colors/5/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111865"
+          ]
+        },
+        {
+          "path": "/colors/5/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111865"
+          ]
+        },
+        {
+          "path": "/overview/0",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111865"
+          ]
+        },
+        {
+          "path": "/overview/1",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111865"
+          ]
+        },
+        {
+          "path": "/highlights/0",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111865"
+          ]
+        },
+        {
+          "path": "/highlights/1",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111865"
+          ]
+        },
+        {
+          "path": "/highlights/2",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111865"
+          ]
+        },
+        {
+          "path": "/highlights/3",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111865"
+          ]
+        },
+        {
+          "path": "/highlights/4",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111865"
+          ]
+        },
+        {
+          "path": "/highlights/5",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111865"
+          ]
+        },
+        {
+          "path": "/highlights/6",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111865"
+          ]
+        },
+        {
+          "path": "/highlights/7",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111865"
+          ]
+        },
+        {
+          "path": "/highlights/8",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111865"
+          ]
+        },
+        {
+          "path": "/highlights/9",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111865"
+          ]
+        },
+        {
+          "path": "/highlights/10",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111865"
+          ]
+        },
+        {
+          "path": "/highlights/11",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111865"
+          ]
+        }
+      ],
+      "media": [
+        {
+          "imageUrl": "/materials/iphone/Color/11/Black-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/11/iphone11-white-select-2019-1397x1397.jpg-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/11/Yellow-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/11/Red-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/11/Purple-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/11/Green-Photoroom.png",
+          "exists": true
+        }
+      ],
+      "mediaCheck": "Local files exist; this audit verifies labels and text, not every image pixel or photographed regional variant."
+    },
+    {
+      "productIndex": 4,
+      "slug": "iphone-5",
+      "title": "iPhone 11 Pro / iPhone 11 Pro Max (2019)",
+      "fields": [
+        {
+          "path": "/title",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111879",
+            "https://support.apple.com/en-us/111878"
+          ]
+        },
+        {
+          "path": "/colors/0/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111879",
+            "https://support.apple.com/en-us/111878"
+          ]
+        },
+        {
+          "path": "/colors/0/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111879",
+            "https://support.apple.com/en-us/111878"
+          ]
+        },
+        {
+          "path": "/colors/1/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111879",
+            "https://support.apple.com/en-us/111878"
+          ]
+        },
+        {
+          "path": "/colors/1/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111879",
+            "https://support.apple.com/en-us/111878"
+          ]
+        },
+        {
+          "path": "/colors/2/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111879",
+            "https://support.apple.com/en-us/111878"
+          ]
+        },
+        {
+          "path": "/colors/2/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111879",
+            "https://support.apple.com/en-us/111878"
+          ]
+        },
+        {
+          "path": "/colors/3/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111879",
+            "https://support.apple.com/en-us/111878"
+          ]
+        },
+        {
+          "path": "/colors/3/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111879",
+            "https://support.apple.com/en-us/111878"
+          ]
+        },
+        {
+          "path": "/family",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111879",
+            "https://support.apple.com/en-us/111878"
+          ]
+        },
+        {
+          "path": "/overview/0",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111879",
+            "https://support.apple.com/en-us/111878"
+          ]
+        },
+        {
+          "path": "/overview/1",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111879",
+            "https://support.apple.com/en-us/111878"
+          ]
+        },
+        {
+          "path": "/overview/2",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111879",
+            "https://support.apple.com/en-us/111878"
+          ]
+        },
+        {
+          "path": "/highlights/0",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111879",
+            "https://support.apple.com/en-us/111878"
+          ]
+        },
+        {
+          "path": "/highlights/1",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111879",
+            "https://support.apple.com/en-us/111878"
+          ]
+        },
+        {
+          "path": "/highlights/2",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111879",
+            "https://support.apple.com/en-us/111878"
+          ]
+        },
+        {
+          "path": "/highlights/3",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111879",
+            "https://support.apple.com/en-us/111878"
+          ]
+        },
+        {
+          "path": "/highlights/4",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111879",
+            "https://support.apple.com/en-us/111878"
+          ]
+        },
+        {
+          "path": "/highlights/5",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111879",
+            "https://support.apple.com/en-us/111878"
+          ]
+        },
+        {
+          "path": "/highlights/6",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111879",
+            "https://support.apple.com/en-us/111878"
+          ]
+        },
+        {
+          "path": "/highlights/7",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111879",
+            "https://support.apple.com/en-us/111878"
+          ]
+        },
+        {
+          "path": "/highlights/8",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111879",
+            "https://support.apple.com/en-us/111878"
+          ]
+        },
+        {
+          "path": "/highlights/9",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111879",
+            "https://support.apple.com/en-us/111878"
+          ]
+        },
+        {
+          "path": "/highlights/10",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111879",
+            "https://support.apple.com/en-us/111878"
+          ]
+        }
+      ],
+      "media": [
+        {
+          "imageUrl": "/materials/iphone/Color/11Pro_ProMax/SpaceGray-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/11Pro_ProMax/Silver-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/11Pro_ProMax/Gold-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/11Pro_ProMax/green-Photoroom.png",
+          "exists": true
+        }
+      ],
+      "mediaCheck": "Local files exist; this audit verifies labels and text, not every image pixel or photographed regional variant."
+    },
+    {
+      "productIndex": 5,
+      "slug": "iphone-6",
+      "title": "iPhone SE 2-го покоління (2020)",
+      "fields": [
+        {
+          "path": "/title",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111882"
+          ]
+        },
+        {
+          "path": "/colors/0/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111882"
+          ]
+        },
+        {
+          "path": "/colors/0/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111882"
+          ]
+        },
+        {
+          "path": "/colors/1/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111882"
+          ]
+        },
+        {
+          "path": "/colors/1/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111882"
+          ]
+        },
+        {
+          "path": "/colors/2/label",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111882"
+          ]
+        },
+        {
+          "path": "/colors/2/caption",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111882"
+          ]
+        },
+        {
+          "path": "/overview/0",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111882"
+          ]
+        },
+        {
+          "path": "/overview/1",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111882"
+          ]
+        },
+        {
+          "path": "/overview/2",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111882"
+          ]
+        },
+        {
+          "path": "/highlights/0",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111882"
+          ]
+        },
+        {
+          "path": "/highlights/1",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111882"
+          ]
+        },
+        {
+          "path": "/highlights/2",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111882"
+          ]
+        },
+        {
+          "path": "/highlights/3",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111882"
+          ]
+        },
+        {
+          "path": "/highlights/4",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111882"
+          ]
+        },
+        {
+          "path": "/highlights/5",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111882"
+          ]
+        },
+        {
+          "path": "/highlights/6",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111882"
+          ]
+        },
+        {
+          "path": "/highlights/7",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111882"
+          ]
+        },
+        {
+          "path": "/highlights/8",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111882",
+            "https://support.apple.com/en-us/102398"
+          ]
+        },
+        {
+          "path": "/highlights/9",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111882"
+          ]
+        },
+        {
+          "path": "/highlights/10",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111882"
+          ]
+        }
+      ],
+      "media": [
+        {
+          "imageUrl": "/materials/iphone/Color/SE2020/Black-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/SE2020/White-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/SE2020/red-Photoroom.png",
+          "exists": true
+        }
+      ],
+      "mediaCheck": "Local files exist; this audit verifies labels and text, not every image pixel or photographed regional variant."
+    },
+    {
+      "productIndex": 6,
+      "slug": "iphone-7",
+      "title": "iPhone SE 3-го покоління (2022)",
+      "fields": [
+        {
+          "path": "/title",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111866"
+          ]
+        },
+        {
+          "path": "/colors/0/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111866"
+          ]
+        },
+        {
+          "path": "/colors/0/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111866"
+          ]
+        },
+        {
+          "path": "/colors/1/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111866"
+          ]
+        },
+        {
+          "path": "/colors/1/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111866"
+          ]
+        },
+        {
+          "path": "/colors/2/label",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111866"
+          ]
+        },
+        {
+          "path": "/colors/2/caption",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111866"
+          ]
+        },
+        {
+          "path": "/overview/0",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111866"
+          ]
+        },
+        {
+          "path": "/overview/1",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111866"
+          ]
+        },
+        {
+          "path": "/overview/2",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111866"
+          ]
+        },
+        {
+          "path": "/highlights/0",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111866"
+          ]
+        },
+        {
+          "path": "/highlights/1",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111866"
+          ]
+        },
+        {
+          "path": "/highlights/2",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111866"
+          ]
+        },
+        {
+          "path": "/highlights/3",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111866"
+          ]
+        },
+        {
+          "path": "/highlights/4",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111866"
+          ]
+        },
+        {
+          "path": "/highlights/5",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111866"
+          ]
+        },
+        {
+          "path": "/highlights/6",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111866"
+          ]
+        },
+        {
+          "path": "/highlights/7",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111866"
+          ]
+        },
+        {
+          "path": "/highlights/8",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111866",
+            "https://support.apple.com/en-us/102398"
+          ]
+        },
+        {
+          "path": "/highlights/9",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111866"
+          ]
+        },
+        {
+          "path": "/highlights/10",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111866"
+          ]
+        }
+      ],
+      "media": [
+        {
+          "imageUrl": "/materials/iphone/Color/SE2022/Midnight.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/SE2022/white.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/SE2022/Red.png",
+          "exists": true
+        }
+      ],
+      "mediaCheck": "Local files exist; this audit verifies labels and text, not every image pixel or photographed regional variant."
+    },
+    {
+      "productIndex": 7,
+      "slug": "iphone-8",
+      "title": "iPhone 12 mini / iPhone 12 (2020)",
+      "fields": [
+        {
+          "path": "/title",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111877",
+            "https://support.apple.com/en-us/111876"
+          ]
+        },
+        {
+          "path": "/colors/0/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111877",
+            "https://support.apple.com/en-us/111876"
+          ]
+        },
+        {
+          "path": "/colors/0/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111877",
+            "https://support.apple.com/en-us/111876"
+          ]
+        },
+        {
+          "path": "/colors/1/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111877",
+            "https://support.apple.com/en-us/111876"
+          ]
+        },
+        {
+          "path": "/colors/1/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111877",
+            "https://support.apple.com/en-us/111876"
+          ]
+        },
+        {
+          "path": "/colors/2/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111877",
+            "https://support.apple.com/en-us/111876"
+          ]
+        },
+        {
+          "path": "/colors/2/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111877",
+            "https://support.apple.com/en-us/111876"
+          ]
+        },
+        {
+          "path": "/colors/3/label",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111877",
+            "https://support.apple.com/en-us/111876"
+          ]
+        },
+        {
+          "path": "/colors/3/caption",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111877",
+            "https://support.apple.com/en-us/111876"
+          ]
+        },
+        {
+          "path": "/colors/4/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111877",
+            "https://support.apple.com/en-us/111876"
+          ]
+        },
+        {
+          "path": "/colors/4/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111877",
+            "https://support.apple.com/en-us/111876"
+          ]
+        },
+        {
+          "path": "/colors/5/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111877",
+            "https://support.apple.com/en-us/111876"
+          ]
+        },
+        {
+          "path": "/colors/5/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111877",
+            "https://support.apple.com/en-us/111876"
+          ]
+        },
+        {
+          "path": "/overview/0",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111877",
+            "https://support.apple.com/en-us/111876"
+          ]
+        },
+        {
+          "path": "/overview/1",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111877",
+            "https://support.apple.com/en-us/111876"
+          ]
+        },
+        {
+          "path": "/overview/2",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111877",
+            "https://support.apple.com/en-us/111876"
+          ]
+        },
+        {
+          "path": "/highlights/0",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111877",
+            "https://support.apple.com/en-us/111876"
+          ]
+        },
+        {
+          "path": "/highlights/1",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111877",
+            "https://support.apple.com/en-us/111876"
+          ]
+        },
+        {
+          "path": "/highlights/2",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111877",
+            "https://support.apple.com/en-us/111876"
+          ]
+        },
+        {
+          "path": "/highlights/3",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111877",
+            "https://support.apple.com/en-us/111876"
+          ]
+        },
+        {
+          "path": "/highlights/4",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111877",
+            "https://support.apple.com/en-us/111876"
+          ]
+        },
+        {
+          "path": "/highlights/5",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111877",
+            "https://support.apple.com/en-us/111876"
+          ]
+        },
+        {
+          "path": "/highlights/6",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111877",
+            "https://support.apple.com/en-us/111876"
+          ]
+        },
+        {
+          "path": "/highlights/7",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111877",
+            "https://support.apple.com/en-us/111876"
+          ]
+        },
+        {
+          "path": "/highlights/8",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111877",
+            "https://support.apple.com/en-us/111876"
+          ]
+        },
+        {
+          "path": "/highlights/9",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111877",
+            "https://support.apple.com/en-us/111876"
+          ]
+        },
+        {
+          "path": "/highlights/10",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111877",
+            "https://support.apple.com/en-us/111876"
+          ]
+        },
+        {
+          "path": "/highlights/11",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111877",
+            "https://support.apple.com/en-us/111876"
+          ]
+        },
+        {
+          "path": "/highlights/12",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111877",
+            "https://support.apple.com/en-us/111876"
+          ]
+        }
+      ],
+      "media": [
+        {
+          "imageUrl": "/materials/iphone/Color/12/Black-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/12/White-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/12/Blue-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/12/Red-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/12/Purple-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/12/Green-Photoroom%20(1).png",
+          "exists": true
+        }
+      ],
+      "mediaCheck": "Local files exist; this audit verifies labels and text, not every image pixel or photographed regional variant."
+    },
+    {
+      "productIndex": 8,
+      "slug": "iphone-9",
+      "title": "iPhone 12 Pro / iPhone 12 Pro Max (2020)",
+      "fields": [
+        {
+          "path": "/title",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111875",
+            "https://support.apple.com/en-us/111874"
+          ]
+        },
+        {
+          "path": "/colors/0/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111875",
+            "https://support.apple.com/en-us/111874"
+          ]
+        },
+        {
+          "path": "/colors/0/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111875",
+            "https://support.apple.com/en-us/111874"
+          ]
+        },
+        {
+          "path": "/colors/1/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111875",
+            "https://support.apple.com/en-us/111874"
+          ]
+        },
+        {
+          "path": "/colors/1/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111875",
+            "https://support.apple.com/en-us/111874"
+          ]
+        },
+        {
+          "path": "/colors/2/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111875",
+            "https://support.apple.com/en-us/111874"
+          ]
+        },
+        {
+          "path": "/colors/2/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111875",
+            "https://support.apple.com/en-us/111874"
+          ]
+        },
+        {
+          "path": "/colors/3/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111875",
+            "https://support.apple.com/en-us/111874"
+          ]
+        },
+        {
+          "path": "/colors/3/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111875",
+            "https://support.apple.com/en-us/111874"
+          ]
+        },
+        {
+          "path": "/family",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111875",
+            "https://support.apple.com/en-us/111874"
+          ]
+        },
+        {
+          "path": "/overview/0",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111875",
+            "https://support.apple.com/en-us/111874"
+          ]
+        },
+        {
+          "path": "/overview/1",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111875",
+            "https://support.apple.com/en-us/111874"
+          ]
+        },
+        {
+          "path": "/overview/2",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111875",
+            "https://support.apple.com/en-us/111874"
+          ]
+        },
+        {
+          "path": "/highlights/0",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111875",
+            "https://support.apple.com/en-us/111874"
+          ]
+        },
+        {
+          "path": "/highlights/1",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111875",
+            "https://support.apple.com/en-us/111874"
+          ]
+        },
+        {
+          "path": "/highlights/2",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111875",
+            "https://support.apple.com/en-us/111874"
+          ]
+        },
+        {
+          "path": "/highlights/3",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111875",
+            "https://support.apple.com/en-us/111874"
+          ]
+        },
+        {
+          "path": "/highlights/4",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111875",
+            "https://support.apple.com/en-us/111874"
+          ]
+        },
+        {
+          "path": "/highlights/5",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111875",
+            "https://support.apple.com/en-us/111874"
+          ]
+        },
+        {
+          "path": "/highlights/6",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111875",
+            "https://support.apple.com/en-us/111874"
+          ]
+        },
+        {
+          "path": "/highlights/7",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111875",
+            "https://support.apple.com/en-us/111874"
+          ]
+        },
+        {
+          "path": "/highlights/8",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111875",
+            "https://support.apple.com/en-us/111874"
+          ]
+        },
+        {
+          "path": "/highlights/9",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111875",
+            "https://support.apple.com/en-us/111874"
+          ]
+        },
+        {
+          "path": "/highlights/10",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111875",
+            "https://support.apple.com/en-us/111874"
+          ]
+        },
+        {
+          "path": "/highlights/11",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111875",
+            "https://support.apple.com/en-us/111874"
+          ]
+        },
+        {
+          "path": "/highlights/12",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111875",
+            "https://support.apple.com/en-us/111874"
+          ]
+        }
+      ],
+      "media": [
+        {
+          "imageUrl": "/materials/iphone/Color/12Pro_ProMax/Graphite-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/12Pro_ProMax/silver-Photoroom%20(1).png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/12Pro_ProMax/Gold-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/12Pro_ProMax/PacificBlue-Photoroom.png",
+          "exists": true
+        }
+      ],
+      "mediaCheck": "Local files exist; this audit verifies labels and text, not every image pixel or photographed regional variant."
+    },
+    {
+      "productIndex": 9,
+      "slug": "iphone-10",
+      "title": "iPhone 13 mini / iPhone 13 (2021)",
+      "fields": [
+        {
+          "path": "/title",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111873",
+            "https://support.apple.com/en-us/111872"
+          ]
+        },
+        {
+          "path": "/colors/0/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111873",
+            "https://support.apple.com/en-us/111872"
+          ]
+        },
+        {
+          "path": "/colors/0/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111873",
+            "https://support.apple.com/en-us/111872"
+          ]
+        },
+        {
+          "path": "/colors/1/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111873",
+            "https://support.apple.com/en-us/111872"
+          ]
+        },
+        {
+          "path": "/colors/1/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111873",
+            "https://support.apple.com/en-us/111872"
+          ]
+        },
+        {
+          "path": "/colors/2/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111873",
+            "https://support.apple.com/en-us/111872"
+          ]
+        },
+        {
+          "path": "/colors/2/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111873",
+            "https://support.apple.com/en-us/111872"
+          ]
+        },
+        {
+          "path": "/colors/3/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111873",
+            "https://support.apple.com/en-us/111872"
+          ]
+        },
+        {
+          "path": "/colors/3/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111873",
+            "https://support.apple.com/en-us/111872"
+          ]
+        },
+        {
+          "path": "/colors/4/label",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111873",
+            "https://support.apple.com/en-us/111872"
+          ]
+        },
+        {
+          "path": "/colors/4/caption",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111873",
+            "https://support.apple.com/en-us/111872"
+          ]
+        },
+        {
+          "path": "/colors/5/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111873",
+            "https://support.apple.com/en-us/111872"
+          ]
+        },
+        {
+          "path": "/colors/5/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111873",
+            "https://support.apple.com/en-us/111872"
+          ]
+        },
+        {
+          "path": "/overview/0",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111873",
+            "https://support.apple.com/en-us/111872"
+          ]
+        },
+        {
+          "path": "/overview/1",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111873",
+            "https://support.apple.com/en-us/111872"
+          ]
+        },
+        {
+          "path": "/overview/2",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111873",
+            "https://support.apple.com/en-us/111872"
+          ]
+        },
+        {
+          "path": "/highlights/0",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111873",
+            "https://support.apple.com/en-us/111872"
+          ]
+        },
+        {
+          "path": "/highlights/1",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111873",
+            "https://support.apple.com/en-us/111872"
+          ]
+        },
+        {
+          "path": "/highlights/2",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111873",
+            "https://support.apple.com/en-us/111872"
+          ]
+        },
+        {
+          "path": "/highlights/3",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111873",
+            "https://support.apple.com/en-us/111872"
+          ]
+        },
+        {
+          "path": "/highlights/4",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111873",
+            "https://support.apple.com/en-us/111872"
+          ]
+        },
+        {
+          "path": "/highlights/5",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111873",
+            "https://support.apple.com/en-us/111872"
+          ]
+        },
+        {
+          "path": "/highlights/6",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111873",
+            "https://support.apple.com/en-us/111872"
+          ]
+        },
+        {
+          "path": "/highlights/7",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111873",
+            "https://support.apple.com/en-us/111872"
+          ]
+        },
+        {
+          "path": "/highlights/8",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111873",
+            "https://support.apple.com/en-us/111872"
+          ]
+        },
+        {
+          "path": "/highlights/9",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111873",
+            "https://support.apple.com/en-us/111872"
+          ]
+        },
+        {
+          "path": "/highlights/10",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111873",
+            "https://support.apple.com/en-us/111872"
+          ]
+        },
+        {
+          "path": "/highlights/11",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111873",
+            "https://support.apple.com/en-us/111872"
+          ]
+        },
+        {
+          "path": "/highlights/12",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111873",
+            "https://support.apple.com/en-us/111872"
+          ]
+        },
+        {
+          "path": "/highlights/13",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111873",
+            "https://support.apple.com/en-us/111872"
+          ]
+        }
+      ],
+      "media": [
+        {
+          "imageUrl": "/materials/iphone/Color/13/Starlight-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/13/Midnight-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/13/Blue-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/13/Pink-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/13/Red-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/13/Green-Photoroom.png",
+          "exists": true
+        }
+      ],
+      "mediaCheck": "Local files exist; this audit verifies labels and text, not every image pixel or photographed regional variant."
+    },
+    {
+      "productIndex": 10,
+      "slug": "iphone-11",
+      "title": "iPhone 13 Pro / iPhone 13 Pro Max (2021)",
+      "fields": [
+        {
+          "path": "/title",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111871",
+            "https://support.apple.com/en-us/111870"
+          ]
+        },
+        {
+          "path": "/colors/0/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111871",
+            "https://support.apple.com/en-us/111870"
+          ]
+        },
+        {
+          "path": "/colors/0/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111871",
+            "https://support.apple.com/en-us/111870"
+          ]
+        },
+        {
+          "path": "/colors/1/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111871",
+            "https://support.apple.com/en-us/111870"
+          ]
+        },
+        {
+          "path": "/colors/1/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111871",
+            "https://support.apple.com/en-us/111870"
+          ]
+        },
+        {
+          "path": "/colors/2/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111871",
+            "https://support.apple.com/en-us/111870"
+          ]
+        },
+        {
+          "path": "/colors/2/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111871",
+            "https://support.apple.com/en-us/111870"
+          ]
+        },
+        {
+          "path": "/colors/3/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111871",
+            "https://support.apple.com/en-us/111870"
+          ]
+        },
+        {
+          "path": "/colors/3/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111871",
+            "https://support.apple.com/en-us/111870"
+          ]
+        },
+        {
+          "path": "/colors/4/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111871",
+            "https://support.apple.com/en-us/111870"
+          ]
+        },
+        {
+          "path": "/colors/4/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111871",
+            "https://support.apple.com/en-us/111870"
+          ]
+        },
+        {
+          "path": "/family",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111871",
+            "https://support.apple.com/en-us/111870"
+          ]
+        },
+        {
+          "path": "/overview/0",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111871",
+            "https://support.apple.com/en-us/111870"
+          ]
+        },
+        {
+          "path": "/overview/1",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111871",
+            "https://support.apple.com/en-us/111870"
+          ]
+        },
+        {
+          "path": "/overview/2",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111871",
+            "https://support.apple.com/en-us/111870"
+          ]
+        },
+        {
+          "path": "/highlights/0",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111871",
+            "https://support.apple.com/en-us/111870"
+          ]
+        },
+        {
+          "path": "/highlights/1",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111871",
+            "https://support.apple.com/en-us/111870"
+          ]
+        },
+        {
+          "path": "/highlights/2",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111871",
+            "https://support.apple.com/en-us/111870"
+          ]
+        },
+        {
+          "path": "/highlights/3",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111871",
+            "https://support.apple.com/en-us/111870"
+          ]
+        },
+        {
+          "path": "/highlights/4",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111871",
+            "https://support.apple.com/en-us/111870"
+          ]
+        },
+        {
+          "path": "/highlights/5",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111871",
+            "https://support.apple.com/en-us/111870"
+          ]
+        },
+        {
+          "path": "/highlights/6",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111871",
+            "https://support.apple.com/en-us/111870"
+          ]
+        },
+        {
+          "path": "/highlights/7",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111871",
+            "https://support.apple.com/en-us/111870"
+          ]
+        },
+        {
+          "path": "/highlights/8",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111871",
+            "https://support.apple.com/en-us/111870"
+          ]
+        },
+        {
+          "path": "/highlights/9",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111871",
+            "https://support.apple.com/en-us/111870"
+          ]
+        },
+        {
+          "path": "/highlights/10",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111871",
+            "https://support.apple.com/en-us/111870"
+          ]
+        },
+        {
+          "path": "/highlights/11",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111871",
+            "https://support.apple.com/en-us/111870"
+          ]
+        },
+        {
+          "path": "/highlights/12",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111871",
+            "https://support.apple.com/en-us/111870"
+          ]
+        }
+      ],
+      "media": [
+        {
+          "imageUrl": "/materials/iphone/Color/13Pro_ProMax/Graphite-Photoroom%20(1).png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/13Pro_ProMax/SIlver-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/13Pro_ProMax/GOld-Photoroom%20(1).png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/13Pro_ProMax/SierraBlue-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/13Pro_ProMax/MidnightGreen-Photoroom.png",
+          "exists": true
+        }
+      ],
+      "mediaCheck": "Local files exist; this audit verifies labels and text, not every image pixel or photographed regional variant."
+    },
+    {
+      "productIndex": 11,
+      "slug": "iphone-12",
+      "title": "iPhone 14 / iPhone 14 Plus (2022)",
+      "fields": [
+        {
+          "path": "/title",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111850",
+            "https://support.apple.com/en-us/111854"
+          ]
+        },
+        {
+          "path": "/colors/0/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111850",
+            "https://support.apple.com/en-us/111854"
+          ]
+        },
+        {
+          "path": "/colors/0/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111850",
+            "https://support.apple.com/en-us/111854"
+          ]
+        },
+        {
+          "path": "/colors/1/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111850",
+            "https://support.apple.com/en-us/111854"
+          ]
+        },
+        {
+          "path": "/colors/1/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111850",
+            "https://support.apple.com/en-us/111854"
+          ]
+        },
+        {
+          "path": "/colors/2/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111850",
+            "https://support.apple.com/en-us/111854"
+          ]
+        },
+        {
+          "path": "/colors/2/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111850",
+            "https://support.apple.com/en-us/111854"
+          ]
+        },
+        {
+          "path": "/colors/3/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111850",
+            "https://support.apple.com/en-us/111854"
+          ]
+        },
+        {
+          "path": "/colors/3/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111850",
+            "https://support.apple.com/en-us/111854"
+          ]
+        },
+        {
+          "path": "/colors/4/label",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111850",
+            "https://support.apple.com/en-us/111854"
+          ]
+        },
+        {
+          "path": "/colors/4/caption",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111850",
+            "https://support.apple.com/en-us/111854"
+          ]
+        },
+        {
+          "path": "/colors/5/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111850",
+            "https://support.apple.com/en-us/111854"
+          ]
+        },
+        {
+          "path": "/colors/5/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111850",
+            "https://support.apple.com/en-us/111854"
+          ]
+        },
+        {
+          "path": "/overview/0",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111850",
+            "https://support.apple.com/en-us/111854"
+          ]
+        },
+        {
+          "path": "/overview/1",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111850",
+            "https://support.apple.com/en-us/111854"
+          ]
+        },
+        {
+          "path": "/overview/2",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111850",
+            "https://support.apple.com/en-us/111854"
+          ]
+        },
+        {
+          "path": "/highlights/0",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111850",
+            "https://support.apple.com/en-us/111854"
+          ]
+        },
+        {
+          "path": "/highlights/1",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111850",
+            "https://support.apple.com/en-us/111854"
+          ]
+        },
+        {
+          "path": "/highlights/2",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111850",
+            "https://support.apple.com/en-us/111854"
+          ]
+        },
+        {
+          "path": "/highlights/3",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111850",
+            "https://support.apple.com/en-us/111854"
+          ]
+        },
+        {
+          "path": "/highlights/4",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111850",
+            "https://support.apple.com/en-us/111854"
+          ]
+        },
+        {
+          "path": "/highlights/5",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111850",
+            "https://support.apple.com/en-us/111854"
+          ]
+        },
+        {
+          "path": "/highlights/6",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111850",
+            "https://support.apple.com/en-us/111854"
+          ]
+        },
+        {
+          "path": "/highlights/7",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111850",
+            "https://support.apple.com/en-us/111854"
+          ]
+        },
+        {
+          "path": "/highlights/8",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111850",
+            "https://support.apple.com/en-us/111854"
+          ]
+        },
+        {
+          "path": "/highlights/9",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111850",
+            "https://support.apple.com/en-us/111854"
+          ]
+        },
+        {
+          "path": "/highlights/10",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111850",
+            "https://support.apple.com/en-us/111854"
+          ]
+        },
+        {
+          "path": "/highlights/11",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111850",
+            "https://support.apple.com/en-us/111854"
+          ]
+        },
+        {
+          "path": "/highlights/12",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111850",
+            "https://support.apple.com/en-us/111854"
+          ]
+        },
+        {
+          "path": "/highlights/13",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111850",
+            "https://support.apple.com/en-us/111854"
+          ]
+        },
+        {
+          "path": "/highlights/14",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111850",
+            "https://support.apple.com/en-us/111854"
+          ]
+        }
+      ],
+      "media": [
+        {
+          "imageUrl": "/materials/iphone/Color/14/Starlight-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/14/Midnight-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/14/Blue-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/14/Purple-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/14/Red-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/14/Yellow-Photoroom.png",
+          "exists": true
+        }
+      ],
+      "mediaCheck": "Local files exist; this audit verifies labels and text, not every image pixel or photographed regional variant."
+    },
+    {
+      "productIndex": 12,
+      "slug": "iphone-13",
+      "title": "iPhone 14 Pro / iPhone 14 Pro Max (2022)",
+      "fields": [
+        {
+          "path": "/title",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111849",
+            "https://support.apple.com/en-us/111846"
+          ]
+        },
+        {
+          "path": "/colors/0/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111849",
+            "https://support.apple.com/en-us/111846"
+          ]
+        },
+        {
+          "path": "/colors/0/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111849",
+            "https://support.apple.com/en-us/111846"
+          ]
+        },
+        {
+          "path": "/colors/1/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111849",
+            "https://support.apple.com/en-us/111846"
+          ]
+        },
+        {
+          "path": "/colors/1/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111849",
+            "https://support.apple.com/en-us/111846"
+          ]
+        },
+        {
+          "path": "/colors/2/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111849",
+            "https://support.apple.com/en-us/111846"
+          ]
+        },
+        {
+          "path": "/colors/2/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111849",
+            "https://support.apple.com/en-us/111846"
+          ]
+        },
+        {
+          "path": "/colors/3/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111849",
+            "https://support.apple.com/en-us/111846"
+          ]
+        },
+        {
+          "path": "/colors/3/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111849",
+            "https://support.apple.com/en-us/111846"
+          ]
+        },
+        {
+          "path": "/family",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111849",
+            "https://support.apple.com/en-us/111846"
+          ]
+        },
+        {
+          "path": "/overview/0",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111849",
+            "https://support.apple.com/en-us/111846"
+          ]
+        },
+        {
+          "path": "/overview/1",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111849",
+            "https://support.apple.com/en-us/111846"
+          ]
+        },
+        {
+          "path": "/overview/2",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111849",
+            "https://support.apple.com/en-us/111846"
+          ]
+        },
+        {
+          "path": "/highlights/0",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111849",
+            "https://support.apple.com/en-us/111846"
+          ]
+        },
+        {
+          "path": "/highlights/1",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111849",
+            "https://support.apple.com/en-us/111846"
+          ]
+        },
+        {
+          "path": "/highlights/2",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111849",
+            "https://support.apple.com/en-us/111846"
+          ]
+        },
+        {
+          "path": "/highlights/3",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111849",
+            "https://support.apple.com/en-us/111846"
+          ]
+        },
+        {
+          "path": "/highlights/4",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111849",
+            "https://support.apple.com/en-us/111846"
+          ]
+        },
+        {
+          "path": "/highlights/5",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111849",
+            "https://support.apple.com/en-us/111846"
+          ]
+        },
+        {
+          "path": "/highlights/6",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111849",
+            "https://support.apple.com/en-us/111846"
+          ]
+        },
+        {
+          "path": "/highlights/7",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111849",
+            "https://support.apple.com/en-us/111846"
+          ]
+        },
+        {
+          "path": "/highlights/8",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111849",
+            "https://support.apple.com/en-us/111846"
+          ]
+        },
+        {
+          "path": "/highlights/9",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111849",
+            "https://support.apple.com/en-us/111846"
+          ]
+        },
+        {
+          "path": "/highlights/10",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111849",
+            "https://support.apple.com/en-us/111846"
+          ]
+        },
+        {
+          "path": "/highlights/11",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111849",
+            "https://support.apple.com/en-us/111846"
+          ]
+        },
+        {
+          "path": "/highlights/12",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111849",
+            "https://support.apple.com/en-us/111846"
+          ]
+        },
+        {
+          "path": "/highlights/13",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111849",
+            "https://support.apple.com/en-us/111846"
+          ]
+        },
+        {
+          "path": "/highlights/14",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111849",
+            "https://support.apple.com/en-us/111846"
+          ]
+        },
+        {
+          "path": "/highlights/15",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111849",
+            "https://support.apple.com/en-us/111846"
+          ]
+        },
+        {
+          "path": "/highlights/16",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111849",
+            "https://support.apple.com/en-us/111846"
+          ]
+        },
+        {
+          "path": "/highlights/17",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111849",
+            "https://support.apple.com/en-us/111846"
+          ]
+        }
+      ],
+      "media": [
+        {
+          "imageUrl": "/materials/iphone/Color/14Pro_ProMax/SpaceBlack-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/14Pro_ProMax/Silver-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/14Pro_ProMax/Gold-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/14Pro_ProMax/DeepPurple-Photoroom.png",
+          "exists": true
+        }
+      ],
+      "mediaCheck": "Local files exist; this audit verifies labels and text, not every image pixel or photographed regional variant."
+    },
+    {
+      "productIndex": 13,
+      "slug": "iphone-14",
+      "title": "iPhone 15 / iPhone 15 Plus (2023)",
+      "fields": [
+        {
+          "path": "/title",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111831",
+            "https://support.apple.com/en-us/111830"
+          ]
+        },
+        {
+          "path": "/colors/0/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111831",
+            "https://support.apple.com/en-us/111830"
+          ]
+        },
+        {
+          "path": "/colors/0/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111831",
+            "https://support.apple.com/en-us/111830"
+          ]
+        },
+        {
+          "path": "/colors/1/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111831",
+            "https://support.apple.com/en-us/111830"
+          ]
+        },
+        {
+          "path": "/colors/1/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111831",
+            "https://support.apple.com/en-us/111830"
+          ]
+        },
+        {
+          "path": "/colors/2/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111831",
+            "https://support.apple.com/en-us/111830"
+          ]
+        },
+        {
+          "path": "/colors/2/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111831",
+            "https://support.apple.com/en-us/111830"
+          ]
+        },
+        {
+          "path": "/colors/3/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111831",
+            "https://support.apple.com/en-us/111830"
+          ]
+        },
+        {
+          "path": "/colors/3/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111831",
+            "https://support.apple.com/en-us/111830"
+          ]
+        },
+        {
+          "path": "/colors/4/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111831",
+            "https://support.apple.com/en-us/111830"
+          ]
+        },
+        {
+          "path": "/colors/4/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111831",
+            "https://support.apple.com/en-us/111830"
+          ]
+        },
+        {
+          "path": "/overview/0",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111831",
+            "https://support.apple.com/en-us/111830"
+          ]
+        },
+        {
+          "path": "/overview/1",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111831",
+            "https://support.apple.com/en-us/111830"
+          ]
+        },
+        {
+          "path": "/overview/2",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111831",
+            "https://support.apple.com/en-us/111830"
+          ]
+        },
+        {
+          "path": "/highlights/0",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111831",
+            "https://support.apple.com/en-us/111830"
+          ]
+        },
+        {
+          "path": "/highlights/1",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111831",
+            "https://support.apple.com/en-us/111830"
+          ]
+        },
+        {
+          "path": "/highlights/2",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111831",
+            "https://support.apple.com/en-us/111830"
+          ]
+        },
+        {
+          "path": "/highlights/3",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111831",
+            "https://support.apple.com/en-us/111830"
+          ]
+        },
+        {
+          "path": "/highlights/4",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111831",
+            "https://support.apple.com/en-us/111830"
+          ]
+        },
+        {
+          "path": "/highlights/5",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111831",
+            "https://support.apple.com/en-us/111830"
+          ]
+        },
+        {
+          "path": "/highlights/6",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111831",
+            "https://support.apple.com/en-us/111830"
+          ]
+        },
+        {
+          "path": "/highlights/7",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111831",
+            "https://support.apple.com/en-us/111830"
+          ]
+        },
+        {
+          "path": "/highlights/8",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111831",
+            "https://support.apple.com/en-us/111830"
+          ]
+        },
+        {
+          "path": "/highlights/9",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111831",
+            "https://support.apple.com/en-us/111830"
+          ]
+        },
+        {
+          "path": "/highlights/10",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111831",
+            "https://support.apple.com/en-us/111830"
+          ]
+        },
+        {
+          "path": "/highlights/11",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111831",
+            "https://support.apple.com/en-us/111830"
+          ]
+        },
+        {
+          "path": "/highlights/12",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111831",
+            "https://support.apple.com/en-us/111830"
+          ]
+        },
+        {
+          "path": "/highlights/13",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111831",
+            "https://support.apple.com/en-us/111830"
+          ]
+        },
+        {
+          "path": "/highlights/14",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111831",
+            "https://support.apple.com/en-us/111830"
+          ]
+        },
+        {
+          "path": "/highlights/15",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111831",
+            "https://support.apple.com/en-us/111830"
+          ]
+        },
+        {
+          "path": "/highlights/16",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111831",
+            "https://support.apple.com/en-us/111830"
+          ]
+        },
+        {
+          "path": "/highlights/17",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111831",
+            "https://support.apple.com/en-us/111830"
+          ]
+        }
+      ],
+      "media": [
+        {
+          "imageUrl": "/materials/iphone/Color/15/Black-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/15/Blue-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/15/Green-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/15/Yellow-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/15/Pink-Photoroom.png",
+          "exists": true
+        }
+      ],
+      "mediaCheck": "Local files exist; this audit verifies labels and text, not every image pixel or photographed regional variant."
+    },
+    {
+      "productIndex": 14,
+      "slug": "iphone-15",
+      "title": "iPhone 15 Pro / iPhone 15 Pro Max (2023)",
+      "fields": [
+        {
+          "path": "/title",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111829",
+            "https://support.apple.com/en-us/111828"
+          ]
+        },
+        {
+          "path": "/colors/0/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111829",
+            "https://support.apple.com/en-us/111828"
+          ]
+        },
+        {
+          "path": "/colors/0/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111829",
+            "https://support.apple.com/en-us/111828"
+          ]
+        },
+        {
+          "path": "/colors/1/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111829",
+            "https://support.apple.com/en-us/111828"
+          ]
+        },
+        {
+          "path": "/colors/1/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111829",
+            "https://support.apple.com/en-us/111828"
+          ]
+        },
+        {
+          "path": "/colors/2/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111829",
+            "https://support.apple.com/en-us/111828"
+          ]
+        },
+        {
+          "path": "/colors/2/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111829",
+            "https://support.apple.com/en-us/111828"
+          ]
+        },
+        {
+          "path": "/colors/3/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111829",
+            "https://support.apple.com/en-us/111828"
+          ]
+        },
+        {
+          "path": "/colors/3/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111829",
+            "https://support.apple.com/en-us/111828"
+          ]
+        },
+        {
+          "path": "/family",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111829",
+            "https://support.apple.com/en-us/111828"
+          ]
+        },
+        {
+          "path": "/overview/0",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111829",
+            "https://support.apple.com/en-us/111828"
+          ]
+        },
+        {
+          "path": "/overview/1",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111829",
+            "https://support.apple.com/en-us/111828"
+          ]
+        },
+        {
+          "path": "/overview/2",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111829",
+            "https://support.apple.com/en-us/111828"
+          ]
+        },
+        {
+          "path": "/highlights/0",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111829",
+            "https://support.apple.com/en-us/111828"
+          ]
+        },
+        {
+          "path": "/highlights/1",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111829",
+            "https://support.apple.com/en-us/111828"
+          ]
+        },
+        {
+          "path": "/highlights/2",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111829",
+            "https://support.apple.com/en-us/111828"
+          ]
+        },
+        {
+          "path": "/highlights/3",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111829",
+            "https://support.apple.com/en-us/111828"
+          ]
+        },
+        {
+          "path": "/highlights/4",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111829",
+            "https://support.apple.com/en-us/111828"
+          ]
+        },
+        {
+          "path": "/highlights/5",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111829",
+            "https://support.apple.com/en-us/111828"
+          ]
+        },
+        {
+          "path": "/highlights/6",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111829",
+            "https://support.apple.com/en-us/111828"
+          ]
+        },
+        {
+          "path": "/highlights/7",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111829",
+            "https://support.apple.com/en-us/111828"
+          ]
+        },
+        {
+          "path": "/highlights/8",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111829",
+            "https://support.apple.com/en-us/111828"
+          ]
+        },
+        {
+          "path": "/highlights/9",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111829",
+            "https://support.apple.com/en-us/111828"
+          ]
+        },
+        {
+          "path": "/highlights/10",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111829",
+            "https://support.apple.com/en-us/111828"
+          ]
+        },
+        {
+          "path": "/highlights/11",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111829",
+            "https://support.apple.com/en-us/111828"
+          ]
+        },
+        {
+          "path": "/highlights/12",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111829",
+            "https://support.apple.com/en-us/111828"
+          ]
+        },
+        {
+          "path": "/highlights/13",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111829",
+            "https://support.apple.com/en-us/111828"
+          ]
+        },
+        {
+          "path": "/highlights/14",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111829",
+            "https://support.apple.com/en-us/111828"
+          ]
+        },
+        {
+          "path": "/highlights/15",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111829",
+            "https://support.apple.com/en-us/111828"
+          ]
+        },
+        {
+          "path": "/highlights/16",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111829",
+            "https://support.apple.com/en-us/111828"
+          ]
+        },
+        {
+          "path": "/highlights/17",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111829",
+            "https://support.apple.com/en-us/111828"
+          ]
+        },
+        {
+          "path": "/highlights/18",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/111829",
+            "https://support.apple.com/en-us/111828"
+          ]
+        },
+        {
+          "path": "/highlights/19",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111829",
+            "https://support.apple.com/en-us/111828"
+          ]
+        },
+        {
+          "path": "/highlights/20",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/111829",
+            "https://support.apple.com/en-us/111828"
+          ]
+        }
+      ],
+      "media": [
+        {
+          "imageUrl": "/materials/iphone/Color/15Pro_ProMax/Black-Photoroom%20(1).png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/15Pro_ProMax/White-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/15Pro_ProMax/BLue-Photoroom%20(1).png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/15Pro_ProMax/Natural-Photoroom.png",
+          "exists": true
+        }
+      ],
+      "mediaCheck": "Local files exist; this audit verifies labels and text, not every image pixel or photographed regional variant."
+    },
+    {
+      "productIndex": 15,
+      "slug": "iphone-16",
+      "title": "iPhone 16 / iPhone 16 Plus (2024)",
+      "fields": [
+        {
+          "path": "/title",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121029",
+            "https://support.apple.com/en-us/121030"
+          ]
+        },
+        {
+          "path": "/colors/0/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121029",
+            "https://support.apple.com/en-us/121030"
+          ]
+        },
+        {
+          "path": "/colors/0/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121029",
+            "https://support.apple.com/en-us/121030"
+          ]
+        },
+        {
+          "path": "/colors/1/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121029",
+            "https://support.apple.com/en-us/121030"
+          ]
+        },
+        {
+          "path": "/colors/1/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121029",
+            "https://support.apple.com/en-us/121030"
+          ]
+        },
+        {
+          "path": "/colors/2/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121029",
+            "https://support.apple.com/en-us/121030"
+          ]
+        },
+        {
+          "path": "/colors/2/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121029",
+            "https://support.apple.com/en-us/121030"
+          ]
+        },
+        {
+          "path": "/colors/3/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121029",
+            "https://support.apple.com/en-us/121030"
+          ]
+        },
+        {
+          "path": "/colors/3/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121029",
+            "https://support.apple.com/en-us/121030"
+          ]
+        },
+        {
+          "path": "/colors/4/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121029",
+            "https://support.apple.com/en-us/121030"
+          ]
+        },
+        {
+          "path": "/colors/4/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121029",
+            "https://support.apple.com/en-us/121030"
+          ]
+        },
+        {
+          "path": "/overview/0",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/121029",
+            "https://support.apple.com/en-us/121030"
+          ]
+        },
+        {
+          "path": "/overview/1",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121029",
+            "https://support.apple.com/en-us/121030"
+          ]
+        },
+        {
+          "path": "/overview/2",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/121029",
+            "https://support.apple.com/en-us/121030"
+          ]
+        },
+        {
+          "path": "/highlights/0",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121029",
+            "https://support.apple.com/en-us/121030"
+          ]
+        },
+        {
+          "path": "/highlights/1",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121029",
+            "https://support.apple.com/en-us/121030"
+          ]
+        },
+        {
+          "path": "/highlights/2",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121029",
+            "https://support.apple.com/en-us/121030"
+          ]
+        },
+        {
+          "path": "/highlights/3",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/121029",
+            "https://support.apple.com/en-us/121030"
+          ]
+        },
+        {
+          "path": "/highlights/4",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121029",
+            "https://support.apple.com/en-us/121030"
+          ]
+        },
+        {
+          "path": "/highlights/5",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/121029",
+            "https://support.apple.com/en-us/121030"
+          ]
+        },
+        {
+          "path": "/highlights/6",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121029",
+            "https://support.apple.com/en-us/121030"
+          ]
+        },
+        {
+          "path": "/highlights/7",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121029",
+            "https://support.apple.com/en-us/121030"
+          ]
+        },
+        {
+          "path": "/highlights/8",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121029",
+            "https://support.apple.com/en-us/121030"
+          ]
+        },
+        {
+          "path": "/highlights/9",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121029",
+            "https://support.apple.com/en-us/121030"
+          ]
+        },
+        {
+          "path": "/highlights/10",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121029",
+            "https://support.apple.com/en-us/121030"
+          ]
+        },
+        {
+          "path": "/highlights/11",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121029",
+            "https://support.apple.com/en-us/121030"
+          ]
+        },
+        {
+          "path": "/highlights/12",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/121029",
+            "https://support.apple.com/en-us/121030"
+          ]
+        },
+        {
+          "path": "/highlights/13",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121029",
+            "https://support.apple.com/en-us/121030"
+          ]
+        }
+      ],
+      "media": [
+        {
+          "imageUrl": "/materials/iphone/Color/16/Black-Photoroom%20(1).png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/16/White-Photoroom%20(1).png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/16/Teal-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/16/Ultramarine-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/16/Pink-Photoroom.png",
+          "exists": true
+        }
+      ],
+      "mediaCheck": "Local files exist; this audit verifies labels and text, not every image pixel or photographed regional variant."
+    },
+    {
+      "productIndex": 16,
+      "slug": "iphone-17",
+      "title": "iPhone 16 Pro / iPhone 16 Pro Max (2024)",
+      "fields": [
+        {
+          "path": "/title",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121031",
+            "https://support.apple.com/en-us/121032"
+          ]
+        },
+        {
+          "path": "/colors/0/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121031",
+            "https://support.apple.com/en-us/121032"
+          ]
+        },
+        {
+          "path": "/colors/0/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121031",
+            "https://support.apple.com/en-us/121032"
+          ]
+        },
+        {
+          "path": "/colors/1/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121031",
+            "https://support.apple.com/en-us/121032"
+          ]
+        },
+        {
+          "path": "/colors/1/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121031",
+            "https://support.apple.com/en-us/121032"
+          ]
+        },
+        {
+          "path": "/colors/2/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121031",
+            "https://support.apple.com/en-us/121032"
+          ]
+        },
+        {
+          "path": "/colors/2/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121031",
+            "https://support.apple.com/en-us/121032"
+          ]
+        },
+        {
+          "path": "/colors/3/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121031",
+            "https://support.apple.com/en-us/121032"
+          ]
+        },
+        {
+          "path": "/colors/3/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121031",
+            "https://support.apple.com/en-us/121032"
+          ]
+        },
+        {
+          "path": "/family",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121031",
+            "https://support.apple.com/en-us/121032"
+          ]
+        },
+        {
+          "path": "/overview/0",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/121031",
+            "https://support.apple.com/en-us/121032"
+          ]
+        },
+        {
+          "path": "/overview/1",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121031",
+            "https://support.apple.com/en-us/121032"
+          ]
+        },
+        {
+          "path": "/overview/2",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/121031",
+            "https://support.apple.com/en-us/121032"
+          ]
+        },
+        {
+          "path": "/highlights/0",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121031",
+            "https://support.apple.com/en-us/121032"
+          ]
+        },
+        {
+          "path": "/highlights/1",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121031",
+            "https://support.apple.com/en-us/121032"
+          ]
+        },
+        {
+          "path": "/highlights/2",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/121031",
+            "https://support.apple.com/en-us/121032"
+          ]
+        },
+        {
+          "path": "/highlights/3",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121031",
+            "https://support.apple.com/en-us/121032"
+          ]
+        },
+        {
+          "path": "/highlights/4",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121031",
+            "https://support.apple.com/en-us/121032"
+          ]
+        },
+        {
+          "path": "/highlights/5",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121031",
+            "https://support.apple.com/en-us/121032"
+          ]
+        },
+        {
+          "path": "/highlights/6",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/121031",
+            "https://support.apple.com/en-us/121032"
+          ]
+        },
+        {
+          "path": "/highlights/7",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121031",
+            "https://support.apple.com/en-us/121032"
+          ]
+        },
+        {
+          "path": "/highlights/8",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121031",
+            "https://support.apple.com/en-us/121032"
+          ]
+        },
+        {
+          "path": "/highlights/9",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121031",
+            "https://support.apple.com/en-us/121032"
+          ]
+        },
+        {
+          "path": "/highlights/10",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/121031",
+            "https://support.apple.com/en-us/121032"
+          ]
+        },
+        {
+          "path": "/highlights/11",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121031",
+            "https://support.apple.com/en-us/121032"
+          ]
+        },
+        {
+          "path": "/highlights/12",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121031",
+            "https://support.apple.com/en-us/121032"
+          ]
+        },
+        {
+          "path": "/highlights/13",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121031",
+            "https://support.apple.com/en-us/121032"
+          ]
+        },
+        {
+          "path": "/highlights/14",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121031",
+            "https://support.apple.com/en-us/121032"
+          ]
+        },
+        {
+          "path": "/highlights/15",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121031",
+            "https://support.apple.com/en-us/121032"
+          ]
+        },
+        {
+          "path": "/highlights/16",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121031",
+            "https://support.apple.com/en-us/121032"
+          ]
+        },
+        {
+          "path": "/highlights/17",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121031",
+            "https://support.apple.com/en-us/121032"
+          ]
+        },
+        {
+          "path": "/highlights/18",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121031",
+            "https://support.apple.com/en-us/121032"
+          ]
+        },
+        {
+          "path": "/highlights/19",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/121031",
+            "https://support.apple.com/en-us/121032"
+          ]
+        },
+        {
+          "path": "/highlights/20",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121031",
+            "https://support.apple.com/en-us/121032"
+          ]
+        },
+        {
+          "path": "/highlights/21",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/121031",
+            "https://support.apple.com/en-us/121032"
+          ]
+        }
+      ],
+      "media": [
+        {
+          "imageUrl": "/materials/iphone/Color/16Pro_ProMax/Black-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/16Pro_ProMax/White-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/16Pro_ProMax/Desert-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/16Pro_ProMax/Natural-Photoroom.png",
+          "exists": true
+        }
+      ],
+      "mediaCheck": "Local files exist; this audit verifies labels and text, not every image pixel or photographed regional variant."
+    },
+    {
+      "productIndex": 17,
+      "slug": "iphone-18",
+      "title": "iPhone 16e (2025)",
+      "fields": [
+        {
+          "path": "/title",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/122208"
+          ]
+        },
+        {
+          "path": "/colors/0/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/122208"
+          ]
+        },
+        {
+          "path": "/colors/0/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/122208"
+          ]
+        },
+        {
+          "path": "/colors/1/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/122208"
+          ]
+        },
+        {
+          "path": "/colors/1/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/122208"
+          ]
+        },
+        {
+          "path": "/overview/0",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/122208"
+          ]
+        },
+        {
+          "path": "/overview/1",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/122208"
+          ]
+        },
+        {
+          "path": "/highlights/0",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/122208"
+          ]
+        },
+        {
+          "path": "/highlights/1",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/122208"
+          ]
+        },
+        {
+          "path": "/highlights/2",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/122208"
+          ]
+        },
+        {
+          "path": "/highlights/3",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/122208"
+          ]
+        },
+        {
+          "path": "/highlights/4",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/122208"
+          ]
+        },
+        {
+          "path": "/highlights/5",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/122208"
+          ]
+        },
+        {
+          "path": "/highlights/6",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/122208"
+          ]
+        },
+        {
+          "path": "/highlights/7",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/122208"
+          ]
+        },
+        {
+          "path": "/highlights/8",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/122208"
+          ]
+        },
+        {
+          "path": "/highlights/9",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/122208"
+          ]
+        },
+        {
+          "path": "/highlights/10",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/122208"
+          ]
+        },
+        {
+          "path": "/highlights/11",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/122208"
+          ]
+        },
+        {
+          "path": "/highlights/12",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/122208"
+          ]
+        }
+      ],
+      "media": [
+        {
+          "imageUrl": "/materials/iphone/Color/16e/Black-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/16e/White-Photoroom.png",
+          "exists": true
+        }
+      ],
+      "mediaCheck": "Local files exist; this audit verifies labels and text, not every image pixel or photographed regional variant."
+    },
+    {
+      "productIndex": 18,
+      "slug": "iphone-19",
+      "title": "iPhone 17 Pro / iPhone 17 Pro Max (2025)",
+      "fields": [
+        {
+          "path": "/title",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/125090",
+            "https://support.apple.com/en-us/125091"
+          ]
+        },
+        {
+          "path": "/colors/0/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/125090",
+            "https://support.apple.com/en-us/125091"
+          ]
+        },
+        {
+          "path": "/colors/0/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/125090",
+            "https://support.apple.com/en-us/125091"
+          ]
+        },
+        {
+          "path": "/colors/1/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/125090",
+            "https://support.apple.com/en-us/125091"
+          ]
+        },
+        {
+          "path": "/colors/1/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/125090",
+            "https://support.apple.com/en-us/125091"
+          ]
+        },
+        {
+          "path": "/colors/2/label",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/125090",
+            "https://support.apple.com/en-us/125091"
+          ]
+        },
+        {
+          "path": "/colors/2/caption",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/125090",
+            "https://support.apple.com/en-us/125091"
+          ]
+        },
+        {
+          "path": "/family",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/125090",
+            "https://support.apple.com/en-us/125091"
+          ]
+        },
+        {
+          "path": "/overview/0",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/125090",
+            "https://support.apple.com/en-us/125091"
+          ]
+        },
+        {
+          "path": "/overview/1",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/125090",
+            "https://support.apple.com/en-us/125091"
+          ]
+        },
+        {
+          "path": "/overview/2",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/125090",
+            "https://support.apple.com/en-us/125091"
+          ]
+        },
+        {
+          "path": "/highlights/0",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/125090",
+            "https://support.apple.com/en-us/125091"
+          ]
+        },
+        {
+          "path": "/highlights/1",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/125090",
+            "https://support.apple.com/en-us/125091"
+          ]
+        },
+        {
+          "path": "/highlights/2",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/125090",
+            "https://support.apple.com/en-us/125091"
+          ]
+        },
+        {
+          "path": "/highlights/3",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/125090",
+            "https://support.apple.com/en-us/125091"
+          ]
+        },
+        {
+          "path": "/highlights/4",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/125090",
+            "https://support.apple.com/en-us/125091"
+          ]
+        },
+        {
+          "path": "/highlights/5",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/125090",
+            "https://support.apple.com/en-us/125091"
+          ]
+        },
+        {
+          "path": "/highlights/6",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/125090",
+            "https://support.apple.com/en-us/125091"
+          ]
+        },
+        {
+          "path": "/highlights/7",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/125090",
+            "https://support.apple.com/en-us/125091"
+          ]
+        },
+        {
+          "path": "/highlights/8",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/125090",
+            "https://support.apple.com/en-us/125091"
+          ]
+        },
+        {
+          "path": "/highlights/9",
+          "status": "verified",
+          "sources": [
+            "https://support.apple.com/en-us/125090",
+            "https://support.apple.com/en-us/125091"
+          ]
+        },
+        {
+          "path": "/highlights/10",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/125090",
+            "https://support.apple.com/en-us/125091"
+          ]
+        },
+        {
+          "path": "/highlights/11",
+          "status": "clarified",
+          "sources": [
+            "https://support.apple.com/en-us/125090",
+            "https://support.apple.com/en-us/125091",
+            "https://support.apple.com/uk-ua/125090",
+            "https://support.apple.com/uk-ua/125091"
+          ]
+        }
+      ],
+      "media": [
+        {
+          "imageUrl": "/materials/iphone/Color/17Pro_ProMax/Silver-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/17Pro_ProMax/Orange-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/17Pro_ProMax/DeepBlue-Photoroom.png",
+          "exists": true
+        }
+      ],
+      "mediaCheck": "Local files exist; this audit verifies labels and text, not every image pixel or photographed regional variant."
+    },
+    {
+      "productIndex": 19,
+      "slug": "iphone-20",
+      "title": "iPhone Air (2025)",
+      "fields": [
+        {
+          "path": "/title",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-air/specs/"
+          ]
+        },
+        {
+          "path": "/colors/0/label",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-air/specs/"
+          ]
+        },
+        {
+          "path": "/colors/0/caption",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-air/specs/"
+          ]
+        },
+        {
+          "path": "/colors/1/label",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-air/specs/"
+          ]
+        },
+        {
+          "path": "/colors/1/caption",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-air/specs/"
+          ]
+        },
+        {
+          "path": "/colors/2/label",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-air/specs/"
+          ]
+        },
+        {
+          "path": "/colors/2/caption",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-air/specs/"
+          ]
+        },
+        {
+          "path": "/colors/3/label",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-air/specs/"
+          ]
+        },
+        {
+          "path": "/colors/3/caption",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-air/specs/"
+          ]
+        },
+        {
+          "path": "/family",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-air/specs/"
+          ]
+        },
+        {
+          "path": "/summary",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-air/specs/"
+          ]
+        },
+        {
+          "path": "/overview/0",
+          "status": "clarified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-air/specs/"
+          ]
+        },
+        {
+          "path": "/overview/1",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-air/specs/"
+          ]
+        },
+        {
+          "path": "/overview/2",
+          "status": "clarified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-air/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/0",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-air/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/1",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-air/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/2",
+          "status": "clarified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-air/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/3",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-air/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/4",
+          "status": "clarified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-air/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/5",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-air/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/6",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-air/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/7",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-air/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/8",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-air/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/9",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-air/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/10",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-air/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/11",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-air/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/12",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-air/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/13",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-air/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/14",
+          "status": "clarified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-air/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/15",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-air/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/16",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-air/specs/"
+          ]
+        }
+      ],
+      "media": [
+        {
+          "imageUrl": "/materials/iphone/Color/17Air/Black-Photoroom%20(1).png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/17Air/White-Photoroom%20(1).png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/17Air/LightGold-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/17Air/SkyBlue-Photoroom.png",
+          "exists": true
+        }
+      ],
+      "mediaCheck": "Local files exist; this audit verifies labels and text, not every image pixel or photographed regional variant."
+    },
+    {
+      "productIndex": 20,
+      "slug": "iphone-21",
+      "title": "iPhone 17 (2025)",
+      "fields": [
+        {
+          "path": "/title",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17/specs/"
+          ]
+        },
+        {
+          "path": "/colors/0/label",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17/specs/"
+          ]
+        },
+        {
+          "path": "/colors/0/caption",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17/specs/"
+          ]
+        },
+        {
+          "path": "/colors/1/label",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17/specs/"
+          ]
+        },
+        {
+          "path": "/colors/1/caption",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17/specs/"
+          ]
+        },
+        {
+          "path": "/colors/2/label",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17/specs/"
+          ]
+        },
+        {
+          "path": "/colors/2/caption",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17/specs/"
+          ]
+        },
+        {
+          "path": "/colors/3/label",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17/specs/"
+          ]
+        },
+        {
+          "path": "/colors/3/caption",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17/specs/"
+          ]
+        },
+        {
+          "path": "/colors/4/label",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17/specs/"
+          ]
+        },
+        {
+          "path": "/colors/4/caption",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17/specs/"
+          ]
+        },
+        {
+          "path": "/overview/0",
+          "status": "clarified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17/specs/"
+          ]
+        },
+        {
+          "path": "/overview/1",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17/specs/"
+          ]
+        },
+        {
+          "path": "/overview/2",
+          "status": "clarified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/0",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/1",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/2",
+          "status": "clarified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/3",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/4",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/5",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/6",
+          "status": "clarified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/7",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/8",
+          "status": "clarified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/9",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/10",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/11",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/12",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/13",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/14",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/15",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/16",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/17",
+          "status": "clarified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/18",
+          "status": "clarified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/19",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17/specs/"
+          ]
+        }
+      ],
+      "media": [
+        {
+          "imageUrl": "/materials/iphone/Color/17/Lavander-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/17/Sage-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/17/MistBlue-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/17/Black-Photoroom.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/Color/17/White-Photoroom.png",
+          "exists": true
+        }
+      ],
+      "mediaCheck": "Local files exist; this audit verifies labels and text, not every image pixel or photographed regional variant."
+    },
+    {
+      "productIndex": 21,
+      "slug": "iphone-22",
+      "title": "iPhone 18 Pro / iPhone 18 Pro Max (2026)",
+      "fields": [
+        {
+          "path": "/title",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-18-pro/specs/",
+            "https://www.apple.com/iphone-18-pro/specs/"
+          ]
+        },
+        {
+          "path": "/colors/0/label",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-18-pro/specs/",
+            "https://www.apple.com/iphone-18-pro/specs/"
+          ]
+        },
+        {
+          "path": "/colors/0/caption",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-18-pro/specs/",
+            "https://www.apple.com/iphone-18-pro/specs/"
+          ]
+        },
+        {
+          "path": "/colors/1/label",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-18-pro/specs/",
+            "https://www.apple.com/iphone-18-pro/specs/"
+          ]
+        },
+        {
+          "path": "/colors/1/caption",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-18-pro/specs/",
+            "https://www.apple.com/iphone-18-pro/specs/"
+          ]
+        },
+        {
+          "path": "/colors/2/label",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-18-pro/specs/",
+            "https://www.apple.com/iphone-18-pro/specs/"
+          ]
+        },
+        {
+          "path": "/colors/2/caption",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-18-pro/specs/",
+            "https://www.apple.com/iphone-18-pro/specs/"
+          ]
+        },
+        {
+          "path": "/colors/3/label",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-18-pro/specs/",
+            "https://www.apple.com/iphone-18-pro/specs/"
+          ]
+        },
+        {
+          "path": "/colors/3/caption",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-18-pro/specs/",
+            "https://www.apple.com/iphone-18-pro/specs/"
+          ]
+        },
+        {
+          "path": "/family",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-18-pro/specs/",
+            "https://www.apple.com/iphone-18-pro/specs/"
+          ]
+        },
+        {
+          "path": "/overview/0",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-18-pro/specs/",
+            "https://www.apple.com/iphone-18-pro/specs/"
+          ]
+        },
+        {
+          "path": "/overview/1",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-18-pro/specs/",
+            "https://www.apple.com/iphone-18-pro/specs/"
+          ]
+        },
+        {
+          "path": "/overview/2",
+          "status": "clarified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-18-pro/specs/",
+            "https://www.apple.com/iphone-18-pro/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/0",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-18-pro/specs/",
+            "https://www.apple.com/iphone-18-pro/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/1",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-18-pro/specs/",
+            "https://www.apple.com/iphone-18-pro/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/2",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-18-pro/specs/",
+            "https://www.apple.com/iphone-18-pro/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/3",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-18-pro/specs/",
+            "https://www.apple.com/iphone-18-pro/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/4",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-18-pro/specs/",
+            "https://www.apple.com/iphone-18-pro/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/5",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-18-pro/specs/",
+            "https://www.apple.com/iphone-18-pro/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/6",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-18-pro/specs/",
+            "https://www.apple.com/iphone-18-pro/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/7",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-18-pro/specs/",
+            "https://www.apple.com/iphone-18-pro/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/8",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-18-pro/specs/",
+            "https://www.apple.com/iphone-18-pro/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/9",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-18-pro/specs/",
+            "https://www.apple.com/iphone-18-pro/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/10",
+          "status": "clarified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-18-pro/specs/",
+            "https://www.apple.com/iphone-18-pro/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/11",
+          "status": "clarified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-18-pro/specs/",
+            "https://www.apple.com/iphone-18-pro/specs/"
+          ]
+        }
+      ],
+      "media": [
+        {
+          "imageUrl": "/materials/iphone/2026/18-pro/black.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/2026/18-pro/silver.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/2026/18-pro/glacier.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/2026/18-pro/burgundy.png",
+          "exists": true
+        }
+      ],
+      "mediaCheck": "Local files exist; this audit verifies labels and text, not every image pixel or photographed regional variant."
+    },
+    {
+      "productIndex": 22,
+      "slug": "iphone-23",
+      "title": "iPhone Duo (2026)",
+      "fields": [
+        {
+          "path": "/title",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-duo/specs/"
+          ]
+        },
+        {
+          "path": "/colors/0/label",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-duo/specs/"
+          ]
+        },
+        {
+          "path": "/colors/0/caption",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-duo/specs/"
+          ]
+        },
+        {
+          "path": "/colors/1/label",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-duo/specs/"
+          ]
+        },
+        {
+          "path": "/colors/1/caption",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-duo/specs/"
+          ]
+        },
+        {
+          "path": "/family",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-duo/specs/"
+          ]
+        },
+        {
+          "path": "/overview/0",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-duo/specs/"
+          ]
+        },
+        {
+          "path": "/overview/1",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-duo/specs/"
+          ]
+        },
+        {
+          "path": "/overview/2",
+          "status": "clarified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-duo/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/0",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-duo/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/1",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-duo/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/2",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-duo/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/3",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-duo/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/4",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-duo/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/5",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-duo/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/6",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-duo/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/7",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-duo/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/8",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-duo/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/9",
+          "status": "clarified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-duo/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/10",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-duo/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/11",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-duo/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/12",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-duo/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/13",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-duo/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/14",
+          "status": "clarified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-duo/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/15",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-duo/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/16",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-duo/specs/"
+          ]
+        }
+      ],
+      "media": [
+        {
+          "imageUrl": "/materials/iphone/2026/duo/iphone-duo-night-sky.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/2026/duo/iphone-duo-star-white.png",
+          "exists": true
+        }
+      ],
+      "mediaCheck": "Local files exist; this audit verifies labels and text, not every image pixel or photographed regional variant."
+    },
+    {
+      "productIndex": 23,
+      "slug": "iphone-24",
+      "title": "iPhone 17e (2026)",
+      "fields": [
+        {
+          "path": "/title",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17e/specs/",
+            "https://www.apple.com/iphone-17e/specs/"
+          ]
+        },
+        {
+          "path": "/colors/0/label",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17e/specs/",
+            "https://www.apple.com/iphone-17e/specs/"
+          ]
+        },
+        {
+          "path": "/colors/0/caption",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17e/specs/",
+            "https://www.apple.com/iphone-17e/specs/"
+          ]
+        },
+        {
+          "path": "/colors/1/label",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17e/specs/",
+            "https://www.apple.com/iphone-17e/specs/"
+          ]
+        },
+        {
+          "path": "/colors/1/caption",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17e/specs/",
+            "https://www.apple.com/iphone-17e/specs/"
+          ]
+        },
+        {
+          "path": "/colors/2/label",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17e/specs/",
+            "https://www.apple.com/iphone-17e/specs/"
+          ]
+        },
+        {
+          "path": "/colors/2/caption",
+          "status": "clarified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17e/specs/",
+            "https://www.apple.com/iphone-17e/specs/"
+          ]
+        },
+        {
+          "path": "/family",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17e/specs/",
+            "https://www.apple.com/iphone-17e/specs/"
+          ]
+        },
+        {
+          "path": "/overview/0",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17e/specs/",
+            "https://www.apple.com/iphone-17e/specs/"
+          ]
+        },
+        {
+          "path": "/overview/1",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17e/specs/",
+            "https://www.apple.com/iphone-17e/specs/"
+          ]
+        },
+        {
+          "path": "/overview/2",
+          "status": "clarified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17e/specs/",
+            "https://www.apple.com/iphone-17e/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/0",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17e/specs/",
+            "https://www.apple.com/iphone-17e/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/1",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17e/specs/",
+            "https://www.apple.com/iphone-17e/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/2",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17e/specs/",
+            "https://www.apple.com/iphone-17e/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/3",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17e/specs/",
+            "https://www.apple.com/iphone-17e/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/4",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17e/specs/",
+            "https://www.apple.com/iphone-17e/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/5",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17e/specs/",
+            "https://www.apple.com/iphone-17e/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/6",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17e/specs/",
+            "https://www.apple.com/iphone-17e/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/7",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17e/specs/",
+            "https://www.apple.com/iphone-17e/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/8",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17e/specs/",
+            "https://www.apple.com/iphone-17e/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/9",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17e/specs/",
+            "https://www.apple.com/iphone-17e/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/10",
+          "status": "clarified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17e/specs/",
+            "https://www.apple.com/iphone-17e/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/11",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17e/specs/",
+            "https://www.apple.com/iphone-17e/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/12",
+          "status": "clarified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17e/specs/",
+            "https://www.apple.com/iphone-17e/specs/"
+          ]
+        },
+        {
+          "path": "/highlights/13",
+          "status": "verified",
+          "sources": [
+            "https://www.apple.com/ua/iphone-17e/specs/",
+            "https://www.apple.com/iphone-17e/specs/"
+          ]
+        }
+      ],
+      "media": [
+        {
+          "imageUrl": "/materials/iphone/2026/17e/black.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/2026/17e/white.png",
+          "exists": true
+        },
+        {
+          "imageUrl": "/materials/iphone/2026/17e/soft-pink.png",
+          "exists": true
+        }
+      ],
+      "mediaCheck": "Local files exist; this audit verifies labels and text, not every image pixel or photographed regional variant."
+    }
+  ]
+}
