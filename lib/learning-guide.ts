@@ -1,11 +1,15 @@
+import { getLearningModelAsset, getLocalLearningModelViewer, type LearningModelAssetId } from "./learning-model-assets";
+
 export type LearningSource = { id: string; title: string; url: string; scope: string; anchors: string[] };
 export type LearningRouteItem = { title: string; anchor: string };
 export type LearningPractice = { id: string; title: string; situation: string; prompt: string; explanation: string; sourceIds: string[] };
 export type LearningVideo = { title: string; url: string; author: string; summary: string[]; exercise?: string };
-export type LearningModelViewer = {
+export type LearningSketchfabModelViewer = {
   provider: "sketchfab"; uid: string; author: string; authorUrl: string;
   sourceUrl: string; license: string; licenseUrl: string;
 };
+export type LearningLocalModelViewer = ReturnType<typeof getLocalLearningModelViewer>;
+export type LearningModelViewer = LearningSketchfabModelViewer | LearningLocalModelViewer;
 export type LearningModelLink = { title: string; url: string; variant: string; note: string; viewer?: LearningModelViewer };
 export type LearningGuide = {
   version: 1; reviewedAt: string; objectives: string[]; prerequisites: string;
@@ -28,6 +32,12 @@ const sketchfabUrl = (value: unknown): value is string => {
   return ["sketchfab.com", "www.sketchfab.com"].includes(url.hostname) && !url.port && !url.search && !url.hash;
 };
 const modelViewer = (value: unknown): value is LearningModelViewer => {
+  if (record(value) && value.provider === "local") {
+    if (!getLearningModelAsset(value.assetId)) return false;
+    const expected = getLocalLearningModelViewer(value.assetId as LearningModelAssetId);
+    const keys = Object.keys(expected) as (keyof typeof expected)[];
+    return Object.keys(value).length === keys.length && keys.every(key => value[key] === expected[key]);
+  }
   if (!record(value) || value.provider !== "sketchfab" || typeof value.uid !== "string" || !/^[a-f0-9]{32}$/.test(value.uid)
     || !string(value.author, 100) || !sketchfabUrl(value.authorUrl) || !sketchfabUrl(value.sourceUrl)
     || !string(value.license, 140) || !httpsUrl(value.licenseUrl)) return false;

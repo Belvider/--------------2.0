@@ -4,6 +4,7 @@ import { useState } from "react";
 import type { LearningGuide, LearningSource } from "@/lib/learning-guide";
 import type { ModuleContentBlock } from "@/lib/module-content";
 import { getModuleBlockAnchor, getProductAnchor } from "@/lib/content-anchors";
+import { LOCAL_LEARNING_MODEL_ASSETS, getLearningModelAsset, getLocalLearningModelViewer, type LearningModelAssetId } from "@/lib/learning-model-assets";
 
 type Props = {
   value?: LearningGuide;
@@ -149,6 +150,11 @@ export function LearningGuideEditor({ value, moduleId, blocks, onChange }: Props
           <h3 className="text-sm font-semibold text-slate-200">3D-перегляди та авторські моделі</h3>
           {(value.models3d ?? []).map((item, index) => {
             const update = (changes: Partial<typeof item>) => patch({ models3d: value.models3d!.map((row, i) => i === index ? { ...row, ...changes } : row) });
+            const sketchfabViewer = item.viewer?.provider === "sketchfab" ? item.viewer : null;
+            const selectLocalModel = (assetId: unknown) => {
+              const asset = getLearningModelAsset(assetId);
+              if (asset) update({ title: asset.title, ...asset.presentation, viewer: getLocalLearningModelViewer(assetId as LearningModelAssetId) });
+            };
             return <details key={index} className="rounded-xl border border-white/[0.07] p-3">
               <summary className="cursor-pointer text-sm text-slate-300">{item.title || `Новий перегляд ${index + 1}`}</summary>
               <div className="mt-3 space-y-3">
@@ -156,19 +162,36 @@ export function LearningGuideEditor({ value, moduleId, blocks, onChange }: Props
                 <Field label="Офіційна сторінка пристрою" value={item.url} type="url" maxLength={1600} onChange={url => update({ url })} />
                 <Field label="Точна модель та регіон" value={item.variant} maxLength={240} onChange={variant => update({ variant })} />
                 <Field label="Умови перегляду й обмеження" value={item.note} multiline maxLength={600} onChange={note => update({ note })} />
-                {!item.viewer ? <button type="button" className={buttonClass} onClick={() => update({ viewer: {
-                  provider: "sketchfab", uid: "", author: "", authorUrl: "", sourceUrl: "", license: "", licenseUrl: ""
-                } })}>Додати 3D-перегляд на сайті</button> : <fieldset className="space-y-3 rounded-xl border border-white/10 p-3">
+                {!item.viewer ? <div className="flex flex-wrap gap-2">
+                  <button type="button" className={buttonClass} onClick={() => update({ viewer: {
+                    provider: "sketchfab", uid: "", author: "", authorUrl: "", sourceUrl: "", license: "", licenseUrl: ""
+                  } })}>Додати 3D-перегляд на сайті</button>
+                  <button type="button" className={buttonClass} onClick={() => selectLocalModel("iphone-15-pro-max")}>Вибрати локальну 3D-модель</button>
+                </div> : item.viewer.provider === "local" ? <fieldset className="space-y-3 rounded-xl border border-white/10 p-3">
+                  <legend className="px-1 text-xs font-semibold text-slate-200">Локальна 3D-модель</legend>
+                  <label className="block text-xs font-medium text-slate-300">Модель із перевіреної бібліотеки
+                    <select value={item.viewer.assetId} onChange={event => selectLocalModel(event.target.value)} className={inputClass}>
+                      {Object.entries(LOCAL_LEARNING_MODEL_ASSETS).map(([assetId, asset]) => <option key={assetId} value={assetId}>{asset.title}</option>)}
+                    </select>
+                  </label>
+                  <p className="text-xs leading-5 text-slate-400">Файл завантажується з нашого сайту. Походження й ліцензія закріплені за моделлю та зберігаються автоматично.</p>
+                  <p className="text-xs leading-5 text-slate-300">Автор: <a href={item.viewer.authorUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">{item.viewer.author}</a></p>
+                  <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs leading-5 text-slate-400">
+                    <a href={item.viewer.sourceUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">Джерело моделі</a>
+                    <a href={item.viewer.licenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">{item.viewer.license}</a>
+                  </div>
+                  <button type="button" className={removeClass} onClick={() => update({ viewer: undefined })}>Прибрати вбудований перегляд</button>
+                </fieldset> : <fieldset className="space-y-3 rounded-xl border border-white/10 p-3">
                   <legend className="px-1 text-xs font-semibold text-slate-200">Перегляд на сайті через Sketchfab</legend>
                   <p className="text-xs leading-5 text-slate-400">Збережіть автора та умови використання. Авторська візуалізація не замінює офіційну специфікацію пристрою.</p>
-                  <Field label="Посилання на модель Sketchfab" value={item.viewer.sourceUrl} type="url" maxLength={1600} hint="Сторінка конкретної моделі. Її ідентифікатор визначається з адреси автоматично." onChange={sourceUrl => {
+                  <Field label="Посилання на модель Sketchfab" value={sketchfabViewer!.sourceUrl} type="url" maxLength={1600} hint="Сторінка конкретної моделі. Її ідентифікатор визначається з адреси автоматично." onChange={sourceUrl => {
                     const uid = sourceUrl.trim().match(/\/([a-zA-Z0-9_-]*?)([a-f0-9]{32})\/?$/)?.[2] ?? "";
-                    update({ viewer: { ...item.viewer!, sourceUrl, uid } });
+                    update({ viewer: { ...sketchfabViewer!, sourceUrl, uid } });
                   }} />
-                  <Field label="Ім’я автора 3D-моделі" value={item.viewer.author} maxLength={100} onChange={author => update({ viewer: { ...item.viewer!, author } })} />
-                  <Field label="Профіль автора на Sketchfab" value={item.viewer.authorUrl} type="url" maxLength={1600} onChange={authorUrl => update({ viewer: { ...item.viewer!, authorUrl } })} />
-                  <Field label="Ліцензія 3D-моделі" value={item.viewer.license} maxLength={140} onChange={license => update({ viewer: { ...item.viewer!, license } })} />
-                  <Field label="Посилання на умови ліцензії" value={item.viewer.licenseUrl} type="url" maxLength={1600} onChange={licenseUrl => update({ viewer: { ...item.viewer!, licenseUrl } })} />
+                  <Field label="Ім’я автора 3D-моделі" value={sketchfabViewer!.author} maxLength={100} onChange={author => update({ viewer: { ...sketchfabViewer!, author } })} />
+                  <Field label="Профіль автора на Sketchfab" value={sketchfabViewer!.authorUrl} type="url" maxLength={1600} onChange={authorUrl => update({ viewer: { ...sketchfabViewer!, authorUrl } })} />
+                  <Field label="Ліцензія 3D-моделі" value={sketchfabViewer!.license} maxLength={140} onChange={license => update({ viewer: { ...sketchfabViewer!, license } })} />
+                  <Field label="Посилання на умови ліцензії" value={sketchfabViewer!.licenseUrl} type="url" maxLength={1600} onChange={licenseUrl => update({ viewer: { ...sketchfabViewer!, licenseUrl } })} />
                   <button type="button" className={removeClass} onClick={() => update({ viewer: undefined })}>Прибрати вбудований перегляд</button>
                 </fieldset>}
                 <button type="button" className={removeClass} onClick={() => patch({ models3d: value.models3d!.filter((_, i) => i !== index) })}>Прибрати 3D-посилання</button>

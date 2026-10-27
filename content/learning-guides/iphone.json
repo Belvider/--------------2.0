@@ -770,34 +770,32 @@
     ],
     "models3d": [
       {
-        "title": "iPhone 18 Pro — Glacier",
-        "url": "https://www.apple.com/iphone-18-pro/",
-        "variant": "Авторська візуалізація iPhone 18 Pro у кольорі Glacier.",
-        "note": "Для вивчення форми корпусу, камер і кнопок. Характеристики та регіональне виконання конкретного пристрою звіряйте за офіційною специфікацією.",
+        "title": "iPhone 15 Pro Max",
+        "url": "https://support.apple.com/en-us/111828",
+        "variant": "Незалежна авторська 3D-візуалізація iPhone 15 Pro Max.",
+        "note": "Огляд форми корпусу, камер і кнопок. Кольори, комплектацію та характеристики звіряйте за офіційною специфікацією.",
         "viewer": {
-          "provider": "sketchfab",
-          "uid": "45c182d5b0ae4e80a67038d04de0b573",
-          "author": "extraakash",
-          "authorUrl": "https://sketchfab.com/AakashMansukhani",
-          "sourceUrl": "https://sketchfab.com/3d-models/apple-iphone-18-pro-glacier-2026-45c182d5b0ae4e80a67038d04de0b573",
-          "license": "Free Standard",
-          "licenseUrl": "https://sketchfab.com/licenses"
-        }
-      },
-      {
-        "title": "iPhone Duo — стани складання корпусу",
-        "url": "https://www.apple.com/iphone-duo/",
-        "variant": "Навчальна 3D-сцена з кількома станами складання корпусу.",
-        "note": "Сцену можна обертати й наближати. Вона показує різні положення пристрою; анімація складання не передбачена. Технічні параметри перевіряйте за специфікацією Apple.",
-        "viewer": {
-          "provider": "sketchfab",
-          "uid": "d2ca6bff92c141d1b1c5759b19d533e0",
-          "author": "PikkmeStudios",
-          "authorUrl": "https://sketchfab.com/stockpikkme",
-          "sourceUrl": "https://sketchfab.com/3d-models/iphone-duo-3d-model-by-pikkme-studio-d2ca6bff92c141d1b1c5759b19d533e0",
+          "provider": "local",
+          "assetId": "iphone-15-pro-max",
+          "uid": "df17520841214c1792fb8a44c6783ee7",
+          "author": "polyman Studio",
+          "authorUrl": "https://sketchfab.com/Polyman_3D",
+          "sourceUrl": "https://sketchfab.com/3d-models/apple-iphone-15-pro-max-black-df17520841214c1792fb8a44c6783ee7",
           "license": "CC BY 4.0",
           "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
         }
+      },
+      {
+        "title": "iPhone 18 Pro — огляд корпусу у виробника",
+        "url": "https://www.apple.com/iphone-18-pro/",
+        "variant": "Офіційний AR-макет Apple: US / eSIM.",
+        "note": "На сторінці Apple оберіть View in your space. Перегляд залежить від пристрою та браузера; розташування SIM-лотка іншої регіональної версії перевіряйте окремо."
+      },
+      {
+        "title": "iPhone Duo — огляд складаного корпусу у виробника",
+        "url": "https://www.apple.com/iphone-duo/",
+        "variant": "Офіційний AR-макет Apple: US / eSIM.",
+        "note": "На сторінці Apple оберіть View in your space. Це зовнішній перегляд виробника; можливості відображення залежать від пристрою та браузера."
       }
     ]
   }

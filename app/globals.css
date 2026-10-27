@@ -2010,6 +2010,17 @@ button.auth-submit:hover {
     scroll-behavior: auto !important;
   }
 }
+[data-native-model]:fullscreen {
+  display: flex;
+  flex-direction: column;
+}
+
+[data-native-model]:fullscreen > [data-native-stage] {
+  flex: 1;
+  height: calc(100dvh - 60px);
+  min-height: 0;
+}
+
 @media print {
   .certificate-page { background: white !important; color: #111827 !important; padding: 0 !important; min-height: 0 !important; }
   .certificate-content { background: white !important; box-shadow: none !important; border-color: #0f766e !important; break-inside: avoid; }
