@@ -2,7 +2,15 @@ import { getLearningModelAsset, getLocalLearningModelViewer, type LearningModelA
 
 export type LearningSource = { id: string; title: string; url: string; scope: string; anchors: string[] };
 export type LearningRouteItem = { title: string; anchor: string };
-export type LearningPractice = { id: string; title: string; situation: string; prompt: string; explanation: string; sourceIds: string[] };
+export type LearningPractice = {
+  id: string; title: string; situation: string; prompt: string; explanation: string; sourceIds: string[];
+  questions?: string[]; demonstration?: string; pitfall?: string;
+};
+export type LearningComparison = {
+  id: string; title: string; question: string; left: LearningRouteItem; right: LearningRouteItem;
+  rows: { id: string; label: string; left: string; right: string }[];
+  takeaway: string; sourceIds: string[];
+};
 export type LearningVideo = { title: string; url: string; author: string; summary: string[]; exercise?: string };
 export type LearningSketchfabModelViewer = {
   provider: "sketchfab"; uid: string; author: string; authorUrl: string;
@@ -14,7 +22,7 @@ export type LearningModelLink = { title: string; url: string; variant: string; n
 export type LearningGuide = {
   version: 1; reviewedAt: string; objectives: string[]; prerequisites: string;
   route: LearningRouteItem[]; reference: LearningRouteItem[]; sources: LearningSource[];
-  video?: LearningVideo; practice: LearningPractice[]; models3d?: LearningModelLink[];
+  video?: LearningVideo; practice: LearningPractice[]; comparisons?: LearningComparison[]; models3d?: LearningModelLink[];
 };
 
 const record = (value: unknown): value is Record<string, unknown> => !!value && typeof value === "object" && !Array.isArray(value);
@@ -69,10 +77,24 @@ export function parseLearningGuide(value: unknown, moduleId?: number): LearningG
     && string(source.scope, 600) && Array.isArray(source.anchors) && source.anchors.length <= 40 && source.anchors.every(localAnchor))) return null;
   const sourceIds = new Set(value.sources.map(source => source.id));
   if (sourceIds.size !== value.sources.length) return null;
+  const references = (items: unknown): items is string[] => Array.isArray(items) && items.length <= 8
+    && items.every(sourceId => id(sourceId) && sourceIds.has(sourceId));
   if (!Array.isArray(value.practice) || value.practice.length > 4 || !value.practice.every(item => record(item)
     && id(item.id) && string(item.title, 140) && string(item.situation, 900) && string(item.prompt, 500) && string(item.explanation, 1400)
-    && Array.isArray(item.sourceIds) && item.sourceIds.length <= 8 && item.sourceIds.every(sourceId => id(sourceId) && sourceIds.has(sourceId)))) return null;
+    && references(item.sourceIds) && (item.questions === undefined || strings(item.questions, 3, 180))
+    && (item.demonstration === undefined || string(item.demonstration, 400))
+    && (item.pitfall === undefined || string(item.pitfall, 300)))) return null;
   if (new Set(value.practice.map(item => item.id)).size !== value.practice.length) return null;
+  if (value.comparisons !== undefined) {
+    const endpoint = (item: unknown) => record(item) && string(item.title, 100) && localAnchor(item.anchor);
+    if (!Array.isArray(value.comparisons) || value.comparisons.length > 4 || !value.comparisons.every(item => record(item)
+      && id(item.id) && string(item.title, 140) && string(item.question, 350)
+      && endpoint(item.left) && endpoint(item.right) && string(item.takeaway, 600) && references(item.sourceIds)
+      && Array.isArray(item.rows) && item.rows.length >= 2 && item.rows.length <= 5
+      && item.rows.every(row => record(row) && id(row.id) && string(row.label, 100) && string(row.left, 280) && string(row.right, 280))
+      && new Set(item.rows.map(row => row.id)).size === item.rows.length)) return null;
+    if (new Set(value.comparisons.map(item => item.id)).size !== value.comparisons.length) return null;
+  }
   if (value.video !== undefined && (!record(value.video) || !string(value.video.title, 180) || !videoUrl(value.video.url)
     || !string(value.video.author, 100) || !strings(value.video.summary, 5, 500)
     || (value.video.exercise !== undefined && !string(value.video.exercise, 600)))) return null;
@@ -87,6 +109,6 @@ export function getModuleLearningGuide(blocks: readonly { learningGuide?: unknow
   return null;
 }
 
-export function getLearningGuideAnchor(moduleId: number, section: "overview" | "video" | "sources" | "models" | "practice", itemId?: string) {
+export function getLearningGuideAnchor(moduleId: number, section: "overview" | "video" | "sources" | "models" | "practice" | "comparison", itemId?: string) {
   return `module-${moduleId}-guide-${section}${itemId ? `-${itemId}` : ""}`;
 }

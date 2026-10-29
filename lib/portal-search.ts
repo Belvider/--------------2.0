@@ -14,7 +14,8 @@ export type SearchModule = {
   id: number; title: string; description: string; durationMin: number; contentBlocks: unknown; isPublished?: boolean;
   category: { name: string; slug: string; brand: { name: string; slug: string } };
 };
-type ModelScope = { modelTitle?: string; modelDescription?: string; localContext?: string; aggregate?: boolean; nestedTargets?: string[] };
+type ModelScope = { modelTitle?: string; modelDescription?: string; localContext?: string; aggregate?: boolean; nestedTargets?: string[];
+  comparisonColumns?: { title: string; text: string }[] };
 type IndexEntry = { result: SearchResult; title: string; text: string; context: string; original: string; container?: string } & ModelScope;
 export type PortalSearchIndex = IndexEntry[];
 type Sources = { modules: SearchModule[]; brands?: Brand[]; categories?: Category[]; portalPages?: PortalPageContent[] };
@@ -113,8 +114,8 @@ export function buildPortalSearchIndex({ modules, brands = [], categories = [], 
     });
     const guide = getModuleLearningGuide(parseModuleContentBlocks(learningModule.contentBlocks), learningModule.id);
     if (guide) {
-      const guideEntry = (anchor: string, title: string, ownText: string, meta: string, container?: string, localContext?: string, ownTitle = title) => {
-        add({ type: "section", id: anchor, title, subtitle: path, meta, href: `${moduleHref}#${anchor}` }, ownTitle, ownText, `${path} ${localContext ?? ""}`, container, { localContext });
+      const guideEntry = (anchor: string, title: string, ownText: string, meta: string, container?: string, localContext?: string, ownTitle = title, modelScope: ModelScope = {}) => {
+        add({ type: "section", id: anchor, title, subtitle: path, meta, href: `${moduleHref}#${anchor}` }, ownTitle, ownText, `${path} ${localContext ?? ""}`, container, { localContext, ...modelScope });
       };
       const overviewAnchor = getLearningGuideAnchor(learningModule.id, "overview");
       guideEntry(`${overviewAnchor}-prerequisites`, "Перед початком вивчення", guide.prerequisites, "Навчальний маршрут");
@@ -127,8 +128,29 @@ export function buildPortalSearchIndex({ modules, brands = [], categories = [], 
       }
       for (const item of guide.practice) {
         const practiceAnchor = getLearningGuideAnchor(learningModule.id, "practice", item.id);
-        guideEntry(practiceAnchor, item.title, `${item.situation} ${item.prompt} ${item.explanation}`, "Практика консультації", practiceAnchor);
+        guideEntry(practiceAnchor, item.title, `${item.situation} ${item.prompt} ${item.explanation} ${item.questions?.join(" ") ?? ""} ${item.demonstration ?? ""} ${item.pitfall ?? ""}`, "Практика консультації", practiceAnchor);
         guideEntry(`${practiceAnchor}-explanation`, item.title, item.explanation, "Розбір практичного прикладу", undefined, `${item.title} ${item.situation}`, "");
+        item.questions?.forEach((question, index) => guideEntry(`${practiceAnchor}-question-${index + 1}`, item.title, question, "Запитання покупцю", undefined, item.title, ""));
+        if (item.demonstration) guideEntry(`${practiceAnchor}-demonstration`, item.title, item.demonstration, "Демонстрація під час консультації", undefined, item.title, "");
+        if (item.pitfall) guideEntry(`${practiceAnchor}-pitfall`, item.title, item.pitfall, "Типова помилка консультації", undefined, item.title, "");
+      }
+      for (const comparison of guide.comparisons ?? []) {
+        const comparisonAnchor = getLearningGuideAnchor(learningModule.id, "comparison", comparison.id);
+        const comparisonContext = `${comparison.title} ${comparison.left.title} ${comparison.right.title}`;
+        guideEntry(comparisonAnchor, comparison.title, `${comparison.left.title} ${comparison.right.title} ${comparison.question} ${comparison.rows.map(row=>`${row.label} ${row.left} ${row.right}`).join(" ")} ${comparison.takeaway}`, "Порівняння моделей", comparisonAnchor, comparisonContext, comparison.title, {
+          comparisonColumns: [
+            { title: comparison.left.title, text: comparison.rows.map(row=>`${row.label} ${row.left}`).join(" ") },
+            { title: comparison.right.title, text: comparison.rows.map(row=>`${row.label} ${row.right}`).join(" ") }
+          ]
+        });
+        guideEntry(`${comparisonAnchor}-question`, comparison.title, comparison.question, "Запитання для вибору", undefined, comparisonContext, "");
+        for (const row of comparison.rows) guideEntry(`${comparisonAnchor}-row-${row.id}`, `${comparison.title}: ${row.label}`, `${row.label} ${comparison.left.title}: ${row.left}; ${comparison.right.title}: ${row.right}`, "Рядок порівняння", undefined, comparisonContext, "", {
+          comparisonColumns: [
+            { title: comparison.left.title, text: `${row.label} ${row.left}` },
+            { title: comparison.right.title, text: `${row.label} ${row.right}` }
+          ]
+        });
+        guideEntry(`${comparisonAnchor}-takeaway`, comparison.title, comparison.takeaway, "Пояснення вибору", undefined, comparisonContext, "");
       }
       if (guide.models3d?.length) guideEntry(getLearningGuideAnchor(learningModule.id, "models"), "3D-огляд пристроїв", guide.models3d.map(item => `${item.title} ${item.variant} ${item.note}`).join(" "), "3D-демонстрація");
     }
@@ -257,6 +279,11 @@ export function searchPortalIndex(index: PortalSearchIndex, query: string, optio
       if (entry.aggregate && detailTerms.length) return [];
       if (detailTerms.length) {
         if (!detailTerms.every(term => hasTerm(own, term))) return [];
+        // A comparison names both devices, but a fact queried for one exact
+        // model must belong to that model's column, not its neighbour.
+        if (entry.comparisonColumns && requestedModels.length === 1 && !terms.every(term => hasTerm(entry.title, term))
+          && !entry.comparisonColumns.some(column => deviceModels(column.title).some(candidate => modelMatches(candidate, requestedModels[0]))
+            && detailTerms.every(term => hasTerm(normalizeSearchText(column.text), term)))) return [];
       } else if (entry.result.type !== "product") {
         const explicitOwn = deviceModels(own);
         const qualifiedOwn = entry.modelTitle === undefined ? [] : requestedModels.flatMap(intent => qualifiedDeviceModels(own, intent.family));

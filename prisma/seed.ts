@@ -2729,7 +2729,7 @@ async function main() {
         data: {
           categoryId: category.id,
           title: "Apple Watch: GPS/LTE, здоров'я та регіональні особливості",
-          description: "Внутрішній конспект по Apple Watch: GPS vs LTE, ключові функції здоров'я, дисплеї, регіональні відмінності та позиціонування.",
+          description: "Навчальний матеріал про Apple Watch: GPS і Cellular, функції здоров’я, дисплеї, регіональні відмінності та вибір моделі.",
           contentBlocks: appleWatchFoundationBlocks,
           durationMin: 29,
           sortOrder: 1,

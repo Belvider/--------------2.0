@@ -20,7 +20,7 @@ function learningGuideError(blocks: unknown, moduleId?: number) {
   }
   if (moduleId === undefined && guides.some(block => {
     const guide = parseLearningGuide(block.learningGuide)!;
-    return guide.route.length || guide.reference.length || guide.sources.some(source => source.anchors.length);
+    return guide.route.length || guide.reference.length || guide.sources.some(source => source.anchors.length) || (guide.comparisons?.length ?? 0);
   })) return "Спершу створіть модуль, потім додайте переходи навчального супроводу в його редакторі.";
   return null;
 }

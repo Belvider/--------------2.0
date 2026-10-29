@@ -2,24 +2,15 @@
 
 import { useRef, useState } from "react";
 import { ArrowUpRight, BookOpenCheck, Play, Search } from "lucide-react";
-import { getLearningGuideAnchor, type LearningGuide, type LearningSource } from "@/lib/learning-guide";
+import { getLearningGuideAnchor, type LearningGuide } from "@/lib/learning-guide";
 import { getVideoSource } from "@/lib/video-source";
 import { InlineModelViewer } from "@/components/module/InlineModelViewer";
+import { LearningComparisons } from "@/components/module/LearningComparisons";
+import { LearningSourceLinks as SourceLinks } from "@/components/module/LearningSourceLinks";
 
 const reviewedDate = (value: string) => value.split("-").reverse().join(".");
 const targetProps = (anchor: string) => ({ id: anchor, "data-material-anchor": anchor, tabIndex: -1 });
 const summaryClass = "focus-ring cursor-pointer py-2 text-sm font-semibold text-slate-200 marker:text-teal-400";
-
-function SourceLinks({ sources }: { sources: LearningSource[] }) {
-  return <ul className="mt-3 space-y-3">
-    {sources.map(source => <li key={source.id} className="min-w-0">
-      <a href={source.url} target="_blank" rel="noopener noreferrer" className="focus-ring inline-flex max-w-full items-start gap-1.5 rounded text-sm text-teal-300 underline decoration-teal-300/30 underline-offset-4 [overflow-wrap:anywhere] hover:text-teal-100">
-        <span>{source.title}</span><ArrowUpRight className="mt-0.5 size-3.5 shrink-0" aria-hidden="true" />
-      </a>
-      <p className="mt-1 text-xs leading-5 text-slate-400">{source.scope}</p>
-    </li>)}
-  </ul>;
-}
 
 export function LearningSourceReferences({ guide, anchor }: { guide?: LearningGuide | null; anchor: string }) {
   const sources = guide?.sources.filter(source => source.anchors.includes(anchor)) ?? [];
@@ -67,6 +58,7 @@ export function LearningGuideOverview({ guide, moduleId }: { guide: LearningGuid
     </details>
     <div className="mt-2 flex flex-wrap gap-x-4 gap-y-2 text-xs text-teal-300">
       {guide.video && <a className="focus-ring rounded underline decoration-teal-300/30 underline-offset-4" href={`#${getLearningGuideAnchor(moduleId, "video")}`}>Відео та конспект</a>}
+      {!!guide.comparisons?.length && <a className="focus-ring rounded underline decoration-teal-300/30 underline-offset-4" href={`#${getLearningGuideAnchor(moduleId, "comparison", guide.comparisons[0].id)}`}>Порівняння моделей</a>}
       {guide.practice.length > 0 && <a className="focus-ring rounded underline decoration-teal-300/30 underline-offset-4" href={`#${getLearningGuideAnchor(moduleId, "practice", guide.practice[0].id)}`}>Практика консультації</a>}
       {!!guide.models3d?.length && <a className="focus-ring rounded underline decoration-teal-300/30 underline-offset-4" href={`#${getLearningGuideAnchor(moduleId, "models")}`}>Огляд корпусу у 3D</a>}
     </div>
@@ -99,14 +91,21 @@ export function LearningGuideResources({ guide, moduleId }: { guide: LearningGui
         {guide.video.exercise && <p {...targetProps(`${getLearningGuideAnchor(moduleId, "video")}-exercise`)} className="text-sm leading-6 text-slate-400"><strong className="font-semibold text-slate-200">Спробуйте пояснити клієнту: </strong>{guide.video.exercise}</p>}
       </div>
     </details>}
+    <LearningComparisons guide={guide} moduleId={moduleId} />
     {guide.practice.map(item => <details key={item.id} {...targetProps(getLearningGuideAnchor(moduleId, "practice", item.id))} className="min-w-0 rounded-xl border border-white/[0.08] px-3 sm:px-4">
       <summary className={summaryClass}>Практика: {item.title}</summary>
       <div className="space-y-3 pb-4 pt-1 text-sm leading-6">
         <p className="text-slate-300">{item.situation}</p>
+        {!!item.questions?.length && <div>
+          <h3 className="text-xs font-semibold text-slate-400">Запитайте покупця</h3>
+          <ul className="mt-1 list-disc space-y-1.5 pl-5 text-slate-300">{item.questions.map((question, index) => <li key={index} {...targetProps(`${getLearningGuideAnchor(moduleId, "practice", item.id)}-question-${index + 1}`)}>{question}</li>)}</ul>
+        </div>}
         <p className="font-medium text-slate-200">{item.prompt}</p>
         <details className="border-t border-white/[0.06] pt-1">
           <summary className="focus-ring cursor-pointer py-2 text-xs font-semibold text-teal-300">Переглянути розбір</summary>
           <p {...targetProps(`${getLearningGuideAnchor(moduleId, "practice", item.id)}-explanation`)} className="mt-1 text-slate-300">{item.explanation}</p>
+          {item.demonstration && <p {...targetProps(`${getLearningGuideAnchor(moduleId, "practice", item.id)}-demonstration`)} className="mt-3 text-slate-300"><strong className="font-semibold text-slate-200">Що показати: </strong>{item.demonstration}</p>}
+          {item.pitfall && <p {...targetProps(`${getLearningGuideAnchor(moduleId, "practice", item.id)}-pitfall`)} className="mt-3 text-slate-400"><strong className="font-semibold text-slate-300">Типова помилка: </strong>{item.pitfall}</p>}
           {!!item.sourceIds.length && <SourceLinks sources={guide.sources.filter(source => item.sourceIds.includes(source.id))} />}
         </details>
       </div>

@@ -341,6 +341,10 @@ export function remapEditorGuideTargets(blocks: ModuleContentBlock[], transform:
       return anchor ? [{ ...item, anchor }] : [];
     });
     return { ...block, learningGuide: { ...guide, route: routes(guide.route), reference: routes(guide.reference),
+      ...(guide.comparisons ? { comparisons: guide.comparisons.flatMap(item => {
+        const left = transform(item.left.anchor), right = transform(item.right.anchor);
+        return left && right ? [{ ...item, left: { ...item.left, anchor: left }, right: { ...item.right, anchor: right } }] : [];
+      }) } : {}),
       sources: guide.sources.map(source => ({ ...source, anchors: source.anchors.flatMap(anchor => {
         const next = transform(anchor); return next ? [next] : [];
       }) })) } };

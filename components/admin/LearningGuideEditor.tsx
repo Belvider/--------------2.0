@@ -105,7 +105,8 @@ export function LearningGuideEditor({ value, moduleId, blocks, onChange }: Props
               <Field label="Офіційне посилання" type="url" value={source.url} maxLength={1600} onChange={url => sourcePatch(index, { url })} hint="Повна адреса https:// без облікових даних." />
               <Field label="Що підтверджує: модель, регіон, умови" value={source.scope} multiline maxLength={600} onChange={scope => sourcePatch(index, { scope })} />
               {anchorChoices(source.anchors, anchors => sourcePatch(index, { anchors }))}
-              <button type="button" className={removeClass} onClick={() => patch({ sources: value.sources.filter((_, i) => i !== index), practice: value.practice.map(item => ({ ...item, sourceIds: item.sourceIds.filter(id => id !== source.id) })) })}>Прибрати джерело</button>
+              <button type="button" className={removeClass} onClick={() => patch({ sources: value.sources.filter((_, i) => i !== index), practice: value.practice.map(item => ({ ...item, sourceIds: item.sourceIds.filter(id => id !== source.id) })),
+                ...(value.comparisons ? { comparisons: value.comparisons.map(item => ({ ...item, sourceIds: item.sourceIds.filter(id => id !== source.id) })) } : {}) })}>Прибрати джерело</button>
             </div>
           </details>)}
           <button type="button" className={buttonClass} disabled={value.sources.length >= 60} onClick={() => patch({ sources: [...value.sources, { id: newId("source"), title: "", url: "", scope: "", anchors: [] }] })}>Додати джерело</button>
@@ -124,6 +125,52 @@ export function LearningGuideEditor({ value, moduleId, blocks, onChange }: Props
           </>}
         </section>
         <section className="space-y-3 border-t border-white/10 pt-4">
+          <h3 className="text-sm font-semibold text-slate-200">Порівняння моделей</h3>
+          {(value.comparisons ?? []).map((item, index) => {
+            const update = (changes: Partial<typeof item>) => patch({ comparisons: value.comparisons!.map((row, i) => i === index ? { ...row, ...changes } : row) });
+            return <details key={item.id} className="rounded-xl border border-white/[0.07] p-3">
+              <summary className="cursor-pointer text-sm text-slate-300">{item.title || `Нове порівняння ${index + 1}`}</summary>
+              <div className="mt-3 space-y-3">
+                <Field label="Назва порівняння" value={item.title} maxLength={140} onChange={title => update({ title })} />
+                <Field label="Запит покупця" value={item.question} multiline maxLength={350} onChange={question => update({ question })} />
+                <div className="grid gap-3 md:grid-cols-2">
+                  {(["left", "right"] as const).map(side => <fieldset key={side} className="min-w-0 space-y-2 rounded-xl border border-white/10 p-3">
+                    <legend className="px-1 text-xs font-semibold text-slate-200">{side === "left" ? "Перша модель" : "Друга модель"}</legend>
+                    <Field label="Назва моделі" value={item[side].title} maxLength={100} onChange={title => update({ [side]: { ...item[side], title } })} />
+                    {anchorSelect(item[side].anchor, anchor => update({ [side]: { ...item[side], anchor } }))}
+                  </fieldset>)}
+                </div>
+                <fieldset className="space-y-3"><legend className="text-xs font-medium text-slate-300">Відмінності: від двох до п’яти рядків</legend>
+                  {item.rows.map((row, rowIndex) => {
+                    const updateRow = (changes: Partial<typeof row>) => update({ rows: item.rows.map((entry, i) => i === rowIndex ? { ...entry, ...changes } : entry) });
+                    return <div key={row.id} className="space-y-2 rounded-xl border border-white/10 p-3">
+                      <Field label="Що порівнюємо" value={row.label} maxLength={100} onChange={label => updateRow({ label })} />
+                      <div className="grid gap-3 md:grid-cols-2">
+                        <Field label="Значення першої моделі" value={row.left} maxLength={280} multiline onChange={left => updateRow({ left })} />
+                        <Field label="Значення другої моделі" value={row.right} maxLength={280} multiline onChange={right => updateRow({ right })} />
+                      </div>
+                      <button type="button" className={removeClass} disabled={item.rows.length <= 2} onClick={() => update({ rows: item.rows.filter((_, i) => i !== rowIndex) })}>Прибрати рядок</button>
+                    </div>;
+                  })}
+                  <button type="button" className={buttonClass} disabled={item.rows.length >= 5} onClick={() => update({ rows: [...item.rows, { id: newId("row"), label: "", left: "", right: "" }] })}>Додати відмінність</button>
+                </fieldset>
+                <Field label="Як пояснити вибір" value={item.takeaway} multiline maxLength={600} onChange={takeaway => update({ takeaway })} />
+                <fieldset><legend className="text-xs font-medium text-slate-300">Джерела порівняння</legend>
+                  <div className="mt-2 max-h-36 space-y-1 overflow-y-auto">{value.sources.map(source => <label key={source.id} className="flex items-start gap-2 py-1 text-xs text-slate-400">
+                    <input type="checkbox" checked={item.sourceIds.includes(source.id)} onChange={event => update({ sourceIds: event.target.checked ? [...item.sourceIds, source.id] : item.sourceIds.filter(id => id !== source.id) })} />
+                    <span>{source.title || "Джерело без назви"}</span>
+                  </label>)}</div>
+                </fieldset>
+                <button type="button" className={removeClass} onClick={() => patch({ comparisons: value.comparisons!.filter((_, i) => i !== index) })}>Прибрати порівняння</button>
+              </div>
+            </details>;
+          })}
+          <button type="button" className={buttonClass} disabled={(value.comparisons?.length ?? 0) >= 4 || !anchors.length} onClick={() => patch({ comparisons: [...(value.comparisons ?? []), {
+            id: newId("comparison"), title: "", question: "", left: { title: "", anchor: anchors[0]?.anchor ?? "" }, right: { title: "", anchor: anchors[1]?.anchor ?? anchors[0]?.anchor ?? "" },
+            rows: [{ id: newId("row"), label: "", left: "", right: "" }, { id: newId("row"), label: "", left: "", right: "" }], takeaway: "", sourceIds: []
+          }] })}>Додати порівняння</button>
+        </section>
+        <section className="space-y-3 border-t border-white/10 pt-4">
           <h3 className="text-sm font-semibold text-slate-200">Практичні сценарії</h3>
           {value.practice.map((item, index) => {
             const update = (changes: Partial<typeof item>) => patch({ practice: value.practice.map((row, i) => i === index ? { ...row, ...changes } : row) });
@@ -133,7 +180,10 @@ export function LearningGuideEditor({ value, moduleId, blocks, onChange }: Props
                 <Field label="Назва" value={item.title} maxLength={140} onChange={title => update({ title })} />
                 <Field label="Ситуація клієнта" value={item.situation} multiline maxLength={900} onChange={situation => update({ situation })} />
                 <Field label="Завдання працівнику" value={item.prompt} multiline onChange={prompt => update({ prompt })} />
+                <Field label="Запитання до покупця (необов’язково)" value={(item.questions ?? []).join("\n")} multiline maxLength={542} hint="До трьох запитань, кожне з нового рядка; до 180 символів у рядку." onChange={text => update({ questions: text.trim() ? lines(text) : undefined })} />
                 <Field label="Пояснення відповіді" value={item.explanation} multiline maxLength={1400} onChange={explanation => update({ explanation })} />
+                <Field label="Що показати покупцю (необов’язково)" value={item.demonstration ?? ""} multiline maxLength={400} onChange={demonstration => update({ demonstration: demonstration || undefined })} />
+                <Field label="Типова помилка (необов’язково)" value={item.pitfall ?? ""} multiline maxLength={300} onChange={pitfall => update({ pitfall: pitfall || undefined })} />
                 <fieldset><legend className="text-xs font-medium text-slate-300">Джерела сценарію</legend>
                   <div className="mt-2 max-h-36 space-y-1 overflow-y-auto">{value.sources.map(source => <label key={source.id} className="flex items-start gap-2 py-1 text-xs text-slate-400">
                     <input type="checkbox" checked={item.sourceIds.includes(source.id)} onChange={event => update({ sourceIds: event.target.checked ? [...item.sourceIds, source.id] : item.sourceIds.filter(id => id !== source.id) })} />
